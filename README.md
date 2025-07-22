@@ -24,8 +24,7 @@ Include in your JSON-LD documents:
   "@context": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld",
   "@type": "resource",
   "identifier": "doi:10.1234/example",
-  "identifierType": "DOI",
-  ...
+  "identifierType": "DOI"
 }
 ```
 ## Validating with JSON-Schema
