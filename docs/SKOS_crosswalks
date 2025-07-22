@@ -1,0 +1,566 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "wd": "http://www.wikidata.org/entity/"
+  },
+  "@graph": [
+     {
+      "@id": "ex:DataCite4.6ConceptScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite Metadata Schema v4.6",
+      "skos:definition": "Concept scheme for DataCite Metadata Schema version 4.6."
+    },
+    {
+      "@id": "ex:identifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Identifier",
+      "skos:definition": "A unique string that identifies the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:identifier" },
+        { "@id": "wd:Q19847612" }
+      ],
+      "skos:closeMatch": { "@id": "dcat:identifier" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:identifierType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Identifier Type",
+      "skos:definition": "The scheme used for the identifier (e.g. DOI).",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:creator",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Creator",
+      "skos:definition": "The main researchers involved in producing the data, or the authors of the publication, in priority order.",
+      "skos:exactMatch": { "@id": "schema:creator" },
+      "skos:closeMatch": { "@id": "schema:author" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+     {
+      "@id": "ex:creatorName",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Creator Name",
+      "skos:definition": "The full name of the creator.",
+      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+     {
+      "@id": "ex:nameType_Personal",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Personal",
+      "skos:definition": "Indicates that the creator is an individual person.",
+      "skos:exactMatch": { "@id": "schema:Person" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:givenName",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Given Name",
+      "skos:definition": "The personal or first name of the creator.",
+      "skos:exactMatch": { "@id": "schema:givenName" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:familyName",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Family Name",
+      "skos:definition": "The surname or last name of the creator.",
+      "skos:exactMatch": { "@id": "schema:familyName" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:nameIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Name Identifier",
+      "skos:definition": "A persistent identifier for the creator (e.g. ORCID).",
+      "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+{
+      "@id": "ex:nameIdentifierScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Name Identifier Scheme",
+      "skos:definition": "The scheme used for the name identifier.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:creatorSchemeURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Creator Scheme URI",
+      "skos:definition": "The URL identifying the name identifier scheme.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+ {
+      "@id": "ex:affiliation",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation",
+      "skos:definition": "The organization with which the creator is affiliated.",
+      "skos:exactMatch": { "@id": "schema:affiliation" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+ {
+      "@id": "ex:affiliationIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation Identifier",
+      "skos:definition": "A persistent identifier for the affiliation.",
+      "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:affiliationIdentifierScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation Identifier Scheme",
+      "skos:definition": "The scheme used for the affiliation identifier.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:affiliationSchemeURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation Scheme URI",
+      "skos:definition": "The URL identifying the affiliation identifier scheme.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+  "@id": "ex:titleType",
+  "@type": "skos:Concept",
+  "skos:prefLabel": "Title Type",
+  "skos:definition": "The type of title element other than the main title.",
+  "skos:closeMatch": { "@id": "schema:alternativeHeadline" },
+  "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+},
+
+{
+      "@id": "ex:TitleTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite TitleType Scheme",
+      "skos:definition": "Controlled list of DataCite titleType values.",
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" },
+      "skos:hasTopConcept": [
+        { "@id": "ex:TitleType_AlternativeTitle" },
+        { "@id": "ex:TitleType_Subtitle" },
+        { "@id": "ex:TitleType_TranslatedTitle" },
+        { "@id": "ex:TitleType_Other" }
+      ]
+    },
+    
+    {
+      "@id": "ex:TitleType_AlternativeTitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "AlternativeTitle",
+      "skos:definition": "An alternate title of the resource.",
+      "skos:exactMatch": { "@id": "schema:alternativeHeadline" },
+      "skos:broader": { "@id": "ex:titleType" },
+      "skos:inScheme": { "@id": "ex:TitleTypeScheme" }
+},
+
+{
+      "@id": "ex:TitleType_Subtitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Subtitle",
+      "skos:definition": "A subtitle of the resource.",
+      "skos:exactMatch": { "@id": "schema:alternativeHeadline" },
+      "skos:broader": { "@id": "ex:titleType" },
+      "skos:inScheme": { "@id": "ex:TitleTypeScheme" }
+},
+{
+  "@id": "ex:TitleType_TranslatedTitle",
+  "@type": "skos:Concept",
+  "skos:prefLabel": "TranslatedTitle",
+  "skos:definition": "A translated title of the resource.",
+  "skos:relatedMatch": {
+    "@id": "schema:workTranslation"
+  },
+  "skos:broader": {
+    "@id": "ex:titleType"
+  },
+  "skos:inScheme": {
+    "@id": "ex:TitleTypeScheme"
+  }
+},
+
+{
+      "@id": "ex:TitleType_Other",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Other",
+      "skos:definition": "Any other title type not covered by the standard list.",
+      "skos:closeMatch": { "@id": "schema:alternateName" },
+      "skos:broader": { "@id": "ex:titleType" },
+      "skos:inScheme": { "@id": "ex:TitleTypeScheme" }
+},
+{
+      "@id": "ex:publisher",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Publisher",
+      "skos:definition": "The name of the entity that publishes or produces the resource.",
+      "skos:exactMatch": { "@id": "schema:publisher" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+{
+      "@id": "ex:publisherIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Publisher Identifier",
+      "skos:definition": "A persistent identifier for the publisher.",
+      "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:publisherIdentifierScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Publisher Identifier Scheme",
+      "skos:definition": "The scheme used for the publisher identifier.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:publisherSchemeURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Publisher Scheme URI",
+      "skos:definition": "The URL identifying the publisher identifier scheme.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+
+{
+      "@id": "ex:publicationYear",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Publication Year",
+      "skos:definition": "The year when the resource is or will be made publicly available.",
+      "skos:exactMatch": { "@id": "schema:datePublished" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+
+{
+      "@id": "ex:subject",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Subject",
+      "skos:definition": "Subject, keyword, classification code, or key phrase describing the resource.",
+      "skos:broadMatch": { "@id": "schema:about" },
+      "skos:relatedMatch": { "@id": "schema:keywords" },
+      "skos:narrowMatch": { "@id": "schema:DefinedTerm" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+
+{
+      "@id": "ex:subjectScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Subject Scheme",
+      "skos:definition": "The name of the subject scheme or classification code authority.",
+      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:schemeURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Scheme URI",
+      "skos:definition": "The URI of the subject identifier scheme.",
+      "skos:exactMatch": { "@id": "schema:url" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+{
+      "@id": "ex:valueURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Value URI",
+      "skos:definition": "The URI of the subject term.",
+      "skos:exactMatch": { "@id": "schema:url" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:classificationCode",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Classification Code",
+      "skos:definition": "The classification code used for the subject.",
+      "skos:exactMatch": { "@id": "schema:termCode" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+{
+      "@id": "ex:contributor",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Contributor",
+      "skos:definition": "A party that contributed to the resource other than the primary creator.",
+      "skos:exactMatch": { "@id": "schema:contributor" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+{
+      "@id": "ex:contributorType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Contributor Type",
+      "skos:definition": "The role of the contributor (e.g. ProjectManager, HostingInstitution).",
+      "skos:exactMatch": { "@id": "schema:roleName" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+{
+      "@id": "ex:contributorName",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Contributor Name",
+      "skos:definition": "The full name of the contributor.",
+      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:nameType_Personal",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Personal",
+      "skos:definition": "Indicates that the creator is an individual person.",
+      "skos:exactMatch": { "@id": "schema:Person" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:contributorGivenName",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Given Name",
+      "skos:definition": "The given or first name of the contributor.",
+      "skos:exactMatch": { "@id": "schema:givenName" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:contributorFamilyName",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Family Name",
+      "skos:definition": "The family or last name of the contributor.",
+      "skos:exactMatch": { "@id": "schema:familyName" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:contributorNameIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Name Identifier",
+      "skos:definition": "A persistent identifier for the contributor (e.g. ORCID).",
+      "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:contributorNameIdentifierScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Name Identifier Scheme",
+      "skos:definition": "The scheme used for the name identifier (e.g. ORCID).",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+{
+      "@id": "ex:contributorSchemeURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Contributor Scheme URI",
+      "skos:definition": "The URL identifying the name identifier scheme for a contributor.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:contributorAffiliation",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation",
+      "skos:definition": "The organization with which the contributor is affiliated.",
+      "skos:exactMatch": { "@id": "schema:affiliation" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+ {
+      "@id": "ex:contributorAffiliationIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation Identifier",
+      "skos:definition": "A persistent identifier for the affiliation.",
+      "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:contributorAffiliationIdentifierScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation Identifier Scheme",
+      "skos:definition": "The scheme used for the affiliation identifier.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:contributorAffiliationSchemeURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Affiliation Scheme URI",
+      "skos:definition": "The URL identifying an affiliation identifier scheme.",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+  {
+      "@id": "ex:DateTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite DateType Scheme",
+      "skos:definition": "Controlled list of DataCite dateType values.",
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" },
+      "skos:hasTopConcept": [
+        { "@id": "ex:DateType_Accepted" },
+        { "@id": "ex:DateType_Available" },
+        { "@id": "ex:DateType_Copyrighted" },
+        { "@id": "ex:DateType_Collected" },
+        { "@id": "ex:DateType_Coverage" },
+        { "@id": "ex:DateType_Created" },
+        { "@id": "ex:DateType_Issued" },
+        { "@id": "ex:DateType_Submitted" },
+        { "@id": "ex:DateType_Updated" },
+        { "@id": "ex:DateType_Valid" },
+        { "@id": "ex:DateType_Withdrawn" },
+        { "@id": "ex:DateType_Other" }
+      ]
+    },
+  {
+      "@id": "ex:date",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Date",
+      "skos:definition": "Different dates relevant to the work.",
+      "skos:broadMatch": [
+        { "@id": "schema:dateCreated" },
+        { "@id": "schema:datePublished" },
+        { "@id": "schema:dateModified" },
+        { "@id": "schema:dateSubmitted" },
+        { "@id": "schema:dateIssued" },
+        { "@id": "schema:dateDeleted" }
+      ],
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+{
+      "@id": "ex:dateType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Date Type",
+      "skos:definition": "The type of date (e.g. Issued, Created, Coverage).",
+      "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "ex:DateType_Accepted",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Accepted",
+      "skos:definition": "The date when the resource was accepted.",
+      "skos:exactMatch": { "@id": "dcterms:dateAccepted" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+
+{
+      "@id": "ex:DateType_Available",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Available",
+      "skos:definition": "The date when the resource became available.",
+      "skos:exactMatch": { "@id": "schema:datePublished" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+
+{
+      "@id": "ex:DateType_Copyrighted",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Copyrighted",
+      "skos:definition": "The year copyright was asserted.",
+      "skos:exactMatch": { "@id": "schema:copyrightYear" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+{
+      "@id": "ex:DateType_Collected",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Collected",
+      "skos:definition": "The date or period when data was collected.",
+      "skos:closeMatch": { "@id": "schema:temporalCoverage" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+{
+      "@id": "ex:DateType_Coverage",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Coverage",
+      "skos:definition": "The temporal coverage of the resource.",
+      "skos:exactMatch": { "@id": "schema:temporalCoverage" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+{
+      "@id": "ex:DateType_Created",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Created",
+      "skos:definition": "The date the resource was created.",
+      "skos:exactMatch": { "@id": "schema:dateCreated" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+{
+      "@id": "ex:DateType_Issued",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Issued",
+      "skos:definition": "The date of first issuance or publication.",
+      "skos:exactMatch": { "@id": "schema:datePublished" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+{
+      "@id": "ex:DateType_Submitted",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Submitted",
+      "skos:definition": "The date the resource was submitted.",
+      "skos:exactMatch": { "@id": "dcterms:dateSubmitted" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+{
+      "@id": "ex:DateType_Updated",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Updated",
+      "skos:definition": "The date the resource was last modified.",
+      "skos:exactMatch": { "@id": "schema:dateModified" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+
+{
+      "@id": "ex:DateType_Valid",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Valid",
+      "skos:definition": "The date when the resource’s validity began.",
+      "skos:exactMatch": { "@id": "schema:validFrom" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+
+    {
+      "@id": "ex:DateType_Withdrawn",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Withdrawn",
+      "skos:definition": "The date the resource was withdrawn or deleted.",
+      "skos:relatedMatch": { "@id": "schema:dateDeleted" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+
+{
+      "@id": "ex:DateType_Other",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Other",
+      "skos:definition": "Any other date type not covered.",
+      "skos:closeMatch": { "@id": "schema:additionalType" },
+      "skos:broader": { "@id": "ex:dateType" },
+      "skos:inScheme": { "@id": "ex:DateTypeScheme" }
+    },
+{
+      "@id": "ex:dateInformation",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Date Information",
+      "skos:definition": "Free-text details about the date (e.g. \"55 BC\").",
+      "skos:exactMatch": { "@id": "schema:description" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    }
+  ]
+}
