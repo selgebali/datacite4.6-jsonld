@@ -1,0 +1,571 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab":  "http://datacite.org/schema/kernel-4#",
+
+    "xml": "http://www.w3.org/XML/1998/namespace#",
+     
+    "xml:lang":  { "@id": "xml:lang",  "@type": "@language" },
+    "xml:space": { "@id": "xml:space" },
+    "xml:base":  { "@id": "xml:base",  "@type": "@id" },
+    "xml:id":    { "@id": "xml:id",    "@type": "@id" },
+
+    "schema":  "http://schema.org/",
+    "dcat":          "http://www.w3.org/ns/dcat#",
+    "skos":    "http://www.w3.org/2004/02/skos/core#",
+    "xsd":     "http://www.w3.org/2001/XMLSchema#",
+
+    "identifier":    { "@id": "identifier", "@type": "@id" },
+        "identifierType":{ "@id": "identifier/@identifierType", "@type": "xsd:string" },
+   
+    "creators":      { "@id": "creators", "@container": "@list" },
+    "creator":       { "@id": "creator", "@container": "@list" },
+    "creatorName":   { "@id": "creatorName", "@type": "xsd:string" },
+        "givenName":     { "@id": "givenName", "@type": "xsd:string" },
+        "familyName":    { "@id": "familyName", "@type": "xsd:string" },
+    
+ 
+
+    "publisher":        { "@id": "publisher", "@type":"xsd:string" },
+    "publisherIdentifier":       { "@id":"publisher/@publisherIdentifier", "@type":"xsd:string" },
+    "publisherIdentifierScheme": { "@id":"publisher/@publisherIdentifierScheme", "@type":"xsd:string" },
+    "schemeURI":        { "@id":"publisher/@schemeURI", "@type":"@id" },
+
+    "publicationYear": {
+      "@id": "publicationYear",
+      "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "resource": { "@id": "resource", "@type": "@id" },
+    "resourceType":     { "@id":"resourceType", "@type":"xsd:string" },
+    "resourceTypeGeneral":{ "@id": "resourceType/@resourceTypeGeneral", "@type": "xsd:string" },
+    "resourceTypeGeneralList": {
+      "@id": "resourceTypeGeneralList",
+      "@container": "@list",
+      "@graph": [
+        "Audiovisual","Award","Book","BookChapter","Collection",
+        "ComputationalNotebook","ConferencePaper","ConferenceProceeding",
+        "DataPaper","Dataset","Dissertation","Event","Image",
+        "InteractiveResource","Instrument","Journal","JournalArticle",
+        "Model","OutputManagementPlan","PeerReview","PhysicalObject",
+        "Preprint","Project","Report","Service","Software","Sound",
+        "Standard","StudyRegistration","Text","Workflow","Other"
+      ]
+    },
+    "contributorType": {
+      "@id": "contributor/@contributorType",
+      "@type": "xsd:string"
+    },
+    "contributorTypeList": {
+      "@id": "contributorTypeList",
+      "@container": "@list",
+      "@graph": [
+        "ContactPerson",
+        "DataCollector",
+        "DataCurator",
+        "DataManager",
+        "Distributor",
+        "Editor",
+        "HostingInstitution",
+        "Other",
+        "Producer",
+        "ProjectLeader",
+        "ProjectManager",
+        "ProjectMember",
+        "RegistrationAgency",
+        "RegistrationAuthority",
+        "RelatedPerson",
+        "ResearchGroup",
+        "RightsHolder",
+        "Researcher",
+        "Sponsor",
+        "Supervisor",
+        "Translator",
+        "WorkPackageLeader"
+      ]
+    },
+    "dateType": {
+      "@id": "date/@dateType",
+      "@type": "xsd:string"
+    },
+    "dateTypeList": {
+      "@id": "dateTypeList",
+      "@container": "@list",
+      "@graph": [
+        "Accepted",
+        "Available",
+        "Collected",
+        "Copyrighted",
+        "Coverage",
+        "Created",
+        "Issued",
+        "Other",
+        "Submitted",
+        "Updated",
+        "Valid",
+        "Withdrawn"
+      ]
+    },
+    "descriptionType": {
+      "@id": "description/@descriptionType",
+      "@type": "xsd:string"
+    },
+    "descriptionTypeList": {
+      "@id": "descriptionTypeList",
+      "@container": "@list",
+      "@graph": [
+        "Abstract",
+        "Methods",
+        "SeriesInformation",
+        "TableOfContents",
+        "TechnicalInfo",
+        "Other"
+      ]
+    },
+    "funderIdentifierType": {
+      "@id": "funderIdentifier/@funderIdentifierType",
+      "@type": "xsd:string"
+    },
+    "funderIdentifierTypeList": {
+      "@id": "funderIdentifierTypeList",
+      "@container": "@list",
+      "@graph": [
+        "ISNI",
+        "GRID",
+        "ROR",
+        "Crossref Funder ID",
+        "Other"
+      ]
+    },
+    "nameType": {
+      "@id": "nameIdentifier/@nameType",
+      "@type": "xsd:string"
+    },
+    "nameTypeList": {
+      "@id": "nameTypeList",
+      "@container": "@list",
+      "@graph": [
+        "Organizational",
+        "Personal"
+      ]
+    },
+    "numberType": {
+      "@id": "number/@numberType",
+      "@type": "xsd:string"
+    },
+    "numberTypeList": {
+      "@id": "numberTypeList",
+      "@container": "@list",
+      "@graph": [
+        "Article",
+        "Chapter",
+        "Report",
+        "Other"
+      ]
+    },
+    "relatedIdentifierType": {
+      "@id": "relatedIdentifier/@relatedIdentifierType",
+      "@type": "xsd:string"
+    },
+    "relatedIdentifierTypeList": {
+      "@id": "relatedIdentifierTypeList",
+      "@container": "@list",
+      "@graph": [
+        "ARK",
+        "arXiv",
+        "bibcode",
+        "CSTR",
+        "DOI",
+        "EAN13",
+        "EISSN",
+        "Handle",
+        "IGSN",
+        "ISBN",
+        "ISSN",
+        "ISTC",
+        "LISSN",
+        "LSID",
+        "PMID",
+        "PURL",
+        "RRID",
+        "UPC",
+        "URL",
+        "URN",
+        "w3id"
+      ]
+    },
+    "relationType": {
+      "@id": "relatedIdentifier/@relationType",
+      "@type": "xsd:string"
+    },
+    "relationTypeList": {
+      "@id": "relationTypeList",
+      "@container": "@list",
+      "@graph": [
+        "IsCitedBy",
+        "Cites",
+        "IsSupplementTo",
+        "IsSupplementedBy",
+        "IsContinuedBy",
+        "Continues",
+        "IsNewVersionOf",
+        "IsPreviousVersionOf",
+        "IsPartOf",
+        "HasPart",
+        "IsPublishedIn",
+        "IsReferencedBy",
+        "References",
+        "IsDocumentedBy",
+        "Documents",
+        "IsCompiledBy",
+        "Compiles",
+        "IsVariantFormOf",
+        "IsOriginalFormOf",
+        "IsIdenticalTo",
+        "HasMetadata",
+        "IsMetadataFor",
+        "Reviews",
+        "IsReviewedBy",
+        "IsDerivedFrom",
+        "IsSourceOf",
+        "Describes",
+        "IsDescribedBy",
+        "HasVersion",
+        "IsVersionOf",
+        "Requires",
+        "IsRequiredBy",
+        "Obsoletes",
+        "IsObsoletedBy",
+        "Collects",
+        "IsCollectedBy",
+        "HasTranslation",
+        "IsTranslationOf"
+      ]
+    },
+  
+    "titleType": {
+      "@id": "title/@titleType",
+      "@type": "xsd:string"
+    },
+    "titleTypeList": {
+      "@id": "titleTypeList",
+      "@container": "@list",
+      "@graph": [
+        "AlternativeTitle",
+        "Subtitle",
+        "TranslatedTitle",
+        "Other"
+      ]
+    },
+    "subjects": {
+      "@id": "subjects",
+      "@container": "@list"
+    },
+    "subject": {
+      "@id": "subject",
+      "@type": "xsd:string"
+    },
+    "subjectScheme": {
+      "@id": "subject/@subjectScheme",
+      "@type": "xsd:string"
+    },
+    "subjectSchemeURI": {
+      "@id": "subject/@schemeURI",
+      "@type": "@id"
+    },
+    "valueURI": {
+      "@id": "subject/@valueURI",
+      "@type": "@id"
+    },
+    "classificationCode": {
+      "@id": "subject/@classificationCode",
+      "@type": "@id"
+    },
+    "contributors": {
+      "@id": "contributors",
+      "@container": "@list"
+    },
+    "contributor": {
+      "@id": "contributor",
+      "@container": "@list"
+    },
+    "contributorName": {
+      "@id": "contributorName",
+      "@type": "xsd:string"
+    },
+   
+    "nameIdentifier": {
+      "@id": "nameIdentifier",
+      "@type": "@id"
+    },
+    "affiliation": {
+      "@id": "affiliation",
+      "@type": "xsd:string"
+    },
+    "dates": {
+      "@id": "dates",
+      "@container": "@list"
+    },
+    "date": {
+      "@id": "date",
+      "@container": "@list"
+    },
+    "dateInformation": {
+      "@id": "date/@dateInformation",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "language",
+      "@type": "http://www.w3.org/2001/XMLSchema#language"
+    },
+    "alternateIdentifiers": {
+      "@id": "alternateIdentifiers",
+      "@container": "@list"
+    },
+    "alternateIdentifier": {
+      "@id": "alternateIdentifier",
+      "@container": "@list"
+    },
+    "alternateIdentifierType": {
+      "@id": "alternateIdentifier/@alternateIdentifierType",
+      "@type": "xsd:string"
+    },
+    "relatedIdentifiers": {
+      "@id": "relatedIdentifiers",
+      "@container": "@list"
+    },
+    "relatedIdentifier": {
+      "@id": "relatedIdentifier",
+      "@container": "@list"
+    },
+    "relatedMetadataScheme": {
+      "@id": "relatedIdentifier/@relatedMetadataScheme",
+      "@type": "xsd:string"
+    },
+    "schemeType": {
+      "@id": "relatedIdentifier/@schemeType",
+      "@type": "xsd:string"
+    },
+    "relatedIdentifierSchemeURI": {
+      "@id": "relatedIdentifier/@schemeURI",
+      "@type": "@id"
+    },
+    "sizes": {
+      "@id": "sizes",
+      "@container": "@list"
+    },
+    "size": {
+      "@id": "size",
+      "@type": "xsd:string"
+    },
+    "formats": {
+      "@id": "formats",
+      "@container": "@list"
+    },
+    "format": {
+      "@id": "format",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "version",
+      "@type": "xsd:string"
+    },
+    "rightsList": {
+      "@id": "rightsList",
+      "@container": "@list"
+    },
+    "rights": {
+      "@id": "rights",
+      "@container": "@list"
+    },
+    "rightsURI": {
+      "@id": "rights/@rightsURI",
+      "@type": "@id"
+    },
+    "rightsIdentifier": {
+      "@id": "rights/@rightsIdentifier",
+      "@type": "xsd:string"
+    },
+    "rightsIdentifierScheme": {
+      "@id": "rights/@rightsIdentifierScheme",
+      "@type": "xsd:string"
+    },
+    "rightsSchemeURI": {
+      "@id": "rights/@schemeURI",
+      "@type": "@id"
+    },
+    "descriptions": {
+      "@id": "descriptions",
+      "@container": "@list"
+    },
+    "description": {
+      "@id": "description",
+      "@container": "@list",
+      "@type": "xsd:string"
+    },
+    "geoLocations": {
+      "@id": "geoLocations",
+      "@container": "@list"
+    },
+    "geoLocation": {
+      "@id": "geoLocation",
+      "@container": "@list"
+    },
+    "geoLocationPlace": {
+      "@id": "geoLocationPlace",
+      "@type": "xsd:string"
+    },
+    "geoLocationPoint": {
+      "@id": "geoLocationPoint"
+    },
+    "geoLocationBox": {
+      "@id": "geoLocationBox"
+    },
+    "geoLocationPolygon": {
+      "@id": "geoLocationPolygon",
+      "@container": "@list"
+    },
+    "polygonPoint": {
+      "@id": "polygonPoint",
+      "@container": "@list"
+    },
+    "inPolygonPoint": {
+      "@id": "inPolygonPoint"
+    },
+    "fundingReferences": {
+      "@id": "fundingReferences",
+      "@container": "@list"
+    },
+    "fundingReference": {
+      "@id": "fundingReference",
+      "@container": "@list"
+    },
+    "funderName": {
+      "@id": "funderName",
+      "@type": "xsd:string"
+    },
+    "funderIdentifier": {
+      "@id": "funderIdentifier",
+      "@type": "@id"
+    },
+    "funderIdentifierSchemeURI": {
+      "@id": "funderIdentifier/@schemeURI",
+      "@type": "@id"
+    },
+    "awardNumber": {
+      "@id": "awardNumber",
+      "@type": "xsd:string"
+    },
+    "awardURI": {
+      "@id": "awardNumber/@awardURI",
+      "@type": "@id"
+    },
+    "awardTitle": {
+      "@id": "awardTitle",
+      "@type": "xsd:string"
+    },
+    "relatedItems": {
+      "@id": "relatedItems",
+      "@container": "@list"
+    },
+    "relatedItem": {
+      "@id": "relatedItem",
+      "@container": "@list"
+    },
+    "relatedItemIdentifier": {
+      "@id": "relatedItemIdentifier",
+      "@type": "xsd:string"
+    },
+    "relatedItemIdentifierType": {
+      "@id": "relatedItemIdentifier/@relatedItemIdentifierType",
+      "@type": "xsd:string"
+    },
+    "relatedItemMetadataScheme": {
+      "@id": "relatedItemIdentifier/@relatedMetadataScheme",
+      "@type": "xsd:string"
+    },
+    "relatedItemSchemeURI": {
+      "@id": "relatedItemIdentifier/@schemeURI",
+      "@type": "@id"
+    },
+    "relatedItemSchemeType": {
+      "@id": "relatedItemIdentifier/@schemeType",
+      "@type": "xsd:string"
+    },
+    "volume": {
+      "@id": "volume",
+      "@type": "xsd:string"
+    },
+    "issue": {
+      "@id": "issue",
+      "@type": "xsd:string"
+    },
+    "number": {
+      "@id": "number",
+      "@type": "xsd:string"
+    },
+    "firstPage": {
+      "@id": "firstPage",
+      "@type": "xsd:string"
+    },
+    "lastPage": {
+      "@id": "lastPage",
+      "@type": "xsd:string"
+    },
+    "edition": {
+      "@id": "edition",
+      "@type": "xsd:string"
+    },
+    "relatedItemType": {
+      "@id": "relatedItem/@relatedItemType",
+      "@type": "xsd:string"
+    },
+    "relatedItemRelationType": {
+      "@id": "relatedItem/@relationType",
+      "@type": "xsd:string"
+    },
+    "nameIdentifierScheme": {
+      "@id": "nameIdentifier/@nameIdentifierScheme",
+      "@type": "xsd:string"
+    },
+    "nameIdentifierSchemeURI": {
+      "@id": "nameIdentifier/@schemeURI",
+      "@type": "@id"
+    },
+    "affiliationIdentifier": {
+      "@id": "affiliation/@affiliationIdentifier",
+      "@type": "xsd:string"
+    },
+    "affiliationIdentifierScheme": {
+      "@id": "affiliation/@affiliationIdentifierScheme",
+      "@type": "xsd:string"
+    },
+    "affiliationSchemeURI": {
+      "@id": "affiliation/@schemeURI",
+      "@type": "@id"
+    },
+    "pointLongitude": {
+      "@id": "pointLongitude",
+      "@type": "xsd:float"
+    },
+    "pointLatitude": {
+      "@id": "pointLatitude",
+      "@type": "xsd:float"
+    },
+    "westBoundLongitude": {
+      "@id": "westBoundLongitude",
+      "@type": "xsd:float"
+    },
+    "eastBoundLongitude": {
+      "@id": "eastBoundLongitude",
+      "@type": "xsd:float"
+    },
+    "southBoundLatitude": {
+      "@id": "southBoundLatitude",
+      "@type": "xsd:float"
+    },
+    "northBoundLatitude": {
+      "@id": "northBoundLatitude",
+      "@type": "xsd:float"
+    }
+  }
+}
