@@ -27,9 +27,3 @@ Include in your JSON-LD documents:
   "identifierType": "DOI"
 }
 ```
-## Validating with JSON-Schema
-```
-ajv validate \
-  --schema=https://selgebali.github.io/datacite4.6-jsonld/rules.json \
-  --data=your-data.json
-```
