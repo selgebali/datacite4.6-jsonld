@@ -3,7 +3,9 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "wd": "http://www.wikidata.org/entity/"
+    "dcterms": 	"http://purl.org/dc/terms/",
+    "wd": "http://www.wikidata.org/entity/",
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld"
   },
   "@graph": [
      {
@@ -19,10 +21,14 @@
       "skos:definition": "A unique string that identifies the resource.",
       "skos:exactMatch": [
         { "@id": "schema:identifier" },
-        { "@id": "wd:Q19847612" }
+        { "@id": "dcat:identifier" }
       ],
-      "skos:closeMatch": { "@id": "dcat:identifier" },
-      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+      "skos:closeMatch": [ 
+          { "@id": "dcat:landingPage"},	
+          { "@id": "wd:Q853614" }
+        ],
+        "skos:inScheme":
+        { "@id": "ex:DataCite4.6ConceptScheme" }
     },
     {
       "@id": "ex:identifierType",
@@ -37,8 +43,15 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Creator",
       "skos:definition": "The main researchers involved in producing the data, or the authors of the publication, in priority order.",
-      "skos:exactMatch": { "@id": "schema:creator" },
-      "skos:closeMatch": { "@id": "schema:author" },
+      "skos:exactMatch": [
+        { "@id": "schema:creator" },
+        { "@id": "dcterms:creator" },
+        { "@id": "wd:Q2500638" }
+      ],
+      "skos:narrowMatch": [
+        { "@id": "schema:author" },
+        { "@id": "wd:Q482980" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
      {
@@ -46,7 +59,11 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Creator Name",
       "skos:definition": "The full name of the creator.",
-      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:exactMatch": [
+        { "@id": "schema:name" },
+        { "@id":"dcterms:creator"}
+     ],
+      "skos:closeMatch": { "@id": "wd:Q1071027" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
      {
@@ -55,22 +72,38 @@
       "skos:prefLabel": "Personal",
       "skos:definition": "Indicates that the creator is an individual person.",
       "skos:exactMatch": { "@id": "schema:Person" },
+      "skos:closeMatch": { "@id": "wd:Q5" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
+    {
+      "@id": "ex:nameType_Organizational",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Organizational",
+      "skos:definition": "Indicates that the creator is an organization.",
+      "skos:exactMatch": { "@id": "schema:Organization" },
+      "skos:closeMatch": { "@id": "wd:Q43229" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+},
 {
       "@id": "ex:givenName",
       "@type": "skos:Concept",
       "skos:prefLabel": "Given Name",
       "skos:definition": "The personal or first name of the creator.",
-      "skos:exactMatch": { "@id": "schema:givenName" },
+      "skos:exactMatch": [
+        { "@id": "schema:givenName" },
+        { "@id": "wd:Q202444" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
-    {
+ {
       "@id": "ex:familyName",
       "@type": "skos:Concept",
       "skos:prefLabel": "Family Name",
       "skos:definition": "The surname or last name of the creator.",
-      "skos:exactMatch": { "@id": "schema:familyName" },
+      "skos:exactMatch": [
+        { "@id": "schema:familyName" },
+        { "@id": "wd:Q101352" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
     {
@@ -79,6 +112,10 @@
       "skos:prefLabel": "Name Identifier",
       "skos:definition": "A persistent identifier for the creator (e.g. ORCID).",
       "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:closeMatch": [
+        { "@id": "dcat:identifier" },
+        { "@id": "wd:Q853614" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 
@@ -94,7 +131,7 @@
       "@id": "ex:creatorSchemeURI",
       "@type": "skos:Concept",
       "skos:prefLabel": "Creator Scheme URI",
-      "skos:definition": "The URL identifying the name identifier scheme.",
+      "skos:definition": "The URI of the name identifier scheme.",
       "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
@@ -102,8 +139,9 @@
       "@id": "ex:affiliation",
       "@type": "skos:Concept",
       "skos:prefLabel": "Affiliation",
-      "skos:definition": "The organization with which the creator is affiliated.",
+      "skos:definition": "The organizational or institutional affiliation of the creator.",
       "skos:exactMatch": { "@id": "schema:affiliation" },
+      "skos:closeMatch": { "@id": "wd:Q46135267" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
  {
@@ -112,6 +150,9 @@
       "skos:prefLabel": "Affiliation Identifier",
       "skos:definition": "A persistent identifier for the affiliation.",
       "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:closeMatch": [{ "@id": "dcat:identifier" },
+      { "@id": "wd:Q853614" }
+ ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
     {
@@ -130,12 +171,25 @@
       "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
+    {
+      "@id": "ex:title",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Title",
+      "skos:definition": "The main title of the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:name" },
+        { "@id": "dcterms:title" },
+        { "@id": "wd:Q783521" }
+      ],
+      "skos:narrowMatch": { "@id": "schema:headline" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
 {
   "@id": "ex:titleType",
   "@type": "skos:Concept",
   "skos:prefLabel": "Title Type",
   "skos:definition": "The type of title element other than the main title.",
-  "skos:closeMatch": { "@id": "schema:alternativeHeadline" },
+  "skos:exactMatch": { "@id": "schema:PropertyValue.propertyID" },
   "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
 },
 
@@ -159,9 +213,10 @@
       "skos:prefLabel": "AlternativeTitle",
       "skos:definition": "An alternate title of the resource.",
       "skos:exactMatch": { "@id": "schema:alternativeHeadline" },
+      "skos:closeMatch": { "@id": "wd:Q4736562" },
       "skos:broader": { "@id": "ex:titleType" },
       "skos:inScheme": { "@id": "ex:TitleTypeScheme" }
-},
+    },
 
 {
       "@id": "ex:TitleType_Subtitle",
@@ -169,17 +224,19 @@
       "skos:prefLabel": "Subtitle",
       "skos:definition": "A subtitle of the resource.",
       "skos:exactMatch": { "@id": "schema:alternativeHeadline" },
+      "skos:closeMatch": { "@id": "wd:Q1135389" },
       "skos:broader": { "@id": "ex:titleType" },
       "skos:inScheme": { "@id": "ex:TitleTypeScheme" }
-},
+    },
 {
-  "@id": "ex:TitleType_TranslatedTitle",
-  "@type": "skos:Concept",
-  "skos:prefLabel": "TranslatedTitle",
-  "skos:definition": "A translated title of the resource.",
-  "skos:relatedMatch": {
-    "@id": "schema:workTranslation"
-  },
+    "@id": "ex:TitleType_TranslatedTitle",
+    "@type": "skos:Concept",
+    "skos:prefLabel": "TranslatedTitle",
+    "skos:definition": "A translated title of the resource.",
+    "skos:relatedMatch": [
+    { "@id": "schema:workTranslation" },
+    { "@id": "wd:Q7553" }
+  ],
   "skos:broader": {
     "@id": "ex:titleType"
   },
@@ -196,13 +253,17 @@
       "skos:closeMatch": { "@id": "schema:alternateName" },
       "skos:broader": { "@id": "ex:titleType" },
       "skos:inScheme": { "@id": "ex:TitleTypeScheme" }
-},
+    },
 {
       "@id": "ex:publisher",
       "@type": "skos:Concept",
       "skos:prefLabel": "Publisher",
       "skos:definition": "The name of the entity that publishes or produces the resource.",
       "skos:exactMatch": { "@id": "schema:publisher" },
+      "skos:closeMatch": [
+        { "@id": "dcat:publisher" },
+        { "@id": "wd:Q2516866" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 
@@ -212,6 +273,10 @@
       "skos:prefLabel": "Publisher Identifier",
       "skos:definition": "A persistent identifier for the publisher.",
       "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:closeMatch": [
+        { "@id": "dcat:identifier" },
+        { "@id": "wd:Q853614" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -228,38 +293,53 @@
       "skos:prefLabel": "Publisher Scheme URI",
       "skos:definition": "The URL identifying the publisher identifier scheme.",
       "skos:exactMatch": { "@id": "schema:PropertyValue.propertyURL" },
+      "skos:closeMatch": { "@id": "schema:url" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
-
 
 {
       "@id": "ex:publicationYear",
       "@type": "skos:Concept",
       "skos:prefLabel": "Publication Year",
       "skos:definition": "The year when the resource is or will be made publicly available.",
-      "skos:exactMatch": { "@id": "schema:datePublished" },
+      "skos:exactMatch": [
+        { "@id": "schema:datePublished" },
+        { "@id": "dcterms:issued" },
+        { "@id": "wd:Q1361758" }
+      ],
+      "skos:broadMatch": { "@id": "schema:date" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
-
-
 {
       "@id": "ex:subject",
       "@type": "skos:Concept",
       "skos:prefLabel": "Subject",
       "skos:definition": "Subject, keyword, classification code, or key phrase describing the resource.",
-      "skos:broadMatch": { "@id": "schema:about" },
+      "skos:exactMatch": [
+        { "@id": "dcterms:subject" },
+        { "@id": "wd:Q164573" }
+      ],
+      "skos:closeMatch": { "@id": "dcat:keyword" },
+      "skos:broadMatch": [
+          { "@id": "schema:about" },
+          { "@id": "dcat:theme" }
+            ],      
       "skos:relatedMatch": { "@id": "schema:keywords" },
       "skos:narrowMatch": { "@id": "schema:DefinedTerm" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
-
-
 {
       "@id": "ex:subjectScheme",
       "@type": "skos:Concept",
       "skos:prefLabel": "Subject Scheme",
       "skos:definition": "The name of the subject scheme or classification code authority.",
-      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:exactMatch": [
+        { "@id": "dcterms:source" }
+      ],
+      "skos:closeMatch": [
+        { "@id": "schema:name" }
+      ],
+      "skos:relatedMatch": { "@id": "wd:Q5962346" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -285,6 +365,7 @@
       "skos:prefLabel": "Classification Code",
       "skos:definition": "The classification code used for the subject.",
       "skos:exactMatch": { "@id": "schema:termCode" },
+      "skos:relatedMatch": { "@id": "dcat:keyword" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 
@@ -293,7 +374,12 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Contributor",
       "skos:definition": "A party that contributed to the resource other than the primary creator.",
-      "skos:exactMatch": { "@id": "schema:contributor" },
+      "skos:exactMatch": [
+        { "@id": "schema:contributor" },
+        { "@id": "wd:Q20204892" },
+        {"@id":"dcterms:contributor"}
+      
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 
@@ -302,7 +388,11 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Contributor Type",
       "skos:definition": "The role of the contributor (e.g. ProjectManager, HostingInstitution).",
-      "skos:exactMatch": { "@id": "schema:roleName" },
+      "skos:exactMatch": [
+        { "@id": "schema:roleName" },
+        { "@id": "dcat:role" }
+      ],
+      "skos:broaderMatch": { "@id": "schema:roleName" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 
@@ -311,7 +401,11 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Contributor Name",
       "skos:definition": "The full name of the contributor.",
-      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:exactMatch": [
+        { "@id": "schema:name" },
+        { "@id":"dcterms:creator"}
+     ],
+      "skos:closeMatch": { "@id": "wd:Q1071027" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -320,14 +414,27 @@
       "skos:prefLabel": "Personal",
       "skos:definition": "Indicates that the creator is an individual person.",
       "skos:exactMatch": { "@id": "schema:Person" },
+      "skos:closeMatch": { "@id": "wd:Q5" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
+    {
+      "@id": "ex:nameType_Organizational",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Organizational",
+      "skos:definition": "Indicates that the creator is an organization.",
+      "skos:exactMatch": { "@id": "schema:Organization" },
+      "skos:closeMatch": { "@id": "wd:Q43229" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+},
 {
       "@id": "ex:contributorGivenName",
       "@type": "skos:Concept",
       "skos:prefLabel": "Given Name",
       "skos:definition": "The given or first name of the contributor.",
-      "skos:exactMatch": { "@id": "schema:givenName" },
+      "skos:exactMatch": [
+        { "@id": "schema:givenName" },
+        { "@id": "wd:Q202444" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -335,7 +442,10 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Family Name",
       "skos:definition": "The family or last name of the contributor.",
-      "skos:exactMatch": { "@id": "schema:familyName" },
+      "skos:exactMatch": [
+        { "@id": "schema:familyName" },
+        { "@id": "wd:Q101352" }
+      ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -344,6 +454,11 @@
       "skos:prefLabel": "Name Identifier",
       "skos:definition": "A persistent identifier for the contributor (e.g. ORCID).",
       "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:closeMatch": [
+        { "@id": "dcat:identifier" },
+        { "@id": "wd:Q853614" }
+      ],
+      "skos:relatedMatch": { "@id": "wd:P496" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -369,6 +484,7 @@
       "skos:prefLabel": "Affiliation",
       "skos:definition": "The organization with which the contributor is affiliated.",
       "skos:exactMatch": { "@id": "schema:affiliation" },
+      "skos:closeMatch": { "@id": "wd:Q46135267" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
  {
@@ -377,6 +493,9 @@
       "skos:prefLabel": "Affiliation Identifier",
       "skos:definition": "A persistent identifier for the affiliation.",
       "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:closeMatch": [{ "@id": "dcat:identifier" },
+      { "@id": "wd:Q853614" }
+ ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -422,14 +541,26 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Date",
       "skos:definition": "Different dates relevant to the work.",
+      "skos:exactMatch": { "@id": "dcterms:date" },
       "skos:broadMatch": [
-        { "@id": "schema:dateCreated" },
-        { "@id": "schema:datePublished" },
-        { "@id": "schema:dateModified" },
-        { "@id": "schema:dateSubmitted" },
-        { "@id": "schema:dateIssued" },
-        { "@id": "schema:dateDeleted" }
-      ],
+    { "@id": "schema:dateCreated" },
+    { "@id": "schema:datePublished" },
+    { "@id": "schema:dateModified" },
+    { "@id": "schema:dateSubmitted" },
+    { "@id": "schema:dateIssued" },
+    { "@id": "schema:dateDeleted" },
+    { "@id": "schema:validFrom" },
+    { "@id": "schema:validThrough" }
+  ],
+  "skos:relatedMatch": [
+    { "@id": "dcterms:created" },
+    { "@id": "dcterms:issued" },
+    { "@id": "dcterms:modified" },
+    { "@id": "dcterms:available" },
+    { "@id": "dcterms:dateAccepted" },
+    { "@id": "dcat:issued" },
+    { "@id": "dcat:modified" }
+  ],
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
     },
 {
@@ -445,7 +576,7 @@
       "@id": "ex:DateType_Accepted",
       "@type": "skos:Concept",
       "skos:prefLabel": "Accepted",
-      "skos:definition": "The date when the resource was accepted.",
+      "skos:definition": "The date that the publisher accepted the resource into their system.",
       "skos:exactMatch": { "@id": "dcterms:dateAccepted" },
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
@@ -455,8 +586,9 @@
       "@id": "ex:DateType_Available",
       "@type": "skos:Concept",
       "skos:prefLabel": "Available",
-      "skos:definition": "The date when the resource became available.",
-      "skos:exactMatch": { "@id": "schema:datePublished" },
+      "skos:definition": "The date the resource is made publicly available.",
+      "skos:exactMatch":   { "@id": "dcterms:available" },
+      "skos:relatedMatch": { "@id": "schema:datePublished" },
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -465,8 +597,9 @@
       "@id": "ex:DateType_Copyrighted",
       "@type": "skos:Concept",
       "skos:prefLabel": "Copyrighted",
-      "skos:definition": "The year copyright was asserted.",
-      "skos:exactMatch": { "@id": "schema:copyrightYear" },
+      "skos:definition": "The specific, documented date at which the resource receives a copyrighted status, if applicable.",
+      "skos:exactMatch": {"id": "dcterms:dateCopyrighted"},
+      "skos:closeMatch": {"@id": "schema:copyrightYear" },
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -474,8 +607,13 @@
       "@id": "ex:DateType_Collected",
       "@type": "skos:Concept",
       "skos:prefLabel": "Collected",
-      "skos:definition": "The date or period when data was collected.",
-      "skos:closeMatch": { "@id": "schema:temporalCoverage" },
+      "skos:definition": " The date or date range in which the resource content was collected.",
+     "skos:closeMatch":  { "@id": "dcterms:created" },          
+      "skos:relatedMatch": [
+    { "@id": "schema:temporalCoverage" },                 
+    { "@id": "dcterms:temporal" }, 
+    { "@id": "dcat:temporal" }                               
+  ],
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -483,17 +621,24 @@
       "@id": "ex:DateType_Coverage",
       "@type": "skos:Concept",
       "skos:prefLabel": "Coverage",
-      "skos:definition": "The temporal coverage of the resource.",
-      "skos:exactMatch": { "@id": "schema:temporalCoverage" },
-      "skos:broader": { "@id": "ex:dateType" },
+      "skos:definition": "The date or date range that the resource content applies to, describes, or covers.",
+      "skos:exactMatch": [
+        { "@id": "schema:temporalCoverage" },
+        {"@id": "dcterms:coverage" }
+    ],
+      "skos:relatedMatch": {"@id":"dcterms:temporal" },
+           "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
 {
       "@id": "ex:DateType_Created",
       "@type": "skos:Concept",
       "skos:prefLabel": "Created",
-      "skos:definition": "The date the resource was created.",
-      "skos:exactMatch": { "@id": "schema:dateCreated" },
+      "skos:definition": "The date the resource itself was put together; this could refer to a timeframe in ancient history, a date range, or a single date for a final component, e.g., the finalised file with all the data. ",
+      "skos:exactMatch": [
+        { "@id": "schema:dateCreated" },
+        {"@id":"dcterms:created"} 
+      ],
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -501,8 +646,11 @@
       "@id": "ex:DateType_Issued",
       "@type": "skos:Concept",
       "skos:prefLabel": "Issued",
-      "skos:definition": "The date of first issuance or publication.",
-      "skos:exactMatch": { "@id": "schema:datePublished" },
+      "skos:definition": "The date that the resource is published or distributed, e.g., to a data centre.",
+      "skos:exactMatch": [
+        { "@id": "schema:datePublished" },
+        {"@id":"dcterms:issued"}
+      ], 
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -510,8 +658,8 @@
       "@id": "ex:DateType_Submitted",
       "@type": "skos:Concept",
       "skos:prefLabel": "Submitted",
-      "skos:definition": "The date the resource was submitted.",
-      "skos:exactMatch": { "@id": "dcterms:dateSubmitted" },
+      "skos:definition": "The date the creator submits the resource to the publisher.",
+      "skos:exactMatch": { "@id": "dcterms:dateSubmitted" }, 
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -519,8 +667,11 @@
       "@id": "ex:DateType_Updated",
       "@type": "skos:Concept",
       "skos:prefLabel": "Updated",
-      "skos:definition": "The date the resource was last modified.",
-      "skos:exactMatch": { "@id": "schema:dateModified" },
+      "skos:definition": "The date of the last update to the resource, when the resource is being added to. May be a range.",
+      "skos:exactMatch": [
+        { "@id": "schema:dateModified" },
+        {"@id": "dcterms:modified"}
+      ],
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -529,8 +680,11 @@
       "@id": "ex:DateType_Valid",
       "@type": "skos:Concept",
       "skos:prefLabel": "Valid",
-      "skos:definition": "The date when the resource’s validity began.",
-      "skos:exactMatch": { "@id": "schema:validFrom" },
+      "skos:definition": "The date or date range during which the dataset or resource is accurate.",
+      "skos:exactMatch": [ 
+        { "@id": "schema:validFrom" },
+        {"@id": "dcterms:valid"}
+],
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
@@ -544,7 +698,6 @@
       "skos:broader": { "@id": "ex:dateType" },
       "skos:inScheme": { "@id": "ex:DateTypeScheme" }
     },
-
 {
       "@id": "ex:DateType_Other",
       "@type": "skos:Concept",
@@ -561,6 +714,273 @@
       "skos:definition": "Free-text details about the date (e.g. \"55 BC\").",
       "skos:exactMatch": { "@id": "schema:description" },
       "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+  "@id": "ex:Language",
+  "@type": "skos:Concept",
+  "skos:prefLabel": "Language",
+  "skos:definition": "The language the resource is in.",
+  "skos:exactMatch":   [
+    { "@id": "schema:inLanguage" },
+    {"@id": "dcterms:language"}
+  ],
+  "skos:inScheme":{ "@id": "ex:DataCite4.6ConceptScheme" }
+},
+ {
+  "@graph": [
+    {
+      "@id": "ex:ResourceTypeGeneralScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite ResourceTypeGeneral Scheme",
+      "skos:definition": "Controlled list of DataCite resourceTypeGeneral values.",
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" },
+      "skos:hasTopConcept": [
+        { "@id": "ex:ResourceTypeGeneral_Audiovisual" },
+        { "@id": "ex:ResourceTypeGeneral_Award" },
+        { "@id": "ex:ResourceTypeGeneral_Book" },
+        { "@id": "ex:ResourceTypeGeneral_BookChapter" },
+        { "@id": "ex:ResourceTypeGeneral_Collection" },
+        { "@id": "ex:ResourceTypeGeneral_ComputationalNotebook" },
+        { "@id": "ex:ResourceTypeGeneral_ConferencePaper" },
+        { "@id": "ex:ResourceTypeGeneral_ConferenceProceeding" },
+        { "@id": "ex:ResourceTypeGeneral_DataPaper" },
+        { "@id": "ex:ResourceTypeGeneral_Dataset" },
+        { "@id": "ex:ResourceTypeGeneral_Dissertation" },
+        { "@id": "ex:ResourceTypeGeneral_Event" },
+        { "@id": "ex:ResourceTypeGeneral_Image" },
+        { "@id": "ex:ResourceTypeGeneral_InteractiveResource" },
+        { "@id": "ex:ResourceTypeGeneral_Instrument" },
+        { "@id": "ex:ResourceTypeGeneral_Journal" },
+        { "@id": "ex:ResourceTypeGeneral_JournalArticle" },
+        { "@id": "ex:ResourceTypeGeneral_Model" },
+        { "@id": "ex:ResourceTypeGeneral_OutputManagementPlan" },
+        { "@id": "ex:ResourceTypeGeneral_PeerReview" },
+        { "@id": "ex:ResourceTypeGeneral_PhysicalObject" },
+        { "@id": "ex:ResourceTypeGeneral_Preprint" },
+        { "@id": "ex:ResourceTypeGeneral_Project" },
+        { "@id": "ex:ResourceTypeGeneral_Report" },
+        { "@id": "ex:ResourceTypeGeneral_Service" },
+        { "@id": "ex:ResourceTypeGeneral_Software" },
+        { "@id": "ex:ResourceTypeGeneral_Sound" },
+        { "@id": "ex:ResourceTypeGeneral_Standard" },
+        { "@id": "ex:ResourceTypeGeneral_StudyRegistration" },
+        { "@id": "ex:ResourceTypeGeneral_Text" },
+        { "@id": "ex:ResourceTypeGeneral_Workflow" },
+        { "@id": "ex:ResourceTypeGeneral_Other" }
+      ]
+    },
+    {
+      "@id": "ex:resourceType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Resource Type",
+      "skos:definition": "A description of the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:description" },
+        { "@id": "wd:Q22097967" }
+      ],
+      "skos:relatedMatch": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:resourceTypeGeneral",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Resource Type General",
+      "skos:definition": "The general type of a resource.",
+      "skos:exactMatch": { "@id": "schema:genre" },
+      "skos:relatedMatch": { "@id": "ex:resourceType" },
+      "skos:inScheme": { "@id": "ex:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Audiovisual",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Audiovisual",
+      "skos:definition": "A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound.",
+      "skos:exactMatch": { "@id": "schema:MediaObject" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Award",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Award",
+      "skos:definition": "A recognition or prize given to honor excellence or achievement.",
+      "skos:exactMatch": { "@id": "schema:Award" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:narrowMatch": { "@id": "schema:Grant" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Book",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Book",
+      "skos:definition": "A written or printed work consisting of pages bound together.",
+      "skos:exactMatch": { "@id": "schema:Book" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_BookChapter",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "BookChapter",
+      "skos:definition": "A chapter or section of a book.",
+      "skos:exactMatch": { "@id": "schema:Chapter" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Collection",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Collection",
+      "skos:definition": "A group of related items or works considered as a unit.",
+      "skos:exactMatch": { "@id": "schema:Collection" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_ComputationalNotebook",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ComputationalNotebook",
+      "skos:definition": "An interactive document combining code, text, and outputs (e.g., Jupyter Notebook).",
+      "skos:exactMatch": { "@id": "schema:SoftwareApplication" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_ConferencePaper",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ConferencePaper",
+      "skos:definition": "A paper presented at or published in the proceedings of a conference.",
+      "skos:exactMatch": { "@id": "schema:ScholarlyArticle" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_ConferenceProceeding",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ConferenceProceeding",
+      "skos:definition": "The complete collection of papers published for an academic conference.",
+      "skos:exactMatch": { "@id": "schema:PublicationVolume" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_DataPaper",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "DataPaper",
+      "skos:definition": "A scholarly paper describing a dataset.",
+      "skos:exactMatch": { "@id": "schema:ScholarlyArticle" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Dataset",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Dataset",
+      "skos:definition": "A collection of data published as a single resource.",
+      "skos:exactMatch": 
+        { "@id": "schema:Dataset" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Dissertation",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Dissertation",
+      "skos:definition": "A thesis submitted for an academic degree.",
+      "skos:exactMatch": { "@id": "schema:Thesis" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Event",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Event",
+      "skos:definition": "A planned or actual occurrence at a certain time and place.",
+      "skos:exactMatch": { "@id": "schema:Event" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Image",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Image",
+      "skos:definition": "A digital image or photograph.",
+      "skos:exactMatch": { "@id": "schema:ImageObject" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_InteractiveResource",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "InteractiveResource",
+      "skos:definition": "A resource requiring interaction, such as a web application.",
+      "skos:exactMatch": { "@id": "schema:InteractiveObject" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Instrument",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Instrument",
+      "skos:definition": "A tool or device used for measurement or experimentation.",
+      "skos:relatedMatch": { "@id": "schema:CreativeWork" },
+  
+      "skos:exactMatch": { "@id": "wd:Q19847658" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Journal",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Journal",
+      "skos:definition": "A periodical publication containing scholarly articles.",
+      "skos:exactMatch": { "@id": "schema:Periodical" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_JournalArticle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "JournalArticle",
+      "skos:definition": "An article published in a scholarly journal.",
+      "skos:exactMatch": { "@id": "schema:ScholarlyArticle" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_Model",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Model",
+      "skos:definition": "A representation or simulation of a system or concept.",
+      "skos:exactMatch": { "@id": "schema:3DModel" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_OutputManagementPlan",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "OutputManagementPlan",
+      "skos:definition": "A plan outlining how research outputs will be managed and shared.",
+      "skos:relatedMatch": { "@id": "schema:CreativeWork" },
+
+      "skos:exactMatch": { "@id": "wd:Q19847672" },
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
+    },
+    {
+      "@id": "ex:ResourceTypeGeneral_PeerReview",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "PeerReview",
+      "skos:definition": "A review of scholarly work by experts in the same field.",
+      "skos:exactMatch": [
+        { "@id": "schema:Review"}, { "@id": "wd:Q19847679" }
+],
+      "skos:broader": { "@id": "ex:resourceTypeGeneral" },
+      "skos:inScheme": { "@id": "ex:ResourceTypeGeneralScheme" }
     }
+
+    
+  ]
+}
   ]
 }
