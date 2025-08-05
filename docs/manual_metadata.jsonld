@@ -90,81 +90,19 @@
       "@id": "relatedIdentifier/@relatedIdentifierType",
       "@type": "xsd:string"
     },
-    "relatedIdentifierTypeList": {
-      "@id": "relatedIdentifierTypeList",
-      "@container": "@list",
-      "@graph": [
-        "ARK",
-        "arXiv",
-        "bibcode",
-        "CSTR",
-        "DOI",
-        "EAN13",
-        "EISSN",
-        "Handle",
-        "IGSN",
-        "ISBN",
-        "ISSN",
-        "ISTC",
-        "LISSN",
-        "LSID",
-        "PMID",
-        "PURL",
-        "RRID",
-        "UPC",
-        "URL",
-        "URN",
-        "w3id"
-      ]
-    },
+    "relatedIdentifierTypeScheme": {
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/relatedIdTypes.jsonld",
+      "@type": "@id"
+},
+
     "relationType": {
       "@id": "relatedIdentifier/@relationType",
       "@type": "xsd:string"
     },
-    "relationTypeList": {
-      "@id": "relationTypeList",
-      "@container": "@list",
-      "@graph": [
-        "IsCitedBy",
-        "Cites",
-        "IsSupplementTo",
-        "IsSupplementedBy",
-        "IsContinuedBy",
-        "Continues",
-        "IsNewVersionOf",
-        "IsPreviousVersionOf",
-        "IsPartOf",
-        "HasPart",
-        "IsPublishedIn",
-        "IsReferencedBy",
-        "References",
-        "IsDocumentedBy",
-        "Documents",
-        "IsCompiledBy",
-        "Compiles",
-        "IsVariantFormOf",
-        "IsOriginalFormOf",
-        "IsIdenticalTo",
-        "HasMetadata",
-        "IsMetadataFor",
-        "Reviews",
-        "IsReviewedBy",
-        "IsDerivedFrom",
-        "IsSourceOf",
-        "Describes",
-        "IsDescribedBy",
-        "HasVersion",
-        "IsVersionOf",
-        "Requires",
-        "IsRequiredBy",
-        "Obsoletes",
-        "IsObsoletedBy",
-        "Collects",
-        "IsCollectedBy",
-        "HasTranslation",
-        "IsTranslationOf"
-      ]
-    },
+    "relationTypeScheme": {
+  "@id": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld",
+  "@type": "@id"
+},
   
     "titleType": {
       "@id": "title/@titleType",
