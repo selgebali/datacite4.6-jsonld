@@ -5,7 +5,7 @@ The DataCite Metadata Schema is widely used to register DOIs and describe resear
 
 This repository provides:
 
-1. **`manual_metadata.jsonld`** – A JSON-LD 1.1 context exposing every element, attribute, simpleType, complexType and controlled‐vocabulary list from the DataCite Kernel 4.6 XSD.  
+1. **`main_context.jsonld`** – A JSON-LD 1.1 context exposing every element, attribute, simpleType, complexType and controlled‐vocabulary list from the DataCite Kernel 4.6 XSD.  
 2. **`rules.json`** – A companion JSON-Schema that references `manual_metadata.jsonld` as its `$id`/`$schema`, and defines required properties, min/max occurrences, patterns, etc.
 3. **`docs/`** – A GitHub Pages site hosting `manual_metadata.jsonld` and `rules.json` under stable URLs:
    - `https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld`  
