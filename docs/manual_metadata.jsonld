@@ -2,7 +2,11 @@
  {
   "@context": {
     "@version": 1.1,
+<<<<<<< HEAD
     "@vocab": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld#",
+=======
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld#",
+>>>>>>> 7c339cdb62a7140a5af7346043407383b982811d
     "xml": "http://www.w3.org/XML/1998/namespace#",
     "xml:lang": { "@id": "xml:lang", "@type": "@language" },
     "xml:space": { "@id": "xml:space" },
@@ -13,36 +17,36 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
 
-    "identifier":    { "@id": "identifier", "@type": "@id" },
-        "identifierType":{ "@id": "identifier/@identifierType", "@type": "xsd:string" },
+    "identifier":    { "@id": "datacite:identifier", "@type": "@id" },
+        "identifierType":{ "@id": "datacite:identifierType", "@type": "xsd:string" },
    
-    "creators":      { "@id": "creators", "@container": "@list" },
-    "creator":       { "@id": "creator", "@container": "@list" },
-    "creatorName":   { "@id": "creatorName", "@type": "xsd:string" },
-        "givenName":     { "@id": "givenName", "@type": "xsd:string" },
-        "familyName":    { "@id": "familyName", "@type": "xsd:string" },
+    "creators":      { "@id": "datacite:creators", "@container": "@list" },
+    "creator":       { "@id": "datacite:creator", "@container": "@list" },
+    "creatorName":   { "@id": "datacite:creatorName", "@type": "xsd:string" },
+        "givenName":     { "@id": "datacite:givenName", "@type": "xsd:string" },
+        "familyName":    { "@id": "datacite:familyName", "@type": "xsd:string" },
     
  
 
-    "publisher":        { "@id": "publisher", "@type":"xsd:string" },
-    "publisherIdentifier":       { "@id":"publisher/@publisherIdentifier", "@type":"xsd:string" },
-    "publisherIdentifierScheme": { "@id":"publisher/@publisherIdentifierScheme", "@type":"xsd:string" },
-    "schemeURI":        { "@id":"publisher/@schemeURI", "@type":"@id" },
+    "publisher":        { "@id": "datacite:publisher", "@type":"xsd:string" },
+    "publisherIdentifier":       { "@id":"datacite:publisherIdentifier", "@type":"xsd:string" },
+    "publisherIdentifierScheme": { "@id":"datacite:publisherIdentifierScheme", "@type":"xsd:string" },
+    "schemeURI":        { "@id":"datacite:schemeURI", "@type":"@id" },
 
     "publicationYear": {
-      "@id": "publicationYear",
+      "@id": "datacite:publicationYear",
       "@type": "http://www.w3.org/2001/XMLSchema#gYear"
     },
-   "resource": { "@id": "resource", "@type": "@id" },
-    "resourceType": { "@id": "resourceType", "@type": "xsd:string" },
-    "resourceTypeGeneral": { "@id": "resourceType/@resourceTypeGeneral", "@type": "xsd:string" },
+   "resource": { "@id": "datacite:resource", "@type": "@id" },
+    "resourceType": { "@id": "datacite:resourceType", "@type": "xsd:string" },
+    "resourceTypeGeneral": { "@id": "datacite:resourceTypeGeneral", "@type": "xsd:string" },
     "resourceTypeGeneralScheme": {
         "@id": "https://selgebali.github.io/datacite4.6-jsonld/resourceTypeGeneral.jsonld",
         "@type": "@id"
 },
 
     "contributorType": {
-      "@id": "contributor/@contributorType",
+      "@id": "datacite:contributorType",
       "@type": "xsd:string"
     },
   "contributorTypeScheme": {
@@ -51,7 +55,7 @@
 },
 
   "dateType": {
-  "@id": "date/@dateType",
+  "@id": "datacite:dateType",
   "@type": "xsd:string"
 },
 "dateTypeScheme": {
@@ -59,7 +63,7 @@
   "@type": "@id"
 },
 "descriptionType": {
-  "@id": "description/@descriptionType",
+  "@id": "datacite:descriptionType",
   "@type": "xsd:string"
 },
   "descriptionTypeScheme": {
@@ -68,7 +72,7 @@
 },
 
     "funderIdentifierType": {
-  "@id": "funderIdentifier/@funderIdentifierType",
+  "@id": "datacite:funderIdentifierType",
   "@type": "xsd:string"
 },
   "funderIdentifierTypeScheme": {
@@ -76,7 +80,7 @@
     "@type": "@id"
 },
     "nameType": {
-  "@id": "nameIdentifier/@nameType",
+  "@id": "datacite:nameType",
   "@type": "xsd:string"
 },
 "nameTypeScheme": {
@@ -85,7 +89,7 @@
 },
 
     "relatedIdentifierType": {
-      "@id": "relatedIdentifier/@relatedIdentifierType",
+      "@id": "datacite:relatedIdentifierType",
       "@type": "xsd:string"
     },
     "relatedIdentifierTypeScheme": {
@@ -94,7 +98,7 @@
 },
 
     "relationType": {
-      "@id": "relatedIdentifier/@relationType",
+      "@id": "datacite:relationType",
       "@type": "xsd:string"
     },
     "relationTypeScheme": {
@@ -103,7 +107,7 @@
 },
   
     "titleType": {
-      "@id": "title/@titleType",
+      "@id": "datacite:titleType",
       "@type": "xsd:string"
     },
    "titleTypeScheme": {
@@ -112,314 +116,314 @@
 },
 
     "subjects": {
-      "@id": "subjects",
+      "@id": "datacite:subjects",
       "@container": "@list"
     },
     "subject": {
-      "@id": "subject",
+      "@id": "datacite:subject",
       "@type": "xsd:string"
     },
     "subjectScheme": {
-      "@id": "subject/@subjectScheme",
+      "@id": "datacite:subjectScheme",
       "@type": "xsd:string"
     },
     "subjectSchemeURI": {
-      "@id": "subject/@schemeURI",
+      "@id": "datacite:schemeURI",
       "@type": "@id"
     },
     "valueURI": {
-      "@id": "subject/@valueURI",
+      "@id": "datacite:valueURI",
       "@type": "@id"
     },
     "classificationCode": {
-      "@id": "subject/@classificationCode",
+      "@id": "datacite:classificationCode",
       "@type": "@id"
     },
     "contributors": {
-      "@id": "contributors",
+      "@id": "datacite:contributors",
       "@container": "@list"
     },
     "contributor": {
-      "@id": "contributor",
+      "@id": "datacite:contributor",
       "@container": "@list"
     },
     "contributorName": {
-      "@id": "contributorName",
+      "@id": "datacite:contributorName",
       "@type": "xsd:string"
     },
    
     "nameIdentifier": {
-      "@id": "nameIdentifier",
+      "@id": "datacite:nameIdentifier",
       "@type": "@id"
     },
     "affiliation": {
-      "@id": "affiliation",
+      "@id": "datacite:affiliation",
       "@type": "xsd:string"
     },
     "dates": {
-      "@id": "dates",
+      "@id": "datacite:dates",
       "@container": "@list"
     },
     "date": {
-      "@id": "date",
+      "@id": "datacite:date",
       "@container": "@list"
     },
     "dateInformation": {
-      "@id": "date/@dateInformation",
+      "@id": "datacite:dateInformation",
       "@type": "xsd:string"
     },
     "language": {
-      "@id": "language",
+      "@id": "datacite:language",
       "@type": "http://www.w3.org/2001/XMLSchema#language"
     },
     "alternateIdentifiers": {
-      "@id": "alternateIdentifiers",
+      "@id": "datacite:alternateIdentifiers",
       "@container": "@list"
     },
     "alternateIdentifier": {
-      "@id": "alternateIdentifier",
+      "@id": "datacite:alternateIdentifier",
       "@container": "@list"
     },
     "alternateIdentifierType": {
-      "@id": "alternateIdentifier/@alternateIdentifierType",
+      "@id": "datacite:alternateIdentifierType",
       "@type": "xsd:string"
     },
     "relatedIdentifiers": {
-      "@id": "relatedIdentifiers",
+      "@id": "datacite:relatedIdentifiers",
       "@container": "@list"
     },
     "relatedIdentifier": {
-      "@id": "relatedIdentifier",
+      "@id": "datacite:relatedIdentifier",
       "@container": "@list"
     },
     "relatedMetadataScheme": {
-      "@id": "relatedIdentifier/@relatedMetadataScheme",
+      "@id": "datacite:relatedMetadataScheme",
       "@type": "xsd:string"
     },
     "schemeType": {
-      "@id": "relatedIdentifier/@schemeType",
+      "@id": "datacite:schemeType",
       "@type": "xsd:string"
     },
     "relatedIdentifierSchemeURI": {
-      "@id": "relatedIdentifier/@schemeURI",
+      "@id": "datacite:schemeURI",
       "@type": "@id"
     },
     "sizes": {
-      "@id": "sizes",
+      "@id": "datacite:sizes",
       "@container": "@list"
     },
     "size": {
-      "@id": "size",
+      "@id": "datacite:size",
       "@type": "xsd:string"
     },
     "formats": {
-      "@id": "formats",
+      "@id": "datacite:formats",
       "@container": "@list"
     },
     "format": {
-      "@id": "format",
+      "@id": "datacite:format",
       "@type": "xsd:string"
     },
     "version": {
-      "@id": "version",
+      "@id": "datacite:version",
       "@type": "xsd:string"
     },
     "rightsList": {
-      "@id": "rightsList",
+      "@id": "datacite:rightsList",
       "@container": "@list"
     },
     "rights": {
-      "@id": "rights",
+      "@id": "datacite:rights",
       "@container": "@list"
     },
     "rightsURI": {
-      "@id": "rights/@rightsURI",
+      "@id": "datacite:rightsURI",
       "@type": "@id"
     },
     "rightsIdentifier": {
-      "@id": "rights/@rightsIdentifier",
+      "@id": "datacite:rightsIdentifier",
       "@type": "xsd:string"
     },
     "rightsIdentifierScheme": {
-      "@id": "rights/@rightsIdentifierScheme",
+      "@id": "datacite:rightsIdentifierScheme",
       "@type": "xsd:string"
     },
     "rightsSchemeURI": {
-      "@id": "rights/@schemeURI",
+      "@id": "datacite:schemeURI",
       "@type": "@id"
     },
     "descriptions": {
-      "@id": "descriptions",
+      "@id": "datacite:descriptions",
       "@container": "@list"
     },
     "description": {
-      "@id": "description",
+      "@id": "datacite:description",
       "@container": "@list",
       "@type": "xsd:string"
     },
     "geoLocations": {
-      "@id": "geoLocations",
+      "@id": "datacite:geoLocations",
       "@container": "@list"
     },
     "geoLocation": {
-      "@id": "geoLocation",
+      "@id": "datacite:geoLocation",
       "@container": "@list"
     },
     "geoLocationPlace": {
-      "@id": "geoLocationPlace",
+      "@id": "datacite:geoLocationPlace",
       "@type": "xsd:string"
     },
     "geoLocationPoint": {
-      "@id": "geoLocationPoint"
+      "@id": "datacite:geoLocationPoint"
     },
     "geoLocationBox": {
-      "@id": "geoLocationBox"
+      "@id": "datacite:geoLocationBox"
     },
     "geoLocationPolygon": {
-      "@id": "geoLocationPolygon",
+      "@id": "datacite:geoLocationPolygon",
       "@container": "@list"
     },
     "polygonPoint": {
-      "@id": "polygonPoint",
+      "@id": "datacite:polygonPoint",
       "@container": "@list"
     },
     "inPolygonPoint": {
-      "@id": "inPolygonPoint"
+      "@id": "datacite:inPolygonPoint"
     },
     "fundingReferences": {
-      "@id": "fundingReferences",
+      "@id": "datacite:fundingReferences",
       "@container": "@list"
     },
     "fundingReference": {
-      "@id": "fundingReference",
+      "@id": "datacite:fundingReference",
       "@container": "@list"
     },
     "funderName": {
-      "@id": "funderName",
+      "@id": "datacite:funderName",
       "@type": "xsd:string"
     },
     "funderIdentifier": {
-      "@id": "funderIdentifier",
+      "@id": "datacite:funderIdentifier",
       "@type": "@id"
     },
     "funderIdentifierSchemeURI": {
-      "@id": "funderIdentifier/@schemeURI",
+      "@id": "datacite:schemeURI",
       "@type": "@id"
     },
     "awardNumber": {
-      "@id": "awardNumber",
+      "@id": "datacite:awardNumber",
       "@type": "xsd:string"
     },
     "awardURI": {
-      "@id": "awardNumber/@awardURI",
+      "@id": "datacite:awardURI",
       "@type": "@id"
     },
     "awardTitle": {
-      "@id": "awardTitle",
+      "@id": "datacite:awardTitle",
       "@type": "xsd:string"
     },
     "relatedItems": {
-      "@id": "relatedItems",
+      "@id": "datacite:relatedItems",
       "@container": "@list"
     },
     "relatedItem": {
-      "@id": "relatedItem",
+      "@id": "datacite:relatedItem",
       "@container": "@list"
     },
     "relatedItemIdentifier": {
-      "@id": "relatedItemIdentifier",
+      "@id": "datacite:relatedItemIdentifier",
       "@type": "xsd:string"
     },
     "relatedItemIdentifierType": {
-      "@id": "relatedItemIdentifier/@relatedItemIdentifierType",
+      "@id": "datacite:relatedItemIdentifierType",
       "@type": "xsd:string"
     },
     "relatedItemMetadataScheme": {
-      "@id": "relatedItemIdentifier/@relatedMetadataScheme",
+      "@id": "datacite:relatedMetadataScheme",
       "@type": "xsd:string"
     },
     "relatedItemSchemeURI": {
-      "@id": "relatedItemIdentifier/@schemeURI",
+      "@id": "datacite:schemeURI",
       "@type": "@id"
     },
     "relatedItemSchemeType": {
-      "@id": "relatedItemIdentifier/@schemeType",
+      "@id": "datacite:schemeType",
       "@type": "xsd:string"
     },
     "volume": {
-      "@id": "volume",
+      "@id": "datacite:volume",
       "@type": "xsd:string"
     },
     "issue": {
-      "@id": "issue",
+      "@id": "datacite:issue",
       "@type": "xsd:string"
     },
     "number": {
-      "@id": "number",
+      "@id": "datacite:number",
       "@type": "xsd:string"
     },
     "firstPage": {
-      "@id": "firstPage",
+      "@id": "datacite:firstPage",
       "@type": "xsd:string"
     },
     "lastPage": {
-      "@id": "lastPage",
+      "@id": "datacite:lastPage",
       "@type": "xsd:string"
     },
     "edition": {
-      "@id": "edition",
+      "@id": "datacite:edition",
       "@type": "xsd:string"
     },
     "relatedItemType": {
-      "@id": "relatedItem/@relatedItemType",
+      "@id": "datacite:relatedItemType",
       "@type": "xsd:string"
     },
     "relatedItemRelationType": {
-      "@id": "relatedItem/@relationType",
+      "@id": "datacite:relationType",
       "@type": "xsd:string"
     },
     "nameIdentifierScheme": {
-      "@id": "nameIdentifier/@nameIdentifierScheme",
+      "@id": "datacite:nameIdentifierScheme",
       "@type": "xsd:string"
     },
     "nameIdentifierSchemeURI": {
-      "@id": "nameIdentifier/@schemeURI",
+      "@id": "datacite:schemeURI",
       "@type": "@id"
     },
     "affiliationIdentifier": {
-      "@id": "affiliation/@affiliationIdentifier",
+      "@id": "datacite:affiliationIdentifier",
       "@type": "xsd:string"
     },
     "affiliationIdentifierScheme": {
-      "@id": "affiliation/@affiliationIdentifierScheme",
+      "@id": "datacite:affiliationIdentifierScheme",
       "@type": "xsd:string"
     },
     "affiliationSchemeURI": {
-      "@id": "affiliation/@schemeURI",
+      "@id": "datacite:schemeURI",
       "@type": "@id"
     },
     "pointLongitude": {
-      "@id": "pointLongitude",
+      "@id": "datacite:pointLongitude",
       "@type": "xsd:float"
     },
     "pointLatitude": {
-      "@id": "pointLatitude",
+      "@id": "datacite:pointLatitude",
       "@type": "xsd:float"
     },
     "westBoundLongitude": {
-      "@id": "westBoundLongitude",
+      "@id": "datacite:westBoundLongitude",
       "@type": "xsd:float"
     },
     "eastBoundLongitude": {
-      "@id": "eastBoundLongitude",
+      "@id": "datacite:eastBoundLongitude",
       "@type": "xsd:float"
     },
     "southBoundLatitude": {
-      "@id": "southBoundLatitude",
+      "@id": "datacite:southBoundLatitude",
       "@type": "xsd:float"
     },
     "northBoundLatitude": {
-      "@id": "northBoundLatitude",
+      "@id": "datacite:northBoundLatitude",
       "@type": "xsd:float"
     }
   }
