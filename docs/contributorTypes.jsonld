@@ -1,0 +1,146 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ex": "https://example.org/vocab/contributorType#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:ContributorTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite Contributor Type",
+      "skos:definition": "Controlled list of contributor roles as defined in the DataCite Metadata Schema."
+    },
+    {
+      "@id": "ex:ContactPerson",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ContactPerson",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:DataCollector",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "DataCollector",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:DataCurator",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "DataCurator",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:DataManager",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "DataManager",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Distributor",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Distributor",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Editor",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Editor",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:HostingInstitution",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "HostingInstitution",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Other",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Other",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Producer",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Producer",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:ProjectLeader",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ProjectLeader",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:ProjectManager",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ProjectManager",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:ProjectMember",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ProjectMember",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:RegistrationAgency",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "RegistrationAgency",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:RegistrationAuthority",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "RegistrationAuthority",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:RelatedPerson",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "RelatedPerson",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:ResearchGroup",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ResearchGroup",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:RightsHolder",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "RightsHolder",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Researcher",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Researcher",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Sponsor",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Sponsor",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Supervisor",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Supervisor",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:Translator",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Translator",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    },
+    {
+      "@id": "ex:WorkPackageLeader",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "WorkPackageLeader",
+      "skos:inScheme": "ex:ContributorTypeScheme"
+    }
+  ]
+}
