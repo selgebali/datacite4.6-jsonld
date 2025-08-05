@@ -5,8 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "http://datacite.org/schema/kernel-4#",
-    "ex": "https://selgebali.github.io/datacite4.6-jsonld/relatedIdTypes.jsonld#"
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/relatedIdTypes.jsonld#"
   },
   "@graph": [
     {
