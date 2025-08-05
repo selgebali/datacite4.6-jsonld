@@ -47,34 +47,11 @@
       "@id": "contributor/@contributorType",
       "@type": "xsd:string"
     },
-    "contributorTypeList": {
-      "@id": "contributorTypeList",
-      "@container": "@list",
-      "@graph": [
-        "ContactPerson",
-        "DataCollector",
-        "DataCurator",
-        "DataManager",
-        "Distributor",
-        "Editor",
-        "HostingInstitution",
-        "Other",
-        "Producer",
-        "ProjectLeader",
-        "ProjectManager",
-        "ProjectMember",
-        "RegistrationAgency",
-        "RegistrationAuthority",
-        "RelatedPerson",
-        "ResearchGroup",
-        "RightsHolder",
-        "Researcher",
-        "Sponsor",
-        "Supervisor",
-        "Translator",
-        "WorkPackageLeader"
-      ]
-    },
+  "contributorTypeScheme": {
+  "@id": "https://selgebali.github.io/datacite4.6-jsonld/contributorTypes.jsonld",
+  "@type": "@id"
+},
+
     "dateType": {
       "@id": "date/@dateType",
       "@type": "xsd:string"
