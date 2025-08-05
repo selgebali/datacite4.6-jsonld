@@ -1,7 +1,12 @@
 {
   "@context": {
+    "@version": 1.1,
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "ex": "https://example.org/vocab/relationType#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "datacite": "http://datacite.org/schema/kernel-4#",
+    "ex": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld#"
   },
   "@graph": [
     {
