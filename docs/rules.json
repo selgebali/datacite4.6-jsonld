@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld",
+  "$id": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld",
   "title": "DataCite Metadata Schema v4.6",
   "description": "JSON Schema for validating DataCite 4.6 JSON-LD records against required fields and cardinalities.",
   "type": "object",
