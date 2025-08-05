@@ -5,8 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld#"
-  },
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld#",
   "@graph": [
     {
       "@id": "datacite:RelationTypeScheme",
@@ -53,4 +52,5 @@
     {"@id":"datacite:HasTranslation","@type":"skos:Concept","skos:prefLabel":"HasTranslation","skos:inScheme":"datacite:RelationTypeScheme"},
     {"@id":"datacite:IsTranslationOf","@type":"skos:Concept","skos:prefLabel":"IsTranslationOf","skos:inScheme":"datacite:RelationTypeScheme"}
   ]
+}
 }

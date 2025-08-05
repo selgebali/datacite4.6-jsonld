@@ -5,8 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite":"https://selgebali.github.io/datacite4.6-jsonld/descriptionTypes.jsonld#"
-  },
+    "datacite":"https://selgebali.github.io/datacite4.6-jsonld/descriptionTypes.jsonld#",
   "@graph": [
     {
       "@id": "datacite:DescriptionTypeScheme",
@@ -33,4 +32,5 @@
       "@id": "datacite:Other", "@type": "skos:Concept", "skos:prefLabel": "Other", "skos:inScheme": "datacite:DescriptionTypeScheme"
     }
   ]
+}
 }

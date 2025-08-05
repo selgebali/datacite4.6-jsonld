@@ -5,8 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/funderIdTypes.jsonld#"
-  },
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/funderIdTypes.jsonld#",
   "@graph": [
     {
       "@id": "datacite:FunderIdentifierTypeScheme",
@@ -45,4 +44,5 @@
       "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
     }
   ]
+}
 }
