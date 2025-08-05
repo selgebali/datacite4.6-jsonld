@@ -70,46 +70,22 @@
 },
 
     "funderIdentifierType": {
-      "@id": "funderIdentifier/@funderIdentifierType",
-      "@type": "xsd:string"
-    },
-    "funderIdentifierTypeList": {
-      "@id": "funderIdentifierTypeList",
-      "@container": "@list",
-      "@graph": [
-        "ISNI",
-        "GRID",
-        "ROR",
-        "Crossref Funder ID",
-        "Other"
-      ]
-    },
+  "@id": "funderIdentifier/@funderIdentifierType",
+  "@type": "xsd:string"
+},
+  "funderIdentifierTypeScheme": {
+    "@id": "https://selgebali.github.io/datacite4.6-jsonld/funderIdTypes.jsonld",
+    "@type": "@id"
+},
     "nameType": {
-      "@id": "nameIdentifier/@nameType",
-      "@type": "xsd:string"
-    },
-    "nameTypeList": {
-      "@id": "nameTypeList",
-      "@container": "@list",
-      "@graph": [
-        "Organizational",
-        "Personal"
-      ]
-    },
-    "numberType": {
-      "@id": "number/@numberType",
-      "@type": "xsd:string"
-    },
-    "numberTypeList": {
-      "@id": "numberTypeList",
-      "@container": "@list",
-      "@graph": [
-        "Article",
-        "Chapter",
-        "Report",
-        "Other"
-      ]
-    },
+  "@id": "nameIdentifier/@nameType",
+  "@type": "xsd:string"
+},
+"nameTypeScheme": {
+  "@id": "https://selgebali.github.io/datacite4.6-jsonld/nameTypes.jsonld",
+  "@type": "@id"
+},
+
     "relatedIdentifierType": {
       "@id": "relatedIdentifier/@relatedIdentifierType",
       "@type": "xsd:string"
