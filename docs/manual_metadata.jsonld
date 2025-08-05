@@ -108,16 +108,11 @@
       "@id": "title/@titleType",
       "@type": "xsd:string"
     },
-    "titleTypeList": {
-      "@id": "titleTypeList",
-      "@container": "@list",
-      "@graph": [
-        "AlternativeTitle",
-        "Subtitle",
-        "TranslatedTitle",
-        "Other"
-      ]
-    },
+   "titleTypeScheme": {
+  "@id": "https://selgebali.github.io/datacite4.6-jsonld/titleTypes.jsonld",
+  "@type": "@id"
+},
+
     "subjects": {
       "@id": "subjects",
       "@container": "@list"
