@@ -13,18 +13,3 @@ This repository provides:
 4. **`skos-mappings/`** – SKOS concept schemes (DataCite 4.6) and JSKOS crosswalks to:
    - Schema.org
    - W3C DCAT
-
-## Usage
-
-### As a JSON-LD context
-
-Include in your JSON-LD documents:
-
-```json
-{
-  "@context": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld",
-  "@type": "resource",
-  "identifier": "doi:10.1234/example",
-  "identifierType": "DOI"
-}
-```
