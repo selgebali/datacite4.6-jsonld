@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ex": "https://example.org/vocab/funderIdentifierType#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:FunderIdentifierTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Funder Identifier Type",
+      "skos:definition": "Controlled list of funder identifier types used in the DataCite Metadata Schema."
+    },
+    {
+      "@id": "ex:ISNI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ISNI",
+      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+    },
+    {
+      "@id": "ex:GRID",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GRID",
+      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+    },
+    {
+      "@id": "ex:ROR",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ROR",
+      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+    },
+    {
+      "@id": "ex:CrossrefFunderID",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Crossref Funder ID",
+      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+    },
+    {
+      "@id": "ex:Other",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Other",
+      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+    }
+  ]
+}
