@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ex": "https://example.org/vocab/nameType#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:NameTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Name Type",
+      "skos:definition": "Controlled list for personal and organizational name types in the DataCite Metadata Schema."
+    },
+    {
+      "@id": "ex:Organizational",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Organizational",
+      "skos:inScheme": "ex:NameTypeScheme"
+    },
+    {
+      "@id": "ex:Personal",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Personal",
+      "skos:inScheme": "ex:NameTypeScheme"
+    }
+  ]
+}
