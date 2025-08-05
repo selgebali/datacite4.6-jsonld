@@ -6,25 +6,25 @@
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "datacite": "https://selgebali.github.io/datacite4.6-jsonld/nameTypes.jsonld#",
-  "@graph": [
-    {
-      "@id": "datacite:NameTypeScheme",
-      "@type": "skos:ConceptScheme",
-      "skos:prefLabel": "Name Type",
-      "skos:definition": "Controlled list for personal and organizational name types in the DataCite Metadata Schema."
-    },
-    {
-      "@id": "datacite:Organizational",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "Organizational",
-      "skos:inScheme": "datacite:NameTypeScheme"
-    },
-    {
-      "@id": "datacite:Personal",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "Personal",
-      "skos:inScheme": "datacite:NameTypeScheme"
-    }
-  ]
-}
+    "@graph": [
+      {
+        "@id": "datacite:NameTypeScheme",
+        "@type": "skos:ConceptScheme",
+        "skos:prefLabel": "Name Type",
+        "skos:definition": "Controlled list for personal and organizational name types in the DataCite Metadata Schema."
+      },
+      {
+        "@id": "datacite:Organizational",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "Organizational",
+        "skos:inScheme": "datacite:NameTypeScheme"
+      },
+      {
+        "@id": "datacite:Personal",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "Personal",
+        "skos:inScheme": "datacite:NameTypeScheme"
+      }
+    ]
+  }
 }

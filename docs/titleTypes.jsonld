@@ -1,5 +1,4 @@
-
-  {
+{
   "@context": {
     "@version": 1.1,
     "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -7,37 +6,37 @@
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "datacite": "https://selgebali.github.io/datacite4.6-jsonld/titleTypes.jsonld#",
-  "@graph": [
-    {
-      "@id": "datacite:TitleTypeScheme",
-      "@type": "skos:ConceptScheme",
-      "skos:prefLabel": "DataCite Title Type",
-      "skos:definition": "Controlled list of title types as defined in the DataCite Metadata Schema."
-    },
-    {
-      "@id": "datacite:AlternativeTitle",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "AlternativeTitle",
-      "skos:inScheme": "datacite:TitleTypeScheme"
-    },
-    {
-      "@id": "datacite:Subtitle",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "Subtitle",
-      "skos:inScheme": "datacite:TitleTypeScheme"
-    },
-    {
-      "@id": "datacite:TranslatedTitle",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "TranslatedTitle",
-      "skos:inScheme": "datacite:TitleTypeScheme"
-    },
-    {
-      "@id": "datacite:Other",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "Other",
-      "skos:inScheme": "datacite:TitleTypeScheme"
-    }
-  ]
-}
+    "@graph": [
+      {
+        "@id": "datacite:TitleTypeScheme",
+        "@type": "skos:ConceptScheme",
+        "skos:prefLabel": "DataCite Title Type",
+        "skos:definition": "Controlled list of title types as defined in the DataCite Metadata Schema."
+      },
+      {
+        "@id": "datacite:AlternativeTitle",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "AlternativeTitle",
+        "skos:inScheme": "datacite:TitleTypeScheme"
+      },
+      {
+        "@id": "datacite:Subtitle",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "Subtitle",
+        "skos:inScheme": "datacite:TitleTypeScheme"
+      },
+      {
+        "@id": "datacite:TranslatedTitle",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "TranslatedTitle",
+        "skos:inScheme": "datacite:TitleTypeScheme"
+      },
+      {
+        "@id": "datacite:Other",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "Other",
+        "skos:inScheme": "datacite:TitleTypeScheme"
+      }
+    ]
   }
+}

@@ -1,89 +1,130 @@
-
- {
+{
   "@context": {
     "@version": 1.1,
     "datacite": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld#",
     "xml": "http://www.w3.org/XML/1998/namespace#",
-    "xml:lang": { "@id": "xml:lang" },
-    "xml:space": { "@id": "xml:space" },
-    "xml:base": { "@id": "xml:base", "@type": "@id" },
-    "xml:id": { "@id": "xml:id", "@type": "@id" },
+    "xml:lang": {
+      "@id": "xml:lang"
+    },
+    "xml:space": {
+      "@id": "xml:space"
+    },
+    "xml:base": {
+      "@id": "xml:base",
+      "@type": "@id"
+    },
+    "xml:id": {
+      "@id": "xml:id",
+      "@type": "@id"
+    },
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-
-    "identifier":    { "@id": "datacite:identifier", "@type": "@id" },
-        "identifierType":{ "@id": "datacite:identifierType", "@type": "xsd:string" },
-   
-    "creators":      { "@id": "datacite:creators", "@container": "@list" },
-    "creator":       { "@id": "datacite:creator", "@container": "@list" },
-    "creatorName":   { "@id": "datacite:creatorName", "@type": "xsd:string" },
-        "givenName":     { "@id": "datacite:givenName", "@type": "xsd:string" },
-        "familyName":    { "@id": "datacite:familyName", "@type": "xsd:string" },
-    
- 
-
-    "publisher":        { "@id": "datacite:publisher", "@type":"xsd:string" },
-    "publisherIdentifier":       { "@id":"datacite:publisherIdentifier", "@type":"xsd:string" },
-    "publisherIdentifierScheme": { "@id":"datacite:publisherIdentifierScheme", "@type":"xsd:string" },
-    "schemeURI":        { "@id":"datacite:schemeURI", "@type":"@id" },
-
+    "identifier": {
+      "@id": "datacite:identifier",
+      "@type": "@id"
+    },
+    "identifierType": {
+      "@id": "datacite:identifierType",
+      "@type": "xsd:string"
+    },
+    "creators": {
+      "@id": "datacite:creators",
+      "@container": "@list"
+    },
+    "creator": {
+      "@id": "datacite:creator",
+      "@container": "@list"
+    },
+    "creatorName": {
+      "@id": "datacite:creatorName",
+      "@type": "xsd:string"
+    },
+    "givenName": {
+      "@id": "datacite:givenName",
+      "@type": "xsd:string"
+    },
+    "familyName": {
+      "@id": "datacite:familyName",
+      "@type": "xsd:string"
+    },
+    "publisher": {
+      "@id": "datacite:publisher",
+      "@type": "xsd:string"
+    },
+    "publisherIdentifier": {
+      "@id": "datacite:publisherIdentifier",
+      "@type": "xsd:string"
+    },
+    "publisherIdentifierScheme": {
+      "@id": "datacite:publisherIdentifierScheme",
+      "@type": "xsd:string"
+    },
+    "schemeURI": {
+      "@id": "datacite:schemeURI",
+      "@type": "@id"
+    },
     "publicationYear": {
       "@id": "datacite:publicationYear",
       "@type": "http://www.w3.org/2001/XMLSchema#gYear"
     },
-   "resource": { "@id": "datacite:resource", "@type": "@id" },
-    "resourceType": { "@id": "datacite:resourceType", "@type": "xsd:string" },
-    "resourceTypeGeneral": { "@id": "datacite:resourceTypeGeneral", "@type": "xsd:string" },
+    "resource": {
+      "@id": "datacite:resource",
+      "@type": "@id"
+    },
+    "resourceType": {
+      "@id": "datacite:resourceType",
+      "@type": "xsd:string"
+    },
+    "resourceTypeGeneral": {
+      "@id": "datacite:resourceTypeGeneral",
+      "@type": "xsd:string"
+    },
     "resourceTypeGeneralScheme": {
-        "@id": "https://selgebali.github.io/datacite4.6-jsonld/resourceTypeGeneral.jsonld",
-        "@type": "@id"
-},
-
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/resourceTypeGeneral.jsonld",
+      "@type": "@id"
+    },
     "contributorType": {
       "@id": "datacite:contributorType",
       "@type": "xsd:string"
     },
-  "contributorTypeScheme": {
-  "@id": "https://selgebali.github.io/datacite4.6-jsonld/contributorTypes.jsonld",
-  "@type": "@id"
-},
-
-  "dateType": {
-  "@id": "datacite:dateType",
-  "@type": "xsd:string"
-},
-"dateTypeScheme": {
-  "@id": "https://selgebali.github.io/datacite4.6-jsonld/dateTypes.jsonld",
-  "@type": "@id"
-},
-"descriptionType": {
-  "@id": "datacite:descriptionType",
-  "@type": "xsd:string"
-},
-  "descriptionTypeScheme": {
-    "@id": "https://selgebali.github.io/datacite4.6-jsonld/descriptionTypes.jsonld",
-    "@type": "@id"
-},
-
+    "contributorTypeScheme": {
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/contributorTypes.jsonld",
+      "@type": "@id"
+    },
+    "dateType": {
+      "@id": "datacite:dateType",
+      "@type": "xsd:string"
+    },
+    "dateTypeScheme": {
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/dateTypes.jsonld",
+      "@type": "@id"
+    },
+    "descriptionType": {
+      "@id": "datacite:descriptionType",
+      "@type": "xsd:string"
+    },
+    "descriptionTypeScheme": {
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/descriptionTypes.jsonld",
+      "@type": "@id"
+    },
     "funderIdentifierType": {
-  "@id": "datacite:funderIdentifierType",
-  "@type": "xsd:string"
-},
-  "funderIdentifierTypeScheme": {
-    "@id": "https://selgebali.github.io/datacite4.6-jsonld/funderIdTypes.jsonld",
-    "@type": "@id"
-},
+      "@id": "datacite:funderIdentifierType",
+      "@type": "xsd:string"
+    },
+    "funderIdentifierTypeScheme": {
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/funderIdTypes.jsonld",
+      "@type": "@id"
+    },
     "nameType": {
-  "@id": "datacite:nameType",
-  "@type": "xsd:string"
-},
-"nameTypeScheme": {
-  "@id": "https://selgebali.github.io/datacite4.6-jsonld/nameTypes.jsonld",
-  "@type": "@id"
-},
-
+      "@id": "datacite:nameType",
+      "@type": "xsd:string"
+    },
+    "nameTypeScheme": {
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/nameTypes.jsonld",
+      "@type": "@id"
+    },
     "relatedIdentifierType": {
       "@id": "datacite:relatedIdentifierType",
       "@type": "xsd:string"
@@ -91,26 +132,23 @@
     "relatedIdentifierTypeScheme": {
       "@id": "https://selgebali.github.io/datacite4.6-jsonld/relatedIdTypes.jsonld",
       "@type": "@id"
-},
-
+    },
     "relationType": {
       "@id": "datacite:relationType",
       "@type": "xsd:string"
     },
     "relationTypeScheme": {
-  "@id": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld",
-  "@type": "@id"
-},
-  
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld",
+      "@type": "@id"
+    },
     "titleType": {
       "@id": "datacite:titleType",
       "@type": "xsd:string"
     },
-   "titleTypeScheme": {
-  "@id": "https://selgebali.github.io/datacite4.6-jsonld/titleTypes.jsonld",
-  "@type": "@id"
-},
-
+    "titleTypeScheme": {
+      "@id": "https://selgebali.github.io/datacite4.6-jsonld/titleTypes.jsonld",
+      "@type": "@id"
+    },
     "subjects": {
       "@id": "datacite:subjects",
       "@container": "@list"
@@ -147,7 +185,6 @@
       "@id": "datacite:contributorName",
       "@type": "xsd:string"
     },
-   
     "nameIdentifier": {
       "@id": "datacite:nameIdentifier",
       "@type": "@id"
