@@ -2,11 +2,7 @@
  {
   "@context": {
     "@version": 1.1,
-<<<<<<< HEAD
-    "@vocab": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld#",
-=======
     "datacite": "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld#",
->>>>>>> 7c339cdb62a7140a5af7346043407383b982811d
     "xml": "http://www.w3.org/XML/1998/namespace#",
     "xml:lang": { "@id": "xml:lang" },
     "xml:space": { "@id": "xml:space" },
