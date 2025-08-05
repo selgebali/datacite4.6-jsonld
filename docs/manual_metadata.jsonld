@@ -52,44 +52,23 @@
   "@type": "@id"
 },
 
-    "dateType": {
-      "@id": "date/@dateType",
-      "@type": "xsd:string"
-    },
-    "dateTypeList": {
-      "@id": "dateTypeList",
-      "@container": "@list",
-      "@graph": [
-        "Accepted",
-        "Available",
-        "Collected",
-        "Copyrighted",
-        "Coverage",
-        "Created",
-        "Issued",
-        "Other",
-        "Submitted",
-        "Updated",
-        "Valid",
-        "Withdrawn"
-      ]
-    },
-    "descriptionType": {
-      "@id": "description/@descriptionType",
-      "@type": "xsd:string"
-    },
-    "descriptionTypeList": {
-      "@id": "descriptionTypeList",
-      "@container": "@list",
-      "@graph": [
-        "Abstract",
-        "Methods",
-        "SeriesInformation",
-        "TableOfContents",
-        "TechnicalInfo",
-        "Other"
-      ]
-    },
+  "dateType": {
+  "@id": "date/@dateType",
+  "@type": "xsd:string"
+},
+"dateTypeScheme": {
+  "@id": "https://selgebali.github.io/datacite4.6-jsonld/dateTypes.jsonld",
+  "@type": "@id"
+},
+"descriptionType": {
+  "@id": "description/@descriptionType",
+  "@type": "xsd:string"
+},
+  "descriptionTypeScheme": {
+    "@id": "https://selgebali.github.io/datacite4.6-jsonld/descriptionTypes.jsonld",
+    "@type": "@id"
+},
+
     "funderIdentifierType": {
       "@id": "funderIdentifier/@funderIdentifierType",
       "@type": "xsd:string"
