@@ -10,28 +10,28 @@
   },
   "@graph": [
     {
-      "@id": "ex:DescriptionTypeScheme",
+      "@id": "datacite:DescriptionTypeScheme",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": "DataCite Description Type",
       "skos:definition": "Controlled list of description types as defined in the DataCite Metadata Schema."
     },
     {
-      "@id": "ex:Abstract", "@type": "skos:Concept", "skos:prefLabel": "Abstract", "skos:inScheme": "ex:DescriptionTypeScheme"
+      "@id": "datacite:Abstract", "@type": "skos:Concept", "skos:prefLabel": "Abstract", "skos:inScheme": "datacite:DescriptionTypeScheme"
     },
     {
-      "@id": "ex:Methods", "@type": "skos:Concept", "skos:prefLabel": "Methods", "skos:inScheme": "ex:DescriptionTypeScheme"
+      "@id": "datacite:Methods", "@type": "skos:Concept", "skos:prefLabel": "Methods", "skos:inScheme": "datacite:DescriptionTypeScheme"
     },
     {
-      "@id": "ex:SeriesInformation", "@type": "skos:Concept", "skos:prefLabel": "SeriesInformation", "skos:inScheme": "ex:DescriptionTypeScheme"
+      "@id": "datacite:SeriesInformation", "@type": "skos:Concept", "skos:prefLabel": "SeriesInformation", "skos:inScheme": "datacite:DescriptionTypeScheme"
     },
     {
-      "@id": "ex:TableOfContents", "@type": "skos:Concept", "skos:prefLabel": "TableOfContents", "skos:inScheme": "ex:DescriptionTypeScheme"
+      "@id": "datacite:TableOfContents", "@type": "skos:Concept", "skos:prefLabel": "TableOfContents", "skos:inScheme": "datacite:DescriptionTypeScheme"
     },
     {
-      "@id": "ex:TechnicalInfo", "@type": "skos:Concept", "skos:prefLabel": "TechnicalInfo", "skos:inScheme": "ex:DescriptionTypeScheme"
+      "@id": "datacite:TechnicalInfo", "@type": "skos:Concept", "skos:prefLabel": "TechnicalInfo", "skos:inScheme": "datacite:DescriptionTypeScheme"
     },
     {
-      "@id": "ex:Other", "@type": "skos:Concept", "skos:prefLabel": "Other", "skos:inScheme": "ex:DescriptionTypeScheme"
+      "@id": "datacite:Other", "@type": "skos:Concept", "skos:prefLabel": "Other", "skos:inScheme": "datacite:DescriptionTypeScheme"
     }
   ]
 }

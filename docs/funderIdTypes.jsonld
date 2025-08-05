@@ -10,40 +10,40 @@
   },
   "@graph": [
     {
-      "@id": "ex:FunderIdentifierTypeScheme",
+      "@id": "datacite:FunderIdentifierTypeScheme",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": "Funder Identifier Type",
       "skos:definition": "Controlled list of funder identifier types used in the DataCite Metadata Schema."
     },
     {
-      "@id": "ex:ISNI",
+      "@id": "datacite:ISNI",
       "@type": "skos:Concept",
       "skos:prefLabel": "ISNI",
-      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
     },
     {
-      "@id": "ex:GRID",
+      "@id": "datacite:GRID",
       "@type": "skos:Concept",
       "skos:prefLabel": "GRID",
-      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
     },
     {
-      "@id": "ex:ROR",
+      "@id": "datacite:ROR",
       "@type": "skos:Concept",
       "skos:prefLabel": "ROR",
-      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
     },
     {
-      "@id": "ex:CrossrefFunderID",
+      "@id": "datacite:CrossrefFunderID",
       "@type": "skos:Concept",
       "skos:prefLabel": "Crossref Funder ID",
-      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
     },
     {
-      "@id": "ex:Other",
+      "@id": "datacite:Other",
       "@type": "skos:Concept",
       "skos:prefLabel": "Other",
-      "skos:inScheme": "ex:FunderIdentifierTypeScheme"
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
     }
   ]
 }

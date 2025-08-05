@@ -10,22 +10,22 @@
   },
   "@graph": [
     {
-      "@id": "ex:NameTypeScheme",
+      "@id": "datacite:NameTypeScheme",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": "Name Type",
       "skos:definition": "Controlled list for personal and organizational name types in the DataCite Metadata Schema."
     },
     {
-      "@id": "ex:Organizational",
+      "@id": "datacite:Organizational",
       "@type": "skos:Concept",
       "skos:prefLabel": "Organizational",
-      "skos:inScheme": "ex:NameTypeScheme"
+      "skos:inScheme": "datacite:NameTypeScheme"
     },
     {
-      "@id": "ex:Personal",
+      "@id": "datacite:Personal",
       "@type": "skos:Concept",
       "skos:prefLabel": "Personal",
-      "skos:inScheme": "ex:NameTypeScheme"
+      "skos:inScheme": "datacite:NameTypeScheme"
     }
   ]
 }

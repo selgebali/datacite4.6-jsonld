@@ -5,34 +5,34 @@
   },
   "@graph": [
     {
-      "@id": "ex:TitleTypeScheme",
+      "@id": "datacite:TitleTypeScheme",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": "DataCite Title Type",
       "skos:definition": "Controlled list of title types as defined in the DataCite Metadata Schema."
     },
     {
-      "@id": "ex:AlternativeTitle",
+      "@id": "datacite:AlternativeTitle",
       "@type": "skos:Concept",
       "skos:prefLabel": "AlternativeTitle",
-      "skos:inScheme": "ex:TitleTypeScheme"
+      "skos:inScheme": "datacite:TitleTypeScheme"
     },
     {
-      "@id": "ex:Subtitle",
+      "@id": "datacite:Subtitle",
       "@type": "skos:Concept",
       "skos:prefLabel": "Subtitle",
-      "skos:inScheme": "ex:TitleTypeScheme"
+      "skos:inScheme": "datacite:TitleTypeScheme"
     },
     {
-      "@id": "ex:TranslatedTitle",
+      "@id": "datacite:TranslatedTitle",
       "@type": "skos:Concept",
       "skos:prefLabel": "TranslatedTitle",
-      "skos:inScheme": "ex:TitleTypeScheme"
+      "skos:inScheme": "datacite:TitleTypeScheme"
     },
     {
-      "@id": "ex:Other",
+      "@id": "datacite:Other",
       "@type": "skos:Concept",
       "skos:prefLabel": "Other",
-      "skos:inScheme": "ex:TitleTypeScheme"
+      "skos:inScheme": "datacite:TitleTypeScheme"
     }
   ]
 }

@@ -10,202 +10,202 @@
   },
   "@graph": [
     {
-      "@id": "ex:ResourceTypeGeneralScheme",
+      "@id": "datacite:ResourceTypeGeneralScheme",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": "DataCite Resource Type General",
       "skos:definition": "Controlled list of general resource types as defined in the DataCite Metadata Schema."
     },
     {
-      "@id": "ex:Audiovisual",
+      "@id": "datacite:Audiovisual",
       "@type": "skos:Concept",
       "skos:prefLabel": "Audiovisual",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Award",
+      "@id": "datacite:Award",
       "@type": "skos:Concept",
       "skos:prefLabel": "Award",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Book",
+      "@id": "datacite:Book",
       "@type": "skos:Concept",
       "skos:prefLabel": "Book",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:BookChapter",
+      "@id": "datacite:BookChapter",
       "@type": "skos:Concept",
       "skos:prefLabel": "BookChapter",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Collection",
+      "@id": "datacite:Collection",
       "@type": "skos:Concept",
       "skos:prefLabel": "Collection",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:ComputationalNotebook",
+      "@id": "datacite:ComputationalNotebook",
       "@type": "skos:Concept",
       "skos:prefLabel": "ComputationalNotebook",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:ConferencePaper",
+      "@id": "datacite:ConferencePaper",
       "@type": "skos:Concept",
       "skos:prefLabel": "ConferencePaper",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:ConferenceProceeding",
+      "@id": "datacite:ConferenceProceeding",
       "@type": "skos:Concept",
       "skos:prefLabel": "ConferenceProceeding",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:DataPaper",
+      "@id": "datacite:DataPaper",
       "@type": "skos:Concept",
       "skos:prefLabel": "DataPaper",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Dataset",
+      "@id": "datacite:Dataset",
       "@type": "skos:Concept",
       "skos:prefLabel": "Dataset",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Dissertation",
+      "@id": "datacite:Dissertation",
       "@type": "skos:Concept",
       "skos:prefLabel": "Dissertation",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Event",
+      "@id": "datacite:Event",
       "@type": "skos:Concept",
       "skos:prefLabel": "Event",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Image",
+      "@id": "datacite:Image",
       "@type": "skos:Concept",
       "skos:prefLabel": "Image",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:InteractiveResource",
+      "@id": "datacite:InteractiveResource",
       "@type": "skos:Concept",
       "skos:prefLabel": "InteractiveResource",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Instrument",
+      "@id": "datacite:Instrument",
       "@type": "skos:Concept",
       "skos:prefLabel": "Instrument",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Journal",
+      "@id": "datacite:Journal",
       "@type": "skos:Concept",
       "skos:prefLabel": "Journal",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:JournalArticle",
+      "@id": "datacite:JournalArticle",
       "@type": "skos:Concept",
       "skos:prefLabel": "JournalArticle",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Model",
+      "@id": "datacite:Model",
       "@type": "skos:Concept",
       "skos:prefLabel": "Model",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:OutputManagementPlan",
+      "@id": "datacite:OutputManagementPlan",
       "@type": "skos:Concept",
       "skos:prefLabel": "OutputManagementPlan",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:PeerReview",
+      "@id": "datacite:PeerReview",
       "@type": "skos:Concept",
       "skos:prefLabel": "PeerReview",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:PhysicalObject",
+      "@id": "datacite:PhysicalObject",
       "@type": "skos:Concept",
       "skos:prefLabel": "PhysicalObject",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Preprint",
+      "@id": "datacite:Preprint",
       "@type": "skos:Concept",
       "skos:prefLabel": "Preprint",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Project",
+      "@id": "datacite:Project",
       "@type": "skos:Concept",
       "skos:prefLabel": "Project",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Report",
+      "@id": "datacite:Report",
       "@type": "skos:Concept",
       "skos:prefLabel": "Report",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Service",
+      "@id": "datacite:Service",
       "@type": "skos:Concept",
       "skos:prefLabel": "Service",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Software",
+      "@id": "datacite:Software",
       "@type": "skos:Concept",
       "skos:prefLabel": "Software",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Sound",
+      "@id": "datacite:Sound",
       "@type": "skos:Concept",
       "skos:prefLabel": "Sound",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Standard",
+      "@id": "datacite:Standard",
       "@type": "skos:Concept",
       "skos:prefLabel": "Standard",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:StudyRegistration",
+      "@id": "datacite:StudyRegistration",
       "@type": "skos:Concept",
       "skos:prefLabel": "StudyRegistration",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Text",
+      "@id": "datacite:Text",
       "@type": "skos:Concept",
       "skos:prefLabel": "Text",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Workflow",
+      "@id": "datacite:Workflow",
       "@type": "skos:Concept",
       "skos:prefLabel": "Workflow",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     },
     {
-      "@id": "ex:Other",
+      "@id": "datacite:Other",
       "@type": "skos:Concept",
       "skos:prefLabel": "Other",
-      "skos:inScheme": "ex:ResourceTypeGeneralScheme"
+      "skos:inScheme": "datacite:ResourceTypeGeneralScheme"
     }
   ]
 }
