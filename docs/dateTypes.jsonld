@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ex": "https://example.org/vocab/dateType#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:DateTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite Date Type",
+      "skos:definition": "Controlled list of date types as defined in the DataCite Metadata Schema."
+    },
+    {
+      "@id": "ex:Accepted", "@type": "skos:Concept", "skos:prefLabel": "Accepted", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Available", "@type": "skos:Concept", "skos:prefLabel": "Available", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Collected", "@type": "skos:Concept", "skos:prefLabel": "Collected", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Copyrighted", "@type": "skos:Concept", "skos:prefLabel": "Copyrighted", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Coverage", "@type": "skos:Concept", "skos:prefLabel": "Coverage", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Created", "@type": "skos:Concept", "skos:prefLabel": "Created", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Issued", "@type": "skos:Concept", "skos:prefLabel": "Issued", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Other", "@type": "skos:Concept", "skos:prefLabel": "Other", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Submitted", "@type": "skos:Concept", "skos:prefLabel": "Submitted", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Updated", "@type": "skos:Concept", "skos:prefLabel": "Updated", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Valid", "@type": "skos:Concept", "skos:prefLabel": "Valid", "skos:inScheme": "ex:DateTypeScheme"
+    },
+    {
+      "@id": "ex:Withdrawn", "@type": "skos:Concept", "skos:prefLabel": "Withdrawn", "skos:inScheme": "ex:DateTypeScheme"
+    }
+  ]
+}
