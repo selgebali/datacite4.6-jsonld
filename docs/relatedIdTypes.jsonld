@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ex": "https://example.org/vocab/relatedIdentifierType#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:RelatedIdentifierTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite Related Identifier Type",
+      "skos:definition": "Controlled list of identifier types that can be used to relate the described resource to another resource."
+    },
+    { "@id": "ex:ARK", "@type": "skos:Concept", "skos:prefLabel": "ARK", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:arXiv", "@type": "skos:Concept", "skos:prefLabel": "arXiv", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:bibcode", "@type": "skos:Concept", "skos:prefLabel": "bibcode", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:CSTR", "@type": "skos:Concept", "skos:prefLabel": "CSTR", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:DOI", "@type": "skos:Concept", "skos:prefLabel": "DOI", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:EAN13", "@type": "skos:Concept", "skos:prefLabel": "EAN13", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:EISSN", "@type": "skos:Concept", "skos:prefLabel": "EISSN", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:Handle", "@type": "skos:Concept", "skos:prefLabel": "Handle", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:IGSN", "@type": "skos:Concept", "skos:prefLabel": "IGSN", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:ISBN", "@type": "skos:Concept", "skos:prefLabel": "ISBN", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:ISSN", "@type": "skos:Concept", "skos:prefLabel": "ISSN", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:ISTC", "@type": "skos:Concept", "skos:prefLabel": "ISTC", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:LISSN", "@type": "skos:Concept", "skos:prefLabel": "LISSN", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:LSID", "@type": "skos:Concept", "skos:prefLabel": "LSID", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:PMID", "@type": "skos:Concept", "skos:prefLabel": "PMID", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:PURL", "@type": "skos:Concept", "skos:prefLabel": "PURL", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:RRID", "@type": "skos:Concept", "skos:prefLabel": "RRID", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:UPC", "@type": "skos:Concept", "skos:prefLabel": "UPC", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:URL", "@type": "skos:Concept", "skos:prefLabel": "URL", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:URN", "@type": "skos:Concept", "skos:prefLabel": "URN", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" },
+    { "@id": "ex:w3id", "@type": "skos:Concept", "skos:prefLabel": "w3id", "skos:inScheme": "ex:RelatedIdentifierTypeScheme" }
+  ]
+}
