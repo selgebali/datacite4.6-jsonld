@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ex": "https://example.org/vocab/titleType#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:TitleTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite Title Type",
+      "skos:definition": "Controlled list of title types as defined in the DataCite Metadata Schema."
+    },
+    {
+      "@id": "ex:AlternativeTitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "AlternativeTitle",
+      "skos:inScheme": "ex:TitleTypeScheme"
+    },
+    {
+      "@id": "ex:Subtitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Subtitle",
+      "skos:inScheme": "ex:TitleTypeScheme"
+    },
+    {
+      "@id": "ex:TranslatedTitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "TranslatedTitle",
+      "skos:inScheme": "ex:TitleTypeScheme"
+    },
+    {
+      "@id": "ex:Other",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Other",
+      "skos:inScheme": "ex:TitleTypeScheme"
+    }
+  ]
+}
