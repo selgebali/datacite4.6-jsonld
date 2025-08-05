@@ -35,22 +35,14 @@
       "@id": "publicationYear",
       "@type": "http://www.w3.org/2001/XMLSchema#gYear"
     },
-    "resource": { "@id": "resource", "@type": "@id" },
-    "resourceType":     { "@id":"resourceType", "@type":"xsd:string" },
-    "resourceTypeGeneral":{ "@id": "resourceType/@resourceTypeGeneral", "@type": "xsd:string" },
-    "resourceTypeGeneralList": {
-      "@id": "resourceTypeGeneralList",
-      "@container": "@list",
-      "@graph": [
-        "Audiovisual","Award","Book","BookChapter","Collection",
-        "ComputationalNotebook","ConferencePaper","ConferenceProceeding",
-        "DataPaper","Dataset","Dissertation","Event","Image",
-        "InteractiveResource","Instrument","Journal","JournalArticle",
-        "Model","OutputManagementPlan","PeerReview","PhysicalObject",
-        "Preprint","Project","Report","Service","Software","Sound",
-        "Standard","StudyRegistration","Text","Workflow","Other"
-      ]
-    },
+   "resource": { "@id": "resource", "@type": "@id" },
+    "resourceType": { "@id": "resourceType", "@type": "xsd:string" },
+    "resourceTypeGeneral": { "@id": "resourceType/@resourceTypeGeneral", "@type": "xsd:string" },
+    "resourceTypeGeneralScheme": {
+        "@id": "https://selgebali.github.io/datacite4.6-jsonld/resourceTypeGeneral.jsonld",
+        "@type": "@id"
+},
+
     "contributorType": {
       "@id": "contributor/@contributorType",
       "@type": "xsd:string"
