@@ -7,50 +7,29 @@
 <body>
   <h1>DataCite Kernel 4.6</h1>
   <p>
-    This site hosts the <strong>JSON-LD context</strong> and companion <strong>JSON-Schema</strong> for the DataCite Kernel 4.6 metadata model.
+    This site hosts the <strong>JSON-LD contexts</strong> and <strong>JSON Schema</strong> files for the DataCite Kernel 4.6 metadata model.
   </p>
+  <h2>Controlled vocabularies</h2>
   <ul>
-  <ul>
-  
-  <li>
-    <a href="contributorTypes.jsonld" type="application/ld+json">contributorTypes.jsonld</a> (JSON-LD context)
-  </li>
-  <li>
-    <a href="dateTypes.jsonld" type="application/ld+json">dateTypes.jsonld</a> (JSON-LD context)
-  </li>
-  <li>
-    <a href="descriptionTypes.jsonld" type="application/ld+json">descriptionTypes.jsonld</a> (JSON-LD context)
-  </li>
-  <li>
-    <a href="nameTypes.jsonld" type="application/ld+json">nameTypes.jsonld</a> (JSON-LD context)
-  </li>
-  <li>
-    <a href="funderIdTypes.jsonld" type="application/ld+json">funderIdTypes.jsonld</a> (JSON-LD context)
-  </li>
-  <li>
-    <a href="relatedIdTypes.jsonld" type="application/ld+json">relatedIdTypes.jsonld</a> (JSON-LD context)
-  </li>
-  <li>
-    <a href="relationTypes.jsonld" type="application/ld+json">relationTypes.jsonld</a> (JSON-LD context)
-  </li>
-  <li>
-    <a href="resourceTypeGeneral.jsonld" type="application/ld+json">resourceTypeGeneral.jsonld</a> (JSON-LD context)
-  </li>
+    <li><a href="contributorTypes.jsonld" type="application/ld+json">contributorTypes.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="dateTypes.jsonld" type="application/ld+json">dateTypes.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="descriptionTypes.jsonld" type="application/ld+json">descriptionTypes.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="nameTypes.jsonld" type="application/ld+json">nameTypes.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="funderIdTypes.jsonld" type="application/ld+json">funderIdTypes.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="relatedIdTypes.jsonld" type="application/ld+json">relatedIdTypes.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="relationTypes.jsonld" type="application/ld+json">relationTypes.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="resourceTypeGeneral.jsonld" type="application/ld+json">resourceTypeGeneral.jsonld</a> (JSON‑LD vocabulary)</li>
+    <li><a href="titleTypes.jsonld" type="application/ld+json">titleTypes.jsonld</a> (JSON‑LD vocabulary)</li>
   </ul>
-<hr>
-<ul>
-<li>
-    <a href="main_context.jsonld" type="application/ld+json">main_context.jsonld</a> (JSON-LD context)
-  </li>
-
-<li>
-<a href="rules.json" type="application/schema+json">rules.json</a> (JSON-Schema)
-</li>
-</ul>
-  
+  <h2>Main context and schemas</h2>
+  <ul>
+    <li><a href="main_context.jsonld" type="application/ld+json">main_context.jsonld</a> (JSON‑LD context)</li>
+    <li><a href="rules.json" type="application/schema+json">rules.json</a> (JSON Schema, minimal validator)</li>
+    <li><a href="https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-schema.json" type="application/schema+json">datacite4.6-schema.json</a> (JSON Schema, full validator)</li>
+    <li><a href="https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json" type="application/schema+json">datacite4.6-profile.json</a> (Bundled profile with rules, vocabularies and context)</li>
+  </ul>
   <hr>
-
-  <h2>SKOS Mappings & Crosswalks</h2>
+  <h2>SKOS Mappings &amp; Crosswalks</h2>
   <p>
     All SKOS-based crosswalks live in the <code>skos-mappings/</code> folder:
   </p>
@@ -61,12 +40,12 @@
       </a>
       (SKOS crosswalks)
     </li>
-      <li>
-      <a href="skos-mappings/jskos-mappings.json" type="application/schema+json">jskos-mappings.json</a> Crosswalks in Jskos format
+    <li>
+      <a href="skos-mappings/jskos-mappings.json" type="application/schema+json">jskos-mappings.json</a> Crosswalks in JSKOS format
     </li>
-  
-    <h4> You can find the github repo <a href="https://github.com/selgebali/datacite4.6-jsonld">here </a></h4>
-    <!-- Add more files here as needed -->
   </ul>
+  <p>
+    You can find the source repository on <a href="https://github.com/selgebali/datacite4.6-jsonld">GitHub</a>.
+  </p>
 </body>
 </html>
