@@ -2,9 +2,9 @@
   "@context": "https://gbv.github.io/jskos/context.json",
   "mappings": [
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier--mapping--identifier--exactMatch--http%3A//schema.org/identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier--mapping--identifier--exactMatch--http%3A//schema.org/identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier"
       },
       "to": {
         "uri": "http://schema.org/identifier"
@@ -20,9 +20,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier--mapping--identifier--exactMatch--http%3A//www.w3.org/ns/dcat%23identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier--mapping--identifier--exactMatch--http%3A//www.w3.org/ns/dcat%23identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#identifier"
@@ -38,9 +38,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier--mapping--identifier--exactMatch--http%3A//purl.org/dc/terms/identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier--mapping--identifier--exactMatch--http%3A//purl.org/dc/terms/identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/identifier"
@@ -56,9 +56,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier--mapping--identifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier--mapping--identifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifier"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q853614"
@@ -74,9 +74,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifierType--mapping--identifierType--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifierType--mapping--identifierType--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#identifierType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#identifierType"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -92,9 +92,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator--mapping--creator--exactMatch--http%3A//schema.org/creator",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator--mapping--creator--exactMatch--http%3A//schema.org/creator",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator"
       },
       "to": {
         "uri": "http://schema.org/creator"
@@ -110,9 +110,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator--mapping--creator--exactMatch--http%3A//purl.org/dc/terms/creator",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator--mapping--creator--exactMatch--http%3A//purl.org/dc/terms/creator",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/creator"
@@ -128,9 +128,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator--mapping--creator--exactMatch--http%3A//www.wikidata.org/entity/Q2500638",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator--mapping--creator--exactMatch--http%3A//www.wikidata.org/entity/Q2500638",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q2500638"
@@ -146,9 +146,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator--mapping--creator--narrowMatch--http%3A//schema.org/author",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator--mapping--creator--narrowMatch--http%3A//schema.org/author",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator"
       },
       "to": {
         "uri": "http://schema.org/author"
@@ -164,9 +164,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator--mapping--creator--narrowMatch--http%3A//www.wikidata.org/entity/Q482980",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator--mapping--creator--narrowMatch--http%3A//www.wikidata.org/entity/Q482980",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creator"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creator"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q482980"
@@ -182,9 +182,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creatorName--mapping--creatorName--exactMatch--http%3A//schema.org/name",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creatorName--mapping--creatorName--exactMatch--http%3A//schema.org/name",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creatorName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creatorName"
       },
       "to": {
         "uri": "http://schema.org/name"
@@ -200,9 +200,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creatorName--mapping--creatorName--closeMatch--http%3A//www.wikidata.org/entity/Q82799",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creatorName--mapping--creatorName--closeMatch--http%3A//www.wikidata.org/entity/Q82799",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creatorName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creatorName"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q82799"
@@ -218,9 +218,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Personal--mapping--nameType_Personal--exactMatch--http%3A//schema.org/Person",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Personal--mapping--nameType_Personal--exactMatch--http%3A//schema.org/Person",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Personal"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Personal"
       },
       "to": {
         "uri": "http://schema.org/Person"
@@ -236,9 +236,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Personal--mapping--nameType_Personal--closeMatch--http%3A//www.wikidata.org/entity/Q5",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Personal--mapping--nameType_Personal--closeMatch--http%3A//www.wikidata.org/entity/Q5",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Personal"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Personal"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q5"
@@ -254,9 +254,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Organizational--mapping--nameType_Organizational--exactMatch--http%3A//schema.org/Organization",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Organizational--mapping--nameType_Organizational--exactMatch--http%3A//schema.org/Organization",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Organizational"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Organizational"
       },
       "to": {
         "uri": "http://schema.org/Organization"
@@ -272,9 +272,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Organizational--mapping--nameType_Organizational--closeMatch--http%3A//www.wikidata.org/entity/Q43229",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Organizational--mapping--nameType_Organizational--closeMatch--http%3A//www.wikidata.org/entity/Q43229",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameType_Organizational"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameType_Organizational"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q43229"
@@ -290,9 +290,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#givenName--mapping--givenName--exactMatch--http%3A//schema.org/givenName",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#givenName--mapping--givenName--exactMatch--http%3A//schema.org/givenName",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#givenName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#givenName"
       },
       "to": {
         "uri": "http://schema.org/givenName"
@@ -308,9 +308,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#givenName--mapping--givenName--exactMatch--http%3A//www.wikidata.org/entity/Q202444",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#givenName--mapping--givenName--exactMatch--http%3A//www.wikidata.org/entity/Q202444",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#givenName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#givenName"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q202444"
@@ -326,9 +326,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#familyName--mapping--familyName--exactMatch--http%3A//schema.org/familyName",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#familyName--mapping--familyName--exactMatch--http%3A//schema.org/familyName",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#familyName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#familyName"
       },
       "to": {
         "uri": "http://schema.org/familyName"
@@ -344,9 +344,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#familyName--mapping--familyName--exactMatch--http%3A//www.wikidata.org/entity/Q101352",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#familyName--mapping--familyName--exactMatch--http%3A//www.wikidata.org/entity/Q101352",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#familyName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#familyName"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q101352"
@@ -362,9 +362,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifier--mapping--nameIdentifier--exactMatch--http%3A//schema.org/identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifier--mapping--nameIdentifier--exactMatch--http%3A//schema.org/identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifier"
       },
       "to": {
         "uri": "http://schema.org/identifier"
@@ -380,9 +380,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifier--mapping--nameIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifier--mapping--nameIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifier"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#identifier"
@@ -398,9 +398,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifier--mapping--nameIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifier--mapping--nameIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifier"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q853614"
@@ -416,9 +416,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifierScheme--mapping--nameIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifierScheme--mapping--nameIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#nameIdentifierScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#nameIdentifierScheme"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -434,9 +434,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creatorSchemeURI--mapping--creatorSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creatorSchemeURI--mapping--creatorSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#creatorSchemeURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#creatorSchemeURI"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyURL"
@@ -452,9 +452,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliation--mapping--affiliation--exactMatch--http%3A//schema.org/affiliation",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliation--mapping--affiliation--exactMatch--http%3A//schema.org/affiliation",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliation"
       },
       "to": {
         "uri": "http://schema.org/affiliation"
@@ -470,9 +470,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliation--mapping--affiliation--closeMatch--http%3A//www.wikidata.org/entity/Q46135267",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliation--mapping--affiliation--closeMatch--http%3A//www.wikidata.org/entity/Q46135267",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliation"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q46135267"
@@ -488,9 +488,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifier--mapping--affiliationIdentifier--exactMatch--http%3A//schema.org/identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifier--mapping--affiliationIdentifier--exactMatch--http%3A//schema.org/identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifier"
       },
       "to": {
         "uri": "http://schema.org/identifier"
@@ -506,9 +506,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifier--mapping--affiliationIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifier--mapping--affiliationIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifier"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#identifier"
@@ -524,9 +524,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifier--mapping--affiliationIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifier--mapping--affiliationIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifier"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q853614"
@@ -542,9 +542,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifierScheme--mapping--affiliationIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifierScheme--mapping--affiliationIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationIdentifierScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationIdentifierScheme"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -560,9 +560,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationSchemeURI--mapping--affiliationSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationSchemeURI--mapping--affiliationSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#affiliationSchemeURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#affiliationSchemeURI"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyURL"
@@ -578,9 +578,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title--mapping--title--exactMatch--http%3A//schema.org/name",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title--mapping--title--exactMatch--http%3A//schema.org/name",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title"
       },
       "to": {
         "uri": "http://schema.org/name"
@@ -596,9 +596,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title--mapping--title--exactMatch--http%3A//purl.org/dc/terms/title",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title--mapping--title--exactMatch--http%3A//purl.org/dc/terms/title",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/title"
@@ -614,9 +614,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title--mapping--title--exactMatch--http%3A//www.wikidata.org/entity/Q783521",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title--mapping--title--exactMatch--http%3A//www.wikidata.org/entity/Q783521",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q783521"
@@ -632,9 +632,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title--mapping--title--narrowMatch--http%3A//schema.org/headline",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title--mapping--title--narrowMatch--http%3A//schema.org/headline",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#title"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#title"
       },
       "to": {
         "uri": "http://schema.org/headline"
@@ -650,9 +650,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#titleType--mapping--titleType--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#titleType--mapping--titleType--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#titleType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#titleType"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -668,9 +668,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_AlternativeTitle--mapping--TitleType_AlternativeTitle--exactMatch--http%3A//schema.org/alternativeHeadline",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_AlternativeTitle--mapping--TitleType_AlternativeTitle--exactMatch--http%3A//schema.org/alternativeHeadline",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_AlternativeTitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_AlternativeTitle"
       },
       "to": {
         "uri": "http://schema.org/alternativeHeadline"
@@ -686,9 +686,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_AlternativeTitle--mapping--TitleType_AlternativeTitle--exactMatch--http%3A//purl.org/dc/terms/title",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_AlternativeTitle--mapping--TitleType_AlternativeTitle--exactMatch--http%3A//purl.org/dc/terms/title",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_AlternativeTitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_AlternativeTitle"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/title"
@@ -704,9 +704,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_AlternativeTitle--mapping--TitleType_AlternativeTitle--closeMatch--http%3A//www.wikidata.org/entity/Q4736562",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_AlternativeTitle--mapping--TitleType_AlternativeTitle--closeMatch--http%3A//www.wikidata.org/entity/Q4736562",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_AlternativeTitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_AlternativeTitle"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q4736562"
@@ -722,9 +722,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Subtitle--mapping--TitleType_Subtitle--exactMatch--http%3A//schema.org/alternativeHeadline",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Subtitle--mapping--TitleType_Subtitle--exactMatch--http%3A//schema.org/alternativeHeadline",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Subtitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Subtitle"
       },
       "to": {
         "uri": "http://schema.org/alternativeHeadline"
@@ -740,9 +740,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Subtitle--mapping--TitleType_Subtitle--exactMatch--http%3A//purl.org/dc/terms/title",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Subtitle--mapping--TitleType_Subtitle--exactMatch--http%3A//purl.org/dc/terms/title",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Subtitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Subtitle"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/title"
@@ -758,9 +758,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Subtitle--mapping--TitleType_Subtitle--closeMatch--http%3A//www.wikidata.org/entity/Q1135389",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Subtitle--mapping--TitleType_Subtitle--closeMatch--http%3A//www.wikidata.org/entity/Q1135389",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Subtitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Subtitle"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1135389"
@@ -776,9 +776,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_TranslatedTitle--mapping--TitleType_TranslatedTitle--relatedMatch--http%3A//schema.org/workTranslation",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_TranslatedTitle--mapping--TitleType_TranslatedTitle--relatedMatch--http%3A//schema.org/workTranslation",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_TranslatedTitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_TranslatedTitle"
       },
       "to": {
         "uri": "http://schema.org/workTranslation"
@@ -794,9 +794,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_TranslatedTitle--mapping--TitleType_TranslatedTitle--relatedMatch--http%3A//www.wikidata.org/entity/Q7553",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_TranslatedTitle--mapping--TitleType_TranslatedTitle--relatedMatch--http%3A//www.wikidata.org/entity/Q7553",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_TranslatedTitle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_TranslatedTitle"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q7553"
@@ -812,9 +812,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Other--mapping--TitleType_Other--closeMatch--http%3A//schema.org/alternateName",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Other--mapping--TitleType_Other--closeMatch--http%3A//schema.org/alternateName",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#TitleType_Other"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#TitleType_Other"
       },
       "to": {
         "uri": "http://schema.org/alternateName"
@@ -830,9 +830,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisher--mapping--publisher--exactMatch--http%3A//schema.org/publisher",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisher--mapping--publisher--exactMatch--http%3A//schema.org/publisher",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisher"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisher"
       },
       "to": {
         "uri": "http://schema.org/publisher"
@@ -848,9 +848,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisher--mapping--publisher--exactMatch--http%3A//purl.org/dc/terms/publisher",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisher--mapping--publisher--exactMatch--http%3A//purl.org/dc/terms/publisher",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisher"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisher"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/publisher"
@@ -866,9 +866,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisher--mapping--publisher--exactMatch--http%3A//www.wikidata.org/entity/Q2516866",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisher--mapping--publisher--exactMatch--http%3A//www.wikidata.org/entity/Q2516866",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisher"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisher"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q2516866"
@@ -884,9 +884,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifier--mapping--publisherIdentifier--exactMatch--http%3A//schema.org/identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifier--mapping--publisherIdentifier--exactMatch--http%3A//schema.org/identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifier"
       },
       "to": {
         "uri": "http://schema.org/identifier"
@@ -902,9 +902,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifier--mapping--publisherIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifier--mapping--publisherIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifier"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#identifier"
@@ -920,9 +920,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifier--mapping--publisherIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifier--mapping--publisherIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifier"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q853614"
@@ -938,9 +938,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifierScheme--mapping--publisherIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifierScheme--mapping--publisherIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherIdentifierScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherIdentifierScheme"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -956,9 +956,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherSchemeURI--mapping--publisherSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherSchemeURI--mapping--publisherSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherSchemeURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherSchemeURI"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyURL"
@@ -974,9 +974,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherSchemeURI--mapping--publisherSchemeURI--closeMatch--http%3A//schema.org/url",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherSchemeURI--mapping--publisherSchemeURI--closeMatch--http%3A//schema.org/url",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publisherSchemeURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publisherSchemeURI"
       },
       "to": {
         "uri": "http://schema.org/url"
@@ -992,9 +992,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear--mapping--publicationYear--exactMatch--http%3A//schema.org/datePublished",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear--mapping--publicationYear--exactMatch--http%3A//schema.org/datePublished",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear"
       },
       "to": {
         "uri": "http://schema.org/datePublished"
@@ -1010,9 +1010,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear--mapping--publicationYear--exactMatch--http%3A//purl.org/dc/terms/issued",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear--mapping--publicationYear--exactMatch--http%3A//purl.org/dc/terms/issued",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/issued"
@@ -1028,9 +1028,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear--mapping--publicationYear--exactMatch--http%3A//www.wikidata.org/entity/Q1361758",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear--mapping--publicationYear--exactMatch--http%3A//www.wikidata.org/entity/Q1361758",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1361758"
@@ -1046,9 +1046,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear--mapping--publicationYear--broadMatch--http%3A//schema.org/date",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear--mapping--publicationYear--broadMatch--http%3A//schema.org/date",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#publicationYear"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#publicationYear"
       },
       "to": {
         "uri": "http://schema.org/date"
@@ -1064,9 +1064,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject--mapping--subject--exactMatch--http%3A//purl.org/dc/terms/subject",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject--mapping--subject--exactMatch--http%3A//purl.org/dc/terms/subject",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/subject"
@@ -1082,9 +1082,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject--mapping--subject--exactMatch--http%3A//www.wikidata.org/entity/Q164573",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject--mapping--subject--exactMatch--http%3A//www.wikidata.org/entity/Q164573",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q164573"
@@ -1100,9 +1100,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject--mapping--subject--closeMatch--http%3A//www.w3.org/ns/dcat%23theme",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject--mapping--subject--closeMatch--http%3A//www.w3.org/ns/dcat%23theme",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#theme"
@@ -1118,9 +1118,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject--mapping--subject--broadMatch--http%3A//schema.org/about",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject--mapping--subject--broadMatch--http%3A//schema.org/about",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject"
       },
       "to": {
         "uri": "http://schema.org/about"
@@ -1136,9 +1136,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject--mapping--subject--narrowMatch--http%3A//schema.org/DefinedTerm",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject--mapping--subject--narrowMatch--http%3A//schema.org/DefinedTerm",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject"
       },
       "to": {
         "uri": "http://schema.org/DefinedTerm"
@@ -1154,9 +1154,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject--mapping--subject--relatedMatch--http%3A//schema.org/keywords",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject--mapping--subject--relatedMatch--http%3A//schema.org/keywords",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subject"
       },
       "to": {
         "uri": "http://schema.org/keywords"
@@ -1172,9 +1172,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subjectScheme--mapping--subjectScheme--exactMatch--http%3A//purl.org/dc/terms/source",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subjectScheme--mapping--subjectScheme--exactMatch--http%3A//purl.org/dc/terms/source",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subjectScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subjectScheme"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/source"
@@ -1190,9 +1190,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subjectScheme--mapping--subjectScheme--closeMatch--http%3A//schema.org/name",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subjectScheme--mapping--subjectScheme--closeMatch--http%3A//schema.org/name",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subjectScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subjectScheme"
       },
       "to": {
         "uri": "http://schema.org/name"
@@ -1208,9 +1208,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subjectScheme--mapping--subjectScheme--relatedMatch--http%3A//www.wikidata.org/entity/Q5962346",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subjectScheme--mapping--subjectScheme--relatedMatch--http%3A//www.wikidata.org/entity/Q5962346",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#subjectScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#subjectScheme"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q5962346"
@@ -1226,9 +1226,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#schemeURI--mapping--schemeURI--exactMatch--http%3A//schema.org/url",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#schemeURI--mapping--schemeURI--exactMatch--http%3A//schema.org/url",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#schemeURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#schemeURI"
       },
       "to": {
         "uri": "http://schema.org/url"
@@ -1244,9 +1244,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#valueURI--mapping--valueURI--exactMatch--http%3A//schema.org/url",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#valueURI--mapping--valueURI--exactMatch--http%3A//schema.org/url",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#valueURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#valueURI"
       },
       "to": {
         "uri": "http://schema.org/url"
@@ -1262,9 +1262,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#classificationCode--mapping--classificationCode--exactMatch--http%3A//schema.org/termCode",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#classificationCode--mapping--classificationCode--exactMatch--http%3A//schema.org/termCode",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#classificationCode"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#classificationCode"
       },
       "to": {
         "uri": "http://schema.org/termCode"
@@ -1280,9 +1280,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#classificationCode--mapping--classificationCode--relatedMatch--http%3A//www.w3.org/ns/dcat%23keyword",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#classificationCode--mapping--classificationCode--relatedMatch--http%3A//www.w3.org/ns/dcat%23keyword",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#classificationCode"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#classificationCode"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#keyword"
@@ -1298,9 +1298,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributor--mapping--contributor--exactMatch--http%3A//schema.org/contributor",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributor--mapping--contributor--exactMatch--http%3A//schema.org/contributor",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributor"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributor"
       },
       "to": {
         "uri": "http://schema.org/contributor"
@@ -1316,9 +1316,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributor--mapping--contributor--exactMatch--http%3A//www.wikidata.org/entity/Q20204892",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributor--mapping--contributor--exactMatch--http%3A//www.wikidata.org/entity/Q20204892",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributor"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributor"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q20204892"
@@ -1334,9 +1334,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributor--mapping--contributor--exactMatch--http%3A//purl.org/dc/terms/contributor",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributor--mapping--contributor--exactMatch--http%3A//purl.org/dc/terms/contributor",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributor"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributor"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/contributor"
@@ -1352,9 +1352,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorType--mapping--contributorType--exactMatch--http%3A//schema.org/roleName",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorType--mapping--contributorType--exactMatch--http%3A//schema.org/roleName",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorType"
       },
       "to": {
         "uri": "http://schema.org/roleName"
@@ -1370,9 +1370,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorType--mapping--contributorType--exactMatch--http%3A//www.w3.org/ns/dcat%23role",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorType--mapping--contributorType--exactMatch--http%3A//www.w3.org/ns/dcat%23role",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorType"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#role"
@@ -1388,9 +1388,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorType--mapping--contributorType--broadMatch--http%3A//schema.org/roleName",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorType--mapping--contributorType--broadMatch--http%3A//schema.org/roleName",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorType"
       },
       "to": {
         "uri": "http://schema.org/roleName"
@@ -1406,9 +1406,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName--mapping--contributorName--exactMatch--http%3A//schema.org/name",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName--mapping--contributorName--exactMatch--http%3A//schema.org/name",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName"
       },
       "to": {
         "uri": "http://schema.org/name"
@@ -1424,9 +1424,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName--mapping--contributorName--closeMatch--http%3A//www.wikidata.org/entity/Q1071027",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName--mapping--contributorName--closeMatch--http%3A//www.wikidata.org/entity/Q1071027",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1071027"
@@ -1442,9 +1442,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName--mapping--contributorName--relatedMatch--datacite%3AnameType_Personal",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName--mapping--contributorName--relatedMatch--datacite%3AnameType_Personal",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName"
       },
       "to": {
         "uri": "datacite:nameType_Personal"
@@ -1460,9 +1460,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName--mapping--contributorName--relatedMatch--datacite%3AnameType_Organizational",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName--mapping--contributorName--relatedMatch--datacite%3AnameType_Organizational",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorName"
       },
       "to": {
         "uri": "datacite:nameType_Organizational"
@@ -1478,9 +1478,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorGivenName--mapping--contributorGivenName--exactMatch--http%3A//schema.org/givenName",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorGivenName--mapping--contributorGivenName--exactMatch--http%3A//schema.org/givenName",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorGivenName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorGivenName"
       },
       "to": {
         "uri": "http://schema.org/givenName"
@@ -1496,9 +1496,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorGivenName--mapping--contributorGivenName--exactMatch--http%3A//www.wikidata.org/entity/Q202444",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorGivenName--mapping--contributorGivenName--exactMatch--http%3A//www.wikidata.org/entity/Q202444",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorGivenName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorGivenName"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q202444"
@@ -1514,9 +1514,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorFamilyName--mapping--contributorFamilyName--exactMatch--http%3A//schema.org/familyName",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorFamilyName--mapping--contributorFamilyName--exactMatch--http%3A//schema.org/familyName",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorFamilyName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorFamilyName"
       },
       "to": {
         "uri": "http://schema.org/familyName"
@@ -1532,9 +1532,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorFamilyName--mapping--contributorFamilyName--exactMatch--http%3A//www.wikidata.org/entity/Q101352",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorFamilyName--mapping--contributorFamilyName--exactMatch--http%3A//www.wikidata.org/entity/Q101352",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorFamilyName"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorFamilyName"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q101352"
@@ -1550,9 +1550,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier--mapping--contributorNameIdentifier--exactMatch--http%3A//schema.org/identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier--mapping--contributorNameIdentifier--exactMatch--http%3A//schema.org/identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier"
       },
       "to": {
         "uri": "http://schema.org/identifier"
@@ -1568,9 +1568,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier--mapping--contributorNameIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier--mapping--contributorNameIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#identifier"
@@ -1586,9 +1586,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier--mapping--contributorNameIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier--mapping--contributorNameIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q853614"
@@ -1604,9 +1604,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier--mapping--contributorNameIdentifier--relatedMatch--http%3A//www.wikidata.org/entity/P496",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier--mapping--contributorNameIdentifier--relatedMatch--http%3A//www.wikidata.org/entity/P496",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifier"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/P496"
@@ -1622,9 +1622,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifierScheme--mapping--contributorNameIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifierScheme--mapping--contributorNameIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorNameIdentifierScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorNameIdentifierScheme"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -1640,9 +1640,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorSchemeURI--mapping--contributorSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorSchemeURI--mapping--contributorSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorSchemeURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorSchemeURI"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyURL"
@@ -1658,9 +1658,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliation--mapping--contributorAffiliation--exactMatch--http%3A//schema.org/affiliation",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliation--mapping--contributorAffiliation--exactMatch--http%3A//schema.org/affiliation",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliation"
       },
       "to": {
         "uri": "http://schema.org/affiliation"
@@ -1676,9 +1676,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliation--mapping--contributorAffiliation--closeMatch--http%3A//www.wikidata.org/entity/Q46135267",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliation--mapping--contributorAffiliation--closeMatch--http%3A//www.wikidata.org/entity/Q46135267",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliation"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q46135267"
@@ -1694,9 +1694,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifier--mapping--contributorAffiliationIdentifier--exactMatch--http%3A//schema.org/identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifier--mapping--contributorAffiliationIdentifier--exactMatch--http%3A//schema.org/identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifier"
       },
       "to": {
         "uri": "http://schema.org/identifier"
@@ -1712,9 +1712,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifier--mapping--contributorAffiliationIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifier--mapping--contributorAffiliationIdentifier--closeMatch--http%3A//www.w3.org/ns/dcat%23identifier",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifier"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#identifier"
@@ -1730,9 +1730,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifier--mapping--contributorAffiliationIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifier--mapping--contributorAffiliationIdentifier--closeMatch--http%3A//www.wikidata.org/entity/Q853614",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifier"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifier"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q853614"
@@ -1748,9 +1748,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifierScheme--mapping--contributorAffiliationIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifierScheme--mapping--contributorAffiliationIdentifierScheme--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationIdentifierScheme"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationIdentifierScheme"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -1766,9 +1766,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationSchemeURI--mapping--contributorAffiliationSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationSchemeURI--mapping--contributorAffiliationSchemeURI--exactMatch--http%3A//schema.org/PropertyValue.propertyURL",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#contributorAffiliationSchemeURI"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#contributorAffiliationSchemeURI"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyURL"
@@ -1784,9 +1784,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--exactMatch--http%3A//purl.org/dc/terms/date",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--exactMatch--http%3A//purl.org/dc/terms/date",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/date"
@@ -1802,9 +1802,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/dateCreated",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/dateCreated",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/dateCreated"
@@ -1820,9 +1820,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/datePublished",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/datePublished",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/datePublished"
@@ -1838,9 +1838,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/dateModified",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/dateModified",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/dateModified"
@@ -1856,9 +1856,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/dateSubmitted",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/dateSubmitted",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/dateSubmitted"
@@ -1874,9 +1874,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/dateIssued",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/dateIssued",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/dateIssued"
@@ -1892,9 +1892,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/dateDeleted",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/dateDeleted",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/dateDeleted"
@@ -1910,9 +1910,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/validFrom",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/validFrom",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/validFrom"
@@ -1928,9 +1928,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--broadMatch--http%3A//schema.org/validThrough",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--broadMatch--http%3A//schema.org/validThrough",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://schema.org/validThrough"
@@ -1946,9 +1946,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/created",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/created",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/created"
@@ -1964,9 +1964,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/issued",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/issued",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/issued"
@@ -1982,9 +1982,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/modified",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/modified",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/modified"
@@ -2000,9 +2000,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/available",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/available",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/available"
@@ -2018,9 +2018,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/dateAccepted",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--relatedMatch--http%3A//purl.org/dc/terms/dateAccepted",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/dateAccepted"
@@ -2036,9 +2036,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--relatedMatch--http%3A//www.w3.org/ns/dcat%23issued",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--relatedMatch--http%3A//www.w3.org/ns/dcat%23issued",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#issued"
@@ -2054,9 +2054,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date--mapping--date--relatedMatch--http%3A//www.w3.org/ns/dcat%23modified",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date--mapping--date--relatedMatch--http%3A//www.w3.org/ns/dcat%23modified",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#date"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#date"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#modified"
@@ -2072,9 +2072,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#dateType--mapping--dateType--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#dateType--mapping--dateType--exactMatch--http%3A//schema.org/PropertyValue.propertyID",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#dateType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#dateType"
       },
       "to": {
         "uri": "http://schema.org/PropertyValue.propertyID"
@@ -2090,9 +2090,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Accepted--mapping--DateType_Accepted--exactMatch--http%3A//purl.org/dc/terms/dateAccepted",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Accepted--mapping--DateType_Accepted--exactMatch--http%3A//purl.org/dc/terms/dateAccepted",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Accepted"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Accepted"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/dateAccepted"
@@ -2108,9 +2108,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Available--mapping--DateType_Available--exactMatch--http%3A//purl.org/dc/terms/available",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Available--mapping--DateType_Available--exactMatch--http%3A//purl.org/dc/terms/available",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Available"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Available"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/available"
@@ -2126,9 +2126,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Available--mapping--DateType_Available--relatedMatch--http%3A//schema.org/datePublished",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Available--mapping--DateType_Available--relatedMatch--http%3A//schema.org/datePublished",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Available"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Available"
       },
       "to": {
         "uri": "http://schema.org/datePublished"
@@ -2144,9 +2144,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Copyrighted--mapping--DateType_Copyrighted--exactMatch--http%3A//purl.org/dc/terms/dateCopyrighted",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Copyrighted--mapping--DateType_Copyrighted--exactMatch--http%3A//purl.org/dc/terms/dateCopyrighted",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Copyrighted"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Copyrighted"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/dateCopyrighted"
@@ -2162,9 +2162,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Copyrighted--mapping--DateType_Copyrighted--closeMatch--http%3A//schema.org/copyrightYear",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Copyrighted--mapping--DateType_Copyrighted--closeMatch--http%3A//schema.org/copyrightYear",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Copyrighted"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Copyrighted"
       },
       "to": {
         "uri": "http://schema.org/copyrightYear"
@@ -2180,9 +2180,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected--mapping--DateType_Collected--closeMatch--http%3A//purl.org/dc/terms/created",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected--mapping--DateType_Collected--closeMatch--http%3A//purl.org/dc/terms/created",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/created"
@@ -2198,9 +2198,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected--mapping--DateType_Collected--relatedMatch--http%3A//schema.org/temporalCoverage",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected--mapping--DateType_Collected--relatedMatch--http%3A//schema.org/temporalCoverage",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected"
       },
       "to": {
         "uri": "http://schema.org/temporalCoverage"
@@ -2216,9 +2216,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected--mapping--DateType_Collected--relatedMatch--http%3A//purl.org/dc/terms/temporal",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected--mapping--DateType_Collected--relatedMatch--http%3A//purl.org/dc/terms/temporal",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/temporal"
@@ -2234,9 +2234,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected--mapping--DateType_Collected--relatedMatch--http%3A//www.w3.org/ns/dcat%23temporal",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected--mapping--DateType_Collected--relatedMatch--http%3A//www.w3.org/ns/dcat%23temporal",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Collected"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Collected"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#temporal"
@@ -2252,9 +2252,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Coverage--mapping--DateType_Coverage--exactMatch--http%3A//schema.org/temporalCoverage",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Coverage--mapping--DateType_Coverage--exactMatch--http%3A//schema.org/temporalCoverage",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Coverage"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Coverage"
       },
       "to": {
         "uri": "http://schema.org/temporalCoverage"
@@ -2270,9 +2270,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Coverage--mapping--DateType_Coverage--exactMatch--http%3A//purl.org/dc/terms/coverage",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Coverage--mapping--DateType_Coverage--exactMatch--http%3A//purl.org/dc/terms/coverage",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Coverage"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Coverage"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/coverage"
@@ -2288,9 +2288,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Coverage--mapping--DateType_Coverage--relatedMatch--http%3A//purl.org/dc/terms/temporal",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Coverage--mapping--DateType_Coverage--relatedMatch--http%3A//purl.org/dc/terms/temporal",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Coverage"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Coverage"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/temporal"
@@ -2306,9 +2306,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Created--mapping--DateType_Created--exactMatch--http%3A//schema.org/dateCreated",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Created--mapping--DateType_Created--exactMatch--http%3A//schema.org/dateCreated",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Created"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Created"
       },
       "to": {
         "uri": "http://schema.org/dateCreated"
@@ -2324,9 +2324,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Created--mapping--DateType_Created--exactMatch--http%3A//purl.org/dc/terms/created",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Created--mapping--DateType_Created--exactMatch--http%3A//purl.org/dc/terms/created",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Created"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Created"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/created"
@@ -2342,9 +2342,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Issued--mapping--DateType_Issued--exactMatch--http%3A//schema.org/datePublished",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Issued--mapping--DateType_Issued--exactMatch--http%3A//schema.org/datePublished",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Issued"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Issued"
       },
       "to": {
         "uri": "http://schema.org/datePublished"
@@ -2360,9 +2360,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Issued--mapping--DateType_Issued--exactMatch--http%3A//purl.org/dc/terms/issued",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Issued--mapping--DateType_Issued--exactMatch--http%3A//purl.org/dc/terms/issued",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Issued"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Issued"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/issued"
@@ -2378,9 +2378,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Submitted--mapping--DateType_Submitted--exactMatch--http%3A//purl.org/dc/terms/dateSubmitted",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Submitted--mapping--DateType_Submitted--exactMatch--http%3A//purl.org/dc/terms/dateSubmitted",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Submitted"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Submitted"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/dateSubmitted"
@@ -2396,9 +2396,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Updated--mapping--DateType_Updated--exactMatch--http%3A//schema.org/dateModified",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Updated--mapping--DateType_Updated--exactMatch--http%3A//schema.org/dateModified",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Updated"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Updated"
       },
       "to": {
         "uri": "http://schema.org/dateModified"
@@ -2414,9 +2414,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Updated--mapping--DateType_Updated--exactMatch--http%3A//purl.org/dc/terms/modified",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Updated--mapping--DateType_Updated--exactMatch--http%3A//purl.org/dc/terms/modified",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Updated"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Updated"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/modified"
@@ -2432,9 +2432,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Valid--mapping--DateType_Valid--exactMatch--http%3A//schema.org/validFrom",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Valid--mapping--DateType_Valid--exactMatch--http%3A//schema.org/validFrom",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Valid"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Valid"
       },
       "to": {
         "uri": "http://schema.org/validFrom"
@@ -2450,9 +2450,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Valid--mapping--DateType_Valid--exactMatch--http%3A//purl.org/dc/terms/valid",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Valid--mapping--DateType_Valid--exactMatch--http%3A//purl.org/dc/terms/valid",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Valid"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Valid"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/valid"
@@ -2468,9 +2468,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Withdrawn--mapping--DateType_Withdrawn--relatedMatch--http%3A//schema.org/dateDeleted",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Withdrawn--mapping--DateType_Withdrawn--relatedMatch--http%3A//schema.org/dateDeleted",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Withdrawn"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Withdrawn"
       },
       "to": {
         "uri": "http://schema.org/dateDeleted"
@@ -2486,9 +2486,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Other--mapping--DateType_Other--closeMatch--http%3A//schema.org/additionalType",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Other--mapping--DateType_Other--closeMatch--http%3A//schema.org/additionalType",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#DateType_Other"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#DateType_Other"
       },
       "to": {
         "uri": "http://schema.org/additionalType"
@@ -2504,9 +2504,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#dateInformation--mapping--dateInformation--exactMatch--http%3A//schema.org/description",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#dateInformation--mapping--dateInformation--exactMatch--http%3A//schema.org/description",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#dateInformation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#dateInformation"
       },
       "to": {
         "uri": "http://schema.org/description"
@@ -2522,9 +2522,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#Language--mapping--Language--exactMatch--http%3A//schema.org/inLanguage",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#Language--mapping--Language--exactMatch--http%3A//schema.org/inLanguage",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#Language"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#Language"
       },
       "to": {
         "uri": "http://schema.org/inLanguage"
@@ -2540,9 +2540,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#Language--mapping--Language--exactMatch--http%3A//purl.org/dc/terms/language",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#Language--mapping--Language--exactMatch--http%3A//purl.org/dc/terms/language",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#Language"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#Language"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/language"
@@ -2558,9 +2558,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType--mapping--resourceType--exactMatch--http%3A//schema.org/description",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType--mapping--resourceType--exactMatch--http%3A//schema.org/description",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType"
       },
       "to": {
         "uri": "http://schema.org/description"
@@ -2576,9 +2576,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType--mapping--resourceType--exactMatch--http%3A//www.wikidata.org/entity/Q22097967",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType--mapping--resourceType--exactMatch--http%3A//www.wikidata.org/entity/Q22097967",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q22097967"
@@ -2594,9 +2594,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType--mapping--resourceType--exactMatch--http%3A//purl.org/dc/terms/type",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType--mapping--resourceType--exactMatch--http%3A//purl.org/dc/terms/type",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/type"
@@ -2612,9 +2612,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType--mapping--resourceType--closeMatch--http%3A//www.w3.org/ns/dcat%23resource",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType--mapping--resourceType--closeMatch--http%3A//www.w3.org/ns/dcat%23resource",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#resource"
@@ -2630,9 +2630,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType--mapping--resourceType--relatedMatch--datacite%3AresourceTypeGeneral",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType--mapping--resourceType--relatedMatch--datacite%3AresourceTypeGeneral",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType"
       },
       "to": {
         "uri": "datacite:resourceTypeGeneral"
@@ -2648,9 +2648,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType--mapping--resourceType--relatedMatch--http%3A//schema.org/additionalType",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType--mapping--resourceType--relatedMatch--http%3A//schema.org/additionalType",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceType"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceType"
       },
       "to": {
         "uri": "http://schema.org/additionalType"
@@ -2666,9 +2666,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceTypeGeneral--mapping--resourceTypeGeneral--exactMatch--http%3A//schema.org/genre",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceTypeGeneral--mapping--resourceTypeGeneral--exactMatch--http%3A//schema.org/genre",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceTypeGeneral"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceTypeGeneral"
       },
       "to": {
         "uri": "http://schema.org/genre"
@@ -2684,9 +2684,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceTypeGeneral--mapping--resourceTypeGeneral--exactMatch--http%3A//purl.org/dc/terms/type",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceTypeGeneral--mapping--resourceTypeGeneral--exactMatch--http%3A//purl.org/dc/terms/type",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceTypeGeneral"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceTypeGeneral"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/type"
@@ -2702,9 +2702,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceTypeGeneral--mapping--resourceTypeGeneral--relatedMatch--datacite%3AresourceType",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceTypeGeneral--mapping--resourceTypeGeneral--relatedMatch--datacite%3AresourceType",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#resourceTypeGeneral"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#resourceTypeGeneral"
       },
       "to": {
         "uri": "datacite:resourceType"
@@ -2720,9 +2720,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Audiovisual--mapping--ResourceTypeGeneral_Audiovisual--exactMatch--http%3A//schema.org/MediaObject",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Audiovisual--mapping--ResourceTypeGeneral_Audiovisual--exactMatch--http%3A//schema.org/MediaObject",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Audiovisual"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Audiovisual"
       },
       "to": {
         "uri": "http://schema.org/MediaObject"
@@ -2738,9 +2738,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Audiovisual--mapping--ResourceTypeGeneral_Audiovisual--exactMatch--http%3A//purl.org/dc/terms/MovingImage",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Audiovisual--mapping--ResourceTypeGeneral_Audiovisual--exactMatch--http%3A//purl.org/dc/terms/MovingImage",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Audiovisual"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Audiovisual"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/MovingImage"
@@ -2756,9 +2756,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Audiovisual--mapping--ResourceTypeGeneral_Audiovisual--exactMatch--http%3A//www.wikidata.org/entity/Q758901",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Audiovisual--mapping--ResourceTypeGeneral_Audiovisual--exactMatch--http%3A//www.wikidata.org/entity/Q758901",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Audiovisual"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Audiovisual"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q758901"
@@ -2774,9 +2774,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Award--mapping--ResourceTypeGeneral_Award--exactMatch--http%3A//schema.org/Award",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Award--mapping--ResourceTypeGeneral_Award--exactMatch--http%3A//schema.org/Award",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Award"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Award"
       },
       "to": {
         "uri": "http://schema.org/Award"
@@ -2792,9 +2792,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Award--mapping--ResourceTypeGeneral_Award--exactMatch--http%3A//www.wikidata.org/entity/Q618779",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Award--mapping--ResourceTypeGeneral_Award--exactMatch--http%3A//www.wikidata.org/entity/Q618779",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Award"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Award"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q618779"
@@ -2810,9 +2810,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Award--mapping--ResourceTypeGeneral_Award--narrowMatch--http%3A//schema.org/Grant",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Award--mapping--ResourceTypeGeneral_Award--narrowMatch--http%3A//schema.org/Grant",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Award"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Award"
       },
       "to": {
         "uri": "http://schema.org/Grant"
@@ -2828,9 +2828,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--exactMatch--http%3A//schema.org/Book",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--exactMatch--http%3A//schema.org/Book",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book"
       },
       "to": {
         "uri": "http://schema.org/Book"
@@ -2846,9 +2846,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--exactMatch--http%3A//www.wikidata.org/entity/Q571",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--exactMatch--http%3A//www.wikidata.org/entity/Q571",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q571"
@@ -2864,9 +2864,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -2882,9 +2882,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book--mapping--ResourceTypeGeneral_Book--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Book"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Book"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/BibliographicResource"
@@ -2900,9 +2900,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_BookChapter--mapping--ResourceTypeGeneral_BookChapter--exactMatch--http%3A//schema.org/Chapter",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_BookChapter--mapping--ResourceTypeGeneral_BookChapter--exactMatch--http%3A//schema.org/Chapter",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_BookChapter"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_BookChapter"
       },
       "to": {
         "uri": "http://schema.org/Chapter"
@@ -2918,9 +2918,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_BookChapter--mapping--ResourceTypeGeneral_BookChapter--exactMatch--http%3A//www.wikidata.org/entity/Q1980247",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_BookChapter--mapping--ResourceTypeGeneral_BookChapter--exactMatch--http%3A//www.wikidata.org/entity/Q1980247",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_BookChapter"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_BookChapter"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1980247"
@@ -2936,9 +2936,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_BookChapter--mapping--ResourceTypeGeneral_BookChapter--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_BookChapter--mapping--ResourceTypeGeneral_BookChapter--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_BookChapter"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_BookChapter"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -2954,9 +2954,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Collection--mapping--ResourceTypeGeneral_Collection--exactMatch--http%3A//schema.org/Collection",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Collection--mapping--ResourceTypeGeneral_Collection--exactMatch--http%3A//schema.org/Collection",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Collection"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Collection"
       },
       "to": {
         "uri": "http://schema.org/Collection"
@@ -2972,9 +2972,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Collection--mapping--ResourceTypeGeneral_Collection--exactMatch--http%3A//purl.org/dc/terms/Collection",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Collection--mapping--ResourceTypeGeneral_Collection--exactMatch--http%3A//purl.org/dc/terms/Collection",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Collection"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Collection"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Collection"
@@ -2990,9 +2990,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Collection--mapping--ResourceTypeGeneral_Collection--exactMatch--http%3A//www.wikidata.org/entity/Q2668072",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Collection--mapping--ResourceTypeGeneral_Collection--exactMatch--http%3A//www.wikidata.org/entity/Q2668072",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Collection"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Collection"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q2668072"
@@ -3008,9 +3008,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ComputationalNotebook--mapping--ResourceTypeGeneral_ComputationalNotebook--exactMatch--http%3A//schema.org/SoftwareApplication",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ComputationalNotebook--mapping--ResourceTypeGeneral_ComputationalNotebook--exactMatch--http%3A//schema.org/SoftwareApplication",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ComputationalNotebook"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ComputationalNotebook"
       },
       "to": {
         "uri": "http://schema.org/SoftwareApplication"
@@ -3026,9 +3026,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ComputationalNotebook--mapping--ResourceTypeGeneral_ComputationalNotebook--exactMatch--http%3A//purl.org/dc/terms/Software",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ComputationalNotebook--mapping--ResourceTypeGeneral_ComputationalNotebook--exactMatch--http%3A//purl.org/dc/terms/Software",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ComputationalNotebook"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ComputationalNotebook"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Software"
@@ -3044,9 +3044,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ComputationalNotebook--mapping--ResourceTypeGeneral_ComputationalNotebook--exactMatch--http%3A//www.wikidata.org/entity/Q28405706",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ComputationalNotebook--mapping--ResourceTypeGeneral_ComputationalNotebook--exactMatch--http%3A//www.wikidata.org/entity/Q28405706",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ComputationalNotebook"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ComputationalNotebook"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q28405706"
@@ -3062,9 +3062,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--exactMatch--http%3A//schema.org/ScholarlyArticle",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--exactMatch--http%3A//schema.org/ScholarlyArticle",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper"
       },
       "to": {
         "uri": "http://schema.org/ScholarlyArticle"
@@ -3080,9 +3080,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--exactMatch--http%3A//www.wikidata.org/entity/Q23927052",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--exactMatch--http%3A//www.wikidata.org/entity/Q23927052",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q23927052"
@@ -3098,9 +3098,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3116,9 +3116,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper--mapping--ResourceTypeGeneral_ConferencePaper--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferencePaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferencePaper"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/BibliographicResource"
@@ -3134,9 +3134,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferenceProceeding--mapping--ResourceTypeGeneral_ConferenceProceeding--exactMatch--http%3A//schema.org/PublicationVolume",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferenceProceeding--mapping--ResourceTypeGeneral_ConferenceProceeding--exactMatch--http%3A//schema.org/PublicationVolume",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferenceProceeding"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferenceProceeding"
       },
       "to": {
         "uri": "http://schema.org/PublicationVolume"
@@ -3152,9 +3152,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferenceProceeding--mapping--ResourceTypeGeneral_ConferenceProceeding--exactMatch--http%3A//www.wikidata.org/entity/Q1143604",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferenceProceeding--mapping--ResourceTypeGeneral_ConferenceProceeding--exactMatch--http%3A//www.wikidata.org/entity/Q1143604",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferenceProceeding"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferenceProceeding"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1143604"
@@ -3170,9 +3170,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferenceProceeding--mapping--ResourceTypeGeneral_ConferenceProceeding--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferenceProceeding--mapping--ResourceTypeGeneral_ConferenceProceeding--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_ConferenceProceeding"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_ConferenceProceeding"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3188,9 +3188,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--exactMatch--http%3A//www.wikidata.org/entity/Q17009938",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--exactMatch--http%3A//www.wikidata.org/entity/Q17009938",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q17009938"
@@ -3206,9 +3206,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--exactMatch--http%3A//schema.org/ScholarlyArticle",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--exactMatch--http%3A//schema.org/ScholarlyArticle",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper"
       },
       "to": {
         "uri": "http://schema.org/ScholarlyArticle"
@@ -3224,9 +3224,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3242,9 +3242,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper--mapping--ResourceTypeGeneral_DataPaper--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_DataPaper"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_DataPaper"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/BibliographicResource"
@@ -3260,9 +3260,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//schema.org/Dataset",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//schema.org/Dataset",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset"
       },
       "to": {
         "uri": "http://schema.org/Dataset"
@@ -3278,9 +3278,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//purl.org/dc/terms/Dataset",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//purl.org/dc/terms/Dataset",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Dataset"
@@ -3296,9 +3296,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//www.wikidata.org/entity/Q1172284",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//www.wikidata.org/entity/Q1172284",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1172284"
@@ -3314,9 +3314,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//www.w3.org/ns/dcat%23Dataset",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset--mapping--ResourceTypeGeneral_Dataset--exactMatch--http%3A//www.w3.org/ns/dcat%23Dataset",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dataset"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dataset"
       },
       "to": {
         "uri": "http://www.w3.org/ns/dcat#Dataset"
@@ -3332,9 +3332,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--exactMatch--http%3A//schema.org/Thesis",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--exactMatch--http%3A//schema.org/Thesis",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation"
       },
       "to": {
         "uri": "http://schema.org/Thesis"
@@ -3350,9 +3350,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--exactMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--exactMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3368,9 +3368,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--exactMatch--http%3A//www.wikidata.org/entity/Q1266946",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--exactMatch--http%3A//www.wikidata.org/entity/Q1266946",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1266946"
@@ -3386,9 +3386,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation--mapping--ResourceTypeGeneral_Dissertation--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Dissertation"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Dissertation"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3404,9 +3404,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Event--mapping--ResourceTypeGeneral_Event--exactMatch--http%3A//schema.org/Event",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Event--mapping--ResourceTypeGeneral_Event--exactMatch--http%3A//schema.org/Event",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Event"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Event"
       },
       "to": {
         "uri": "http://schema.org/Event"
@@ -3422,9 +3422,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Event--mapping--ResourceTypeGeneral_Event--exactMatch--http%3A//purl.org/dc/terms/Event",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Event--mapping--ResourceTypeGeneral_Event--exactMatch--http%3A//purl.org/dc/terms/Event",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Event"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Event"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Event"
@@ -3440,9 +3440,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Event--mapping--ResourceTypeGeneral_Event--exactMatch--http%3A//www.wikidata.org/entity/Q1656682",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Event--mapping--ResourceTypeGeneral_Event--exactMatch--http%3A//www.wikidata.org/entity/Q1656682",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Event"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Event"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1656682"
@@ -3458,9 +3458,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Image--mapping--ResourceTypeGeneral_Image--exactMatch--http%3A//schema.org/ImageObject",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Image--mapping--ResourceTypeGeneral_Image--exactMatch--http%3A//schema.org/ImageObject",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Image"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Image"
       },
       "to": {
         "uri": "http://schema.org/ImageObject"
@@ -3476,9 +3476,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Image--mapping--ResourceTypeGeneral_Image--exactMatch--http%3A//purl.org/dc/terms/Image",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Image--mapping--ResourceTypeGeneral_Image--exactMatch--http%3A//purl.org/dc/terms/Image",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Image"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Image"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Image"
@@ -3494,9 +3494,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Image--mapping--ResourceTypeGeneral_Image--exactMatch--http%3A//www.wikidata.org/entity/Q478798",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Image--mapping--ResourceTypeGeneral_Image--exactMatch--http%3A//www.wikidata.org/entity/Q478798",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Image"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Image"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q478798"
@@ -3512,9 +3512,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Instrument--mapping--ResourceTypeGeneral_Instrument--exactMatch--http%3A//schema.org/Instrument",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Instrument--mapping--ResourceTypeGeneral_Instrument--exactMatch--http%3A//schema.org/Instrument",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Instrument"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Instrument"
       },
       "to": {
         "uri": "http://schema.org/Instrument"
@@ -3530,9 +3530,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Instrument--mapping--ResourceTypeGeneral_Instrument--exactMatch--http%3A//www.wikidata.org/entity/Q39546",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Instrument--mapping--ResourceTypeGeneral_Instrument--exactMatch--http%3A//www.wikidata.org/entity/Q39546",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Instrument"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Instrument"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q39546"
@@ -3548,9 +3548,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_InteractiveResource--mapping--ResourceTypeGeneral_InteractiveResource--exactMatch--http%3A//purl.org/dc/terms/InteractiveResource",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_InteractiveResource--mapping--ResourceTypeGeneral_InteractiveResource--exactMatch--http%3A//purl.org/dc/terms/InteractiveResource",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_InteractiveResource"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_InteractiveResource"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/InteractiveResource"
@@ -3566,9 +3566,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--exactMatch--http%3A//schema.org/Periodical",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--exactMatch--http%3A//schema.org/Periodical",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal"
       },
       "to": {
         "uri": "http://schema.org/Periodical"
@@ -3584,9 +3584,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--exactMatch--http%3A//www.wikidata.org/entity/Q737498",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--exactMatch--http%3A//www.wikidata.org/entity/Q737498",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q737498"
@@ -3602,9 +3602,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3620,9 +3620,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--narrowMatch--http%3A//www.wikidata.org/entity/Q5633421",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal--mapping--ResourceTypeGeneral_Journal--narrowMatch--http%3A//www.wikidata.org/entity/Q5633421",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Journal"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Journal"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q5633421"
@@ -3638,9 +3638,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--exactMatch--http%3A//schema.org/ScholarlyArticle",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--exactMatch--http%3A//schema.org/ScholarlyArticle",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle"
       },
       "to": {
         "uri": "http://schema.org/ScholarlyArticle"
@@ -3656,9 +3656,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--exactMatch--http%3A//www.wikidata.org/entity/Q18918145",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--exactMatch--http%3A//www.wikidata.org/entity/Q18918145",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q18918145"
@@ -3674,9 +3674,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--exactMatch--http%3A//www.wikidata.org/entity/Q13442814",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--exactMatch--http%3A//www.wikidata.org/entity/Q13442814",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q13442814"
@@ -3692,9 +3692,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3710,9 +3710,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--broadMatch--http%3A//www.wikidata.org/entity/Q191067",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--broadMatch--http%3A//www.wikidata.org/entity/Q191067",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q191067"
@@ -3728,9 +3728,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/BibliographicResource"
@@ -3746,9 +3746,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--relatedMatch--http%3A//schema.org/PublicationIssue",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle--mapping--ResourceTypeGeneral_JournalArticle--relatedMatch--http%3A//schema.org/PublicationIssue",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_JournalArticle"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_JournalArticle"
       },
       "to": {
         "uri": "http://schema.org/PublicationIssue"
@@ -3764,9 +3764,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--exactMatch--http%3A//schema.org/3DModel",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--exactMatch--http%3A//schema.org/3DModel",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://schema.org/3DModel"
@@ -3782,9 +3782,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--exactMatch--http%3A//www.wikidata.org/entity/Q1979154",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--exactMatch--http%3A//www.wikidata.org/entity/Q1979154",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1979154"
@@ -3800,9 +3800,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--exactMatch--http%3A//www.wikidata.org/entity/Q2623243",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--exactMatch--http%3A//www.wikidata.org/entity/Q2623243",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q2623243"
@@ -3818,9 +3818,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q193946",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q193946",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q193946"
@@ -3836,9 +3836,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q1122506",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q1122506",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1122506"
@@ -3854,9 +3854,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q11784425",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q11784425",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q11784425"
@@ -3872,9 +3872,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q486902",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q486902",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q486902"
@@ -3890,9 +3890,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q3284399",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q3284399",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q3284399"
@@ -3908,9 +3908,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q1172480",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model--mapping--ResourceTypeGeneral_Model--narrowMatch--http%3A//www.wikidata.org/entity/Q1172480",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Model"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Model"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1172480"
@@ -3926,9 +3926,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_OutputManagementPlan--mapping--ResourceTypeGeneral_OutputManagementPlan--exactMatch--http%3A//www.wikidata.org/entity/Q17085509",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_OutputManagementPlan--mapping--ResourceTypeGeneral_OutputManagementPlan--exactMatch--http%3A//www.wikidata.org/entity/Q17085509",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_OutputManagementPlan"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_OutputManagementPlan"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q17085509"
@@ -3944,9 +3944,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_OutputManagementPlan--mapping--ResourceTypeGeneral_OutputManagementPlan--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_OutputManagementPlan--mapping--ResourceTypeGeneral_OutputManagementPlan--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_OutputManagementPlan"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_OutputManagementPlan"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -3962,9 +3962,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--exactMatch--http%3A//schema.org/Review",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--exactMatch--http%3A//schema.org/Review",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview"
       },
       "to": {
         "uri": "http://schema.org/Review"
@@ -3980,9 +3980,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--exactMatch--http%3A//www.wikidata.org/entity/Q265158",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--exactMatch--http%3A//www.wikidata.org/entity/Q265158",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q265158"
@@ -3998,9 +3998,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -4016,9 +4016,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview--mapping--ResourceTypeGeneral_PeerReview--broadMatch--http%3A//purl.org/dc/terms/BibliographicResource",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PeerReview"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PeerReview"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/BibliographicResource"
@@ -4034,9 +4034,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PhysicalObject--mapping--ResourceTypeGeneral_PhysicalObject--exactMatch--http%3A//purl.org/dc/terms/PhysicalObject",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PhysicalObject--mapping--ResourceTypeGeneral_PhysicalObject--exactMatch--http%3A//purl.org/dc/terms/PhysicalObject",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PhysicalObject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PhysicalObject"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/PhysicalObject"
@@ -4052,9 +4052,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PhysicalObject--mapping--ResourceTypeGeneral_PhysicalObject--exactMatch--http%3A//www.wikidata.org/entity/Q223557",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PhysicalObject--mapping--ResourceTypeGeneral_PhysicalObject--exactMatch--http%3A//www.wikidata.org/entity/Q223557",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_PhysicalObject"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_PhysicalObject"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q223557"
@@ -4070,9 +4070,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Preprint--mapping--ResourceTypeGeneral_Preprint--exactMatch--http%3A//www.wikidata.org/entity/Q580922",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Preprint--mapping--ResourceTypeGeneral_Preprint--exactMatch--http%3A//www.wikidata.org/entity/Q580922",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Preprint"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Preprint"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q580922"
@@ -4088,9 +4088,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Preprint--mapping--ResourceTypeGeneral_Preprint--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Preprint--mapping--ResourceTypeGeneral_Preprint--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Preprint"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Preprint"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -4106,9 +4106,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Preprint--mapping--ResourceTypeGeneral_Preprint--closeMatch--http%3A//schema.org/Article",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Preprint--mapping--ResourceTypeGeneral_Preprint--closeMatch--http%3A//schema.org/Article",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Preprint"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Preprint"
       },
       "to": {
         "uri": "http://schema.org/Article"
@@ -4124,9 +4124,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--exactMatch--http%3A//schema.org/project",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--exactMatch--http%3A//schema.org/project",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project"
       },
       "to": {
         "uri": "http://schema.org/project"
@@ -4142,9 +4142,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--exactMatch--http%3A//www.wikidata.org/entity/Q170584",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--exactMatch--http%3A//www.wikidata.org/entity/Q170584",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q170584"
@@ -4160,9 +4160,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--narrowMatch--http%3A//schema.org/ResearchProject",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--narrowMatch--http%3A//schema.org/ResearchProject",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project"
       },
       "to": {
         "uri": "http://schema.org/ResearchProject"
@@ -4178,9 +4178,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--narrowMatch--http%3A//www.wikidata.org/entity/Q1298668",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project--mapping--ResourceTypeGeneral_Project--narrowMatch--http%3A//www.wikidata.org/entity/Q1298668",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Project"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Project"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q1298668"
@@ -4196,9 +4196,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Report--mapping--ResourceTypeGeneral_Report--exactMatch--http%3A//schema.org/Report",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Report--mapping--ResourceTypeGeneral_Report--exactMatch--http%3A//schema.org/Report",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Report"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Report"
       },
       "to": {
         "uri": "http://schema.org/Report"
@@ -4214,9 +4214,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Report--mapping--ResourceTypeGeneral_Report--exactMatch--http%3A//www.wikidata.org/entity/Q10870555",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Report--mapping--ResourceTypeGeneral_Report--exactMatch--http%3A//www.wikidata.org/entity/Q10870555",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Report"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Report"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q10870555"
@@ -4232,9 +4232,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Report--mapping--ResourceTypeGeneral_Report--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Report--mapping--ResourceTypeGeneral_Report--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Report"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Report"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -4250,9 +4250,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Service--mapping--ResourceTypeGeneral_Service--exactMatch--http%3A//schema.org/Service",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Service--mapping--ResourceTypeGeneral_Service--exactMatch--http%3A//schema.org/Service",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Service"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Service"
       },
       "to": {
         "uri": "http://schema.org/Service"
@@ -4268,9 +4268,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Service--mapping--ResourceTypeGeneral_Service--exactMatch--http%3A//purl.org/dc/terms/Service",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Service--mapping--ResourceTypeGeneral_Service--exactMatch--http%3A//purl.org/dc/terms/Service",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Service"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Service"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Service"
@@ -4286,9 +4286,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Service--mapping--ResourceTypeGeneral_Service--exactMatch--http%3A//www.wikidata.org/entity/Q7406919",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Service--mapping--ResourceTypeGeneral_Service--exactMatch--http%3A//www.wikidata.org/entity/Q7406919",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Service"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Service"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q7406919"
@@ -4304,9 +4304,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Software--mapping--ResourceTypeGeneral_Software--exactMatch--http%3A//schema.org/SoftwareApplication",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Software--mapping--ResourceTypeGeneral_Software--exactMatch--http%3A//schema.org/SoftwareApplication",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Software"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Software"
       },
       "to": {
         "uri": "http://schema.org/SoftwareApplication"
@@ -4322,9 +4322,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Software--mapping--ResourceTypeGeneral_Software--exactMatch--http%3A//purl.org/dc/terms/Software",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Software--mapping--ResourceTypeGeneral_Software--exactMatch--http%3A//purl.org/dc/terms/Software",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Software"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Software"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Software"
@@ -4340,9 +4340,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Software--mapping--ResourceTypeGeneral_Software--exactMatch--http%3A//www.wikidata.org/entity/Q7397",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Software--mapping--ResourceTypeGeneral_Software--exactMatch--http%3A//www.wikidata.org/entity/Q7397",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Software"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Software"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q7397"
@@ -4358,9 +4358,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Sound--mapping--ResourceTypeGeneral_Sound--exactMatch--http%3A//schema.org/AudioObject",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Sound--mapping--ResourceTypeGeneral_Sound--exactMatch--http%3A//schema.org/AudioObject",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Sound"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Sound"
       },
       "to": {
         "uri": "http://schema.org/AudioObject"
@@ -4376,9 +4376,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Sound--mapping--ResourceTypeGeneral_Sound--exactMatch--http%3A//purl.org/dc/terms/Sound",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Sound--mapping--ResourceTypeGeneral_Sound--exactMatch--http%3A//purl.org/dc/terms/Sound",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Sound"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Sound"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Sound"
@@ -4394,9 +4394,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Sound--mapping--ResourceTypeGeneral_Sound--exactMatch--http%3A//www.wikidata.org/entity/Q108676767",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Sound--mapping--ResourceTypeGeneral_Sound--exactMatch--http%3A//www.wikidata.org/entity/Q108676767",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Sound"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Sound"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q108676767"
@@ -4412,9 +4412,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Standard--mapping--ResourceTypeGeneral_Standard--exactMatch--http%3A//www.wikidata.org/entity/Q41623316",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Standard--mapping--ResourceTypeGeneral_Standard--exactMatch--http%3A//www.wikidata.org/entity/Q41623316",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Standard"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Standard"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q41623316"
@@ -4430,9 +4430,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Standard--mapping--ResourceTypeGeneral_Standard--exactMatch--http%3A//schema.org/DefinedTermSet",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Standard--mapping--ResourceTypeGeneral_Standard--exactMatch--http%3A//schema.org/DefinedTermSet",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Standard"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Standard"
       },
       "to": {
         "uri": "http://schema.org/DefinedTermSet"
@@ -4448,9 +4448,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Standard--mapping--ResourceTypeGeneral_Standard--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Standard--mapping--ResourceTypeGeneral_Standard--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Standard"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Standard"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -4466,9 +4466,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_StudyRegistration--mapping--ResourceTypeGeneral_StudyRegistration--closeMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_StudyRegistration--mapping--ResourceTypeGeneral_StudyRegistration--closeMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_StudyRegistration"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_StudyRegistration"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -4484,9 +4484,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Text--mapping--ResourceTypeGeneral_Text--exactMatch--http%3A//www.wikidata.org/entity/Q234460",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Text--mapping--ResourceTypeGeneral_Text--exactMatch--http%3A//www.wikidata.org/entity/Q234460",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Text"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Text"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q234460"
@@ -4502,9 +4502,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Text--mapping--ResourceTypeGeneral_Text--exactMatch--http%3A//purl.org/dc/terms/Text",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Text--mapping--ResourceTypeGeneral_Text--exactMatch--http%3A//purl.org/dc/terms/Text",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Text"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Text"
       },
       "to": {
         "uri": "http://purl.org/dc/terms/Text"
@@ -4520,9 +4520,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Text--mapping--ResourceTypeGeneral_Text--exactMatch--http%3A//schema.org/TextObject",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Text--mapping--ResourceTypeGeneral_Text--exactMatch--http%3A//schema.org/TextObject",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Text"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Text"
       },
       "to": {
         "uri": "http://schema.org/TextObject"
@@ -4538,9 +4538,9 @@
       "created": "2025-07-24T00:00:00Z"
     },
     {
-      "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Workflow--mapping--ResourceTypeGeneral_Workflow--exactMatch--http%3A//www.wikidata.org/entity/Q627335",
+      "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Workflow--mapping--ResourceTypeGeneral_Workflow--exactMatch--http%3A//www.wikidata.org/entity/Q627335",
       "from": {
-        "uri": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#ResourceTypeGeneral_Workflow"
+        "uri": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#ResourceTypeGeneral_Workflow"
       },
       "to": {
         "uri": "http://www.wikidata.org/entity/Q627335"

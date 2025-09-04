@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld",
+    "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json",
     {
       "datacite": "http://datacite.org/schema/kernel-4#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
