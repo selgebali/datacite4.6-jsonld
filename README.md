@@ -3,13 +3,22 @@ DataCite 4.6 JSON-LD &amp; SKOS crosswalks JSON-LD context and JSON-Schema (“r
 # DataCite 4.6 JSON-LD & SKOS Crosswalks
 The DataCite Metadata Schema is widely used to register DOIs and describe research datasets and other research objects.  To make DataCite metadata more interoperable, the SKOS crosswalk provided in SKOScrosswalk.jsonld links each DataCite element to equivalent or related terms in Schema.org, DCAT, Dublin Core Terms (DCTERMS) and Wikidata.  Each concept in the graph contains a preferred label and definition and may specify skos:exactMatch, skos:closeMatch, skos:broadMatch, skos:narrowMatch or skos:relatedMatch to indicate similarity with terms in external vocabularies.
 
-This repository provides:
+# This repository provides:
 
-1. **`main_context.jsonld`** – A JSON-LD 1.1 context exposing every element, attribute, simpleType, complexType and controlled‐vocabulary list from the DataCite Kernel 4.6 XSD.  
-2. **`rules.json`** – A companion JSON-Schema that references `manual_metadata.jsonld` as its `$id`/`$schema`, and defines required properties, min/max occurrences, patterns, etc.
-3. **`docs/`** – A GitHub Pages site hosting `manual_metadata.jsonld` and `rules.json` under stable URLs:
-   - `https://selgebali.github.io/datacite4.6-jsonld/manual_metadata.jsonld`  
-   - `https://selgebali.github.io/datacite4.6-jsonld/rules.json`
-4. **`skos-mappings/`** – SKOS concept schemes (DataCite 4.6) and JSKOS crosswalks to:
+Datacite4.6-profile.json (Bundled profile with rules, vocabularies and context) This can be used for:
+
+## Structure validation
+- Required field checking
+- Controlled vocabulary validation
+- Basic type checking
+
+## Semantic Usage:
+- Linked Data integration
+- Schema.org alignment
+- DCAT compatibility
+
+
+##  SKOS concept schemes (DataCite 4.6) and JSKOS crosswalks to:
    - Schema.org
    - W3C DCAT
+----

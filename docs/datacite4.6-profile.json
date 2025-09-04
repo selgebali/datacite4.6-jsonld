@@ -18,19 +18,13 @@
         "additionalProperties": false
       }
     },
-    "alternateIdentifiers": {
-      "type": "array",
-      "description": "Alternative identifiers for the resource.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "alternateIdentifier": { "type": "string", "description": "The alternate identifier value." },
-          "alternateIdentifierType": { "type": "string", "description": "Type of the alternate identifier." }
-        },
-        "required": ["alternateIdentifier", "alternateIdentifierType"],
-        "additionalProperties": false
-      }
+
+    "doi": {
+      "type": "string",
+      "description": "The DOI assigned to the resource.",
+      "pattern": "^10\\.[0-9]{4,}/[-._;()/:a-zA-Z0-9]+$"
     },
+
     "creators": {
       "type": "array",
       "minItems": 1,
@@ -54,6 +48,12 @@
                 "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." }
               },
               "required": ["name"],
+              "allOf": [
+                {
+                  "if": { "required": ["affiliationIdentifier"] },
+                  "then": { "required": ["affiliationIdentifierScheme"] }
+                }
+              ],
               "additionalProperties": false
             }
           },
@@ -63,7 +63,7 @@
             "items": {
               "type": "object",
               "properties": {
-                "nameIdentifier": { "type": "string", "description": "The identifier." },
+                "nameIdentifier": { "type": "string", "description": "The identifier.", "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$" },
                 "nameIdentifierScheme": { "type": "string", "description": "The identifier scheme (e.g. ORCID, ISNI)." },
                 "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." }
               },
@@ -102,6 +102,12 @@
         "publisherIdentifierScheme": { "type": "string", "description": "Scheme of the publisher identifier (e.g. 'ROR')." }
       },
       "required": ["name"],
+      "allOf": [
+        {
+          "if": { "required": ["publisherIdentifier"] },
+          "then": { "required": ["publisherIdentifierScheme"] }
+        }
+      ],
       "additionalProperties": false
     },
     "container": {
@@ -158,6 +164,12 @@
                 "schemeUri": { "type": "string", "format": "uri" }
               },
               "required": ["name"],
+              "allOf": [
+                {
+                  "if": { "required": ["affiliationIdentifier"] },
+                  "then": { "required": ["affiliationIdentifierScheme"] }
+                }
+              ],
               "additionalProperties": false
             }
           },
@@ -166,7 +178,7 @@
             "items": {
               "type": "object",
               "properties": {
-                "nameIdentifier": { "type": "string" },
+                "nameIdentifier": { "type": "string", "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$" },
                 "nameIdentifierScheme": { "type": "string" },
                 "schemeUri": { "type": "string", "format": "uri" }
               },
@@ -414,11 +426,17 @@
           "awardTitle": { "type": "string" }
         },
         "required": ["funderName"],
+        "allOf": [
+          {
+            "if": { "required": ["funderIdentifier"] },
+            "then": { "required": ["funderIdentifierType"] }
+          }
+        ],
         "additionalProperties": false
       }
     }
   },
-  "required": ["creators", "titles", "publisher", "publicationYear", "types"],
+  "required": ["doi", "creators", "titles", "publisher", "publicationYear", "types"],
   "additionalProperties": false,
   "$defs": {
     "resourceTypeGeneral": {
@@ -681,7 +699,7 @@
   "profile": {
     "@context": {
       "@version": 1.1,
-      "datacite": "https://selgebali.github.io/datacite4.6-jsonld/main_context.jsonld#",
+      "datacite": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#",
       "schema": "http://schema.org/",
       "dcat": "http://www.w3.org/ns/dcat#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -689,9 +707,8 @@
       "identifiers": { "@id": "datacite:alternateIdentifiers", "@container": "@list" },
       "identifier": { "@id": "datacite:alternateIdentifier", "@type": "xsd:string" },
       "identifierType": { "@id": "datacite:alternateIdentifierType", "@type": "xsd:string" },
-      "alternateIdentifiers": { "@id": "datacite:alternateIdentifiers", "@container": "@list" },
-      "alternateIdentifier": { "@id": "datacite:alternateIdentifier", "@type": "xsd:string" },
-      "alternateIdentifierType": { "@id": "datacite:alternateIdentifierType", "@type": "xsd:string" },
+
+      "doi": { "@id": "datacite:identifier", "@type": "@id" },
       "creators": { "@id": "datacite:creators", "@container": "@list" },
       "name": { "@id": "datacite:creatorName", "@type": "xsd:string" },
       "nameType": { "@id": "datacite:nameType", "@type": "xsd:string" },
