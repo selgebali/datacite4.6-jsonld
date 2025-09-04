@@ -12,7 +12,8 @@
     },
     "identifierType": {
       "type": "string",
-      "description": "The scheme used for the identifier (e.g. DOI)."
+      "enum": ["DOI"],
+      "description": "The type of Identifier. DataCite only allows DOI."
     },
     "creators": {
       "type": "array",
@@ -31,13 +32,29 @@
           "nameIdentifier": {
             "type": "array",
             "items": {
-              "type": "string",
-              "format": "uri"
+              "type": "object",
+              "properties": {
+                "nameIdentifier": { "type": "string" },
+                "nameIdentifierScheme": { "type": "string" },
+                "schemeUri": { "type": "string", "format": "uri" }
+              },
+              "required": ["nameIdentifier", "nameIdentifierScheme"],
+              "additionalProperties": false
             }
           },
           "affiliation": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "affiliationIdentifier": { "type": "string" },
+                "affiliationIdentifierScheme": { "type": "string" },
+                "schemeUri": { "type": "string", "format": "uri" }
+              },
+              "required": ["name"],
+              "additionalProperties": false
+            }
           }
         },
         "required": ["creatorName"],
@@ -133,11 +150,30 @@
           "familyName": { "type": "string" },
           "nameIdentifier": {
             "type": "array",
-            "items": { "type": "string", "format": "uri" }
+            "items": {
+              "type": "object",
+              "properties": {
+                "nameIdentifier": { "type": "string" },
+                "nameIdentifierScheme": { "type": "string" },
+                "schemeUri": { "type": "string", "format": "uri" }
+              },
+              "required": ["nameIdentifier", "nameIdentifierScheme"],
+              "additionalProperties": false
+            }
           },
           "affiliation": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "affiliationIdentifier": { "type": "string" },
+                "affiliationIdentifierScheme": { "type": "string" },
+                "schemeUri": { "type": "string", "format": "uri" }
+              },
+              "required": ["name"],
+              "additionalProperties": false
+            }
           },
           "contributorType": { "$ref": "#/$defs/contributorType/enumSchema" }
         },
@@ -232,7 +268,8 @@
           "rightsUri": { "type": "string", "format": "uri", "description": "URI of the rights statement or license." },
           "rightsIdentifier": { "type": "string", "description": "Identifier for the rights statement." },
           "rightsIdentifierScheme": { "type": "string", "description": "Scheme of the rights identifier." },
-          "schemeUri": { "type": "string", "format": "uri", "description": "URI of the rights identifier scheme." }
+          "schemeUri": { "type": "string", "format": "uri", "description": "URI of the rights identifier scheme." },
+          "lang": { "type": "string", "description": "IETF BCP 47 language code for the rights statement." }
         },
         "required": ["rights"],
         "additionalProperties": false
@@ -265,8 +302,8 @@
           "geoLocationPoint": {
             "type": "object",
             "properties": {
-              "pointLongitude": { "type": "number" },
-              "pointLatitude": { "type": "number" }
+              "pointLongitude": { "type": "number", "minimum": -180, "maximum": 180 },
+              "pointLatitude": { "type": "number", "minimum": -90, "maximum": 90 }
             },
             "required": ["pointLongitude", "pointLatitude"],
             "additionalProperties": false
@@ -274,10 +311,10 @@
           "geoLocationBox": {
             "type": "object",
             "properties": {
-              "westBoundLongitude": { "type": "number" },
-              "eastBoundLongitude": { "type": "number" },
-              "southBoundLatitude": { "type": "number" },
-              "northBoundLatitude": { "type": "number" }
+              "westBoundLongitude": { "type": "number", "minimum": -180, "maximum": 180 },
+              "eastBoundLongitude": { "type": "number", "minimum": -180, "maximum": 180 },
+              "southBoundLatitude": { "type": "number", "minimum": -90, "maximum": 90 },
+              "northBoundLatitude": { "type": "number", "minimum": -90, "maximum": 90 }
             },
             "required": ["westBoundLongitude", "eastBoundLongitude", "southBoundLatitude", "northBoundLatitude"],
             "additionalProperties": false
@@ -295,6 +332,15 @@
                   },
                   "required": ["pointLongitude", "pointLatitude"],
                   "additionalProperties": false
+                },
+                "inPolygonPoint": {
+                  "type": "object",
+                  "properties": {
+                    "pointLongitude": { "type": "number" },
+                    "pointLatitude": { "type": "number" }
+                  },
+                    "required": ["pointLongitude", "pointLatitude"],
+                  "additionalProperties": false
                 }
               },
               "required": ["polygonPoint"],
@@ -302,6 +348,52 @@
             }
           }
         },
+        "additionalProperties": false
+      }
+    },
+    "relatedItems": {
+      "type": "array",
+      "description": "Information about a resource related to the one being registered.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "relatedItemType": { "$ref": "#/$defs/resourceTypeGeneral/enumSchema" },
+          "relationType": { "$ref": "#/$defs/relationType/enumSchema" },
+          "relatedItemIdentifier": {
+            "type": "object",
+            "properties": {
+              "value": { "type": "string" },
+              "relatedItemIdentifierType": { "$ref": "#/$defs/relatedIdentifierType/enumSchema" },
+              "relatedMetadataScheme": { "type": "string" },
+              "schemeUri": { "type": "string", "format": "uri" },
+              "schemeType": { "type": "string" }
+            },
+            "required": ["value", "relatedItemIdentifierType"],
+            "additionalProperties": false
+          },
+          "title": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "titleType": { "$ref": "#/$defs/titleType/enumSchema" },
+                "lang": { "type": "string" }
+              },
+              "required": ["title"],
+              "additionalProperties": false
+            }
+          },
+          "publicationYear": { "type": "string", "pattern": "^[0-9]{4}$" },
+          "volume": { "type": "string" },
+          "issue": { "type": "string" },
+          "number": { "type": "string" },
+          "firstPage": { "type": "string" },
+          "lastPage": { "type": "string" },
+          "publisher": { "type": "string" },
+          "edition": { "type": "string" }
+        },
+        "required": ["relatedItemType", "relationType"],
         "additionalProperties": false
       }
     }
