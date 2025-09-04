@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite_api_profile.json",
+  "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json",
   "title": "DataCite Metadata Schema v4.6 – REST API profile (bundled)",
   "description": "Self‑contained JSON Schema and JSON‑LD context for validating and semantically describing DataCite 4.6 metadata as submitted to the DataCite REST API.  This profile reflects the property names and object structures used by the API and inlines all controlled vocabularies.",
   "type": "object",
