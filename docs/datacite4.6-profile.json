@@ -42,6 +42,18 @@
       "type": "array",
       "minItems": 1,
       "description": "Persons or organizations responsible for creating the resource.",
+      "examples": [
+        [
+          {
+            "name": "Doe, Jane",
+            "nameType": "Personal",
+            "nameIdentifiers": [
+              { "nameIdentifier": "https://orcid.org/0000-0002-1825-0097", "nameIdentifierScheme": "ORCID" }
+            ],
+            "affiliation": [ { "name": "Example University" } ]
+          }
+        ]
+      ],
       "items": {
         "type": "object",
         "properties": {
@@ -65,6 +77,14 @@
                 {
                   "if": { "required": ["affiliationIdentifier"] },
                   "then": { "required": ["affiliationIdentifierScheme"] }
+                },
+                {
+                  "if": { "properties": { "affiliationIdentifierScheme": { "const": "ROR" } }, "required": ["affiliationIdentifierScheme"] },
+                  "then": {
+                    "properties": {
+                      "affiliationIdentifier": { "type": "string", "format": "uri" }
+                    }
+                  }
                 }
               ],
               "additionalProperties": false
@@ -76,17 +96,48 @@
             "items": {
               "type": "object",
               "properties": {
-                "nameIdentifier": { "type": "string", "description": "The identifier.", "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$" },
+                "nameIdentifier": { "type": "string", "description": "The identifier." },
                 "nameIdentifierScheme": { "type": "string", "description": "The identifier scheme (e.g. ORCID, ISNI)." },
                 "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." }
               },
               "required": ["nameIdentifier", "nameIdentifierScheme"],
-              "additionalProperties": false
+              "additionalProperties": false,
+              "allOf": [
+                {
+                  "if": { "properties": { "nameIdentifierScheme": { "const": "ORCID" } }, "required": ["nameIdentifierScheme"] },
+                  "then": {
+                    "properties": {
+                      "nameIdentifier": {
+                        "anyOf": [
+                          { "type": "string", "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$" },
+                          { "type": "string", "format": "uri" }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": { "properties": { "nameIdentifierScheme": { "const": "ROR" } }, "required": ["nameIdentifierScheme"] },
+                  "then": {
+                    "properties": {
+                      "nameIdentifier": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              ]
             }
           }
         },
         "required": ["name"],
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": { "properties": { "nameType": { "const": "Organizational" } }, "required": ["nameType"] },
+            "then": {
+              "not": { "anyOf": [ { "required": ["givenName"] }, { "required": ["familyName"] } ] }
+            }
+          }
+        ]
       }
     },
     "titles": {
@@ -119,6 +170,14 @@
         {
           "if": { "required": ["publisherIdentifier"] },
           "then": { "required": ["publisherIdentifierScheme"] }
+        },
+        {
+          "if": { "properties": { "publisherIdentifierScheme": { "const": "ROR" } }, "required": ["publisherIdentifierScheme"] },
+          "then": {
+            "properties": {
+              "publisherIdentifier": { "type": "string", "format": "uri" }
+            }
+          }
         }
       ],
       "additionalProperties": false
@@ -135,10 +194,7 @@
       "required": ["type", "title"],
       "additionalProperties": false
     },
-    "publicationYear": {
-      "type": ["integer", "string"],
-      "description": "Year when the resource was or will be made publicly available."
-    },
+    "publicationYear": { "type": "string", "pattern": "^\\d{4}$", "description": "Year when the resource was or will be made publicly available (YYYY)." },
     "subjects": {
       "type": "array",
       "description": "Subject keywords or classification codes describing the resource.",
@@ -158,6 +214,19 @@
     "contributors": {
       "type": "array",
       "description": "Persons or organizations that contributed to the resource in addition to the creators.",
+      "examples": [
+        [
+          {
+            "name": "Roe, Richard",
+            "nameType": "Personal",
+            "contributorType": "DataCurator",
+            "nameIdentifiers": [
+              { "nameIdentifier": "https://orcid.org/0000-0001-2345-6789", "nameIdentifierScheme": "ORCID" }
+            ],
+            "affiliation": [ { "name": "Example Institute", "affiliationIdentifier": "https://ror.org/05dxps055", "affiliationIdentifierScheme": "ROR", "schemeUri": "https://ror.org" } ]
+          }
+        ]
+      ],
       "items": {
         "type": "object",
         "properties": {
@@ -181,6 +250,14 @@
                 {
                   "if": { "required": ["affiliationIdentifier"] },
                   "then": { "required": ["affiliationIdentifierScheme"] }
+                },
+                {
+                  "if": { "properties": { "affiliationIdentifierScheme": { "const": "ROR" } }, "required": ["affiliationIdentifierScheme"] },
+                  "then": {
+                    "properties": {
+                      "affiliationIdentifier": { "type": "string", "format": "uri" }
+                    }
+                  }
                 }
               ],
               "additionalProperties": false
@@ -191,17 +268,48 @@
             "items": {
               "type": "object",
               "properties": {
-                "nameIdentifier": { "type": "string", "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$" },
+                "nameIdentifier": { "type": "string", "description": "The identifier." },
                 "nameIdentifierScheme": { "type": "string" },
                 "schemeUri": { "type": "string", "format": "uri" }
               },
               "required": ["nameIdentifier", "nameIdentifierScheme"],
-              "additionalProperties": false
+              "additionalProperties": false,
+              "allOf": [
+                {
+                  "if": { "properties": { "nameIdentifierScheme": { "const": "ORCID" } }, "required": ["nameIdentifierScheme"] },
+                  "then": {
+                    "properties": {
+                      "nameIdentifier": {
+                        "anyOf": [
+                          { "type": "string", "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$" },
+                          { "type": "string", "format": "uri" }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": { "properties": { "nameIdentifierScheme": { "const": "ROR" } }, "required": ["nameIdentifierScheme"] },
+                  "then": {
+                    "properties": {
+                      "nameIdentifier": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              ]
             }
           }
         },
         "required": ["name", "contributorType"],
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": { "properties": { "nameType": { "const": "Organizational" } }, "required": ["nameType"] },
+            "then": {
+              "not": { "anyOf": [ { "required": ["givenName"] }, { "required": ["familyName"] } ] }
+            }
+          }
+        ]
       }
     },
     "dates": {
@@ -225,7 +333,7 @@
       "properties": {
         "resourceType": { "type": "string", "description": "Free‑text description of the resource type." },
         "resourceTypeGeneral": { "$ref": "#/$defs/resourceTypeGeneral/enumSchema" },
-        "schemaOrg": { "type": "string" },
+        "schemaOrg": { "type": "string", "format": "uri" },
         "bibtex": { "type": "string" },
         "citeproc": { "type": "string" },
         "ris": { "type": "string" }
@@ -236,6 +344,20 @@
     "relatedIdentifiers": {
       "type": "array",
       "description": "Relations to other identifiers such as URLs, DOIs or ISNIs.",
+      "examples": [
+        [
+          {
+            "relatedIdentifier": "RRID:AB_1234567",
+            "relatedIdentifierType": "RRID",
+            "relationType": "IsReferencedBy"
+          },
+          {
+            "relatedIdentifier": "CSTR:12345.abcde.fghi",
+            "relatedIdentifierType": "CSTR",
+            "relationType": "IsReferencedBy"
+          }
+        ]
+      ],
       "items": {
         "type": "object",
         "properties": {
@@ -310,7 +432,7 @@
               "additionalProperties": false
             }
           },
-          "publicationYear": { "type": ["integer", "string"] },
+          "publicationYear": { "type": "string", "pattern": "^\\d{4}$" },
           "volume": { "type": "string" },
           "issue": { "type": "string" },
           "number": { "type": "string" },
@@ -446,13 +568,17 @@
                       "oneOf": [
                         { "type": "number" },
                         { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
-                      ]
+                      ],
+                      "minimum": -180,
+                      "maximum": 180
                     },
                     "pointLatitude": {
                       "oneOf": [
                         { "type": "number" },
                         { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
-                      ]
+                      ],
+                      "minimum": -90,
+                      "maximum": 90
                     }
                   },
                   "required": ["pointLongitude", "pointLatitude"],
@@ -465,13 +591,17 @@
                       "oneOf": [
                         { "type": "number" },
                         { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
-                      ]
+                      ],
+                      "minimum": -180,
+                      "maximum": 180
                     },
                     "pointLatitude": {
                       "oneOf": [
                         { "type": "number" },
                         { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
-                      ]
+                      ],
+                      "minimum": -90,
+                      "maximum": 90
                     }
                   },
                   "required": ["pointLongitude", "pointLatitude"],
@@ -489,6 +619,26 @@
     "fundingReferences": {
       "type": "array",
       "description": "Information about financial support for the resource.",
+      "examples": [
+        [
+          {
+            "funderName": "National Science Foundation",
+            "funderIdentifier": "https://doi.org/10.13039/100000001",
+            "funderIdentifierType": "Crossref Funder ID",
+            "awardNumber": "ABC-123456",
+            "awardUri": "https://example.org/awards/ABC-123456",
+            "awardTitle": "Open Data Infrastructure"
+          },
+          {
+            "funderName": "Example Research Council",
+            "funderIdentifier": "https://ror.org/05dxps055",
+            "funderIdentifierType": "ROR",
+            "awardNumber": "ERC-987654",
+            "awardUri": "https://example.org/awards/ERC-987654",
+            "awardTitle": "Graph-based Metadata Interoperability"
+          }
+        ]
+      ],
       "items": {
         "type": "object",
         "properties": {
@@ -855,10 +1005,44 @@
       "volume": { "@id": "datacite:volume", "@type": "xsd:string" },
       "issue": { "@id": "datacite:issue", "@type": "xsd:string" },
       "number": { "@id": "datacite:number", "@type": "xsd:string" },
-      "numberType": { "@id": "datacite:number", "@type": "xsd:string" },
+      "numberType": { "@id": "datacite:numberType", "@type": "xsd:string" },
       "firstPage": { "@id": "datacite:firstPage", "@type": "xsd:string" },
       "lastPage": { "@id": "datacite:lastPage", "@type": "xsd:string" },
       "edition": { "@id": "datacite:edition", "@type": "xsd:string" }
     }
+  },
+  "responseProfile": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-response.json",
+    "title": "DataCite REST API Response (JSON:API envelope)",
+    "description": "Companion schema to validate DataCite REST API responses that use a JSON:API envelope. This schema validates the envelope and allows additional, read-only attributes returned by the API. Use the submit/bundled profile (this file's root schema) to validate client-submitted payloads.",
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "The DOI, formatted as prefix/suffix." },
+          "type": { "type": "string", "const": "dois" },
+          "attributes": {
+            "type": "object",
+            "description": "The DataCite metadata attributes. In API responses this includes read-only and analytics fields (e.g., url, state, viewCount, downloadsOverTime, created, registered, updated, etc.). These are intentionally not constrained here to keep the response schema in sync with server-side additions.",
+            "additionalProperties": true
+          },
+          "relationships": { "type": "object", "additionalProperties": true },
+          "links": { "type": "object", "additionalProperties": true }
+        },
+        "required": ["id", "type", "attributes"],
+        "additionalProperties": true
+      },
+      "included": { "type": "array", "items": { "type": "object" } },
+      "links": { "type": "object", "additionalProperties": true },
+      "meta": { "type": "object", "additionalProperties": true },
+      "errors": { "type": "array", "items": { "type": "object" } }
+    },
+    "oneOf": [
+      { "required": ["data"] },
+      { "required": ["errors"] }
+    ],
+    "additionalProperties": false
   }
 }
