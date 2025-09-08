@@ -1,51 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DataCite Kernel 4.6 Documentation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DataCite 4.6 — JSON‑LD Profile, Schema &amp; Crosswalks</title>
+  <meta name="description" content="DataCite 4.6 JSON Schema & JSON‑LD context with SKOS/JSKOS crosswalks. Beginner‑friendly docs, quick start, and links to the live files." />
+  <style>
+    :root{
+      --bg: #0b0d10;
+      --fg: #e6edf3;
+      --muted:#9aa7b4;
+      --card:#11161b;
+      --accent:#4cc2ff;
+      --accent-2:#8ae6a2;
+      --border:#213040;
+      --code:#0f1419;
+      --link:#6cc0ff;
+      --shadow: 0 6px 18px rgba(0,0,0,.25);
+      --radius:12px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7fbff;
+        --fg:#0b1220;
+        --muted:#4b5b6b;
+        --card:#ffffff;
+        --accent:#0066ff;
+        --accent-2:#1a9b5f;
+        --border:#d9e3ee;
+        --code:#f3f6fa;
+        --link:#0056cc;
+        --shadow: 0 6px 18px rgba(0,0,0,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--fg); font-family:var(--sans); line-height:1.55;
+    }
+    a{ color:var(--link); text-decoration:none}
+    a:hover{ text-decoration:underline}
+    header{
+      padding:30px 18px 10px;
+    }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 18px}
+    .hero{
+      background: linear-gradient(180deg, rgba(76,194,255,.08), transparent 65%);
+      border-bottom:1px solid var(--border);
+      padding:16px 0 28px;
+    }
+    .hero h1{ margin:10px 0 6px; font-size: clamp(28px, 4vw, 40px); letter-spacing:.2px}
+    .tagline{ color:var(--muted); max-width:820px }
+    .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 4px}
+    .btn{
+      display:inline-block; padding:10px 14px; border:1px solid var(--border); border-radius:10px;
+      background: var(--card); color:var(--fg); box-shadow: var(--shadow); font-weight:600;
+    }
+    .btn:hover{ transform: translateY(-1px) }
+    .grid{
+      display:grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin:26px 0 10px;
+    }
+    section{ padding:24px 0; border-bottom:1px solid var(--border) }
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px 16px 14px; box-shadow:var(--shadow) }
+    .card h3{ margin:4px 0 10px }
+    code, pre{ font-family:var(--mono) }
+    pre{ background:var(--code); border:1px solid var(--border); padding:12px; border-radius:10px; overflow:auto }
+    ul{ padding-left:18px }
+    .pill{ display:inline-block; padding:4px 8px; border-radius:999px; background:var(--card); border:1px solid var(--border); font-size:12px; color:var(--muted) }
+    footer{ color:var(--muted); font-size:14px; padding:22px 0 40px }
+    .kudos{ color:var(--muted); margin-top:6px }
+  </style>
 </head>
 <body>
-  <h1>DataCite Kernel 4.6</h1>
-  <p>
-    This site hosts the <strong>JSON-LD contexts</strong> and <strong>JSON Schema</strong> files for the DataCite Kernel 4.6 metadata model.
-  </p>
-   <h2>Main context and schemas</h2>
-  <ul>
-    <li><a href="https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-schema.json" type="application/schema+json">datacite4.6-schema.json</a> (JSON Schema, full validator)</li>
-    <li><a href="https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json" type="application/schema+json">datacite4.6-profile.json</a> (Bundled profile with rules, vocabularies and context)</li>
-  </ul>
-  
-  <h2>Controlled vocabularies</h2>
-  <ul>
-    <li><a href="contributorTypes.jsonld" type="application/ld+json">contributorTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="dateTypes.jsonld" type="application/ld+json">dateTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="descriptionTypes.jsonld" type="application/ld+json">descriptionTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="nameTypes.jsonld" type="application/ld+json">nameTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="funderIdTypes.jsonld" type="application/ld+json">funderIdTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="relatedIdTypes.jsonld" type="application/ld+json">relatedIdTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="relationTypes.jsonld" type="application/ld+json">relationTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="resourceTypeGeneral.jsonld" type="application/ld+json">resourceTypeGeneral.jsonld</a> (JSON‑LD vocabulary)</li>
-    <li><a href="titleTypes.jsonld" type="application/ld+json">titleTypes.jsonld</a> (JSON‑LD vocabulary)</li>
-  </ul>
- 
-  <hr>
-  <h2>SKOS Mappings &amp; Crosswalks</h2>
-  <p>
-    All SKOS-based crosswalks live in the <code>skos-mappings/</code> folder:
-  </p>
-  <ul>
-    <li>
-      <a href="skos-mappings/SKOS_crosswalks.jsonld" type="application/ld+json">
-        SKOS_crosswalks.jsonld
-      </a>
-      (SKOS crosswalks)
-    </li>
-    <li>
-      <a href="skos-mappings/jskos-mappings.json" type="application/schema+json">jskos-mappings.json</a> Crosswalks in JSKOS format
-    </li>
-  </ul>
-  <p>
-    You can find the source repository on <a href="https://github.com/selgebali/datacite4.6-jsonld">GitHub</a>.
-  </p>
+  <header class="hero">
+    <div class="wrap">
+      <h1>DataCite 4.6 — JSON‑LD Profile &amp; JSON Schema</h1>
+      <p class="tagline">
+        Validate DataCite 4.6 payloads and publish them as linked data. This site hosts the live JSON Schema, the JSON‑LD <code>@context</code>, and SKOS/JSKOS crosswalks — with a quick start for beginners.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json">Open Profile (JSON Schema + @context)</a>
+        <a class="btn" href="https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-schema.json">Open Full Schema</a>
+        <a class="btn" href="https://github.com/selgebali/datacite4.6-jsonld#readme">README (Beginner’s Guide)</a>
+      </div>
+      <span class="pill">Draft‑07 JSON Schema</span>
+      <span class="pill">JSON‑LD</span>
+      <span class="pill">SKOS / JSKOS</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="whats-new">
+      <h2>What’s new in 4.6</h2>
+      <div class="grid">
+        <div class="card"><h3>Resource Types</h3><p><code>resourceTypeGeneral</code> adds <strong>Project</strong>, <strong>Award</strong>.</p></div>
+        <div class="card"><h3>Identifier Types</h3><p><code>relatedIdentifierType</code> adds <strong>RRID</strong>, <strong>CSTR</strong>.</p></div>
+        <div class="card"><h3>People &amp; Relations</h3><p><code>contributorType</code> adds <strong>Translator</strong>; relation pair <strong>IsTranslationOf / HasTranslation</strong>.</p></div>
+        <div class="card"><h3>Dates</h3><p><code>dateType</code> adds <strong>Coverage</strong>.</p></div>
+      </div>
+    </section>
+
+    <section id="files">
+      <h2>Main files</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Profile (submit)</h3>
+          <p>Strict validator for client submissions. Bundles rules, controlled lists, and the JSON‑LD <code>@context</code>.</p>
+          <p><a href="https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json">datacite4.6-profile.json</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>SKOS / JSKOS Crosswalks</h3>
+          <ul>
+            <li><a href="skos-mappings/SKOS_crosswalks.jsonld">SKOS_crosswalks.jsonld</a></li>
+            <li><a href="skos-mappings/jskos-mappings.json">jskos-mappings.json</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="quickstart">
+      <h2>Quick start</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Validate a submission</h3>
+          <pre><code>pip install jsonschema</code></pre>
+          <pre><code>from jsonschema import Draft7Validator
+import json
+schema = json.load(open("docs/datacite4.6-profile.json"))
+payload = json.load(open("example-submit.json"))
+Draft7Validator(schema).validate(payload)
+print("OK")</code></pre>
+        </div>
+        <div class="card">
+          <h3>Minimal submission JSON</h3>
+          <pre><code>{
+  "doi": "10.1234/example-doi",
+  "creators": [{ "name": "Doe, Jane", "nameType": "Personal" }],
+  "titles": [{ "title": "An Example Dataset" }],
+  "publisher": { "name": "Example University" },
+  "publicationYear": "2025",
+  "types": { "resourceTypeGeneral": "Dataset" }
+}</code></pre>
+        </div>
+        <div class="card">
+          <h3>Validate a response</h3>
+          <pre><code>doc = json.load(open("docs/datacite4.6-profile.json"))
+resp = json.load(open("datacite_example_filledin.json"))
+Draft7Validator(doc["responseProfile"]).validate(resp)</code></pre>
+        </div>
+      </div>
+      <p class="kudos">Tip: The profile allows ORCID dashed or URI and enforces URI when scheme is ROR.</p>
+    </section>
+
+    <section id="learn">
+      <h2>Learn the basics</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Glossary</h3>
+          <ul>
+            <li><strong>JSON Schema</strong> — describes the shape of JSON.</li>
+            <li><strong>JSON‑LD</strong> — links JSON keys to IRIs via <code>@context</code>.</li>
+            <li><strong>SKOS / JSKOS</strong> — controlled vocabularies &amp; mappings.</li>
+            <li><strong>Crosswalk</strong> — alignment between DataCite, Schema.org, DCAT, etc.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What maps to what?</h3>
+          <p><code>publisher</code> → <code>datacite:publisher</code> (and often <code>schema:publisher</code>)</p>
+          <p><code>doi</code> → <code>datacite:identifier</code> (IRI)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Authoritative docs</h2>
+      <ul>
+        <li><a href="https://schema.datacite.org/meta/kernel-4.6/">DataCite Metadata Schema 4.6</a></li>
+        <li><a href="https://support.datacite.org/docs/datacite-metadata-schema-46-release-notes">DataCite 4.6 Release Notes</a></li>
+        <li><a href="https://support.datacite.org/docs/api">DataCite REST API</a></li>
+        <li><a href="https://json-schema.org/">JSON Schema</a></li>
+        <li><a href="https://json-ld.org/">JSON‑LD</a></li>
+        <li><a href="https://www.w3.org/TR/skos-primer/">SKOS Primer</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Source on <a href="https://github.com/selgebali/datacite4.6-jsonld">GitHub</a>. Built for clarity and interoperability.</p>
+  </footer>
 </body>
 </html>
