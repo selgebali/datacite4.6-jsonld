@@ -18,6 +18,19 @@
         "additionalProperties": false
       }
     },
+    "alternateIdentifiers": {
+      "type": "array",
+      "description": "Alternate identifiers for the resource, distinct from primary DOI and internal identifiers.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "alternateIdentifier": { "type": "string", "description": "The alternate identifier value." },
+          "alternateIdentifierType": { "type": "string", "description": "Type of the alternate identifier (e.g. ISBN, PMID)." }
+        },
+        "required": ["alternateIdentifier", "alternateIdentifierType"],
+        "additionalProperties": false
+      }
+    },
 
     "doi": {
       "type": "string",
@@ -335,7 +348,6 @@
           "schemeUri": { "type": "string", "format": "uri", "description": "URI of the rights identifier scheme." },
           "lang": { "type": "string", "description": "Language of the rights statement (IETF BCP 47 code)." }
         },
-        "required": ["rights"],
         "additionalProperties": false
       }
     },
@@ -363,8 +375,22 @@
           "geoLocationPoint": {
             "type": "object",
             "properties": {
-              "pointLongitude": { "type": "number", "minimum": -180, "maximum": 180 },
-              "pointLatitude": { "type": "number", "minimum": -90, "maximum": 90 }
+              "pointLongitude": {
+                "oneOf": [
+                  { "type": "number" },
+                  { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                ],
+                "minimum": -180,
+                "maximum": 180
+              },
+              "pointLatitude": {
+                "oneOf": [
+                  { "type": "number" },
+                  { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                ],
+                "minimum": -90,
+                "maximum": 90
+              }
             },
             "required": ["pointLongitude", "pointLatitude"],
             "additionalProperties": false
@@ -372,10 +398,38 @@
           "geoLocationBox": {
             "type": "object",
             "properties": {
-              "westBoundLongitude": { "type": "number", "minimum": -180, "maximum": 180 },
-              "eastBoundLongitude": { "type": "number", "minimum": -180, "maximum": 180 },
-              "southBoundLatitude": { "type": "number", "minimum": -90, "maximum": 90 },
-              "northBoundLatitude": { "type": "number", "minimum": -90, "maximum": 90 }
+              "westBoundLongitude": {
+                "oneOf": [
+                  { "type": "number" },
+                  { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                ],
+                "minimum": -180,
+                "maximum": 180
+              },
+              "eastBoundLongitude": {
+                "oneOf": [
+                  { "type": "number" },
+                  { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                ],
+                "minimum": -180,
+                "maximum": 180
+              },
+              "southBoundLatitude": {
+                "oneOf": [
+                  { "type": "number" },
+                  { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                ],
+                "minimum": -90,
+                "maximum": 90
+              },
+              "northBoundLatitude": {
+                "oneOf": [
+                  { "type": "number" },
+                  { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                ],
+                "minimum": -90,
+                "maximum": 90
+              }
             },
             "required": ["westBoundLongitude", "eastBoundLongitude", "southBoundLatitude", "northBoundLatitude"],
             "additionalProperties": false
@@ -388,8 +442,18 @@
                 "polygonPoint": {
                   "type": "object",
                   "properties": {
-                    "pointLongitude": { "type": "number" },
-                    "pointLatitude": { "type": "number" }
+                    "pointLongitude": {
+                      "oneOf": [
+                        { "type": "number" },
+                        { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                      ]
+                    },
+                    "pointLatitude": {
+                      "oneOf": [
+                        { "type": "number" },
+                        { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                      ]
+                    }
                   },
                   "required": ["pointLongitude", "pointLatitude"],
                   "additionalProperties": false
@@ -397,8 +461,18 @@
                 "inPolygonPoint": {
                   "type": "object",
                   "properties": {
-                    "pointLongitude": { "type": "number" },
-                    "pointLatitude": { "type": "number" }
+                    "pointLongitude": {
+                      "oneOf": [
+                        { "type": "number" },
+                        { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                      ]
+                    },
+                    "pointLatitude": {
+                      "oneOf": [
+                        { "type": "number" },
+                        { "type": "string", "pattern": "^-?\\d+(\\.\\d+)?$" }
+                      ]
+                    }
                   },
                   "required": ["pointLongitude", "pointLatitude"],
                   "additionalProperties": false
@@ -704,9 +778,12 @@
       "dcat": "http://www.w3.org/ns/dcat#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "identifiers": { "@id": "datacite:alternateIdentifiers", "@container": "@list" },
-      "identifier": { "@id": "datacite:alternateIdentifier", "@type": "xsd:string" },
-      "identifierType": { "@id": "datacite:alternateIdentifierType", "@type": "xsd:string" },
+      "identifiers": { "@id": "datacite:identifiers", "@container": "@list" },
+      "identifier": { "@id": "datacite:identifier", "@type": "xsd:string" },
+      "identifierType": { "@id": "datacite:identifierType", "@type": "xsd:string" },
+      "alternateIdentifiers": { "@id": "datacite:alternateIdentifiers", "@container": "@list" },
+      "alternateIdentifier": { "@id": "datacite:alternateIdentifier", "@type": "xsd:string" },
+      "alternateIdentifierType": { "@id": "datacite:alternateIdentifierType", "@type": "xsd:string" },
 
       "doi": { "@id": "datacite:identifier", "@type": "@id" },
       "creators": { "@id": "datacite:creators", "@container": "@list" },
@@ -724,11 +801,11 @@
       "titles": { "@id": "datacite:titles", "@container": "@list" },
       "title": { "@id": "datacite:title", "@type": "xsd:string" },
       "titleType": { "@id": "datacite:titleType", "@type": "xsd:string" },
-      "publisher": { "@id": "datacite:publisher", "@type": "xsd:string" },
+      "publisher": { "@id": "datacite:publisher" },
       "publisherIdentifier": { "@id": "datacite:publisherIdentifier", "@type": "xsd:string" },
       "publisherIdentifierScheme": { "@id": "datacite:publisherIdentifierScheme", "@type": "xsd:string" },
-      "publicationYear": { "@id": "datacite:publicationYear", "@type": "http://www.w3.org/2001/XMLSchema#gYear" },
-      "container": { "@id": "datacite:relatedItems", "@container": "@list" },
+      "publicationYear": { "@id": "datacite:publicationYear" },
+      "container": { "@id": "datacite:container" },
       "subjects": { "@id": "datacite:subjects", "@container": "@list" },
       "subject": { "@id": "datacite:subject", "@type": "xsd:string" },
       "subjectScheme": { "@id": "datacite:subjectScheme", "@type": "xsd:string" },
@@ -740,16 +817,14 @@
       "dateType": { "@id": "datacite:dateType", "@type": "xsd:string" },
       "dateInformation": { "@id": "datacite:dateInformation", "@type": "xsd:string" },
       "language": { "@id": "datacite:language", "@type": "http://www.w3.org/2001/XMLSchema#language" },
-      "types": { "@id": "datacite:resourceType", "@type": "xsd:string" },
+      "types": { "@id": "datacite:types" },
       "resourceType": { "@id": "datacite:resourceType", "@type": "xsd:string" },
-      "resourceTypeGeneral": { "@id": "datacite:resourceTypeGeneral", "@type": "xsd:string" },
       "relatedIdentifiers": { "@id": "datacite:relatedIdentifiers", "@container": "@list" },
       "relatedIdentifier": { "@id": "datacite:relatedIdentifier", "@type": "xsd:string" },
       "relatedIdentifierType": { "@id": "datacite:relatedIdentifierType", "@type": "xsd:string" },
       "relationType": { "@id": "datacite:relationType", "@type": "xsd:string" },
       "relatedMetadataScheme": { "@id": "datacite:relatedMetadataScheme", "@type": "xsd:string" },
       "schemeType": { "@id": "datacite:schemeType", "@type": "xsd:string" },
-      "resourceTypeGeneral": { "@id": "datacite:resourceTypeGeneral", "@type": "xsd:string" },
       "rightsList": { "@id": "datacite:rightsList", "@container": "@list" },
       "rights": { "@id": "datacite:rights", "@type": "xsd:string" },
       "rightsUri": { "@id": "datacite:rightsURI", "@type": "@id" },
