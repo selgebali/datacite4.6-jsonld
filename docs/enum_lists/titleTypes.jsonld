@@ -5,38 +5,46 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/titleTypes.jsonld#",
-    "@graph": [
-      {
-        "@id": "datacite:TitleTypeScheme",
-        "@type": "skos:ConceptScheme",
-        "skos:prefLabel": "DataCite Title Type",
-        "skos:definition": "Controlled list of title types as defined in the DataCite Metadata Schema."
-      },
-      {
-        "@id": "datacite:AlternativeTitle",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "AlternativeTitle",
-        "skos:inScheme": "datacite:TitleTypeScheme"
-      },
-      {
-        "@id": "datacite:Subtitle",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Subtitle",
-        "skos:inScheme": "datacite:TitleTypeScheme"
-      },
-      {
-        "@id": "datacite:TranslatedTitle",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "TranslatedTitle",
-        "skos:inScheme": "datacite:TitleTypeScheme"
-      },
-      {
-        "@id": "datacite:Other",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Other",
-        "skos:inScheme": "datacite:TitleTypeScheme"
-      }
-    ]
-  }
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/titleTypes.jsonld#"
+  },
+  "@graph": [
+    {
+      "@id": "datacite:TitleTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Title Type",
+      "skos:definition": "Controlled list of title types as defined in the DataCite Metadata Schema (4.6)."
+    },
+    {
+      "@id": "datacite:AlternativeTitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "AlternativeTitle",
+      "skos:definition": "Any form of the title used as a substitute or alternative to the main title of the resource.",
+      "skos:inScheme": "datacite:TitleTypeScheme",
+      "skos:note": "Examples include translated titles or titles commonly used as an alternative name."
+    },
+    {
+      "@id": "datacite:Subtitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Subtitle",
+      "skos:definition": "A secondary title that amplifies or explains the main title.",
+      "skos:inScheme": "datacite:TitleTypeScheme",
+      "skos:note": "Often clarifies or provides additional context to the main title."
+    },
+    {
+      "@id": "datacite:TranslatedTitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "TranslatedTitle",
+      "skos:definition": "The title of the resource translated into another language.",
+      "skos:inScheme": "datacite:TitleTypeScheme",
+      "skos:note": "The attribute xml:lang is recommended to indicate the language of the translation."
+    },
+    {
+      "@id": "datacite:Other",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Other",
+      "skos:definition": "A title type that does not fall into AlternativeTitle, Subtitle, or TranslatedTitle.",
+      "skos:inScheme": "datacite:TitleTypeScheme",
+      "skos:note": "Use only when no other titleType value is appropriate."
+    }
+  ]
 }

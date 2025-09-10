@@ -5,44 +5,54 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/funderIdTypes.jsonld#",
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/funderIdTypes.jsonld#"
+  },
   "@graph": [
     {
       "@id": "datacite:FunderIdentifierTypeScheme",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": "Funder Identifier Type",
-      "skos:definition": "Controlled list of funder identifier types used in the DataCite Metadata Schema."
-    },
-    {
-      "@id": "datacite:ISNI",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "ISNI",
-      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
-    },
-    {
-      "@id": "datacite:GRID",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "GRID",
-      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
-    },
-    {
-      "@id": "datacite:ROR",
-      "@type": "skos:Concept",
-      "skos:prefLabel": "ROR",
-      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
+      "skos:definition": "Controlled list of funder identifier types used in the DataCite Metadata Schema (4.6), for the property fundingReference/funderIdentifierType."
     },
     {
       "@id": "datacite:CrossrefFunderID",
       "@type": "skos:Concept",
       "skos:prefLabel": "Crossref Funder ID",
-      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
+      "skos:definition": "Identifier from the Crossref Funder Registry used to identify funding bodies. In DataCite, values are typically expressed as DOIs under the 10.13039 registry (e.g., https://doi.org/10.13039/501100000780). Use when the funder is listed in the Crossref Funder Registry.",
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme",
+      "skos:note": "Listed in the DataCite controlled list for funderIdentifierType."
+    },
+    {
+      "@id": "datacite:GRID",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GRID",
+      "skos:definition": "Global Research Identifier Database identifier for organizations. Included for legacy interoperability in DataCite funderIdentifierType.",
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme",
+      "skos:note": "GRID has been sunset and is retained for backward compatibility; prefer ROR where available."
+    },
+    {
+      "@id": "datacite:ISNI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ISNI",
+      "skos:definition": "International Standard Name Identifier for identifying public identities (persons and organizations). Use when the funder is identified by an ISNI.",
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme",
+      "skos:note": "Listed in the DataCite controlled list for funderIdentifierType."
+    },
+    {
+      "@id": "datacite:ROR",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ROR",
+      "skos:definition": "Research Organization Registry identifier for organizations. Recommended identifier for funders and affiliations in DataCite metadata.",
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme",
+      "skos:note": "Listed in the DataCite controlled list for funderIdentifierType (added in 4.3)."
     },
     {
       "@id": "datacite:Other",
       "@type": "skos:Concept",
       "skos:prefLabel": "Other",
-      "skos:inScheme": "datacite:FunderIdentifierTypeScheme"
+      "skos:definition": "An identifier from a scheme not included in the controlled list. When using ‘Other’, provide the schemeURI that identifies the identifier scheme.",
+      "skos:inScheme": "datacite:FunderIdentifierTypeScheme",
+      "skos:note": "Listed in the DataCite controlled list for funderIdentifierType; if used, set fundingReference/funderIdentifier/schemeURI."
     }
   ]
-}
 }

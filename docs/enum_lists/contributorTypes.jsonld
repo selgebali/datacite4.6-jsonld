@@ -1,150 +1,44 @@
 {
-    "@context": {
-        "@version": 1.1,
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "schema": "http://schema.org/",
-        "dcat": "http://www.w3.org/ns/dcat#",
-        "datacite": "https://selgebali.github.io/datacite4.6-jsonld/contributorTypes.jsonld#",
-        "@graph": [
-            {
-                "@id": "datacite:ContributorTypeScheme",
-                "@type": "skos:ConceptScheme",
-                "skos:prefLabel": "DataCite Contributor Type",
-                "skos:definition": "Controlled list of contributor roles as defined in the DataCite Metadata Schema."
-            },
-            {
-                "@id": "datacite:ContactPerson",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "ContactPerson",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:DataCollector",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "DataCollector",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:DataCurator",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "DataCurator",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:DataManager",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "DataManager",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Distributor",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Distributor",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Editor",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Editor",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:HostingInstitution",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "HostingInstitution",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Other",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Other",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Producer",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Producer",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:ProjectLeader",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "ProjectLeader",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:ProjectManager",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "ProjectManager",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:ProjectMember",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "ProjectMember",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:RegistrationAgency",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "RegistrationAgency",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:RegistrationAuthority",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "RegistrationAuthority",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:RelatedPerson",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "RelatedPerson",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:ResearchGroup",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "ResearchGroup",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:RightsHolder",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "RightsHolder",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Researcher",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Researcher",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Sponsor",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Sponsor",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Supervisor",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Supervisor",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:Translator",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "Translator",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            },
-            {
-                "@id": "datacite:WorkPackageLeader",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "WorkPackageLeader",
-                "skos:inScheme": "datacite:ContributorTypeScheme"
-            }
-        ]
-    }
+  "@context": {
+    "@version": 1.1,
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/contributorTypes.jsonld#",
+    "skos:inScheme": { "@type": "@id" },
+    "skos:prefLabel": { "@container": "@language" },
+    "skos:definition": { "@container": "@language" },
+    "skos:notation": { "@type": "xsd:string" }
+  },
+  "@graph": [
+    {
+      "@id": "datacite:ContributorTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": { "en": "DataCite Contributor Type" },
+      "skos:definition": { "en": "Controlled list of contributor roles as defined in the DataCite Metadata Schema 4.6." }
+    },
+    { "@id": "datacite:ContactPerson", "@type": "skos:Concept", "skos:prefLabel": {"en":"ContactPerson"}, "skos:definition": {"en": "Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource."}, "skos:notation": "ContactPerson", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:DataCollector", "@type": "skos:Concept", "skos:prefLabel": {"en":"DataCollector"}, "skos:definition": {"en": "Person or institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI)."}, "skos:notation": "DataCollector", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:DataCurator", "@type": "skos:Concept", "skos:prefLabel": {"en":"DataCurator"}, "skos:definition": {"en": "Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository."}, "skos:notation": "DataCurator", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:DataManager", "@type": "skos:Concept", "skos:prefLabel": {"en":"DataManager"}, "skos:definition": {"en": "Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource."}, "skos:notation": "DataManager", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Distributor", "@type": "skos:Concept", "skos:prefLabel": {"en":"Distributor"}, "skos:definition": {"en": "Institution tasked with responsibility to generate or disseminate copies of the resource in either electronic or print form."}, "skos:notation": "Distributor", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Editor", "@type": "skos:Concept", "skos:prefLabel": {"en":"Editor"}, "skos:definition": {"en": "A person who oversees the details related to the publication format of the resource."}, "skos:notation": "Editor", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:HostingInstitution", "@type": "skos:Concept", "skos:prefLabel": {"en":"HostingInstitution"}, "skos:definition": {"en": "Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware, software, or operating support."}, "skos:notation": "HostingInstitution", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Producer", "@type": "skos:Concept", "skos:prefLabel": {"en":"Producer"}, "skos:definition": {"en": "Typically, a person or organisation responsible for the artistry and form of a media product."}, "skos:notation": "Producer", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:ProjectLeader", "@type": "skos:Concept", "skos:prefLabel": {"en":"ProjectLeader"}, "skos:definition": {"en": "Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource."}, "skos:notation": "ProjectLeader", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:ProjectManager", "@type": "skos:Concept", "skos:prefLabel": {"en":"ProjectManager"}, "skos:definition": {"en": "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams."}, "skos:notation": "ProjectManager", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:ProjectMember", "@type": "skos:Concept", "skos:prefLabel": {"en":"ProjectMember"}, "skos:definition": {"en": "Person on the membership list of a designated project or project team."}, "skos:notation": "ProjectMember", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:RegistrationAgency", "@type": "skos:Concept", "skos:prefLabel": {"en":"RegistrationAgency"}, "skos:definition": {"en": "Institution or organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility."}, "skos:notation": "RegistrationAgency", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:RegistrationAuthority", "@type": "skos:Concept", "skos:prefLabel": {"en":"RegistrationAuthority"}, "skos:definition": {"en": "A standards-setting body from which Registration Agencies obtain official recognition and guidance."}, "skos:notation": "RegistrationAuthority", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:RelatedPerson", "@type": "skos:Concept", "skos:prefLabel": {"en":"RelatedPerson"}, "skos:definition": {"en": "A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize."}, "skos:notation": "RelatedPerson", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Researcher", "@type": "skos:Concept", "skos:prefLabel": {"en":"Researcher"}, "skos:definition": {"en": "A person involved in analysing data or the results of an experiment or formal study."}, "skos:notation": "Researcher", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:ResearchGroup", "@type": "skos:Concept", "skos:prefLabel": {"en":"ResearchGroup"}, "skos:definition": {"en": "Typically refers to a group of individuals with a lab, department, or division that has a specifically defined focus of activity."}, "skos:notation": "ResearchGroup", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:RightsHolder", "@type": "skos:Concept", "skos:prefLabel": {"en":"RightsHolder"}, "skos:definition": {"en": "Person or institution owning or managing property rights, including intellectual property rights over the resource."}, "skos:notation": "RightsHolder", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Sponsor", "@type": "skos:Concept", "skos:prefLabel": {"en":"Sponsor"}, "skos:definition": {"en": "Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc."}, "skos:notation": "Sponsor", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Supervisor", "@type": "skos:Concept", "skos:prefLabel": {"en":"Supervisor"}, "skos:definition": {"en": "Designated administrator over one or more groups or teams working to produce a resource, or over one or more steps of a development process."}, "skos:notation": "Supervisor", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Translator", "@type": "skos:Concept", "skos:prefLabel": {"en":"Translator"}, "skos:definition": {"en": "A person, organization, or automated system responsible for converting the content of a resource from one language into another, preserving its meaning and intended message."}, "skos:notation": "Translator", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:WorkPackageLeader", "@type": "skos:Concept", "skos:prefLabel": {"en":"WorkPackageLeader"}, "skos:definition": {"en": "A Work Package is a recognized data product, not all of which is included in publication. The package may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource."}, "skos:notation": "WorkPackageLeader", "skos:inScheme": "datacite:ContributorTypeScheme" },
+    { "@id": "datacite:Other", "@type": "skos:Concept", "skos:prefLabel": {"en":"Other"}, "skos:definition": {"en": "Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution is not adequately described by any of the other values for contributorType."}, "skos:notation": "Other", "skos:inScheme": "datacite:ContributorTypeScheme" }
+  ]
 }

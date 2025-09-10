@@ -5,140 +5,182 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/relatedIdTypes.jsonld#",
-    "@graph": [
-      {
-        "@id": "datacite:RelatedIdentifierTypeScheme",
-        "@type": "skos:ConceptScheme",
-        "skos:prefLabel": "DataCite Related Identifier Type",
-        "skos:definition": "Controlled list of identifier types that can be used to relate the described resource to another resource."
-      },
-      {
-        "@id": "datacite:ARK",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "ARK",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:arXiv",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "arXiv",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:bibcode",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "bibcode",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:CSTR",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "CSTR",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:DOI",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "DOI",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:EAN13",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "EAN13",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:EISSN",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "EISSN",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:Handle",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Handle",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:IGSN",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IGSN",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:ISBN",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "ISBN",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:ISSN",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "ISSN",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:ISTC",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "ISTC",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:LISSN",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "LISSN",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:LSID",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "LSID",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:PMID",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "PMID",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:PURL",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "PURL",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:RRID",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "RRID",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:UPC",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "UPC",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:URL",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "URL",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:URN",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "URN",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      },
-      {
-        "@id": "datacite:w3id",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "w3id",
-        "skos:inScheme": "datacite:RelatedIdentifierTypeScheme"
-      }
-    ]
-  }
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/relatedIdTypes.jsonld#"
+  },
+  "@graph": [
+    {
+      "@id": "datacite:RelatedIdentifierTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Related Identifier Type",
+      "skos:definition": "Controlled list of identifier types that can be used in DataCite metadata to relate the described resource to another resource."
+    },
+    {
+      "@id": "datacite:ARK",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ARK",
+      "skos:definition": "Archival Resource Key, a persistent identifier scheme for information objects of any type.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:arXiv",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "arXiv",
+      "skos:definition": "Identifier for preprints deposited in the arXiv repository (e.g., arXiv:1501.00001).",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:bibcode",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "bibcode",
+      "skos:definition": "Astrophysics Data System (ADS) bibliographic code, commonly used in astronomy and astrophysics literature.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:CSTR",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "CSTR",
+      "skos:definition": "Chinese Science and Technology Resource identifier, used for persistent identification in Chinese infrastructures.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Added in DataCite 4.4."
+    },
+    {
+      "@id": "datacite:DOI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "DOI",
+      "skos:definition": "Digital Object Identifier, the primary persistent identifier system used in scholarly communications.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Recommended where available."
+    },
+    {
+      "@id": "datacite:EAN13",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "EAN13",
+      "skos:definition": "International Article Number (formerly European Article Number), 13-digit identifier used for barcodes.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:EISSN",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "EISSN",
+      "skos:definition": "Electronic International Standard Serial Number identifying electronic serials.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:Handle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Handle",
+      "skos:definition": "Handle System identifier for digital objects, of which DOIs are a specific implementation.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:IGSN",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "IGSN",
+      "skos:definition": "International Generic Sample Number, a persistent identifier for physical samples.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:ISBN",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ISBN",
+      "skos:definition": "International Standard Book Number, a unique identifier for books.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:ISSN",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ISSN",
+      "skos:definition": "International Standard Serial Number, a unique identifier for serial publications.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:ISTC",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ISTC",
+      "skos:definition": "International Standard Text Code, a unique identifier for textual works.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:LISSN",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "LISSN",
+      "skos:definition": "Linking International Standard Serial Number, used to link different media versions of a continuing resource.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Added in DataCite 4.4."
+    },
+    {
+      "@id": "datacite:LSID",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "LSID",
+      "skos:definition": "Life Science Identifier, a persistent identifier for biological objects.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:PMID",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "PMID",
+      "skos:definition": "PubMed Identifier, a unique number assigned to each PubMed record.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:PURL",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "PURL",
+      "skos:definition": "Persistent Uniform Resource Locator, a type of URL intended to provide long-lasting references to digital objects.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:RRID",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "RRID",
+      "skos:definition": "Research Resource Identifier, used to cite key resources such as model organisms, antibodies, and software tools.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Added in DataCite 4.1."
+    },
+    {
+      "@id": "datacite:UPC",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "UPC",
+      "skos:definition": "Universal Product Code, widely used identifier for products, especially in retail.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:URL",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "URL",
+      "skos:definition": "Uniform Resource Locator, a web address identifying a resource on the internet.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:URN",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "URN",
+      "skos:definition": "Uniform Resource Name, a persistent, location-independent identifier assigned within defined namespaces.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Listed in DataCite controlled list."
+    },
+    {
+      "@id": "datacite:w3id",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "w3id",
+      "skos:definition": "Permanent identifier system for web resources under w3id.org, often used for vocabularies and ontologies.",
+      "skos:inScheme": "datacite:RelatedIdentifierTypeScheme",
+      "skos:note": "Added in DataCite 4.5."
+    }
+  ]
 }

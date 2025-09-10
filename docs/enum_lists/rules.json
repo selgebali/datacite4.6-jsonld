@@ -1,19 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json",
-  "title": "DataCite Metadata Schema v4.6",
-  "description": "JSON Schema for validating DataCite 4.6 JSON-LD records against required fields and cardinalities.",
+  "title": "DataCite Metadata Schema v4.6 (Profile)",
+  "description": "Validation profile for DataCite 4.6 JSON(-LD) records with required fields, cardinalities, and controlled lists.",
   "type": "object",
+  "additionalProperties": false,
 
   "properties": {
     "identifier": {
       "type": "string",
-      "format": "uri",
-      "description": "A persistent identifier that identifies a resource."
+      "description": "The DOI identifying the resource.",
+      "pattern": "^10\\.\\d{4,9}/[-._;()/:A-Za-z0-9]+$"
     },
     "identifierType": {
       "type": "string",
-      "description": "The scheme used for the identifier (e.g. DOI)."
+      "enum": ["DOI"],
+      "description": "The scheme used for the identifier. DataCite requires DOI."
     },
 
     "creators": {
@@ -22,24 +24,15 @@
       "description": "One or more creator objects in priority order.",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
-          "creatorName": {
-            "type": "string",
-            "description": "Name of the creator (Family, Given)."
-          },
-          "nameType": {
-            "type": "string",
-            "enum": ["Personal","Organizational"],
-            "description": "Personal vs. Organizational name."
-          },
-          "givenName": {
-            "type": "string"
-          },
-          "familyName": {
-            "type": "string"
-          },
+          "creatorName": { "type": "string", "description": "Name of the creator (Family, Given)." },
+          "nameType": { "type": "string", "enum": ["Personal","Organizational"], "description": "Personal vs. Organizational name." },
+          "givenName": { "type": "string" },
+          "familyName": { "type": "string" },
           "nameIdentifier": {
             "type": "array",
+            "description": "One or more persistent identifiers for the name (e.g., ORCID, ROR). Use URI form when possible.",
             "items": {
               "type": "string",
               "format": "uri"
@@ -48,12 +41,14 @@
           "affiliation": {
             "type": "array",
             "items": {
-              "type": "string"
+              "anyOf": [
+                { "type": "string" },
+                { "type": "string", "format": "uri" }
+              ]
             }
           }
         },
-        "required": ["creatorName"],
-        "additionalProperties": false
+        "required": ["creatorName"]
       }
     },
 
@@ -63,183 +58,154 @@
       "description": "One or more title objects.",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
-          "title": {
-            "type": "string",
-            "description": "The title string."
-          },
-          "titleType": {
-            "type": "string",
-            "enum": ["AlternativeTitle","Subtitle","TranslatedTitle","Other"],
-            "description": "Controlled list of subtitle/alternate types."
-          },
-          "lang": {
-            "type": "string",
-            "description": "IETF BCP 47 language code, e.g. 'en'."
-          }
+          "title": { "type": "string", "description": "The title string." },
+          "titleType": { "type": "string", "enum": ["AlternativeTitle","Subtitle","TranslatedTitle","Other"], "description": "Controlled list of subtitle/alternate types." },
+          "lang": { "type": "string", "description": "IETF BCP 47 language tag, e.g. 'en' or 'en-GB'.", "pattern": "^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$" }
         },
-        "required": ["title"],
-        "additionalProperties": false
+        "required": ["title"]
       }
     },
 
     "publisher": {
       "type": "object",
-      "description": "Publisher of the resource, including identifier and language.",
+      "description": "Publisher of the resource, including optional identifier (per 4.5+).",
+      "additionalProperties": false,
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of the entity that publishes the resource."
-        },
-        "publisherIdentifier": {
-          "type": "string",
-          "description": "Identifier for the publisher, e.g. an ROR ID."
-        },
-        "publisherIdentifierScheme": {
-          "type": "string",
-          "description": "Scheme of the publisher identifier, e.g. 'ROR'."
-        },
-        "schemeURI": {
-          "type": "string",
-          "format": "uri",
-          "description": "URI of the identifier scheme."
-        },
-        "lang": {
-          "type": "string",
-          "description": "IETF BCP 47 language code for publisher name."
-        }
+        "name": { "type": "string", "description": "Name of the entity that publishes the resource." },
+        "publisherIdentifier": { "type": "string", "description": "Identifier for the publisher, e.g. a ROR or ISNI URI." },
+        "publisherIdentifierScheme": { "type": "string", "description": "Scheme of the publisher identifier, e.g. 'ROR' or 'ISNI'." },
+        "schemeURI": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." },
+        "lang": { "type": "string", "description": "IETF BCP 47 language tag for publisher name.", "pattern": "^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$" }
       },
-      "required": ["name"],
-      "additionalProperties": false
+      "required": ["name"]
     },
 
-    "publicationYear": {
-      "type": "string",
-      "pattern": "^[0-9]{4}$",
-      "description": "YYYY"
-    },
+    "publicationYear": { "type": "string", "pattern": "^[0-9]{4}$", "description": "YYYY" },
 
-    "resourceType": {
-      "type": "string",
-      "description": "Free-text description of the resource type."
-    },
+    "resourceType": { "type": "string", "description": "Free-text resource type (with general type below)." },
     "resourceTypeGeneral": {
       "type": "string",
       "enum": [
-        "Audiovisual","Award","Book","BookChapter","Collection",
-        "ComputationalNotebook","ConferencePaper","ConferenceProceeding",
-        "DataPaper","Dataset","Dissertation","Event","Image",
-        "InteractiveResource","Instrument","Journal","JournalArticle",
-        "Model","OutputManagementPlan","PeerReview","PhysicalObject",
-        "Preprint","Project","Report","Service","Software","Sound",
-        "Standard","StudyRegistration","Text","Workflow","Other"
+        "Audiovisual","Award","Book","BookChapter","Collection","ComputationalNotebook","ConferencePaper","ConferenceProceeding","DataPaper","Dataset","Dissertation","Event","Image","InteractiveResource","Instrument","Journal","JournalArticle","Model","OutputManagementPlan","PeerReview","PhysicalObject","Preprint","Project","Report","Service","Software","Sound","Standard","StudyRegistration","Text","Workflow","Other"
       ],
       "description": "Controlled list of general resource types."
     },
+
     "subjects": {
       "type": "array",
-      "description": "Subject, keywords, classification codes, or key phrases describing the resource.",
+      "description": "Subject keywords, classification codes, or key phrases describing the resource.",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "value": { "type": "string" },
           "subjectScheme": { "type": "string" },
           "schemeURI": { "type": "string", "format": "uri" },
           "valueURI": { "type": "string", "format": "uri" },
-          "classificationCode": { "type": "string", "format": "uri" },
-          "lang": { "type": "string" }
+          "classificationCode": { "type": "string" },
+          "lang": { "type": "string", "pattern": "^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$" }
         },
-        "required": ["value"],
-        "additionalProperties": false
+        "required": ["value"]
       }
     },
+
     "contributors": {
       "type": "array",
       "description": "The institution or person responsible for contributing to the resource.",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "contributorName": { "type": "string" },
           "nameType": { "type": "string", "enum": ["Personal","Organizational"] },
           "givenName": { "type": "string" },
           "familyName": { "type": "string" },
-          "nameIdentifier": {
-            "type": "array",
-            "items": { "type": "string", "format": "uri" }
-          },
-          "affiliation": {
-            "type": "array",
-            "items": { "type": "string" }
-          },
-          "contributorType": { "type": "string" }
+          "nameIdentifier": { "type": "array", "items": { "type": "string", "format": "uri" } },
+          "affiliation": { "type": "array", "items": { "anyOf": [{"type": "string"},{"type":"string","format":"uri"}] } },
+          "contributorType": {
+            "type": "string",
+            "enum": [
+              "ContactPerson","DataCollector","DataCurator","DataManager","Distributor","Editor","HostingInstitution","Producer","ProjectLeader","ProjectManager","ProjectMember","RegistrationAgency","RegistrationAuthority","RelatedPerson","Researcher","ResearchGroup","RightsHolder","Sponsor","Supervisor","Translator","WorkPackageLeader","Other"
+            ]
+          }
         },
-        "required": ["contributorName","contributorType"],
-        "additionalProperties": false
+        "required": ["contributorName","contributorType"]
       }
     },
+
     "dates": {
       "type": "array",
-      "description": "Different dates relevant to the work.",
+      "description": "Different dates relevant to the work (W3CDTF or RKMS-ISO8601; ranges allowed).",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "date": { "type": "string" },
-          "dateType": { "type": "string" },
+          "dateType": {
+            "type": "string",
+            "enum": ["Accepted","Available","Copyrighted","Collected","Coverage","Created","Issued","Submitted","Updated","Valid","Withdrawn","Other"]
+          },
           "dateInformation": { "type": "string" }
         },
-        "required": ["date","dateType"],
-        "additionalProperties": false
+        "required": ["date","dateType"]
       }
     },
-    "language": {
-      "type": "string",
-      "description": "Primary language of the resource. IETF BCP 47 code."
-    },
+
+    "language": { "type": "string", "description": "Primary language of the resource (IETF BCP 47).", "pattern": "^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$" },
+
     "alternateIdentifiers": {
       "type": "array",
       "description": "Identifiers other than the primary Identifier.",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "value": { "type": "string" },
           "alternateIdentifierType": { "type": "string" }
         },
-        "required": ["value","alternateIdentifierType"],
-        "additionalProperties": false
+        "required": ["value","alternateIdentifierType"]
       }
     },
+
     "relatedIdentifiers": {
       "type": "array",
       "description": "Identifiers of related resources.",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "value": { "type": "string" },
-          "resourceTypeGeneral": { "type": "string" },
-          "relatedIdentifierType": { "type": "string" },
-          "relationType": { "type": "string" },
+          "resourceTypeGeneral": {
+            "type": "string",
+            "enum": [
+              "Audiovisual","Award","Book","BookChapter","Collection","ComputationalNotebook","ConferencePaper","ConferenceProceeding","DataPaper","Dataset","Dissertation","Event","Image","InteractiveResource","Instrument","Journal","JournalArticle","Model","OutputManagementPlan","PeerReview","PhysicalObject","Preprint","Project","Report","Service","Software","Sound","Standard","StudyRegistration","Text","Workflow","Other"
+            ]
+          },
+          "relatedIdentifierType": {
+            "type": "string",
+            "enum": [
+              "ARK","arXiv","bibcode","CSTR","DOI","EAN13","EISSN","Handle","IGSN","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","RRID","UPC","URL","URN","w3id"
+            ]
+          },
+          "relationType": {
+            "type": "string",
+            "enum": [
+              "IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","IsNewVersionOf","IsPreviousVersionOf","IsPartOf","HasPart","IsPublishedIn","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","HasMetadata","IsMetadataFor","Reviews","IsReviewedBy","IsDerivedFrom","IsSourceOf","Describes","IsDescribedBy","HasVersion","IsVersionOf","Requires","IsRequiredBy","Obsoletes","IsObsoletedBy","Collects","IsCollectedBy","HasTranslation","IsTranslationOf"
+            ]
+          },
           "relatedMetadataScheme": { "type": "string" },
           "schemeURI": { "type": "string", "format": "uri" },
           "schemeType": { "type": "string" }
         },
-        "required": ["value","relatedIdentifierType","relationType"],
-        "additionalProperties": false
+        "required": ["value","relatedIdentifierType","relationType"]
       }
     },
-    "sizes": {
-      "type": "array",
-      "description": "Unstructured size information about the resource.",
-      "items": { "type": "string" }
-    },
-    "formats": {
-      "type": "array",
-      "description": "Technical formats of the resource.",
-      "items": { "type": "string" }
-    },
-    "version": {
-      "type": "string",
-      "description": "Version number of the resource."
-    }
+
+    "sizes": { "type": "array", "description": "Unstructured size information about the resource.", "items": { "type": "string" } },
+    "formats": { "type": "array", "description": "Technical formats of the resource.", "items": { "type": "string" } },
+    "version": { "type": "string", "description": "Version number of the resource." }
   },
 
   "required": [
@@ -251,7 +217,5 @@
     "publicationYear",
     "resourceType",
     "resourceTypeGeneral"
-  ],
-
-  "additionalProperties": false
+  ]
 }

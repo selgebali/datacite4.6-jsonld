@@ -5,242 +5,72 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld#",
-    "@graph": [
-      {
-        "@id": "datacite:RelationTypeScheme",
-        "@type": "skos:ConceptScheme",
-        "skos:prefLabel": "DataCite Relation Type",
-        "skos:definition": "Controlled list of relation types used to describe how the described resource relates to another resource."
-      },
-      {
-        "@id": "datacite:IsCitedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsCitedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Cites",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Cites",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsSupplementTo",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsSupplementTo",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsSupplementedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsSupplementedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsContinuedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsContinuedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Continues",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Continues",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsNewVersionOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsNewVersionOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsPreviousVersionOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsPreviousVersionOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsPartOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsPartOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:HasPart",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "HasPart",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsPublishedIn",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsPublishedIn",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsReferencedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsReferencedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:References",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "References",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsDocumentedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsDocumentedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Documents",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Documents",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsCompiledBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsCompiledBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Compiles",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Compiles",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsVariantFormOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsVariantFormOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsOriginalFormOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsOriginalFormOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsIdenticalTo",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsIdenticalTo",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:HasMetadata",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "HasMetadata",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsMetadataFor",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsMetadataFor",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Reviews",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Reviews",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsReviewedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsReviewedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsDerivedFrom",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsDerivedFrom",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsSourceOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsSourceOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Describes",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Describes",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsDescribedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsDescribedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:HasVersion",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "HasVersion",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsVersionOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsVersionOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Requires",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Requires",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsRequiredBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsRequiredBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Obsoletes",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Obsoletes",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsObsoletedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsObsoletedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:Collects",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Collects",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsCollectedBy",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsCollectedBy",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:HasTranslation",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "HasTranslation",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      },
-      {
-        "@id": "datacite:IsTranslationOf",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "IsTranslationOf",
-        "skos:inScheme": "datacite:RelationTypeScheme"
-      }
-    ]
-  }
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/relationTypes.jsonld#"
+  },
+  "@graph": [
+    {
+      "@id": "datacite:RelationTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Relation Type",
+      "skos:definition": "Controlled list of relation types used in DataCite metadata to describe how the registered resource (A) relates to the related resource (B)."
+    },
+
+    {"@id":"datacite:IsCitedBy","@type":"skos:Concept","skos:prefLabel":"IsCitedBy","skos:definition":"B includes a citation of A.","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Processed as a citation; recommended for discovery."},
+    {"@id":"datacite:Cites","@type":"skos:Concept","skos:prefLabel":"Cites","skos:definition":"A includes a citation of B.","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Processed as a reference; recommended for discovery."},
+
+    {"@id":"datacite:IsSupplementTo","@type":"skos:Concept","skos:prefLabel":"IsSupplementTo","skos:definition":"A is a supplement to B (e.g., additional material for B).","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Processed as a citation."},
+    {"@id":"datacite:IsSupplementedBy","@type":"skos:Concept","skos:prefLabel":"IsSupplementedBy","skos:definition":"B provides supplementary material for A.","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Processed as a reference."},
+
+    {"@id":"datacite:IsContinuedBy","@type":"skos:Concept","skos:prefLabel":"IsContinuedBy","skos:definition":"B is a continuation of A.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:Continues","@type":"skos:Concept","skos:prefLabel":"Continues","skos:definition":"A is a continuation of B.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:IsNewVersionOf","@type":"skos:Concept","skos:prefLabel":"IsNewVersionOf","skos:definition":"A is a new version (superseding) of B.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsPreviousVersionOf","@type":"skos:Concept","skos:prefLabel":"IsPreviousVersionOf","skos:definition":"A is a previous version superseded by B.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:IsPartOf","@type":"skos:Concept","skos:prefLabel":"IsPartOf","skos:definition":"A is a portion or component of B.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:HasPart","@type":"skos:Concept","skos:prefLabel":"HasPart","skos:definition":"B is a portion or component of A.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:IsPublishedIn","@type":"skos:Concept","skos:prefLabel":"IsPublishedIn","skos:definition":"A is published in B (e.g., article in journal, chapter in book, paper in proceedings).","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Introduced with RelatedItem; typically used with volume/issue/pages."},
+
+    {"@id":"datacite:IsReferencedBy","@type":"skos:Concept","skos:prefLabel":"IsReferencedBy","skos:definition":"B references A (not necessarily a formal citation).","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Processed as a citation."},
+    {"@id":"datacite:References","@type":"skos:Concept","skos:prefLabel":"References","skos:definition":"A references B (not necessarily a formal citation).","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Processed as a reference."},
+
+    {"@id":"datacite:IsDocumentedBy","@type":"skos:Concept","skos:prefLabel":"IsDocumentedBy","skos:definition":"B documents A (e.g., methods, readme, protocol).","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:Documents","@type":"skos:Concept","skos:prefLabel":"Documents","skos:definition":"A documents B.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:IsCompiledBy","@type":"skos:Concept","skos:prefLabel":"IsCompiledBy","skos:definition":"B compiles A (e.g., A is included in a compiled collection B).","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:Compiles","@type":"skos:Concept","skos:prefLabel":"Compiles","skos:definition":"A compiles B.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:IsVariantFormOf","@type":"skos:Concept","skos:prefLabel":"IsVariantFormOf","skos:definition":"A is a different form or format of B.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsOriginalFormOf","@type":"skos:Concept","skos:prefLabel":"IsOriginalFormOf","skos:definition":"A is the original form from which B is derived as a variant.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:IsIdenticalTo","@type":"skos:Concept","skos:prefLabel":"IsIdenticalTo","skos:definition":"A and B are the same resource (e.g., different identifiers for the same object).","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:HasMetadata","@type":"skos:Concept","skos:prefLabel":"HasMetadata","skos:definition":"B is metadata about A.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsMetadataFor","@type":"skos:Concept","skos:prefLabel":"IsMetadataFor","skos:definition":"A is metadata about B.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:Reviews","@type":"skos:Concept","skos:prefLabel":"Reviews","skos:definition":"A is a review of B.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsReviewedBy","@type":"skos:Concept","skos:prefLabel":"IsReviewedBy","skos:definition":"B is a review of A.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:IsDerivedFrom","@type":"skos:Concept","skos:prefLabel":"IsDerivedFrom","skos:definition":"A is derived from B (e.g., analysis, subset, translation).","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsSourceOf","@type":"skos:Concept","skos:prefLabel":"IsSourceOf","skos:definition":"A is the source from which B is derived.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:Describes","@type":"skos:Concept","skos:prefLabel":"Describes","skos:definition":"A describes B (e.g., a paper describes a dataset).","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsDescribedBy","@type":"skos:Concept","skos:prefLabel":"IsDescribedBy","skos:definition":"B describes A.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:HasVersion","@type":"skos:Concept","skos:prefLabel":"HasVersion","skos:definition":"B is a version of A.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsVersionOf","@type":"skos:Concept","skos:prefLabel":"IsVersionOf","skos:definition":"A is a version of B.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:Requires","@type":"skos:Concept","skos:prefLabel":"Requires","skos:definition":"A requires B to support its function, delivery, or interpretation.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsRequiredBy","@type":"skos:Concept","skos:prefLabel":"IsRequiredBy","skos:definition":"B requires A to support its function, delivery, or interpretation.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:Obsoletes","@type":"skos:Concept","skos:prefLabel":"Obsoletes","skos:definition":"A renders B obsolete.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsObsoletedBy","@type":"skos:Concept","skos:prefLabel":"IsObsoletedBy","skos:definition":"B renders A obsolete.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:Collects","@type":"skos:Concept","skos:prefLabel":"Collects","skos:definition":"A is a collection that gathers B.","skos:inScheme":"datacite:RelationTypeScheme"},
+    {"@id":"datacite:IsCollectedBy","@type":"skos:Concept","skos:prefLabel":"IsCollectedBy","skos:definition":"B is a collection that gathers A.","skos:inScheme":"datacite:RelationTypeScheme"},
+
+    {"@id":"datacite:HasTranslation","@type":"skos:Concept","skos:prefLabel":"HasTranslation","skos:definition":"B is a translation of A.","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Added in 4.6."},
+    {"@id":"datacite:IsTranslationOf","@type":"skos:Concept","skos:prefLabel":"IsTranslationOf","skos:definition":"A is a translation of B.","skos:inScheme":"datacite:RelationTypeScheme","skos:note":"Added in 4.6."}
+  ]
 }

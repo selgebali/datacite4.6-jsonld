@@ -5,26 +5,30 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/nameTypes.jsonld#",
-    "@graph": [
-      {
-        "@id": "datacite:NameTypeScheme",
-        "@type": "skos:ConceptScheme",
-        "skos:prefLabel": "Name Type",
-        "skos:definition": "Controlled list for personal and organizational name types in the DataCite Metadata Schema."
-      },
-      {
-        "@id": "datacite:Organizational",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Organizational",
-        "skos:inScheme": "datacite:NameTypeScheme"
-      },
-      {
-        "@id": "datacite:Personal",
-        "@type": "skos:Concept",
-        "skos:prefLabel": "Personal",
-        "skos:inScheme": "datacite:NameTypeScheme"
-      }
-    ]
-  }
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/nameTypes.jsonld#"
+  },
+  "@graph": [
+    {
+      "@id": "datacite:NameTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Name Type",
+      "skos:definition": "Controlled list for personal and organizational name types in the DataCite Metadata Schema (4.6), used for creatorNameType and contributorNameType."
+    },
+    {
+      "@id": "datacite:Organizational",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Organizational",
+      "skos:definition": "The name identifies an organization, institution, or group. Use this value when the creator or contributor is not an individual person but an organizational entity.",
+      "skos:inScheme": "datacite:NameTypeScheme",
+      "skos:note": "Listed in the DataCite controlled list for nameType."
+    },
+    {
+      "@id": "datacite:Personal",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Personal",
+      "skos:definition": "The name identifies a person (individual). Use this value when the creator or contributor is an individual person rather than an organization.",
+      "skos:inScheme": "datacite:NameTypeScheme",
+      "skos:note": "Listed in the DataCite controlled list for nameType."
+    }
+  ]
 }
