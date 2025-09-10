@@ -149,39 +149,30 @@
         "properties": {
           "title": { "type": "string", "description": "The title text." },
           "titleType": { "$ref": "#/$defs/titleType/enumSchema" },
-          "lang": { "type": "string", "description": "IETF BCP 47 language code, e.g. 'en'." }
+          "lang": { "type": "string", "description": "IETF BCP 47 language tag, e.g. 'en' or 'en-GB'." }
         },
         "required": ["title"],
         "additionalProperties": false
       }
     },
     "publisher": {
-      "type": "object",
-      "description": "Information about the entity that published the resource.",
-      "properties": {
-        "name": { "type": "string", "description": "Name of the publisher." },
-        "lang": { "type": "string", "description": "Language of the publisher name (IETF BCP 47 code)." },
-        "schemeUri": { "type": "string", "format": "uri", "description": "URI of the publisher identifier scheme." },
-        "publisherIdentifier": { "type": "string", "description": "Identifier for the publisher (e.g. ROR ID)." },
-        "publisherIdentifierScheme": { "type": "string", "description": "Scheme of the publisher identifier (e.g. 'ROR')." }
-      },
-      "required": ["name"],
-      "allOf": [
-        {
-          "if": { "required": ["publisherIdentifier"] },
-          "then": { "required": ["publisherIdentifierScheme"] }
-        },
-        {
-          "if": { "properties": { "publisherIdentifierScheme": { "const": "ROR" } }, "required": ["publisherIdentifierScheme"] },
-          "then": {
-            "properties": {
-              "publisherIdentifier": { "type": "string", "format": "uri" }
-            }
-          }
-        }
-      ],
-      "additionalProperties": false
-    },
+  "type": "object",
+  "description": "Information about the entity that publishes the resource.",
+  "properties": {
+    "name": { "type": "string", "description": "Publisher name (free text)." },
+    "publisherIdentifier": { "type": "string", "description": "Persistent identifier for the publisher (e.g., ROR, ISNI)." },
+    "publisherIdentifierScheme": { "type": "string", "description": "Identifier scheme for the publisher (e.g., ROR, ISNI)." },
+    "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." },
+    "lang": { "type": "string", "description": "IETF BCP 47 language tag for the publisher name." }
+  },
+  "required": ["name"],
+  "additionalProperties": false,
+  "allOf": [
+    { "if": { "required": ["publisherIdentifier"] }, "then": { "required": ["publisherIdentifierScheme"] } },
+    { "if": { "properties": { "publisherIdentifierScheme": { "const": "ROR" } }, "required": ["publisherIdentifierScheme"] },
+      "then": { "properties": { "publisherIdentifier": { "type": "string", "format": "uri" } } } }
+  ]
+},
     "container": {
       "type": "object",
       "description": "Information about the container in which the resource is published (e.g. journal, book, collection).",
@@ -194,7 +185,13 @@
       "required": ["type", "title"],
       "additionalProperties": false
     },
-    "publicationYear": { "type": "string", "pattern": "^\\d{4}$", "description": "Year when the resource was or will be made publicly available (YYYY)." },
+    "publicationYear": {
+      "description": "Year when the resource was or will be made publicly available (YYYY).",
+      "anyOf": [
+        { "type": "string", "pattern": "^\\d{4}$" },
+        { "type": "integer", "minimum": 0 }
+      ]
+    },
     "subjects": {
       "type": "array",
       "description": "Subject keywords or classification codes describing the resource.",
@@ -468,7 +465,7 @@
           "rightsIdentifier": { "type": "string", "description": "Identifier for the rights statement." },
           "rightsIdentifierScheme": { "type": "string", "description": "Scheme of the rights identifier." },
           "schemeUri": { "type": "string", "format": "uri", "description": "URI of the rights identifier scheme." },
-          "lang": { "type": "string", "description": "Language of the rights statement (IETF BCP 47 code)." }
+          "lang": { "type": "string", "description": "Language of the rights statement (IETF BCP 47)." }
         },
         "additionalProperties": false
       }
@@ -674,38 +671,38 @@
         "Standard","StudyRegistration","Text","Workflow","Other"
       ],
       "iriMap": {
-        "Audiovisual": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Audiovisual",
-        "Award": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Award",
-        "Book": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Book",
-        "BookChapter": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#BookChapter",
-        "Collection": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Collection",
-        "ComputationalNotebook": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#ComputationalNotebook",
-        "ConferencePaper": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#ConferencePaper",
-        "ConferenceProceeding": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#ConferenceProceeding",
-        "DataPaper": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#DataPaper",
-        "Dataset": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Dataset",
-        "Dissertation": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Dissertation",
-        "Event": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Event",
-        "Image": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Image",
-        "InteractiveResource": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#InteractiveResource",
-        "Instrument": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Instrument",
-        "Journal": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Journal",
-        "JournalArticle": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#JournalArticle",
-        "Model": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Model",
-        "OutputManagementPlan": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#OutputManagementPlan",
-        "PeerReview": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#PeerReview",
-        "PhysicalObject": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#PhysicalObject",
-        "Preprint": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Preprint",
-        "Project": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Project",
-        "Report": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Report",
-        "Service": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Service",
-        "Software": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Software",
-        "Sound": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Sound",
-        "Standard": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Standard",
-        "StudyRegistration": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#StudyRegistration",
-        "Text": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Text",
-        "Workflow": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Workflow",
-        "Other": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/.jsonld#Other"
+        "Audiovisual": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Audiovisual",
+        "Award": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Award",
+        "Book": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Book",
+        "BookChapter": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#BookChapter",
+        "Collection": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Collection",
+        "ComputationalNotebook": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#ComputationalNotebook",
+        "ConferencePaper": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#ConferencePaper",
+        "ConferenceProceeding": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#ConferenceProceeding",
+        "DataPaper": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#DataPaper",
+        "Dataset": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Dataset",
+        "Dissertation": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Dissertation",
+        "Event": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Event",
+        "Image": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Image",
+        "InteractiveResource": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#InteractiveResource",
+        "Instrument": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Instrument",
+        "Journal": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Journal",
+        "JournalArticle": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#JournalArticle",
+        "Model": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Model",
+        "OutputManagementPlan": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#OutputManagementPlan",
+        "PeerReview": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#PeerReview",
+        "PhysicalObject": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#PhysicalObject",
+        "Preprint": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Preprint",
+        "Project": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Project",
+        "Report": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Report",
+        "Service": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Service",
+        "Software": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Software",
+        "Sound": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Sound",
+        "Standard": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Standard",
+        "StudyRegistration": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#StudyRegistration",
+        "Text": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Text",
+        "Workflow": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Workflow",
+        "Other": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/resourceTypeGeneral.jsonld#Other"
       },
       "enumSchema": { "type": "string", "enum": [
         "Audiovisual","Award","Book","BookChapter","Collection",
@@ -937,7 +934,9 @@
 
       "doi": { "@id": "datacite:identifier", "@type": "@id" },
       "creators": { "@id": "datacite:creators", "@container": "@list" },
-      "name": { "@id": "datacite:creatorName", "@type": "xsd:string" },
+      "name": { "@id": "schema:name", "@type": "xsd:string" },
+      "creatorName": { "@id": "datacite:creatorName", "@type": "xsd:string" },
+      "contributorName": { "@id": "datacite:contributorName", "@type": "xsd:string" },
       "nameType": { "@id": "datacite:nameType", "@type": "xsd:string" },
       "givenName": { "@id": "datacite:givenName", "@type": "xsd:string" },
       "familyName": { "@id": "datacite:familyName", "@type": "xsd:string" },
@@ -1043,6 +1042,28 @@
       { "required": ["data"] },
       { "required": ["errors"] }
     ],
+    "additionalProperties": false
+  },
+  "submitProfile": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-submit.json",
+    "title": "DataCite REST API Submission (JSON:API envelope)",
+    "description": "Schema to validate DataCite REST API submissions using a JSON:API envelope. The attributes payload MUST conform to the root attributes schema in this file.",
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "const": "dois" },
+          "attributes": { "$ref": "#" },
+          "relationships": { "type": "object", "additionalProperties": true },
+          "links": { "type": "object", "additionalProperties": true }
+        },
+        "required": ["type", "attributes"],
+        "additionalProperties": false
+      }
+    },
+    "required": ["data"],
     "additionalProperties": false
   }
 }
