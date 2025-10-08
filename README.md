@@ -1,51 +1,63 @@
 # DataCite 4.6 JSON‑LD Profile & Beginner’s Guide
 
-This repository contains a **self‑contained JSON Schema** and an embedded **JSON‑LD `@context`** for **DataCite Metadata Schema v4.6**, aligned with the **DataCite REST API**. It lets you (1) validate submission payloads before sending them to the API and (2) interpret the same JSON as **linked data**.
+Welcome to the DataCite 4.6 JSON‑LD Profile repository. This resource provides a **self‑contained JSON Schema** alongside an embedded **JSON‑LD `@context`** for the **DataCite Metadata Schema v4.6**, fully aligned with the **DataCite REST API**. It enables you to (1) validate your metadata submission payloads before sending them to the API, and (2) interpret the same JSON as **linked data** for semantic applications.
 
-If you’re new to schemas, linked data, or DataCite: don’t worry. This guide walks you through the concepts, the files in this repo, and exactly how to use them step by step.
-
----
-
-## Why this matters (beginner background)
-
-Metadata is “data about data.” For DOIs and research objects, **consistent metadata** is critical for discovery, citation, and reuse. The DataCite 4.6 schema defines **what fields exist**, **which are required**, and **which controlled values** are allowed (e.g., resource types and relation types).  
-This repository adds two big things:
-
-1) **Validation**:  using **JSON Schema** to confirm your JSON is structurally correct and meets required/controlled fields.  
-2) **Semantic meaning**:  using **JSON‑LD** so your JSON keys can be mapped to **IRIs** (web identifiers) and integrated into **knowledge graphs**.
+If you are new to metadata schemas, linked data, or DataCite itself, don’t worry. This guide will walk you through the key concepts, the files included here, and exactly how to use them step by step.
 
 ---
 
-## What’s in this repository
+## Why This Matters: A Beginner’s Perspective
+
+Metadata is essentially “data about data.” For research data and persistent identifiers (PIDs) like DOIs, having consistent and well-structured metadata is critical. It helps researchers discover, cite, and reuse datasets reliably. Without good metadata, research outputs risk being lost or misunderstood.
+
+JSON (JavaScript Object Notation) is a lightweight, human-readable format commonly used to represent data structures. JSON-LD (JSON for Linked Data) extends JSON by adding semantic context through namespaces—unique web identifiers called IRIs—that provide clear, unambiguous meanings to each data element. This semantic layer allows data to be linked and integrated across different systems and knowledge graphs.
+
+DataCite is a leading organization that assigns DOIs for research outputs and defines a metadata schema to describe those outputs consistently. Metadata Schema v4.6 specifies which fields to include, allowed values, and how to represent the data.
+
+Validation and semantics serve different but complementary roles. JSON Schema checks the structure of your metadata—ensuring required fields exist, values follow expected formats, and no unexpected fields appear. JSON-LD adds semantic meaning by mapping JSON keys to globally recognized identifiers, enabling machines to understand the data beyond its shape.
+
+This repository bridges these two worlds. It offers a JSON Schema to validate your DataCite metadata payloads before submission and embeds a JSON-LD `@context` that links the same JSON keys to semantic IRIs. This means your data is both syntactically correct and semantically interoperable, ready for API submission and linked data applications.
+
+---
+
+## What’s Inside This Repository
+
+Here’s what you’ll find and how it fits together:
 
 - **`docs/datacite4.6-profile.json`** (root “submit” profile)  
-  - Validates **client‑submitted** metadata (POST/PUT to the DataCite REST API).  
-  - Strict by design (`"additionalProperties": false`), so it flags missing/extra fields and format errors.  
-  - Embeds an **`@context`** (under `profile`) that maps JSON properties to semantic IRIs (DataCite + selected external vocabularies).  
-  - Inlines the key **controlled vocabularies** (e.g., `resourceTypeGeneral`, `contributorType`, `relationType`, etc.) with enumerations.
-- **`responseProfile`** (a schema object inside the same file)  
-  - Validates **API responses** that come in a **JSON:API** envelope (`data.id`, `data.type="dois"`, `data.attributes`, …).  
-  - Permissive for attributes (allows read‑only and analytics fields the API adds like `url`, `state`, `viewCount`, `created`).
+  - Validates **client-submitted** metadata (used for POST/PUT requests to the DataCite REST API).  
+  - Strict by design (`"additionalProperties": false`), so it flags missing or extra fields and format errors.  
+  - Embeds an **`@context`** (under `profile`) that maps JSON properties to semantic IRIs (DataCite plus selected external vocabularies).  
+  - Includes key **controlled vocabularies** (e.g., `resourceTypeGeneral`, `contributorType`, `relationType`) with enumerations.
 
-> Think of it as **what you send in** vs **what you get back**.
+- **`responseProfile`** (a schema object inside the same file)  
+  - Validates **API responses** wrapped in a **JSON:API** envelope (`data.id`, `data.type="dois"`, `data.attributes`, etc.).  
+  - Permissive for attributes, allowing read-only and analytics fields the API adds, such as `url`, `state`, `viewCount`, and `created`.
+
+> Think of these as **what you send in** versus **what you get back**—both defined in the same bundled file.
+
+- **`exportProfile`** (added in this release)  
+  - Documents how to convert validated DataCite JSON into RDF-ready JSON-LD.  
+  - Provides explicit rules for language-tag conversion (turning `{text, lang}` pairs into `@language` literals) and DOI-to-IRI construction (`https://doi.org/<doi>`).  
+  - Helps generate graph-native metadata while maintaining compatibility with DataCite’s API.
 
 - **SKOS/JSKOS crosswalks** (e.g., `SKOScrosswalk.jsonld`)  
-  - Map DataCite terms to external vocabularies (Schema.org, DCAT, DCTERMS, Wikidata) to improve interoperability.
+  - Map DataCite terms to external vocabularies like Schema.org, DCAT, DCTERMS, and Wikidata to improve interoperability.
 
 ---
 
-## Glossary (plain‑language)
+## Glossary: Key Terms Explained
 
-- **JSON Schema**: A machine‑readable way to describe the **shape** of a JSON document: which fields are required, allowed values, formats, and types.  
-- **JSON‑LD**: “JSON for Linked Data”, lets you attach **semantic meanings** to JSON keys via an **`@context`** so different systems agree on what a field means.  
-- **SKOS**: A W3C standard to model **controlled vocabularies** and to link terms across vocabularies (e.g., “exact match”, “broader”, “narrower”).  
-- **Ontology / Crosswalk**: A **mapping** between vocabularies/standards—e.g., connecting DataCite’s `publisher` to Schema.org’s `schema:publisher`.
+- **JSON Schema**: A machine-readable specification describing the **shape** of a JSON document—what fields are required, allowed values, formats, and data types.  
+- **JSON‑LD**: “JSON for Linked Data” allows you to attach **semantic meanings** to JSON keys via an **`@context`**, so different systems can agree on what each field means.  
+- **SKOS**: A W3C standard for modeling **controlled vocabularies** and linking terms across vocabularies (e.g., indicating “exact match,” “broader,” or “narrower” relationships).  
+- **Ontology / Crosswalk**: A **mapping** between vocabularies or standards—for example, connecting DataCite’s `publisher` field to Schema.org’s `schema:publisher`.
 
 ---
 
-## What’s new in DataCite 4.6 (highlights)
+## What’s New in DataCite 4.6 (Highlights)
 
-DataCite 4.6 adds/updates several controlled values and types that you’ll see in this profile:
+DataCite 4.6 introduces or updates several controlled values and types reflected in this profile:
 
 - **`resourceTypeGeneral`**: adds **`Project`**, **`Award`**  
 - **`relatedIdentifierType`**: adds **`RRID`**, **`CSTR`**  
@@ -53,30 +65,31 @@ DataCite 4.6 adds/updates several controlled values and types that you’ll see 
 - **`relationType`**: adds the pair **`IsTranslationOf` / `HasTranslation`**  
 - **`dateType`**: adds **`Coverage`**
 
-These ensure alignment with the official 4.6 schema and may differ from older examples/tutorials.
+These updates ensure alignment with the official 4.6 schema and may differ from older examples or tutorials.
 
 ---
 
-## Install / set up
+## Installation / Setup
 
 You only need Python if you want to run local validation:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install jsonschema
 ```
 
-(Any JSON Schema validator that supports **draft‑07** will work.)
+Any JSON Schema validator supporting **draft‑07** will work.
 
 ---
 
-## Usage overview (two core paths)
+## Usage Overview: Two Core Paths
 
-1) **Prepare and validate a submission payload** (your JSON for POST/PUT).  
-2) **Validate a response** (the JSON:API envelope returned by GET /dois/:id).
+This section explains how to use the bundled schema for both submission validation and response validation. Both **submitProfile** and **responseProfile** are part of the same bundled file (`docs/datacite4.6-profile.json`).
 
-### 1) Validate a submission
+### 1) Validate a Submission Payload
+
+Use this to check your JSON metadata before sending it to the DataCite REST API (POST/PUT):
 
 ```python
 import json
@@ -89,27 +102,37 @@ Draft7Validator(schema).validate(payload)
 print("OK: submission payload is valid")
 ```
 
-**Minimal valid submission example** (comments for learning—remove `//` for real use):
+**Minimal valid submission example:**
 
 ```jsonc
 {
-  "doi": "10.1234/example-doi",                 // Required DOI
-  "creators": [                                 // At least one creator
+  "doi": "10.1234/example-doi",
+  "creators": [
     {
       "name": "Doe, Jane",
-      "nameType": "Personal"                    // Controlled: Personal|Organizational
+      "nameType": "Personal"
     }
   ],
-  "titles": [{ "title": "An Example Dataset" }],// At least one title
-  "publisher": { "name": "Example University" },
+  "titles": [
+    {
+      "title": "An Example Dataset"
+    }
+  ],
+  "publisher": {
+    "name": "Example University"
+  },
   "publicationYear": "2025",
-  "types": { "resourceTypeGeneral": "Dataset" } // Controlled vocabulary
+  "types": {
+    "resourceTypeGeneral": "Dataset"
+  }
 }
 ```
 
 > Tip: The submit schema enforces patterns (e.g., DOI regex) and cardinality (e.g., `creators` and `titles` must not be empty).
 
-### 2) Validate a response envelope
+### 2) Validate a Response Envelope
+
+Use this to validate JSON:API responses returned by the DataCite API (GET /dois/:id):
 
 ```python
 import json
@@ -122,7 +145,7 @@ Draft7Validator(doc["responseProfile"]).validate(resp)
 print("OK: response envelope looks good")
 ```
 
-**Response example (JSON:API)**:
+**Example response (JSON:API format):**
 
 ```json
 {
@@ -131,11 +154,21 @@ print("OK: response envelope looks good")
     "type": "dois",
     "attributes": {
       "doi": "10.1234/example-doi",
-      "creators": [{ "name": "Doe, Jane" }],
-      "titles": [{ "title": "An Example Dataset" }],
+      "creators": [
+        {
+          "name": "Doe, Jane"
+        }
+      ],
+      "titles": [
+        {
+          "title": "An Example Dataset"
+        }
+      ],
       "publisher": "Example University",
       "publicationYear": 2025,
-      "types": { "resourceTypeGeneral": "Dataset" },
+      "types": {
+        "resourceTypeGeneral": "Dataset"
+      },
       "url": "https://example.org/data/1234",
       "state": "findable"
     }
@@ -147,9 +180,9 @@ print("OK: response envelope looks good")
 
 ---
 
-## How the JSON‑LD `@context` helps
+## How the JSON‑LD `@context` Helps
 
-Inside `docs/datacite4.6-profile.json`, the `profile.@context` maps JSON keys to IRIs so the same JSON can be converted into RDF for linked data use.
+Inside `docs/datacite4.6-profile.json`, the `profile.@context` section maps JSON keys to IRIs. This mapping allows the same JSON to be converted into RDF for linked data applications.
 
 Examples:
 
@@ -163,61 +196,70 @@ This treats the DOI as a global identifier (IRI). Another example:
 "publisher": { "@id": "datacite:publisher" }
 ```
 
-Now applications can understand that `publisher` aligns with the DataCite notion of a publisher, and you can **also** map it to Schema.org:
+Applications can understand that `publisher` aligns with DataCite’s concept of a publisher. You can also map it to Schema.org:
 
 - `publisher` → `datacite:publisher`  
 - `publisher` → `schema:publisher`
 
 ---
 
-## SKOS crosswalks (DataCite ⇄ external vocabularies)
+## SKOS Crosswalks (DataCite ⇄ External Vocabularies)
 
-The SKOS/JSKOS files provide a **crosswalk** that links DataCite elements to **Schema.org**, **DCAT**, **DCTERMS**, and **Wikidata**. This allows search engines, catalogues, and graph tools to interpret your metadata consistently.
+The SKOS/JSKOS files provide **crosswalks** that link DataCite elements to external vocabularies such as Schema.org, DCAT, DCTERMS, and Wikidata. These mappings help search engines, catalogues, and graph tools interpret your metadata consistently.
 
-**Example idea** (conceptual):
+**Conceptual example:**
 
 ```jsonc
 {
   "skos:prefLabel": "publisher",
   "skos:exactMatch": [
-    "https://schema.org/publisher",          // schema:publisher
-    "https://purl.org/dc/terms/publisher"    // dcterms:publisher
+    "https://schema.org/publisher",
+    "https://purl.org/dc/terms/publisher"
   ]
 }
 ```
 
-This indicates that *DataCite’s* `publisher` corresponds to these external terms.
+This indicates that DataCite’s `publisher` corresponds precisely to these external terms.
 
 ---
 
-## Troubleshooting & tips
+## Troubleshooting & Tips
 
-- **Submission fails but response validates**: You’re probably validating a response with the strict submit schema. Use `responseProfile` for responses.  
-- **ORCID pattern errors**: For submission, use `0000-0000-0000-0000` style (with checksum). Responses may present ORCID as a full URL—allowed by `responseProfile`.  
-- **Unexpected property errors**: The submit schema is strict. Remove any fields not listed in the schema or add them under the correct nested object.  
-- **Cardinality**: Arrays like `creators`, `titles` must have **at least one** entry; nested objects often require specific pairs (e.g., if `affiliationIdentifier` then `affiliationIdentifierScheme`).  
-- **Dates and numbers**: Where formats are constrained, follow the hints in the schema (e.g., ISO‑8601 for dates; numeric ranges for geo coordinates).
+- **Submission fails but response validates**  
+  You might be validating a response with the strict submit schema. Use `responseProfile` for response validation.
+
+- **ORCID pattern errors**  
+  For submission, use the bare ORCID format (`0000-0000-0000-0000` with checksum). Responses may present ORCID as a full URL, which is allowed by `responseProfile`.
+
+- **Unexpected property errors**  
+  The submit schema is strict. Remove any fields not listed or add them under the correct nested object.
+
+- **Cardinality**  
+  Arrays like `creators` and `titles` must have **at least one** entry. Nested objects often require specific pairs (e.g., if `affiliationIdentifier` is present, then `affiliationIdentifierScheme` must be too).
+
+- **Dates and numbers**  
+  Follow schema hints for formats, such as ISO‑8601 for dates and numeric ranges for geographic coordinates.
 
 ---
 
 ## FAQ
 
 **Q: What’s the difference between `identifiers` and `alternateIdentifiers`?**  
-- `identifiers`: Additional/internal identifiers (ISBN, Handle, local IDs).  
+- `identifiers`: Additional or internal identifiers (ISBN, Handle, local IDs).  
 - `alternateIdentifiers`: True alternates like PubMed ID or another primary ID used elsewhere.
 
 **Q: Do I need the JSON‑LD `@context` to submit to the API?**  
-No. The API accepts plain JSON. The `@context` is included here to support **semantic interoperability**—useful for indexing, KG ingestion, and cross‑platform alignment.
+No. The API accepts plain JSON. The `@context` is included here to support **semantic interoperability**—useful for indexing, knowledge graph ingestion, and cross-platform alignment.
 
 **Q: Which JSON Schema draft is used?**  
-Draft‑07. Use a validator that supports it.
+Draft‑07. Use a validator that supports this version.
 
 **Q: Can I extend the schema?**  
-You can fork/extend, but the submit profile is intentionally strict to match the API and DataCite 4.6. If you add custom fields, consider **profiles** layered on top of DataCite, not changes inside it.
+You can fork or extend it, but the submit profile is intentionally strict to match the API and DataCite 4.6. For custom fields, consider **profiles** layered on top of DataCite rather than modifying the core schema.
 
 ---
 
-## References (authoritative sources)
+## References (Authoritative Sources)
 
 - DataCite: **Metadata Schema 4.6** — https://schema.datacite.org/meta/kernel-4.6/  
 - DataCite: **REST API docs** — https://support.datacite.org/docs/api  
@@ -228,10 +270,30 @@ You can fork/extend, but the submit profile is intentionally strict to match the
 
 ---
 
-## Next steps
+## Next Steps
 
-- Validate your **submission** JSON with the root schema (`docs/datacite4.6-profile.json`).  
-- Validate your **responses** with `responseProfile`.  
-- Explore the SKOS/JSKOS crosswalks to connect DataCite terms with Schema.org/DCAT and improve interoperability downstream.
+- Start by validating your **submission** JSON with the root schema (`docs/datacite4.6-profile.json`).  
+- Validate your **responses** with the `responseProfile` inside the same file.  
+- Explore the SKOS/JSKOS crosswalks to connect DataCite terms with Schema.org and DCAT, improving interoperability downstream.
 
 ---
+
+## datacite4.6-profile.json
+
+This bundled profile for DataCite 4.6 contains:
+
+- A root JSON Schema for the attributes you submit to the REST API.  
+- A JSON-LD context (under `profile.@context`) that gives those attributes semantic meaning.  
+- A response schema for validating JSON:API responses.  
+- A submission schema for validating JSON:API requests.  
+- Centralized enumerations with IRIs (under `$defs`) to bridge validation and semantics.
+
+With this bundle, you can:
+
+- Validate and interpret metadata locally.  
+- Generate machine-actionable contexts automatically.  
+- Keep schema and ontology consistency in one versioned artifact.
+
+---
+
+Together, these components provide a comprehensive, beginner-friendly toolkit that ensures your DataCite metadata is both syntactically valid and semantically rich—ready for submission, interpretation, and integration into linked data ecosystems.

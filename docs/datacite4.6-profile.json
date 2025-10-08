@@ -1,9 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json",
+  "$comment": "BUNDLED PROFILE: This single file contains (1) the root attributes schema for client-submitted DataCite 4.6 metadata, (2) centralised enumerations in $defs (with iriMap bridges), (3) a JSON-LD context under profile.@context for semantics, (4) a JSON:API response validator (responseProfile), (5) a JSON:API submission validator (submitProfile), and (6) an exportProfile with language-tag conversion rules for RDF/JSON-LD export.",
   "title": "DataCite Metadata Schema v4.6 – REST API profile (bundled)",
   "description": "Self‑contained JSON Schema and JSON‑LD context for validating and semantically describing DataCite 4.6 metadata as submitted to the DataCite REST API.  This profile reflects the property names and object structures used by the API and inlines all controlled vocabularies.",
   "type": "object",
+  "$comment": "==== ROOT ATTRIBUTES SCHEMA (client-submitted payload, mirrors DataCite REST 'attributes') ====",
   "properties": {
     "identifiers": {
       "type": "array",
@@ -659,6 +661,7 @@
   },
   "required": ["doi", "creators", "titles", "publisher", "publicationYear", "types"],
   "additionalProperties": false,
+  "$comment": "==== ENUMERATIONS ($defs) — validation enums plus iriMap to stable IRIs used during semantic export ====",
   "$defs": {
     "resourceTypeGeneral": {
       "enum": [
@@ -918,6 +921,7 @@
     }
   },
   "profile": {
+    "$comment": "==== JSON-LD CONTEXT (profile.@context) — gives semantic meaning to the attributes. NOTE: 'doi' is typed as xsd:string to match API input. A resolvable DOI IRI can be constructed during export as https://doi.org/<doi>. ====",
     "@context": {
       "@version": 1.1,
       "datacite": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#",
@@ -925,14 +929,14 @@
       "dcat": "http://www.w3.org/ns/dcat#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "$comment": "Language handling note: DataCite arrays like 'titles' and 'descriptions' carry a sibling 'lang' string (BCP 47). We keep these as plain strings here for compatibility. During export (see exportProfile), we convert them to JSON-LD language-tagged value objects { '@value': text, '@language': lang }.",
       "identifiers": { "@id": "datacite:identifiers", "@container": "@list" },
       "identifier": { "@id": "datacite:identifier", "@type": "xsd:string" },
       "identifierType": { "@id": "datacite:identifierType", "@type": "xsd:string" },
       "alternateIdentifiers": { "@id": "datacite:alternateIdentifiers", "@container": "@list" },
       "alternateIdentifier": { "@id": "datacite:alternateIdentifier", "@type": "xsd:string" },
       "alternateIdentifierType": { "@id": "datacite:alternateIdentifierType", "@type": "xsd:string" },
-
-      "doi": { "@id": "datacite:identifier", "@type": "@id" },
+      "doi": { "@id": "datacite:identifier", "@type": "xsd:string" },
       "creators": { "@id": "datacite:creators", "@container": "@list" },
       "name": { "@id": "schema:name", "@type": "xsd:string" },
       "creatorName": { "@id": "datacite:creatorName", "@type": "xsd:string" },
@@ -1011,6 +1015,7 @@
     }
   },
   "responseProfile": {
+    "$comment": "==== JSON:API RESPONSE SCHEMA — validates DataCite REST responses. Allows server-added read-only/analytics fields under data.attributes. ====",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-response.json",
     "title": "DataCite REST API Response (JSON:API envelope)",
@@ -1045,6 +1050,7 @@
     "additionalProperties": false
   },
   "submitProfile": {
+    "$comment": "==== JSON:API SUBMISSION SCHEMA — validates the client envelope; the 'data.attributes' MUST conform to the root attributes schema (#). ====",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-submit.json",
     "title": "DataCite REST API Submission (JSON:API envelope)",
@@ -1065,5 +1071,95 @@
     },
     "required": ["data"],
     "additionalProperties": false
+  },
+  "exportProfile": {
+    "$comment": "==== EXPORT PROFILE — declarative notes and examples for transforming DataCite-shaped JSON into JSON-LD/RDF with proper language-tagged literals and a resolvable DOI @id. This section is documentation for exporters; it is not a JSON Schema and will be ignored by validators. ====",
+    "title": "Export rules for JSON-LD/RDF",
+    "description": "Guidance for exporters that take validated DataCite 4.6 JSON and produce graph-native JSON-LD/RDF, including language-tag handling and DOI IRI construction.",
+    "languageConversion": {
+      "$comment": "Convert fields that have text + 'lang' siblings into JSON-LD value objects with '@language'. If 'lang' is absent, export a plain string literal.",
+      "rules": [
+        {
+          "source": "/titles/*",
+          "valuePointer": "/title",
+          "langPointer": "/lang",
+          "targetProperty": "datacite:title",
+          "export": "If lang present: { '@value': value, '@language': lang }; else: value"
+        },
+        {
+          "source": "/descriptions/*",
+          "valuePointer": "/description",
+          "langPointer": "/lang",
+          "targetProperty": "datacite:description",
+          "export": "If lang present: { '@value': value, '@language': lang }; else: value"
+        },
+        {
+          "source": "/subjects/*",
+          "valuePointer": "/subject",
+          "langPointer": "/lang",
+          "targetProperty": "datacite:subject",
+          "export": "If lang present: { '@value': value, '@language': lang }; else: value"
+        },
+        {
+          "source": "/publisher",
+          "valuePointer": "/name",
+          "langPointer": "/lang",
+          "targetProperty": "datacite:publisher",
+          "export": "If lang present: { '@value': value, '@language': lang }; else: value"
+        }
+      ]
+    },
+    "identifierConstruction": {
+      "$comment": "Construct a resolvable DOI IRI for @id. Preferred order: (1) JSON:API data.id from responses; (2) attributes.doi if present. Do not overwrite if an explicit IRI @id is already provided by an upstream system.",
+      "base": "https://doi.org/",
+      "fromResponse": {
+        "jsonPointer": "/data/id",
+        "pattern": "^10\\.[0-9]{4,}/[-._;()/:a-zA-Z0-9]+$",
+        "export": "@id = 'https://doi.org/' + data.id"
+      },
+      "fromAttributes": {
+        "jsonPointer": "/doi",
+        "pattern": "^10\\.[0-9]{4,}/[-._;()/:a-zA-Z0-9]+$",
+        "export": "@id = 'https://doi.org/' + attributes.doi"
+      }
+    },
+    "jsonldNotes": {
+      "$comment": "JSON-LD usage notes for exporters.",
+      "contextUsage": "Use profile.@context from this file as '@context' (by URL or inline).",
+      "lists": "Fields declared with '@container': '@list' (e.g., 'titles', 'contributors') should be exported as ordered arrays.",
+      "iriTyping": "Fields with '@type': '@id' in the context (e.g., 'nameIdentifier', 'rightsUri', 'funderIdentifier', 'awardUri') must remain absolute IRIs."
+    },
+    "examples": {
+      "$comment": "Minimal before/after example showing language-tag conversion and @id construction.",
+      "input": {
+        "doi": "10.82433/b09z-4k37",
+        "titles": [
+          { "title": "Genome dataset", "lang": "en" },
+          { "title": "Genomdataset", "lang": "sv" }
+        ],
+        "descriptions": [
+          { "description": "Primary release", "descriptionType": "Abstract", "lang": "en" }
+        ],
+        "publisher": { "name": "Example University", "lang": "en" },
+        "subjects": [
+          { "subject": "Bioinformatics", "lang": "en" }
+        ]
+      },
+      "outputJSONLD": {
+        "@context": { "$ref": "profile.@context" },
+        "@id": "https://doi.org/10.82433/b09z-4k37",
+        "titles": [
+          { "title": { "@value": "Genome dataset", "@language": "en" } },
+          { "title": { "@value": "Genomdataset", "@language": "sv" } }
+        ],
+        "descriptions": [
+          { "description": { "@value": "Primary release", "@language": "en" }, "descriptionType": "Abstract" }
+        ],
+        "publisher": { "name": { "@value": "Example University", "@language": "en" } },
+        "subjects": [
+          { "subject": { "@value": "Bioinformatics", "@language": "en" } }
+        ]
+      }
+    }
   }
 }
