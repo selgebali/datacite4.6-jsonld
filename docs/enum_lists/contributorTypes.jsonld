@@ -5,7 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "https://schema.org/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/contributorTypes.jsonld#",
+    "datacite": "https://selgebali.github.io/datacite4.6-jsonld/enum_lists/contributorTypes.jsonld#",
     "skos:inScheme": { "@type": "@id" },
     "skos:prefLabel": { "@container": "@language" },
     "skos:definition": { "@container": "@language" },
