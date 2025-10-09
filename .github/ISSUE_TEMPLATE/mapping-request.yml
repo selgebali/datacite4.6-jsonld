@@ -1,0 +1,50 @@
+name: Mapping / crosswalk request
+description: Request or correct a SKOS/JSKOS mapping or relatedIdentifier relation.
+title: "[MAPPING] <source> → <target>"
+labels: [mappings, metadata]
+assignees: []
+body:
+  - type: input
+    id: vocab
+    attributes:
+      label: Source vocabulary / scheme
+      placeholder: e.g., DataCite contributorType
+  - type: input
+    id: target
+    attributes:
+      label: Target vocabulary / scheme
+      placeholder: e.g., schema.org, DCAT, dcterms, Wikidata (QID)
+  - type: textarea
+    id: pairs
+    attributes:
+      label: Proposed mappings
+      description: One per line; include evidence/URI where possible.
+      placeholder: |
+        "ProjectLeader" skos:exactMatch schema:ProjectRole
+        "Other" skos:closeMatch dcterms:contributor
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / references
+      description: Links to specs, definitions, or community usage.
+  - type: dropdown
+    id: strength
+    attributes:
+      label: Mapping strength
+      options:
+        - exactMatch
+        - closeMatch
+        - broadMatch
+        - narrowMatch
+        - relatedMatch
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Which files update (skos-mappings/*), any downstream changes.
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: I confirm
+      options:
+        - label: Terms/labels are verified in the cited sources.
