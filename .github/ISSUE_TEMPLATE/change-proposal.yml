@@ -1,0 +1,57 @@
+name: Change proposal (rule/profile/enums)
+description: Propose a modification to rules, profile structure, or controlled lists.
+title: "[PROPOSAL] <short summary>"
+labels: [enhancement, discussion]
+assignees: []
+body:
+  - type: dropdown
+    id: target
+    attributes:
+      label: Target
+      options:
+        - Update rule in rules.json
+        - Modify profile (datacite4.6-profile.json)
+        - Add/rename enum value (enum_lists/*)
+        - Context/term change (main_context.jsonld)
+        - Other (describe below)
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why this change is needed (standards, UX, adoption, downstream tooling).
+    validations:
+      required: true
+  - type: textarea
+    id: spec
+    attributes:
+      label: Proposed change
+      description: Be precise. Include JSON Schema snippets or rule pseudocode.
+      render: json
+      placeholder: |
+        {
+          "$id": "#/properties/creators/items/properties/nameIdentifier",
+          "anyOf": [...]
+        }
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact analysis
+      description: Affected files, backward compatibility, migration plan, examples.
+      placeholder: |
+        - Affects enum_lists/relationTypes.jsonld
+        - Backward compatible? Yes/No
+        - Migration: map X -> Y
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example records
+      description: Realistic JSON before/after (small).
+      render: json
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      options:
+        - label: Validation passes for new examples.
+        - label: No regressions on sample corpus.
+        - label: Documentation updated (README, index.html).
