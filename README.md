@@ -356,23 +356,6 @@ This indicates that DataCite’s `publisher` corresponds precisely to these exte
 
 ---
 
-## FAQ
-
-**Q: What’s the difference between `identifiers` and `alternateIdentifiers`?**  
-- `identifiers`: Additional or internal identifiers (ISBN, Handle, local IDs).  
-- `alternateIdentifiers`: True alternates like PubMed ID or another primary ID used elsewhere.
-
-**Q: Do I need the JSON‑LD `@context` to submit to the API?**  
-No. The API accepts plain JSON. The `@context` is included here to support **semantic interoperability**—useful for indexing, knowledge graph ingestion, and cross-platform alignment.
-
-**Q: Which JSON Schema draft is used?**  
-Draft‑07. Use a validator that supports this version.
-
-**Q: Can I extend the schema?**  
-You can fork or extend it, but the submit profile is intentionally strict to match the API and DataCite 4.6. For custom fields, consider **profiles** layered on top of DataCite rather than modifying the core schema.
-
----
-
 ## References (Authoritative Sources)
 
 - DataCite: **Metadata Schema 4.6** — https://schema.datacite.org/meta/kernel-4.6/  
