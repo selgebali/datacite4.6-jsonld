@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json",
+  "$anchor": "attributes",
   "$comment": "BUNDLED PROFILE: This single file contains (1) the root attributes schema for client-submitted DataCite 4.6 metadata, (2) centralised enumerations in $defs (with iriMap bridges), (3) a JSON-LD context under profile.@context for semantics, (4) a JSON:API response validator (responseProfile), (5) a JSON:API submission validator (submitProfile), and (6) an exportProfile with language-tag conversion rules for RDF/JSON-LD export. Controlled lists are fully embedded in this bundled profile; enum IRIs resolve to fragment identifiers within this document under '#enums/<list>/<term>' so no external enum_lists are required.",
   "title": "DataCite Metadata Schema v4.6 – REST API profile (bundled)",
   "description": "Self‑contained JSON Schema and JSON‑LD context for validating and semantically describing DataCite 4.6 metadata as submitted to the DataCite REST API.  This profile reflects the property names and object structures used by the API and inlines all controlled vocabularies.",
@@ -1150,31 +1151,62 @@
     "title": "DataCite REST API Response (JSON:API envelope)",
     "description": "Companion schema to validate DataCite REST API responses that use a JSON:API envelope. This schema validates the envelope and allows additional, read-only attributes returned by the API. Use the submit/bundled profile (this file's root schema) to validate client-submitted payloads.",
     "type": "object",
-    "properties": {
+     "properties": {
       "data": {
-        "type": "object",
-        "properties": {
-          "id": { "type": "string", "description": "The DOI, formatted as prefix/suffix." },
-          "type": { "type": "string", "const": "dois" },
-          "attributes": {
+        "oneOf": [
+          {
             "type": "object",
-            "description": "The DataCite metadata attributes. In API responses this includes read-only and analytics fields (e.g., url, state, viewCount, downloadsOverTime, created, registered, updated, etc.). These are intentionally not constrained here to keep the response schema in sync with server-side additions.",
+            "properties": {
+              "id": { "type": "string", "description": "The DOI, formatted as prefix/suffix." },
+              "type": { "type": "string", "const": "dois" },
+              "attributes": {
+                "type": "object",
+                "description": "The DataCite metadata attributes. In API responses this includes read-only and analytics fields (e.g., url, state, viewCount, downloadsOverTime, created, registered, updated, etc.). These are intentionally not constrained here to keep the response schema in sync with server-side additions.",
+                "additionalProperties": true
+              },
+              "relationships": { "type": "object", "additionalProperties": true },
+              "links": { "type": "object", "additionalProperties": true }
+            },
+            "required": ["id", "type", "attributes"],
             "additionalProperties": true
           },
-          "relationships": { "type": "object", "additionalProperties": true },
-          "links": { "type": "object", "additionalProperties": true }
-        },
-        "required": ["id", "type", "attributes"],
-        "additionalProperties": true
+          {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string", "description": "The DOI, formatted as prefix/suffix." },
+                "type": { "type": "string", "const": "dois" },
+                "attributes": {
+                  "type": "object",
+                  "description": "The DataCite metadata attributes. In API responses this includes read-only and analytics fields (e.g., url, state, viewCount, downloadsOverTime, created, registered, updated, etc.). These are intentionally not constrained here to keep the response schema in sync with server-side additions.",
+                  "additionalProperties": true
+                },
+                "relationships": { "type": "object", "additionalProperties": true },
+                "links": { "type": "object", "additionalProperties": true }
+              },
+              "required": ["id", "type", "attributes"],
+              "additionalProperties": true
+            }
+          }
+        ]
       },
       "included": { "type": "array", "items": { "type": "object" } },
       "links": { "type": "object", "additionalProperties": true },
       "meta": { "type": "object", "additionalProperties": true },
-      "errors": { "type": "array", "items": { "type": "object" } }
+      "errors": { "type": "array", "items": { "type": "object" } },
+      "jsonapi": { "type": "object", "additionalProperties": true }
     },
     "oneOf": [
       { "required": ["data"] },
-      { "required": ["errors"] }
+      { "required": ["errors"] },
+      { "required": ["meta"] }
+    ],
+    "allOf": [
+      {
+        "if": { "required": ["errors"] },
+        "then": { "not": { "required": ["included"] } }  
+      }
     ],
     "additionalProperties": false
   },
@@ -1189,8 +1221,9 @@
       "data": {
         "type": "object",
         "properties": {
+          "id": { "type": "string" },
           "type": { "type": "string", "const": "dois" },
-          "attributes": { "$ref": "#" },
+          "attributes": { "$ref": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-profile.json#attributes" },
           "relationships": { "type": "object", "additionalProperties": true },
           "links": { "type": "object", "additionalProperties": true }
         },
