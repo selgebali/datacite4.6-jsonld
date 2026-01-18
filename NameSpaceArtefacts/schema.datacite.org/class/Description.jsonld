@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Description",
   "@type": "rdfs:Class",
   "rdfs:label": "Description",
-  "rdfs:comment": "Template definition for the Description class."
+  "rdfs:comment": " All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument."
 }

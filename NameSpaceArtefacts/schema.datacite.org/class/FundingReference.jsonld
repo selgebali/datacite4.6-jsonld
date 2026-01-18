@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/FundingReference",
   "@type": "rdfs:Class",
   "rdfs:label": "FundingReference",
-  "rdfs:comment": "Template definition for the FundingReference class."
+  "rdfs:comment": "Information about financial support (funding) for the resource being registered."
 }

@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Creator",
   "@type": "rdfs:Class",
   "rdfs:label": "Creator",
-  "rdfs:comment": "Template definition for the Creator class."
+  "rdfs:comment": "The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property."
 }

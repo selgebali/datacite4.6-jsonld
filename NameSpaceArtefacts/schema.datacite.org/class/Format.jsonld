@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Format",
   "@type": "rdfs:Class",
   "rdfs:label": "Format",
-  "rdfs:comment": "Template definition for the Format class."
+  "rdfs:comment": "Technical format of the resource."
 }

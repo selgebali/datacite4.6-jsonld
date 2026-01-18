@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Version",
   "@type": "rdfs:Class",
   "rdfs:label": "Version",
-  "rdfs:comment": "Template definition for the Version class."
+  "rdfs:comment": "The version number of the resource."
 }

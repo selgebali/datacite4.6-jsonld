@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Size",
   "@type": "rdfs:Class",
   "rdfs:label": "Size",
-  "rdfs:comment": "Template definition for the Size class."
+  "rdfs:comment": "Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource."
 }

@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Language",
   "@type": "rdfs:Class",
   "rdfs:label": "Language",
-  "rdfs:comment": "Template definition for the Language class."
+  "rdfs:comment": "The primary language of the resource."
 }

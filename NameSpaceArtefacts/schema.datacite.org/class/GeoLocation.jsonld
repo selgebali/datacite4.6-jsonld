@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/GeoLocation",
   "@type": "rdfs:Class",
   "rdfs:label": "GeoLocation",
-  "rdfs:comment": "Template definition for the GeoLocation class."
+  "rdfs:comment": "Spatial region or named place where the data was gathered or about which the data is focused."
 }

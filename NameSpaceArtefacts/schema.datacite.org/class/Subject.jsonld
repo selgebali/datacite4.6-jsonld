@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Subject",
   "@type": "rdfs:Class",
   "rdfs:label": "Subject",
-  "rdfs:comment": "Template definition for the Subject class."
+  "rdfs:comment": "Subject, keyword, classification code, or key phrase describing the resource."
 }

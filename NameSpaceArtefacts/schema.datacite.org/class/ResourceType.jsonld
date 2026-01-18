@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/ResourceType",
   "@type": "rdfs:Class",
   "rdfs:label": "ResourceType",
-  "rdfs:comment": "Template definition for the ResourceType class."
+  "rdfs:comment": "A description of the resource."
 }

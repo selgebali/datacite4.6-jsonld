@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Identifier",
   "@type": "rdfs:Class",
   "rdfs:label": "Identifier",
-  "rdfs:comment": "Template definition for the Identifier class."
+  "rdfs:comment": "The Identifier is a unique string that identifies a resource."
 }

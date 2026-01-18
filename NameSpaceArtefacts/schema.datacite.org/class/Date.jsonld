@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/class/Date",
   "@type": "rdfs:Class",
   "rdfs:label": "Date",
-  "rdfs:comment": "Template definition for the Date class."
+  "rdfs:comment": "Different dates relevant to the work."
 }
