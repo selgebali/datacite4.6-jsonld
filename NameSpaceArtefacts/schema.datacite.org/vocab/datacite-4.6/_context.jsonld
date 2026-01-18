@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "ConceptScheme": "skos:ConceptScheme",
+    "Concept": "skos:Concept",
+    "prefLabel": { "@id": "skos:prefLabel", "@language": "en" },
+    "definition": { "@id": "skos:definition", "@language": "en" },
+    "notation": "skos:notation",
+    "inScheme": { "@id": "skos:inScheme", "@type": "@id" },
+    "topConceptOf": { "@id": "skos:topConceptOf", "@type": "@id" },
+    "hasTopConcept": { "@id": "skos:hasTopConcept", "@type": "@id" },
+    "created": { "@id": "dcterms:created", "@type": "xsd:date" },
+    "modified": { "@id": "dcterms:modified", "@type": "xsd:date" },
+    "identifier": "dcterms:identifier",
+    "title": { "@id": "dcterms:title", "@language": "en" },
+    "license": { "@id": "dcterms:license", "@type": "@id" }
+  }
+}

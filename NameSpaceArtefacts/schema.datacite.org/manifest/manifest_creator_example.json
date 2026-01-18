@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "Manifest": "https://schema.datacite.org/manifest/Manifest",
+    "Context": "https://schema.datacite.org/manifest/Context",
+    "Class": "https://schema.datacite.org/manifest/Class",
+    "Property": "https://schema.datacite.org/manifest/Property",
+    "ConceptScheme": "https://schema.datacite.org/manifest/ConceptScheme",
+    "Concept": "https://schema.datacite.org/manifest/Concept"
+  },
+
+  "@id": "https://schema.datacite.org/manifest/datacite-4.6-creator-example",
+  "@type": "Manifest",
+  "dcterms:title": "DataCite 4.6 creator example manifest",
+  "dcterms:description": "Machine-readable inventory for the creator property and related metadata.",
+  "dcterms:source": "DataCite Metadata Schema 4.6",
+  "dcterms:issued": "2026-01-16",
+
+  "context": {
+    "@type": "Context",
+    "@id": "https://schema.datacite.org/context/datacite.jsonld"
+  },
+
+  "classes": [
+    {
+      "@type": "Class",
+      "@id": "https://schema.datacite.org/class/Creator"
+    },
+    {
+      "@type": "Class",
+      "@id": "https://schema.datacite.org/class/Resource"
+    },
+    {
+      "@type": "Class",
+      "@id": "https://schema.datacite.org/class/Affiliation"
+    },
+    {
+      "@type": "Class",
+      "@id": "https://schema.datacite.org/class/NameIdentifier"
+    }
+  ],
+
+  "properties": [
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/creators" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/creatorName" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/nameType" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/givenName" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/familyName" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/nameIdentifier" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/nameIdentifierScheme" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/affiliation" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/affiliationIdentifier" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/affiliationIdentifierScheme" },
+    { "@type": "Property", "@id": "https://schema.datacite.org/property/schemeUri" }
+  ],
+
+  "conceptSchemes": [
+    {
+      "@type": "ConceptScheme",
+      "@id": "https://schema.datacite.org/vocab/nameType/",
+      "concepts": [
+        { "@type": "Concept", "@id": "https://schema.datacite.org/vocab/nameType/Personal" },
+        { "@type": "Concept", "@id": "https://schema.datacite.org/vocab/nameType/Organizational" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schema": "https://schema.datacite.org/",
+    "datacite": "https://schema.datacite.org/"
+  },
+  "@id": "https://schema.datacite.org/property/geoLocationPolygon",
+  "@type": "rdf:Property",
+  "rdfs:label": "geoLocationPolygon",
+  "rdfs:comment": "Template definition for the geoLocationPolygon property."
+}
