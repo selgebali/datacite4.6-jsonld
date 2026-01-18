@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/affiliationIdentifier",
   "@type": "rdf:Property",
   "rdfs:label": "affiliationIdentifier",
-  "rdfs:comment": "Template definition for the affiliationIdentifier property."
+  "rdfs:comment": "Uniquely identifies the organizational affiliation of the creator or contributor."
 }

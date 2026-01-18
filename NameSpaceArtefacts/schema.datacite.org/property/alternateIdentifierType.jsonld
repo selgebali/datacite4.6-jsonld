@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/alternateIdentifierType",
   "@type": "rdf:Property",
   "rdfs:label": "alternateIdentifierType",
-  "rdfs:comment": "Template definition for the alternateIdentifierType property."
+  "rdfs:comment": "The type of the AlternateIdentifier."
 }
