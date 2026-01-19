@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/givenName",
   "@type": "rdf:Property",
   "rdfs:label": "givenName",
-  "rdfs:comment": "Template definition for the givenName property."
+  "rdfs:comment": "The personal or first name of the creator."
 }

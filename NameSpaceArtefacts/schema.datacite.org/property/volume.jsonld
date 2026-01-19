@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/volume",
   "@type": "rdf:Property",
   "rdfs:label": "volume",
-  "rdfs:comment": "Template definition for the volume property."
+  "rdfs:comment": "Volume of the related item."
 }

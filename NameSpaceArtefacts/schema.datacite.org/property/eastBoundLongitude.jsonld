@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/eastBoundLongitude",
   "@type": "rdf:Property",
   "rdfs:label": "eastBoundLongitude",
-  "rdfs:comment": "Template definition for the eastBoundLongitude property."
+  "rdfs:comment": "Eastern longitudinal dimension of box."
 }

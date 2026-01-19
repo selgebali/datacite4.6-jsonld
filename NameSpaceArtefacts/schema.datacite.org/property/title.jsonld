@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/title",
   "@type": "rdf:Property",
   "rdfs:label": "title",
-  "rdfs:comment": "Template definition for the title property."
+  "rdfs:comment": "A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument."
 }

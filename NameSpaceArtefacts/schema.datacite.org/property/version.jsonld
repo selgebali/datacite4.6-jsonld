@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/version",
   "@type": "rdf:Property",
   "rdfs:label": "version",
-  "rdfs:comment": "Template definition for the version property."
+  "rdfs:comment": "The version number of the resource."
 }

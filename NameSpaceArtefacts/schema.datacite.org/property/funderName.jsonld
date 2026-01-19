@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/funderName",
   "@type": "rdf:Property",
   "rdfs:label": "funderName",
-  "rdfs:comment": "Template definition for the funderName property."
+  "rdfs:comment": "Name of the funding provider."
 }

@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/affiliationIdentifierScheme",
   "@type": "rdf:Property",
   "rdfs:label": "affiliationIdentifierScheme",
-  "rdfs:comment": "The name of the affiliation identifier scheme."
+  "rdfs:comment": "The name of the affiliation identifier scheme"
 }

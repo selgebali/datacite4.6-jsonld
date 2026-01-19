@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/pointLatitude",
   "@type": "rdf:Property",
   "rdfs:label": "pointLatitude",
-  "rdfs:comment": "Template definition for the pointLatitude property."
+  "rdfs:comment": "Latitudinal dimension of point."
 }

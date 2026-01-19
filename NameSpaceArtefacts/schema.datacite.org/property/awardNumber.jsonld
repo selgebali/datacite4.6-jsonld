@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/awardNumber",
   "@type": "rdf:Property",
   "rdfs:label": "awardNumber",
-  "rdfs:comment": "Template definition for the awardNumber property."
+  "rdfs:comment": "The code assigned by the funder to a sponsored award (grant)."
 }

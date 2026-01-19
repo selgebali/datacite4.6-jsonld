@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/contributorType",
   "@type": "rdf:Property",
   "rdfs:label": "contributorType",
-  "rdfs:comment": "Template definition for the contributorType property."
+  "rdfs:comment": "The type of contributor of the resource."
 }

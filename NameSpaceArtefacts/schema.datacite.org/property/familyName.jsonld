@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/familyName",
   "@type": "rdf:Property",
   "rdfs:label": "familyName",
-  "rdfs:comment": "Template definition for the familyName property."
+  "rdfs:comment": "The surname or last name of the creator."
 }

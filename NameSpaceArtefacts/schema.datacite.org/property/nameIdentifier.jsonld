@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/nameIdentifier",
   "@type": "rdf:Property",
   "rdfs:label": "nameIdentifier",
-  "rdfs:comment": "Template definition for the nameIdentifier property."
+  "rdfs:comment": "Uniquely identifies an individual or legal entity, according to various schemes."
 }

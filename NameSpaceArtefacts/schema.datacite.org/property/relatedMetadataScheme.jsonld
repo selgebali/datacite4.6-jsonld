@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/relatedMetadataScheme",
   "@type": "rdf:Property",
   "rdfs:label": "relatedMetadataScheme",
-  "rdfs:comment": "Template definition for the relatedMetadataScheme property."
+  "rdfs:comment": "The name of the scheme."
 }

@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/firstPage",
   "@type": "rdf:Property",
   "rdfs:label": "firstPage",
-  "rdfs:comment": "Template definition for the firstPage property."
+  "rdfs:comment": "First page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings."
 }

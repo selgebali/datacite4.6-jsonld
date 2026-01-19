@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/classificationCode",
   "@type": "rdf:Property",
   "rdfs:label": "classificationCode",
-  "rdfs:comment": "Template definition for the classificationCode property."
+  "rdfs:comment": "The classification code used for the subject term in the subject scheme."
 }

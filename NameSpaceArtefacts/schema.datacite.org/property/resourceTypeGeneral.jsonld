@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/resourceTypeGeneral",
   "@type": "rdf:Property",
   "rdfs:label": "resourceTypeGeneral",
-  "rdfs:comment": "Template definition for the resourceTypeGeneral property."
+  "rdfs:comment": "The general type of a resource."
 }

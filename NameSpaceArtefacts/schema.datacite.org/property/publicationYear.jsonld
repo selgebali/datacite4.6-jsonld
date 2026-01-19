@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/publicationYear",
   "@type": "rdf:Property",
   "rdfs:label": "publicationYear",
-  "rdfs:comment": "Template definition for the publicationYear property."
+  "rdfs:comment": "The year when the item was or will be made publicly available."
 }

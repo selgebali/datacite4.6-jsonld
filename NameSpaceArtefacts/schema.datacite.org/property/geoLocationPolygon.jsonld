@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/geoLocationPolygon",
   "@type": "rdf:Property",
   "rdfs:label": "geoLocationPolygon",
-  "rdfs:comment": "Template definition for the geoLocationPolygon property."
+  "rdfs:comment": "A drawn polygon area, defined by a set of points and lines connecting the points in a closed chain."
 }

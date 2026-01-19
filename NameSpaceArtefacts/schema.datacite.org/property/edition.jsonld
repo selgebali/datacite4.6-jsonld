@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/edition",
   "@type": "rdf:Property",
   "rdfs:label": "edition",
-  "rdfs:comment": "Template definition for the edition property."
+  "rdfs:comment": "Edition or version of the related item."
 }

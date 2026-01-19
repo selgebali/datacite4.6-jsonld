@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/numberType",
   "@type": "rdf:Property",
   "rdfs:label": "numberType",
-  "rdfs:comment": "Template definition for the numberType property."
+  "rdfs:comment": "Type of the related item’s number, e.g., report number or article number."
 }

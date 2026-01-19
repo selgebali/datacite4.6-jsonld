@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/publisherIdentifier",
   "@type": "rdf:Property",
   "rdfs:label": "publisherIdentifier",
-  "rdfs:comment": "Template definition for the publisherIdentifier property."
+  "rdfs:comment": "Uniquely identifies the publisher, according to various schemes."
 }

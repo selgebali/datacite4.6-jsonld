@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/relatedItemIdentifier",
   "@type": "rdf:Property",
   "rdfs:label": "relatedItemIdentifier",
-  "rdfs:comment": "Template definition for the relatedItemIdentifier property."
+  "rdfs:comment": "The identifier for the related item."
 }

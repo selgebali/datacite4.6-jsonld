@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/schemeType",
   "@type": "rdf:Property",
   "rdfs:label": "schemeType",
-  "rdfs:comment": "Template definition for the schemeType property."
+  "rdfs:comment": "The type of the relatedMetadataScheme, linked with the schemeURI."
 }

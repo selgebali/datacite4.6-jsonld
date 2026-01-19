@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/descriptionType",
   "@type": "rdf:Property",
   "rdfs:label": "descriptionType",
-  "rdfs:comment": "Template definition for the descriptionType property."
+  "rdfs:comment": "The type of the Description."
 }

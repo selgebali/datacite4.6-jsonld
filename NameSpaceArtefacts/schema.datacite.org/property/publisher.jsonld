@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/publisher",
   "@type": "rdf:Property",
   "rdfs:label": "publisher",
-  "rdfs:comment": "Template definition for the publisher property."
+  "rdfs:comment": "The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role."
 }

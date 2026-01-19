@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/northBoundLatitude",
   "@type": "rdf:Property",
   "rdfs:label": "northBoundLatitude",
-  "rdfs:comment": "Template definition for the northBoundLatitude property."
+  "rdfs:comment": "Northern latitudinal dimension of box."
 }

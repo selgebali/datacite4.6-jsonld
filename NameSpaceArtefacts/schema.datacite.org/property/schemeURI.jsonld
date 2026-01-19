@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/schemeURI",
   "@type": "rdf:Property",
   "rdfs:label": "schemeURI",
-  "rdfs:comment": "Template definition for the schemeURI property."
+  "rdfs:comment": "The URI of an identifier scheme."
 }

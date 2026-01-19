@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/affiliation",
   "@type": "rdf:Property",
   "rdfs:label": "affiliation",
-  "rdfs:comment": "The organizational or institutional affiliation of the creator or the contributor."
+  "rdfs:comment": "The organizational or institutional affiliation of the creator."
 }

@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/number",
   "@type": "rdf:Property",
   "rdfs:label": "number",
-  "rdfs:comment": "Template definition for the number property."
+  "rdfs:comment": "Number of the resource within the related item, e.g., report number or article number."
 }

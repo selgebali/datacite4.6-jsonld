@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/format",
   "@type": "rdf:Property",
   "rdfs:label": "format",
-  "rdfs:comment": "Template definition for the format property."
+  "rdfs:comment": "Technical format of the resource."
 }

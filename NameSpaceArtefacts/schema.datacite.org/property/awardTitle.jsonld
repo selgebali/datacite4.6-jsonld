@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/awardTitle",
   "@type": "rdf:Property",
   "rdfs:label": "awardTitle",
-  "rdfs:comment": "Template definition for the awardTitle property."
+  "rdfs:comment": "The human readable title or name of the award (grant)."
 }

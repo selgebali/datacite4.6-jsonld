@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/funderIdentifierType",
   "@type": "rdf:Property",
   "rdfs:label": "funderIdentifierType",
-  "rdfs:comment": "Template definition for the funderIdentifierType property."
+  "rdfs:comment": "The type of the funderIdentifier."
 }

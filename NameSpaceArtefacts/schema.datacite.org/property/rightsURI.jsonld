@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/rightsURI",
   "@type": "rdf:Property",
   "rdfs:label": "rightsURI",
-  "rdfs:comment": "Template definition for the rightsURI property."
+  "rdfs:comment": "The URI of the license."
 }

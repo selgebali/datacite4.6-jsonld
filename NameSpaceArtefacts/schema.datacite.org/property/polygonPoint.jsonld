@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/polygonPoint",
   "@type": "rdf:Property",
   "rdfs:label": "polygonPoint",
-  "rdfs:comment": "Template definition for the polygonPoint property."
+  "rdfs:comment": "A point location in a polygon."
 }

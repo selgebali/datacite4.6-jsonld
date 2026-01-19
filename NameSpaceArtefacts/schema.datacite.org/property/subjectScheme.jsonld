@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/subjectScheme",
   "@type": "rdf:Property",
   "rdfs:label": "subjectScheme",
-  "rdfs:comment": "Template definition for the subjectScheme property."
+  "rdfs:comment": "The name of the subject scheme or classification code or authority if one is used."
 }

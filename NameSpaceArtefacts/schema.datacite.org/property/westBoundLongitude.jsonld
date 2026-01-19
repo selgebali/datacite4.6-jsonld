@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/westBoundLongitude",
   "@type": "rdf:Property",
   "rdfs:label": "westBoundLongitude",
-  "rdfs:comment": "Template definition for the westBoundLongitude property."
+  "rdfs:comment": "Western longitudinal dimension of box."
 }

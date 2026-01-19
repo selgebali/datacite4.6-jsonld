@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/dateType",
   "@type": "rdf:Property",
   "rdfs:label": "dateType",
-  "rdfs:comment": "Template definition for the dateType property."
+  "rdfs:comment": "The type of date."
 }

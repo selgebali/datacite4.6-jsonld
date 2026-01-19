@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/dateInformation",
   "@type": "rdf:Property",
   "rdfs:label": "dateInformation",
-  "rdfs:comment": "Template definition for the dateInformation property."
+  "rdfs:comment": "Specific information about the date, if appropriate."
 }

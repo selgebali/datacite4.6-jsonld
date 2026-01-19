@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/relatedIdentifier",
   "@type": "rdf:Property",
   "rdfs:label": "relatedIdentifier",
-  "rdfs:comment": "Template definition for the relatedIdentifier property."
+  "rdfs:comment": "Identifiers of related resources. These must be globally unique identifiers."
 }

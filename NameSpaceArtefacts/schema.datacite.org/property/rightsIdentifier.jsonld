@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/rightsIdentifier",
   "@type": "rdf:Property",
   "rdfs:label": "rightsIdentifier",
-  "rdfs:comment": "Template definition for the rightsIdentifier property."
+  "rdfs:comment": "A short standardized identifier for the licence."
 }

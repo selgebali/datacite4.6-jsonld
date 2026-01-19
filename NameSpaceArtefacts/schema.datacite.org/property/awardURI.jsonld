@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/awardURI",
   "@type": "rdf:Property",
   "rdfs:label": "awardURI",
-  "rdfs:comment": "Template definition for the awardURI property."
+  "rdfs:comment": "The URI leading to a page provided by the funder for more information about the award (grant)."
 }

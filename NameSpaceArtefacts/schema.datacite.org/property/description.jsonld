@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/description",
   "@type": "rdf:Property",
   "rdfs:label": "description",
-  "rdfs:comment": "Template definition for the description property."
+  "rdfs:comment": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument."
 }

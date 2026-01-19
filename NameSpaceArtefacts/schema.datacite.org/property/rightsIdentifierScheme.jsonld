@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/rightsIdentifierScheme",
   "@type": "rdf:Property",
   "rdfs:label": "rightsIdentifierScheme",
-  "rdfs:comment": "Template definition for the rightsIdentifierScheme property."
+  "rdfs:comment": "The name of the scheme."
 }

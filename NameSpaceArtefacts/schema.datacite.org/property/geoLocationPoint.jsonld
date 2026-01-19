@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/geoLocationPoint",
   "@type": "rdf:Property",
   "rdfs:label": "geoLocationPoint",
-  "rdfs:comment": "Template definition for the geoLocationPoint property."
+  "rdfs:comment": "A point location in space."
 }

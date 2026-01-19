@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/nameIdentifierScheme",
   "@type": "rdf:Property",
   "rdfs:label": "nameIdentifierScheme",
-  "rdfs:comment": "Template definition for the nameIdentifierScheme property."
+  "rdfs:comment": "The name of the name identifier scheme."
 }

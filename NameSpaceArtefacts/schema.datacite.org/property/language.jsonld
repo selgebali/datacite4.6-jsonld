@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/language",
   "@type": "rdf:Property",
   "rdfs:label": "language",
-  "rdfs:comment": "Template definition for the language property."
+  "rdfs:comment": "The primary language of the resource."
 }

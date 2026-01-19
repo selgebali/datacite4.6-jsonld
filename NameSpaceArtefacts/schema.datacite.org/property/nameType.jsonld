@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/nameType",
   "@type": "rdf:Property",
   "rdfs:label": "nameType",
-  "rdfs:comment": "Template definition for the nameType property."
+  "rdfs:comment": "The type of name."
 }

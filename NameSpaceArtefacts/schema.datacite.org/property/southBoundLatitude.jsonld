@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/southBoundLatitude",
   "@type": "rdf:Property",
   "rdfs:label": "southBoundLatitude",
-  "rdfs:comment": "Template definition for the southBoundLatitude property."
+  "rdfs:comment": "Southern latitude of box ."
 }

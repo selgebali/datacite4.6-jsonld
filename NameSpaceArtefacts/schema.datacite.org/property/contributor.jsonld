@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/contributor",
   "@type": "rdf:Property",
   "rdfs:label": "contributor",
-  "rdfs:comment": "Template definition for the contributor property."
+  "rdfs:comment": "The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property."
 }

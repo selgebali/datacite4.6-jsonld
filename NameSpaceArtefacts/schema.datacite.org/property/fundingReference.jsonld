@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/fundingReference",
   "@type": "rdf:Property",
   "rdfs:label": "fundingReference",
-  "rdfs:comment": "Template definition for the fundingReference property."
+  "rdfs:comment": "Information about financial support (funding) for the resource being registered."
 }

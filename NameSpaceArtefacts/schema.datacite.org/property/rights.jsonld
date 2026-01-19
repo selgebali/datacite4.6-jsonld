@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/rights",
   "@type": "rdf:Property",
   "rdfs:label": "rights",
-  "rdfs:comment": "Template definition for the rights property."
+  "rdfs:comment": "Any rights information for this resource."
 }

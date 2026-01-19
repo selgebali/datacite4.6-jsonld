@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/pointLongitude",
   "@type": "rdf:Property",
   "rdfs:label": "pointLongitude",
-  "rdfs:comment": "Template definition for the pointLongitude property."
+  "rdfs:comment": "Longitudinal dimension of point."
 }

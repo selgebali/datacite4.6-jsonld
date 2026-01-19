@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/contributorName",
   "@type": "rdf:Property",
   "rdfs:label": "contributorName",
-  "rdfs:comment": "Template definition for the contributorName property."
+  "rdfs:comment": "The full name of the contributor."
 }

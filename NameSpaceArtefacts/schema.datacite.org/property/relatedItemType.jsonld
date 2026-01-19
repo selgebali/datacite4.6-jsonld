@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/relatedItemType",
   "@type": "rdf:Property",
   "rdfs:label": "relatedItemType",
-  "rdfs:comment": "Template definition for the relatedItemType property."
+  "rdfs:comment": "The general type of the related item."
 }

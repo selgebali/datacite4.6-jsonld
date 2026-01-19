@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/valueURI",
   "@type": "rdf:Property",
   "rdfs:label": "valueURI",
-  "rdfs:comment": "Template definition for the valueURI property."
+  "rdfs:comment": " The URI of the subject term."
 }

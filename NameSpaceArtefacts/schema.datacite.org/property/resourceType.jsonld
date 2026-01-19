@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/resourceType",
   "@type": "rdf:Property",
   "rdfs:label": "resourceType",
-  "rdfs:comment": "Template definition for the resourceType property."
+  "rdfs:comment": "A description of the resource."
 }

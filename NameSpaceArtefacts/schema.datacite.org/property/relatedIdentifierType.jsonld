@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/relatedIdentifierType",
   "@type": "rdf:Property",
   "rdfs:label": "relatedIdentifierType",
-  "rdfs:comment": "Template definition for the relatedIdentifierType property."
+  "rdfs:comment": "The type of the RelatedIdentifier."
 }

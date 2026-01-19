@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/geoLocationPlace",
   "@type": "rdf:Property",
   "rdfs:label": "geoLocationPlace",
-  "rdfs:comment": "Template definition for the geoLocationPlace property."
+  "rdfs:comment": "Description of a geographic location."
 }

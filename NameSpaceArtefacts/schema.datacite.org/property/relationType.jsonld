@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/relationType",
   "@type": "rdf:Property",
   "rdfs:label": "relationType",
-  "rdfs:comment": "Template definition for the relationType property."
+  "rdfs:comment": "Description of the relationship of the resource being registered (A) and the related resource (B)."
 }

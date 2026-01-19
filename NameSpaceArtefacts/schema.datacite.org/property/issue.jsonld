@@ -8,5 +8,5 @@
   "@id": "https://schema.datacite.org/property/issue",
   "@type": "rdf:Property",
   "rdfs:label": "issue",
-  "rdfs:comment": "Template definition for the issue property."
+  "rdfs:comment": "Issue number or name of the related item."
 }
