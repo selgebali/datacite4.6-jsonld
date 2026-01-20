@@ -2,6 +2,12 @@
 
 *	**context/** – JSON‑LD context files used to map short prefixes to IRIs (e.g., datacite.jsonld).
 *   **context/datacite_api.json** -  This context is designed to translate the DataCite REST API’s JSON into an RDF graph.
+    * First profile (starting ~line 727): Comprehensive ontology profile -  Full semantic mapping to DataCite 4.6 ontology. Best for semantic web applications, ontology reasoning, and complete DataCite compliance
+
+
+    * responseProfile (starting ~line 1337): JSON:API response validation schema
+
+    * submitProfile (starting ~line 1403): JSON:API submission validation schema
 
 *	**manifest/** – manifest files that list all classes, properties and vocabularies available in a specific schema version, registry of resolvable things (tbd: along with example metadata records.)
 
