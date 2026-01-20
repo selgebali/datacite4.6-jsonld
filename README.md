@@ -98,7 +98,98 @@ Here’s what you’ll find and how it fits together:
     
 -   Ensures compatibility with **namespace hosting** on DataCite, allowing external tools to reference individual enumeration terms directly.
     
-  ### **docs/datacite4.6-profile.json**
+-   Ensures compatibility with **namespace hosting** on DataCite, allowing external tools to reference individual enumeration terms directly.
+    
+
+----------
+
+## Context Hierarchy and Enumerations
+
+### JSON-LD Context Structure
+
+The profile includes two levels of JSON-LD context definitions to provide semantic mappings at different scopes:
+
+#### Root-Level @context
+- Located at the top of the JSON file under `"@context"`
+- Defines global namespaces, base URIs, and version information
+- Includes prefixes like `datacite:`, `schema:`, `dcat:`, `skos:`, `xsd:`
+- Sets the foundation for IRI resolution across the entire document
+
+#### profile.@context (Nested Context)
+- Embedded within the `profile` object as `"@context"`
+- Provides detailed property mappings for DataCite metadata fields
+- Maps JSON keys to semantic IRIs (e.g., `"creator"` → `datacite:creator`)
+- Includes type annotations and container specifications
+- Supports nested contexts for complex object structures (e.g., `container`, `publisher`, `affiliation`, `relatedItems`, `types`)
+
+The nested `profile.@context` allows for scoped semantic definitions, enabling precise control over how different parts of the metadata are interpreted as linked data.
+
+### Enumerations Documentation
+
+The `$defs` section contains controlled vocabularies that define allowed values for various metadata fields. Each enumeration includes:
+
+- **Purpose**: What the enumeration controls and its role in DataCite metadata
+- **Usage**: How and where the values are applied in metadata records
+- **Relationships**: Connections to other enumerations or external standards
+- **IRI Mapping**: Links to canonical DataCite URIs for semantic interoperability
+
+#### Available Enumerations
+
+1. **resourceTypeGeneral** (9 values: Audiovisual, Award, Book, etc.)
+   - Purpose: High-level categorization of resource types
+   - Usage: Required in `types.resourceTypeGeneral` for all DataCite records
+   - Relationships: Basis for resource type classification; maps to DCMI types
+
+2. **descriptionType** (6 values: Abstract, Methods, SeriesInformation, etc.)
+   - Purpose: Specifies the type of descriptive text provided
+   - Usage: Required in `descriptions.descriptionType` for each description
+   - Relationships: Supports different description purposes; SeriesInformation deprecated in favor of relatedItems
+
+3. **contributorType** (21 values: ContactPerson, DataCollector, etc.)
+   - Purpose: Defines the role of contributors beyond creators
+   - Usage: Required in `contributors.contributorType` for each contributor
+   - Relationships: Based on MARC relator codes; supports detailed attribution
+
+4. **dateType** (12 values: Accepted, Available, Collected, etc.)
+   - Purpose: Categorizes different types of dates in resource lifecycle
+   - Usage: Required in `dates.dateType` for each date entry
+   - Relationships: Aligns with Dublin Core date types
+
+5. **nameType** (2 values: Personal, Organizational)
+   - Purpose: Distinguishes between individual and organizational names
+   - Usage: Optional in creators/contributors; affects validation of name components
+   - Relationships: Controls whether givenName/familyName are allowed
+
+6. **relatedIdentifierType** (20 values: ARK, arXiv, bibcode, etc.)
+   - Purpose: Identifies the scheme of related resource identifiers
+   - Usage: Required in `relatedIdentifiers.relatedIdentifierType`
+   - Relationships: Covers major persistent identifier schemes
+
+7. **relationType** (38 values: IsCitedBy, Cites, IsSupplementTo, etc.)
+   - Purpose: Describes relationships between resources
+   - Usage: Required in `relatedIdentifiers.relationType` and `relatedItems.relationType`
+   - Relationships: Based on COAR vocabulary; supports complex citation networks
+
+8. **funderIdentifierType** (5 values: ISNI, GRID, ROR, etc.)
+   - Purpose: Specifies funder identifier schemes
+   - Usage: Required when `funderIdentifier` is provided
+   - Relationships: Supports major funder registries
+
+9. **titleType** (4 values: AlternativeTitle, Subtitle, etc.)
+   - Purpose: Categorizes different types of titles
+   - Usage: Optional in `titles.titleType`
+   - Relationships: Supports multilingual and alternative title variants
+
+10. **numberType** (4 values: Article, Chapter, Report, Other)
+    - Purpose: Specifies the type of numbering in publications
+    - Usage: Optional in `relatedItems.numberType`
+    - Relationships: Supports citation formatting for different publication types
+
+Each enumeration is mapped to stable IRIs under `https://schema.datacite.org/vocab/datacite-4.6/` for consistent semantic resolution.
+
+----------
+
+### **docs/datacite4.6-profile.json**
 
 ### **(root “submit” profile)**
 
@@ -183,176 +274,6 @@ These updates ensure alignment with the official 4.6 schema and may differ from 
 
 ---
 
-## Installation / Setup
-
-You only need Python if you want to run local validation:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate   # On Windows: .venv\Scripts\activate
-pip install jsonschema
-```
-
-Any JSON Schema validator supporting **draft‑07** will work.
-
----
-
-## Usage Overview: Two Core Paths
-
-This section explains how to use the bundled schema for both submission validation and response validation. Both **submitProfile** and **responseProfile** are part of the same bundled file (`docs/datacite4.6-profile.json`).
-
-### 1) Validate a Submission Payload
-
-Use this to check your JSON metadata before sending it to the DataCite REST API (POST/PUT):
-
-```python
-import json
-from jsonschema import Draft7Validator
-
-schema = json.load(open("docs/datacite4.6-profile.json"))
-payload = json.load(open("example-submit.json"))  # your metadata
-
-Draft7Validator(schema).validate(payload)
-print("OK: submission payload is valid")
-```
-
-**Minimal valid submission example:**
-
-```jsonc
-{
-  "doi": "10.1234/example-doi",
-  "creators": [
-    {
-      "name": "Doe, Jane",
-      "nameType": "Personal"
-    }
-  ],
-  "titles": [
-    {
-      "title": "An Example Dataset"
-    }
-  ],
-  "publisher": {
-    "name": "Example University"
-  },
-  "publicationYear": "2025",
-  "types": {
-    "resourceTypeGeneral": "Dataset"
-  }
-}
-```
-
-> Tip: The submit schema enforces patterns (e.g., DOI regex) and cardinality (e.g., `creators` and `titles` must not be empty).
-
-### 2) Validate a Response Envelope
-
-Use this to validate JSON:API responses returned by the DataCite API (GET /dois/:id):
-
-```python
-import json
-from jsonschema import Draft7Validator
-
-doc = json.load(open("docs/datacite4.6-profile.json"))
-resp = json.load(open("datacite_example_filledin.json"))
-
-Draft7Validator(doc["responseProfile"]).validate(resp)
-print("OK: response envelope looks good")
-```
-
-**Example response (JSON:API format):**
-
-```json
-{
-  "data": {
-    "id": "10.1234/example-doi",
-    "type": "dois",
-    "attributes": {
-      "doi": "10.1234/example-doi",
-      "creators": [
-        {
-          "name": "Doe, Jane"
-        }
-      ],
-      "titles": [
-        {
-          "title": "An Example Dataset"
-        }
-      ],
-      "publisher": "Example University",
-      "publicationYear": 2025,
-      "types": {
-        "resourceTypeGeneral": "Dataset"
-      },
-      "url": "https://example.org/data/1234",
-      "state": "findable"
-    }
-  }
-}
-```
-
-> Note: API responses may include **ORCID as a URL** (e.g., `"https://orcid.org/0000-0002-1825-0097"`). The **submit** schema expects the **bare format** for ORCID when used in `nameIdentifiers`.
-
----
-
-## How the JSON‑LD `@context` Helps
-
-Inside `docs/datacite4.6-profile.json`, the `profile.@context` section maps JSON keys to IRIs. This mapping allows the same JSON to be converted into RDF for linked data applications.
-
-Examples:
-
-```json
-"doi": { "@id": "datacite:identifier", "@type": "@id" }
-```
-
-This treats the DOI as a global identifier (IRI). Another example:
-
-```json
-"publisher": { "@id": "datacite:publisher" }
-```
-
-Applications can understand that `publisher` aligns with DataCite’s concept of a publisher. You can also map it to Schema.org:
-
-- `publisher` → `datacite:publisher`  
-- `publisher` → `schema:publisher`
-
----
-
-## SKOS Crosswalks (DataCite ⇄ External Vocabularies)
-
-The SKOS/JSKOS files provide **crosswalks** that link DataCite elements to external vocabularies such as Schema.org, DCAT, DCTERMS, and Wikidata. These mappings help search engines, catalogues, and graph tools interpret your metadata consistently.
-
-**Conceptual example:**
-
-```jsonc
-{
-  "skos:prefLabel": "publisher",
-  "skos:exactMatch": [
-    "https://schema.org/publisher",
-    "https://purl.org/dc/terms/publisher"
-  ]
-}
-```
-
-This indicates that DataCite’s `publisher` corresponds precisely to these external terms.
-
----
-
-## Troubleshooting & Tips
-
-- **Submission fails but response validates**  
-  You might be validating a response with the strict submit schema. Use `responseProfile` for response validation.
-
-- **ORCID pattern errors**  
-  For submission, use the bare ORCID format (`0000-0000-0000-0000` with checksum). Responses may present ORCID as a full URL, which is allowed by `responseProfile`.
-
-- **Unexpected property errors**  
-  The submit schema is strict. Remove any fields not listed or add them under the correct nested object.
-
-- **Cardinality**  
-  Arrays like `creators` and `titles` must have **at least one** entry. Nested objects often require specific pairs (e.g., if `affiliationIdentifier` is present, then `affiliationIdentifierScheme` must be too).
-
-- **Dates and numbers**  
-  Follow schema hints for formats, such as ISO‑8601 for dates and numeric ranges for geographic coordinates.
 
 ---
 

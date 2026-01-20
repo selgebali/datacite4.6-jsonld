@@ -9,6 +9,7 @@
     "Property": "https://schema.datacite.org/property/",
     "Vocab": "https://schema.datacite.org/vocab/datacite-4.6/",
     
+    
     "Identifier": { "@id": "Class:Identifier" },
     "identifier": { "@id": "Property:identifier" },
     "identifierType": { "@id": "Property:identifierType" },
