@@ -771,12 +771,24 @@
       "classificationCode": { "@id": "Property:classificationCode" },
       "contributors": { "@id": "Property:contributors", "@container": "@set" },
       "contributorType": { "@id": "Property:contributorType", "@type": "Vocab:contributorType" },
-      "dates": { "@id": "Property:dates", "@container": "@set" },
+      "dates": {
+        "@id": "Property:dates",
+        "@container": "@set",
+        "@context": {
+          "dateType": { "@id": "Property:dateType", "@type": "Vocab:dateType" }
+        }
+      },
       "date": { "@id": "Property:date" },
       "dateType": { "@id": "Property:dateType", "@type": "Vocab:dateType" },
       "dateInformation": { "@id": "Property:dateInformation" },
       "language": { "@id": "Property:language" },
-      "types": { "@id": "Property:types" },
+      "types": {
+        "@id": "Property:types",
+        "@context": {
+          "resourceTypeGeneral": { "@id": "Property:resourceTypeGeneral", "@type": "Vocab:resourceTypeGeneral" },
+          "resourceType": { "@id": "Property:resourceType" }
+        }
+      },
       "resourceType": { "@id": "Property:resourceType", "@type": "Vocab:resourceTypeGeneral" },
       "relatedIdentifiers": { "@id": "Property:relatedIdentifiers", "@container": "@set" },
       "relatedIdentifier": { "@id": "Property:relatedIdentifier" },
@@ -807,14 +819,14 @@
       "awardUri": { "@id": "Property:awardURI" },
       "awardTitle": { "@id": "Property:awardTitle" },
       "relatedItems": { "@id": "Property:relatedItems", "@container": "@set" },
-      "relatedItemType": { "@id": "Property:relatedItemType" },
+      "relatedItemType": { "@id": "Property:relatedItemType", "@type": "Vocab:resourceTypeGeneral" },
       "relatedItemIdentifier": { "@id": "Property:relatedItemIdentifier" },
-      "relatedItemIdentifierType": { "@id": "Property:relatedItemIdentifierType" },
+      "relatedItemIdentifierType": { "@id": "Property:relatedItemIdentifierType", "@type": "Vocab:relatedIdentifierType" },
       "relatedItemRelationType": { "@id": "Property:relationType" },
       "volume": { "@id": "Property:volume" },
       "issue": { "@id": "Property:issue" },
       "number": { "@id": "Property:number" },
-      "numberType": { "@id": "Property:numberType" },
+      "numberType": { "@id": "Property:numberType", "@type": "Vocab:numberType" },
       "firstPage": { "@id": "Property:firstPage" },
       "lastPage": { "@id": "Property:lastPage" },
       "edition": { "@id": "Property:edition" },
@@ -829,7 +841,6 @@
       "AlternativeTitle": { "@id": "Vocab:AlternativeTitle" },
       "Subtitle": { "@id": "Vocab:Subtitle" },
       "TranslatedTitle": { "@id": "Vocab:TranslatedTitle" },
-      "Other": { "@id": "Vocab:Other" },
       "Publisher": { "@id": "Class:Publisher" },
 
       "schemeURI": { "@id": "Property:schemeURI", "@type": "@id" },
@@ -873,7 +884,6 @@
       "Supervisor": { "@id": "Vocab:Supervisor" },
       "Translator": { "@id": "Vocab:Translator" },
       "WorkPackageLeader": { "@id": "Vocab:WorkPackageLeader" },
-      "OtherContributorType": { "@id": "Vocab:Other" },
       "Date": { "@id": "Class:Date" },
       "Accepted": { "@id": "Vocab:Accepted" },
       "Available": { "@id": "Vocab:Available" },
@@ -886,10 +896,9 @@
       "Updated": { "@id": "Vocab:Updated" },
       "Valid": { "@id": "Vocab:Valid" },
       "Withdrawn": { "@id": "Vocab:Withdrawn" },
-      "OtherDateType": { "@id": "Vocab:Other" },
       "Language": { "@id": "Class:Language" },
       "ResourceType": { "@id": "Class:ResourceType" },
-      "resourceTypeGeneral": { "@id": "Property:resourceTypeGeneral" },
+      "resourceTypeGeneral": { "@id": "Property:resourceTypeGeneral", "@type": "Vocab:resourceTypeGeneral" },
       "Audiovisual": { "@id": "Vocab:Audiovisual" },
       "Award": { "@id": "Vocab:Award" },
       "Book": { "@id": "Vocab:Book" },
@@ -921,7 +930,6 @@
       "StudyRegistration": { "@id": "Vocab:StudyRegistration" },
       "Text": { "@id": "Vocab:Text" },
       "Workflow": { "@id": "Vocab:Workflow" },
-      "OtherResourceTypeGeneral": { "@id": "Vocab:Other" },
       "AlternateIdentifier": { "@id": "Class:AlternateIdentifier" },
       "alternateIdentifier": { "@id": "Property:alternateIdentifier" },
       "alternateIdentifierType": { "@id": "Property:alternateIdentifierType" },
@@ -1333,7 +1341,7 @@
   "$refs": {
     "relationTypeForRelatedItem": { "$ref": "#/$defs/relationType/enumSchema" }
   },
-  
+
   "responseProfile": {
     "$comment": "==== JSON:API RESPONSE SCHEMA — validates DataCite REST responses. Allows server-added read-only/analytics fields under data.attributes. ====",
     "$schema": "http://json-schema.org/draft-07/schema#",
