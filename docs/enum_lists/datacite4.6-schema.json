@@ -209,7 +209,17 @@
           "value": { "type": "string" },
           "alternateIdentifierType": { "type": "string" }
         },
-        "required": ["value", "alternateIdentifierType"],
+        "if": {
+          "properties": {
+            "value": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "then": {
+          "required": ["alternateIdentifierType"]
+        },
         "additionalProperties": false
       }
     },
@@ -356,35 +366,40 @@
   "required": ["westBoundLongitude", "eastBoundLongitude", "southBoundLatitude", "northBoundLatitude"],
   "additionalProperties": false
 },
-          "geoLocationPolygon": {
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "polygonPoint": {
-        "type": "object",
-        "properties": {
-          "pointLongitude": { "type": "number" },
-          "pointLatitude": { "type": "number" }
-        },
-        "required": ["pointLongitude", "pointLatitude"],
-        "additionalProperties": false
-      },
-      "inPolygonPoint": {
-        "type": "object",
-        "properties": {
-          "pointLongitude": { "type": "number" },
-          "pointLatitude": { "type": "number" }
-        },
-        "required": ["pointLongitude", "pointLatitude"],
-        "additionalProperties": false
+      "geoLocationPolygon": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "polygonPoint": {
+              "type": "object",
+              "properties": {
+                "pointLongitude": { "type": "number" },
+                "pointLatitude": { "type": "number" }
+              },
+              "required": ["pointLongitude", "pointLatitude"],
+              "additionalProperties": false
+            },
+            "inPolygonPoint": {
+              "type": "object",
+              "properties": {
+                "pointLongitude": { "type": "number" },
+                "pointLatitude": { "type": "number" }
+              },
+              "required": ["pointLongitude", "pointLatitude"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["polygonPoint"],
+          "additionalProperties": false
+        }
       }
     },
-    "required": ["polygonPoint"],
+    "required": ["geoLocationPlace"],
     "additionalProperties": false
   }
 },
-  "relatedItems": {
+"relatedItems": {
   "type": "array",
   "description": "Information about a resource related to the one being registered.",
   "items": {
@@ -524,4 +539,6 @@
     "resourceTypeGeneral"
   ],
   "additionalProperties": false
+
 }
+      }
