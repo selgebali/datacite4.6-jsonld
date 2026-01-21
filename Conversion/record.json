@@ -1,0 +1,980 @@
+{
+  "data": {
+    "id": "10.82433/b09z-4k37",
+    "type": "dois",
+    "attributes": {
+      "doi": "10.82433/B09Z-4K37",
+      "prefix": "10.82433",
+      "suffix": "B09Z-4K37",
+      "identifiers": [
+        {
+          "identifier": "12345",
+          "identifierType": "Local accession number"
+        }
+      ],
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "12345",
+          "alternateIdentifierType": "Local accession number"
+        }
+      ],
+      "creators": [
+        {
+          "name": "ExampleFamilyName, ExampleGivenName",
+          "nameType": "Personal",
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ]
+        },
+        {
+          "name": "ExampleOrganization",
+          "nameType": "Organizational",
+          "givenName": null,
+          "familyName": null,
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://ror.org/04wxnsj81",
+              "nameIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ]
+        }
+      ],
+      "titles": [
+        {
+          "title": "Example Title",
+          "lang": "en"
+        },
+        {
+          "title": "Example Subtitle",
+          "lang": "en",
+          "titleType": "Subtitle"
+        },
+        {
+          "title": "Example TranslatedTitle",
+          "lang": "fr",
+          "titleType": "TranslatedTitle"
+        },
+        {
+          "title": "Example AlternativeTitle",
+          "lang": "en",
+          "titleType": "AlternativeTitle"
+        }
+      ],
+      "publisher": {
+        "name": "Example Publisher",
+        "lang": "en",
+        "publisherIdentifier": "https://ror.org/04z8jg394",
+        "publisherIdentifierScheme": "ROR",
+        "schemeUri": "https://ror.org/"
+      },
+      "container": {
+        "type": "DataRepository",
+        "identifier": "http://purl.oclc.org/foo/bar",
+        "identifierType": "PURL",
+        "title": "Example SeriesInformation"
+      },
+      "publicationYear": 2024,
+      "subjects": [
+        {
+          "subject": "FOS: Computer and information sciences",
+          "subjectScheme": "Fields of Science and Technology (FOS)",
+          "schemeUri": "http://www.oecd.org/science/inno",
+          "valueUri": "http://www.oecd.org/science/inno/38235147.pdf"
+        },
+        {
+          "subject": "Digital curation and preservation",
+          "subjectScheme": "Australian and New Zealand Standard Research Classification (ANZSRC), 2020",
+          "schemeUri": "https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc",
+          "classificationCode": "461001"
+        },
+        {
+          "subject": "Example Subject"
+        }
+      ],
+      "contributors": [
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "ContactPerson"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "DataCollector"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "DataCurator"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "DataManager"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": null,
+          "familyName": null,
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://ror.org/03yrm5c26",
+              "nameIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Distributor"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Editor"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": null,
+          "familyName": null,
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://ror.org/03yrm5c26",
+              "nameIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "HostingInstitution"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Producer"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "ProjectLeader"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "ProjectManager"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "ProjectMember"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": null,
+          "familyName": null,
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://ror.org/04wxnsj81",
+              "nameIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "RegistrationAgency"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": null,
+          "familyName": null,
+          "contributorType": "RegistrationAuthority"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "RelatedPerson"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Researcher"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": null,
+          "familyName": null,
+          "affiliation": [
+            {
+              "name": "ExampleOrganization",
+              "affiliationIdentifier": "https://ror.org/03yrm5c26",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "ResearchGroup"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "RightsHolder"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": null,
+          "familyName": null,
+          "affiliation": [
+            {
+              "name": "https://ror.org/03yrm5c26",
+              "affiliationIdentifier": "https://ror.org/03yrm5c26",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Sponsor"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Supervisor"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Translator"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": null,
+          "familyName": null,
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://ror.org/03yrm5c26",
+              "nameIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "WorkPackageLeader"
+        },
+        {
+          "name": null,
+          "nameType": null,
+          "givenName": "ExampleGivenName",
+          "familyName": "ExampleFamilyName",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-5727-2427",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "affiliation": [
+            {
+              "name": "ExampleAffiliation",
+              "affiliationIdentifier": "https://ror.org/04wxnsj81",
+              "affiliationIdentifierScheme": "ROR",
+              "schemeUri": "https://ror.org"
+            }
+          ],
+          "contributorType": "Other"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2024-01-01",
+          "dateType": "Accepted"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Available"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Copyrighted"
+        },
+        {
+          "date": "2024-01-01/2024-12-31",
+          "dateType": "Collected"
+        },
+        {
+          "date": "2024-01-01/2024-12-31",
+          "dateType": "Coverage"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Created"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Issued"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Submitted"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Updated"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Valid"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Withdrawn"
+        },
+        {
+          "date": "2024-01-01",
+          "dateType": "Other",
+          "dateInformation": "ExampleDateInformation"
+        }
+      ],
+      "language": "en",
+      "types": {
+        "resourceType": "Example ResourceType",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "schemaOrg": "Dataset"
+      },
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "ark:/13030/tqb3kh97gh8w",
+          "relatedIdentifierType": "ARK",
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": "Audiovisual"
+        },
+        {
+          "relatedIdentifier": "arXiv:0706.0001",
+          "relatedIdentifierType": "arXiv",
+          "relationType": "Cites",
+          "resourceTypeGeneral": "Award"
+        },
+        {
+          "relatedIdentifier": "2018AGUFM.A24K..07S",
+          "relatedIdentifierType": "bibcode",
+          "relationType": "IsSupplementTo",
+          "resourceTypeGeneral": "Book"
+        },
+        {
+          "relatedIdentifier": "31253.11.sciencedb.13238",
+          "relatedIdentifierType": "CSTR",
+          "relationType": "IsSupplementedBy",
+          "resourceTypeGeneral": "BookChapter"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsContinuedBy",
+          "resourceTypeGeneral": "Collection"
+        },
+        {
+          "relatedIdentifier": "9783468111242",
+          "relatedIdentifierType": "EAN13",
+          "relationType": "Continues",
+          "resourceTypeGeneral": "ComputationalNotebook"
+        },
+        {
+          "relatedIdentifier": "1562-6865",
+          "relatedIdentifierType": "EISSN",
+          "relationType": "Describes",
+          "resourceTypeGeneral": "ConferencePaper"
+        },
+        {
+          "relatedIdentifier": "10013/epic.10033",
+          "relatedIdentifierType": "Handle",
+          "relationType": "IsDescribedBy",
+          "resourceTypeGeneral": "ConferenceProceeding"
+        },
+        {
+          "relatedIdentifier": "IECUR0097",
+          "relatedIdentifierType": "IGSN",
+          "relationType": "HasMetadata",
+          "resourceTypeGeneral": "DataPaper"
+        },
+        {
+          "relatedIdentifier": "978-3-905673-82-1",
+          "relatedIdentifierType": "ISBN",
+          "relationType": "IsMetadataFor",
+          "resourceTypeGeneral": "Dataset"
+        },
+        {
+          "relatedIdentifier": "0077-5606",
+          "relatedIdentifierType": "ISSN",
+          "relationType": "HasVersion",
+          "resourceTypeGeneral": "Dissertation"
+        },
+        {
+          "relatedIdentifier": "0A9 2002 12B4A105 7",
+          "relatedIdentifierType": "ISTC",
+          "relationType": "IsVersionOf",
+          "resourceTypeGeneral": "Event"
+        },
+        {
+          "relatedIdentifier": "1188-1534",
+          "relatedIdentifierType": "LISSN",
+          "relationType": "IsNewVersionOf",
+          "resourceTypeGeneral": "Image"
+        },
+        {
+          "relatedIdentifier": "urn:lsid:ubio.org:namebank:11815",
+          "relatedIdentifierType": "LSID",
+          "relationType": "IsPreviousVersionOf",
+          "resourceTypeGeneral": "InteractiveResource"
+        },
+        {
+          "relatedIdentifier": "12082125",
+          "relatedIdentifierType": "PMID",
+          "relationType": "IsPartOf",
+          "resourceTypeGeneral": "Journal"
+        },
+        {
+          "relatedIdentifier": "http://purl.oclc.org/foo/bar",
+          "relatedIdentifierType": "PURL",
+          "relationType": "HasPart",
+          "resourceTypeGeneral": "JournalArticle"
+        },
+        {
+          "relatedIdentifier": "RRID:SCR_014641",
+          "relatedIdentifierType": "RRID",
+          "relationType": "IsPublishedIn",
+          "resourceTypeGeneral": "Model"
+        },
+        {
+          "relatedIdentifier": "123456789999",
+          "relatedIdentifierType": "UPC",
+          "relationType": "IsReferencedBy",
+          "resourceTypeGeneral": "OutputManagementPlan"
+        },
+        {
+          "relatedIdentifier": "http://www.heatflow.und.edu/index2.html",
+          "relatedIdentifierType": "URL",
+          "relationType": "References",
+          "resourceTypeGeneral": "PeerReview"
+        },
+        {
+          "relatedIdentifier": "urn:nbn:de:101:1-201102033592",
+          "relatedIdentifierType": "URN",
+          "relationType": "IsDocumentedBy",
+          "resourceTypeGeneral": "PhysicalObject"
+        },
+        {
+          "relatedIdentifier": "https://w3id.org/games/spec/coil#Coil_Bomb_Die_Of_Age",
+          "relatedIdentifierType": "w3id",
+          "relationType": "Documents",
+          "resourceTypeGeneral": "Preprint"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCompiledBy",
+          "resourceTypeGeneral": "Project"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Compiles",
+          "resourceTypeGeneral": "Report"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsVariantFormOf",
+          "resourceTypeGeneral": "Service"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsOriginalFormOf",
+          "resourceTypeGeneral": "Software"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsIdenticalTo",
+          "resourceTypeGeneral": "Sound"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsReviewedBy",
+          "resourceTypeGeneral": "Standard"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Reviews",
+          "resourceTypeGeneral": "Text"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsDerivedFrom",
+          "resourceTypeGeneral": "Workflow"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsSourceOf",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsRequiredBy",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Requires",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Obsoletes",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsObsoletedBy",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Collects",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCollectedBy",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "HasTranslation",
+          "resourceTypeGeneral": "Other"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.epsl.2011.11.037",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsTranslationOf",
+          "resourceTypeGeneral": "Other"
+        }
+      ],
+      "relatedItems": [
+        {
+          "relatedItemType": "Text",
+          "relationType": "Cites",
+          "relatedItemIdentifier": {
+            "relatedItemIdentifier": "1234-5678",
+            "relatedItemIdentifierType": "ISSN"
+          },
+          "creators": [
+            {
+              "name": "ExampleFamilyName, ExampleGivenName",
+              "nameType": "Personal",
+              "givenName": "ExampleGivenName",
+              "familyName": "ExampleFamilyName"
+            }
+          ],
+          "titles": [
+            {
+              "title": "Example RelatedItem Title"
+            },
+            {
+              "title": "Example RelatedItem TranslatedTitle",
+              "titleType": "TranslatedTitle"
+            }
+          ],
+          "publicationYear": "1990",
+          "volume": "1",
+          "issue": "2",
+          "number": "1",
+          "numberType": "Other",
+          "firstPage": "1",
+          "lastPage": "100",
+          "publisher": "Example RelatedItem Publisher",
+          "edition": "Example RelatedItem Edition",
+          "contributors": [
+            {
+              "name": null,
+              "nameType": null,
+              "givenName": "ExampleGivenName",
+              "familyName": "ExampleFamilyName",
+              "contributorType": "Other"
+            }
+          ]
+        }
+      ],
+      "sizes": [
+        "1 MB",
+        "90 pages"
+      ],
+      "formats": [
+        "application/xml",
+        "text/plain"
+      ],
+      "version": "1",
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "lang": "en",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "CC-BY-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Example Abstract",
+          "lang": "en",
+          "descriptionType": "Abstract"
+        },
+        {
+          "description": "Example Methods",
+          "lang": "en",
+          "descriptionType": "Methods"
+        },
+        {
+          "description": "Example SeriesInformation",
+          "lang": "en",
+          "descriptionType": "SeriesInformation"
+        },
+        {
+          "description": "Example TableOfContents",
+          "lang": "en",
+          "descriptionType": "TableOfContents"
+        },
+        {
+          "description": "Example TechnicalInfo",
+          "lang": "en",
+          "descriptionType": "TechnicalInfo"
+        },
+        {
+          "description": "Example Other",
+          "lang": "en",
+          "descriptionType": "Other"
+        }
+      ],
+      "geoLocations": [
+        {
+          "geoLocationPlace": "Vancouver, British Columbia, Canada",
+          "geoLocationPoint": {
+            "pointLatitude": "49.2827",
+            "pointLongitude": "-123.1207"
+          },
+          "geoLocationBox": {
+            "westBoundLongitude": "-123.27",
+            "eastBoundLongitude": "-123.02",
+            "southBoundLatitude": "49.195",
+            "northBoundLatitude": "49.315"
+          },
+          "geoLocationPolygon": [
+            {
+              "polygonPoint": {
+                "pointLatitude": "41.991",
+                "pointLongitude": "-71.032"
+              }
+            },
+            {
+              "polygonPoint": {
+                "pointLatitude": "42.893",
+                "pointLongitude": "-69.622"
+              }
+            },
+            {
+              "polygonPoint": {
+                "pointLatitude": "41.991",
+                "pointLongitude": "-68.211"
+              }
+            },
+            {
+              "polygonPoint": {
+                "pointLatitude": "41.090",
+                "pointLongitude": "-69.622"
+              }
+            },
+            {
+              "polygonPoint": {
+                "pointLatitude": "41.991",
+                "pointLongitude": "-71.032"
+              }
+            }
+          ]
+        }
+      ],
+      "fundingReferences": [
+        {
+          "funderName": "Example Funder",
+          "funderIdentifier": "https://doi.org/10.13039/501100000780",
+          "funderIdentifierType": "Crossref Funder ID",
+          "awardNumber": "12345",
+          "awardUri": "https://example.com/example-award-uri",
+          "awardTitle": "Example AwardTitle"
+        }
+      ],
+      "xml": "PCEtLSAgRXhhbXBsZSB3aXRoIGFsbCBwcm9wZXJ0aWVzICAtLT4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwczovL3NjaGVtYS5kYXRhY2l0ZS5vcmcvbWV0YS9rZXJuZWwtNC9tZXRhZGF0YS54c2QiPgo8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC44MjQzMy9CMDlaLTRLMzc8L2lkZW50aWZpZXI+CjxjcmVhdG9ycz4KPGNyZWF0b3I+CjxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkV4YW1wbGVGYW1pbHlOYW1lLCBFeGFtcGxlR2l2ZW5OYW1lPC9jcmVhdG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTcyNy0yNDI3PC9uYW1lSWRlbnRpZmllcj4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA0d3huc2o4MSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlQWZmaWxpYXRpb248L2FmZmlsaWF0aW9uPgo8L2NyZWF0b3I+CjxjcmVhdG9yPgo8Y3JlYXRvck5hbWUgeG1sOmxhbmc9ImVuIiBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPkV4YW1wbGVPcmdhbml6YXRpb248L2NyZWF0b3JOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPmh0dHBzOi8vcm9yLm9yZy8wNHd4bnNqODE8L25hbWVJZGVudGlmaWVyPgo8L2NyZWF0b3I+CjwvY3JlYXRvcnM+Cjx0aXRsZXM+Cjx0aXRsZSB4bWw6bGFuZz0iZW4iPkV4YW1wbGUgVGl0bGU8L3RpdGxlPgo8dGl0bGUgdGl0bGVUeXBlPSJTdWJ0aXRsZSIgeG1sOmxhbmc9ImVuIj5FeGFtcGxlIFN1YnRpdGxlPC90aXRsZT4KPHRpdGxlIHRpdGxlVHlwZT0iVHJhbnNsYXRlZFRpdGxlIiB4bWw6bGFuZz0iZnIiPkV4YW1wbGUgVHJhbnNsYXRlZFRpdGxlPC90aXRsZT4KPHRpdGxlIHRpdGxlVHlwZT0iQWx0ZXJuYXRpdmVUaXRsZSIgeG1sOmxhbmc9ImVuIj5FeGFtcGxlIEFsdGVybmF0aXZlVGl0bGU8L3RpdGxlPgo8L3RpdGxlcz4KPHB1Ymxpc2hlciB4bWw6bGFuZz0iZW4iIHB1Ymxpc2hlcklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNHo4amczOTQiIHB1Ymxpc2hlcklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmcvIj5FeGFtcGxlIFB1Ymxpc2hlcjwvcHVibGlzaGVyPgo8cHVibGljYXRpb25ZZWFyPjIwMjQ8L3B1YmxpY2F0aW9uWWVhcj4KPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5FeGFtcGxlIFJlc291cmNlVHlwZTwvcmVzb3VyY2VUeXBlPgo8c3ViamVjdHM+CjxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IkZpZWxkcyBvZiBTY2llbmNlIGFuZCBUZWNobm9sb2d5IChGT1MpIiBzY2hlbWVVUkk9Imh0dHA6Ly93d3cub2VjZC5vcmcvc2NpZW5jZS9pbm5vIiB2YWx1ZVVSST0iaHR0cDovL3d3dy5vZWNkLm9yZy9zY2llbmNlL2lubm8vMzgyMzUxNDcucGRmIj5GT1M6IENvbXB1dGVyIGFuZCBpbmZvcm1hdGlvbiBzY2llbmNlczwvc3ViamVjdD4KPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iQXVzdHJhbGlhbiBhbmQgTmV3IFplYWxhbmQgU3RhbmRhcmQgUmVzZWFyY2ggQ2xhc3NpZmljYXRpb24gKEFOWlNSQyksIDIwMjAiIHNjaGVtZVVSST0iaHR0cHM6Ly93d3cuYWJzLmdvdi5hdS9zdGF0aXN0aWNzL2NsYXNzaWZpY2F0aW9ucy9hdXN0cmFsaWFuLWFuZC1uZXctemVhbGFuZC1zdGFuZGFyZC1yZXNlYXJjaC1jbGFzc2lmaWNhdGlvbi1hbnpzcmMiIGNsYXNzaWZpY2F0aW9uQ29kZT0iNDYxMDAxIj5EaWdpdGFsIGN1cmF0aW9uIGFuZCBwcmVzZXJ2YXRpb248L3N1YmplY3Q+CjxzdWJqZWN0PkV4YW1wbGUgU3ViamVjdDwvc3ViamVjdD4KPC9zdWJqZWN0cz4KPGNvbnRyaWJ1dG9ycz4KPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iQ29udGFjdFBlcnNvbiI+Cjxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FeGFtcGxlRmFtaWx5TmFtZSwgRXhhbXBsZUdpdmVuTmFtZTwvY29udHJpYnV0b3JOYW1lPgo8Z2l2ZW5OYW1lPkV4YW1wbGVHaXZlbk5hbWU8L2dpdmVuTmFtZT4KPGZhbWlseU5hbWU+RXhhbXBsZUZhbWlseU5hbWU8L2ZhbWlseU5hbWU+CjxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS01NzI3LTI0Mjc8L25hbWVJZGVudGlmaWVyPgo8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDR3eG5zajgxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkV4YW1wbGVBZmZpbGlhdGlvbjwvYWZmaWxpYXRpb24+CjwvY29udHJpYnV0b3I+Cjxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IkRhdGFDb2xsZWN0b3IiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RXhhbXBsZUZhbWlseU5hbWUsIEV4YW1wbGVHaXZlbk5hbWU8L2NvbnRyaWJ1dG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTcyNy0yNDI3PC9uYW1lSWRlbnRpZmllcj4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA0d3huc2o4MSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlQWZmaWxpYXRpb248L2FmZmlsaWF0aW9uPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJEYXRhQ3VyYXRvciI+Cjxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FeGFtcGxlRmFtaWx5TmFtZSwgRXhhbXBsZUdpdmVuTmFtZTwvY29udHJpYnV0b3JOYW1lPgo8Z2l2ZW5OYW1lPkV4YW1wbGVHaXZlbk5hbWU8L2dpdmVuTmFtZT4KPGZhbWlseU5hbWU+RXhhbXBsZUZhbWlseU5hbWU8L2ZhbWlseU5hbWU+CjxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS01NzI3LTI0Mjc8L25hbWVJZGVudGlmaWVyPgo8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDR3eG5zajgxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkV4YW1wbGVBZmZpbGlhdGlvbjwvYWZmaWxpYXRpb24+CjwvY29udHJpYnV0b3I+Cjxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IkRhdGFNYW5hZ2VyIj4KPGNvbnRyaWJ1dG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkV4YW1wbGVGYW1pbHlOYW1lLCBFeGFtcGxlR2l2ZW5OYW1lPC9jb250cmlidXRvck5hbWU+CjxnaXZlbk5hbWU+RXhhbXBsZUdpdmVuTmFtZTwvZ2l2ZW5OYW1lPgo8ZmFtaWx5TmFtZT5FeGFtcGxlRmFtaWx5TmFtZTwvZmFtaWx5TmFtZT4KPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSJodHRwczovL29yY2lkLm9yZyI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTU3MjctMjQyNzwvbmFtZUlkZW50aWZpZXI+CjxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNHd4bnNqODEiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIiBzY2hlbWVVUkk9Imh0dHBzOi8vcm9yLm9yZyI+RXhhbXBsZUFmZmlsaWF0aW9uPC9hZmZpbGlhdGlvbj4KPC9jb250cmlidXRvcj4KPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGlzdHJpYnV0b3IiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJPcmdhbml6YXRpb25hbCI+RXhhbXBsZU9yZ2FuaXphdGlvbjwvY29udHJpYnV0b3JOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPmh0dHBzOi8vcm9yLm9yZy8wM3lybTVjMjY8L25hbWVJZGVudGlmaWVyPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJFZGl0b3IiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RXhhbXBsZUZhbWlseU5hbWUsIEV4YW1wbGVHaXZlbk5hbWU8L2NvbnRyaWJ1dG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTcyNy0yNDI3PC9uYW1lSWRlbnRpZmllcj4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA0d3huc2o4MSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlQWZmaWxpYXRpb248L2FmZmlsaWF0aW9uPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJIb3N0aW5nSW5zdGl0dXRpb24iPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJPcmdhbml6YXRpb25hbCI+RXhhbXBsZU9yZ2FuaXphdGlvbjwvY29udHJpYnV0b3JOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPmh0dHBzOi8vcm9yLm9yZy8wM3lybTVjMjY8L25hbWVJZGVudGlmaWVyPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJQcm9kdWNlciI+Cjxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FeGFtcGxlRmFtaWx5TmFtZSwgRXhhbXBsZUdpdmVuTmFtZTwvY29udHJpYnV0b3JOYW1lPgo8Z2l2ZW5OYW1lPkV4YW1wbGVHaXZlbk5hbWU8L2dpdmVuTmFtZT4KPGZhbWlseU5hbWU+RXhhbXBsZUZhbWlseU5hbWU8L2ZhbWlseU5hbWU+CjxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS01NzI3LTI0Mjc8L25hbWVJZGVudGlmaWVyPgo8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDR3eG5zajgxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkV4YW1wbGVBZmZpbGlhdGlvbjwvYWZmaWxpYXRpb24+CjwvY29udHJpYnV0b3I+Cjxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RMZWFkZXIiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RXhhbXBsZUZhbWlseU5hbWUsIEV4YW1wbGVHaXZlbk5hbWU8L2NvbnRyaWJ1dG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTcyNy0yNDI3PC9uYW1lSWRlbnRpZmllcj4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA0d3huc2o4MSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlQWZmaWxpYXRpb248L2FmZmlsaWF0aW9uPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJQcm9qZWN0TWFuYWdlciI+Cjxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FeGFtcGxlRmFtaWx5TmFtZSwgRXhhbXBsZUdpdmVuTmFtZTwvY29udHJpYnV0b3JOYW1lPgo8Z2l2ZW5OYW1lPkV4YW1wbGVHaXZlbk5hbWU8L2dpdmVuTmFtZT4KPGZhbWlseU5hbWU+RXhhbXBsZUZhbWlseU5hbWU8L2ZhbWlseU5hbWU+CjxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS01NzI3LTI0Mjc8L25hbWVJZGVudGlmaWVyPgo8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDR3eG5zajgxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkV4YW1wbGVBZmZpbGlhdGlvbjwvYWZmaWxpYXRpb24+CjwvY29udHJpYnV0b3I+Cjxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RNZW1iZXIiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RXhhbXBsZUZhbWlseU5hbWUsIEV4YW1wbGVHaXZlbk5hbWU8L2NvbnRyaWJ1dG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTcyNy0yNDI3PC9uYW1lSWRlbnRpZmllcj4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA0d3huc2o4MSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlQWZmaWxpYXRpb248L2FmZmlsaWF0aW9uPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJSZWdpc3RyYXRpb25BZ2VuY3kiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJPcmdhbml6YXRpb25hbCI+RGF0YUNpdGU8L2NvbnRyaWJ1dG9yTmFtZT4KPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5odHRwczovL3Jvci5vcmcvMDR3eG5zajgxPC9uYW1lSWRlbnRpZmllcj4KPC9jb250cmlidXRvcj4KPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iUmVnaXN0cmF0aW9uQXV0aG9yaXR5Ij4KPGNvbnRyaWJ1dG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPkludGVybmF0aW9uYWwgRE9JIEZvdW5kYXRpb248L2NvbnRyaWJ1dG9yTmFtZT4KPC9jb250cmlidXRvcj4KPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iUmVsYXRlZFBlcnNvbiI+Cjxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FeGFtcGxlRmFtaWx5TmFtZSwgRXhhbXBsZUdpdmVuTmFtZTwvY29udHJpYnV0b3JOYW1lPgo8Z2l2ZW5OYW1lPkV4YW1wbGVHaXZlbk5hbWU8L2dpdmVuTmFtZT4KPGZhbWlseU5hbWU+RXhhbXBsZUZhbWlseU5hbWU8L2ZhbWlseU5hbWU+CjxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS01NzI3LTI0Mjc8L25hbWVJZGVudGlmaWVyPgo8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDR3eG5zajgxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkV4YW1wbGVBZmZpbGlhdGlvbjwvYWZmaWxpYXRpb24+CjwvY29udHJpYnV0b3I+Cjxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlJlc2VhcmNoZXIiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RXhhbXBsZUZhbWlseU5hbWUsIEV4YW1wbGVHaXZlbk5hbWU8L2NvbnRyaWJ1dG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTcyNy0yNDI3PC9uYW1lSWRlbnRpZmllcj4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA0d3huc2o4MSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlQWZmaWxpYXRpb248L2FmZmlsaWF0aW9uPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJSZXNlYXJjaEdyb3VwIj4KPGNvbnRyaWJ1dG9yTmFtZT5FeGFtcGxlQ29udHJpYnV0b3I8L2NvbnRyaWJ1dG9yTmFtZT4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAzeXJtNWMyNiIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlT3JnYW5pemF0aW9uPC9hZmZpbGlhdGlvbj4KPC9jb250cmlidXRvcj4KPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iUmlnaHRzSG9sZGVyIj4KPGNvbnRyaWJ1dG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkV4YW1wbGVGYW1pbHlOYW1lLCBFeGFtcGxlR2l2ZW5OYW1lPC9jb250cmlidXRvck5hbWU+CjxnaXZlbk5hbWU+RXhhbXBsZUdpdmVuTmFtZTwvZ2l2ZW5OYW1lPgo8ZmFtaWx5TmFtZT5FeGFtcGxlRmFtaWx5TmFtZTwvZmFtaWx5TmFtZT4KPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSJodHRwczovL29yY2lkLm9yZyI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTU3MjctMjQyNzwvbmFtZUlkZW50aWZpZXI+CjxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNHd4bnNqODEiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIiBzY2hlbWVVUkk9Imh0dHBzOi8vcm9yLm9yZyI+RXhhbXBsZUFmZmlsaWF0aW9uPC9hZmZpbGlhdGlvbj4KPC9jb250cmlidXRvcj4KPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iU3BvbnNvciI+Cjxjb250cmlidXRvck5hbWU+RXhhbXBsZUNvbnRyaWJ1dG9yPC9jb250cmlidXRvck5hbWU+CjxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wM3lybTVjMjYiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIiBzY2hlbWVVUkk9Imh0dHBzOi8vcm9yLm9yZyI+aHR0cHM6Ly9yb3Iub3JnLzAzeXJtNWMyNjwvYWZmaWxpYXRpb24+CjwvY29udHJpYnV0b3I+Cjxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlN1cGVydmlzb3IiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RXhhbXBsZUZhbWlseU5hbWUsIEV4YW1wbGVHaXZlbk5hbWU8L2NvbnRyaWJ1dG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTcyNy0yNDI3PC9uYW1lSWRlbnRpZmllcj4KPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA0d3huc2o4MSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FeGFtcGxlQWZmaWxpYXRpb248L2FmZmlsaWF0aW9uPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJUcmFuc2xhdG9yIj4KPGNvbnRyaWJ1dG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkV4YW1wbGVGYW1pbHlOYW1lLCBFeGFtcGxlR2l2ZW5OYW1lPC9jb250cmlidXRvck5hbWU+CjxnaXZlbk5hbWU+RXhhbXBsZUdpdmVuTmFtZTwvZ2l2ZW5OYW1lPgo8ZmFtaWx5TmFtZT5FeGFtcGxlRmFtaWx5TmFtZTwvZmFtaWx5TmFtZT4KPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSJodHRwczovL29yY2lkLm9yZyI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTU3MjctMjQyNzwvbmFtZUlkZW50aWZpZXI+CjxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNHd4bnNqODEiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIiBzY2hlbWVVUkk9Imh0dHBzOi8vcm9yLm9yZyI+RXhhbXBsZUFmZmlsaWF0aW9uPC9hZmZpbGlhdGlvbj4KPC9jb250cmlidXRvcj4KPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iV29ya1BhY2thZ2VMZWFkZXIiPgo8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJPcmdhbml6YXRpb25hbCI+RXhhbXBsZU9yZ2FuaXphdGlvbjwvY29udHJpYnV0b3JOYW1lPgo8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPmh0dHBzOi8vcm9yLm9yZy8wM3lybTVjMjY8L25hbWVJZGVudGlmaWVyPgo8L2NvbnRyaWJ1dG9yPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJPdGhlciI+Cjxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FeGFtcGxlRmFtaWx5TmFtZSwgRXhhbXBsZUdpdmVuTmFtZTwvY29udHJpYnV0b3JOYW1lPgo8Z2l2ZW5OYW1lPkV4YW1wbGVHaXZlbk5hbWU8L2dpdmVuTmFtZT4KPGZhbWlseU5hbWU+RXhhbXBsZUZhbWlseU5hbWU8L2ZhbWlseU5hbWU+CjxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS01NzI3LTI0Mjc8L25hbWVJZGVudGlmaWVyPgo8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDR3eG5zajgxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkV4YW1wbGVBZmZpbGlhdGlvbjwvYWZmaWxpYXRpb24+CjwvY29udHJpYnV0b3I+CjwvY29udHJpYnV0b3JzPgo8ZGF0ZXM+CjxkYXRlIGRhdGVUeXBlPSJBY2NlcHRlZCI+MjAyNC0wMS0wMTwvZGF0ZT4KPGRhdGUgZGF0ZVR5cGU9IkF2YWlsYWJsZSI+MjAyNC0wMS0wMTwvZGF0ZT4KPGRhdGUgZGF0ZVR5cGU9IkNvcHlyaWdodGVkIj4yMDI0LTAxLTAxPC9kYXRlPgo8ZGF0ZSBkYXRlVHlwZT0iQ29sbGVjdGVkIj4yMDI0LTAxLTAxLzIwMjQtMTItMzE8L2RhdGU+CjxkYXRlIGRhdGVUeXBlPSJDb3ZlcmFnZSI+MjAyNC0wMS0wMS8yMDI0LTEyLTMxPC9kYXRlPgo8ZGF0ZSBkYXRlVHlwZT0iQ3JlYXRlZCI+MjAyNC0wMS0wMTwvZGF0ZT4KPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAyNC0wMS0wMTwvZGF0ZT4KPGRhdGUgZGF0ZVR5cGU9IlN1Ym1pdHRlZCI+MjAyNC0wMS0wMTwvZGF0ZT4KPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiPjIwMjQtMDEtMDE8L2RhdGU+CjxkYXRlIGRhdGVUeXBlPSJWYWxpZCI+MjAyNC0wMS0wMTwvZGF0ZT4KPGRhdGUgZGF0ZVR5cGU9IldpdGhkcmF3biI+MjAyNC0wMS0wMTwvZGF0ZT4KPGRhdGUgZGF0ZVR5cGU9Ik90aGVyIiBkYXRlSW5mb3JtYXRpb249IkV4YW1wbGVEYXRlSW5mb3JtYXRpb24iPjIwMjQtMDEtMDE8L2RhdGU+CjwvZGF0ZXM+CjxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CjxhbHRlcm5hdGVJZGVudGlmaWVycz4KPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkxvY2FsIGFjY2Vzc2lvbiBudW1iZXIiPjEyMzQ1PC9hbHRlcm5hdGVJZGVudGlmaWVyPgo8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgo8cmVsYXRlZElkZW50aWZpZXJzPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJBUksiIHJlbGF0aW9uVHlwZT0iSXNDaXRlZEJ5IiByZXNvdXJjZVR5cGVHZW5lcmFsPSJBdWRpb3Zpc3VhbCI+YXJrOi8xMzAzMC90cWIza2g5N2doOHc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJhclhpdiIgcmVsYXRpb25UeXBlPSJDaXRlcyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iQXdhcmQiPmFyWGl2OjA3MDYuMDAwMTwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9ImJpYmNvZGUiIHJlbGF0aW9uVHlwZT0iSXNTdXBwbGVtZW50VG8iIHJlc291cmNlVHlwZUdlbmVyYWw9IkJvb2siPjIwMThBR1VGTS5BMjRLLi4wN1M8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJDU1RSIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudGVkQnkiIHJlc291cmNlVHlwZUdlbmVyYWw9IkJvb2tDaGFwdGVyIj4zMTI1My4xMS5zY2llbmNlZGIuMTMyMzg8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNDb250aW51ZWRCeSIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iQ29sbGVjdGlvbiI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJFQU4xMyIgcmVsYXRpb25UeXBlPSJDb250aW51ZXMiIHJlc291cmNlVHlwZUdlbmVyYWw9IkNvbXB1dGF0aW9uYWxOb3RlYm9vayI+OTc4MzQ2ODExMTI0MjwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkVJU1NOIiByZWxhdGlvblR5cGU9IkRlc2NyaWJlcyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iQ29uZmVyZW5jZVBhcGVyIj4xNTYyLTY4NjU8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJIYW5kbGUiIHJlbGF0aW9uVHlwZT0iSXNEZXNjcmliZWRCeSIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iQ29uZmVyZW5jZVByb2NlZWRpbmciPjEwMDEzL2VwaWMuMTAwMzM8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJJR1NOIiByZWxhdGlvblR5cGU9Ikhhc01ldGFkYXRhIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhUGFwZXIiPklFQ1VSMDA5NzwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IklTQk4iIHJlbGF0aW9uVHlwZT0iSXNNZXRhZGF0YUZvciIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+OTc4LTMtOTA1NjczLTgyLTE8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJJU1NOIiByZWxhdGlvblR5cGU9Ikhhc1ZlcnNpb24iIHJlc291cmNlVHlwZUdlbmVyYWw9IkRpc3NlcnRhdGlvbiI+MDA3Ny01NjA2PC9yZWxhdGVkSWRlbnRpZmllcj4KPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iSVNUQyIgcmVsYXRpb25UeXBlPSJJc1ZlcnNpb25PZiIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRXZlbnQiPjBBOSAyMDAyIDEyQjRBMTA1IDc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJMSVNTTiIgcmVsYXRpb25UeXBlPSJJc05ld1ZlcnNpb25PZiIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW1hZ2UiPjExODgtMTUzNDwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkxTSUQiIHJlbGF0aW9uVHlwZT0iSXNQcmV2aW91c1ZlcnNpb25PZiIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW50ZXJhY3RpdmVSZXNvdXJjZSI+dXJuOmxzaWQ6dWJpby5vcmc6bmFtZWJhbms6MTE4MTU8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJQTUlEIiByZWxhdGlvblR5cGU9IklzUGFydE9mIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJKb3VybmFsIj4xMjA4MjEyNTwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlBVUkwiIHJlbGF0aW9uVHlwZT0iSGFzUGFydCIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSm91cm5hbEFydGljbGUiPmh0dHA6Ly9wdXJsLm9jbGMub3JnL2Zvby9iYXI8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJSUklEIiByZWxhdGlvblR5cGU9IklzUHVibGlzaGVkSW4iIHJlc291cmNlVHlwZUdlbmVyYWw9Ik1vZGVsIj5SUklEOlNDUl8wMTQ2NDE8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJVUEMiIHJlbGF0aW9uVHlwZT0iSXNSZWZlcmVuY2VkQnkiIHJlc291cmNlVHlwZUdlbmVyYWw9Ik91dHB1dE1hbmFnZW1lbnRQbGFuIj4xMjM0NTY3ODk5OTk8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJVUkwiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iUGVlclJldmlldyI+aHR0cDovL3d3dy5oZWF0Zmxvdy51bmQuZWR1L2luZGV4Mi5odG1sPC9yZWxhdGVkSWRlbnRpZmllcj4KPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJOIiByZWxhdGlvblR5cGU9IklzRG9jdW1lbnRlZEJ5IiByZXNvdXJjZVR5cGVHZW5lcmFsPSJQaHlzaWNhbE9iamVjdCI+dXJuOm5ibjpkZToxMDE6MS0yMDExMDIwMzM1OTI8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJ3M2lkIiByZWxhdGlvblR5cGU9IkRvY3VtZW50cyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iUHJlcHJpbnQiPmh0dHBzOi8vdzNpZC5vcmcvZ2FtZXMvc3BlYy9jb2lsI0NvaWxfQm9tYl9EaWVfT2ZfQWdlPC9yZWxhdGVkSWRlbnRpZmllcj4KPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzQ29tcGlsZWRCeSIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iUHJvamVjdCI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ29tcGlsZXMiIHJlc291cmNlVHlwZUdlbmVyYWw9IlJlcG9ydCI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNWYXJpYW50Rm9ybU9mIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJTZXJ2aWNlIj4xMC4xMDE2L2ouZXBzbC4yMDExLjExLjAzNzwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc09yaWdpbmFsRm9ybU9mIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJTb2Z0d2FyZSI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNJZGVudGljYWxUbyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPjEwLjEwMTYvai5lcHNsLjIwMTEuMTEuMDM3PC9yZWxhdGVkSWRlbnRpZmllcj4KPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzUmV2aWV3ZWRCeSIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU3RhbmRhcmQiPjEwLjEwMTYvai5lcHNsLjIwMTEuMTEuMDM3PC9yZWxhdGVkSWRlbnRpZmllcj4KPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJldmlld3MiIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPjEwLjEwMTYvai5lcHNsLjIwMTEuMTEuMDM3PC9yZWxhdGVkSWRlbnRpZmllcj4KPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzRGVyaXZlZEZyb20iIHJlc291cmNlVHlwZUdlbmVyYWw9IldvcmtmbG93Ij4xMC4xMDE2L2ouZXBzbC4yMDExLjExLjAzNzwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1NvdXJjZU9mIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJPdGhlciI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNSZXF1aXJlZEJ5IiByZXNvdXJjZVR5cGVHZW5lcmFsPSJPdGhlciI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVxdWlyZXMiIHJlc291cmNlVHlwZUdlbmVyYWw9Ik90aGVyIj4xMC4xMDE2L2ouZXBzbC4yMDExLjExLjAzNzwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJPYnNvbGV0ZXMiIHJlc291cmNlVHlwZUdlbmVyYWw9Ik90aGVyIj4xMC4xMDE2L2ouZXBzbC4yMDExLjExLjAzNzwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc09ic29sZXRlZEJ5IiByZXNvdXJjZVR5cGVHZW5lcmFsPSJPdGhlciI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ29sbGVjdHMiIHJlc291cmNlVHlwZUdlbmVyYWw9Ik90aGVyIj4xMC4xMDE2L2ouZXBzbC4yMDExLjExLjAzNzwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc0NvbGxlY3RlZEJ5IiByZXNvdXJjZVR5cGVHZW5lcmFsPSJPdGhlciI+MTAuMTAxNi9qLmVwc2wuMjAxMS4xMS4wMzc8L3JlbGF0ZWRJZGVudGlmaWVyPgo8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSGFzVHJhbnNsYXRpb24iIHJlc291cmNlVHlwZUdlbmVyYWw9Ik90aGVyIj4xMC4xMDE2L2ouZXBzbC4yMDExLjExLjAzNzwvcmVsYXRlZElkZW50aWZpZXI+CjxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1RyYW5zbGF0aW9uT2YiIHJlc291cmNlVHlwZUdlbmVyYWw9Ik90aGVyIj4xMC4xMDE2L2ouZXBzbC4yMDExLjExLjAzNzwvcmVsYXRlZElkZW50aWZpZXI+CjwvcmVsYXRlZElkZW50aWZpZXJzPgo8c2l6ZXM+CjxzaXplPjEgTUI8L3NpemU+CjxzaXplPjkwIHBhZ2VzPC9zaXplPgo8L3NpemVzPgo8Zm9ybWF0cz4KPGZvcm1hdD5hcHBsaWNhdGlvbi94bWw8L2Zvcm1hdD4KPGZvcm1hdD50ZXh0L3BsYWluPC9mb3JtYXQ+CjwvZm9ybWF0cz4KPHZlcnNpb24+MTwvdmVyc2lvbj4KPHJpZ2h0c0xpc3Q+CjxyaWdodHMgeG1sOmxhbmc9ImVuIiBzY2hlbWVVUkk9Imh0dHBzOi8vc3BkeC5vcmcvbGljZW5zZXMvIiByaWdodHNJZGVudGlmaWVyU2NoZW1lPSJTUERYIiByaWdodHNJZGVudGlmaWVyPSJDQy1CWS00LjAiIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC8iPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24gNC4wIEludGVybmF0aW9uYWw8L3JpZ2h0cz4KPC9yaWdodHNMaXN0Pgo8ZGVzY3JpcHRpb25zPgo8ZGVzY3JpcHRpb24geG1sOmxhbmc9ImVuIiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5FeGFtcGxlIEFic3RyYWN0PC9kZXNjcmlwdGlvbj4KPGRlc2NyaXB0aW9uIHhtbDpsYW5nPSJlbiIgZGVzY3JpcHRpb25UeXBlPSJNZXRob2RzIj5FeGFtcGxlIE1ldGhvZHM8L2Rlc2NyaXB0aW9uPgo8ZGVzY3JpcHRpb24geG1sOmxhbmc9ImVuIiBkZXNjcmlwdGlvblR5cGU9IlNlcmllc0luZm9ybWF0aW9uIj5FeGFtcGxlIFNlcmllc0luZm9ybWF0aW9uPC9kZXNjcmlwdGlvbj4KPGRlc2NyaXB0aW9uIHhtbDpsYW5nPSJlbiIgZGVzY3JpcHRpb25UeXBlPSJUYWJsZU9mQ29udGVudHMiPkV4YW1wbGUgVGFibGVPZkNvbnRlbnRzPC9kZXNjcmlwdGlvbj4KPGRlc2NyaXB0aW9uIHhtbDpsYW5nPSJlbiIgZGVzY3JpcHRpb25UeXBlPSJUZWNobmljYWxJbmZvIj5FeGFtcGxlIFRlY2huaWNhbEluZm88L2Rlc2NyaXB0aW9uPgo8ZGVzY3JpcHRpb24geG1sOmxhbmc9ImVuIiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIj5FeGFtcGxlIE90aGVyPC9kZXNjcmlwdGlvbj4KPC9kZXNjcmlwdGlvbnM+CjxnZW9Mb2NhdGlvbnM+CjxnZW9Mb2NhdGlvbj4KPGdlb0xvY2F0aW9uUGxhY2U+VmFuY291dmVyLCBCcml0aXNoIENvbHVtYmlhLCBDYW5hZGE8L2dlb0xvY2F0aW9uUGxhY2U+CjxnZW9Mb2NhdGlvblBvaW50Pgo8cG9pbnRMYXRpdHVkZT40OS4yODI3PC9wb2ludExhdGl0dWRlPgo8cG9pbnRMb25naXR1ZGU+LTEyMy4xMjA3PC9wb2ludExvbmdpdHVkZT4KPC9nZW9Mb2NhdGlvblBvaW50Pgo8Z2VvTG9jYXRpb25Cb3g+Cjx3ZXN0Qm91bmRMb25naXR1ZGU+LTEyMy4yNzwvd2VzdEJvdW5kTG9uZ2l0dWRlPgo8ZWFzdEJvdW5kTG9uZ2l0dWRlPi0xMjMuMDI8L2Vhc3RCb3VuZExvbmdpdHVkZT4KPHNvdXRoQm91bmRMYXRpdHVkZT40OS4xOTU8L3NvdXRoQm91bmRMYXRpdHVkZT4KPG5vcnRoQm91bmRMYXRpdHVkZT40OS4zMTU8L25vcnRoQm91bmRMYXRpdHVkZT4KPC9nZW9Mb2NhdGlvbkJveD4KPGdlb0xvY2F0aW9uUG9seWdvbj4KPHBvbHlnb25Qb2ludD4KPHBvaW50TGF0aXR1ZGU+NDEuOTkxPC9wb2ludExhdGl0dWRlPgo8cG9pbnRMb25naXR1ZGU+LTcxLjAzMjwvcG9pbnRMb25naXR1ZGU+CjwvcG9seWdvblBvaW50Pgo8cG9seWdvblBvaW50Pgo8cG9pbnRMYXRpdHVkZT40Mi44OTM8L3BvaW50TGF0aXR1ZGU+Cjxwb2ludExvbmdpdHVkZT4tNjkuNjIyPC9wb2ludExvbmdpdHVkZT4KPC9wb2x5Z29uUG9pbnQ+Cjxwb2x5Z29uUG9pbnQ+Cjxwb2ludExhdGl0dWRlPjQxLjk5MTwvcG9pbnRMYXRpdHVkZT4KPHBvaW50TG9uZ2l0dWRlPi02OC4yMTE8L3BvaW50TG9uZ2l0dWRlPgo8L3BvbHlnb25Qb2ludD4KPHBvbHlnb25Qb2ludD4KPHBvaW50TGF0aXR1ZGU+NDEuMDkwPC9wb2ludExhdGl0dWRlPgo8cG9pbnRMb25naXR1ZGU+LTY5LjYyMjwvcG9pbnRMb25naXR1ZGU+CjwvcG9seWdvblBvaW50Pgo8cG9seWdvblBvaW50Pgo8cG9pbnRMYXRpdHVkZT40MS45OTE8L3BvaW50TGF0aXR1ZGU+Cjxwb2ludExvbmdpdHVkZT4tNzEuMDMyPC9wb2ludExvbmdpdHVkZT4KPC9wb2x5Z29uUG9pbnQ+CjwvZ2VvTG9jYXRpb25Qb2x5Z29uPgo8L2dlb0xvY2F0aW9uPgo8L2dlb0xvY2F0aW9ucz4KPGZ1bmRpbmdSZWZlcmVuY2VzPgo8ZnVuZGluZ1JlZmVyZW5jZT4KPGZ1bmRlck5hbWU+RXhhbXBsZSBGdW5kZXI8L2Z1bmRlck5hbWU+CjxmdW5kZXJJZGVudGlmaWVyIGZ1bmRlcklkZW50aWZpZXJUeXBlPSJDcm9zc3JlZiBGdW5kZXIgSUQiPmh0dHBzOi8vZG9pLm9yZy8xMC4xMzAzOS81MDExMDAwMDA3ODA8L2Z1bmRlcklkZW50aWZpZXI+Cjxhd2FyZE51bWJlciBhd2FyZFVSST0iaHR0cHM6Ly9leGFtcGxlLmNvbS9leGFtcGxlLWF3YXJkLXVyaSI+MTIzNDU8L2F3YXJkTnVtYmVyPgo8YXdhcmRUaXRsZT5FeGFtcGxlIEF3YXJkVGl0bGU8L2F3YXJkVGl0bGU+CjwvZnVuZGluZ1JlZmVyZW5jZT4KPC9mdW5kaW5nUmVmZXJlbmNlcz4KPHJlbGF0ZWRJdGVtcz4KPHJlbGF0ZWRJdGVtIHJlbGF0ZWRJdGVtVHlwZT0iVGV4dCIgcmVsYXRpb25UeXBlPSJDaXRlcyI+CjxyZWxhdGVkSXRlbUlkZW50aWZpZXIgcmVsYXRlZEl0ZW1JZGVudGlmaWVyVHlwZT0iSVNTTiI+MTIzNC01Njc4PC9yZWxhdGVkSXRlbUlkZW50aWZpZXI+CjxjcmVhdG9ycz4KPGNyZWF0b3I+CjxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkV4YW1wbGVGYW1pbHlOYW1lLCBFeGFtcGxlR2l2ZW5OYW1lPC9jcmVhdG9yTmFtZT4KPGdpdmVuTmFtZT5FeGFtcGxlR2l2ZW5OYW1lPC9naXZlbk5hbWU+CjxmYW1pbHlOYW1lPkV4YW1wbGVGYW1pbHlOYW1lPC9mYW1pbHlOYW1lPgo8L2NyZWF0b3I+CjwvY3JlYXRvcnM+Cjx0aXRsZXM+Cjx0aXRsZT5FeGFtcGxlIFJlbGF0ZWRJdGVtIFRpdGxlPC90aXRsZT4KPHRpdGxlIHRpdGxlVHlwZT0iVHJhbnNsYXRlZFRpdGxlIj5FeGFtcGxlIFJlbGF0ZWRJdGVtIFRyYW5zbGF0ZWRUaXRsZTwvdGl0bGU+CjwvdGl0bGVzPgo8cHVibGljYXRpb25ZZWFyPjE5OTA8L3B1YmxpY2F0aW9uWWVhcj4KPHZvbHVtZT4xPC92b2x1bWU+Cjxpc3N1ZT4yPC9pc3N1ZT4KPG51bWJlciBudW1iZXJUeXBlPSJPdGhlciI+MTwvbnVtYmVyPgo8Zmlyc3RQYWdlPjE8L2ZpcnN0UGFnZT4KPGxhc3RQYWdlPjEwMDwvbGFzdFBhZ2U+CjxwdWJsaXNoZXI+RXhhbXBsZSBSZWxhdGVkSXRlbSBQdWJsaXNoZXI8L3B1Ymxpc2hlcj4KPGVkaXRpb24+RXhhbXBsZSBSZWxhdGVkSXRlbSBFZGl0aW9uPC9lZGl0aW9uPgo8Y29udHJpYnV0b3JzPgo8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJPdGhlciI+Cjxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FeGFtcGxlRmFtaWx5TmFtZSwgRXhhbXBsZUdpdmVuTmFtZTwvY29udHJpYnV0b3JOYW1lPgo8Z2l2ZW5OYW1lPkV4YW1wbGVHaXZlbk5hbWU8L2dpdmVuTmFtZT4KPGZhbWlseU5hbWU+RXhhbXBsZUZhbWlseU5hbWU8L2ZhbWlseU5hbWU+CjwvY29udHJpYnV0b3I+CjwvY29udHJpYnV0b3JzPgo8L3JlbGF0ZWRJdGVtPgo8L3JlbGF0ZWRJdGVtcz4KPC9yZXNvdXJjZT4="
+    }
+  }
+}
