@@ -2,10 +2,10 @@
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "schema": "https://schema.datacite.org/",
-    "datacite": "https://schema.datacite.org/"
+    "schema": "https://schema.datacite.org/linked-data/",
+    "datacite": "https://schema.datacite.org/linked-data/"
   },
-  "@id": "https://schema.datacite.org/property/lastPage",
+  "@id": "https://schema.datacite.org/linked-data/property/lastPage",
   "@type": "rdf:Property",
   "rdfs:label": "lastPage",
   "rdfs:comment": "Last page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings."

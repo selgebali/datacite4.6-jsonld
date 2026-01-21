@@ -2,10 +2,10 @@
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "schema": "https://schema.datacite.org/",
-    "datacite": "https://schema.datacite.org/"
+    "schema": "https://schema.datacite.org/linked-data/",
+    "datacite": "https://schema.datacite.org/linked-data/"
   },
-  "@id": "https://schema.datacite.org/class/Title",
+  "@id": "https://schema.datacite.org/linked-data/class/Title",
   "@type": "rdfs:Class",
   "rdfs:label": "Title",
   "rdfs:comment": "A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument."

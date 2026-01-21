@@ -2,10 +2,10 @@
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "schema": "https://schema.datacite.org/",
-    "datacite": "https://schema.datacite.org/"
+    "schema": "https://schema.datacite.org/linked-data/",
+    "datacite": "https://schema.datacite.org/linked-data/"
   },
-  "@id": "https://schema.datacite.org/property/geoLocation",
+  "@id": "https://schema.datacite.org/linked-data/property/geoLocation",
   "@type": "rdf:Property",
   "rdfs:label": "geoLocation",
   "rdfs:comment": "Spatial region or named place where the data was gathered or about which the data is focused."

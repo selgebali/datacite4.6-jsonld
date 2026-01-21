@@ -2,10 +2,10 @@
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "schema": "https://schema.datacite.org/",
-    "datacite": "https://schema.datacite.org/"
+    "schema": "https://schema.datacite.org/linked-data/",
+    "datacite": "https://schema.datacite.org/linked-data/"
   },
-  "@id": "https://schema.datacite.org/class/PublicationYear",
+  "@id": "https://schema.datacite.org/linked-data/class/PublicationYear",
   "@type": "rdfs:Class",
   "rdfs:label": "PublicationYear",
   "rdfs:comment": "The year when the data was or will be made publicly available. In the case of resources such as software or dynamic data where there may be multiple releases in one year, include the Date property and sub-properties (dateType/dateInformation) to provide more information about the publication or release date details."

@@ -2,25 +2,25 @@
   "@context": "./_context.jsonld",
   "@graph": [
     {
-      "id": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType",
+      "id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
       "type": "ConceptScheme",
       "title": "DataCite 4.6 descriptionType",
       "identifier": "descriptionType",
       "created": "2026-01-18",
       "hasTopConcept": [
-        "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/Abstract",
-        "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/Methods",
-        "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/SeriesInformation",
-        "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/TableOfContents",
-        "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/TechnicalInfo",
-        "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/Other"
+        "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Abstract",
+        "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Methods",
+        "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/SeriesInformation",
+        "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TableOfContents",
+        "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TechnicalInfo",
+        "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Other"
       ]
     },
-    { "id": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/Abstract", "type": "Concept", "prefLabel": "Abstract", "notation": "Abstract", "inScheme": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType" },
-    { "id": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/Methods", "type": "Concept", "prefLabel": "Methods", "notation": "Methods", "inScheme": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType" },
-    { "id": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/SeriesInformation", "type": "Concept", "prefLabel": "SeriesInformation", "notation": "SeriesInformation", "inScheme": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType" },
-    { "id": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/TableOfContents", "type": "Concept", "prefLabel": "TableOfContents", "notation": "TableOfContents", "inScheme": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType" },
-    { "id": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/TechnicalInfo", "type": "Concept", "prefLabel": "TechnicalInfo", "notation": "TechnicalInfo", "inScheme": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType" },
-    { "id": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType/Other", "type": "Concept", "prefLabel": "Other", "notation": "Other", "inScheme": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/vocab/datacite-4.6/descriptionType" }
+    { "id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Abstract", "type": "Concept", "prefLabel": "Abstract", "notation": "Abstract", "inScheme": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType" },
+    { "id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Methods", "type": "Concept", "prefLabel": "Methods", "notation": "Methods", "inScheme": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType" },
+    { "id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/SeriesInformation", "type": "Concept", "prefLabel": "SeriesInformation", "notation": "SeriesInformation", "inScheme": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType" },
+    { "id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TableOfContents", "type": "Concept", "prefLabel": "TableOfContents", "notation": "TableOfContents", "inScheme": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType" },
+    { "id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TechnicalInfo", "type": "Concept", "prefLabel": "TechnicalInfo", "notation": "TechnicalInfo", "inScheme": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType" },
+    { "id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Other", "type": "Concept", "prefLabel": "Other", "notation": "Other", "inScheme": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType", "topConceptOf": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/descriptionType" }
   ]
 }

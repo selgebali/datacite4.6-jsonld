@@ -3,12 +3,12 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "dcterms": "http://purl.org/dc/terms/"
   },
-  "@id": "https://schema.datacite.org/vocab/nameType/",
+  "@id": "https://schema.datacite.org/linked-data/vocab/nameType/",
   "@type": "skos:ConceptScheme",
   "dcterms:title": "Name type",
   "dcterms:source": "DataCite Metadata Schema 4.6",
   "skos:hasTopConcept": [
-    { "@id": "https://schema.datacite.org/vocab/datacite-4.6/nameType/Personal" },
-    { "@id": "https://schema.datacite.org/vocab/datacite-4.6/nameType/Organizational" }
+    { "@id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/nameType/Personal" },
+    { "@id": "https://schema.datacite.org/linked-data/vocab/datacite-4.6/nameType/Organizational" }
   ]
 }

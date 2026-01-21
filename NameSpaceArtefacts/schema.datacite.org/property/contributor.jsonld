@@ -2,10 +2,10 @@
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "schema": "https://schema.datacite.org/",
-    "datacite": "https://schema.datacite.org/"
+    "schema": "https://schema.datacite.org/linked-data/",
+    "datacite": "https://schema.datacite.org/linked-data/"
   },
-  "@id": "https://schema.datacite.org/property/contributor",
+  "@id": "https://schema.datacite.org/linked-data/property/contributor",
   "@type": "rdf:Property",
   "rdfs:label": "contributor",
   "rdfs:comment": "The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property."

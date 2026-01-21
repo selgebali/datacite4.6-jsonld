@@ -2,10 +2,10 @@
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "schema": "https://schema.datacite.org/",
-    "datacite": "https://schema.datacite.org/"
+    "schema": "https://schema.datacite.org/linked-data/",
+    "datacite": "https://schema.datacite.org/linked-data/"
   },
-  "@id": "https://schema.datacite.org/class/Description",
+  "@id": "https://schema.datacite.org/linked-data/class/Description",
   "@type": "rdfs:Class",
   "rdfs:label": "Description",
   "rdfs:comment": " All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument."
