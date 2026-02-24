@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class Definitions · DataCite Linked Data (Staging)</title>
+  <meta name="description" content="Browse JSON-LD class definitions for DataCite entities such as Resource, Creator, and Title.">
+  <style>
+  :root {
+    --dc-navy: #243B54;
+    --dc-cyan: #00B1E2;
+    --dc-blue: #5B88B9;
+    --dc-teal: #46BCAB;
+    --dc-mint: #90D7CD;
+    --dc-magenta: #BC2B66;
+    --dc-yellow: #EEEE98;
+    --dc-coral: #F07C73;
+    --bg: color-mix(in srgb, var(--dc-mint) 12%, white);
+    --panel: color-mix(in srgb, white 95%, var(--dc-yellow) 5%);
+    --panel-2: color-mix(in srgb, white 90%, var(--dc-mint) 10%);
+    --text: var(--dc-navy);
+    --muted: color-mix(in srgb, var(--dc-navy) 70%, var(--dc-blue));
+    --line: color-mix(in srgb, var(--dc-blue) 28%, white);
+    --accent: var(--dc-cyan);
+    --accent-2: var(--dc-magenta);
+    --accent-3: var(--dc-teal);
+    --shadow: 0 10px 24px rgba(36, 59, 84, 0.08);
+    --radius: 14px;
+    --max: 1120px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: var(--dc-navy);
+      --panel: color-mix(in srgb, var(--dc-navy) 82%, var(--dc-blue));
+      --panel-2: color-mix(in srgb, var(--dc-navy) 68%, var(--dc-teal));
+      --text: color-mix(in srgb, white 92%, var(--dc-mint));
+      --muted: color-mix(in srgb, white 58%, var(--dc-mint));
+      --line: color-mix(in srgb, var(--dc-blue) 35%, var(--dc-navy));
+      --accent: var(--dc-cyan);
+      --accent-2: var(--dc-coral);
+      --accent-3: var(--dc-teal);
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--text);
+    background:
+      radial-gradient(1000px 500px at 95% -10%, color-mix(in srgb, var(--dc-coral) 20%, transparent), transparent 60%),
+      radial-gradient(800px 420px at -10% 10%, color-mix(in srgb, var(--dc-cyan) 16%, transparent), transparent 65%),
+      var(--bg);
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    line-height: 1.45;
+  }
+  a {
+    color: var(--accent);
+    text-underline-offset: 0.12em;
+    text-decoration-thickness: 0.08em;
+  }
+  a:hover { text-decoration-thickness: 0.12em; }
+  .wrap { width: min(100% - 2rem, var(--max)); margin: 0 auto; }
+  .topbar {
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: blur(6px);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+  }
+  .topbar .wrap {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem;
+    padding: .7rem 0;
+  }
+  .brand { color: var(--text); text-decoration: none; font-weight: 700; }
+  .nav { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .nav a {
+    text-decoration: none; color: var(--muted); font-size: .95rem;
+    padding: .35rem .55rem; border-radius: 999px;
+  }
+  .nav a:hover, .nav a:focus-visible { background: var(--panel-2); color: var(--text); outline: none; }
+  main { padding: 1rem 0 2rem; }
+  .hero, .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .hero { padding: 1.1rem; margin: 1rem 0; }
+  .panel { padding: 1rem; margin: .9rem 0; }
+  .eyebrow {
+    display: inline-block;
+    border: 1px solid var(--line);
+    background: var(--panel-2);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: .2rem .55rem;
+    font-size: .82rem;
+  }
+  h1 { margin: .6rem 0 .35rem; line-height: 1.08; font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem); }
+  h2 { margin: 0 0 .6rem; font-size: 1.15rem; }
+  h3 { margin: 0 0 .35rem; font-size: 1rem; }
+  p { margin: .35rem 0 .75rem; }
+  .muted { color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+  .chip {
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--muted);
+    border-radius: 999px; padding: .25rem .55rem; font-size: .88rem;
+  }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: .75rem; }
+  .card {
+    grid-column: span 12;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--panel) 94%, white 6%);
+    padding: .8rem;
+  }
+  .card p { color: var(--muted); }
+  .card .path { font-size: .9rem; color: var(--muted); word-break: break-word; }
+  .list {
+    margin: 0; padding: 0; list-style: none;
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  }
+  .list li + li { border-top: 1px solid var(--line); }
+  .row {
+    display: grid; grid-template-columns: 1.2fr 2fr auto; gap: .8rem;
+    align-items: start; padding: .7rem .8rem;
+    background: color-mix(in srgb, var(--panel) 95%, white 5%);
+  }
+  .row .name a { font-weight: 600; text-decoration: none; }
+  .row .desc { color: var(--muted); }
+  .row .meta-col { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+  .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; }
+  .search {
+    width: 100%; max-width: 420px;
+    padding: .55rem .7rem; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--text);
+    font: inherit;
+  }
+  .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-bottom: .7rem; }
+  .footer { color: var(--muted); text-align: center; margin: 1rem 0 2rem; font-size: .95rem; }
+  .small { font-size: .9rem; }
+  @media (max-width: 800px) {
+    .row { grid-template-columns: 1fr; gap: .35rem; }
+    .row .meta-col { white-space: normal; }
+  }
+  @media (min-width: 700px) {
+    .card.span-6 { grid-column: span 6; }
+    .card.span-4 { grid-column: span 4; }
+    .card.span-3 { grid-column: span 3; }
+  }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="/linked-data//">DataCite Linked Data</a>
+      <nav class="nav" aria-label="Section navigation"><a href="/linked-data//">Home</a><a href="/linked-data/class/" aria-current="page">Classes</a><a href="/linked-data/property/">Properties</a><a href="/linked-data/vocab/">Controlled Terms</a><a href="/linked-data/context/">Contexts</a><a href="/linked-data/manifest/">Manifests</a></nav>
+    </div>
+  </header>
+  <div class="wrap">
+    <main>
+      <section class="hero">
+        <span class="eyebrow">Classes</span>
+        <h1>Class Definitions</h1>
+        <p class="muted">Browse JSON-LD class definitions for DataCite entities such as Resource, Creator, and Title.</p>
+      </section>
+      
+    <section class="panel">
+      <div class="toolbar">
+        <input id="class-search" class="search" type="search" placeholder="Filter classes (name, label, description)">
+        <span class="chip">21 class definitions</span>
+      </div>
+      <ul class="list"><li>
+        <div class="row" data-search="AlternateIdentifier AlternateIdentifier An identifier other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string which is unique within its domain of issue. May be used for local identifiers, a serial number of an instrument or an inventory number. The AlternateIdentifier should be an additional identifier for the same instance of the resource (i.e., same location, same file). rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/AlternateIdentifier.jsonld">AlternateIdentifier</a>
+            <div class="small muted code">AlternateIdentifier.jsonld</div>
+          </div>
+          <div class="desc">An identifier other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string which is unique within its domain of issue. May be used for local identifiers, a serial number of an instrument or an inventory number. The AlternateIdentifier should be an additional identifier for the same instance of the resource (i.e., same location, same file).</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Contributor Contributor  The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property. For software, if there is an alternate entity that “holds, archives, publishes, prints, distributes, releases, issues, or produces” the code, use the contributorType “HostingInstitution” for the code repository. For instruments, if there is an institution responsible for the management of the instrument (for example, the legal owner, the operator, or an institute providing access to the instrument), use the contributorType “HostingInstitution” for the owner of the instrument. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Contributor.jsonld">Contributor</a>
+            <div class="small muted code">Contributor.jsonld</div>
+          </div>
+          <div class="desc"> The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property. For software, if there is an alternate entity that “holds, archives, publishes, prints, distributes, releases, issues, or produces” the code, use the contributorType “HostingInstitution” for the code repository. For instruments, if there is an institution responsible for the management of the instrument (for example, the legal owner, the operator, or an institute providing access to the instrument), use the contributorType “HostingInstitution” for the owner of the instrument.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Creator Creator The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Creator.jsonld">Creator</a>
+            <div class="small muted code">Creator.jsonld</div>
+          </div>
+          <div class="desc">The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Date Date Different dates relevant to the work. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Date.jsonld">Date</a>
+            <div class="small muted code">Date.jsonld</div>
+          </div>
+          <div class="desc">Different dates relevant to the work.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Description Description  All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Description.jsonld">Description</a>
+            <div class="small muted code">Description.jsonld</div>
+          </div>
+          <div class="desc"> All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Format Format Technical format of the resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Format.jsonld">Format</a>
+            <div class="small muted code">Format.jsonld</div>
+          </div>
+          <div class="desc">Technical format of the resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="FundingReference FundingReference Information about financial support (funding) for the resource being registered. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/FundingReference.jsonld">FundingReference</a>
+            <div class="small muted code">FundingReference.jsonld</div>
+          </div>
+          <div class="desc">Information about financial support (funding) for the resource being registered.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="GeoLocation GeoLocation Spatial region or named place where the data was gathered or about which the data is focused. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/GeoLocation.jsonld">GeoLocation</a>
+            <div class="small muted code">GeoLocation.jsonld</div>
+          </div>
+          <div class="desc">Spatial region or named place where the data was gathered or about which the data is focused.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Identifier Identifier The Identifier is a unique string that identifies a resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Identifier.jsonld">Identifier</a>
+            <div class="small muted code">Identifier.jsonld</div>
+          </div>
+          <div class="desc">The Identifier is a unique string that identifies a resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Language Language The primary language of the resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Language.jsonld">Language</a>
+            <div class="small muted code">Language.jsonld</div>
+          </div>
+          <div class="desc">The primary language of the resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="PublicationYear PublicationYear The year when the data was or will be made publicly available. In the case of resources such as software or dynamic data where there may be multiple releases in one year, include the Date property and sub-properties (dateType/dateInformation) to provide more information about the publication or release date details. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/PublicationYear.jsonld">PublicationYear</a>
+            <div class="small muted code">PublicationYear.jsonld</div>
+          </div>
+          <div class="desc">The year when the data was or will be made publicly available. In the case of resources such as software or dynamic data where there may be multiple releases in one year, include the Date property and sub-properties (dateType/dateInformation) to provide more information about the publication or release date details.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Publisher Publisher The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Publisher.jsonld">Publisher</a>
+            <div class="small muted code">Publisher.jsonld</div>
+          </div>
+          <div class="desc">The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="RelatedIdentifier RelatedIdentifier Identifiers of related resources. These must be globally unique identifiers. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/RelatedIdentifier.jsonld">RelatedIdentifier</a>
+            <div class="small muted code">RelatedIdentifier.jsonld</div>
+          </div>
+          <div class="desc">Identifiers of related resources. These must be globally unique identifiers.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="RelatedItem RelatedItem Information about a resource related to the one being registered. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/RelatedItem.jsonld">RelatedItem</a>
+            <div class="small muted code">RelatedItem.jsonld</div>
+          </div>
+          <div class="desc">Information about a resource related to the one being registered.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Resource Resource A resource that can be cited and identified... rdf:Class">
+          <div class="name">
+            <a href="/linked-data/class/Resource.jsonld">Resource</a>
+            <div class="small muted code">Resource.jsonld</div>
+          </div>
+          <div class="desc">A resource that can be cited and identified...</div>
+          <div class="meta-col">rdf:Class<br>2026-02-20</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="ResourceType ResourceType A description of the resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/ResourceType.jsonld">ResourceType</a>
+            <div class="small muted code">ResourceType.jsonld</div>
+          </div>
+          <div class="desc">A description of the resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Rights Rights Any rights information for this resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Rights.jsonld">Rights</a>
+            <div class="small muted code">Rights.jsonld</div>
+          </div>
+          <div class="desc">Any rights information for this resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Size Size Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Size.jsonld">Size</a>
+            <div class="small muted code">Size.jsonld</div>
+          </div>
+          <div class="desc">Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Subject Subject Subject, keyword, classification code, or key phrase describing the resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Subject.jsonld">Subject</a>
+            <div class="small muted code">Subject.jsonld</div>
+          </div>
+          <div class="desc">Subject, keyword, classification code, or key phrase describing the resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Title Title A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Title.jsonld">Title</a>
+            <div class="small muted code">Title.jsonld</div>
+          </div>
+          <div class="desc">A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="Version Version The version number of the resource. rdfs:Class">
+          <div class="name">
+            <a href="/linked-data/class/Version.jsonld">Version</a>
+            <div class="small muted code">Version.jsonld</div>
+          </div>
+          <div class="desc">The version number of the resource.</div>
+          <div class="meta-col">rdfs:Class<br>2026-02-18</div>
+        </div>
+      </li></ul>
+    </section>
+    <script>
+  (function () {
+    const input = document.getElementById("class-search");
+    if (!input) return;
+    const items = Array.from(document.querySelectorAll(".row"));
+    input.addEventListener('input', function () {
+      const q = input.value.trim().toLowerCase();
+      for (const item of items) {
+        const hay = (item.getAttribute('data-search') || '').toLowerCase();
+        item.style.display = !q || hay.includes(q) ? '' : 'none';
+      }
+    });
+  })();
+  </script>
+  
+    </main>
+    <div class="footer">
+      <a href="/linked-data//">Back to /linked-data/</a>
+    </div>
+  </div>
+</body>
+</html>

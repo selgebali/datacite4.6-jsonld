@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property Definitions · DataCite Linked Data (Staging)</title>
+  <meta name="description" content="Browse JSON-LD property definitions for DataCite metadata fields such as identifier, creatorName, and publicationYear.">
+  <style>
+  :root {
+    --dc-navy: #243B54;
+    --dc-cyan: #00B1E2;
+    --dc-blue: #5B88B9;
+    --dc-teal: #46BCAB;
+    --dc-mint: #90D7CD;
+    --dc-magenta: #BC2B66;
+    --dc-yellow: #EEEE98;
+    --dc-coral: #F07C73;
+    --bg: color-mix(in srgb, var(--dc-mint) 12%, white);
+    --panel: color-mix(in srgb, white 95%, var(--dc-yellow) 5%);
+    --panel-2: color-mix(in srgb, white 90%, var(--dc-mint) 10%);
+    --text: var(--dc-navy);
+    --muted: color-mix(in srgb, var(--dc-navy) 70%, var(--dc-blue));
+    --line: color-mix(in srgb, var(--dc-blue) 28%, white);
+    --accent: var(--dc-cyan);
+    --accent-2: var(--dc-magenta);
+    --accent-3: var(--dc-teal);
+    --shadow: 0 10px 24px rgba(36, 59, 84, 0.08);
+    --radius: 14px;
+    --max: 1120px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: var(--dc-navy);
+      --panel: color-mix(in srgb, var(--dc-navy) 82%, var(--dc-blue));
+      --panel-2: color-mix(in srgb, var(--dc-navy) 68%, var(--dc-teal));
+      --text: color-mix(in srgb, white 92%, var(--dc-mint));
+      --muted: color-mix(in srgb, white 58%, var(--dc-mint));
+      --line: color-mix(in srgb, var(--dc-blue) 35%, var(--dc-navy));
+      --accent: var(--dc-cyan);
+      --accent-2: var(--dc-coral);
+      --accent-3: var(--dc-teal);
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--text);
+    background:
+      radial-gradient(1000px 500px at 95% -10%, color-mix(in srgb, var(--dc-coral) 20%, transparent), transparent 60%),
+      radial-gradient(800px 420px at -10% 10%, color-mix(in srgb, var(--dc-cyan) 16%, transparent), transparent 65%),
+      var(--bg);
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    line-height: 1.45;
+  }
+  a {
+    color: var(--accent);
+    text-underline-offset: 0.12em;
+    text-decoration-thickness: 0.08em;
+  }
+  a:hover { text-decoration-thickness: 0.12em; }
+  .wrap { width: min(100% - 2rem, var(--max)); margin: 0 auto; }
+  .topbar {
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: blur(6px);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+  }
+  .topbar .wrap {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem;
+    padding: .7rem 0;
+  }
+  .brand { color: var(--text); text-decoration: none; font-weight: 700; }
+  .nav { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .nav a {
+    text-decoration: none; color: var(--muted); font-size: .95rem;
+    padding: .35rem .55rem; border-radius: 999px;
+  }
+  .nav a:hover, .nav a:focus-visible { background: var(--panel-2); color: var(--text); outline: none; }
+  main { padding: 1rem 0 2rem; }
+  .hero, .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .hero { padding: 1.1rem; margin: 1rem 0; }
+  .panel { padding: 1rem; margin: .9rem 0; }
+  .eyebrow {
+    display: inline-block;
+    border: 1px solid var(--line);
+    background: var(--panel-2);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: .2rem .55rem;
+    font-size: .82rem;
+  }
+  h1 { margin: .6rem 0 .35rem; line-height: 1.08; font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem); }
+  h2 { margin: 0 0 .6rem; font-size: 1.15rem; }
+  h3 { margin: 0 0 .35rem; font-size: 1rem; }
+  p { margin: .35rem 0 .75rem; }
+  .muted { color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+  .chip {
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--muted);
+    border-radius: 999px; padding: .25rem .55rem; font-size: .88rem;
+  }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: .75rem; }
+  .card {
+    grid-column: span 12;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--panel) 94%, white 6%);
+    padding: .8rem;
+  }
+  .card p { color: var(--muted); }
+  .card .path { font-size: .9rem; color: var(--muted); word-break: break-word; }
+  .list {
+    margin: 0; padding: 0; list-style: none;
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  }
+  .list li + li { border-top: 1px solid var(--line); }
+  .row {
+    display: grid; grid-template-columns: 1.2fr 2fr auto; gap: .8rem;
+    align-items: start; padding: .7rem .8rem;
+    background: color-mix(in srgb, var(--panel) 95%, white 5%);
+  }
+  .row .name a { font-weight: 600; text-decoration: none; }
+  .row .desc { color: var(--muted); }
+  .row .meta-col { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+  .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; }
+  .search {
+    width: 100%; max-width: 420px;
+    padding: .55rem .7rem; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--text);
+    font: inherit;
+  }
+  .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-bottom: .7rem; }
+  .footer { color: var(--muted); text-align: center; margin: 1rem 0 2rem; font-size: .95rem; }
+  .small { font-size: .9rem; }
+  @media (max-width: 800px) {
+    .row { grid-template-columns: 1fr; gap: .35rem; }
+    .row .meta-col { white-space: normal; }
+  }
+  @media (min-width: 700px) {
+    .card.span-6 { grid-column: span 6; }
+    .card.span-4 { grid-column: span 4; }
+    .card.span-3 { grid-column: span 3; }
+  }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="/linked-data//">DataCite Linked Data</a>
+      <nav class="nav" aria-label="Section navigation"><a href="/linked-data//">Home</a><a href="/linked-data/class/">Classes</a><a href="/linked-data/property/" aria-current="page">Properties</a><a href="/linked-data/vocab/">Controlled Terms</a><a href="/linked-data/context/">Contexts</a><a href="/linked-data/manifest/">Manifests</a></nav>
+    </div>
+  </header>
+  <div class="wrap">
+    <main>
+      <section class="hero">
+        <span class="eyebrow">Properties</span>
+        <h1>Property Definitions</h1>
+        <p class="muted">Browse JSON-LD property definitions for DataCite metadata fields such as identifier, creatorName, and publicationYear.</p>
+      </section>
+      
+    <section class="panel">
+      <div class="toolbar">
+        <input id="property-search" class="search" type="search" placeholder="Filter properties (name, label, description)">
+        <span class="chip">78 property definitions</span>
+      </div>
+      <ul class="list"><li>
+        <div class="row" data-search="affiliation affiliation The organizational or institutional affiliation of the creator. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/affiliation.jsonld">affiliation</a>
+            <div class="small muted code">affiliation.jsonld</div>
+          </div>
+          <div class="desc">The organizational or institutional affiliation of the creator.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="affiliationIdentifier affiliationIdentifier Uniquely identifies the organizational affiliation of the creator. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/affiliationIdentifier.jsonld">affiliationIdentifier</a>
+            <div class="small muted code">affiliationIdentifier.jsonld</div>
+          </div>
+          <div class="desc">Uniquely identifies the organizational affiliation of the creator.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-20</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="affiliationIdentifierScheme affiliationIdentifierScheme The name of the affiliation identifier scheme rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/affiliationIdentifierScheme.jsonld">affiliationIdentifierScheme</a>
+            <div class="small muted code">affiliationIdentifierScheme.jsonld</div>
+          </div>
+          <div class="desc">The name of the affiliation identifier scheme</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="alternateIdentifierType alternateIdentifierType The type of the AlternateIdentifier. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/alternateIdentifierType.jsonld">alternateIdentifierType</a>
+            <div class="small muted code">alternateIdentifierType.jsonld</div>
+          </div>
+          <div class="desc">The type of the AlternateIdentifier.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="awardNumber awardNumber The code assigned by the funder to a sponsored award (grant). rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/awardNumber.jsonld">awardNumber</a>
+            <div class="small muted code">awardNumber.jsonld</div>
+          </div>
+          <div class="desc">The code assigned by the funder to a sponsored award (grant).</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="awardTitle awardTitle The human readable title or name of the award (grant). rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/awardTitle.jsonld">awardTitle</a>
+            <div class="small muted code">awardTitle.jsonld</div>
+          </div>
+          <div class="desc">The human readable title or name of the award (grant).</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="awardURI awardURI The URI leading to a page provided by the funder for more information about the award (grant). rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/awardURI.jsonld">awardURI</a>
+            <div class="small muted code">awardURI.jsonld</div>
+          </div>
+          <div class="desc">The URI leading to a page provided by the funder for more information about the award (grant).</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="classificationCode classificationCode The classification code used for the subject term in the subject scheme. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/classificationCode.jsonld">classificationCode</a>
+            <div class="small muted code">classificationCode.jsonld</div>
+          </div>
+          <div class="desc">The classification code used for the subject term in the subject scheme.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="contributor contributor The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/contributor.jsonld">contributor</a>
+            <div class="small muted code">contributor.jsonld</div>
+          </div>
+          <div class="desc">The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="contributorName contributorName The full name of the contributor. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/contributorName.jsonld">contributorName</a>
+            <div class="small muted code">contributorName.jsonld</div>
+          </div>
+          <div class="desc">The full name of the contributor.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="contributorType contributorType The type of contributor of the resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/contributorType.jsonld">contributorType</a>
+            <div class="small muted code">contributorType.jsonld</div>
+          </div>
+          <div class="desc">The type of contributor of the resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="creator creator The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/creator.jsonld">creator</a>
+            <div class="small muted code">creator.jsonld</div>
+          </div>
+          <div class="desc">The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="creatorName creatorName The full name of the creator. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/creatorName.jsonld">creatorName</a>
+            <div class="small muted code">creatorName.jsonld</div>
+          </div>
+          <div class="desc">The full name of the creator.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="date date Different dates relevant to the work. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/date.jsonld">date</a>
+            <div class="small muted code">date.jsonld</div>
+          </div>
+          <div class="desc">Different dates relevant to the work.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="dateInformation dateInformation Specific information about the date, if appropriate. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/dateInformation.jsonld">dateInformation</a>
+            <div class="small muted code">dateInformation.jsonld</div>
+          </div>
+          <div class="desc">Specific information about the date, if appropriate.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="dateType dateType The type of date. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/dateType.jsonld">dateType</a>
+            <div class="small muted code">dateType.jsonld</div>
+          </div>
+          <div class="desc">The type of date.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="description description All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/description.jsonld">description</a>
+            <div class="small muted code">description.jsonld</div>
+          </div>
+          <div class="desc">All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="descriptionType descriptionType The type of the Description. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/descriptionType.jsonld">descriptionType</a>
+            <div class="small muted code">descriptionType.jsonld</div>
+          </div>
+          <div class="desc">The type of the Description.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="eastBoundLongitude eastBoundLongitude Eastern longitudinal dimension of box. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/eastBoundLongitude.jsonld">eastBoundLongitude</a>
+            <div class="small muted code">eastBoundLongitude.jsonld</div>
+          </div>
+          <div class="desc">Eastern longitudinal dimension of box.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="edition edition Edition or version of the related item. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/edition.jsonld">edition</a>
+            <div class="small muted code">edition.jsonld</div>
+          </div>
+          <div class="desc">Edition or version of the related item.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="familyName familyName The surname or last name of the creator. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/familyName.jsonld">familyName</a>
+            <div class="small muted code">familyName.jsonld</div>
+          </div>
+          <div class="desc">The surname or last name of the creator.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="firstPage firstPage First page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/firstPage.jsonld">firstPage</a>
+            <div class="small muted code">firstPage.jsonld</div>
+          </div>
+          <div class="desc">First page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="format format Technical format of the resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/format.jsonld">format</a>
+            <div class="small muted code">format.jsonld</div>
+          </div>
+          <div class="desc">Technical format of the resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="funderIdentifier funderIdentifier Uniquely identifies a funding entity, according to various types. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/funderIdentifier.jsonld">funderIdentifier</a>
+            <div class="small muted code">funderIdentifier.jsonld</div>
+          </div>
+          <div class="desc">Uniquely identifies a funding entity, according to various types.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="funderIdentifierType funderIdentifierType The type of the funderIdentifier. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/funderIdentifierType.jsonld">funderIdentifierType</a>
+            <div class="small muted code">funderIdentifierType.jsonld</div>
+          </div>
+          <div class="desc">The type of the funderIdentifier.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="funderName funderName Name of the funding provider. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/funderName.jsonld">funderName</a>
+            <div class="small muted code">funderName.jsonld</div>
+          </div>
+          <div class="desc">Name of the funding provider.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="fundingReference fundingReference Information about financial support (funding) for the resource being registered. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/fundingReference.jsonld">fundingReference</a>
+            <div class="small muted code">fundingReference.jsonld</div>
+          </div>
+          <div class="desc">Information about financial support (funding) for the resource being registered.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="geoLocation geoLocation Spatial region or named place where the data was gathered or about which the data is focused. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/geoLocation.jsonld">geoLocation</a>
+            <div class="small muted code">geoLocation.jsonld</div>
+          </div>
+          <div class="desc">Spatial region or named place where the data was gathered or about which the data is focused.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="geoLocationBox geoLocationBox The spatial limits of a box. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/geoLocationBox.jsonld">geoLocationBox</a>
+            <div class="small muted code">geoLocationBox.jsonld</div>
+          </div>
+          <div class="desc">The spatial limits of a box.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="geoLocationPlace geoLocationPlace Description of a geographic location. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/geoLocationPlace.jsonld">geoLocationPlace</a>
+            <div class="small muted code">geoLocationPlace.jsonld</div>
+          </div>
+          <div class="desc">Description of a geographic location.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="geoLocationPoint geoLocationPoint A point location in space. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/geoLocationPoint.jsonld">geoLocationPoint</a>
+            <div class="small muted code">geoLocationPoint.jsonld</div>
+          </div>
+          <div class="desc">A point location in space.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="geoLocationPolygon geoLocationPolygon A drawn polygon area, defined by a set of points and lines connecting the points in a closed chain. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/geoLocationPolygon.jsonld">geoLocationPolygon</a>
+            <div class="small muted code">geoLocationPolygon.jsonld</div>
+          </div>
+          <div class="desc">A drawn polygon area, defined by a set of points and lines connecting the points in a closed chain.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="givenName givenName The personal or first name of the creator. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/givenName.jsonld">givenName</a>
+            <div class="small muted code">givenName.jsonld</div>
+          </div>
+          <div class="desc">The personal or first name of the creator.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="identifier identifier The Identifier is a unique string that identifies a resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/identifier.jsonld">identifier</a>
+            <div class="small muted code">identifier.jsonld</div>
+          </div>
+          <div class="desc">The Identifier is a unique string that identifies a resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="identifierType identifierType The type of Identifier. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/identifierType.jsonld">identifierType</a>
+            <div class="small muted code">identifierType.jsonld</div>
+          </div>
+          <div class="desc">The type of Identifier.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="inPolygonPoint inPolygonPoint A point location in a polygon. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/inPolygonPoint.jsonld">inPolygonPoint</a>
+            <div class="small muted code">inPolygonPoint.jsonld</div>
+          </div>
+          <div class="desc">A point location in a polygon.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="issue issue Issue number or name of the related item. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/issue.jsonld">issue</a>
+            <div class="small muted code">issue.jsonld</div>
+          </div>
+          <div class="desc">Issue number or name of the related item.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="language language The primary language of the resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/language.jsonld">language</a>
+            <div class="small muted code">language.jsonld</div>
+          </div>
+          <div class="desc">The primary language of the resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="lastPage lastPage Last page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/lastPage.jsonld">lastPage</a>
+            <div class="small muted code">lastPage.jsonld</div>
+          </div>
+          <div class="desc">Last page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="nameIdentifier nameIdentifier Uniquely identifies an individual or legal entity, according to various schemes. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/nameIdentifier.jsonld">nameIdentifier</a>
+            <div class="small muted code">nameIdentifier.jsonld</div>
+          </div>
+          <div class="desc">Uniquely identifies an individual or legal entity, according to various schemes.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="nameIdentifierScheme nameIdentifierScheme The name of the name identifier scheme. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/nameIdentifierScheme.jsonld">nameIdentifierScheme</a>
+            <div class="small muted code">nameIdentifierScheme.jsonld</div>
+          </div>
+          <div class="desc">The name of the name identifier scheme.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="nameType nameType The type of name. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/nameType.jsonld">nameType</a>
+            <div class="small muted code">nameType.jsonld</div>
+          </div>
+          <div class="desc">The type of name.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="northBoundLatitude northBoundLatitude Northern latitudinal dimension of box. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/northBoundLatitude.jsonld">northBoundLatitude</a>
+            <div class="small muted code">northBoundLatitude.jsonld</div>
+          </div>
+          <div class="desc">Northern latitudinal dimension of box.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="number number Number of the resource within the related item, e.g., report number or article number. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/number.jsonld">number</a>
+            <div class="small muted code">number.jsonld</div>
+          </div>
+          <div class="desc">Number of the resource within the related item, e.g., report number or article number.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="numberType numberType Type of the related item’s number, e.g., report number or article number. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/numberType.jsonld">numberType</a>
+            <div class="small muted code">numberType.jsonld</div>
+          </div>
+          <div class="desc">Type of the related item’s number, e.g., report number or article number.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="pointLatitude pointLatitude Latitudinal dimension of point. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/pointLatitude.jsonld">pointLatitude</a>
+            <div class="small muted code">pointLatitude.jsonld</div>
+          </div>
+          <div class="desc">Latitudinal dimension of point.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="pointLongitude pointLongitude Longitudinal dimension of point. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/pointLongitude.jsonld">pointLongitude</a>
+            <div class="small muted code">pointLongitude.jsonld</div>
+          </div>
+          <div class="desc">Longitudinal dimension of point.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="polygonPoint polygonPoint A point location in a polygon. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/polygonPoint.jsonld">polygonPoint</a>
+            <div class="small muted code">polygonPoint.jsonld</div>
+          </div>
+          <div class="desc">A point location in a polygon.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="publicationYear publicationYear The year when the item was or will be made publicly available. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/publicationYear.jsonld">publicationYear</a>
+            <div class="small muted code">publicationYear.jsonld</div>
+          </div>
+          <div class="desc">The year when the item was or will be made publicly available.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="publisher publisher The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/publisher.jsonld">publisher</a>
+            <div class="small muted code">publisher.jsonld</div>
+          </div>
+          <div class="desc">The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="publisherIdentifier publisherIdentifier Uniquely identifies the publisher, according to various schemes. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/publisherIdentifier.jsonld">publisherIdentifier</a>
+            <div class="small muted code">publisherIdentifier.jsonld</div>
+          </div>
+          <div class="desc">Uniquely identifies the publisher, according to various schemes.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="publisherIdentifierScheme publisherIdentifierScheme The name of the publisher identifier scheme. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/publisherIdentifierScheme.jsonld">publisherIdentifierScheme</a>
+            <div class="small muted code">publisherIdentifierScheme.jsonld</div>
+          </div>
+          <div class="desc">The name of the publisher identifier scheme.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relatedIdentifier relatedIdentifier Identifiers of related resources. These must be globally unique identifiers. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relatedIdentifier.jsonld">relatedIdentifier</a>
+            <div class="small muted code">relatedIdentifier.jsonld</div>
+          </div>
+          <div class="desc">Identifiers of related resources. These must be globally unique identifiers.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relatedIdentifierType relatedIdentifierType The type of the RelatedIdentifier. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relatedIdentifierType.jsonld">relatedIdentifierType</a>
+            <div class="small muted code">relatedIdentifierType.jsonld</div>
+          </div>
+          <div class="desc">The type of the RelatedIdentifier.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relatedItem relatedItem Information about a resource related to the one being registered. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relatedItem.jsonld">relatedItem</a>
+            <div class="small muted code">relatedItem.jsonld</div>
+          </div>
+          <div class="desc">Information about a resource related to the one being registered.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relatedItemIdentifier relatedItemIdentifier The identifier for the related item. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relatedItemIdentifier.jsonld">relatedItemIdentifier</a>
+            <div class="small muted code">relatedItemIdentifier.jsonld</div>
+          </div>
+          <div class="desc">The identifier for the related item.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relatedItemIdentifierType relatedItemIdentifierType The type of the Identifier for the related item. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relatedItemIdentifierType.jsonld">relatedItemIdentifierType</a>
+            <div class="small muted code">relatedItemIdentifierType.jsonld</div>
+          </div>
+          <div class="desc">The type of the Identifier for the related item.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relatedItemType relatedItemType The general type of the related item. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relatedItemType.jsonld">relatedItemType</a>
+            <div class="small muted code">relatedItemType.jsonld</div>
+          </div>
+          <div class="desc">The general type of the related item.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relatedMetadataScheme relatedMetadataScheme The name of the scheme. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relatedMetadataScheme.jsonld">relatedMetadataScheme</a>
+            <div class="small muted code">relatedMetadataScheme.jsonld</div>
+          </div>
+          <div class="desc">The name of the scheme.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="relationType relationType Description of the relationship of the resource being registered (A) and the related resource (B). rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/relationType.jsonld">relationType</a>
+            <div class="small muted code">relationType.jsonld</div>
+          </div>
+          <div class="desc">Description of the relationship of the resource being registered (A) and the related resource (B).</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="resourceType resourceType A description of the resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/resourceType.jsonld">resourceType</a>
+            <div class="small muted code">resourceType.jsonld</div>
+          </div>
+          <div class="desc">A description of the resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="resourceTypeGeneral resourceTypeGeneral The general type of a resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/resourceTypeGeneral.jsonld">resourceTypeGeneral</a>
+            <div class="small muted code">resourceTypeGeneral.jsonld</div>
+          </div>
+          <div class="desc">The general type of a resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="rights rights Any rights information for this resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/rights.jsonld">rights</a>
+            <div class="small muted code">rights.jsonld</div>
+          </div>
+          <div class="desc">Any rights information for this resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="rightsIdentifier rightsIdentifier A short standardized identifier for the licence. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/rightsIdentifier.jsonld">rightsIdentifier</a>
+            <div class="small muted code">rightsIdentifier.jsonld</div>
+          </div>
+          <div class="desc">A short standardized identifier for the licence.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="rightsIdentifierScheme rightsIdentifierScheme The name of the scheme. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/rightsIdentifierScheme.jsonld">rightsIdentifierScheme</a>
+            <div class="small muted code">rightsIdentifierScheme.jsonld</div>
+          </div>
+          <div class="desc">The name of the scheme.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="rightsURI rightsURI The URI of the license. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/rightsURI.jsonld">rightsURI</a>
+            <div class="small muted code">rightsURI.jsonld</div>
+          </div>
+          <div class="desc">The URI of the license.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="schemeType schemeType The type of the relatedMetadataScheme, linked with the schemeURI. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/schemeType.jsonld">schemeType</a>
+            <div class="small muted code">schemeType.jsonld</div>
+          </div>
+          <div class="desc">The type of the relatedMetadataScheme, linked with the schemeURI.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="schemeURI schemeURI The URI of an identifier scheme. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/schemeURI.jsonld">schemeURI</a>
+            <div class="small muted code">schemeURI.jsonld</div>
+          </div>
+          <div class="desc">The URI of an identifier scheme.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="size size Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/size.jsonld">size</a>
+            <div class="small muted code">size.jsonld</div>
+          </div>
+          <div class="desc">Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="southBoundLatitude southBoundLatitude Southern latitude of box . rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/southBoundLatitude.jsonld">southBoundLatitude</a>
+            <div class="small muted code">southBoundLatitude.jsonld</div>
+          </div>
+          <div class="desc">Southern latitude of box .</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="subject subject Subject, keyword, classification code, or key phrase describing the resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/subject.jsonld">subject</a>
+            <div class="small muted code">subject.jsonld</div>
+          </div>
+          <div class="desc">Subject, keyword, classification code, or key phrase describing the resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="subjectScheme subjectScheme The name of the subject scheme or classification code or authority if one is used. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/subjectScheme.jsonld">subjectScheme</a>
+            <div class="small muted code">subjectScheme.jsonld</div>
+          </div>
+          <div class="desc">The name of the subject scheme or classification code or authority if one is used.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="title title A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/title.jsonld">title</a>
+            <div class="small muted code">title.jsonld</div>
+          </div>
+          <div class="desc">A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="titleType titleType The type of Title (other than the Main Title). rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/titleType.jsonld">titleType</a>
+            <div class="small muted code">titleType.jsonld</div>
+          </div>
+          <div class="desc">The type of Title (other than the Main Title).</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="valueURI valueURI  The URI of the subject term. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/valueURI.jsonld">valueURI</a>
+            <div class="small muted code">valueURI.jsonld</div>
+          </div>
+          <div class="desc"> The URI of the subject term.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="version version The version number of the resource. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/version.jsonld">version</a>
+            <div class="small muted code">version.jsonld</div>
+          </div>
+          <div class="desc">The version number of the resource.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="volume volume Volume of the related item. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/volume.jsonld">volume</a>
+            <div class="small muted code">volume.jsonld</div>
+          </div>
+          <div class="desc">Volume of the related item.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li><li>
+        <div class="row" data-search="westBoundLongitude westBoundLongitude Western longitudinal dimension of box. rdf:Property">
+          <div class="name">
+            <a href="/linked-data/property/westBoundLongitude.jsonld">westBoundLongitude</a>
+            <div class="small muted code">westBoundLongitude.jsonld</div>
+          </div>
+          <div class="desc">Western longitudinal dimension of box.</div>
+          <div class="meta-col">rdf:Property<br>2026-02-18</div>
+        </div>
+      </li></ul>
+    </section>
+    <script>
+  (function () {
+    const input = document.getElementById("property-search");
+    if (!input) return;
+    const items = Array.from(document.querySelectorAll(".row"));
+    input.addEventListener('input', function () {
+      const q = input.value.trim().toLowerCase();
+      for (const item of items) {
+        const hay = (item.getAttribute('data-search') || '').toLowerCase();
+        item.style.display = !q || hay.includes(q) ? '' : 'none';
+      }
+    });
+  })();
+  </script>
+  
+    </main>
+    <div class="footer">
+      <a href="/linked-data//">Back to /linked-data/</a>
+    </div>
+  </div>
+</body>
+</html>

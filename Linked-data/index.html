@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataCite Linked Data Schema (Staging)</title>
+  <meta name="description" content="Human-readable entry point for DataCite linked-data schema resources under /linked-data/.">
+  <style>
+    :root {
+      /* DataCite palette */
+      --dc-navy: #243B54;
+      --dc-cyan: #00B1E2;
+      --dc-blue: #5B88B9;
+      --dc-teal: #46BCAB;
+      --dc-mint: #90D7CD;
+      --dc-magenta: #BC2B66;
+      --dc-yellow: #EEEE98;
+      --dc-coral: #F07C73;
+
+      /* Semantic theme colors derived from the DataCite palette */
+      --bg: color-mix(in srgb, var(--dc-mint) 12%, white);
+      --panel: color-mix(in srgb, white 94%, var(--dc-yellow) 6%);
+      --panel-2: color-mix(in srgb, var(--dc-yellow) 26%, white);
+      --text: var(--dc-navy);
+      --muted: color-mix(in srgb, var(--dc-navy) 70%, var(--dc-blue));
+      --line: color-mix(in srgb, var(--dc-blue) 30%, white);
+      --accent: var(--dc-cyan);
+      --accent-2: var(--dc-magenta);
+      --accent-3: var(--dc-teal);
+      --accent-4: var(--dc-coral);
+      --shadow: 0 10px 30px rgba(36, 59, 84, 0.10);
+      --radius: 14px;
+      --max: 1080px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--dc-navy);
+        --panel: color-mix(in srgb, var(--dc-navy) 82%, var(--dc-blue));
+        --panel-2: color-mix(in srgb, var(--dc-navy) 68%, var(--dc-teal));
+        --text: color-mix(in srgb, white 92%, var(--dc-mint));
+        --muted: color-mix(in srgb, white 55%, var(--dc-mint));
+        --line: color-mix(in srgb, var(--dc-blue) 38%, var(--dc-navy));
+        --accent: var(--dc-cyan);
+        --accent-2: var(--dc-coral);
+        --accent-3: var(--dc-teal);
+        --accent-4: var(--dc-magenta);
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 500px at 95% -10%, color-mix(in srgb, var(--dc-coral) 24%, transparent), transparent 60%),
+        radial-gradient(900px 480px at -10% 10%, color-mix(in srgb, var(--dc-cyan) 18%, transparent), transparent 65%),
+        radial-gradient(700px 420px at 50% 0%, color-mix(in srgb, var(--dc-yellow) 20%, transparent), transparent 70%),
+        var(--bg);
+      line-height: 1.45;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.12em;
+    }
+
+    a:hover { text-decoration-thickness: 0.12em; }
+
+    .wrap {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+    }
+
+    .topbar .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.7rem 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 0.35rem 0.55rem;
+      border-radius: 999px;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      background: var(--panel-2);
+      color: var(--text);
+      outline: none;
+    }
+
+    .hero {
+      padding: 2.25rem 0 1.25rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, color-mix(in srgb, var(--panel) 92%, white 8%), var(--panel));
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 4px);
+      box-shadow: var(--shadow);
+      padding: 1.2rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.84rem;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+    }
+
+    .dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--accent-4);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-4) 20%, transparent);
+    }
+
+    h1 {
+      margin: 0.7rem 0 0.5rem;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 72ch;
+    }
+
+    .meta {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    main {
+      padding: 0.5rem 0 2.5rem;
+    }
+
+    section {
+      margin: 1rem 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0.35rem 0 0.8rem;
+    }
+
+    ul, ol {
+      margin: 0.35rem 0 0.8rem;
+      padding-left: 1.15rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.93em;
+      background: color-mix(in srgb, var(--panel-2) 70%, transparent);
+      padding: 0.05rem 0.25rem;
+      border-radius: 5px;
+      border: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+    }
+
+    .grid {
+      display: grid;
+      gap: 0.8rem;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card {
+      grid-column: span 12;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--panel) 95%, white 5%), var(--panel));
+      padding: 0.85rem;
+    }
+
+    .card p { color: var(--muted); }
+
+    .card a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .card a:hover { text-decoration: underline; }
+
+    .card .path {
+      margin-top: 0.35rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .callout {
+      border-left: 4px solid var(--accent-2);
+      padding: 0.7rem 0.8rem;
+      background: color-mix(in srgb, var(--dc-teal) 14%, var(--panel));
+      border-radius: 8px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      padding: 0.55rem 0.4rem;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .footer {
+      margin: 1rem 0 2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (min-width: 700px) {
+      .card.span-6 { grid-column: span 6; }
+      .card.span-4 { grid-column: span 4; }
+      .card.span-3 { grid-column: span 3; }
+      .split { grid-template-columns: 1.15fr 0.85fr; }
+      section { padding: 1.1rem; }
+      .hero-card { padding: 1.4rem; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-card, section, .card {
+        animation: rise 420ms ease both;
+      }
+      section:nth-of-type(2) { animation-delay: 40ms; }
+      section:nth-of-type(3) { animation-delay: 70ms; }
+      section:nth-of-type(4) { animation-delay: 100ms; }
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(6px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" aria-label="Top navigation">
+    <div class="wrap">
+      <a class="brand" href="/linked-data/">DataCite Linked Data</a>
+      <nav class="nav" aria-label="Section navigation">
+        <a href="#start">Start</a>
+        <a href="#browse">Browse</a>
+        <a href="#featured">Featured</a>
+        <a href="#usage">How To Use</a>
+        <a href="#patterns">URL Patterns</a>
+        <a href="#notes">Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-card">
+        <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Staging Namespace</div>
+        <h1 id="page-title">DataCite Linked Data Schema</h1>
+        <p class="lead">
+          Human-readable entry point for DataCite linked-data schema resources hosted under the
+          <code>/linked-data/</code> namespace. This site provides JSON-LD definitions for classes,
+          properties, controlled vocabularies, contexts, and manifests used to describe DataCite metadata.
+        </p>
+        <div class="meta" aria-label="Quick facts">
+          <span class="chip">Audience: Developers, metadata engineers, tool builders</span>
+          <span class="chip">Current staged version: DataCite 4.6</span>
+          <span class="chip">Machine entry point: <a href="/linked-data/manifest/datacite-4.6.json">manifest</a></span>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="start" aria-labelledby="start-title">
+        <h2 id="start-title">Start Here</h2>
+        <p class="muted">Choose the entry point that matches what you need.</p>
+        <div class="grid">
+          <article class="card span-6">
+            <h3>I need a machine-readable index of everything (v4.6)</h3>
+            <p>Open the manifest to discover classes, properties, vocabulary schemes, and terms.</p>
+            <a href="/linked-data/manifest/datacite-4.6.json">Open v4.6 manifest</a>
+            <div class="path"><code>/linked-data/manifest/datacite-4.6.json</code></div>
+          </article>
+          <article class="card span-6">
+            <h3>I need field/property definitions</h3>
+            <p>Browse property definitions such as <code>identifier</code>, <code>creatorName</code>, and <code>publicationYear</code>.</p>
+            <a href="/linked-data/property/">Browse properties</a>
+            <div class="path"><code>/linked-data/property/</code></div>
+          </article>
+          <article class="card span-6">
+            <h3>I need entity/class definitions</h3>
+            <p>Browse classes such as <code>Resource</code>, <code>Creator</code>, and <code>Title</code>.</p>
+            <a href="/linked-data/class/">Browse classes</a>
+            <div class="path"><code>/linked-data/class/</code></div>
+          </article>
+          <article class="card span-6">
+            <h3>I need allowed values / controlled terms</h3>
+            <p>Browse vocabularies such as <code>resourceTypeGeneral</code>, <code>relationType</code>, and <code>nameType</code>.</p>
+            <a href="/linked-data/vocab/">Browse vocabularies</a>
+            <div class="path"><code>/linked-data/vocab/</code></div>
+          </article>
+          <article class="card span-6">
+            <h3>I need JSON-LD context mappings</h3>
+            <p>Open contexts that map compact JSON keys to IRIs and define interpretation behavior.</p>
+            <a href="/linked-data/context/">Browse contexts</a>
+            <div class="path"><code>/linked-data/context/</code></div>
+          </article>
+          <article class="card span-6">
+            <h3>I need versioned inventories</h3>
+            <p>Use manifests as the starting point for software that needs a version-specific resource index.</p>
+            <a href="/linked-data/manifest/">Browse manifests</a>
+            <div class="path"><code>/linked-data/manifest/</code></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="versions" aria-labelledby="versions-title">
+        <h2 id="versions-title">Available Versions</h2>
+        <div class="split">
+          <div>
+            <p><strong>DataCite 4.6</strong> (current staged set)</p>
+            <p class="muted">
+              This staged namespace currently exposes a DataCite 4.6 linked-data set with JSON-LD class, property,
+              vocabulary, context, and manifest resources.
+            </p>
+            <p><a href="/linked-data/manifest/datacite-4.6.json">Open the DataCite 4.6 manifest</a></p>
+          </div>
+          <aside class="callout" aria-label="Versioning note">
+            Add future versions here (for example, <code>4.7</code>) and keep manifests as the primary machine-readable entry points.
+          </aside>
+        </div>
+      </section>
+
+      <section id="browse" aria-labelledby="browse-title">
+        <h2 id="browse-title">Browse by Resource Type</h2>
+        <div class="grid">
+          <article class="card span-6" id="browse-classes">
+            <h3>Classes</h3>
+            <p>Definitions of major DataCite entities such as <code>Resource</code>, <code>Creator</code>, <code>Title</code>, and <code>Publisher</code>.</p>
+            <p><a href="/linked-data/class/">Browse classes</a></p>
+            <p><a href="/linked-data/class/Resource.jsonld">Example: <code>Resource.jsonld</code></a></p>
+          </article>
+          <article class="card span-6" id="browse-properties">
+            <h3>Properties</h3>
+            <p>Definitions of DataCite metadata fields such as <code>identifier</code>, <code>creatorName</code>, and <code>publicationYear</code>.</p>
+            <p><a href="/linked-data/property/">Browse properties</a></p>
+            <p><a href="/linked-data/property/identifier.jsonld">Example: <code>identifier.jsonld</code></a></p>
+          </article>
+          <article class="card span-6" id="browse-vocab">
+            <h3>Vocabularies</h3>
+            <p>Controlled value sets used by DataCite fields (for example <code>resourceTypeGeneral</code>, <code>relationType</code>, <code>nameType</code>).</p>
+            <p><a href="/linked-data/vocab/">Browse vocabularies</a></p>
+            <p><a href="/linked-data/vocab/resourceTypeGeneral/resourceTypeGeneral.jsonld">Example scheme: <code>resourceTypeGeneral.jsonld</code></a></p>
+            <p><a href="/linked-data/vocab/resourceTypeGeneral/Dataset.jsonld">Example term: <code>Dataset.jsonld</code></a></p>
+          </article>
+          <article class="card span-6" id="browse-context">
+            <h3>Contexts</h3>
+            <p>JSON-LD context files that map compact keys to IRIs for DataCite-like JSON and transformation experiments.</p>
+            <p><a href="/linked-data/context/">Browse contexts</a></p>
+            <p><a href="/linked-data/context/fullcontext.jsonld">Open <code>fullcontext.jsonld</code></a></p>
+          </article>
+          <article class="card span-6" id="browse-manifests">
+            <h3>Manifests</h3>
+            <p>Versioned inventory files listing available classes, properties, vocabulary schemes, and terms.</p>
+            <p><a href="/linked-data/manifest/">Browse manifests</a></p>
+            <p><a href="/linked-data/manifest/datacite-4.6.json">Open <code>datacite-4.6.json</code></a></p>
+          </article>
+          <article class="card span-6">
+            <h3>Examples / Inputs (repo-only)</h3>
+            <p>Transformation examples and round-trip notes exist in the repository but are not usually part of the public linked-data namespace.</p>
+            <p class="muted">If published, document them separately to avoid mixing schema resources with experiments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="featured" aria-labelledby="featured-title">
+        <h2 id="featured-title">Featured Resources (Good Starting Points)</h2>
+        <div class="grid">
+          <article class="card span-6">
+            <h3>Manifest (v4.6)</h3>
+            <p>Complete machine-readable index of staged resources.</p>
+            <p><a href="/linked-data/manifest/datacite-4.6.json">/linked-data/manifest/datacite-4.6.json</a></p>
+          </article>
+          <article class="card span-6">
+            <h3>Full JSON-LD Context</h3>
+            <p>Key-to-IRI mappings for DataCite-like JSON documents.</p>
+            <p><a href="/linked-data/context/fullcontext.jsonld">/linked-data/context/fullcontext.jsonld</a></p>
+          </article>
+          <article class="card span-4">
+            <h3>Resource Class</h3>
+            <p>Top-level citable resource concept.</p>
+            <p><a href="/linked-data/class/Resource.jsonld">/linked-data/class/Resource.jsonld</a></p>
+          </article>
+          <article class="card span-4">
+            <h3><code>identifier</code> Property</h3>
+            <p>Canonical property definition for identifiers.</p>
+            <p><a href="/linked-data/property/identifier.jsonld">/linked-data/property/identifier.jsonld</a></p>
+          </article>
+          <article class="card span-4">
+            <h3><code>resourceTypeGeneral</code> Vocabulary</h3>
+            <p>Common resource categories such as Dataset and Software.</p>
+            <p><a href="/linked-data/vocab/resourceTypeGeneral/resourceTypeGeneral.jsonld">Open scheme</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="usage" aria-labelledby="usage-title">
+        <h2 id="usage-title">How To Use These Files</h2>
+        <ul>
+          <li><strong>For people:</strong> browse the categories above, then open the JSON-LD files directly or use the manifest as an index.</li>
+          <li><strong>For software:</strong> start from the manifest and dereference the listed URLs/files as needed.</li>
+          <li><strong>For JSON-LD processing:</strong> use the context files to interpret compact JSON keys and values.</li>
+          <li><strong>For schema exploration:</strong> compare a class file, a property file, and a vocabulary term file to understand the modeling pattern.</li>
+        </ul>
+
+        <div class="table-wrap" aria-label="Transformation purpose summary">
+          <table>
+            <thead>
+              <tr>
+                <th>Transformation</th>
+                <th>Purpose</th>
+                <th>Reversible</th>
+                <th>XML fidelity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>XML -&gt; bolognese JSON</td>
+                <td>Semantic normalization</td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>XML -&gt; xml-js JSON</td>
+                <td>Structural preservation</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="patterns" aria-labelledby="patterns-title">
+        <h2 id="patterns-title">URL Patterns (Quick Reference)</h2>
+        <ul>
+          <li>Classes: <code>/linked-data/class/{Name}.jsonld</code></li>
+          <li>Properties: <code>/linked-data/property/{name}.jsonld</code></li>
+          <li>Vocabulary schemes: <code>/linked-data/vocab/{scheme}/{scheme}.jsonld</code></li>
+          <li>Vocabulary terms: <code>/linked-data/vocab/{scheme}/{Term}.jsonld</code></li>
+          <li>Contexts: <code>/linked-data/context/{file}.jsonld</code></li>
+          <li>Manifests: <code>/linked-data/manifest/datacite-{version}.json</code></li>
+        </ul>
+      </section>
+
+      <section id="notes" aria-labelledby="notes-title">
+        <h2 id="notes-title">Notes About This Namespace</h2>
+        <div class="split">
+          <div>
+            <p>
+              This is the <strong>staging</strong> namespace (<code>schema.stage.datacite.org</code>).
+              URLs and artifacts may change during development and review before production publication.
+            </p>
+            <p>
+              If you later support content negotiation, a good pattern is:
+              <code>Accept: text/html</code> for human-readable pages and <code>Accept: application/ld+json</code>
+              for JSON-LD responses.
+            </p>
+          </div>
+          <div>
+            <h3>Source / Feedback</h3>
+            <ul>
+              <li>Source repository: <a href="https://github.com/datacite/schema.datacite.org-linked-data">DataCite GitHub Organization</a></li>
+              <li>Issue tracker: <a href="https://github.com/datacite/schema.datacite.org-linked-data/issues">GitHub Issues</a></li>
+              <li>Contact Maintainer: <a href="https://github.com/selgebali">Sara El-Gebali</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      DataCite Linked Data Schema (Staging) · <a href="/linked-data/">/linked-data/</a>
+    </footer>
+  </div>
+</body>
+</html>
