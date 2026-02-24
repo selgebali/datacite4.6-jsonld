@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/URL",
+  "type": "Concept",
+  "prefLabel": "URL",
+  "altLabel": "Uniform Resource Locator",
+  "notation": "URL",
+  "definition": "Also known as web address, a URL is a specific character string that constitutes a reference to a resource. The syntax is: scheme://domain:port/path?query_string#fragment_id.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsCitedBy\">http://www.heatflow.und.edu/index2.html</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

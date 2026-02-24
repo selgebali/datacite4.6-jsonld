@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/RegistrationAuthority",
+  "type": "Concept",
+  "prefLabel": "RegistrationAuthority",
+  "notation": "RegistrationAuthority",
+  "definition": "A standards-setting body from which Registration Agencies obtain official recognition and guidance.",
+  "scopeNote": "The IDF serves as the Registration Authority for the International Standards Organisation (ISO) in the area/domain of Digital Object Identifiers.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

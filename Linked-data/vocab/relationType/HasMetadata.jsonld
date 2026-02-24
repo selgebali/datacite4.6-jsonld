@@ -1,0 +1,13 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/HasMetadata",
+  "type": "Concept",
+  "prefLabel": "HasMetadata",
+  "notation": "HasMetadata",
+  "definition": "indicates resource A has additional metadata B",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"HasMetadata\" relatedMetadataScheme=\"DDI-L\" schemeURI=\"http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd\">10.1234/567890</relatedIdentifier>"
+  ]
+}

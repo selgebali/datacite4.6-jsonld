@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Award",
+  "type": "Concept",
+  "prefLabel": "Award",
+  "notation": "Award",
+  "definition": "An umbrella term for resources provided to individual(s) or organization(s) in support of research, academic output, or training, such as a specific instance of funding, grant, investment, sponsorship, scholarship, recognition, or non-monetary materials.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "scopeNote": "<resourceType resourceTypeGeneral=\"Award\">Grant</resourceType>\n<resourceType resourceTypeGeneral=\"Award\">Facility use</resourceType>"
+}

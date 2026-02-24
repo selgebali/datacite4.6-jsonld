@@ -1,0 +1,15 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/ResearchGroup",
+  "type": "Concept",
+  "prefLabel": "ResearchGroup",
+  "notation": "ResearchGroup",
+  "definition": "Typically refers to a group of individuals with a lab, department, or division that has a specifically defined focus of activity.",
+  "scopeNote": "May operate at a narrower level of scope; may or may not hold less administrative responsibility than a project team.",
+  "example": [
+    "Space Research & Planetary Sciences Division of the University of Bern (WP Unibe)",
+    "doi:10.26302/SSHADE/EXPERIMEN T_OP_20201104_001"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

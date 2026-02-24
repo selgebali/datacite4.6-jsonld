@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/Translator",
+  "type": "Concept",
+  "prefLabel": "Translator",
+  "notation": "Translator",
+  "definition": "A person, organization, or automated system responsible for converting the content of a resource from one language into another, preserving its meaning and intended message.",
+  "scopeNote": "Apply to DOI metadata for a resource which has been translated from another resource.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

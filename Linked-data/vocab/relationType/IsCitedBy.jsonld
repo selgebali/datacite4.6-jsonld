@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsCitedBy",
+  "type": "Concept",
+  "prefLabel": "IsCitedBy",
+  "notation": "IsCitedBy",
+  "definition": "indicates that B includes A in a citation",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "scopeNote": "Recommended for discovery.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsCitedBy\">10.4232/10.ASEAS-5.2-1</relatedIdentifier>"
+  ]
+}

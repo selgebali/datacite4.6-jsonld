@@ -1,0 +1,13 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsNewVersionOf",
+  "type": "Concept",
+  "prefLabel": "IsNewVersionOf",
+  "notation": "IsNewVersionOf",
+  "definition": "indicates A is a new edition of B, where the new edition has been modified or updated",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsNewVersionOf\">10.5438/0005</relatedIdentifier>"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsReferencedBy",
+  "type": "Concept",
+  "prefLabel": "IsReferencedBy",
+  "notation": "IsReferencedBy",
+  "definition": "indicates A is used as a source of information by B",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "scopeNote": "Recommended for discovery.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsReferencedBy\">http://www.testpubl.de</relatedIdentifier>"
+  ]
+}

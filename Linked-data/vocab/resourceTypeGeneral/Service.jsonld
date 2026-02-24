@@ -1,0 +1,17 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Service",
+  "type": "Concept",
+  "prefLabel": "Service",
+  "notation": "Service",
+  "definition": "An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "scopeNote": "Data management service, or long-term preservation service",
+  "example": [
+    "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.21938/3I01ISNUCODNH1ZJBCVUWA"
+  ],
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Service"
+  ]
+}

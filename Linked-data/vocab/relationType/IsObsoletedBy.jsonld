@@ -1,0 +1,13 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsObsoletedBy",
+  "type": "Concept",
+  "prefLabel": "IsObsoletedBy",
+  "notation": "IsObsoletedBy",
+  "definition": "Indicates A is replaced by B",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsObsoletedBy\">10.5438/0005</relatedIdentifier>"
+  ]
+}

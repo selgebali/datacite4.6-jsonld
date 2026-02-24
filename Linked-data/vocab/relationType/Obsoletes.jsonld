@@ -1,0 +1,13 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/Obsoletes",
+  "type": "Concept",
+  "prefLabel": "Obsoletes",
+  "notation": "Obsoletes",
+  "definition": "Indicates A replaces B",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Obsoletes\">10.5438/0007</relatedIdentifier>"
+  ]
+}

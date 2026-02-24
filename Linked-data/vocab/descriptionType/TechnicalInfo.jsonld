@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TechnicalInfo",
+  "type": "Concept",
+  "prefLabel": "TechnicalInfo",
+  "notation": "TechnicalInfo",
+  "definition": "Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process, system, or instrument.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+  "scopeNote": "For software description, this may include the contents of a “readme.txt” and necessary environmental information (hardware, operational software, applications/programs with version information, a human-readable synopsis of software purpose) that cannot be described using other properties. For other uses, this can include specific and detailed information as necessary and appropriate."
+}

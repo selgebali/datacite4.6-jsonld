@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsSupplementedBy",
+  "type": "Concept",
+  "prefLabel": "IsSupplementedBy",
+  "notation": "IsSupplementedBy",
+  "definition": "indicates that B is a supplement to A",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "scopeNote": "Recommended for discovery.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"PMID\" relationType=\"IsSupplementedBy\">16911322</relatedIdentifier>"
+  ]
+}

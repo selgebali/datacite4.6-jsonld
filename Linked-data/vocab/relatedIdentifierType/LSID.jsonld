@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/LSID",
+  "type": "Concept",
+  "prefLabel": "LSID",
+  "altLabel": "Life Science Identifiers",
+  "notation": "LSID",
+  "definition": "A unique identifier for data in the Life Science domain. Format: urn:lsid:authority:namespace:identifier:revision.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"LSID\" relationType=\"Cites\">urn:lsid:ubio.org:namebank:11815</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

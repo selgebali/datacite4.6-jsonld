@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Report",
+  "type": "Concept",
+  "prefLabel": "Report",
+  "notation": "Report",
+  "definition": "A document that presents information in an organized format for a specific audience and purpose.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "scopeNote": "<resourceType resourceTypeGeneral=\"Report\">Annual Report</resourceType>",
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"
+  ]
+}

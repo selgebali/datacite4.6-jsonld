@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/IGSN",
+  "type": "Concept",
+  "prefLabel": "IGSN",
+  "altLabel": "International Generic Sample Number",
+  "notation": "IGSN",
+  "definition": "A code that uniquely identifies samples from our natural environment and related features-of-interest.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"IGSN\" relationType=\"References\">IECUR0097</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

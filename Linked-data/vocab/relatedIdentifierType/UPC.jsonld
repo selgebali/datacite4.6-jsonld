@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/UPC",
+  "type": "Concept",
+  "prefLabel": "UPC",
+  "altLabel": "Universal Product Code",
+  "notation": "UPC",
+  "definition": "A barcode symbology used for tracking trade items in stores. Its most common form, the UPC-A, consists of 12 numerical digits.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"UPC\" relationType=\"Cites\">123456789999</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

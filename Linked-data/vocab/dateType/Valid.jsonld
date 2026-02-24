@@ -1,0 +1,10 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Valid",
+  "type": "Concept",
+  "prefLabel": "Valid",
+  "notation": "Valid",
+  "definition": "The date or date range during which the dataset or resource is accurate.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType"
+}

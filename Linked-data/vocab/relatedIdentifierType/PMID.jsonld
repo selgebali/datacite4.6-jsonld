@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/PMID",
+  "type": "Concept",
+  "prefLabel": "PMID",
+  "altLabel": "PubMed identifier",
+  "notation": "PMID",
+  "definition": "A unique number assigned to each PubMed record.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"PMID\" relationType=\"IsReferencedBy\">12082125</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

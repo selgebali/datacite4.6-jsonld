@@ -1,0 +1,10 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/nameType/Organizational",
+  "type": "Concept",
+  "prefLabel": "Organizational",
+  "notation": "Organizational",
+  "definition": "An organization or institution name.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/nameType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/nameType"
+}

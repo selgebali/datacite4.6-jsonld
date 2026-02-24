@@ -1,0 +1,1001 @@
+_:b0    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "12345" .
+
+_:b1    <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b2;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b3;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/ContactPerson>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b4;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b5;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b6 .
+
+_:b7    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b8    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b9    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b10   <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b11;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/WorkPackageLeader>;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b12 .
+
+_:b11   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleOrganization";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
+
+_:b12   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://ror.org/03yrm5c26";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b13   <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b14;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b15;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Other>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b16;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b17;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b18 .
+
+_:b14   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b15   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b16   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b17   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b19   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b18   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b20   <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b21;
+        <https://schema.stage.datacite.org/linked-data/property/creatorName>  _:b22;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b23;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b24;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b25 .
+
+_:b21   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b22   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b23   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b24   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b25   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b26   <https://schema.stage.datacite.org/linked-data/property/creatorName>  _:b27;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b28 .
+
+_:b27   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleOrganization";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
+
+_:b28   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://ror.org/04wxnsj81";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b29   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b30   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted> .
+
+_:b31   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Available> .
+
+_:b32   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted> .
+
+_:b33   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01/2024-12-31";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Collected> .
+
+_:b34   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01/2024-12-31";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Coverage> .
+
+_:b35   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Created> .
+
+_:b36   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Issued> .
+
+_:b37   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Submitted> .
+
+_:b38   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated> .
+
+_:b39   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid> .
+
+_:b40   <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b41;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b42;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/DataCurator>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b43;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b44;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b45 .
+
+_:b46   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn> .
+
+_:b47   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2024-01-01";
+        <https://schema.stage.datacite.org/linked-data/property/dateInformation>  "ExampleDateInformation";
+        <https://schema.stage.datacite.org/linked-data/property/dateType>  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Other> .
+
+_:b48   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Abstract";
+        <https://schema.stage.datacite.org/linked-data/property/descriptionType>  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Abstract> .
+
+_:b49   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Methods";
+        <https://schema.stage.datacite.org/linked-data/property/descriptionType>  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Methods> .
+
+_:b50   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example SeriesInformation";
+        <https://schema.stage.datacite.org/linked-data/property/descriptionType>  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/SeriesInformation> .
+
+_:b51   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example TableOfContents";
+        <https://schema.stage.datacite.org/linked-data/property/descriptionType>  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TableOfContents> .
+
+_:b52   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example TechnicalInfo";
+        <https://schema.stage.datacite.org/linked-data/property/descriptionType>  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo> .
+
+_:b53   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Other";
+        <https://schema.stage.datacite.org/linked-data/property/descriptionType>  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Other> .
+
+_:b54   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "application/xml" .
+
+_:b55   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "text/plain" .
+
+_:b41   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b56   <https://schema.stage.datacite.org/linked-data/property/awardNumber>  _:b57;
+        <https://schema.stage.datacite.org/linked-data/property/awardTitle>  _:b58;
+        <https://schema.stage.datacite.org/linked-data/property/funderIdentifier>  _:b59;
+        <https://schema.stage.datacite.org/linked-data/property/funderName>  _:b60 .
+
+_:b57   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "12345";
+        <https://schema.stage.datacite.org/linked-data/property/awardURI>  <https://example.com/example-award-uri> .
+
+_:b58   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example AwardTitle" .
+
+_:b59   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://doi.org/10.13039/501100000780" .
+
+_:b60   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Funder" .
+
+_:b61   <https://schema.stage.datacite.org/linked-data/property/geoLocationBox>  _:b62;
+        <https://schema.stage.datacite.org/linked-data/property/geoLocationPlace>  _:b63;
+        <https://schema.stage.datacite.org/linked-data/property/geoLocationPoint>  _:b64;
+        <https://schema.stage.datacite.org/linked-data/property/geoLocationPolygon>  _:b65 .
+
+_:b62   <https://schema.stage.datacite.org/linked-data/property/eastBoundLongitude>  _:b66;
+        <https://schema.stage.datacite.org/linked-data/property/northBoundLatitude>  _:b67;
+        <https://schema.stage.datacite.org/linked-data/property/southBoundLatitude>  _:b68;
+        <https://schema.stage.datacite.org/linked-data/property/westBoundLongitude>  _:b69 .
+
+_:b66   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-123.02"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b67   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "49.315"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b68   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "49.195"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b42   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b69   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-123.27"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b63   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Vancouver, British Columbia, Canada" .
+
+_:b64   <https://schema.stage.datacite.org/linked-data/property/pointLatitude>  _:b70;
+        <https://schema.stage.datacite.org/linked-data/property/pointLongitude>  _:b71 .
+
+_:b70   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "49.2827"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b71   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-123.1207"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b65   <https://schema.stage.datacite.org/linked-data/property/polygonPoint>  _:b72;
+        <https://schema.stage.datacite.org/linked-data/property/polygonPoint>  _:b73;
+        <https://schema.stage.datacite.org/linked-data/property/polygonPoint>  _:b74;
+        <https://schema.stage.datacite.org/linked-data/property/polygonPoint>  _:b75;
+        <https://schema.stage.datacite.org/linked-data/property/polygonPoint>  _:b76 .
+
+_:b72   <https://schema.stage.datacite.org/linked-data/property/pointLatitude>  _:b77;
+        <https://schema.stage.datacite.org/linked-data/property/pointLongitude>  _:b78 .
+
+_:b77   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "41.991"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b78   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-71.032"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b73   <https://schema.stage.datacite.org/linked-data/property/pointLatitude>  _:b79;
+        <https://schema.stage.datacite.org/linked-data/property/pointLongitude>  _:b80 .
+
+_:b43   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b79   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "42.893"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b80   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-69.622"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b74   <https://schema.stage.datacite.org/linked-data/property/pointLatitude>  _:b81;
+        <https://schema.stage.datacite.org/linked-data/property/pointLongitude>  _:b82 .
+
+_:b81   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "41.991"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b82   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-68.211"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b75   <https://schema.stage.datacite.org/linked-data/property/pointLatitude>  _:b83;
+        <https://schema.stage.datacite.org/linked-data/property/pointLongitude>  _:b84 .
+
+_:b83   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "41.090"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b84   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-69.622"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b76   <https://schema.stage.datacite.org/linked-data/property/pointLatitude>  _:b85;
+        <https://schema.stage.datacite.org/linked-data/property/pointLongitude>  _:b86 .
+
+_:b85   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "41.991"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b44   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b86   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "-71.032"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+_:b87   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.82433/B09Z-4K37";
+        <https://schema.stage.datacite.org/linked-data/property/identifierType>  <https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI> .
+
+_:b88   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "en"^^<http://www.w3.org/2001/XMLSchema#language> .
+
+_:b89   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2026" .
+
+_:b90   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Publisher";
+        <https://schema.stage.datacite.org/linked-data/property/publisherIdentifier>  <https://ror.org/04z8jg394>;
+        <https://schema.stage.datacite.org/linked-data/property/publisherIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org/> .
+
+_:b91   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ark:/13030/tqb3kh97gh8w";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual> .
+
+_:b92   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "arXiv:0706.0001";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Cites>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Award> .
+
+_:b93   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2018AGUFM.A24K..07S";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/bibcode>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementTo>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Book> .
+
+_:b94   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "31253.11.sciencedb.13238";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/CSTR>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/BookChapter> .
+
+_:b95   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsContinuedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Collection> .
+
+_:b45   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b96   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "9783468111242";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EAN13>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Continues>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ComputationalNotebook> .
+
+_:b97   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1562-6865";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Describes>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferencePaper> .
+
+_:b98   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10013/epic.10033";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/Handle>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDescribedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferenceProceeding> .
+
+_:b99   <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "IECUR0097";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/IGSN>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasMetadata>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/DataPaper> .
+
+_:b100  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "978-3-905673-82-1";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsMetadataFor>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dataset> .
+
+_:b101  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "0077-5606";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISSN>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasVersion>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dissertation> .
+
+_:b102  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "0A9 2002 12B4A105 7";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISTC>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVersionOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Event> .
+
+_:b103  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1188-1534";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LISSN>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsNewVersionOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Image> .
+
+_:b104  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "urn:lsid:ubio.org:namebank:11815";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPreviousVersionOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/InteractiveResource> .
+
+_:b105  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "12082125";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPartOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Journal> .
+
+_:b106  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b107;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b108;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/DataManager>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b109;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b110;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b111 .
+
+_:b112  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "http://purl.oclc.org/foo/bar";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasPart>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/JournalArticle> .
+
+_:b113  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "RRID:SCR_014641";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPublishedIn>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Model> .
+
+_:b114  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "123456789999";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReferencedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/OutputManagementPlan> .
+
+_:b115  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "http://www.heatflow.und.edu/index2.html";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/References>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PeerReview> .
+
+_:b116  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "urn:nbn:de:101:1-201102033592";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDocumentedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject> .
+
+_:b117  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://w3id.org/games/spec/coil#Coil_Bomb_Die_Of_Age";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Documents>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint> .
+
+_:b118  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCompiledBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project> .
+
+_:b119  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Compiles>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Report> .
+
+_:b120  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVariantFormOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Service> .
+
+_:b121  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsOriginalFormOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Software> .
+
+_:b2    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b107  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b122  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsIdenticalTo>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Sound> .
+
+_:b123  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReviewedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Standard> .
+
+_:b124  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Reviews>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text> .
+
+_:b125  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDerivedFrom>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow> .
+
+_:b126  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSourceOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b127  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsRequiredBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b128  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Requires>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b129  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b130  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsObsoletedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b131  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b108  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b132  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b133  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b134  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "10.1016/j.epsl.2011.11.037";
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf>;
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> .
+
+_:b135  <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b136;
+        <https://schema.stage.datacite.org/linked-data/property/creator>  _:b137;
+        <https://schema.stage.datacite.org/linked-data/property/edition>  _:b138;
+        <https://schema.stage.datacite.org/linked-data/property/firstPage>  _:b139;
+        <https://schema.stage.datacite.org/linked-data/property/issue>  _:b140;
+        <https://schema.stage.datacite.org/linked-data/property/lastPage>  _:b141;
+        <https://schema.stage.datacite.org/linked-data/property/number>  _:b142;
+        <https://schema.stage.datacite.org/linked-data/property/publicationYear>  _:b143;
+        <https://schema.stage.datacite.org/linked-data/property/publisher>  _:b144;
+        <https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifier>  _:b145;
+        <https://schema.stage.datacite.org/linked-data/property/relatedItemType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedItemType/Text>;
+        <https://schema.stage.datacite.org/linked-data/property/relationType>  <https://schema.stage.datacite.org/linked-data/vocab/relationType/Cites>;
+        <https://schema.stage.datacite.org/linked-data/property/title>  _:b146;
+        <https://schema.stage.datacite.org/linked-data/property/title>  _:b147;
+        <https://schema.stage.datacite.org/linked-data/property/volume>  _:b148 .
+
+_:b136  <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b149;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Other>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b150;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b151 .
+
+_:b149  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b150  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b151  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b137  <https://schema.stage.datacite.org/linked-data/property/creatorName>  _:b152;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b153;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b154 .
+
+_:b152  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b109  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b153  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b154  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b138  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example RelatedItem Edition" .
+
+_:b139  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1" .
+
+_:b140  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "2" .
+
+_:b141  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "100" .
+
+_:b142  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1";
+        <https://schema.stage.datacite.org/linked-data/property/numberType>  <https://schema.stage.datacite.org/linked-data/vocab/numberType/Other> .
+
+_:b143  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1990" .
+
+_:b144  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example RelatedItem Publisher" .
+
+_:b145  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1234-5678";
+        <https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifierType>  <https://schema.stage.datacite.org/linked-data/vocab/relatedItemIdentifierType/ISSN> .
+
+_:b110  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b146  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example RelatedItem Title" .
+
+_:b147  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example RelatedItem TranslatedTitle";
+        <https://schema.stage.datacite.org/linked-data/property/titleType>  <https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle> .
+
+_:b148  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1" .
+
+_:b155  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Audiovisual ResourceType";
+        <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual> .
+
+_:b156  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Creative Commons Attribution 4.0 International";
+        <https://schema.stage.datacite.org/linked-data/property/rightsIdentifier>  "CC-BY-4.0";
+        <https://schema.stage.datacite.org/linked-data/property/rightsIdentifierScheme>  "SPDX";
+        <https://schema.stage.datacite.org/linked-data/property/rightsURI>  <https://creativecommons.org/licenses/by/4.0/>;
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://spdx.org/licenses/> .
+
+_:b157  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1 MB" .
+
+_:b158  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "90 pages" .
+
+_:b159  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "FOS: Computer and information sciences";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <http://www.oecd.org/science/inno>;
+        <https://schema.stage.datacite.org/linked-data/property/valueURI>  <http://www.oecd.org/science/inno/38235147.pdf> .
+
+_:b160  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Digital curation and preservation";
+        <https://schema.stage.datacite.org/linked-data/property/classificationCode>  "461001";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc> .
+
+_:b161  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Subject" .
+
+_:b111  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b162  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Title" .
+
+_:b163  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Subtitle";
+        <https://schema.stage.datacite.org/linked-data/property/titleType>  <https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle> .
+
+_:b164  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example TranslatedTitle";
+        <https://schema.stage.datacite.org/linked-data/property/titleType>  <https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle> .
+
+_:b165  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example AlternativeTitle";
+        <https://schema.stage.datacite.org/linked-data/property/titleType>  <https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle> .
+
+_:b166  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "Example Other Title";
+        <https://schema.stage.datacite.org/linked-data/property/titleType>  <https://schema.stage.datacite.org/linked-data/vocab/titleType/Other> .
+
+_:b167  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "1" .
+
+_:b168  <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b169;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Distributor>;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b170 .
+
+_:b169  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleOrganization";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
+
+_:b170  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://ror.org/03yrm5c26";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b171  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b172;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b173;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Editor>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b174;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b175;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b176 .
+
+_:b172  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b3    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b173  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b174  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b175  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b176  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b177  <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b178;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/HostingInstitution>;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b179 .
+
+_:b178  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleOrganization";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
+
+_:b179  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://ror.org/03yrm5c26";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b180  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b181;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b182;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Producer>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b183;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b184;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b185 .
+
+_:b181  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b182  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b4    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b183  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b184  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b185  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b186  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b187;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b188;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/ProjectLeader>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b189;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b190;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b191 .
+
+_:b187  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b188  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b189  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b190  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b191  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b192  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b193;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b194;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/ProjectManager>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b195;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b196;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b197 .
+
+_:b5    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b193  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b194  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b195  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b196  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b197  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b198  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b199;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b200;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/ProjectMember>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b201;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b202;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b203 .
+
+_:b199  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b200  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b201  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b202  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b6    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b203  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b204  <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b205;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/RegistrationAgency>;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b206 .
+
+_:b205  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "DataCite";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
+
+_:b206  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://ror.org/04wxnsj81";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b207  <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b208;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/RegistrationAuthority> .
+
+_:b208  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "International DOI Foundation";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
+
+_:b209  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b210;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b211;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/RelatedPerson>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b212;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b213;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b214 .
+
+_:b210  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b211  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b212  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b215  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b216;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b217;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/DataCollector>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b7;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b19;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b29 .
+
+_:b213  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b214  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b218  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b219;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b220;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Researcher>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b221;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b222;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b223 .
+
+_:b219  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b220  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b221  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b222  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b223  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b224  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b225;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b226;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/ResearchGroup> .
+
+_:b225  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleOrganization";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/03yrm5c26>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b216  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b226  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleContributor" .
+
+_:b227  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b228;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b229;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/RightsHolder>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b230;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b231;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b232 .
+
+_:b228  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b229  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b230  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b231  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b232  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b233  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b234;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b235;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Sponsor> .
+
+_:b234  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://ror.org/03yrm5c26";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/03yrm5c26>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b235  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleContributor" .
+
+_:b217  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b236  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b237;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b238;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Supervisor>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b239;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b240;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b241 .
+
+_:b237  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b238  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b239  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+_:b240  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleGivenName" .
+
+_:b241  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "https://orcid.org/0000-0001-5727-2427";
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>  "ORCID";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://orcid.org> .
+
+_:b242  <https://schema.stage.datacite.org/linked-data/property/affiliation>  _:b243;
+        <https://schema.stage.datacite.org/linked-data/property/contributorName>  _:b244;
+        <https://schema.stage.datacite.org/linked-data/property/contributorType>  <https://schema.stage.datacite.org/linked-data/vocab/contributionType/Translator>;
+        <https://schema.stage.datacite.org/linked-data/property/familyName>  _:b245;
+        <https://schema.stage.datacite.org/linked-data/property/givenName>  _:b8;
+        <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>  _:b9 .
+
+_:b243  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleAffiliation";
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>  <https://ror.org/04wxnsj81>;
+        <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>  "ROR";
+        <https://schema.stage.datacite.org/linked-data/property/schemeURI>  <https://ror.org> .
+
+_:b244  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName, ExampleGivenName";
+        <https://schema.stage.datacite.org/linked-data/property/nameType>  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> .
+
+_:b245  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value>  "ExampleFamilyName" .
+
+<https://doi.org/10.82433/B09Z-4K37>
+        <https://schema.stage.datacite.org/linked-data/property/alternateIdentifier>  _:b0;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b1;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b215;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b40;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b106;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b168;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b171;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b177;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b180;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b186;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b192;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b198;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b204;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b207;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b209;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b218;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b224;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b227;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b233;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b236;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b242;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b10;
+        <https://schema.stage.datacite.org/linked-data/property/contributor>  _:b13;
+        <https://schema.stage.datacite.org/linked-data/property/creator>  _:b20;
+        <https://schema.stage.datacite.org/linked-data/property/creator>  _:b26;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b30;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b31;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b32;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b33;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b34;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b35;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b36;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b37;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b38;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b39;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b46;
+        <https://schema.stage.datacite.org/linked-data/property/date>  _:b47;
+        <https://schema.stage.datacite.org/linked-data/property/description>  _:b48;
+        <https://schema.stage.datacite.org/linked-data/property/description>  _:b49;
+        <https://schema.stage.datacite.org/linked-data/property/description>  _:b50;
+        <https://schema.stage.datacite.org/linked-data/property/description>  _:b51;
+        <https://schema.stage.datacite.org/linked-data/property/description>  _:b52;
+        <https://schema.stage.datacite.org/linked-data/property/description>  _:b53;
+        <https://schema.stage.datacite.org/linked-data/property/format>  _:b54;
+        <https://schema.stage.datacite.org/linked-data/property/format>  _:b55;
+        <https://schema.stage.datacite.org/linked-data/property/fundingReference>  _:b56;
+        <https://schema.stage.datacite.org/linked-data/property/geoLocation>  _:b61;
+        <https://schema.stage.datacite.org/linked-data/property/identifier>  _:b87;
+        <https://schema.stage.datacite.org/linked-data/property/language>  _:b88;
+        <https://schema.stage.datacite.org/linked-data/property/publicationYear>  _:b89;
+        <https://schema.stage.datacite.org/linked-data/property/publisher>  _:b90;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b91;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b92;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b93;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b94;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b95;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b96;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b97;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b98;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b99;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b100;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b101;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b102;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b103;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b104;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b105;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b112;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b113;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b114;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b115;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b116;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b117;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b118;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b119;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b120;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b121;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b122;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b123;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b124;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b125;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b126;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b127;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b128;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b129;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b130;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b131;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b132;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b133;
+        <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>  _:b134;
+        <https://schema.stage.datacite.org/linked-data/property/relatedItem>  _:b135;
+        <https://schema.stage.datacite.org/linked-data/property/resourceType>  _:b155;
+        <https://schema.stage.datacite.org/linked-data/property/rights>  _:b156;
+        <https://schema.stage.datacite.org/linked-data/property/size>  _:b157;
+        <https://schema.stage.datacite.org/linked-data/property/size>  _:b158;
+        <https://schema.stage.datacite.org/linked-data/property/subject>  _:b159;
+        <https://schema.stage.datacite.org/linked-data/property/subject>  _:b160;
+        <https://schema.stage.datacite.org/linked-data/property/subject>  _:b161;
+        <https://schema.stage.datacite.org/linked-data/property/title>  _:b162;
+        <https://schema.stage.datacite.org/linked-data/property/title>  _:b163;
+        <https://schema.stage.datacite.org/linked-data/property/title>  _:b164;
+        <https://schema.stage.datacite.org/linked-data/property/title>  _:b165;
+        <https://schema.stage.datacite.org/linked-data/property/title>  _:b166;
+        <https://schema.stage.datacite.org/linked-data/property/version>  _:b167 .

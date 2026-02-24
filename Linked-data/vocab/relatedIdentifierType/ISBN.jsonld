@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/ISBN",
+  "type": "Concept",
+  "prefLabel": "ISBN",
+  "altLabel": "International Standard Book Number",
+  "notation": "ISBN",
+  "definition": "A unique numeric book identifier. There are 2 formats: a 10-digit ISBN format and a 13-digit ISBN.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"ISBN\" relationType=\"IsPartOf\">978-3-905673-82-1</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

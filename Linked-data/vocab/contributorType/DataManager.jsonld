@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/DataManager",
+  "type": "Concept",
+  "prefLabel": "DataManager",
+  "notation": "DataManager",
+  "definition": "Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource.",
+  "scopeNote": "Ensures the resource is periodically refreshed (software/hardware support), kept available/protected from unauthorized access, stored according to industry standards, and handled according to applicable records management requirements.",
+  "example": [
+    "https://doi.org/10.6073/pasta/41b3ed2e152e1e4c3846e646118208e7"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

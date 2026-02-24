@@ -1,0 +1,20 @@
+{
+  "@context": "./context.jsonld",
+  "@graph": [
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+      "type": "ConceptScheme",
+      "title": "DataCite 4.6 descriptionType",
+      "identifier": "descriptionType",
+      "created": "2026-02-20",
+      "hasTopConcept": [
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Abstract",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Methods",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/SeriesInformation",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TableOfContents",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TechnicalInfo",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Other"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsPreviousVersionOf",
+  "type": "Concept",
+  "prefLabel": "IsPreviousVersionOf",
+  "notation": "IsPreviousVersionOf",
+  "definition": "indicates A is a previous edition of B",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsPreviousVersionOf\">10.5438/0007</relatedIdentifier>"
+  ]
+}

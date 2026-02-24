@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/Researcher",
+  "type": "Concept",
+  "prefLabel": "Researcher",
+  "notation": "Researcher",
+  "definition": "A person involved in analysing data or the results of an experiment or formal study.",
+  "scopeNote": "Should be a person, not an institution. A person gathering data would typically be DataCollector. A researcher may find additional data online and correlate it to collected data.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

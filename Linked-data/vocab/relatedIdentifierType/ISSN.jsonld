@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/ISSN",
+  "type": "Concept",
+  "prefLabel": "ISSN",
+  "altLabel": "International Standard Serial Number",
+  "notation": "ISSN",
+  "definition": "A unique 8-digit number used to identify a print or electronic periodical publication.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"ISSN\" relationType=\"IsPartOf\">0077-5606</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

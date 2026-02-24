@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/DataCurator",
+  "type": "Concept",
+  "prefLabel": "DataCurator",
+  "notation": "DataCurator",
+  "definition": "Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository.",
+  "scopeNote": "While the DataManager is concerned with digital maintenance, the DataCurator’s role encompasses quality assurance focused on content and metadata. Responsibilities can include checking completeness; verifying standard metadata; adding/verifying specialized metadata; and determining how metadata maps to search engines, database products, and automated feeds. Repository managers and data librarians may fall within this category.",
+  "example": [
+    "https://doi.org/10.20375/0000-000D-1D1F-2"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

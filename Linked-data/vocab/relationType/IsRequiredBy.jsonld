@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsRequiredBy",
+  "type": "Concept",
+  "prefLabel": "IsRequiredBy",
+  "notation": "IsRequiredBy",
+  "definition": "Indicates A is required by B",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "scopeNote": "May be used to indicate software dependencies.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsRequiredBy\">10.1234/8675</relatedIdentifier>"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/Other",
+  "type": "Concept",
+  "prefLabel": "Other",
+  "notation": "Other",
+  "definition": "Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution is not adequately described by any of the other values for contributorType.",
+  "scopeNote": "Could be a photographer, artist, or writer whose contribution helped to publicize the resource (as opposed to creating it), a reviewer, someone providing administrative services (depositing updates, analysing usage), etc.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

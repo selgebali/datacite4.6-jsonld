@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/EISSN",
+  "type": "Concept",
+  "prefLabel": "EISSN",
+  "altLabel": "Electronic International Standard Serial Number",
+  "notation": "EISSN",
+  "definition": "ISSN used to identify periodicals in electronic form (eISSN or e-ISSN).",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"eISSN\" relationType=\"Cites\">1562-6865</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

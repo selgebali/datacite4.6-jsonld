@@ -1,0 +1,35 @@
+{
+  "@context": "./context.jsonld",
+  "@graph": [
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+      "type": "ConceptScheme",
+      "title": "DataCite 4.6 relatedIdentifierType",
+      "identifier": "relatedIdentifierType",
+      "created": "2026-02-20",
+      "hasTopConcept": [
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/ARK",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/arXiv",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/bibcode",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/CSTR",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/DOI",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/EAN13",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/EISSN",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/Handle",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/IGSN",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/ISBN",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/ISSN",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/ISTC",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/LISSN",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/LSID",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/PMID",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/PURL",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/RRID",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/UPC",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/URL",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/URN",
+        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/w3id"
+      ]
+    }
+  ]
+}

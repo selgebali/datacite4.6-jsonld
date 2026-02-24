@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Journal",
+  "type": "Concept",
+  "prefLabel": "Journal",
+  "notation": "Journal",
+  "definition": "A scholarly publication consisting of articles that is published regularly throughout the year.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "scopeNote": "<resourceType resourceTypeGeneral=\"Journal\"></resourceType>",
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"
+  ]
+}

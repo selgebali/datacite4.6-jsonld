@@ -1,0 +1,10 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Other",
+  "type": "Concept",
+  "prefLabel": "Other",
+  "notation": "Other",
+  "definition": "Other date that does not fit into an existing category.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType"
+}

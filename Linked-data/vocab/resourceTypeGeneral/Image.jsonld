@@ -1,0 +1,17 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Image",
+  "type": "Concept",
+  "prefLabel": "Image",
+  "notation": "Image",
+  "definition": "A visual representation other than text.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "scopeNote": "Digitised or born digital images, drawings or photographs",
+  "example": [
+    "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.6083/m4qn65c5"
+  ],
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Image"
+  ]
+}

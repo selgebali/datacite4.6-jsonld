@@ -1,0 +1,1746 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "resource": {
+      "type": "object",
+      "properties": {
+        "@attrs": {
+          "type": "object",
+          "properties": {
+            "xmlns:xsi": {
+              "type": "string",
+              "format": "uri",
+              "examples": [
+                "http://www.w3.org/2001/XMLSchema-instance"
+              ]
+            },
+            "xmlns": {
+              "type": "string",
+              "format": "uri",
+              "examples": [
+                "http://datacite.org/schema/kernel-4"
+              ]
+            },
+            "xsi:schemaLocation": {
+              "type": "string",
+              "format": "uri",
+              "examples": [
+                "http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4/metadata.xsd"
+              ]
+            }
+          },
+          "required": [
+            "xmlns:xsi",
+            "xmlns",
+            "xsi:schemaLocation"
+          ]
+        },
+        "identifier": {
+          "type": "object",
+          "properties": {
+            "@attrs": {
+              "type": "object",
+              "properties": {
+                "identifierType": {
+                  "type": "string",
+                  "examples": [
+                    "DOI"
+                  ]
+                }
+              },
+              "required": [
+                "identifierType"
+              ]
+            },
+            "@value": {
+              "type": "string",
+              "examples": [
+                "10.82433/B09Z-4K37"
+              ]
+            }
+          },
+          "required": [
+            "@attrs",
+            "@value"
+          ]
+        },
+        "creators": {
+          "type": "object",
+          "properties": {
+            "creator": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "creatorName": {
+                    "type": "object",
+                    "properties": {
+                      "@attrs": {
+                        "type": "object",
+                        "properties": {
+                          "nameType": {
+                            "type": "string",
+                            "examples": [
+                              "Personal"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "nameType"
+                        ]
+                      },
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleFamilyName, ExampleGivenName"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@attrs",
+                      "@value"
+                    ]
+                  },
+                  "givenName": {
+                    "type": "object",
+                    "properties": {
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleGivenName"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@value"
+                    ]
+                  },
+                  "familyName": {
+                    "type": "object",
+                    "properties": {
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleFamilyName"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@value"
+                    ]
+                  },
+                  "nameIdentifier": {
+                    "type": "object",
+                    "properties": {
+                      "@attrs": {
+                        "type": "object",
+                        "properties": {
+                          "nameIdentifierScheme": {
+                            "type": "string",
+                            "examples": [
+                              "ORCID"
+                            ]
+                          },
+                          "schemeURI": {
+                            "type": "string",
+                            "format": "uri",
+                            "examples": [
+                              "https://orcid.org"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "nameIdentifierScheme",
+                          "schemeURI"
+                        ]
+                      },
+                      "@value": {
+                        "type": "string",
+                        "format": "uri",
+                        "examples": [
+                          "https://orcid.org/0000-0001-5727-2427"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@attrs",
+                      "@value"
+                    ]
+                  },
+                  "affiliation": {
+                    "type": "object",
+                    "properties": {
+                      "@attrs": {
+                        "type": "object",
+                        "properties": {
+                          "affiliationIdentifier": {
+                            "type": "string",
+                            "format": "uri",
+                            "examples": [
+                              "https://ror.org/04wxnsj81"
+                            ]
+                          },
+                          "affiliationIdentifierScheme": {
+                            "type": "string",
+                            "examples": [
+                              "ROR"
+                            ]
+                          },
+                          "schemeURI": {
+                            "type": "string",
+                            "format": "uri",
+                            "examples": [
+                              "https://ror.org"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "affiliationIdentifier",
+                          "affiliationIdentifierScheme",
+                          "schemeURI"
+                        ]
+                      },
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleAffiliation"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@attrs",
+                      "@value"
+                    ]
+                  }
+                },
+                "required": [
+                  "creatorName",
+                  "givenName",
+                  "familyName",
+                  "nameIdentifier",
+                  "affiliation"
+                ]
+              },
+              "examples": [
+                [
+                  {
+                    "creatorName": {
+                      "@attrs": {
+                        "nameType": "Personal"
+                      },
+                      "@value": "ExampleFamilyName, ExampleGivenName"
+                    },
+                    "givenName": {
+                      "@value": "ExampleGivenName"
+                    },
+                    "familyName": {
+                      "@value": "ExampleFamilyName"
+                    },
+                    "nameIdentifier": {
+                      "@attrs": {
+                        "nameIdentifierScheme": "ORCID",
+                        "schemeURI": "https://orcid.org"
+                      },
+                      "@value": "https://orcid.org/0000-0001-5727-2427"
+                    },
+                    "affiliation": {
+                      "@attrs": {
+                        "affiliationIdentifier": "https://ror.org/04wxnsj81",
+                        "affiliationIdentifierScheme": "ROR",
+                        "schemeURI": "https://ror.org"
+                      },
+                      "@value": "ExampleAffiliation"
+                    }
+                  },
+                  {
+                    "creatorName": {
+                      "@attrs": {
+                        "xml:lang": "en",
+                        "nameType": "Organizational"
+                      },
+                      "@value": "ExampleOrganization"
+                    },
+                    "nameIdentifier": {
+                      "@attrs": {
+                        "nameIdentifierScheme": "ROR",
+                        "schemeURI": "https://ror.org"
+                      },
+                      "@value": "https://ror.org/04wxnsj81"
+                    }
+                  }
+                ]
+              ]
+            }
+          },
+          "required": [
+            "creator"
+          ]
+        },
+        "titles": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@attrs": {
+                    "type": "object",
+                    "properties": {
+                      "xml:lang": {
+                        "type": "string",
+                        "examples": [
+                          "en"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "xml:lang"
+                    ]
+                  },
+                  "@value": {
+                    "type": "string",
+                    "examples": [
+                      "Example Title"
+                    ]
+                  }
+                },
+                "required": [
+                  "@attrs",
+                  "@value"
+                ]
+              }
+            }
+          },
+          "required": [
+            "title"
+          ]
+        },
+        "publisher": {
+          "type": "object",
+          "properties": {
+            "@attrs": {
+              "type": "object",
+              "properties": {
+                "xml:lang": {
+                  "type": "string",
+                  "examples": [
+                    "en"
+                  ]
+                },
+                "publisherIdentifier": {
+                  "type": "string",
+                  "format": "uri",
+                  "examples": [
+                    "https://ror.org/04z8jg394"
+                  ]
+                },
+                "publisherIdentifierScheme": {
+                  "type": "string",
+                  "examples": [
+                    "ROR"
+                  ]
+                },
+                "schemeURI": {
+                  "type": "string",
+                  "format": "uri",
+                  "examples": [
+                    "https://ror.org/"
+                  ]
+                }
+              },
+              "required": [
+                "xml:lang",
+                "publisherIdentifier",
+                "publisherIdentifierScheme",
+                "schemeURI"
+              ]
+            },
+            "@value": {
+              "type": "string",
+              "examples": [
+                "Example Publisher"
+              ]
+            }
+          },
+          "required": [
+            "@attrs",
+            "@value"
+          ]
+        },
+        "publicationYear": {
+          "type": "object",
+          "properties": {
+            "@value": {
+              "type": "string",
+              "examples": [
+                "2026"
+              ]
+            }
+          },
+          "required": [
+            "@value"
+          ]
+        },
+        "subjects": {
+          "type": "object",
+          "properties": {
+            "subject": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@attrs": {
+                    "type": "object",
+                    "properties": {
+                      "subjectScheme": {
+                        "type": "string",
+                        "examples": [
+                          "Fields of Science and Technology (FOS)"
+                        ]
+                      },
+                      "schemeURI": {
+                        "type": "string",
+                        "format": "uri",
+                        "examples": [
+                          "http://www.oecd.org/science/inno"
+                        ]
+                      },
+                      "valueURI": {
+                        "type": "string",
+                        "format": "uri",
+                        "examples": [
+                          "http://www.oecd.org/science/inno/38235147.pdf"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "subjectScheme",
+                      "schemeURI",
+                      "valueURI"
+                    ]
+                  },
+                  "@value": {
+                    "type": "string",
+                    "examples": [
+                      "FOS: Computer and information sciences"
+                    ]
+                  }
+                },
+                "required": [
+                  "@attrs",
+                  "@value"
+                ]
+              },
+              "examples": [
+                [
+                  {
+                    "@attrs": {
+                      "subjectScheme": "Fields of Science and Technology (FOS)",
+                      "schemeURI": "http://www.oecd.org/science/inno",
+                      "valueURI": "http://www.oecd.org/science/inno/38235147.pdf"
+                    },
+                    "@value": "FOS: Computer and information sciences"
+                  },
+                  {
+                    "@attrs": {
+                      "subjectScheme": "Australian and New Zealand Standard Research Classification (ANZSRC), 2020",
+                      "schemeURI": "https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc",
+                      "classificationCode": "461001"
+                    },
+                    "@value": "Digital curation and preservation"
+                  },
+                  {
+                    "@value": "Example Subject"
+                  }
+                ]
+              ]
+            }
+          },
+          "required": [
+            "subject"
+          ]
+        },
+        "contributors": {
+          "type": "object",
+          "properties": {
+            "contributor": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@attrs": {
+                    "type": "object",
+                    "properties": {
+                      "contributorType": {
+                        "type": "string",
+                        "examples": [
+                          "ContactPerson"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "contributorType"
+                    ]
+                  },
+                  "contributorName": {
+                    "type": "object",
+                    "properties": {
+                      "@attrs": {
+                        "type": "object",
+                        "properties": {
+                          "nameType": {
+                            "type": "string",
+                            "examples": [
+                              "Personal"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "nameType"
+                        ]
+                      },
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleFamilyName, ExampleGivenName"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@attrs",
+                      "@value"
+                    ]
+                  },
+                  "givenName": {
+                    "type": "object",
+                    "properties": {
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleGivenName"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@value"
+                    ]
+                  },
+                  "familyName": {
+                    "type": "object",
+                    "properties": {
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleFamilyName"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@value"
+                    ]
+                  },
+                  "nameIdentifier": {
+                    "type": "object",
+                    "properties": {
+                      "@attrs": {
+                        "type": "object",
+                        "properties": {
+                          "nameIdentifierScheme": {
+                            "type": "string",
+                            "examples": [
+                              "ORCID"
+                            ]
+                          },
+                          "schemeURI": {
+                            "type": "string",
+                            "format": "uri",
+                            "examples": [
+                              "https://orcid.org"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "nameIdentifierScheme",
+                          "schemeURI"
+                        ]
+                      },
+                      "@value": {
+                        "type": "string",
+                        "format": "uri",
+                        "examples": [
+                          "https://orcid.org/0000-0001-5727-2427"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@attrs",
+                      "@value"
+                    ]
+                  },
+                  "affiliation": {
+                    "type": "object",
+                    "properties": {
+                      "@attrs": {
+                        "type": "object",
+                        "properties": {
+                          "affiliationIdentifier": {
+                            "type": "string",
+                            "format": "uri",
+                            "examples": [
+                              "https://ror.org/04wxnsj81"
+                            ]
+                          },
+                          "affiliationIdentifierScheme": {
+                            "type": "string",
+                            "examples": [
+                              "ROR"
+                            ]
+                          },
+                          "schemeURI": {
+                            "type": "string",
+                            "format": "uri",
+                            "examples": [
+                              "https://ror.org"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "affiliationIdentifier",
+                          "affiliationIdentifierScheme",
+                          "schemeURI"
+                        ]
+                      },
+                      "@value": {
+                        "type": "string",
+                        "examples": [
+                          "ExampleAffiliation"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "@attrs",
+                      "@value"
+                    ]
+                  }
+                },
+                "required": [
+                  "@attrs",
+                  "contributorName",
+                  "givenName",
+                  "familyName",
+                  "nameIdentifier",
+                  "affiliation"
+                ]
+              }
+            }
+          },
+          "required": [
+            "contributor"
+          ]
+        },
+        "dates": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@attrs": {
+                    "type": "object",
+                    "properties": {
+                      "dateType": {
+                        "type": "string",
+                        "examples": [
+                          "Accepted"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "dateType"
+                    ]
+                  },
+                  "@value": {
+                    "type": "string",
+                    "format": "date",
+                    "examples": [
+                      "2024-01-01"
+                    ]
+                  }
+                },
+                "required": [
+                  "@attrs",
+                  "@value"
+                ]
+              }
+            }
+          },
+          "required": [
+            "date"
+          ]
+        },
+        "language": {
+          "type": "object",
+          "properties": {
+            "@value": {
+              "type": "string",
+              "examples": [
+                "en"
+              ]
+            }
+          },
+          "required": [
+            "@value"
+          ]
+        },
+        "resourceType": {
+          "type": "object",
+          "properties": {
+            "@attrs": {
+              "type": "object",
+              "properties": {
+                "resourceTypeGeneral": {
+                  "type": "string",
+                  "examples": [
+                    "Audiovisual"
+                  ]
+                }
+              },
+              "required": [
+                "resourceTypeGeneral"
+              ]
+            },
+            "@value": {
+              "type": "string",
+              "examples": [
+                "Example Audiovisual ResourceType"
+              ]
+            }
+          },
+          "required": [
+            "@attrs",
+            "@value"
+          ]
+        },
+        "alternateIdentifiers": {
+          "type": "object",
+          "properties": {
+            "alternateIdentifier": {
+              "type": "object",
+              "properties": {
+                "@attrs": {
+                  "type": "object",
+                  "properties": {
+                    "alternateIdentifierType": {
+                      "type": "string",
+                      "examples": [
+                        "Local accession number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "alternateIdentifierType"
+                  ]
+                },
+                "@value": {
+                  "type": "string",
+                  "examples": [
+                    "12345"
+                  ]
+                }
+              },
+              "required": [
+                "@attrs",
+                "@value"
+              ]
+            }
+          },
+          "required": [
+            "alternateIdentifier"
+          ]
+        },
+        "relatedIdentifiers": {
+          "type": "object",
+          "properties": {
+            "relatedIdentifier": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@attrs": {
+                    "type": "object",
+                    "properties": {
+                      "relatedIdentifierType": {
+                        "type": "string",
+                        "examples": [
+                          "ARK"
+                        ]
+                      },
+                      "relationType": {
+                        "type": "string",
+                        "examples": [
+                          "IsCitedBy"
+                        ]
+                      },
+                      "resourceTypeGeneral": {
+                        "type": "string",
+                        "examples": [
+                          "Audiovisual"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "relatedIdentifierType",
+                      "relationType",
+                      "resourceTypeGeneral"
+                    ]
+                  },
+                  "@value": {
+                    "type": "string",
+                    "examples": [
+                      "ark:/13030/tqb3kh97gh8w"
+                    ]
+                  }
+                },
+                "required": [
+                  "@attrs",
+                  "@value"
+                ]
+              }
+            }
+          },
+          "required": [
+            "relatedIdentifier"
+          ]
+        },
+        "sizes": {
+          "type": "object",
+          "properties": {
+            "size": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@value": {
+                    "type": "string",
+                    "examples": [
+                      "1 MB"
+                    ]
+                  }
+                },
+                "required": [
+                  "@value"
+                ]
+              },
+              "examples": [
+                [
+                  {
+                    "@value": "1 MB"
+                  },
+                  {
+                    "@value": "90 pages"
+                  }
+                ]
+              ]
+            }
+          },
+          "required": [
+            "size"
+          ]
+        },
+        "formats": {
+          "type": "object",
+          "properties": {
+            "format": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@value": {
+                    "type": "string",
+                    "examples": [
+                      "application/xml"
+                    ]
+                  }
+                },
+                "required": [
+                  "@value"
+                ]
+              },
+              "examples": [
+                [
+                  {
+                    "@value": "application/xml"
+                  },
+                  {
+                    "@value": "text/plain"
+                  }
+                ]
+              ]
+            }
+          },
+          "required": [
+            "format"
+          ]
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "@value": {
+              "type": "string",
+              "examples": [
+                "1"
+              ]
+            }
+          },
+          "required": [
+            "@value"
+          ]
+        },
+        "rightsList": {
+          "type": "object",
+          "properties": {
+            "rights": {
+              "type": "object",
+              "properties": {
+                "@attrs": {
+                  "type": "object",
+                  "properties": {
+                    "xml:lang": {
+                      "type": "string",
+                      "examples": [
+                        "en"
+                      ]
+                    },
+                    "schemeURI": {
+                      "type": "string",
+                      "format": "uri",
+                      "examples": [
+                        "https://spdx.org/licenses/"
+                      ]
+                    },
+                    "rightsIdentifierScheme": {
+                      "type": "string",
+                      "examples": [
+                        "SPDX"
+                      ]
+                    },
+                    "rightsIdentifier": {
+                      "type": "string",
+                      "examples": [
+                        "CC-BY-4.0"
+                      ]
+                    },
+                    "rightsURI": {
+                      "type": "string",
+                      "format": "uri",
+                      "examples": [
+                        "https://creativecommons.org/licenses/by/4.0/"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "xml:lang",
+                    "schemeURI",
+                    "rightsIdentifierScheme",
+                    "rightsIdentifier",
+                    "rightsURI"
+                  ]
+                },
+                "@value": {
+                  "type": "string",
+                  "examples": [
+                    "Creative Commons Attribution 4.0 International"
+                  ]
+                }
+              },
+              "required": [
+                "@attrs",
+                "@value"
+              ]
+            }
+          },
+          "required": [
+            "rights"
+          ]
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@attrs": {
+                    "type": "object",
+                    "properties": {
+                      "xml:lang": {
+                        "type": "string",
+                        "examples": [
+                          "en"
+                        ]
+                      },
+                      "descriptionType": {
+                        "type": "string",
+                        "examples": [
+                          "Abstract"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "xml:lang",
+                      "descriptionType"
+                    ]
+                  },
+                  "@value": {
+                    "type": "string",
+                    "examples": [
+                      "Example Abstract"
+                    ]
+                  }
+                },
+                "required": [
+                  "@attrs",
+                  "@value"
+                ]
+              }
+            }
+          },
+          "required": [
+            "description"
+          ]
+        },
+        "geoLocations": {
+          "type": "object",
+          "properties": {
+            "geoLocation": {
+              "type": "object",
+              "properties": {
+                "geoLocationPlace": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "Vancouver, British Columbia, Canada"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "geoLocationPoint": {
+                  "type": "object",
+                  "properties": {
+                    "pointLatitude": {
+                      "type": "object",
+                      "properties": {
+                        "@value": {
+                          "type": "string",
+                          "examples": [
+                            "49.2827"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@value"
+                      ]
+                    },
+                    "pointLongitude": {
+                      "type": "object",
+                      "properties": {
+                        "@value": {
+                          "type": "string",
+                          "examples": [
+                            "-123.1207"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@value"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "pointLatitude",
+                    "pointLongitude"
+                  ]
+                },
+                "geoLocationBox": {
+                  "type": "object",
+                  "properties": {
+                    "westBoundLongitude": {
+                      "type": "object",
+                      "properties": {
+                        "@value": {
+                          "type": "string",
+                          "examples": [
+                            "-123.27"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@value"
+                      ]
+                    },
+                    "eastBoundLongitude": {
+                      "type": "object",
+                      "properties": {
+                        "@value": {
+                          "type": "string",
+                          "examples": [
+                            "-123.02"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@value"
+                      ]
+                    },
+                    "southBoundLatitude": {
+                      "type": "object",
+                      "properties": {
+                        "@value": {
+                          "type": "string",
+                          "examples": [
+                            "49.195"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@value"
+                      ]
+                    },
+                    "northBoundLatitude": {
+                      "type": "object",
+                      "properties": {
+                        "@value": {
+                          "type": "string",
+                          "examples": [
+                            "49.315"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@value"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "westBoundLongitude",
+                    "eastBoundLongitude",
+                    "southBoundLatitude",
+                    "northBoundLatitude"
+                  ]
+                },
+                "geoLocationPolygon": {
+                  "type": "object",
+                  "properties": {
+                    "polygonPoint": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "pointLatitude": {
+                            "type": "object",
+                            "properties": {
+                              "@value": {
+                                "type": "string",
+                                "examples": [
+                                  "41.991"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "@value"
+                            ]
+                          },
+                          "pointLongitude": {
+                            "type": "object",
+                            "properties": {
+                              "@value": {
+                                "type": "string",
+                                "examples": [
+                                  "-71.032"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "@value"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "pointLatitude",
+                          "pointLongitude"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "polygonPoint"
+                  ]
+                }
+              },
+              "required": [
+                "geoLocationPlace",
+                "geoLocationPoint",
+                "geoLocationBox",
+                "geoLocationPolygon"
+              ]
+            }
+          },
+          "required": [
+            "geoLocation"
+          ]
+        },
+        "fundingReferences": {
+          "type": "object",
+          "properties": {
+            "fundingReference": {
+              "type": "object",
+              "properties": {
+                "funderName": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "Example Funder"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "funderIdentifier": {
+                  "type": "object",
+                  "properties": {
+                    "@attrs": {
+                      "type": "object",
+                      "properties": {
+                        "funderIdentifierType": {
+                          "type": "string",
+                          "examples": [
+                            "Crossref Funder ID"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "funderIdentifierType"
+                      ]
+                    },
+                    "@value": {
+                      "type": "string",
+                      "format": "uri",
+                      "examples": [
+                        "https://doi.org/10.13039/501100000780"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@attrs",
+                    "@value"
+                  ]
+                },
+                "awardNumber": {
+                  "type": "object",
+                  "properties": {
+                    "@attrs": {
+                      "type": "object",
+                      "properties": {
+                        "awardURI": {
+                          "type": "string",
+                          "format": "uri",
+                          "examples": [
+                            "https://example.com/example-award-uri"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "awardURI"
+                      ]
+                    },
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "12345"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@attrs",
+                    "@value"
+                  ]
+                },
+                "awardTitle": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "Example AwardTitle"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                }
+              },
+              "required": [
+                "funderName",
+                "funderIdentifier",
+                "awardNumber",
+                "awardTitle"
+              ]
+            }
+          },
+          "required": [
+            "fundingReference"
+          ]
+        },
+        "relatedItems": {
+          "type": "object",
+          "properties": {
+            "relatedItem": {
+              "type": "object",
+              "properties": {
+                "@attrs": {
+                  "type": "object",
+                  "properties": {
+                    "relatedItemType": {
+                      "type": "string",
+                      "examples": [
+                        "Text"
+                      ]
+                    },
+                    "relationType": {
+                      "type": "string",
+                      "examples": [
+                        "Cites"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "relatedItemType",
+                    "relationType"
+                  ]
+                },
+                "relatedItemIdentifier": {
+                  "type": "object",
+                  "properties": {
+                    "@attrs": {
+                      "type": "object",
+                      "properties": {
+                        "relatedItemIdentifierType": {
+                          "type": "string",
+                          "examples": [
+                            "ISSN"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "relatedItemIdentifierType"
+                      ]
+                    },
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "1234-5678"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@attrs",
+                    "@value"
+                  ]
+                },
+                "creators": {
+                  "type": "object",
+                  "properties": {
+                    "creator": {
+                      "type": "object",
+                      "properties": {
+                        "creatorName": {
+                          "type": "object",
+                          "properties": {
+                            "@attrs": {
+                              "type": "object",
+                              "properties": {
+                                "nameType": {
+                                  "type": "string",
+                                  "examples": [
+                                    "Personal"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "nameType"
+                              ]
+                            },
+                            "@value": {
+                              "type": "string",
+                              "examples": [
+                                "ExampleFamilyName, ExampleGivenName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "@attrs",
+                            "@value"
+                          ]
+                        },
+                        "givenName": {
+                          "type": "object",
+                          "properties": {
+                            "@value": {
+                              "type": "string",
+                              "examples": [
+                                "ExampleGivenName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "@value"
+                          ]
+                        },
+                        "familyName": {
+                          "type": "object",
+                          "properties": {
+                            "@value": {
+                              "type": "string",
+                              "examples": [
+                                "ExampleFamilyName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "@value"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "creatorName",
+                        "givenName",
+                        "familyName"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "creator"
+                  ]
+                },
+                "titles": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "@value": {
+                            "type": "string",
+                            "examples": [
+                              "Example RelatedItem Title"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@value"
+                        ]
+                      },
+                      "examples": [
+                        [
+                          {
+                            "@value": "Example RelatedItem Title"
+                          },
+                          {
+                            "@attrs": {
+                              "titleType": "TranslatedTitle"
+                            },
+                            "@value": "Example RelatedItem TranslatedTitle"
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  "required": [
+                    "title"
+                  ]
+                },
+                "publicationYear": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "1990"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "volume": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "1"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "issue": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "2"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "number": {
+                  "type": "object",
+                  "properties": {
+                    "@attrs": {
+                      "type": "object",
+                      "properties": {
+                        "numberType": {
+                          "type": "string",
+                          "examples": [
+                            "Other"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "numberType"
+                      ]
+                    },
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "1"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@attrs",
+                    "@value"
+                  ]
+                },
+                "firstPage": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "1"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "lastPage": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "100"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "publisher": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "Example RelatedItem Publisher"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "edition": {
+                  "type": "object",
+                  "properties": {
+                    "@value": {
+                      "type": "string",
+                      "examples": [
+                        "Example RelatedItem Edition"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "@value"
+                  ]
+                },
+                "contributors": {
+                  "type": "object",
+                  "properties": {
+                    "contributor": {
+                      "type": "object",
+                      "properties": {
+                        "@attrs": {
+                          "type": "object",
+                          "properties": {
+                            "contributorType": {
+                              "type": "string",
+                              "examples": [
+                                "Other"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "contributorType"
+                          ]
+                        },
+                        "contributorName": {
+                          "type": "object",
+                          "properties": {
+                            "@attrs": {
+                              "type": "object",
+                              "properties": {
+                                "nameType": {
+                                  "type": "string",
+                                  "examples": [
+                                    "Personal"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "nameType"
+                              ]
+                            },
+                            "@value": {
+                              "type": "string",
+                              "examples": [
+                                "ExampleFamilyName, ExampleGivenName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "@attrs",
+                            "@value"
+                          ]
+                        },
+                        "givenName": {
+                          "type": "object",
+                          "properties": {
+                            "@value": {
+                              "type": "string",
+                              "examples": [
+                                "ExampleGivenName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "@value"
+                          ]
+                        },
+                        "familyName": {
+                          "type": "object",
+                          "properties": {
+                            "@value": {
+                              "type": "string",
+                              "examples": [
+                                "ExampleFamilyName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "@value"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@attrs",
+                        "contributorName",
+                        "givenName",
+                        "familyName"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "contributor"
+                  ]
+                }
+              },
+              "required": [
+                "@attrs",
+                "relatedItemIdentifier",
+                "creators",
+                "titles",
+                "publicationYear",
+                "volume",
+                "issue",
+                "number",
+                "firstPage",
+                "lastPage",
+                "publisher",
+                "edition",
+                "contributors"
+              ]
+            }
+          },
+          "required": [
+            "relatedItem"
+          ]
+        }
+      },
+      "required": [
+        "@attrs",
+        "identifier",
+        "creators",
+        "titles",
+        "publisher",
+        "publicationYear",
+        "subjects",
+        "contributors",
+        "dates",
+        "language",
+        "resourceType",
+        "alternateIdentifiers",
+        "relatedIdentifiers",
+        "sizes",
+        "formats",
+        "version",
+        "rightsList",
+        "descriptions",
+        "geoLocations",
+        "fundingReferences",
+        "relatedItems"
+      ]
+    }
+  },
+  "required": [
+    "resource"
+  ]
+}

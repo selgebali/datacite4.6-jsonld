@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/RRID",
+  "type": "Concept",
+  "prefLabel": "RRID",
+  "altLabel": "Research Resource IDentifier",
+  "notation": "RRID",
+  "definition": "A character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases. An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"RRID\" relationType=\"Cites\">RRID:SCR_014641</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

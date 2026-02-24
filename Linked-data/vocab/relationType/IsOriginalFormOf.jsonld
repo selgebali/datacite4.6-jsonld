@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsOriginalFormOf",
+  "type": "Concept",
+  "prefLabel": "IsOriginalFormOf",
+  "notation": "IsOriginalFormOf",
+  "definition": "indicates A is the original form of B",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "scopeNote": "May be used for different software operating systems or compiler formats.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsOriginalFormOf\">10.1234/9035</relatedIdentifier>"
+  ]
+}

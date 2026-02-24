@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsIdenticalTo",
+  "type": "Concept",
+  "prefLabel": "IsIdenticalTo",
+  "notation": "IsIdenticalTo",
+  "definition": "indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "scopeNote": "Use when the same resource is saved in another location (e.g., another institution).",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsIdenticalTo\">http://oac.cdlib.org/findaid/ark:/13030/c8r78fzq</relatedIdentifier>"
+  ]
+}

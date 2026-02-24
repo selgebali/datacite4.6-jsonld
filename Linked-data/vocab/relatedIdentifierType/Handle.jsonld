@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/Handle",
+  "type": "Concept",
+  "prefLabel": "Handle",
+  "altLabel": "Handle",
+  "notation": "Handle",
+  "definition": "This refers specifically to an ID in the Handle system operated by the Corporation for National Research Initiatives (CNRI).",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"Handle\" relationType=\"References\">10013/epic.10033</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

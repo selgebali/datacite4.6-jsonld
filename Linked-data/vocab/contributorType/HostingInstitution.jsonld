@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/HostingInstitution",
+  "type": "Concept",
+  "prefLabel": "HostingInstitution",
+  "notation": "HostingInstitution",
+  "definition": "Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support.",
+  "scopeNote": "This role normally falls on the university, research center, or organization where the data center/repository belongs. May also be used for an organisation that stores the data offline, often a data centre if that data centre is not the publisher.",
+  "example": [
+    "Université Grenoble Alpes (UGA)"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

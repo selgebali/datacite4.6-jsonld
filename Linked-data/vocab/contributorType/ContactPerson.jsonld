@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/ContactPerson",
+  "type": "Concept",
+  "prefLabel": "ContactPerson",
+  "notation": "ContactPerson",
+  "definition": "Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource.",
+  "scopeNote": "May also be the “Point of Contact” in an organisation that controls access to the resource, if that organisation is different from the Publisher, Distributor, and Data Manager.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

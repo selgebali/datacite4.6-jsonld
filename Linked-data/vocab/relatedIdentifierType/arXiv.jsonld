@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/arXiv",
+  "type": "Concept",
+  "prefLabel": "arXiv",
+  "altLabel": "arXiv identifier",
+  "notation": "arXiv",
+  "definition": "arXiv.org is a repository of preprints of scientific papers in the fields of mathematics, physics, astronomy, computer science, quantitative biology, statistics, and quantitative finance.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"arXiv\" relationType=\"IsCitedBy\">arXiv:0706.0001</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

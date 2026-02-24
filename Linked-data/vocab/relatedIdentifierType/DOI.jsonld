@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/DOI",
+  "type": "Concept",
+  "prefLabel": "DOI",
+  "altLabel": "Digital Object Identifier",
+  "notation": "DOI",
+  "definition": "A character string used to uniquely identify an object. A DOI name is divided into two parts, a prefix and a suffix, separated by a slash.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsSupplementTo\">10.1016/j.epsl.2011.11.037</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+}

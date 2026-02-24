@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/ComputationalNotebook",
+  "type": "Concept",
+  "prefLabel": "ComputationalNotebook",
+  "notation": "ComputationalNotebook",
+  "definition": "A virtual notebook environment used for literate programming.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "scopeNote": "<resourceType resourceTypeGeneral=\"ComputationalNotebook\">Jupyter</resourceType>",
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#InteractiveResource"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/RegistrationAgency",
+  "type": "Concept",
+  "prefLabel": "RegistrationAgency",
+  "notation": "RegistrationAgency",
+  "definition": "Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility.",
+  "scopeNote": "DataCite is a Registration Agency for the International DOI Foundation (IDF). One task is to assign DOI prefixes to allocating agents who then assign full DOI strings to clients and provide metadata back to the DataCite registry.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

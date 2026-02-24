@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schema": "https://schema.stage.datacite.org/linked-data/",
+    "datacite": "https://schema.stage.datacite.org/linked-data/"
+  },
+  "@id": "https://schema.stage.datacite.org/linked-data/class/Resource",
+  "@type": "rdf:Class",
+  "rdfs:label": "Resource",
+  "rdfs:comment": "A resource that can be cited and identified..."
+}

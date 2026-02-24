@@ -1,0 +1,16 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Text",
+  "type": "Concept",
+  "prefLabel": "Text",
+  "notation": "Text",
+  "definition": "A resource consisting primarily of words for reading that is not covered by any other textual resource type in this list.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "example": [
+    "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.5682/9786065914018"
+  ],
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Other",
+  "type": "Concept",
+  "prefLabel": "Other",
+  "notation": "Other",
+  "definition": "Other description information that does not fit into an existing category.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+  "scopeNote": "Use for any other description type."
+}

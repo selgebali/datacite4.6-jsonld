@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/Sponsor",
+  "type": "Concept",
+  "prefLabel": "Sponsor",
+  "notation": "Sponsor",
+  "definition": "Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc.",
+  "scopeNote": "Includes organisations that provide in-kind support (donation, people, facility, instrumentation) necessary for development of the resource.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

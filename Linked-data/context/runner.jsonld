@@ -1,0 +1,1400 @@
+{
+  "@context": "./fullcontext.jsonld",
+  "@id": "https://doi.org/10.82433/B09Z-4K37",
+  "identifier": {
+    "attrs": {
+      "identifierType": "DOI"
+    },
+    "value": "10.82433/B09Z-4K37"
+  },
+  "creators": {
+    "creator": [
+      {
+        "creatorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "creatorName": {
+          "attrs": {
+            "lang": "en",
+            "nameType": "Organizational"
+          },
+          "value": "ExampleOrganization"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "https://ror.org/04wxnsj81"
+        }
+      }
+    ]
+  },
+  "titles": {
+    "title": [
+      {
+        "attrs": {
+          "lang": "en"
+        },
+        "value": "Example Title"
+      },
+      {
+        "attrs": {
+          "titleType": "Subtitle",
+          "lang": "en"
+        },
+        "value": "Example Subtitle"
+      },
+      {
+        "attrs": {
+          "titleType": "TranslatedTitle",
+          "lang": "fr"
+        },
+        "value": "Example TranslatedTitle"
+      },
+      {
+        "attrs": {
+          "titleType": "AlternativeTitle",
+          "lang": "en"
+        },
+        "value": "Example AlternativeTitle"
+      },
+      {
+        "attrs": {
+          "titleType": "Other",
+          "lang": "en"
+        },
+        "value": "Example Other Title"
+      }
+    ]
+  },
+  "publisher": {
+    "attrs": {
+      "lang": "en",
+      "publisherIdentifier": "https://ror.org/04z8jg394",
+      "publisherIdentifierScheme": "ROR",
+      "schemeURI": "https://ror.org/"
+    },
+    "value": "Example Publisher"
+  },
+  "publicationYear": {
+    "value": "2026"
+  },
+  "subjects": {
+    "subject": [
+      {
+        "attrs": {
+          "subjectScheme": "Fields of Science and Technology (FOS)",
+          "schemeURI": "http://www.oecd.org/science/inno",
+          "valueURI": "http://www.oecd.org/science/inno/38235147.pdf"
+        },
+        "value": "FOS: Computer and information sciences"
+      },
+      {
+        "attrs": {
+          "subjectScheme": "Australian and New Zealand Standard Research Classification (ANZSRC), 2020",
+          "schemeURI": "https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc",
+          "classificationCode": "461001"
+        },
+        "value": "Digital curation and preservation"
+      },
+      {
+        "value": "Example Subject"
+      }
+    ]
+  },
+  "contributors": {
+    "contributor": [
+      {
+        "attrs": {
+          "contributorType": "ContactPerson"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "DataCollector"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "DataCurator"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "DataManager"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Distributor"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Organizational"
+          },
+          "value": "ExampleOrganization"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "https://ror.org/03yrm5c26"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Editor"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "HostingInstitution"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Organizational"
+          },
+          "value": "ExampleOrganization"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "https://ror.org/03yrm5c26"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Producer"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "ProjectLeader"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "ProjectManager"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "ProjectMember"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "RegistrationAgency"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Organizational"
+          },
+          "value": "DataCite"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "https://ror.org/04wxnsj81"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "RegistrationAuthority"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Organizational"
+          },
+          "value": "International DOI Foundation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "RelatedPerson"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Researcher"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "ResearchGroup"
+        },
+        "contributorName": {
+          "value": "ExampleContributor"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/03yrm5c26",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleOrganization"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "RightsHolder"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Sponsor"
+        },
+        "contributorName": {
+          "value": "ExampleContributor"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/03yrm5c26",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "https://ror.org/03yrm5c26"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Supervisor"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Translator"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "WorkPackageLeader"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Organizational"
+          },
+          "value": "ExampleOrganization"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "https://ror.org/03yrm5c26"
+        }
+      },
+      {
+        "attrs": {
+          "contributorType": "Other"
+        },
+        "contributorName": {
+          "attrs": {
+            "nameType": "Personal"
+          },
+          "value": "ExampleFamilyName, ExampleGivenName"
+        },
+        "givenName": {
+          "value": "ExampleGivenName"
+        },
+        "familyName": {
+          "value": "ExampleFamilyName"
+        },
+        "nameIdentifier": {
+          "attrs": {
+            "nameIdentifierScheme": "ORCID",
+            "schemeURI": "https://orcid.org"
+          },
+          "value": "https://orcid.org/0000-0001-5727-2427"
+        },
+        "affiliation": {
+          "attrs": {
+            "affiliationIdentifier": "https://ror.org/04wxnsj81",
+            "affiliationIdentifierScheme": "ROR",
+            "schemeURI": "https://ror.org"
+          },
+          "value": "ExampleAffiliation"
+        }
+      }
+    ]
+  },
+  "dates": {
+    "date": [
+      {
+        "attrs": {
+          "dateType": "Accepted"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Available"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Copyrighted"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Collected"
+        },
+        "value": "2024-01-01/2024-12-31"
+      },
+      {
+        "attrs": {
+          "dateType": "Coverage"
+        },
+        "value": "2024-01-01/2024-12-31"
+      },
+      {
+        "attrs": {
+          "dateType": "Created"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Issued"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Submitted"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Updated"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Valid"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Withdrawn"
+        },
+        "value": "2024-01-01"
+      },
+      {
+        "attrs": {
+          "dateType": "Other",
+          "dateInformation": "ExampleDateInformation"
+        },
+        "value": "2024-01-01"
+      }
+    ]
+  },
+  "language": {
+    "value": "en"
+  },
+  "resourceType": {
+    "attrs": {
+      "resourceTypeGeneral": "Audiovisual"
+    },
+    "value": "Example Audiovisual ResourceType"
+  },
+  "alternateIdentifiers": {
+    "alternateIdentifier": [
+      {
+        "attrs": {
+          "alternateIdentifierType": "Local accession number"
+        },
+        "value": "12345"
+      }
+    ]
+  },
+  "relatedIdentifiers": {
+    "relatedIdentifier": [
+      {
+        "attrs": {
+          "relatedIdentifierType": "ARK",
+          "relationType": "IsCitedBy",
+          "resourceTypeGeneral": "Audiovisual"
+        },
+        "value": "ark:/13030/tqb3kh97gh8w"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "arXiv",
+          "relationType": "Cites",
+          "resourceTypeGeneral": "Award"
+        },
+        "value": "arXiv:0706.0001"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "bibcode",
+          "relationType": "IsSupplementTo",
+          "resourceTypeGeneral": "Book"
+        },
+        "value": "2018AGUFM.A24K..07S"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "CSTR",
+          "relationType": "IsSupplementedBy",
+          "resourceTypeGeneral": "BookChapter"
+        },
+        "value": "31253.11.sciencedb.13238"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsContinuedBy",
+          "resourceTypeGeneral": "Collection"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "EAN13",
+          "relationType": "Continues",
+          "resourceTypeGeneral": "ComputationalNotebook"
+        },
+        "value": "9783468111242"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "EISSN",
+          "relationType": "Describes",
+          "resourceTypeGeneral": "ConferencePaper"
+        },
+        "value": "1562-6865"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "Handle",
+          "relationType": "IsDescribedBy",
+          "resourceTypeGeneral": "ConferenceProceeding"
+        },
+        "value": "10013/epic.10033"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "IGSN",
+          "relationType": "HasMetadata",
+          "resourceTypeGeneral": "DataPaper"
+        },
+        "value": "IECUR0097"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "ISBN",
+          "relationType": "IsMetadataFor",
+          "resourceTypeGeneral": "Dataset"
+        },
+        "value": "978-3-905673-82-1"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "ISSN",
+          "relationType": "HasVersion",
+          "resourceTypeGeneral": "Dissertation"
+        },
+        "value": "0077-5606"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "ISTC",
+          "relationType": "IsVersionOf",
+          "resourceTypeGeneral": "Event"
+        },
+        "value": "0A9 2002 12B4A105 7"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "LISSN",
+          "relationType": "IsNewVersionOf",
+          "resourceTypeGeneral": "Image"
+        },
+        "value": "1188-1534"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "LSID",
+          "relationType": "IsPreviousVersionOf",
+          "resourceTypeGeneral": "InteractiveResource"
+        },
+        "value": "urn:lsid:ubio.org:namebank:11815"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "PMID",
+          "relationType": "IsPartOf",
+          "resourceTypeGeneral": "Journal"
+        },
+        "value": "12082125"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "PURL",
+          "relationType": "HasPart",
+          "resourceTypeGeneral": "JournalArticle"
+        },
+        "value": "http://purl.oclc.org/foo/bar"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "RRID",
+          "relationType": "IsPublishedIn",
+          "resourceTypeGeneral": "Model"
+        },
+        "value": "RRID:SCR_014641"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "UPC",
+          "relationType": "IsReferencedBy",
+          "resourceTypeGeneral": "OutputManagementPlan"
+        },
+        "value": "123456789999"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "URL",
+          "relationType": "References",
+          "resourceTypeGeneral": "PeerReview"
+        },
+        "value": "http://www.heatflow.und.edu/index2.html"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "URN",
+          "relationType": "IsDocumentedBy",
+          "resourceTypeGeneral": "PhysicalObject"
+        },
+        "value": "urn:nbn:de:101:1-201102033592"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "w3id",
+          "relationType": "Documents",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "value": "https://w3id.org/games/spec/coil#Coil_Bomb_Die_Of_Age"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCompiledBy",
+          "resourceTypeGeneral": "Project"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "Compiles",
+          "resourceTypeGeneral": "Report"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsVariantFormOf",
+          "resourceTypeGeneral": "Service"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsOriginalFormOf",
+          "resourceTypeGeneral": "Software"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsIdenticalTo",
+          "resourceTypeGeneral": "Sound"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsReviewedBy",
+          "resourceTypeGeneral": "Standard"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "Reviews",
+          "resourceTypeGeneral": "Text"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsDerivedFrom",
+          "resourceTypeGeneral": "Workflow"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsSourceOf",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsRequiredBy",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "Requires",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "Obsoletes",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsObsoletedBy",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "Collects",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCollectedBy",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "HasTranslation",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      },
+      {
+        "attrs": {
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsTranslationOf",
+          "resourceTypeGeneral": "Other"
+        },
+        "value": "10.1016/j.epsl.2011.11.037"
+      }
+    ]
+  },
+  "sizes": {
+    "size": [
+      {
+        "value": "1 MB"
+      },
+      {
+        "value": "90 pages"
+      }
+    ]
+  },
+  "formats": {
+    "format": [
+      {
+        "value": "application/xml"
+      },
+      {
+        "value": "text/plain"
+      }
+    ]
+  },
+  "version": {
+    "value": "1"
+  },
+  "rightsList": {
+    "rights": {
+      "attrs": {
+        "lang": "en",
+        "schemeURI": "https://spdx.org/licenses/",
+        "rightsIdentifierScheme": "SPDX",
+        "rightsIdentifier": "CC-BY-4.0",
+        "rightsURI": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "value": "Creative Commons Attribution 4.0 International"
+    }
+  },
+  "descriptions": {
+    "description": [
+      {
+        "attrs": {
+          "lang": "en",
+          "descriptionType": "Abstract"
+        },
+        "value": "Example Abstract"
+      },
+      {
+        "attrs": {
+          "lang": "en",
+          "descriptionType": "Methods"
+        },
+        "value": "Example Methods"
+      },
+      {
+        "attrs": {
+          "lang": "en",
+          "descriptionType": "SeriesInformation"
+        },
+        "value": "Example SeriesInformation"
+      },
+      {
+        "attrs": {
+          "lang": "en",
+          "descriptionType": "TableOfContents"
+        },
+        "value": "Example TableOfContents"
+      },
+      {
+        "attrs": {
+          "lang": "en",
+          "descriptionType": "TechnicalInfo"
+        },
+        "value": "Example TechnicalInfo"
+      },
+      {
+        "attrs": {
+          "lang": "en",
+          "descriptionType": "Other"
+        },
+        "value": "Example Other"
+      }
+    ]
+  },
+  "geoLocations": {
+    "geoLocation": {
+      "geoLocationPlace": {
+        "value": "Vancouver, British Columbia, Canada"
+      },
+      "geoLocationPoint": {
+        "pointLatitude": {
+          "value": "49.2827"
+        },
+        "pointLongitude": {
+          "value": "-123.1207"
+        }
+      },
+      "geoLocationBox": {
+        "westBoundLongitude": {
+          "value": "-123.27"
+        },
+        "eastBoundLongitude": {
+          "value": "-123.02"
+        },
+        "southBoundLatitude": {
+          "value": "49.195"
+        },
+        "northBoundLatitude": {
+          "value": "49.315"
+        }
+      },
+      "geoLocationPolygon": {
+        "polygonPoint": [
+          {
+            "pointLatitude": {
+              "value": "41.991"
+            },
+            "pointLongitude": {
+              "value": "-71.032"
+            }
+          },
+          {
+            "pointLatitude": {
+              "value": "42.893"
+            },
+            "pointLongitude": {
+              "value": "-69.622"
+            }
+          },
+          {
+            "pointLatitude": {
+              "value": "41.991"
+            },
+            "pointLongitude": {
+              "value": "-68.211"
+            }
+          },
+          {
+            "pointLatitude": {
+              "value": "41.090"
+            },
+            "pointLongitude": {
+              "value": "-69.622"
+            }
+          },
+          {
+            "pointLatitude": {
+              "value": "41.991"
+            },
+            "pointLongitude": {
+              "value": "-71.032"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "fundingReferences": {
+    "fundingReference": {
+      "funderName": {
+        "value": "Example Funder"
+      },
+      "funderIdentifier": {
+        "attrs": {
+          "funderIdentifierType": "Crossref Funder ID"
+        },
+        "value": "https://doi.org/10.13039/501100000780"
+      },
+      "awardNumber": {
+        "attrs": {
+          "awardURI": "https://example.com/example-award-uri"
+        },
+        "value": "12345"
+      },
+      "awardTitle": {
+        "value": "Example AwardTitle"
+      }
+    }
+  },
+  "relatedItems": {
+    "relatedItem": {
+      "attrs": {
+        "relatedItemType": "Text",
+        "relationType": "Cites"
+      },
+      "relatedItemIdentifier": {
+        "attrs": {
+          "relatedItemIdentifierType": "ISSN"
+        },
+        "value": "1234-5678"
+      },
+      "creators": {
+        "creator": {
+          "creatorName": {
+            "attrs": {
+              "nameType": "Personal"
+            },
+            "value": "ExampleFamilyName, ExampleGivenName"
+          },
+          "givenName": {
+            "value": "ExampleGivenName"
+          },
+          "familyName": {
+            "value": "ExampleFamilyName"
+          }
+        }
+      },
+      "titles": {
+        "title": [
+          {
+            "value": "Example RelatedItem Title"
+          },
+          {
+            "attrs": {
+              "titleType": "TranslatedTitle"
+            },
+            "value": "Example RelatedItem TranslatedTitle"
+          }
+        ]
+      },
+      "publicationYear": {
+        "value": "1990"
+      },
+      "volume": {
+        "value": "1"
+      },
+      "issue": {
+        "value": "2"
+      },
+      "number": {
+        "attrs": {
+          "numberType": "Other"
+        },
+        "value": "1"
+      },
+      "firstPage": {
+        "value": "1"
+      },
+      "lastPage": {
+        "value": "100"
+      },
+      "publisher": {
+        "value": "Example RelatedItem Publisher"
+      },
+      "edition": {
+        "value": "Example RelatedItem Edition"
+      },
+      "contributors": {
+        "contributor": {
+          "attrs": {
+            "contributorType": "Other"
+          },
+          "contributorName": {
+            "attrs": {
+              "nameType": "Personal"
+            },
+            "value": "ExampleFamilyName, ExampleGivenName"
+          },
+          "givenName": {
+            "value": "ExampleGivenName"
+          },
+          "familyName": {
+            "value": "ExampleFamilyName"
+          }
+        }
+      }
+    }
+  }
+}

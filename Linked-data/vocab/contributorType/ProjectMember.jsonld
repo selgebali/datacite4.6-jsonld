@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/ProjectMember",
+  "type": "Concept",
+  "prefLabel": "ProjectMember",
+  "notation": "ProjectMember",
+  "definition": "Person on the membership list of a designated project/project team.",
+  "scopeNote": "This vocabulary may or may not indicate the quality, quantity, or substance of the person’s involvement.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

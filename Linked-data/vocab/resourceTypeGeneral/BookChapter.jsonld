@@ -1,0 +1,17 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/BookChapter",
+  "type": "Concept",
+  "prefLabel": "BookChapter",
+  "notation": "BookChapter",
+  "definition": "One of the main divisions of a book.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "example": [
+    "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.15122/isbn.978-2-406-09313-8.p.0639",
+    "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.17613/m6631d"
+  ],
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"
+  ]
+}

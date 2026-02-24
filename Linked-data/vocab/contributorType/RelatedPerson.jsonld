@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/RelatedPerson",
+  "type": "Concept",
+  "prefLabel": "RelatedPerson",
+  "notation": "RelatedPerson",
+  "definition": "A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize.",
+  "scopeNote": "Could be an author’s intellectual mentor, a person providing intellectual leadership in the discipline or subject domain, etc.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+}

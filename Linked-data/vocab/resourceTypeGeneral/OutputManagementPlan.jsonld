@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/OutputManagementPlan",
+  "type": "Concept",
+  "prefLabel": "OutputManagementPlan",
+  "notation": "OutputManagementPlan",
+  "definition": "A formal document that outlines how research outputs are to be handled both during a research project and after the project is completed.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "scopeNote": "Includes data, software, and materials.\n<resourceType resourceTypeGeneral=\"OutputManagementPlan\">Data Management Plan</resourceType>",
+  "closeMatch": [
+    "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"
+  ]
+}

@@ -1,0 +1,33 @@
+jsonld.InvalidUrl: Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context. URL: "./fullcontext.jsonld".
+    at ContextResolver._fetchContext (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/jsonld/lib/ContextResolver.js:173:13)
+    at async ContextResolver._resolveRemoteContext (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/jsonld/lib/ContextResolver.js:117:34)
+    at async ContextResolver.resolve (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/jsonld/lib/ContextResolver.js:50:22)
+    at async api.process (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/jsonld/lib/context.js:87:20)
+    at async api.expand (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/jsonld/lib/expand.js:214:17)
+    at async jsonld.expand (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/jsonld/lib/jsonld.js:322:18)
+    at async jsonld.toRDF (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/jsonld/lib/jsonld.js:687:16)
+    at async Command.toRdf (file:///opt/homebrew/lib/node_modules/jsonld-cli/bin/jsonld.js:402:20)
+    at async Command.parseAsync (/opt/homebrew/lib/node_modules/jsonld-cli/node_modules/commander/lib/command.js:936:5)
+Error: {
+  name: [32m'jsonld.InvalidUrl'[39m,
+  details: {
+    code: [32m'loading remote context failed'[39m,
+    url: [32m'./fullcontext.jsonld'[39m,
+    cause: Error: ENOENT: no such file or directory, open './fullcontext.jsonld'
+    [90m    at async open (node:internal/fs/promises:634:25)[39m
+    [90m    at async Object.readFile (node:internal/fs/promises:1238:14)[39m
+        at async _requestFile (file:///opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/node_modules/[4mjsonld-request[24m/lib/index.js:286:20)
+        at async documentLoader (file:///opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/bin/jsonld.js:217:23)
+        at async ContextResolver._fetchContext (/opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/node_modules/[4mjsonld[24m/lib/ContextResolver.js:166:19)
+        at async ContextResolver._resolveRemoteContext (/opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/node_modules/[4mjsonld[24m/lib/ContextResolver.js:117:34)
+        at async ContextResolver.resolve (/opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/node_modules/[4mjsonld[24m/lib/ContextResolver.js:50:22)
+        at async api.process (/opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/node_modules/[4mjsonld[24m/lib/context.js:87:20)
+        at async api.expand (/opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/node_modules/[4mjsonld[24m/lib/expand.js:214:17)
+        at async jsonld.expand (/opt/homebrew/lib/node_modules/[4mjsonld-cli[24m/node_modules/[4mjsonld[24m/lib/jsonld.js:322:18) {
+      errno: [33m-2[39m,
+      code: [32m'ENOENT'[39m,
+      syscall: [32m'open'[39m,
+      path: [32m'./fullcontext.jsonld'[39m
+    }
+  }
+}
