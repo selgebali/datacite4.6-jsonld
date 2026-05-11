@@ -1,317 +1,212 @@
-# DataCite 4.6 JSON‑LD Profile & Beginner’s Guide
+# DataCite 4.6 JSON-LD Vocabulary & Schema Profiles
 
-Welcome to the DataCite 4.6 JSON‑LD Profile repository. This resource provides a **self‑contained JSON Schema** alongside an embedded **JSON‑LD `@context`** for the **DataCite Metadata Schema v4.6**, fully aligned with the **DataCite REST API**. It enables you to (1) validate your metadata submission payloads before sending them to the API, and (2) interpret the same JSON as **linked data** for semantic applications.
+This repository provides machine-readable linked data resources for the **DataCite Metadata Schema v4.6**: RDF class and property definitions, controlled vocabulary terms as resolvable IRIs, JSON Schema validation profiles, an XML-to-JSON conversion script, and SKOS/JSKOS crosswalk mappings to external vocabularies.
 
-If you are new to metadata schemas, linked data, or DataCite itself, don’t worry. This guide will walk you through the key concepts, the files included here, and exactly how to use them step by step.
-
----
-
-## Why This Matters: A Beginner’s Perspective
-
-Metadata is essentially “data about data.” For research data and persistent identifiers (PIDs) like DOIs, having consistent and well-structured metadata is critical. It helps researchers discover, cite, and reuse datasets reliably. Without good metadata, research outputs risk being lost or misunderstood.
-
-JSON (JavaScript Object Notation) is a lightweight, human-readable format commonly used to represent data structures. JSON-LD (JSON for Linked Data) extends JSON by adding semantic context through namespaces—unique web identifiers called IRIs—that provide clear, unambiguous meanings to each data element. This semantic layer allows data to be linked and integrated across different systems and knowledge graphs.
-
-DataCite is a leading organization that assigns DOIs for research outputs and defines a metadata schema to describe those outputs consistently. Metadata Schema v4.6 specifies which fields to include, allowed values, and how to represent the data.
-
-Validation and semantics serve different but complementary roles. JSON Schema checks the structure of your metadata—ensuring required fields exist, values follow expected formats, and no unexpected fields appear. JSON-LD adds semantic meaning by mapping JSON keys to globally recognized identifiers, enabling machines to understand the data beyond its shape.
-
-This repository bridges these two worlds. It offers a JSON Schema to validate your DataCite metadata payloads before submission and embeds a JSON-LD `@context` that links the same JSON keys to semantic IRIs. This means your data is both syntactically correct and semantically interoperable, ready for API submission and linked data applications.
+It is the working source for a GitHub Pages vocabulary namespace and for tooling used by DataCite integrators, NFDI services, and linked data applications.
 
 ---
 
-## What’s Inside This Repository
+## Repository Layout
 
-Here’s what you’ll find and how it fits together:
-|                    Section                   |                                                                    Purpose                                                                    |                datacite4.6-profile.json (modular, specification-focused)               |                            integrated.json (production-ready, self-contained)                           |
-|:--------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------:|
-| Root Schema (properties)                     | Core metadata model — defines structure and validation of fields like creators, titles, publisher, etc.                                       | Modular schema that mirrors DataCite REST attributes; references external definitions. | Fully inlined version with all constraints and cross-references embedded.                               |
-| $defs (Definitions)                          | Controlled vocabularies and enumerations (e.g. resourceTypeGeneral, relationType, descriptionType). Used for validation and interoperability. | May still reference external enum lists or $ref to other schema fragments.             | All enumerations embedded as fragment IRIs (#enums/<list>/<term>).                                      |
-| profile.@context                             | JSON-LD context mapping schema keys to RDF IRIs (e.g. creator → schema:creator). Enables semantic linking and machine readability.            | Usually externalized or minimally defined, pointing to an external context file.       | Fully integrated; includes all term mappings and @vocab definitions for standalone semantic export.     |
-| submitProfile / responseProfile              | Specialized validation subsets for POST (submission) and GET (response) operations to/from the REST API.                                      | Explicitly defined as modular validation layers for REST clients.                      | Embedded and harmonized for both validation and testing.                                                |
-| exportProfile                                | Rules for converting validated JSON into RDF or JSON-LD, including language-tag handling and schema crosswalks.                               | Described conceptually, may point to external scripts or mappings.                     | Fully defined with explicit conversion logic and mapping to RDF predicates.                             |
-| iriMap / fragment bridges                    | Connects internal enumeration fragments to globally resolvable IRIs.                                                                          | May be incomplete or implicit.                                                         | Fully implemented, mapping fragments like #enums/resourceTypeGeneral/Dataset → canonical DataCite URIs. |
-| examples, $comment, and documentation blocks | Human-readable examples and implementation notes for repository managers and developers.                                                      | Present for clarity and validation examples.                                           | Included but not semantically relevant.                                                                 |
+```
+.
+├── rdf-vocabulary-staging/          # Core JSON-LD vocabulary (classes, properties, vocab terms)
+│   ├── class/                       # 21 RDF class definitions (Resource, Creator, Title, …)
+│   ├── property/                    # 78 RDF property definitions (identifier, creatorName, …)
+│   ├── vocab/                       # Controlled vocabularies (7 enumeration families)
+│   │   ├── contributorType/
+│   │   ├── dateType/
+│   │   ├── descriptionType/
+│   │   ├── nameType/
+│   │   ├── relatedIdentifierType/
+│   │   ├── relationType/
+│   │   └── resourceTypeGeneral/
+│   ├── context/
+│   │   └── fullcontext.jsonld       # Full JSON-LD context mapping DataCite keys to IRIs
+│   └── manifest/
+│       └── datacite-4.6.json        # Versioned index of all defined resources
+│
+├── validation-and-conversion/
+│   ├── schemas/
+│   │   ├── schema-profiles/         # JSON Schema profiles for API validation
+│   │   │   ├── datacite4.6-profile.json   # Submission (POST/PUT) profile
+│   │   │   ├── datacite4.6-schema.json    # Core attribute schema
+│   │   │   ├── integrated.json            # Self-contained merged profile
+│   │   │   ├── datacite_api.jsonld        # JSON-LD context for API payloads
+│   │   │   ├── rules.json                 # Supplementary validation rules
+│   │   │   └── titleTypes.jsonld          # Title type vocabulary fragment
+│   │   └── xsd/                     # Official DataCite XSD schema files
+│   ├── scripts/
+│   │   ├── convert.py               # Convert DataCite XML → REST API JSON
+│   │   ├── validate.js              # Validate JSKOS mappings (requires jskos-validate)
+│   │   └── validate_xml.rb          # Validate DataCite XML against XSD
+│   └── examples/
+│       ├── datacite-example-full-v4.xml
+│       ├── record.json              # Example REST API JSON record
+│       ├── datacite_example_filledin.json
+│       └── xml-roundtrip/           # XML ↔ JSON roundtrip experiment and notes
+│
+├── mappings/
+│   ├── SKOS_crosswalks.jsonld       # SKOS mappings to Schema.org, DCAT, DCTERMS, Wikidata
+│   └── jskos-mappings.json          # JSKOS-format mappings
+│
+├── rdf-build-scripts/
+│   ├── generate-production-namespace.sh  # Replace staging URLs with production URLs
+│   ├── generate-index-pages.js           # Build HTML index pages for the GitHub Pages site
+│   ├── manifest-sync.js                  # Sync the manifest file with vocabulary contents
+│   └── synCheck.py                       # Syntax check for vocabulary files
+│
+└── website/
+    ├── index.html                   # Landing page (deployed to GitHub Pages)
+    └── docs-index.html              # Documentation index page
+```
 
-### **integrated.json (self-contained, production-ready profile)**
-
--   A **fully merged version** of the DataCite 4.6 profile, designed for **standalone validation and semantic interoperability**.
-    
--   Combines the **root schema**, **controlled vocabularies**, **JSON-LD context**, and **export logic** into a single file.
-    
--   Self-contained — no external $ref dependencies; all controlled lists are embedded as fragment IRIs (#enums/<list>/<term>).
-    
--   Suitable for both **API validation** and **Linked Data conversion**, ensuring consistent interpretation across infrastructures.
-    
-
-----------
-
-### **Root Schema (properties)**
-
--   Defines the full set of DataCite metadata elements (creators, titles, publisher, relatedIdentifiers, etc.).
-    
--   Mirrors the REST API’s attributes structure but aligns each property with its corresponding IRI via the embedded context.
-    
--   Maintains strict validation (additionalProperties: false) for consistent and predictable client-side implementation.
-    
-
-----------
-
-### **Embedded $defs (Enumerations and Controlled Vocabularies)**
-
--   All controlled lists — such as resourceTypeGeneral, relationType, descriptionType, and contributorType — are **inlined** within the file.
-    
--   Each enumeration entry is assigned a **fragment IRI** (e.g., #enums/resourceTypeGeneral/Dataset) for use in RDF, JSON-LD, and mapping registries.
-    
--   These fragments form the **semantic backbone** for crosswalks, resolvable vocabularies, and machine-readable metadata.
-    
-
-----------
-
-### **profile.@context (Integrated JSON-LD Context)**
-
--   Provides a complete mapping of DataCite JSON keys to their RDF/Linked Data counterparts (e.g., creator → schema:creator, identifier → dcterms:identifier).
-    
--   Embedded directly within the file to make the schema **self-descriptive and semantically portable**.
-    
--   Ensures that downstream systems (e.g., TS4NFDI, Cocoda, FDO registries) can generate RDF graphs without requiring external lookups.
-    
-
-----------
-
-### **exportProfile (RDF and JSON-LD Conversion Rules)**
-
--   Defines how validated metadata is transformed into graph form — including **language-tag rules** and **DOI normalization** to IRI form (https://doi.org/<doi>).
-    
--   Enables seamless export of metadata to **RDF**, **JSON-LD**, or **Linked Data endpoints**.
-    
--   Guarantees alignment between DataCite REST API outputs and their semantic representations in the broader research data ecosystem.
-    
-
-----------
-
-### **IRI Mapping and Namespace Integration**
-
--   Incorporates an **iriMap** that connects internal fragments (e.g., #enums/...) to canonical DataCite namespace IRIs (https://schema.datacite.org/meta/kernel-4.6/enums/...).
-    
--   Provides the foundation for consistent resolution of controlled terms across APIs, repositories, and mapping services.
-    
--   Ensures compatibility with **namespace hosting** on DataCite, allowing external tools to reference individual enumeration terms directly.
-    
--   Ensures compatibility with **namespace hosting** on DataCite, allowing external tools to reference individual enumeration terms directly.
-    
-
-----------
-
-## Context Hierarchy and Enumerations
-
-### JSON-LD Context Structure
-
-The profile includes two levels of JSON-LD context definitions to provide semantic mappings at different scopes:
-
-#### Root-Level @context
-- Located at the top of the JSON file under `"@context"`
-- Defines global namespaces, base URIs, and version information
-- Includes prefixes like `datacite:`, `schema:`, `dcat:`, `skos:`, `xsd:`
-- Sets the foundation for IRI resolution across the entire document
-
-#### profile.@context (Nested Context)
-- Embedded within the `profile` object as `"@context"`
-- Provides detailed property mappings for DataCite metadata fields
-- Maps JSON keys to semantic IRIs (e.g., `"creator"` → `datacite:creator`)
-- Includes type annotations and container specifications
-- Supports nested contexts for complex object structures (e.g., `container`, `publisher`, `affiliation`, `relatedItems`, `types`)
-
-The nested `profile.@context` allows for scoped semantic definitions, enabling precise control over how different parts of the metadata are interpreted as linked data.
-
-### Enumerations Documentation
-
-The `$defs` section contains controlled vocabularies that define allowed values for various metadata fields. Each enumeration includes:
-
-- **Purpose**: What the enumeration controls and its role in DataCite metadata
-- **Usage**: How and where the values are applied in metadata records
-- **Relationships**: Connections to other enumerations or external standards
-- **IRI Mapping**: Links to canonical DataCite URIs for semantic interoperability
-
-#### Available Enumerations
-
-1. **resourceTypeGeneral** (9 values: Audiovisual, Award, Book, etc.)
-   - Purpose: High-level categorization of resource types
-   - Usage: Required in `types.resourceTypeGeneral` for all DataCite records
-   - Relationships: Basis for resource type classification; maps to DCMI types
-
-2. **descriptionType** (6 values: Abstract, Methods, SeriesInformation, etc.)
-   - Purpose: Specifies the type of descriptive text provided
-   - Usage: Required in `descriptions.descriptionType` for each description
-   - Relationships: Supports different description purposes; SeriesInformation deprecated in favor of relatedItems
-
-3. **contributorType** (21 values: ContactPerson, DataCollector, etc.)
-   - Purpose: Defines the role of contributors beyond creators
-   - Usage: Required in `contributors.contributorType` for each contributor
-   - Relationships: Based on MARC relator codes; supports detailed attribution
-
-4. **dateType** (12 values: Accepted, Available, Collected, etc.)
-   - Purpose: Categorizes different types of dates in resource lifecycle
-   - Usage: Required in `dates.dateType` for each date entry
-   - Relationships: Aligns with Dublin Core date types
-
-5. **nameType** (2 values: Personal, Organizational)
-   - Purpose: Distinguishes between individual and organizational names
-   - Usage: Optional in creators/contributors; affects validation of name components
-   - Relationships: Controls whether givenName/familyName are allowed
-
-6. **relatedIdentifierType** (20 values: ARK, arXiv, bibcode, etc.)
-   - Purpose: Identifies the scheme of related resource identifiers
-   - Usage: Required in `relatedIdentifiers.relatedIdentifierType`
-   - Relationships: Covers major persistent identifier schemes
-
-7. **relationType** (38 values: IsCitedBy, Cites, IsSupplementTo, etc.)
-   - Purpose: Describes relationships between resources
-   - Usage: Required in `relatedIdentifiers.relationType` and `relatedItems.relationType`
-   - Relationships: Based on COAR vocabulary; supports complex citation networks
-
-8. **funderIdentifierType** (5 values: ISNI, GRID, ROR, etc.)
-   - Purpose: Specifies funder identifier schemes
-   - Usage: Required when `funderIdentifier` is provided
-   - Relationships: Supports major funder registries
-
-9. **titleType** (4 values: AlternativeTitle, Subtitle, etc.)
-   - Purpose: Categorizes different types of titles
-   - Usage: Optional in `titles.titleType`
-   - Relationships: Supports multilingual and alternative title variants
-
-10. **numberType** (4 values: Article, Chapter, Report, Other)
-    - Purpose: Specifies the type of numbering in publications
-    - Usage: Optional in `relatedItems.numberType`
-    - Relationships: Supports citation formatting for different publication types
-
-Each enumeration is mapped to stable IRIs under `https://schema.datacite.org/vocab/datacite-4.6/` for consistent semantic resolution.
-
-----------
-
-### **docs/datacite4.6-profile.json**
-
-### **(root “submit” profile)**
-
--   Validates **client-submitted** metadata — used for POST/PUT requests to the DataCite REST API.
-    
--   Strict by design ("additionalProperties": false), so it flags missing or extra fields and format errors early.
-    
--   Embeds a **profile.@context** that maps JSON properties to semantic IRIs (DataCite and selected external vocabularies).
-    
--   Includes key **controlled vocabularies** under $defs (e.g., resourceTypeGeneral, contributorType, relationType) as enumerations with fragment IRIs for semantic reuse.
-    
-
-----------
-
-### **responseProfile**
-
-### **(schema object within the same file)**
-
--   Validates **API responses** wrapped in a **JSON:API** envelope (data.id, data.type="dois", data.attributes, etc.).
-    
--   Designed to be **permissive**, allowing server-added read-only and analytics fields such as url, state, viewCount, and created.
-    
-
-  
-
-> Think of these as **what you send in** versus **what you get back** — both defined in the same bundled schema.
-
-----------
-
-### **exportProfile**
-
-### **(added in this release)**
-
--   Defines how to transform validated DataCite JSON into RDF-ready **JSON-LD**.
-    
--   Includes explicit **language-tag conversion rules** (turning {text, lang} pairs into @language literals).
-    
--   Specifies DOI-to-IRI construction (https://doi.org/<doi>), ensuring graph-consistent identifiers.
-    
--   Enables generation of **graph-native metadata** that remains compatible with the DataCite API structure.
-    
-
-----------
-
-### **SKOS/JSKOS Crosswalks (e.g.,SKOScrosswalk.jsonld)**
-
--   Map DataCite terms to external vocabularies such as **Schema.org**, **DCAT**, **DCTERMS**, and **Wikidata** for semantic interoperability.
-    
--   Typically maintained as **separate linked files**, not embedded directly in the profile, but aligned with its $defs and profile.@context IRIs.
-
-----------
-
-### **Intended Usage**
-
--   Acts as the **authoritative, machine-actionable bundle** for NFDI and DataCite interoperability efforts.
-    
--   Supports both **validation workflows** (API clients, metadata monitors) and **semantic export workflows** (crosswalk registries, FDO type systems).
-    
--   Optimized for integration into **metadata schema registries**, **PID graph services**, and **cross-domain mapping systems** like MSCR or TS4NFDI.
-  
-
-## Glossary: Key Terms Explained
-
-- **JSON Schema**: A machine-readable specification describing the **shape** of a JSON document—what fields are required, allowed values, formats, and data types.  
-- **JSON‑LD**: “JSON for Linked Data” allows you to attach **semantic meanings** to JSON keys via an **`@context`**, so different systems can agree on what each field means.  
-- **SKOS**: A W3C standard for modeling **controlled vocabularies** and linking terms across vocabularies (e.g., indicating “exact match,” “broader,” or “narrower” relationships).  
-- **Ontology / Crosswalk**: A **mapping** between vocabularies or standards—for example, connecting DataCite’s `publisher` field to Schema.org’s `schema:publisher`.
+> **Staging vs production namespace**: All files in `rdf-vocabulary-staging/` use the `https://schema.stage.datacite.org` namespace. The `generate-production-namespace.sh` script produces a `production-namespace/` copy with `https://schema.datacite.org` substituted in. The GitHub Pages deployment uses the staging namespace directly; the production copy is generated separately for release.
 
 ---
 
-## What’s New in DataCite 4.6 (Highlights)
+## How to Use
 
-DataCite 4.6 introduces or updates several controlled values and types reflected in this profile:
+### 1. Explore the vocabulary
 
-- **`resourceTypeGeneral`**: adds **`Project`**, **`Award`**  
-- **`relatedIdentifierType`**: adds **`RRID`**, **`CSTR`**  
-- **`contributorType`**: adds **`Translator`**  
-- **`relationType`**: adds the pair **`IsTranslationOf` / `HasTranslation`**  
-- **`dateType`**: adds **`Coverage`**
+The `manifest/datacite-4.6.json` file is a versioned index of every defined class, property, and vocabulary term. Start here to discover what is available:
 
-These updates ensure alignment with the official 4.6 schema and may differ from older examples or tutorials.
+```bash
+# View the manifest
+cat rdf-vocabulary-staging/manifest/datacite-4.6.json
+```
+
+Individual term files follow a predictable structure:
+- **class files** (`class/Resource.jsonld`) — define the IRI, `rdf:type`, `rdfs:label`, and `rdfs:comment` for a DataCite entity
+- **property files** (`property/identifier.jsonld`) — define the IRI and domain/range for a DataCite metadata field
+- **vocab term files** (`vocab/resourceTypeGeneral/Dataset.jsonld`) — define a controlled term with `skos:prefLabel`, `skos:definition`, `skos:inScheme`, and optional `skos:closeMatch` mappings
+
+### 2. Use the JSON-LD context
+
+`rdf-vocabulary-staging/context/fullcontext.jsonld` maps DataCite-style compact JSON keys to their full IRIs. Reference it in your JSON-LD documents:
+
+```json
+{
+  "@context": "https://schema.stage.datacite.org/context/fullcontext.jsonld",
+  "@type": "Resource",
+  "identifier": "10.1234/example",
+  "creator": [{ "creatorName": "Smith, Jane" }]
+}
+```
+
+### 3. Validate a DataCite XML record
+
+`validation-and-conversion/scripts/validate_xml.rb` validates an XML file against the DataCite XSD schema. Requires Ruby.
+
+### 4. Convert DataCite XML to REST API JSON
+
+`validation-and-conversion/scripts/convert.py` parses a DataCite XML file and produces a JSON payload matching the DataCite REST API structure (i.e., a `data.attributes` envelope).
+
+```bash
+# Print JSON to stdout
+python3 validation-and-conversion/scripts/convert.py \
+    validation-and-conversion/examples/datacite-example-full-v4.xml
+
+# Write to a file
+python3 validation-and-conversion/scripts/convert.py \
+    validation-and-conversion/examples/datacite-example-full-v4.xml \
+    --output record.json
+```
+
+Requirements: Python 3 only (standard library — no external packages needed).
+
+### 5. Validate JSKOS mappings
+
+`validation-and-conversion/scripts/validate.js` validates an NDJSON file containing JSKOS mappings or concept records using the `jskos-validate` package.
+
+```bash
+# Install dependency first
+npm install jskos-validate
+
+# Validate a mappings file
+node validation-and-conversion/scripts/validate.js mappings/jskos-mappings.json
+```
+
+### 6. Generate the production namespace
+
+Replace all `schema.stage.datacite.org` IRIs with `schema.datacite.org` to produce a production-ready copy:
+
+```bash
+# Run from the repository root
+bash rdf-build-scripts/generate-production-namespace.sh
+# Output is written to production-namespace/
+```
+
+### 7. Use the JSON Schema profiles
+
+The profiles in `validation-and-conversion/schemas/schema-profiles/` validate DataCite metadata payloads:
+
+| File | Purpose |
+|------|---------|
+| `datacite4.6-profile.json` | Validates metadata submitted to the REST API (POST/PUT) |
+| `datacite4.6-schema.json` | Core attribute schema (can be referenced independently) |
+| `integrated.json` | Self-contained merged profile — embeds all enumerations and context, no external `$ref` dependencies |
+
+Use any JSON Schema validator (e.g., `ajv-cli`, Python `jsonschema`) to validate your payload:
+
+```bash
+# Example with ajv-cli
+npx ajv-cli validate \
+    -s validation-and-conversion/schemas/schema-profiles/integrated.json \
+    -d your-metadata-record.json
+```
+
+### 8. Explore SKOS crosswalks
+
+`mappings/SKOS_crosswalks.jsonld` maps DataCite terms to Schema.org, DCAT, DCTERMS, and Wikidata using SKOS relation predicates (`skos:exactMatch`, `skos:closeMatch`, etc.). `mappings/jskos-mappings.json` provides the same mappings in JSKOS format for use with Cocoda and compatible mapping registries.
 
 ---
 
+## GitHub Pages Deployment
+
+Pushing to `main` with changes under `rdf-vocabulary-staging/`, `rdf-build-scripts/`, or `website/` triggers a CI workflow (`.github/workflows/deploy-pages.yml`) that:
+
+1. Copies `rdf-vocabulary-staging/` as the site root
+2. Runs `rdf-build-scripts/generate-index-pages.js` to add HTML index pages for each section
+3. Copies `website/index.html` and `website/docs-index.html` as landing pages
+4. Deploys the result to GitHub Pages
+
+The published site hosts the vocabulary as a resolvable namespace so that IRI lookups for individual terms resolve to human- and machine-readable descriptions.
 
 ---
 
-## References (Authoritative Sources)
+## What's New in DataCite 4.6
 
-- DataCite: **Metadata Schema 4.6** — https://schema.datacite.org/meta/kernel-4.6/  
-- DataCite: **REST API docs** — https://support.datacite.org/docs/api  
-- DataCite: **4.6 Release Notes** — https://support.datacite.org/docs/datacite-metadata-schema-46-release-notes  
-- JSON Schema — https://json-schema.org/  
-- JSON‑LD — https://json-ld.org/  
+DataCite 4.6 adds the following controlled values, all of which are represented in the vocabulary files:
+
+| Field | New values |
+|-------|-----------|
+| `resourceTypeGeneral` | `Project`, `Award` |
+| `relatedIdentifierType` | `RRID`, `CSTR` |
+| `contributorType` | `Translator` |
+| `relationType` | `IsTranslationOf`, `HasTranslation` |
+| `dateType` | `Coverage` |
+
+---
+
+## Key Concepts
+
+**JSON-LD** — A JSON-based format for linked data. An `@context` maps compact JSON keys to globally unique IRIs so that different systems interpret the same key identically.
+
+**SKOS** — The W3C Simple Knowledge Organization System. Used here to define controlled vocabulary terms and to map DataCite terms to equivalent terms in Schema.org, DCAT, and other vocabularies.
+
+**Staging namespace** — `schema.stage.datacite.org` IRIs are used in the vocabulary files in this repository. They resolve on the GitHub Pages site. The production namespace (`schema.datacite.org`) is generated separately via `rdf-build-scripts/generate-production-namespace.sh`.
+
+**JSON Schema profile vs JSON-LD context** — The schema profiles (`validation-and-conversion/schemas/schema-profiles/`) check the *structure* of a JSON record (required fields, allowed values, data types). The JSON-LD context (`rdf-vocabulary-staging/context/fullcontext.jsonld`) gives those fields *semantic meaning* as linked data. Both can be used on the same JSON document.
+
+---
+
+## References
+
+- DataCite Metadata Schema 4.6 — https://schema.datacite.org/meta/kernel-4.6/
+- DataCite REST API — https://support.datacite.org/docs/api
+- DataCite 4.6 Release Notes — https://support.datacite.org/docs/datacite-metadata-schema-46-release-notes
+- JSON-LD specification — https://json-ld.org/
+- JSON Schema specification — https://json-schema.org/
 - SKOS Primer — https://www.w3.org/TR/skos-primer/
-
----
-
-## Next Steps
-
-- Start by validating your **submission** JSON with the root schema (`docs/datacite4.6-profile.json`).  
-- Validate your **responses** with the `responseProfile` inside the same file.  
-- Explore the SKOS/JSKOS crosswalks to connect DataCite terms with Schema.org and DCAT, improving interoperability downstream.
-
----
-
-## datacite4.6-profile.json
-
-This bundled profile for DataCite 4.6 contains:
-
-- A root JSON Schema for the attributes you submit to the REST API.  
-- A JSON-LD context (under `profile.@context`) that gives those attributes semantic meaning.  
-- A response schema for validating JSON:API responses.  
-- A submission schema for validating JSON:API requests.  
-- Centralized enumerations with IRIs (under `$defs`) to bridge validation and semantics.
-
-With this bundle, you can:
-
-- Validate and interpret metadata locally.  
-- Generate machine-actionable contexts automatically.  
-- Keep schema and ontology consistency in one versioned artifact.
-
----
-
-Together, these components provide a comprehensive, beginner-friendly toolkit that ensures your DataCite metadata is both syntactically valid and semantically rich—ready for submission, interpretation, and integration into linked data ecosystems.
+- JSKOS format — https://gbv.github.io/jskos/
