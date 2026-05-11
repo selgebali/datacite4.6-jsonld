@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'rdf-vocabulary-staging/**'
+      - 'rdf-build-scripts/**'
+      - 'website/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build site
+        run: |
+          # Copy staging vocabulary as the website base
+          cp -r rdf-vocabulary-staging/ _site/
+
+          # Generate section index pages into the site tree
+          # (script reads class/, property/, vocab/, context/, manifest/ from cwd)
+          cd _site
+          node ../rdf-build-scripts/generate-index-pages.js
+          cd ..
+
+          # Copy hand-authored landing pages
+          cp website/index.html _site/index.html
+          cp website/docs-index.html _site/docs-index.html
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
