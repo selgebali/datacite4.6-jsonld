@@ -1,6 +1,11 @@
 # Triage: Files Requiring Fixes or Decisions
 
-This folder contains files that are either broken, incomplete, experimental outputs, or working notes that should not be shipped as canonical artifacts. Each file is documented below with the specific problem and suggested fix.
+This folder contains files that are either broken or incomplete and need further work before they can be promoted to a canonical location. Each file is documented below with the specific problem and suggested fix.
+
+**Note:** The following files were originally flagged here but have since been resolved by other PRs merged into main and are no longer in this folder:
+- `datacite_api.jsonld` — fixed (4 bugs) and moved to `validation-and-conversion/schema-profiles/` by PR #2
+- `XML-Shaped-JSON.json`, `original.c14n.xml`, `roundtrip.c14n.xml`, `roundtrip.xml` — cleaned up and moved to `examples/xml-roundtrip/` by PR #3
+- `codes-and-steps.md` — rewritten with relative paths as `validation-and-conversion/roundtrip-experiment-notes.md` by PR #3
 
 ---
 
