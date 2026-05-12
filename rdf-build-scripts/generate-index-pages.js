@@ -2,10 +2,13 @@
 
 const fs = require("fs");
 const path = require("path");
+const { compareVersions, resolveCurrentVersion, resolveVocabRoot } = require("./lib/versioning");
 
-const root = process.cwd();
+const projectRoot = process.cwd();
+const root = resolveVocabRoot(projectRoot);
 const basePath = "/linked-data";
-const manifestFile = path.join(root, "manifest", "datacite-4.6.json");
+const currentVersion = resolveCurrentVersion(root);
+const manifestFile = path.join(root, "manifest", `datacite-${currentVersion}.json`);
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
@@ -492,12 +495,114 @@ function buildContextIndex() {
   });
 }
 
-function buildManifestIndex() {
-  const files = readDirFiles(path.join(root, "manifest")).filter((f) => f.endsWith(".json"));
+function buildDistIndex() {
+  const distRoot = path.join(root, "dist");
+  const files = fs.existsSync(distRoot)
+    ? readDirFiles(distRoot).filter((f) => f !== "index.html")
+    : [];
 
-  const cards = files
+  const labels = {
+    ".jsonld": "Integrated JSON-LD bundle",
+    ".ttl": "Turtle serialization of the integrated bundle",
+    ".rdf": "RDF/XML serialization of the integrated bundle",
+  };
+
+  const rows = files.length
+    ? files
+        .map((file) => {
+          const abs = path.join(distRoot, file);
+          const ext = path.extname(file).toLowerCase();
+          let note = labels[ext] || "Distribution artifact";
+
+          if (ext === ".jsonld") {
+            try {
+              const json = readJson(abs);
+              const nodeCount = Array.isArray(json["@graph"]) ? json["@graph"].length : 0;
+              const isPointer = file.includes("-current") || file.includes("-latest") || nodeCount === 1;
+              if (isPointer) {
+                note = "Pointer to the current versioned distribution";
+              } else {
+                note = `${note} with ${nodeCount} graph node${nodeCount === 1 ? "" : "s"}`;
+              }
+            } catch {
+              note = labels[ext] || note;
+            }
+          }
+
+          return `<li>
+          <div class="row">
+            <div class="name">
+              <a href="${relUrl("dist", file)}">${escapeHtml(file)}</a>
+              <div class="small muted code">${escapeHtml(path.join("dist", file).replace(/\\/g, "/"))}</div>
+            </div>
+            <div class="desc">${escapeHtml(note)}</div>
+            <div class="meta-col">${escapeHtml(fileMtimeLabel(abs))}</div>
+          </div>
+        </li>`;
+        })
+        .join("")
+    : `<li>
+      <div class="row">
+        <div class="name">No distribution artifacts yet</div>
+        <div class="desc">Run <span class="code">node rdf-build-scripts/build-distribution.js</span> to generate the bundled JSON-LD, Turtle, and RDF/XML files.</div>
+        <div class="meta-col">pending</div>
+      </div>
+    </li>`;
+
+  const body = `
+    <section class="panel">
+      <p class="muted">Distribution artifacts package the linked-data set as a single importable bundle and alternate RDF serializations.</p>
+      <div class="toolbar">
+        <span class="chip">${files.length} artifact${files.length === 1 ? "" : "s"}</span>
+      </div>
+      <ul class="list">${rows}</ul>
+    </section>
+  `;
+
+  return pageShell({
+    title: "Distribution Artifacts",
+    sectionLabel: "Distributions",
+    lead: "Browse the integrated DataCite linked-data bundle in JSON-LD and alternate RDF serializations.",
+    bodyHtml: body,
+    navCurrent: "Distributions",
+  });
+}
+
+function buildManifestIndex() {
+  const manifestDir = path.join(root, "manifest");
+  const versionManifestFiles = readDirFiles(manifestDir)
+    .filter((f) => /^datacite-.+\.json$/i.test(f))
+    .filter((f) => f !== "datacite-current.json")
+    .sort((a, b) => {
+      const av = a.replace(/^datacite-/, "").replace(/\.json$/i, "");
+      const bv = b.replace(/^datacite-/, "").replace(/\.json$/i, "");
+      return compareVersions(bv, av);
+    });
+  const releaseMatrixFiles = readDirFiles(manifestDir)
+    .filter((f) => /^release-matrix-.+\.json$/i.test(f))
+    .sort((a, b) => b.localeCompare(a));
+
+  const currentPointerPath = path.join(manifestDir, "datacite-current.json");
+  let currentPointerCard = "";
+  if (fs.existsSync(currentPointerPath)) {
+    try {
+      const pointer = readJson(currentPointerPath);
+      const links = pointer.links || {};
+      currentPointerCard = `<article class="card span-6">
+        <h3>datacite-current.json</h3>
+        <p class="muted">Current version pointer · current <span class="code">${escapeHtml(pointer.currentVersion || "")}</span></p>
+        <p><a href="${relUrl("manifest", "datacite-current.json")}">Open current pointer</a></p>
+        <p class="small muted">${escapeHtml(`manifest: ${links.manifest || "n/a"} · dist: ${links.distJsonld || "n/a"}`)}</p>
+        <p class="small muted">Updated ${escapeHtml(fileMtimeLabel(currentPointerPath))}</p>
+      </article>`;
+    } catch {
+      currentPointerCard = "";
+    }
+  }
+
+  const versionCards = versionManifestFiles
     .map((file) => {
-      const abs = path.join(root, "manifest", file);
+      const abs = path.join(manifestDir, file);
       const json = readJson(abs);
       const summary = {
         classes: (json.classes || []).length,
@@ -509,14 +614,23 @@ function buildManifestIndex() {
       return `<article class="card span-6">
         <h3>${escapeHtml(file)}</h3>
         <p class="muted">Version ${escapeHtml(json.version || "unknown")} · namespace <span class="code">${escapeHtml(json.namespace || "")}</span></p>
-        <p>
-          <a href="${relUrl("manifest", file)}">Open manifest</a>
-        </p>
-        <p class="small muted">
-          ${escapeHtml(
-            `${summary.classes} classes · ${summary.properties} properties · ${summary.contexts} contexts · ${summary.vocabularies} vocabularies · ${summary.vocabTerms} terms`,
-          )}
-        </p>
+        <p><a href="${relUrl("manifest", file)}">Open manifest</a></p>
+        <p class="small muted">${escapeHtml(`${summary.classes} classes · ${summary.properties} properties · ${summary.contexts} contexts · ${summary.vocabularies} vocabularies · ${summary.vocabTerms} terms`)}</p>
+        <p class="small muted">Updated ${escapeHtml(fileMtimeLabel(abs))}</p>
+      </article>`;
+    })
+    .join("");
+
+  const releaseMatrixCards = releaseMatrixFiles
+    .map((file) => {
+      const abs = path.join(manifestDir, file);
+      const json = readJson(abs);
+      const changes = Array.isArray(json.changes) ? json.changes.length : 0;
+      return `<article class="card span-6">
+        <h3>${escapeHtml(file)}</h3>
+        <p class="muted">Release change matrix · ${escapeHtml(json.fromVersion || "?")} → ${escapeHtml(json.toVersion || "?")}</p>
+        <p><a href="${relUrl("manifest", file)}">Open release matrix</a></p>
+        <p class="small muted">${escapeHtml(`${changes} recorded change${changes === 1 ? "" : "s"} · release ${json.releaseDate || "unknown"}`)}</p>
         <p class="small muted">Updated ${escapeHtml(fileMtimeLabel(abs))}</p>
       </article>`;
     })
@@ -524,15 +638,15 @@ function buildManifestIndex() {
 
   const body = `
     <section class="panel">
-      <p class="muted">Manifest files are machine-readable inventories of linked-data resources by DataCite schema version.</p>
-      <div class="grid">${cards}</div>
+      <p class="muted">Manifest files are machine-readable inventories of linked-data resources by DataCite schema version. Release matrices summarize schema deltas between published versions.</p>
+      <div class="grid">${currentPointerCard}${versionCards}${releaseMatrixCards}</div>
     </section>
   `;
 
   return pageShell({
     title: "Manifest Index",
     sectionLabel: "Manifests",
-    lead: "Browse versioned manifest files that list the classes, properties, contexts, vocabulary schemes, and term files in this namespace.",
+    lead: "Browse versioned manifest files and release matrices for the linked-data resources in this namespace.",
     bodyHtml: body,
     navCurrent: "Manifests",
   });
@@ -542,7 +656,7 @@ function writeFile(relPath, content) {
   const abs = path.join(root, relPath);
   fs.mkdirSync(path.dirname(abs), { recursive: true });
   fs.writeFileSync(abs, content);
-  console.log(`Wrote ${relPath}`);
+  console.log(`Wrote ${path.relative(projectRoot, abs)}`);
 }
 
 function main() {
@@ -550,6 +664,7 @@ function main() {
   writeFile(path.join("property", "index.html"), buildPropertyIndex());
   writeFile(path.join("vocab", "index.html"), buildVocabIndex());
   writeFile(path.join("context", "index.html"), buildContextIndex());
+  writeFile(path.join("dist", "index.html"), buildDistIndex());
   writeFile(path.join("manifest", "index.html"), buildManifestIndex());
 }
 

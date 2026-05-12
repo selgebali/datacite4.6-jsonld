@@ -1,22 +1,24 @@
 #!/usr/bin/env node
 
 /*
- * Rebuilds and validates manifest/datacite-4.6.json from the repository file layout.
+ * Rebuilds and validates the selected manifest from the repository file layout
+ * under rdf-vocabulary-staging/.
  *
  * Usage:
- *   node scripts/manifest-sync.js --check
- *   node scripts/manifest-sync.js --write
- *   node scripts/manifest-sync.js --validate
+ *   node rdf-build-scripts/manifest-sync.js --check
+ *   node rdf-build-scripts/manifest-sync.js --write
+ *   node rdf-build-scripts/manifest-sync.js --validate
  *
  * Flags can be combined:
- *   node scripts/manifest-sync.js --write --validate
+ *   node rdf-build-scripts/manifest-sync.js --write --validate
  */
 
 const fs = require("fs");
 const path = require("path");
+const { resolveManifestPath, resolveVocabRoot } = require("./lib/versioning");
 
-const repoRoot = process.cwd();
-const manifestPath = path.join(repoRoot, "manifest", "datacite-4.6.json");
+const projectRoot = process.cwd();
+const vocabRoot = resolveVocabRoot(projectRoot);
 
 function die(message, code = 1) {
   console.error(message);
@@ -48,10 +50,10 @@ function listJsonldFiles(dir) {
     .sort((a, b) => a.localeCompare(b));
 }
 
-function listVocabDirs(vocabRoot) {
-  if (!fs.existsSync(vocabRoot)) return [];
+function listVocabDirs(vocabDir) {
+  if (!fs.existsSync(vocabDir)) return [];
   return fs
-    .readdirSync(vocabRoot, { withFileTypes: true })
+    .readdirSync(vocabDir, { withFileTypes: true })
     .filter((d) => d.isDirectory())
     .map((d) => d.name)
     .sort((a, b) => a.localeCompare(b));
@@ -69,10 +71,10 @@ function urlToRel(namespace, url) {
 function buildManifest(existingManifest) {
   const namespace = existingManifest.namespace;
   const version = existingManifest.version;
-  const classDir = path.join(repoRoot, "class");
-  const propertyDir = path.join(repoRoot, "property");
-  const contextDir = path.join(repoRoot, "context");
-  const vocabRoot = path.join(repoRoot, "vocab");
+  const classDir = path.join(vocabRoot, "class");
+  const propertyDir = path.join(vocabRoot, "property");
+  const contextDir = path.join(vocabRoot, "context");
+  const vocabDir = path.join(vocabRoot, "vocab");
 
   const classes = listJsonldFiles(classDir).map((f) =>
     relToUrl(namespace, path.join("class", f)),
@@ -84,15 +86,16 @@ function buildManifest(existingManifest) {
 
   const contextFiles = [];
   for (const f of listJsonldFiles(contextDir)) {
+    if (f === "runner.jsonld") continue;
     contextFiles.push(path.join("context", f));
   }
   const vocabTopContext = path.join("vocab", "context.jsonld");
-  if (isFile(path.join(repoRoot, vocabTopContext))) {
+  if (isFile(path.join(vocabRoot, vocabTopContext))) {
     contextFiles.push(vocabTopContext);
   }
-  for (const dir of listVocabDirs(vocabRoot)) {
+  for (const dir of listVocabDirs(vocabDir)) {
     const vocabContext = path.join("vocab", dir, "context.jsonld");
-    if (isFile(path.join(repoRoot, vocabContext))) {
+    if (isFile(path.join(vocabRoot, vocabContext))) {
       contextFiles.push(vocabContext);
     }
   }
@@ -101,14 +104,14 @@ function buildManifest(existingManifest) {
     .map((rel) => relToUrl(namespace, rel));
 
   const vocabularies = [];
-  for (const dir of listVocabDirs(vocabRoot)) {
+  for (const dir of listVocabDirs(vocabDir)) {
     const schemeFile = path.join("vocab", dir, `${dir}.jsonld`);
-    const schemeAbs = path.join(repoRoot, schemeFile);
+    const schemeAbs = path.join(vocabRoot, schemeFile);
     if (!isFile(schemeAbs)) {
       continue;
     }
 
-    const files = listJsonldFiles(path.join(vocabRoot, dir));
+    const files = listJsonldFiles(path.join(vocabDir, dir));
     const terms = files
       .filter((f) => f !== "context.jsonld" && f !== `${dir}.jsonld`)
       .map((f) => relToUrl(namespace, path.join("vocab", dir, f)));
@@ -122,6 +125,7 @@ function buildManifest(existingManifest) {
   vocabularies.sort((a, b) => a.scheme.localeCompare(b.scheme));
 
   return {
+    ...existingManifest,
     namespace,
     version,
     context,
@@ -164,7 +168,7 @@ function validateManifestLinks(m) {
       return;
     }
     const rel = urlToRel(namespace, url);
-    const abs = path.join(repoRoot, rel);
+    const abs = path.join(vocabRoot, rel);
     if (!isFile(abs)) {
       issues.push({ kind, url, rel, reason: "Referenced file does not exist" });
     }
@@ -182,16 +186,15 @@ function validateManifestLinks(m) {
 }
 
 function diffCounts(current, generated) {
-  const c = summarizeManifest(current);
-  const g = summarizeManifest(generated);
   return {
-    current: c,
-    generated: g,
+    current: summarizeManifest(current),
+    generated: summarizeManifest(generated),
   };
 }
 
 function main() {
-  const args = new Set(process.argv.slice(2));
+  const argv = process.argv.slice(2);
+  const args = new Set(argv);
   const wantsHelp = args.has("-h") || args.has("--help");
   const wantsWrite = args.has("--write");
   const wantsCheck = args.has("--check");
@@ -201,15 +204,22 @@ function main() {
   if (wantsHelp) {
     console.log(
       [
-        "Usage: node scripts/manifest-sync.js [--check] [--write] [--validate]",
+        "Usage: node rdf-build-scripts/manifest-sync.js [--check] [--write] [--validate] [--version <x.y>] [--manifest <path>]",
         "",
-        "  --check     Compare generated manifest to manifest/datacite-4.6.json",
-        "  --write     Rewrite manifest/datacite-4.6.json from files on disk",
-        "  --validate  Verify every manifest URL resolves to an existing file",
+        "  --check             Compare generated manifest to the selected manifest file",
+        "  --write             Rewrite the selected manifest from files on disk",
+        "  --validate          Verify every manifest URL resolves to an existing file",
+        "  --version <x.y>     Select rdf-vocabulary-staging/manifest/datacite-<x.y>.json",
+        "  --manifest <path>   Select an explicit manifest file path",
+        "",
+        "Note: Historical frozen manifests are expected to drift from current source files.",
+        "Use --validate on frozen versions, and use --check for the active version.",
       ].join("\n"),
     );
     process.exit(0);
   }
+
+  const manifestPath = resolveManifestPath(vocabRoot, argv);
 
   if (!isFile(manifestPath)) {
     die(`Manifest file not found: ${manifestPath}`);
@@ -224,8 +234,7 @@ function main() {
       console.log("Manifest check: OK (manifest is synchronized with files on disk)");
     } else {
       console.error("Manifest check: FAILED (manifest is out of sync)");
-      const counts = diffCounts(current, generated);
-      console.error(JSON.stringify(counts, null, 2));
+      console.error(JSON.stringify(diffCounts(current, generated), null, 2));
       if (!wantsWrite) {
         process.exitCode = 1;
       }
@@ -234,7 +243,7 @@ function main() {
 
   if (wantsWrite) {
     fs.writeFileSync(manifestPath, stableStringify(generated));
-    console.log(`Wrote ${path.relative(repoRoot, manifestPath)}`);
+    console.log(`Wrote ${path.relative(projectRoot, manifestPath)}`);
     console.log(JSON.stringify(summarizeManifest(generated), null, 2));
   }
 

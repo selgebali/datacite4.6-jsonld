@@ -1,0 +1,101 @@
+name: Build Versioned Snapshot
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'DataCite schema version (for example: 4.7)'
+        required: true
+        type: string
+      release_date:
+        description: 'Release date (YYYY-MM-DD). Leave blank to use today.'
+        required: false
+        type: string
+      commit_generated_files:
+        description: 'Commit generated outputs back to the selected branch.'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  build-snapshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Apache Jena (riot)
+        run: |
+          wget -q https://archive.apache.org/dist/jena/binaries/apache-jena-5.2.0-bin.tar.gz
+          tar -xzf apache-jena-5.2.0-bin.tar.gz
+          echo "$PWD/apache-jena-5.2.0/bin" >> $GITHUB_PATH
+
+      - name: Build snapshot
+        run: |
+          if [ -n "${{ inputs.release_date }}" ]; then
+            node rdf-build-scripts/release-snapshot.js --version "${{ inputs.version }}" --release-date "${{ inputs.release_date }}"
+          else
+            node rdf-build-scripts/release-snapshot.js --version "${{ inputs.version }}"
+          fi
+
+      - name: Commit generated outputs
+        if: ${{ inputs.commit_generated_files }}
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            rdf-vocabulary-staging/manifest/datacite-*.json \
+            rdf-vocabulary-staging/manifest/release-matrix-*.json \
+            rdf-vocabulary-staging/dist/datacite-*.jsonld \
+            rdf-vocabulary-staging/dist/datacite-*.ttl \
+            rdf-vocabulary-staging/dist/datacite-*.rdf \
+            rdf-vocabulary-staging/dist/datacite.jsonld \
+            rdf-vocabulary-staging/dist/datacite.ttl \
+            rdf-vocabulary-staging/dist/datacite.rdf \
+            rdf-vocabulary-staging/class/index.html \
+            rdf-vocabulary-staging/property/index.html \
+            rdf-vocabulary-staging/vocab/index.html \
+            rdf-vocabulary-staging/context/index.html \
+            rdf-vocabulary-staging/dist/index.html \
+            rdf-vocabulary-staging/manifest/index.html
+
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: update generated snapshot outputs for ${VERSION}"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: datacite-snapshot-${{ inputs.version }}
+          path: |
+            rdf-vocabulary-staging/manifest/datacite-*.json
+            rdf-vocabulary-staging/manifest/release-matrix-*.json
+            rdf-vocabulary-staging/dist/datacite-*.jsonld
+            rdf-vocabulary-staging/dist/datacite-*.ttl
+            rdf-vocabulary-staging/dist/datacite-*.rdf
+            rdf-vocabulary-staging/dist/datacite.jsonld
+            rdf-vocabulary-staging/dist/datacite.ttl
+            rdf-vocabulary-staging/dist/datacite.rdf
+            rdf-vocabulary-staging/class/index.html
+            rdf-vocabulary-staging/property/index.html
+            rdf-vocabulary-staging/vocab/index.html
+            rdf-vocabulary-staging/context/index.html
+            rdf-vocabulary-staging/dist/index.html
+            rdf-vocabulary-staging/manifest/index.html
