@@ -1,6 +1,5 @@
 {
   "@context": {
-{},
     "class": "https://schema.stage.datacite.org/linked-data/class/",
     "property": "https://schema.stage.datacite.org/linked-data/property/",
     "vocab": "https://schema.stage.datacite.org/linked-data/vocab/",
@@ -135,7 +134,7 @@
       "@id": "property:contributorType",
       "@type": "@vocab",
       "@context": {
-        "@vocab": "https://schema.stage.datacite.org/linked-data/vocab/contributionType/"
+        "@vocab": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/"
       }
     },
     "dates": {"@id": "@nest"},
@@ -193,6 +192,10 @@
       "@context": {
         "@vocab": "https://schema.stage.datacite.org/linked-data/vocab/relationType/"
       }
+    },
+    "relationTypeInformation": {
+      "@id": "property:relationTypeInformation",
+      "@type": "xsd:string"
     },
     "sizes": {"@id": "@nest"},
     "size": {

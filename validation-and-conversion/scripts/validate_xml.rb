@@ -1,23 +1,36 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative 'lib/bolognese'
+require 'nokogiri'
+require 'pathname'
+require 'optparse'
 
-# Path to the XML file
-xml_file = ARGV[0] || "/Users/selgebali/Documents/VSCode/schema.datacite.org-linked-data/Input files/roundtrip.c14n.xml"
+DEFAULT_XSD = Pathname.new(__dir__).join('..', 'schemas', 'xsd', 'metadata-4.6.xsd').expand_path.to_s
 
-# Read the XML file
-xml_content = File.read(xml_file)
+options = { xsd: DEFAULT_XSD }
+OptionParser.new do |opts|
+  opts.banner = "Usage: validate_xml.rb [--xsd <path>] <xml-file>"
+  opts.on('--xsd PATH', "XSD schema path (default: #{DEFAULT_XSD})") { |p| options[:xsd] = p }
+end.parse!
 
-# Create a Metadata object from the XML
-metadata = Bolognese::Metadata.new(input: xml_content, from: "datacite")
+xml_path = ARGV[0]
+abort "Usage: validate_xml.rb [--xsd <path>] <xml-file>" if xml_path.nil?
+abort "XSD not found: #{options[:xsd]}" unless File.exist?(options[:xsd])
+abort "XML not found: #{xml_path}" unless File.exist?(xml_path)
 
-# Check if valid
-if metadata.valid?
-  puts "✓ XML is valid against DataCite (kernel-4) schema"
-  puts "\nValidation: PASSED"
+# Load the schema with its directory as cwd so <xs:include> can resolve sibling files.
+xsd_path = File.expand_path(options[:xsd])
+xsd = Dir.chdir(File.dirname(xsd_path)) do
+  Nokogiri::XML::Schema(File.read(File.basename(xsd_path)))
+end
+doc = Nokogiri::XML(File.read(xml_path))
+errors = xsd.validate(doc)
+
+if errors.empty?
+  puts "OK: #{xml_path} validates against #{File.basename(options[:xsd])}"
+  exit 0
 else
-  puts "✗ XML validation failed with errors:"
-  puts "\n#{metadata.errors}"
+  warn "Validation FAILED (#{errors.size} error(s)):"
+  errors.each { |e| warn "  - #{e}" }
   exit 1
 end

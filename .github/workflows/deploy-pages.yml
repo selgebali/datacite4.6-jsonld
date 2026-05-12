@@ -29,6 +29,14 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Validate JSON Schema profiles
+        run: |
+          npm install -g ajv-cli@5
+          for f in validation-and-conversion/schemas/schema-profiles/*.json validation-and-conversion/schemas/schema-profiles/*.jsonld; do
+            echo "=== $f ==="
+            ajv-cli --strict=false --spec=draft2019 compile -s "$f"
+          done
+
       - name: Build site
         run: |
           # Copy staging vocabulary as the website base

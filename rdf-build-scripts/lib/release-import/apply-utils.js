@@ -45,6 +45,9 @@ function ensureJsonFileMatchesOrCreate(filePath, value, changedFiles, label) {
 }
 
 function formatContextEntry(key, value) {
+  if (value === undefined) {
+    throw new Error(`Context entry "${key}" has no value; refusing to insert undefined into fullcontext.jsonld`);
+  }
   return JSON.stringify({ [key]: value }, null, 4)
     .trim()
     .replace(/^\{\n/, "")
@@ -185,6 +188,7 @@ module.exports = {
   buildReleaseMatrix,
   ensureContextEntries,
   ensureJsonFileMatchesOrCreate,
+  formatContextEntry,
   removeContextEntries,
   updateSchemeFile,
   updateSchemeFileForRemoval,
