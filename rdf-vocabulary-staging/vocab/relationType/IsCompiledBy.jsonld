@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsCompiledBy",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCompiledBy",
   "type": "Concept",
   "prefLabel": "IsCompiledBy",
   "notation": "IsCompiledBy",
   "definition": "indicates B is used to compile or create A",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "May indicate a traditional text compilation, or the compiler program used to generate executable software.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsCompiledBy\">http://d-nb.info/gnd/4513749-3</relatedIdentifier>"

@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Dataset",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dataset",
   "type": "Concept",
   "prefLabel": "Dataset",
   "notation": "Dataset",
   "definition": "Data encoded in a defined structure.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "Data file or files",
   "example": [
     "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.1594/pangaea.804876"

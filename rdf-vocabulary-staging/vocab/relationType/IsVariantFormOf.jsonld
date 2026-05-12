@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsVariantFormOf",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVariantFormOf",
   "type": "Concept",
   "prefLabel": "IsVariantFormOf",
   "notation": "IsVariantFormOf",
   "definition": "indicates A is a variant or different form of B",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "Use for a different form of one thing. May be used for different software operating systems or compiler formats.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsVariantFormOf\">10.1234/8675</relatedIdentifier>"

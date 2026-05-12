@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Withdrawn",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn",
   "type": "Concept",
   "prefLabel": "Withdrawn",
   "notation": "Withdrawn",
   "definition": "The date the resource is removed.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
   "scopeNote": "It is good practice to include a Description that indicates the reason for the retraction or withdrawal."
 }

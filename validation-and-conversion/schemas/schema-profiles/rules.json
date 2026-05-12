@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://selgebali.github.io/datacite4.6-jsonld/datacite4.6-rules.json",
+  "$id": "https://schema.stage.datacite.org/linked-data/schema-profiles/rules.json",
   "title": "DataCite Metadata Schema v4.6 – Validation Rules (API-aligned)",
   "description": "Validation profile for DataCite 4.6 JSON(-LD) records aligned to the REST API attributes (not the JSON:API envelope). Includes required fields, cardinalities, and controlled lists.",
   "type": "object",

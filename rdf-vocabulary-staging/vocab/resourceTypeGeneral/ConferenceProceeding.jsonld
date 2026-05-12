@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/ConferenceProceeding",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferenceProceeding",
   "type": "Concept",
   "prefLabel": "ConferenceProceeding",
   "notation": "ConferenceProceeding",
   "definition": "Collection of academic papers published in the context of an academic conference.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "<resourceType resourceTypeGeneral=\"ConferenceProceeding\">Annual Convention</resourceType>",
   "closeMatch": [
     "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"

@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/Producer",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Producer",
   "type": "Concept",
   "prefLabel": "Producer",
   "notation": "Producer",
   "definition": "Typically, a person or organisation responsible for the artistry and form of a media product.",
   "scopeNote": "In the data industry, this may be a company producing DVDs that package data for future dissemination by a distributor.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/contributorType"
 }

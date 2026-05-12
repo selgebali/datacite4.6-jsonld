@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Software",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Software",
   "type": "Concept",
   "prefLabel": "Software",
   "notation": "Software",
   "definition": "A computer program other than a computational notebook, in either source code (text) or compiled form. Use this type for general software components supporting scholarly research. Use the ComputationalNotebook value for virtual notebooks.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "Software supporting scholarly research",
   "example": [
     "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.4225/03/5954F738EE5AA"

@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/Methods",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Methods",
   "type": "Concept",
   "prefLabel": "Methods",
   "notation": "Methods",
   "definition": "The methodology employed for the study or research.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType",
   "scopeNote": "Recommended for discovery. Full documentation about methods supports open science.",
   "example": [
     "https://data.datacite.org/application/vnd.datacite.datacite+xml/10.6078/D1K01X"

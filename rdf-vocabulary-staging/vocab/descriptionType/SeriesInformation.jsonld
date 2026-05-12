@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/SeriesInformation",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/SeriesInformation",
   "type": "Concept",
   "prefLabel": "SeriesInformation",
   "notation": "SeriesInformation",
   "definition": "Information about a repeating series, such as volume, issue, number.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType",
   "scopeNote": "The information previously encoded as a description with this type should now be explicitly provided in tagged fields using the new RelatedItem property with relationType “IsPublishedIn” selected."
 }

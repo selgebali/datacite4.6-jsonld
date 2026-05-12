@@ -1,6 +1,6 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/w3id",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id",
   "type": "Concept",
   "prefLabel": "w3id",
   "altLabel": "Permanent identifier for Web applications",
@@ -9,6 +9,6 @@
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"w3id\" relationType=\"IsCitedBy\">https://w3id.org/games/spec/coil#Coil_Bomb_Die_Of_Age</relatedIdentifier>"
   ],
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType"
 }
