@@ -1,3 +1,4 @@
+const fs = require("fs");
 const path = require("path");
 const {
   cleanDefinitionText,
@@ -229,6 +230,37 @@ function readCanonicalJsonFiles(paths) {
   }));
 }
 
+function buildDefaultPropertyTemplate(repoRoot, propertyName) {
+  const contextPath = path.join(repoRoot, "context", "fullcontext.jsonld");
+  const contextJson = readJson(contextPath);
+  const context = contextJson["@context"] || {};
+  const propertyPrefix = context.property;
+  if (!propertyPrefix) {
+    throw new Error(`Missing "property" prefix in ${contextPath}; cannot generate template for ${propertyName}`);
+  }
+  const namespace = propertyPrefix.replace(/property\/$/, "");
+  return {
+    "@context": {
+      rdfs: "http://www.w3.org/2000/01/rdf-schema#",
+      rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      schema: namespace,
+      datacite: namespace,
+    },
+    "@id": `${propertyPrefix}${propertyName}`,
+    "@type": "rdf:Property",
+    "rdfs:label": propertyName,
+    "rdfs:comment": "",
+  };
+}
+
+function loadOrSeedPropertyFile(repoRoot, propertyName) {
+  const propertyPath = canonicalPropertyPath(repoRoot, propertyName);
+  if (fs.existsSync(propertyPath)) {
+    return readJson(propertyPath);
+  }
+  return buildDefaultPropertyTemplate(repoRoot, propertyName);
+}
+
 function collectContextEntries(repoRoot, keys) {
   const contextPath = path.join(repoRoot, "context", "fullcontext.jsonld");
   const contextJson = readJson(contextPath);
@@ -258,11 +290,9 @@ function buildControlledListTargets(repoRoot, descriptor, terms, previousVersion
 }
 
 function buildSimplePropertyInputs(repoRoot, descriptor) {
-  const propertyPath = canonicalPropertyPath(repoRoot, descriptor.propertyName);
-  const propertyFile = readJson(propertyPath);
   return {
     contextEntries: collectContextEntries(repoRoot, descriptor.contextKeys),
-    propertyFile,
+    propertyFile: loadOrSeedPropertyFile(repoRoot, descriptor.propertyName),
     releaseMatrixChanges: descriptor.releaseMatrixChanges,
   };
 }
@@ -514,7 +544,7 @@ async function detectSchemaStructureChanges(repoRoot, version, previousVersion, 
     }
 
     const localPropertyPath = canonicalPropertyPath(repoRoot, descriptor.propertyName);
-    const propertyFile = readJson(localPropertyPath);
+    const propertyFile = loadOrSeedPropertyFile(repoRoot, descriptor.propertyName);
     if (definitions.length) {
       propertyFile["rdfs:comment"] = definitions[0].definition;
     }
