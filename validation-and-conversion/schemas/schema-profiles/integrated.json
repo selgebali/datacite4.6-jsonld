@@ -2,28 +2,42 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "https://schema.stage.datacite.org/linked-data/schema-profiles/integrated.json",
   "$anchor": "attributes",
-  "$comment": "BUNDLED PROFILE: This single file contains (1) the root attributes schema for client-submitted DataCite 4.6 metadata, (2) centralised enumerations in $defs (with iriMap bridges), (3) a JSON-LD context under profile.@context for semantics, (4) a JSON:API response validator (responseProfile), (5) a JSON:API submission validator (submitProfile), and (6) an exportProfile with language-tag conversion rules for RDF/JSON-LD export. Controlled lists are fully embedded in this bundled profile; enum IRIs resolve to fragment identifiers within this document under '#enums/<list>/<term>' so no external enum_lists are required. ==== ROOT ATTRIBUTES SCHEMA (client-submitted payload, mirrors DataCite REST 'attributes') ====",
-  "title": "DataCite Metadata Schema v4.6 – REST API profile (bundled)",
-  "description": "Self‑contained JSON Schema and JSON‑LD context for validating and semantically describing DataCite 4.6 metadata as submitted to the DataCite REST API.  This profile reflects the property names and object structures used by the API and inlines all controlled vocabularies.",
+  "$comment": "==== ENUMERATIONS ($defs) \u2014 validation enums plus iriMap to stable IRIs used during semantic export ====",
+  "title": "DataCite Metadata Schema v4.6 \u2013 REST API profile (bundled)",
+  "description": "Self\u2011contained JSON Schema and JSON\u2011LD context for validating and semantically describing DataCite 4.6 metadata as submitted to the DataCite REST API.  This profile reflects the property names and object structures used by the API and inlines all controlled vocabularies.",
   "type": "object",
   "properties": {
     "identifiers": {
       "type": "array",
-      "description": "Additional non‑DOI identifiers for the resource (e.g., ISBN, local accession number). Note: Do not duplicate values across 'identifiers' and 'alternateIdentifiers'; choose one field for a given identifier.",
+      "description": "Additional non\u2011DOI identifiers for the resource (e.g., ISBN, local accession number). Note: Do not duplicate values across 'identifiers' and 'alternateIdentifiers'; choose one field for a given identifier.",
       "items": {
         "type": "object",
         "properties": {
-          "identifier": { "type": "string", "description": "The identifier value." },
-          "identifierType": { "type": "string", "description": "Type of the identifier (e.g. Local accession number, ISBN, etc.)." }
+          "identifier": {
+            "type": "string",
+            "description": "The identifier value."
+          },
+          "identifierType": {
+            "type": "string",
+            "description": "Type of the identifier (e.g. Local accession number, ISBN, etc.)."
+          }
         },
-        "required": ["identifier", "identifierType"],
+        "required": [
+          "identifier",
+          "identifierType"
+        ],
         "additionalProperties": false
-      }
-      ,
+      },
       "examples": [
         [
-          { "identifierType": "ISBN", "identifier": "978-3-16-148410-0" },
-          { "identifierType": "Local accession number", "identifier": "ABC-12345" }
+          {
+            "identifierType": "ISBN",
+            "identifier": "978-3-16-148410-0"
+          },
+          {
+            "identifierType": "Local accession number",
+            "identifier": "ABC-12345"
+          }
         ]
       ]
     },
@@ -33,26 +47,35 @@
       "items": {
         "type": "object",
         "properties": {
-          "alternateIdentifier": { "type": "string", "description": "An identifier, distinct from the DOI and internal IDs, for the same instance of the resource (free text)." },
-          "alternateIdentifierType": { "type": "string", "description": "Type/namespace of the alternate identifier (free text, e.g., Local accession number, Inventory number, Serial number)." }
+          "alternateIdentifier": {
+            "type": "string",
+            "description": "An identifier, distinct from the DOI and internal IDs, for the same instance of the resource (free text)."
+          },
+          "alternateIdentifierType": {
+            "type": "string",
+            "description": "Type/namespace of the alternate identifier (free text, e.g., Local accession number, Inventory number, Serial number)."
+          }
         },
-        "required": ["alternateIdentifier", "alternateIdentifierType"],
+        "required": [
+          "alternateIdentifier",
+          "alternateIdentifierType"
+        ],
         "additionalProperties": false
-      }
-      ,
+      },
       "examples": [
         [
-          { "alternateIdentifierType": "Local accession number", "alternateIdentifier": "E-GEOD-34814" }
+          {
+            "alternateIdentifierType": "Local accession number",
+            "alternateIdentifier": "E-GEOD-34814"
+          }
         ]
       ]
     },
-
     "doi": {
       "type": "string",
       "description": "The DOI assigned to the resource.",
       "pattern": "^10\\.[0-9]{4,}/[-._;()/:a-zA-Z0-9]+$"
     },
-
     "creators": {
       "type": "array",
       "minItems": 1,
@@ -64,34 +87,88 @@
             "name": "Doe, Jane",
             "nameType": "Personal",
             "nameIdentifiers": [
-              { "nameIdentifier": "https://orcid.org/0000-0002-1825-0097", "nameIdentifierScheme": "ORCID" }
+              {
+                "nameIdentifier": "https://orcid.org/0000-0002-1825-0097",
+                "nameIdentifierScheme": "ORCID"
+              }
             ],
-            "affiliation": [ { "name": "Example University" } ]
+            "affiliation": [
+              {
+                "name": "Example University"
+              }
+            ]
           }
         ]
       ],
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string", "description": "Full name of the creator or organization." },
-          "nameType": { "$ref": "#/$defs/nameType/enumSchema" },
-          "givenName": { "type": "string" },
-          "familyName": { "type": "string" },
+          "name": {
+            "type": "string",
+            "description": "Full name of the creator or organization."
+          },
+          "nameType": {
+            "$ref": "#/$defs/nameType/enumSchema"
+          },
+          "givenName": {
+            "type": "string"
+          },
+          "familyName": {
+            "type": "string"
+          },
           "affiliation": {
             "type": "array",
             "description": "Institutional affiliations for the creator.",
             "items": {
               "type": "object",
               "properties": {
-                "name": { "type": "string", "description": "Name of the affiliation." },
-                "affiliationIdentifier": { "type": "string", "description": "Identifier for the affiliation (e.g. ROR, ISNI)." },
-                "affiliationIdentifierScheme": { "type": "string", "description": "Scheme of the affiliation identifier." },
-                "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." }
+                "name": {
+                  "type": "string",
+                  "description": "Name of the affiliation."
+                },
+                "affiliationIdentifier": {
+                  "type": "string",
+                  "description": "Identifier for the affiliation (e.g. ROR, ISNI)."
+                },
+                "affiliationIdentifierScheme": {
+                  "type": "string",
+                  "description": "Scheme of the affiliation identifier."
+                },
+                "schemeUri": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "URI of the identifier scheme."
+                }
               },
-              "required": ["name"],
+              "required": [
+                "name"
+              ],
               "allOf": [
-                { "if": { "required": ["affiliationIdentifier"] }, "then": { "required": ["affiliationIdentifierScheme", "schemeUri"] } },
-                { "if": { "required": ["affiliationIdentifierScheme"] }, "then": { "required": ["schemeUri"] } }
+                {
+                  "if": {
+                    "required": [
+                      "affiliationIdentifier"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "affiliationIdentifierScheme",
+                      "schemeUri"
+                    ]
+                  }
+                },
+                {
+                  "if": {
+                    "required": [
+                      "affiliationIdentifierScheme"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "schemeUri"
+                    ]
+                  }
+                }
               ],
               "additionalProperties": false
             }
@@ -102,22 +179,59 @@
             "items": {
               "type": "object",
               "properties": {
-                "nameIdentifier": { "type": "string", "description": "The identifier." },
-                "nameIdentifierScheme": { "type": "string", "description": "The identifier scheme (e.g. ORCID, ISNI, ROR, personal URL)." },
-                "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." }
+                "nameIdentifier": {
+                  "type": "string",
+                  "description": "The identifier."
+                },
+                "nameIdentifierScheme": {
+                  "type": "string",
+                  "description": "The identifier scheme (e.g. ORCID, ISNI, ROR, personal URL)."
+                },
+                "schemeUri": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "URI of the identifier scheme."
+                }
               },
-              "required": ["nameIdentifier", "nameIdentifierScheme"],
+              "required": [
+                "nameIdentifier",
+                "nameIdentifierScheme"
+              ],
               "additionalProperties": false
             }
           }
         },
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "additionalProperties": false,
         "allOf": [
           {
-            "if": { "properties": { "nameType": { "const": "Organizational" } }, "required": ["nameType"] },
+            "if": {
+              "properties": {
+                "nameType": {
+                  "const": "Organizational"
+                }
+              },
+              "required": [
+                "nameType"
+              ]
+            },
             "then": {
-              "not": { "anyOf": [ { "required": ["givenName"] }, { "required": ["familyName"] } ] }
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "givenName"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "familyName"
+                    ]
+                  }
+                ]
+              }
             }
           }
         ]
@@ -130,11 +244,21 @@
       "items": {
         "type": "object",
         "properties": {
-          "title": { "type": "string", "description": "The title text." },
-          "titleType": { "$ref": "#/$defs/titleType/enumSchema" },
-          "lang": { "type": "string", "description": "IETF BCP 47 language tag, e.g. 'en' or 'en-GB'." }
+          "title": {
+            "type": "string",
+            "description": "The title text."
+          },
+          "titleType": {
+            "$ref": "#/$defs/titleType/enumSchema"
+          },
+          "lang": {
+            "type": "string",
+            "description": "IETF BCP 47 language tag, e.g. 'en' or 'en-GB'."
+          }
         },
-        "required": ["title"],
+        "required": [
+          "title"
+        ],
         "additionalProperties": false
       }
     },
@@ -142,19 +266,58 @@
       "type": "object",
       "description": "Information about the entity that publishes the resource.",
       "properties": {
-        "name": { "type": "string", "description": "Publisher name (free text)." },
-        "publisherIdentifier": { "type": "string", "description": "Persistent identifier for the publisher (e.g., ROR, ISNI)." },
-        "publisherIdentifierScheme": { "type": "string", "description": "Identifier scheme for the publisher (e.g., ROR, ISNI)." },
-        "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." },
-        "lang": { "type": "string", "description": "IETF BCP 47 language tag for the publisher name." }
+        "name": {
+          "type": "string",
+          "description": "Publisher name (free text)."
+        },
+        "publisherIdentifier": {
+          "type": "string",
+          "description": "Persistent identifier for the publisher (e.g., ROR, ISNI)."
+        },
+        "publisherIdentifierScheme": {
+          "type": "string",
+          "description": "Identifier scheme for the publisher (e.g., ROR, ISNI)."
+        },
+        "schemeUri": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI of the identifier scheme."
+        },
+        "lang": {
+          "type": "string",
+          "description": "IETF BCP 47 language tag for the publisher name."
+        }
       },
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "additionalProperties": false,
       "allOf": [
-        { "if": { "required": ["publisherIdentifier"] }, "then": { "required": ["publisherIdentifierScheme"] } },
-        { "if": { "required": ["publisherIdentifierScheme"] }, "then": { "required": ["schemeUri"] } }
-      ]
-      ,
+        {
+          "if": {
+            "required": [
+              "publisherIdentifier"
+            ]
+          },
+          "then": {
+            "required": [
+              "publisherIdentifierScheme"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "publisherIdentifierScheme"
+            ]
+          },
+          "then": {
+            "required": [
+              "schemeUri"
+            ]
+          }
+        }
+      ],
       "examples": [
         {
           "name": "Helmholtz Centre Potsdam - GFZ German Research Centre for Geosciences",
@@ -169,19 +332,40 @@
       "type": "object",
       "description": "Information about the container in which the resource is published (e.g. journal, book, collection).",
       "properties": {
-        "type": { "type": "string", "description": "Type of the container (e.g. 'Journal', 'Collection')." },
-        "title": { "type": "string", "description": "Name of the container." },
-        "identifier": { "type": "string", "description": "Identifier for the container (e.g. ISSN)." },
-        "identifierType": { "type": "string", "description": "Type of the container identifier (e.g. ISSN)." }
+        "type": {
+          "type": "string",
+          "description": "Type of the container (e.g. 'Journal', 'Collection')."
+        },
+        "title": {
+          "type": "string",
+          "description": "Name of the container."
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Identifier for the container (e.g. ISSN)."
+        },
+        "identifierType": {
+          "type": "string",
+          "description": "Type of the container identifier (e.g. ISSN)."
+        }
       },
-      "required": ["type", "title"],
+      "required": [
+        "type",
+        "title"
+      ],
       "additionalProperties": false
     },
     "publicationYear": {
       "description": "Four-digit year (YYYY) when the resource was or will be made publicly available. For embargoed resources, use the year the embargo ends. For dynamic data or software with multiple releases, provide details under 'dates'. If digitised, give the publication year of the digital version.",
       "anyOf": [
-        { "type": "string", "pattern": "^\\d{4}$" },
-        { "type": "integer", "minimum": 0 }
+        {
+          "type": "string",
+          "pattern": "^\\d{4}$"
+        },
+        {
+          "type": "integer",
+          "minimum": 0
+        }
       ]
     },
     "subjects": {
@@ -190,14 +374,36 @@
       "items": {
         "type": "object",
         "properties": {
-          "subject": { "type": "string", "description": "Subject keyword or term (free text)." },
-          "subjectScheme": { "type": "string", "description": "Name of the subject scheme or authority (e.g., LCSH, ANZSRC)." },
-          "schemeUri": { "type": "string", "format": "uri", "description": "URI of the subject scheme." },
-          "valueUri": { "type": "string", "format": "uri", "description": "URI of the subject term (if available)." },
-          "classificationCode": { "type": "string", "description": "Classification code within the scheme (useful when no value URI exists)." },
-          "lang": { "type": "string", "description": "IETF BCP 47 language tag for the subject label (e.g., 'en')." }
+          "subject": {
+            "type": "string",
+            "description": "Subject keyword or term (free text)."
+          },
+          "subjectScheme": {
+            "type": "string",
+            "description": "Name of the subject scheme or authority (e.g., LCSH, ANZSRC)."
+          },
+          "schemeUri": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI of the subject scheme."
+          },
+          "valueUri": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI of the subject term (if available)."
+          },
+          "classificationCode": {
+            "type": "string",
+            "description": "Classification code within the scheme (useful when no value URI exists)."
+          },
+          "lang": {
+            "type": "string",
+            "description": "IETF BCP 47 language tag for the subject label (e.g., 'en')."
+          }
         },
-        "required": ["subject"],
+        "required": [
+          "subject"
+        ],
         "additionalProperties": false,
         "examples": [
           [
@@ -230,34 +436,88 @@
             "nameType": "Personal",
             "contributorType": "DataCurator",
             "nameIdentifiers": [
-              { "nameIdentifier": "https://orcid.org/0000-0001-2345-6789", "nameIdentifierScheme": "ORCID" }
+              {
+                "nameIdentifier": "https://orcid.org/0000-0001-2345-6789",
+                "nameIdentifierScheme": "ORCID"
+              }
             ],
-            "affiliation": [ { "name": "Example Institute", "affiliationIdentifier": "https://ror.org/05dxps055", "affiliationIdentifierScheme": "ROR", "schemeUri": "https://ror.org" } ]
+            "affiliation": [
+              {
+                "name": "Example Institute",
+                "affiliationIdentifier": "https://ror.org/05dxps055",
+                "affiliationIdentifierScheme": "ROR",
+                "schemeUri": "https://ror.org"
+              }
+            ]
           }
         ]
       ],
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string", "description": "Full name or organisation name." },
-          "nameType": { "$ref": "#/$defs/nameType/enumSchema" },
-          "givenName": { "type": "string" },
-          "familyName": { "type": "string" },
-          "contributorType": { "$ref": "#/$defs/contributorType/enumSchema" },
+          "name": {
+            "type": "string",
+            "description": "Full name or organisation name."
+          },
+          "nameType": {
+            "$ref": "#/$defs/nameType/enumSchema"
+          },
+          "givenName": {
+            "type": "string"
+          },
+          "familyName": {
+            "type": "string"
+          },
+          "contributorType": {
+            "$ref": "#/$defs/contributorType/enumSchema"
+          },
           "affiliation": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "name": { "type": "string" },
-                "affiliationIdentifier": { "type": "string" },
-                "affiliationIdentifierScheme": { "type": "string" },
-                "schemeUri": { "type": "string", "format": "uri" }
+                "name": {
+                  "type": "string"
+                },
+                "affiliationIdentifier": {
+                  "type": "string"
+                },
+                "affiliationIdentifierScheme": {
+                  "type": "string"
+                },
+                "schemeUri": {
+                  "type": "string",
+                  "format": "uri"
+                }
               },
-              "required": ["name"],
+              "required": [
+                "name"
+              ],
               "allOf": [
-                { "if": { "required": ["affiliationIdentifier"] }, "then": { "required": ["affiliationIdentifierScheme"] } },
-                { "if": { "required": ["affiliationIdentifierScheme"] }, "then": { "required": ["schemeUri"] } }
+                {
+                  "if": {
+                    "required": [
+                      "affiliationIdentifier"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "affiliationIdentifierScheme"
+                    ]
+                  }
+                },
+                {
+                  "if": {
+                    "required": [
+                      "affiliationIdentifierScheme"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "schemeUri"
+                    ]
+                  }
+                }
               ],
               "additionalProperties": false
             }
@@ -268,22 +528,60 @@
             "items": {
               "type": "object",
               "properties": {
-                "nameIdentifier": { "type": "string", "description": "The identifier." },
-                "nameIdentifierScheme": { "type": "string", "description": "The identifier scheme (e.g. ORCID, ISNI, personal URL)." },
-                "schemeUri": { "type": "string", "format": "uri", "description": "URI of the identifier scheme." }
+                "nameIdentifier": {
+                  "type": "string",
+                  "description": "The identifier."
+                },
+                "nameIdentifierScheme": {
+                  "type": "string",
+                  "description": "The identifier scheme (e.g. ORCID, ISNI, personal URL)."
+                },
+                "schemeUri": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "URI of the identifier scheme."
+                }
               },
-              "required": ["nameIdentifier", "nameIdentifierScheme"],
+              "required": [
+                "nameIdentifier",
+                "nameIdentifierScheme"
+              ],
               "additionalProperties": false
             }
           }
         },
-        "required": ["name", "contributorType"],
+        "required": [
+          "name",
+          "contributorType"
+        ],
         "additionalProperties": false,
         "allOf": [
           {
-            "if": { "properties": { "nameType": { "const": "Organizational" } }, "required": ["nameType"] },
+            "if": {
+              "properties": {
+                "nameType": {
+                  "const": "Organizational"
+                }
+              },
+              "required": [
+                "nameType"
+              ]
+            },
             "then": {
-              "not": { "anyOf": [ { "required": ["givenName"] }, { "required": ["familyName"] } ] }
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "givenName"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "familyName"
+                    ]
+                  }
+                ]
+              }
             }
           }
         ]
@@ -299,41 +597,89 @@
             "type": "string",
             "description": "Date value using W3CDTF (e.g., YYYY, YYYY-MM, YYYY-MM-DD, YYYY-MM-DDThh:mm:ssZ); date ranges in RKMS-ISO8601 (e.g., 2004-03-02/2005-06-02). Years BCE must be prefixed with '-', e.g., -0054."
           },
-          "dateType": { "$ref": "#/$defs/dateType/enumSchema" },
-          "dateInformation": { "type": "string" }
+          "dateType": {
+            "$ref": "#/$defs/dateType/enumSchema"
+          },
+          "dateInformation": {
+            "type": "string"
+          }
         },
-        "required": ["date", "dateType"],
+        "required": [
+          "date",
+          "dateType"
+        ],
         "additionalProperties": false,
         "examples": [
           [
-            { "date": "2022-08-01", "dateType": "Issued" },
-            { "date": "2020-01-01", "dateType": "Other", "dateInformation": "Conceptualized" },
-            { "date": "2004-03-02/2005-06-02", "dateType": "Coverage" },
-            { "date": "-0054", "dateType": "Other", "dateInformation": "55 BCE" }
+            {
+              "date": "2022-08-01",
+              "dateType": "Issued"
+            },
+            {
+              "date": "2020-01-01",
+              "dateType": "Other",
+              "dateInformation": "Conceptualized"
+            },
+            {
+              "date": "2004-03-02/2005-06-02",
+              "dateType": "Coverage"
+            },
+            {
+              "date": "-0054",
+              "dateType": "Other",
+              "dateInformation": "55 BCE"
+            }
           ]
         ]
       }
     },
-    "language": { "type": "string", "description": "Primary language of the resource (IETF BCP 47 code)." },
+    "language": {
+      "type": "string",
+      "description": "Primary language of the resource (IETF BCP 47 code)."
+    },
     "types": {
       "type": "object",
       "description": "Resource type classifications.",
       "$comment": "DataCite REST accepts only 'resourceTypeGeneral' (required) and 'resourceType' (optional). The optional crosswalk fields ('schemaOrg','bibtex','citeproc','ris') are profile-only and must not be sent to the DataCite API; they are intended for export/mapping only.",
       "properties": {
-        "resourceType": { "type": "string", "description": "Free‑text description of the resource type." },
-        "resourceTypeGeneral": { "$ref": "#/$defs/resourceTypeGeneral/enumSchema" },
-        "schemaOrg": { "type": "string", "format": "uri" },
-        "bibtex": { "type": "string" },
-        "citeproc": { "type": "string" },
-        "ris": { "type": "string" }
+        "resourceType": {
+          "type": "string",
+          "description": "Free\u2011text description of the resource type."
+        },
+        "resourceTypeGeneral": {
+          "$ref": "#/$defs/resourceTypeGeneral/enumSchema"
+        },
+        "schemaOrg": {
+          "type": "string",
+          "format": "uri"
+        },
+        "bibtex": {
+          "type": "string"
+        },
+        "citeproc": {
+          "type": "string"
+        },
+        "ris": {
+          "type": "string"
+        }
       },
-      "required": ["resourceTypeGeneral"],
-      "additionalProperties": false
-      ,
+      "required": [
+        "resourceTypeGeneral"
+      ],
+      "additionalProperties": false,
       "examples": [
-        { "resourceType": "Census Data", "resourceTypeGeneral": "Dataset" },
-        { "resourceType": "Specimen", "resourceTypeGeneral": "PhysicalObject" },
-        { "resourceType": "Executable Workflow", "resourceTypeGeneral": "Workflow" }
+        {
+          "resourceType": "Census Data",
+          "resourceTypeGeneral": "Dataset"
+        },
+        {
+          "resourceType": "Specimen",
+          "resourceTypeGeneral": "PhysicalObject"
+        },
+        {
+          "resourceType": "Executable Workflow",
+          "resourceTypeGeneral": "Workflow"
+        }
       ]
     },
     "relatedIdentifiers": {
@@ -364,30 +710,84 @@
       "items": {
         "type": "object",
         "properties": {
-          "relatedIdentifier": { "type": "string" },
-          "relatedIdentifierType": { "$ref": "#/$defs/relatedIdentifierType/enumSchema" },
-          "relationType": { "$ref": "#/$defs/relationType/enumSchema" },
-          "resourceTypeGeneral": { "$ref": "#/$defs/resourceTypeGeneral/enumSchema" },
-          "relatedMetadataScheme": { "type": "string" },
-          "schemeUri": { "type": "string", "format": "uri" },
-          "schemeType": { "type": "string" }
+          "relatedIdentifier": {
+            "type": "string"
+          },
+          "relatedIdentifierType": {
+            "$ref": "#/$defs/relatedIdentifierType/enumSchema"
+          },
+          "relationType": {
+            "$ref": "#/$defs/relationType/enumSchema"
+          },
+          "resourceTypeGeneral": {
+            "$ref": "#/$defs/resourceTypeGeneral/enumSchema"
+          },
+          "relatedMetadataScheme": {
+            "type": "string"
+          },
+          "schemeUri": {
+            "type": "string",
+            "format": "uri"
+          },
+          "schemeType": {
+            "type": "string"
+          }
         },
-        "required": ["relatedIdentifier", "relatedIdentifierType", "relationType"],
+        "required": [
+          "relatedIdentifier",
+          "relatedIdentifierType",
+          "relationType"
+        ],
         "additionalProperties": false,
         "allOf": [
           {
-            "if": { "properties": { "relationType": { "enum": ["HasMetadata", "IsMetadataFor"] } }, "required": ["relationType"] },
+            "if": {
+              "properties": {
+                "relationType": {
+                  "enum": [
+                    "HasMetadata",
+                    "IsMetadataFor"
+                  ]
+                }
+              },
+              "required": [
+                "relationType"
+              ]
+            },
             "then": {
               "allOf": [
-                { "if": { "required": ["relatedMetadataScheme"] }, "then": { "required": ["schemeUri"] } }
+                {
+                  "if": {
+                    "required": [
+                      "relatedMetadataScheme"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "schemeUri"
+                    ]
+                  }
+                }
               ]
             },
             "else": {
               "not": {
                 "anyOf": [
-                  { "required": ["relatedMetadataScheme"] },
-                  { "required": ["schemeUri"] },
-                  { "required": ["schemeType"] }
+                  {
+                    "required": [
+                      "relatedMetadataScheme"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "schemeUri"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "schemeType"
+                    ]
+                  }
                 ]
               }
             }
@@ -401,23 +801,52 @@
       "items": {
         "type": "object",
         "properties": {
-          "relatedItemType": { "$ref": "#/$defs/resourceTypeGeneral/enumSchema" },
-          "relationType": { "$ref": "#/$defs/relationTypeForRelatedItem" },
+          "relatedItemType": {
+            "$ref": "#/$defs/resourceTypeGeneral/enumSchema"
+          },
+          "relationType": {
+            "$ref": "#/$defs/relationTypeForRelatedItem"
+          },
           "relatedItemIdentifier": {
             "type": "object",
             "properties": {
-              "relatedItemIdentifier": { "type": "string" },
-              "relatedItemIdentifierType": { "$ref": "#/$defs/relatedIdentifierType/enumSchema" },
-              "relatedMetadataScheme": { "type": "string" },
-              "schemeUri": { "type": "string", "format": "uri" },
-              "schemeType": { "type": "string" }
+              "relatedItemIdentifier": {
+                "type": "string"
+              },
+              "relatedItemIdentifierType": {
+                "$ref": "#/$defs/relatedIdentifierType/enumSchema"
+              },
+              "relatedMetadataScheme": {
+                "type": "string"
+              },
+              "schemeUri": {
+                "type": "string",
+                "format": "uri"
+              },
+              "schemeType": {
+                "type": "string"
+              }
             },
-            "required": ["relatedItemIdentifier", "relatedItemIdentifierType"],
+            "required": [
+              "relatedItemIdentifier",
+              "relatedItemIdentifierType"
+            ],
             "additionalProperties": false,
             "allOf": [
               {
-                "if": { "properties": { "relatedMetadataScheme": {} }, "required": ["relatedMetadataScheme"] },
-                "then": { "required": ["schemeUri"] }
+                "if": {
+                  "properties": {
+                    "relatedMetadataScheme": {}
+                  },
+                  "required": [
+                    "relatedMetadataScheme"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "schemeUri"
+                  ]
+                }
               }
             ]
           },
@@ -426,17 +855,51 @@
             "items": {
               "type": "object",
               "properties": {
-                "name": { "type": "string" },
-                "nameType": { "$ref": "#/$defs/nameType/enumSchema" },
-                "givenName": { "type": "string" },
-                "familyName": { "type": "string" }
+                "name": {
+                  "type": "string"
+                },
+                "nameType": {
+                  "$ref": "#/$defs/nameType/enumSchema"
+                },
+                "givenName": {
+                  "type": "string"
+                },
+                "familyName": {
+                  "type": "string"
+                }
               },
-              "required": ["name"],
+              "required": [
+                "name"
+              ],
               "additionalProperties": false,
               "allOf": [
                 {
-                  "if": { "properties": { "nameType": { "const": "Organizational" } }, "required": ["nameType"] },
-                  "then": { "not": { "anyOf": [ { "required": ["givenName"] }, { "required": ["familyName"] } ] } }
+                  "if": {
+                    "properties": {
+                      "nameType": {
+                        "const": "Organizational"
+                      }
+                    },
+                    "required": [
+                      "nameType"
+                    ]
+                  },
+                  "then": {
+                    "not": {
+                      "anyOf": [
+                        {
+                          "required": [
+                            "givenName"
+                          ]
+                        },
+                        {
+                          "required": [
+                            "familyName"
+                          ]
+                        }
+                      ]
+                    }
+                  }
                 }
               ]
             }
@@ -447,18 +910,55 @@
             "items": {
               "type": "object",
               "properties": {
-                "name": { "type": "string" },
-                "nameType": { "$ref": "#/$defs/nameType/enumSchema" },
-                "givenName": { "type": "string" },
-                "familyName": { "type": "string" },
-                "contributorType": { "$ref": "#/$defs/contributorType/enumSchema" }
+                "name": {
+                  "type": "string"
+                },
+                "nameType": {
+                  "$ref": "#/$defs/nameType/enumSchema"
+                },
+                "givenName": {
+                  "type": "string"
+                },
+                "familyName": {
+                  "type": "string"
+                },
+                "contributorType": {
+                  "$ref": "#/$defs/contributorType/enumSchema"
+                }
               },
-              "required": ["name", "contributorType"],
+              "required": [
+                "name",
+                "contributorType"
+              ],
               "additionalProperties": false,
               "allOf": [
                 {
-                  "if": { "properties": { "nameType": { "const": "Organizational" } }, "required": ["nameType"] },
-                  "then": { "not": { "anyOf": [ { "required": ["givenName"] }, { "required": ["familyName"] } ] } }
+                  "if": {
+                    "properties": {
+                      "nameType": {
+                        "const": "Organizational"
+                      }
+                    },
+                    "required": [
+                      "nameType"
+                    ]
+                  },
+                  "then": {
+                    "not": {
+                      "anyOf": [
+                        {
+                          "required": [
+                            "givenName"
+                          ]
+                        },
+                        {
+                          "required": [
+                            "familyName"
+                          ]
+                        }
+                      ]
+                    }
+                  }
                 }
               ]
             }
@@ -469,41 +969,108 @@
             "items": {
               "type": "object",
               "properties": {
-                "title": { "type": "string" },
-                "titleType": { "$ref": "#/$defs/titleType/enumSchema" },
-                "lang": { "type": "string" }
+                "title": {
+                  "type": "string"
+                },
+                "titleType": {
+                  "$ref": "#/$defs/titleType/enumSchema"
+                },
+                "lang": {
+                  "type": "string"
+                }
               },
-              "required": ["title"],
+              "required": [
+                "title"
+              ],
               "additionalProperties": false
             }
           },
-          "publicationYear": { "type": "string", "pattern": "^\\d{4}$" },
-          "volume": { "type": "string" },
-          "issue": { "type": "string" },
-          "number": { "type": "string" },
-          "numberType": { "type": "string", "enum": ["Article", "Chapter", "Report", "Other"] },
-          "firstPage": { "type": "string" },
-          "lastPage": { "type": "string" },
-          "publisher": { "type": "string" },
-          "edition": { "type": "string" }
+          "publicationYear": {
+            "type": "string",
+            "pattern": "^\\d{4}$"
+          },
+          "volume": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "numberType": {
+            "type": "string",
+            "enum": [
+              "Article",
+              "Chapter",
+              "Report",
+              "Other"
+            ]
+          },
+          "firstPage": {
+            "type": "string"
+          },
+          "lastPage": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "edition": {
+            "type": "string"
+          }
         },
-        "required": ["relatedItemType", "relationType"],
+        "required": [
+          "relatedItemType",
+          "relationType"
+        ],
         "additionalProperties": false,
         "allOf": [
           {
             "anyOf": [
-              { "required": ["relatedItemIdentifier"] },
-              { "required": ["titles"] }
+              {
+                "required": [
+                  "relatedItemIdentifier"
+                ]
+              },
+              {
+                "required": [
+                  "titles"
+                ]
+              }
             ]
           },
           {
-            "if": { "properties": { "relationType": { "enum": ["HasMetadata", "IsMetadataFor"] } }, "required": ["relationType"] },
+            "if": {
+              "properties": {
+                "relationType": {
+                  "enum": [
+                    "HasMetadata",
+                    "IsMetadataFor"
+                  ]
+                }
+              },
+              "required": [
+                "relationType"
+              ]
+            },
             "then": {
-              "required": ["relatedItemIdentifier"],
+              "required": [
+                "relatedItemIdentifier"
+              ],
               "properties": {
                 "relatedItemIdentifier": {
                   "allOf": [
-                    { "if": { "not": { "required": ["relatedMetadataScheme"] } }, "then": false }
+                    {
+                      "if": {
+                        "not": {
+                          "required": [
+                            "relatedMetadataScheme"
+                          ]
+                        }
+                      },
+                      "then": false
+                    }
                   ]
                 }
               }
@@ -515,89 +1082,148 @@
     "sizes": {
       "type": "array",
       "description": "Extent, size, or duration of the resource (free text). Examples: '15 pages', '1 MB', '45 minutes'.",
-      "items": { "type": "string" },
-      "examples": [["15 pages", "1 MB", "45 minutes"]]
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          "15 pages",
+          "1 MB",
+          "45 minutes"
+        ]
+      ]
     },
     "formats": {
       "type": "array",
       "description": "Technical format of the resource (free text). Use MIME type or file extension when possible, e.g., 'application/pdf', 'text/xml', 'video/mpeg'.",
-      "items": { "type": "string" },
-      "examples": [["application/xml", "application/pdf", "video/mpeg"]]
-    },
-"version": {
-  "type": "string",
-  "description": "Version number or label of the resource. Suggested format: major.minor (e.g., 1.0, 2.1). Register a new identifier for a major version change; use this field to track minor or descriptive updates. May be used in conjunction with 'alternateIdentifiers', 'relatedIdentifiers', or 'descriptions' to indicate relationships or changes between versions.",
-  "examples": ["1.0", "2.1", "3.0-beta", "2025-01"]
-},    
-"rightsList": {
-  "type": "array",
-  "description": "Rights statements or licences for the resource. May include licence title, URI, and identifier scheme such as SPDX. Repeat as needed for complex rights. Include embargo information if applicable.",
-  "items": {
-    "type": "object",
-    "properties": {
-      "rights": {
-        "type": "string",
-        "description": "Full name of the licence or rights statement, including version information if applicable (e.g., 'Creative Commons Attribution 4.0 International')."
+      "items": {
+        "type": "string"
       },
-      "rightsUri": {
-        "type": "string",
-        "format": "uri",
-        "description": "URI of the licence or rights statement (e.g., 'https://creativecommons.org/licenses/by/4.0/')."
-      },
-      "rightsIdentifier": {
-        "type": "string",
-        "description": "Short standardized identifier for the licence (e.g., 'CC-BY-4.0')."
-      },
-      "rightsIdentifierScheme": {
-        "type": "string",
-        "description": "Name of the identifier scheme (e.g., 'SPDX')."
-      },
-      "schemeUri": {
-        "type": "string",
-        "format": "uri",
-        "description": "URI of the identifier scheme (e.g., 'https://spdx.org/licenses/')."
-      },
-      "lang": {
-        "type": "string",
-        "description": "IETF BCP 47 language tag for the rights statement (e.g., 'en')."
-      }
-    },
-    "required": ["rights"],
-    "allOf": [
-      { "if": { "required": ["rightsIdentifier"] }, "then": { "required": ["rightsIdentifierScheme"] } },
-      { "if": { "required": ["rightsIdentifierScheme"] }, "then": { "required": ["schemeUri"] } }
-    ],
-    "additionalProperties": false,
-    "examples": [
-      [
-        {
-          "rights": "Creative Commons Attribution 4.0 International",
-          "rightsUri": "https://creativecommons.org/licenses/by/4.0/",
-          "schemeUri": "https://spdx.org/licenses/",
-          "rightsIdentifier": "CC-BY-4.0",
-          "rightsIdentifierScheme": "SPDX",
-          "lang": "en"
-        }
+      "examples": [
+        [
+          "application/xml",
+          "application/pdf",
+          "video/mpeg"
+        ]
       ]
-    ]
-  }
-},
-    "descriptions": {
+    },
+    "version": {
+      "type": "string",
+      "description": "Version number or label of the resource. Suggested format: major.minor (e.g., 1.0, 2.1). Register a new identifier for a major version change; use this field to track minor or descriptive updates. May be used in conjunction with 'alternateIdentifiers', 'relatedIdentifiers', or 'descriptions' to indicate relationships or changes between versions.",
+      "examples": [
+        "1.0",
+        "2.1",
+        "3.0-beta",
+        "2025-01"
+      ]
+    },
+    "rightsList": {
       "type": "array",
-      "description": "Free‑form text descriptions of the resource.",
+      "description": "Rights statements or licences for the resource. May include licence title, URI, and identifier scheme such as SPDX. Repeat as needed for complex rights. Include embargo information if applicable.",
       "items": {
         "type": "object",
         "properties": {
-          "description": { "type": "string", "description": "Free-text description. Best practice is to supply at least one description." },
-          "descriptionType": { "$ref": "#/$defs/descriptionType/enumSchema" },
-          "lang": { "type": "string", "description": "IETF BCP 47 language tag for the description text (e.g., 'en')." }
+          "rights": {
+            "type": "string",
+            "description": "Full name of the licence or rights statement, including version information if applicable (e.g., 'Creative Commons Attribution 4.0 International')."
+          },
+          "rightsUri": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI of the licence or rights statement (e.g., 'https://creativecommons.org/licenses/by/4.0/')."
+          },
+          "rightsIdentifier": {
+            "type": "string",
+            "description": "Short standardized identifier for the licence (e.g., 'CC-BY-4.0')."
+          },
+          "rightsIdentifierScheme": {
+            "type": "string",
+            "description": "Name of the identifier scheme (e.g., 'SPDX')."
+          },
+          "schemeUri": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI of the identifier scheme (e.g., 'https://spdx.org/licenses/')."
+          },
+          "lang": {
+            "type": "string",
+            "description": "IETF BCP 47 language tag for the rights statement (e.g., 'en')."
+          }
         },
-        "required": ["description", "descriptionType"],
-        "additionalProperties": false
-        ,
+        "required": [
+          "rights"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "rightsIdentifier"
+              ]
+            },
+            "then": {
+              "required": [
+                "rightsIdentifierScheme"
+              ]
+            }
+          },
+          {
+            "if": {
+              "required": [
+                "rightsIdentifierScheme"
+              ]
+            },
+            "then": {
+              "required": [
+                "schemeUri"
+              ]
+            }
+          }
+        ],
+        "additionalProperties": false,
         "examples": [
           [
-            { "lang": "en", "description": "Example abstract", "descriptionType": "Abstract" }
+            {
+              "rights": "Creative Commons Attribution 4.0 International",
+              "rightsUri": "https://creativecommons.org/licenses/by/4.0/",
+              "schemeUri": "https://spdx.org/licenses/",
+              "rightsIdentifier": "CC-BY-4.0",
+              "rightsIdentifierScheme": "SPDX",
+              "lang": "en"
+            }
+          ]
+        ]
+      }
+    },
+    "descriptions": {
+      "type": "array",
+      "description": "Free\u2011form text descriptions of the resource.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Free-text description. Best practice is to supply at least one description."
+          },
+          "descriptionType": {
+            "$ref": "#/$defs/descriptionType/enumSchema"
+          },
+          "lang": {
+            "type": "string",
+            "description": "IETF BCP 47 language tag for the description text (e.g., 'en')."
+          }
+        },
+        "required": [
+          "description",
+          "descriptionType"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          [
+            {
+              "lang": "en",
+              "description": "Example abstract",
+              "descriptionType": "Abstract"
+            }
           ]
         ]
       }
@@ -608,7 +1234,10 @@
       "items": {
         "type": "object",
         "properties": {
-          "geoLocationPlace": { "type": "string", "description": "Free-text place name (e.g., 'Disko Bay')." },
+          "geoLocationPlace": {
+            "type": "string",
+            "description": "Free-text place name (e.g., 'Disko Bay')."
+          },
           "geoLocationPoint": {
             "type": "object",
             "description": "A single point location (longitude/latitude pair in WGS84).",
@@ -617,16 +1246,19 @@
                 "type": "number",
                 "minimum": -180,
                 "maximum": 180,
-                "description": "Longitude in decimal degrees (WGS84), −180 to 180 (positive east)."
+                "description": "Longitude in decimal degrees (WGS84), \u2212180 to 180 (positive east)."
               },
               "pointLatitude": {
                 "type": "number",
                 "minimum": -90,
                 "maximum": 90,
-                "description": "Latitude in decimal degrees (WGS84), −90 to 90 (positive north)."
+                "description": "Latitude in decimal degrees (WGS84), \u221290 to 90 (positive north)."
               }
             },
-            "required": ["pointLongitude", "pointLatitude"],
+            "required": [
+              "pointLongitude",
+              "pointLatitude"
+            ],
             "additionalProperties": false
           },
           "geoLocationBox": {
@@ -658,7 +1290,12 @@
                 "description": "Northern latitude of the box (decimal degrees, WGS84)."
               }
             },
-            "required": ["westBoundLongitude", "eastBoundLongitude", "southBoundLatitude", "northBoundLatitude"],
+            "required": [
+              "westBoundLongitude",
+              "eastBoundLongitude",
+              "southBoundLatitude",
+              "northBoundLatitude"
+            ],
             "additionalProperties": false
           },
           "geoLocationPolygon": {
@@ -687,7 +1324,10 @@
                         "description": "Vertex latitude in decimal degrees (WGS84)."
                       }
                     },
-                    "required": ["pointLongitude", "pointLatitude"],
+                    "required": [
+                      "pointLongitude",
+                      "pointLatitude"
+                    ],
                     "additionalProperties": false
                   }
                 },
@@ -707,22 +1347,29 @@
                       "description": "Latitude of a point inside the polygon (required only for polygons larger than half the Earth)."
                     }
                   },
-                  "required": ["pointLongitude", "pointLatitude"],
+                  "required": [
+                    "pointLongitude",
+                    "pointLatitude"
+                  ],
                   "additionalProperties": false
                 }
               },
-              "required": ["polygonPoint"],
+              "required": [
+                "polygonPoint"
+              ],
               "additionalProperties": false
             }
           }
         },
-        "additionalProperties": false
-        ,
+        "additionalProperties": false,
         "examples": [
           [
             {
               "geoLocationPlace": "Disko Bay",
-              "geoLocationPoint": { "pointLatitude": 69.0, "pointLongitude": 52.0 }
+              "geoLocationPoint": {
+                "pointLatitude": 69.0,
+                "pointLongitude": 52.0
+              }
             },
             {
               "geoLocationBox": {
@@ -764,38 +1411,104 @@
       "items": {
         "type": "object",
         "properties": {
-          "funderName": { "type": "string", "description": "Name of the funding provider (mandatory when a funding reference is supplied)." },
-          "funderIdentifier": { "type": "string", "format": "uri", "description": "Persistent identifier for the funder (e.g., Crossref Funder ID DOI, ROR, ISNI)." },
-          "funderIdentifierType": { "$ref": "#/$defs/funderIdentifierType/enumSchema" },
-          "schemeUri": { "type": "string", "format": "uri", "description": "URI of the funder identifier scheme (e.g., Crossref Funder Registry, ROR)." },
-          "awardNumber": { "type": "string", "description": "Grant or award number/code assigned by the funder." },
-          "awardUri": { "type": "string", "format": "uri", "description": "URI to a funder-provided page with more information about the award (may be a grant DOI URL)." },
-          "awardTitle": { "type": "string", "description": "Human-readable title or name of the award." }
+          "funderName": {
+            "type": "string",
+            "description": "Name of the funding provider (mandatory when a funding reference is supplied)."
+          },
+          "funderIdentifier": {
+            "type": "string",
+            "format": "uri",
+            "description": "Persistent identifier for the funder (e.g., Crossref Funder ID DOI, ROR, ISNI)."
+          },
+          "funderIdentifierType": {
+            "$ref": "#/$defs/funderIdentifierType/enumSchema"
+          },
+          "schemeUri": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI of the funder identifier scheme (e.g., Crossref Funder Registry, ROR)."
+          },
+          "awardNumber": {
+            "type": "string",
+            "description": "Grant or award number/code assigned by the funder."
+          },
+          "awardUri": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI to a funder-provided page with more information about the award (may be a grant DOI URL)."
+          },
+          "awardTitle": {
+            "type": "string",
+            "description": "Human-readable title or name of the award."
+          }
         },
-        "required": ["funderName"],
+        "required": [
+          "funderName"
+        ],
         "allOf": [
           {
-            "if": { "required": ["funderIdentifier"] },
-            "then": { "required": ["funderIdentifierType"] }
+            "if": {
+              "required": [
+                "funderIdentifier"
+              ]
+            },
+            "then": {
+              "required": [
+                "funderIdentifierType"
+              ]
+            }
           }
         ],
         "additionalProperties": false
       }
     }
   },
-  "required": ["doi", "creators", "titles", "publisher", "publicationYear", "types"],
+  "required": [
+    "doi",
+    "creators",
+    "titles",
+    "publisher",
+    "publicationYear",
+    "types"
+  ],
   "additionalProperties": false,
-  "$comment": "==== ENUMERATIONS ($defs) — validation enums plus iriMap to stable IRIs used during semantic export ====",
   "$defs": {
     "resourceTypeGeneral": {
       "enum": [
-        "Audiovisual","Award","Book","BookChapter","Collection",
-        "ComputationalNotebook","ConferencePaper","ConferenceProceeding",
-        "DataPaper","Dataset","Dissertation","Event","Image",
-        "InteractiveResource","Instrument","Journal","JournalArticle",
-        "Model","OutputManagementPlan","PeerReview","PhysicalObject",
-        "Preprint","Project","Report","Service","Software","Sound",
-        "Standard","StudyRegistration","Text","Workflow","Other"
+        "Audiovisual",
+        "Award",
+        "Book",
+        "BookChapter",
+        "Collection",
+        "ComputationalNotebook",
+        "ConferencePaper",
+        "ConferenceProceeding",
+        "DataPaper",
+        "Dataset",
+        "Dissertation",
+        "Event",
+        "Image",
+        "InteractiveResource",
+        "Instrument",
+        "Journal",
+        "JournalArticle",
+        "Model",
+        "OutputManagementPlan",
+        "PeerReview",
+        "PhysicalObject",
+        "Poster",
+        "Preprint",
+        "Presentation",
+        "Project",
+        "Report",
+        "Service",
+        "Software",
+        "Sound",
+        "Standard",
+        "StudyRegistration",
+        "Text",
+        "Workflow",
+        "Other"
       ],
       "iriMap": {
         "Audiovisual": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual",
@@ -829,21 +1542,60 @@
         "StudyRegistration": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration",
         "Text": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text",
         "Workflow": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow",
-        "Other": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other"
+        "Other": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other",
+        "Poster": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Poster",
+        "Presentation": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Presentation"
       },
-      "enumSchema": { "type": "string", "enum": [
-        "Audiovisual","Award","Book","BookChapter","Collection",
-        "ComputationalNotebook","ConferencePaper","ConferenceProceeding",
-        "DataPaper","Dataset","Dissertation","Event","Image",
-        "InteractiveResource","Instrument","Journal","JournalArticle",
-        "Model","OutputManagementPlan","PeerReview","PhysicalObject",
-        "Preprint","Project","Report","Service","Software","Sound",
-        "Standard","StudyRegistration","Text","Workflow","Other"
-      ] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "Audiovisual",
+          "Award",
+          "Book",
+          "BookChapter",
+          "Collection",
+          "ComputationalNotebook",
+          "ConferencePaper",
+          "ConferenceProceeding",
+          "DataPaper",
+          "Dataset",
+          "Dissertation",
+          "Event",
+          "Image",
+          "InteractiveResource",
+          "Instrument",
+          "Journal",
+          "JournalArticle",
+          "Model",
+          "OutputManagementPlan",
+          "PeerReview",
+          "PhysicalObject",
+          "Poster",
+          "Preprint",
+          "Presentation",
+          "Project",
+          "Report",
+          "Service",
+          "Software",
+          "Sound",
+          "Standard",
+          "StudyRegistration",
+          "Text",
+          "Workflow",
+          "Other"
+        ]
+      }
     },
     "descriptionType": {
       "$comment": "Note: 'SeriesInformation' as a container is superseded by 'relatedItems' with relationType 'IsPublishedIn' in 4.6; the enum remains for backward compatibility.",
-      "enum": ["Abstract","Methods","SeriesInformation","TableOfContents","TechnicalInfo","Other"],
+      "enum": [
+        "Abstract",
+        "Methods",
+        "SeriesInformation",
+        "TableOfContents",
+        "TechnicalInfo",
+        "Other"
+      ],
       "iriMap": {
         "Abstract": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Abstract",
         "Methods": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Methods",
@@ -852,16 +1604,42 @@
         "TechnicalInfo": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo",
         "Other": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Other"
       },
-      "enumSchema": { "type": "string", "enum": ["Abstract","Methods","SeriesInformation","TableOfContents","TechnicalInfo","Other"] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "Abstract",
+          "Methods",
+          "SeriesInformation",
+          "TableOfContents",
+          "TechnicalInfo",
+          "Other"
+        ]
+      }
     },
     "contributorType": {
       "enum": [
-        "ContactPerson","DataCollector","DataCurator","DataManager",
-        "Distributor","Editor","HostingInstitution","Other",
-        "Producer","ProjectLeader","ProjectManager","ProjectMember",
-        "RegistrationAgency","RegistrationAuthority","RelatedPerson",
-        "ResearchGroup","RightsHolder","Researcher","Sponsor",
-        "Supervisor","Translator","WorkPackageLeader"
+        "ContactPerson",
+        "DataCollector",
+        "DataCurator",
+        "DataManager",
+        "Distributor",
+        "Editor",
+        "HostingInstitution",
+        "Other",
+        "Producer",
+        "ProjectLeader",
+        "ProjectManager",
+        "ProjectMember",
+        "RegistrationAgency",
+        "RegistrationAuthority",
+        "RelatedPerson",
+        "ResearchGroup",
+        "RightsHolder",
+        "Researcher",
+        "Sponsor",
+        "Supervisor",
+        "Translator",
+        "WorkPackageLeader"
       ],
       "iriMap": {
         "ContactPerson": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/ContactPerson",
@@ -887,19 +1665,48 @@
         "Translator": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Translator",
         "WorkPackageLeader": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/WorkPackageLeader"
       },
-      "enumSchema": { "type": "string", "enum": [
-        "ContactPerson","DataCollector","DataCurator","DataManager",
-        "Distributor","Editor","HostingInstitution","Other",
-        "Producer","ProjectLeader","ProjectManager","ProjectMember",
-        "RegistrationAgency","RegistrationAuthority","RelatedPerson",
-        "ResearchGroup","RightsHolder","Researcher","Sponsor",
-        "Supervisor","Translator","WorkPackageLeader"
-      ] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "ContactPerson",
+          "DataCollector",
+          "DataCurator",
+          "DataManager",
+          "Distributor",
+          "Editor",
+          "HostingInstitution",
+          "Other",
+          "Producer",
+          "ProjectLeader",
+          "ProjectManager",
+          "ProjectMember",
+          "RegistrationAgency",
+          "RegistrationAuthority",
+          "RelatedPerson",
+          "ResearchGroup",
+          "RightsHolder",
+          "Researcher",
+          "Sponsor",
+          "Supervisor",
+          "Translator",
+          "WorkPackageLeader"
+        ]
+      }
     },
     "dateType": {
       "enum": [
-        "Accepted","Available","Collected","Copyrighted","Coverage",
-        "Created","Issued","Other","Submitted","Updated","Valid","Withdrawn"
+        "Accepted",
+        "Available",
+        "Collected",
+        "Copyrighted",
+        "Coverage",
+        "Created",
+        "Issued",
+        "Other",
+        "Submitted",
+        "Updated",
+        "Valid",
+        "Withdrawn"
       ],
       "iriMap": {
         "Accepted": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted",
@@ -915,24 +1722,66 @@
         "Valid": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid",
         "Withdrawn": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn"
       },
-      "enumSchema": { "type": "string", "enum": [
-        "Accepted","Available","Collected","Copyrighted","Coverage",
-        "Created","Issued","Other","Submitted","Updated","Valid","Withdrawn"
-      ] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "Accepted",
+          "Available",
+          "Collected",
+          "Copyrighted",
+          "Coverage",
+          "Created",
+          "Issued",
+          "Other",
+          "Submitted",
+          "Updated",
+          "Valid",
+          "Withdrawn"
+        ]
+      }
     },
     "nameType": {
-      "enum": ["Personal","Organizational"],
+      "enum": [
+        "Personal",
+        "Organizational"
+      ],
       "iriMap": {
         "Personal": "https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal",
         "Organizational": "https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational"
       },
-      "enumSchema": { "type": "string", "enum": ["Personal","Organizational"] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "Personal",
+          "Organizational"
+        ]
+      }
     },
     "relatedIdentifierType": {
       "enum": [
-        "ARK","arXiv","bibcode","CSTR","DOI","EAN13","EISSN","Handle",
-        "IGSN","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL",
-        "RRID","UPC","URL","URN","w3id"
+        "ARK",
+        "arXiv",
+        "bibcode",
+        "CSTR",
+        "DOI",
+        "EAN13",
+        "EISSN",
+        "Handle",
+        "IGSN",
+        "ISBN",
+        "ISSN",
+        "ISTC",
+        "LISSN",
+        "LSID",
+        "PMID",
+        "PURL",
+        "RAiD",
+        "RRID",
+        "SWHID",
+        "UPC",
+        "URL",
+        "URN",
+        "w3id"
       ],
       "iriMap": {
         "ARK": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK",
@@ -955,23 +1804,80 @@
         "UPC": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC",
         "URL": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL",
         "URN": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN",
-        "w3id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id"
+        "w3id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id",
+        "RAiD": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RAiD",
+        "SWHID": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/SWHID"
       },
-      "enumSchema": { "type": "string", "enum": [
-        "ARK","arXiv","bibcode","CSTR","DOI","EAN13","EISSN","Handle",
-        "IGSN","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL",
-        "RRID","UPC","URL","URN","w3id"
-      ] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "CSTR",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "IGSN",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "RAiD",
+          "RRID",
+          "SWHID",
+          "UPC",
+          "URL",
+          "URN",
+          "w3id"
+        ]
+      }
     },
     "relationType": {
       "enum": [
-        "IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy",
-        "Continues","IsNewVersionOf","IsPreviousVersionOf","IsPartOf","HasPart",
-        "IsPublishedIn","IsReferencedBy","References","IsDocumentedBy","Documents",
-        "IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo",
-        "HasMetadata","IsMetadataFor","Reviews","IsReviewedBy","IsDerivedFrom","IsSourceOf",
-        "Describes","IsDescribedBy","HasVersion","IsVersionOf","Requires","IsRequiredBy",
-        "Obsoletes","IsObsoletedBy","Collects","IsCollectedBy","HasTranslation","IsTranslationOf"
+        "IsCitedBy",
+        "Cites",
+        "IsSupplementTo",
+        "IsSupplementedBy",
+        "IsContinuedBy",
+        "Continues",
+        "IsNewVersionOf",
+        "IsPreviousVersionOf",
+        "IsPartOf",
+        "HasPart",
+        "IsPublishedIn",
+        "IsReferencedBy",
+        "References",
+        "IsDocumentedBy",
+        "Documents",
+        "IsCompiledBy",
+        "Compiles",
+        "IsVariantFormOf",
+        "IsOriginalFormOf",
+        "IsIdenticalTo",
+        "HasMetadata",
+        "IsMetadataFor",
+        "Reviews",
+        "IsReviewedBy",
+        "IsDerivedFrom",
+        "IsSourceOf",
+        "Describes",
+        "IsDescribedBy",
+        "HasVersion",
+        "IsVersionOf",
+        "Requires",
+        "IsRequiredBy",
+        "Obsoletes",
+        "IsObsoletedBy",
+        "Collects",
+        "IsCollectedBy",
+        "HasTranslation",
+        "IsTranslationOf",
+        "Other"
       ],
       "iriMap": {
         "IsCitedBy": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy",
@@ -1011,20 +1917,62 @@
         "Collects": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects",
         "IsCollectedBy": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy",
         "HasTranslation": "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation",
-        "IsTranslationOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf"
+        "IsTranslationOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf",
+        "Other": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Other"
       },
-      "enumSchema": { "type": "string", "enum": [
-        "IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy",
-        "Continues","IsNewVersionOf","IsPreviousVersionOf","IsPartOf","HasPart",
-        "IsPublishedIn","IsReferencedBy","References","IsDocumentedBy","Documents",
-        "IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo",
-        "HasMetadata","IsMetadataFor","Reviews","IsReviewedBy","IsDerivedFrom","IsSourceOf",
-        "Describes","IsDescribedBy","HasVersion","IsVersionOf","Requires","IsRequiredBy",
-        "Obsoletes","IsObsoletedBy","Collects","IsCollectedBy","HasTranslation","IsTranslationOf"
-      ] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsPublishedIn",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "HasMetadata",
+          "IsMetadataFor",
+          "Reviews",
+          "IsReviewedBy",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "Describes",
+          "IsDescribedBy",
+          "HasVersion",
+          "IsVersionOf",
+          "Requires",
+          "IsRequiredBy",
+          "Obsoletes",
+          "IsObsoletedBy",
+          "Collects",
+          "IsCollectedBy",
+          "HasTranslation",
+          "IsTranslationOf",
+          "Other"
+        ]
+      }
     },
     "funderIdentifierType": {
-      "enum": ["ISNI","GRID","ROR","Crossref Funder ID","Other"],
+      "enum": [
+        "ISNI",
+        "GRID",
+        "ROR",
+        "Crossref Funder ID",
+        "Other"
+      ],
       "iriMap": {
         "ISNI": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI",
         "GRID": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID",
@@ -1032,22 +1980,46 @@
         "Crossref Funder ID": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Crossref%20Funder%20ID",
         "Other": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other"
       },
-      "enumSchema": { "type": "string", "enum": ["ISNI","GRID","ROR","Crossref Funder ID","Other"] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "ISNI",
+          "GRID",
+          "ROR",
+          "Crossref Funder ID",
+          "Other"
+        ]
+      }
     },
     "titleType": {
-      "enum": ["AlternativeTitle","Subtitle","TranslatedTitle","Other"],
+      "enum": [
+        "AlternativeTitle",
+        "Subtitle",
+        "TranslatedTitle",
+        "Other"
+      ],
       "iriMap": {
         "AlternativeTitle": "https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle",
         "Subtitle": "https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle",
         "TranslatedTitle": "https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle",
         "Other": "https://schema.stage.datacite.org/linked-data/vocab/titleType/Other"
       },
-      "enumSchema": { "type": "string", "enum": ["AlternativeTitle","Subtitle","TranslatedTitle","Other"] }
+      "enumSchema": {
+        "type": "string",
+        "enum": [
+          "AlternativeTitle",
+          "Subtitle",
+          "TranslatedTitle",
+          "Other"
+        ]
+      }
     },
-    "relationTypeForRelatedItem": { "$ref": "#/$defs/relationType/enumSchema" }
+    "relationTypeForRelatedItem": {
+      "$ref": "#/$defs/relationType/enumSchema"
+    }
   },
   "profile": {
-    "$comment": "==== JSON-LD CONTEXT (profile.@context) — gives semantic meaning to the attributes. NOTE: 'doi' is typed as xsd:string to match API input. A resolvable DOI IRI can be constructed during export as https://doi.org/<doi>. ====",
+    "$comment": "==== JSON-LD CONTEXT (profile.@context) \u2014 gives semantic meaning to the attributes. NOTE: 'doi' is typed as xsd:string to match API input. A resolvable DOI IRI can be constructed during export as https://doi.org/<doi>. ====",
     "@context": {
       "@version": 1.1,
       "datacite": "https://schema.stage.datacite.org/linked-data/",
@@ -1056,115 +2028,373 @@
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "$comment": "Language handling note: DataCite arrays like 'titles' and 'descriptions' carry a sibling 'lang' string (BCP 47). We keep these as plain strings here for compatibility. During export (see exportProfile), we convert them to JSON-LD language-tagged value objects { '@value': text, '@language': lang }.",
-      "identifiers": { "@id": "datacite:identifiers", "@container": "@list" },
-      "identifier": { "@id": "datacite:identifier", "@type": "xsd:string" },
-      "identifierType": { "@id": "datacite:identifierType", "@type": "xsd:string" },
-      "alternateIdentifiers": { "@id": "datacite:alternateIdentifiers", "@container": "@list" },
-      "alternateIdentifier": { "@id": "datacite:alternateIdentifier", "@type": "xsd:string" },
-      "alternateIdentifierType": { "@id": "datacite:alternateIdentifierType", "@type": "xsd:string" },
-      "doi": { "@id": "datacite:doi", "@type": "xsd:string" },
-      "creators": { "@id": "datacite:creators", "@container": "@list" },
-      "name": { "@id": "schema:name", "@type": "xsd:string" },
-      "creatorName": { "@id": "datacite:creatorName", "@type": "xsd:string" },
-      "contributorName": { "@id": "datacite:contributorName", "@type": "xsd:string" },
-      "nameType": { "@id": "datacite:nameType", "@type": "xsd:string" },
-      "givenName": { "@id": "datacite:givenName", "@type": "xsd:string" },
-      "familyName": { "@id": "datacite:familyName", "@type": "xsd:string" },
-      "affiliation": { "@id": "datacite:affiliation", "@container": "@list" },
-      "affiliationIdentifier": { "@id": "datacite:affiliationIdentifier", "@type": "xsd:string" },
-      "affiliationIdentifierScheme": { "@id": "datacite:affiliationIdentifierScheme", "@type": "xsd:string" },
-      "nameIdentifiers": { "@id": "datacite:nameIdentifier", "@container": "@list" },
-      "nameIdentifier": { "@id": "datacite:nameIdentifier", "@type": "@id" },
-      "nameIdentifierScheme": { "@id": "datacite:nameIdentifierScheme", "@type": "xsd:string" },
-      "titles": { "@id": "datacite:titles", "@container": "@list" },
-      "title": { "@id": "datacite:title", "@type": "xsd:string" },
-      "titleType": { "@id": "datacite:titleType", "@type": "xsd:string" },
-      "publisher": { "@id": "datacite:publisher" },
-      "publisherIdentifier": { "@id": "datacite:publisherIdentifier", "@type": "xsd:string" },
-      "publisherIdentifierScheme": { "@id": "datacite:publisherIdentifierScheme", "@type": "xsd:string" },
-      "publicationYear": { "@id": "datacite:publicationYear" },
-      "container": { "@id": "datacite:container" },
-      "subjects": { "@id": "datacite:subjects", "@container": "@list" },
-      "subject": { "@id": "datacite:subject", "@type": "xsd:string" },
-      "subjectScheme": { "@id": "datacite:subjectScheme", "@type": "xsd:string" },
-      "schemeUri": { "@id": "datacite:schemeURI", "@type": "@id" },
-      "valueUri": { "@id": "datacite:valueURI", "@type": "@id" },
-      "classificationCode": { "@id": "datacite:classificationCode", "@type": "xsd:string" },
-      "contributors": { "@id": "datacite:contributors", "@container": "@list" },
-      "contributorType": { "@id": "datacite:contributorType", "@type": "xsd:string" },
-      "dates": { "@id": "datacite:dates", "@container": "@list" },
-      "date": { "@id": "datacite:date", "@type": "xsd:string" },
-      "dateType": { "@id": "datacite:dateType", "@type": "xsd:string" },
-      "dateInformation": { "@id": "datacite:dateInformation", "@type": "xsd:string" },
-      "language": { "@id": "datacite:language", "@type": "xsd:language" },
-      "types": { "@id": "datacite:types" },
-      "resourceType": { "@id": "datacite:resourceType", "@type": "xsd:string" },
-      "relatedIdentifiers": { "@id": "datacite:relatedIdentifiers", "@container": "@list" },
-      "relatedIdentifier": { "@id": "datacite:relatedIdentifier", "@type": "xsd:string" },
-      "relatedIdentifierType": { "@id": "datacite:relatedIdentifierType", "@type": "xsd:string" },
-      "relationType": { "@id": "datacite:relationType", "@type": "xsd:string" },
-      "relatedMetadataScheme": { "@id": "datacite:relatedMetadataScheme", "@type": "xsd:string" },
-      "schemeType": { "@id": "datacite:schemeType", "@type": "xsd:string" },
-      "rightsList": { "@id": "datacite:rightsList", "@container": "@list" },
-      "rights": { "@id": "datacite:rights", "@type": "xsd:string" },
-      "rightsUri": { "@id": "datacite:rightsURI", "@type": "@id" },
-      "rightsIdentifier": { "@id": "datacite:rightsIdentifier", "@type": "xsd:string" },
-      "rightsIdentifierScheme": { "@id": "datacite:rightsIdentifierScheme", "@type": "xsd:string" },
-      "descriptions": { "@id": "datacite:descriptions", "@container": "@list" },
-      "description": { "@id": "datacite:description", "@type": "xsd:string" },
-      "descriptionType": { "@id": "datacite:descriptionType", "@type": "xsd:string" },
-      "geoLocations": { "@id": "datacite:geoLocations", "@container": "@list" },
-      "geoLocationPlace": { "@id": "datacite:geoLocationPlace", "@type": "xsd:string" },
-      "geoLocationPoint": { "@id": "datacite:geoLocationPoint" },
-      "geoLocationBox": { "@id": "datacite:geoLocationBox" },
-      "geoLocationPolygon": { "@id": "datacite:geoLocationPolygon", "@container": "@list" },
-      "polygonPoint": { "@id": "datacite:polygonPoint", "@container": "@list" },
-      "inPolygonPoint": { "@id": "datacite:inPolygonPoint" },
-      "fundingReferences": { "@id": "datacite:fundingReferences", "@container": "@list" },
-      "funderName": { "@id": "datacite:funderName", "@type": "xsd:string" },
-      "funderIdentifier": { "@id": "datacite:funderIdentifier", "@type": "@id" },
-      "funderIdentifierType": { "@id": "datacite:funderIdentifierType", "@type": "xsd:string" },
-      "awardNumber": { "@id": "datacite:awardNumber", "@type": "xsd:string" },
-      "awardUri": { "@id": "datacite:awardURI", "@type": "@id" },
-      "awardTitle": { "@id": "datacite:awardTitle", "@type": "xsd:string" },
-      "relatedItems": { "@id": "datacite:relatedItems", "@container": "@list" },
-      "relatedItemType": { "@id": "datacite:relatedItemType", "@type": "xsd:string" },
-      "relatedItemIdentifier": { "@id": "datacite:relatedItemIdentifier", "@type": "xsd:string" },
-      "relatedItemIdentifierType": { "@id": "datacite:relatedItemIdentifierType", "@type": "xsd:string" },
-      "relatedItemRelationType": { "@id": "datacite:relationType", "@type": "xsd:string" },
-      "volume": { "@id": "datacite:volume", "@type": "xsd:string" },
-      "issue": { "@id": "datacite:issue", "@type": "xsd:string" },
-      "number": { "@id": "datacite:number", "@type": "xsd:string" },
-      "numberType": { "@id": "datacite:numberType", "@type": "xsd:string" },
-      "firstPage": { "@id": "datacite:firstPage", "@type": "xsd:string" },
-      "lastPage": { "@id": "datacite:lastPage", "@type": "xsd:string" },
-      "edition": { "@id": "datacite:edition", "@type": "xsd:string" }
+      "identifiers": {
+        "@id": "datacite:identifiers",
+        "@container": "@list"
+      },
+      "identifier": {
+        "@id": "datacite:identifier",
+        "@type": "xsd:string"
+      },
+      "identifierType": {
+        "@id": "datacite:identifierType",
+        "@type": "xsd:string"
+      },
+      "alternateIdentifiers": {
+        "@id": "datacite:alternateIdentifiers",
+        "@container": "@list"
+      },
+      "alternateIdentifier": {
+        "@id": "datacite:alternateIdentifier",
+        "@type": "xsd:string"
+      },
+      "alternateIdentifierType": {
+        "@id": "datacite:alternateIdentifierType",
+        "@type": "xsd:string"
+      },
+      "doi": {
+        "@id": "datacite:doi",
+        "@type": "xsd:string"
+      },
+      "creators": {
+        "@id": "datacite:creators",
+        "@container": "@list"
+      },
+      "name": {
+        "@id": "schema:name",
+        "@type": "xsd:string"
+      },
+      "creatorName": {
+        "@id": "datacite:creatorName",
+        "@type": "xsd:string"
+      },
+      "contributorName": {
+        "@id": "datacite:contributorName",
+        "@type": "xsd:string"
+      },
+      "nameType": {
+        "@id": "datacite:nameType",
+        "@type": "xsd:string"
+      },
+      "givenName": {
+        "@id": "datacite:givenName",
+        "@type": "xsd:string"
+      },
+      "familyName": {
+        "@id": "datacite:familyName",
+        "@type": "xsd:string"
+      },
+      "affiliation": {
+        "@id": "datacite:affiliation",
+        "@container": "@list"
+      },
+      "affiliationIdentifier": {
+        "@id": "datacite:affiliationIdentifier",
+        "@type": "xsd:string"
+      },
+      "affiliationIdentifierScheme": {
+        "@id": "datacite:affiliationIdentifierScheme",
+        "@type": "xsd:string"
+      },
+      "nameIdentifiers": {
+        "@id": "datacite:nameIdentifier",
+        "@container": "@list"
+      },
+      "nameIdentifier": {
+        "@id": "datacite:nameIdentifier",
+        "@type": "@id"
+      },
+      "nameIdentifierScheme": {
+        "@id": "datacite:nameIdentifierScheme",
+        "@type": "xsd:string"
+      },
+      "titles": {
+        "@id": "datacite:titles",
+        "@container": "@list"
+      },
+      "title": {
+        "@id": "datacite:title",
+        "@type": "xsd:string"
+      },
+      "titleType": {
+        "@id": "datacite:titleType",
+        "@type": "xsd:string"
+      },
+      "publisher": {
+        "@id": "datacite:publisher"
+      },
+      "publisherIdentifier": {
+        "@id": "datacite:publisherIdentifier",
+        "@type": "xsd:string"
+      },
+      "publisherIdentifierScheme": {
+        "@id": "datacite:publisherIdentifierScheme",
+        "@type": "xsd:string"
+      },
+      "publicationYear": {
+        "@id": "datacite:publicationYear"
+      },
+      "container": {
+        "@id": "datacite:container"
+      },
+      "subjects": {
+        "@id": "datacite:subjects",
+        "@container": "@list"
+      },
+      "subject": {
+        "@id": "datacite:subject",
+        "@type": "xsd:string"
+      },
+      "subjectScheme": {
+        "@id": "datacite:subjectScheme",
+        "@type": "xsd:string"
+      },
+      "schemeUri": {
+        "@id": "datacite:schemeURI",
+        "@type": "@id"
+      },
+      "valueUri": {
+        "@id": "datacite:valueURI",
+        "@type": "@id"
+      },
+      "classificationCode": {
+        "@id": "datacite:classificationCode",
+        "@type": "xsd:string"
+      },
+      "contributors": {
+        "@id": "datacite:contributors",
+        "@container": "@list"
+      },
+      "contributorType": {
+        "@id": "datacite:contributorType",
+        "@type": "xsd:string"
+      },
+      "dates": {
+        "@id": "datacite:dates",
+        "@container": "@list"
+      },
+      "date": {
+        "@id": "datacite:date",
+        "@type": "xsd:string"
+      },
+      "dateType": {
+        "@id": "datacite:dateType",
+        "@type": "xsd:string"
+      },
+      "dateInformation": {
+        "@id": "datacite:dateInformation",
+        "@type": "xsd:string"
+      },
+      "language": {
+        "@id": "datacite:language",
+        "@type": "xsd:language"
+      },
+      "types": {
+        "@id": "datacite:types"
+      },
+      "resourceType": {
+        "@id": "datacite:resourceType",
+        "@type": "xsd:string"
+      },
+      "relatedIdentifiers": {
+        "@id": "datacite:relatedIdentifiers",
+        "@container": "@list"
+      },
+      "relatedIdentifier": {
+        "@id": "datacite:relatedIdentifier",
+        "@type": "xsd:string"
+      },
+      "relatedIdentifierType": {
+        "@id": "datacite:relatedIdentifierType",
+        "@type": "xsd:string"
+      },
+      "relationType": {
+        "@id": "datacite:relationType",
+        "@type": "xsd:string"
+      },
+      "relatedMetadataScheme": {
+        "@id": "datacite:relatedMetadataScheme",
+        "@type": "xsd:string"
+      },
+      "schemeType": {
+        "@id": "datacite:schemeType",
+        "@type": "xsd:string"
+      },
+      "rightsList": {
+        "@id": "datacite:rightsList",
+        "@container": "@list"
+      },
+      "rights": {
+        "@id": "datacite:rights",
+        "@type": "xsd:string"
+      },
+      "rightsUri": {
+        "@id": "datacite:rightsURI",
+        "@type": "@id"
+      },
+      "rightsIdentifier": {
+        "@id": "datacite:rightsIdentifier",
+        "@type": "xsd:string"
+      },
+      "rightsIdentifierScheme": {
+        "@id": "datacite:rightsIdentifierScheme",
+        "@type": "xsd:string"
+      },
+      "descriptions": {
+        "@id": "datacite:descriptions",
+        "@container": "@list"
+      },
+      "description": {
+        "@id": "datacite:description",
+        "@type": "xsd:string"
+      },
+      "descriptionType": {
+        "@id": "datacite:descriptionType",
+        "@type": "xsd:string"
+      },
+      "geoLocations": {
+        "@id": "datacite:geoLocations",
+        "@container": "@list"
+      },
+      "geoLocationPlace": {
+        "@id": "datacite:geoLocationPlace",
+        "@type": "xsd:string"
+      },
+      "geoLocationPoint": {
+        "@id": "datacite:geoLocationPoint"
+      },
+      "geoLocationBox": {
+        "@id": "datacite:geoLocationBox"
+      },
+      "geoLocationPolygon": {
+        "@id": "datacite:geoLocationPolygon",
+        "@container": "@list"
+      },
+      "polygonPoint": {
+        "@id": "datacite:polygonPoint",
+        "@container": "@list"
+      },
+      "inPolygonPoint": {
+        "@id": "datacite:inPolygonPoint"
+      },
+      "fundingReferences": {
+        "@id": "datacite:fundingReferences",
+        "@container": "@list"
+      },
+      "funderName": {
+        "@id": "datacite:funderName",
+        "@type": "xsd:string"
+      },
+      "funderIdentifier": {
+        "@id": "datacite:funderIdentifier",
+        "@type": "@id"
+      },
+      "funderIdentifierType": {
+        "@id": "datacite:funderIdentifierType",
+        "@type": "xsd:string"
+      },
+      "awardNumber": {
+        "@id": "datacite:awardNumber",
+        "@type": "xsd:string"
+      },
+      "awardUri": {
+        "@id": "datacite:awardURI",
+        "@type": "@id"
+      },
+      "awardTitle": {
+        "@id": "datacite:awardTitle",
+        "@type": "xsd:string"
+      },
+      "relatedItems": {
+        "@id": "datacite:relatedItems",
+        "@container": "@list"
+      },
+      "relatedItemType": {
+        "@id": "datacite:relatedItemType",
+        "@type": "xsd:string"
+      },
+      "relatedItemIdentifier": {
+        "@id": "datacite:relatedItemIdentifier",
+        "@type": "xsd:string"
+      },
+      "relatedItemIdentifierType": {
+        "@id": "datacite:relatedItemIdentifierType",
+        "@type": "xsd:string"
+      },
+      "relatedItemRelationType": {
+        "@id": "datacite:relationType",
+        "@type": "xsd:string"
+      },
+      "volume": {
+        "@id": "datacite:volume",
+        "@type": "xsd:string"
+      },
+      "issue": {
+        "@id": "datacite:issue",
+        "@type": "xsd:string"
+      },
+      "number": {
+        "@id": "datacite:number",
+        "@type": "xsd:string"
+      },
+      "numberType": {
+        "@id": "datacite:numberType",
+        "@type": "xsd:string"
+      },
+      "firstPage": {
+        "@id": "datacite:firstPage",
+        "@type": "xsd:string"
+      },
+      "lastPage": {
+        "@id": "datacite:lastPage",
+        "@type": "xsd:string"
+      },
+      "edition": {
+        "@id": "datacite:edition",
+        "@type": "xsd:string"
+      }
     }
   },
   "responseProfile": {
-    "$comment": "==== JSON:API RESPONSE SCHEMA — validates DataCite REST responses. Allows server-added read-only/analytics fields under data.attributes. ====",
+    "$comment": "==== JSON:API RESPONSE SCHEMA \u2014 validates DataCite REST responses. Allows server-added read-only/analytics fields under data.attributes. ====",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "https://schema.stage.datacite.org/linked-data/schema-profiles/integrated-response.json",
     "title": "DataCite REST API Response (JSON:API envelope)",
     "description": "Companion schema to validate DataCite REST API responses that use a JSON:API envelope. This schema validates the envelope and allows additional, read-only attributes returned by the API. Use the submit/bundled profile (this file's root schema) to validate client-submitted payloads.",
     "type": "object",
-     "properties": {
+    "properties": {
       "data": {
         "oneOf": [
           {
             "type": "object",
             "properties": {
-              "id": { "type": "string", "description": "The DOI, formatted as prefix/suffix." },
-              "type": { "type": "string", "const": "dois" },
+              "id": {
+                "type": "string",
+                "description": "The DOI, formatted as prefix/suffix."
+              },
+              "type": {
+                "type": "string",
+                "const": "dois"
+              },
               "attributes": {
                 "type": "object",
                 "description": "The DataCite metadata attributes. In API responses this includes read-only and analytics fields (e.g., url, state, viewCount, downloadsOverTime, created, registered, updated, etc.). These are intentionally not constrained here to keep the response schema in sync with server-side additions.",
                 "additionalProperties": true
               },
-              "relationships": { "type": "object", "additionalProperties": true },
-              "links": { "type": "object", "additionalProperties": true }
+              "relationships": {
+                "type": "object",
+                "additionalProperties": true
+              },
+              "links": {
+                "type": "object",
+                "additionalProperties": true
+              }
             },
-            "required": ["id", "type", "attributes"],
+            "required": [
+              "id",
+              "type",
+              "attributes"
+            ],
             "additionalProperties": true
           },
           {
@@ -1172,43 +2402,100 @@
             "items": {
               "type": "object",
               "properties": {
-                "id": { "type": "string", "description": "The DOI, formatted as prefix/suffix." },
-                "type": { "type": "string", "const": "dois" },
+                "id": {
+                  "type": "string",
+                  "description": "The DOI, formatted as prefix/suffix."
+                },
+                "type": {
+                  "type": "string",
+                  "const": "dois"
+                },
                 "attributes": {
                   "type": "object",
                   "description": "The DataCite metadata attributes. In API responses this includes read-only and analytics fields (e.g., url, state, viewCount, downloadsOverTime, created, registered, updated, etc.). These are intentionally not constrained here to keep the response schema in sync with server-side additions.",
                   "additionalProperties": true
                 },
-                "relationships": { "type": "object", "additionalProperties": true },
-                "links": { "type": "object", "additionalProperties": true }
+                "relationships": {
+                  "type": "object",
+                  "additionalProperties": true
+                },
+                "links": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
               },
-              "required": ["id", "type", "attributes"],
+              "required": [
+                "id",
+                "type",
+                "attributes"
+              ],
               "additionalProperties": true
             }
           }
         ]
       },
-      "included": { "type": "array", "items": { "type": "object" } },
-      "links": { "type": "object", "additionalProperties": true },
-      "meta": { "type": "object", "additionalProperties": true },
-      "errors": { "type": "array", "items": { "type": "object" } },
-      "jsonapi": { "type": "object", "additionalProperties": true }
+      "included": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "links": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "meta": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "errors": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "jsonapi": {
+        "type": "object",
+        "additionalProperties": true
+      }
     },
     "oneOf": [
-      { "required": ["data"] },
-      { "required": ["errors"] },
-      { "required": ["meta"] }
+      {
+        "required": [
+          "data"
+        ]
+      },
+      {
+        "required": [
+          "errors"
+        ]
+      },
+      {
+        "required": [
+          "meta"
+        ]
+      }
     ],
     "allOf": [
       {
-        "if": { "required": ["errors"] },
-        "then": { "not": { "required": ["included"] } }  
+        "if": {
+          "required": [
+            "errors"
+          ]
+        },
+        "then": {
+          "not": {
+            "required": [
+              "included"
+            ]
+          }
+        }
       }
     ],
     "additionalProperties": false
   },
   "submitProfile": {
-    "$comment": "==== JSON:API SUBMISSION SCHEMA — validates the client envelope; the 'data.attributes' MUST conform to the root attributes schema (#). ====",
+    "$comment": "==== JSON:API SUBMISSION SCHEMA \u2014 validates the client envelope; the 'data.attributes' MUST conform to the root attributes schema (#). ====",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "https://schema.stage.datacite.org/linked-data/schema-profiles/integrated-submit.json",
     "title": "DataCite REST API Submission (JSON:API envelope)",
@@ -1218,21 +2505,39 @@
       "data": {
         "type": "object",
         "properties": {
-          "id": { "type": "string" },
-          "type": { "type": "string", "const": "dois" },
-          "attributes": { "$ref": "https://schema.stage.datacite.org/linked-data/attributes" },
-          "relationships": { "type": "object", "additionalProperties": true },
-          "links": { "type": "object", "additionalProperties": true }
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "dois"
+          },
+          "attributes": {
+            "$ref": "https://schema.stage.datacite.org/linked-data/attributes"
+          },
+          "relationships": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "links": {
+            "type": "object",
+            "additionalProperties": true
+          }
         },
-        "required": ["type", "attributes"],
+        "required": [
+          "type",
+          "attributes"
+        ],
         "additionalProperties": false
       }
     },
-    "required": ["data"],
+    "required": [
+      "data"
+    ],
     "additionalProperties": false
   },
   "exportProfile": {
-    "$comment": "==== EXPORT PROFILE — declarative notes and examples for transforming DataCite-shaped JSON into JSON-LD/RDF with proper language-tagged literals and a resolvable DOI @id. This section is documentation for exporters; it is not a JSON Schema and will be ignored by validators. ====",
+    "$comment": "==== EXPORT PROFILE \u2014 declarative notes and examples for transforming DataCite-shaped JSON into JSON-LD/RDF with proper language-tagged literals and a resolvable DOI @id. This section is documentation for exporters; it is not a JSON Schema and will be ignored by validators. ====",
     "title": "Export rules for JSON-LD/RDF",
     "description": "Guidance for exporters that take validated DataCite 4.6 JSON and produce graph-native JSON-LD/RDF, including language-tag handling and DOI IRI construction.",
     "languageConversion": {
@@ -1290,8 +2595,7 @@
           "valuePointer": "/publisherIdentifier",
           "condition": "^https?://",
           "export": "If value matches condition, emit as @id (IRI) instead of xsd:string."
-        }
-        ,
+        },
         {
           "source": "/alternateIdentifiers/*",
           "valuePointer": "/alternateIdentifier",
@@ -1317,30 +2621,74 @@
       "input": {
         "doi": "10.82433/b09z-4k37",
         "titles": [
-          { "title": "Genome dataset", "lang": "en" },
-          { "title": "Genomdataset", "lang": "sv" }
+          {
+            "title": "Genome dataset",
+            "lang": "en"
+          },
+          {
+            "title": "Genomdataset",
+            "lang": "sv"
+          }
         ],
         "descriptions": [
-          { "description": "Primary release", "descriptionType": "Abstract", "lang": "en" }
+          {
+            "description": "Primary release",
+            "descriptionType": "Abstract",
+            "lang": "en"
+          }
         ],
-        "publisher": { "name": "Example University", "lang": "en" },
+        "publisher": {
+          "name": "Example University",
+          "lang": "en"
+        },
         "subjects": [
-          { "subject": "Bioinformatics", "lang": "en" }
+          {
+            "subject": "Bioinformatics",
+            "lang": "en"
+          }
         ]
       },
       "outputJSONLD": {
-        "@context": { "$ref": "profile.@context" },
+        "@context": {
+          "$ref": "profile.@context"
+        },
         "@id": "https://doi.org/10.82433/b09z-4k37",
         "titles": [
-          { "title": { "@value": "Genome dataset", "@language": "en" } },
-          { "title": { "@value": "Genomdataset", "@language": "sv" } }
+          {
+            "title": {
+              "@value": "Genome dataset",
+              "@language": "en"
+            }
+          },
+          {
+            "title": {
+              "@value": "Genomdataset",
+              "@language": "sv"
+            }
+          }
         ],
         "descriptions": [
-          { "description": { "@value": "Primary release", "@language": "en" }, "descriptionType": "Abstract" }
+          {
+            "description": {
+              "@value": "Primary release",
+              "@language": "en"
+            },
+            "descriptionType": "Abstract"
+          }
         ],
-        "publisher": { "name": { "@value": "Example University", "@language": "en" } },
+        "publisher": {
+          "name": {
+            "@value": "Example University",
+            "@language": "en"
+          }
+        },
         "subjects": [
-          { "subject": { "@value": "Bioinformatics", "@language": "en" } }
+          {
+            "subject": {
+              "@value": "Bioinformatics",
+              "@language": "en"
+            }
+          }
         ]
       }
     }

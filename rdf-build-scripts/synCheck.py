@@ -15,13 +15,14 @@ not-yet-published vocabularies.
 Exit code: 0 when all checks pass, 1 otherwise.
 """
 
+import argparse
 import json
 import os
 import sys
 from urllib.parse import urlparse, unquote
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-PROFILE_PATH = os.path.join(
+DEFAULT_PROFILE_PATH = os.path.join(
     ROOT, "validation-and-conversion", "schemas", "schema-profiles", "datacite4.6-profile.json"
 )
 VOCAB_DIR = os.path.join(ROOT, "rdf-vocabulary-staging", "vocab")
@@ -130,14 +131,24 @@ def check_defs_enum(def_key: str, def_obj: dict):
 
 
 def main():
-    if not os.path.isfile(PROFILE_PATH):
-        print(f"ERROR: profile not found at {PROFILE_PATH}")
+    parser = argparse.ArgumentParser(description="Verify schema profile $defs are in sync with vocab term files.")
+    parser.add_argument(
+        "--profile",
+        default=DEFAULT_PROFILE_PATH,
+        help=f"Path to a schema profile JSON (default: {os.path.relpath(DEFAULT_PROFILE_PATH, ROOT)})",
+    )
+    args = parser.parse_args()
+    profile_path = args.profile
+
+    if not os.path.isfile(profile_path):
+        print(f"ERROR: profile not found at {profile_path}")
         sys.exit(1)
     if not os.path.isdir(VOCAB_DIR):
         print(f"ERROR: vocab dir not found at {VOCAB_DIR}")
         sys.exit(1)
 
-    profile = load_json(PROFILE_PATH)
+    print(f"Checking profile: {os.path.relpath(profile_path, ROOT)}")
+    profile = load_json(profile_path)
     for key, obj in profile.get("$defs", {}).items():
         check_defs_enum(key, obj)
 

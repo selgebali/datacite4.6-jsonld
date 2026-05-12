@@ -34,7 +34,18 @@ jobs:
           npm install -g ajv-cli@5
           for f in validation-and-conversion/schemas/schema-profiles/*.json validation-and-conversion/schemas/schema-profiles/*.jsonld; do
             echo "=== $f ==="
-            ajv-cli --strict=false --spec=draft2019 compile -s "$f"
+            # Each profile declares its own draft via $schema; dispatch the right --spec.
+            # Files without $schema (e.g. SKOS-only .jsonld fragments) are skipped.
+            spec=$(node -e "const s=(JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))['\$schema'])||''; if(!s){process.stdout.write('')} else if(s.includes('2020')){process.stdout.write('draft2020')} else if(s.includes('2019')){process.stdout.write('draft2019')} else {process.stdout.write('draft7')}" "$f")
+            if [ -z "$spec" ]; then
+              echo "  (no \$schema — skipping non-schema file)"
+              continue
+            fi
+            # Work around ajv-cli's extension dispatch quirk for .jsonld → copy to .json
+            tmp=$(mktemp --suffix=.json)
+            cp "$f" "$tmp"
+            ajv-cli --strict=false --spec="$spec" compile -s "$tmp"
+            rm -f "$tmp"
           done
 
       - name: Build site

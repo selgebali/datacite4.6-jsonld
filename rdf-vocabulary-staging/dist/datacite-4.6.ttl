@@ -5,52 +5,6 @@ PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
-<https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle.jsonld>;
-        skos:definition    "A title that is a translation of the primary title into another language."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
-        skos:notation      "TranslatedTitle";
-        skos:prefLabel     "TranslatedTitle"@en;
-        skos:scopeNote     "Use the xml:lang attribute to indicate the language of the translated title."@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle.jsonld>;
-        skos:definition    "A secondary title that follows the main title and provides additional information about the resource."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
-        skos:notation      "Subtitle";
-        skos:prefLabel     "Subtitle"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/titleType/Other>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/Other.jsonld>;
-        skos:definition    "Any title type not covered by the other values in the titleType controlled list."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
-        skos:notation      "Other";
-        skos:prefLabel     "Other"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle.jsonld>;
-        skos:definition    "A title by which the resource is also known, used as an alternative to the primary title."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
-        skos:notation      "AlternativeTitle";
-        skos:prefLabel     "AlternativeTitle"@en;
-        skos:scopeNote     "Use for formally recognized alternate titles. For translated titles use TranslatedTitle; for secondary titles use Subtitle."@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/titleType>
-        rdf:type            skos:ConceptScheme;
-        rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/titleType/titleType.jsonld>;
-        dcterms:created     "2026-05-12"^^xsd:date;
-        dcterms:identifier  "titleType";
-        dcterms:title       "DataCite 4.6 titleType"@en;
-        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/titleType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle> , <https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle> , <https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle> .
-
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow>
         rdf:type           skos:Concept;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow.jsonld>;
@@ -151,17 +105,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:scopeNote     "This represents the project (research projects and studies). For project deliverables/descriptions, use the resource type for the output.\n<resourceType resourceTypeGeneral=\"Project\">Field season</resourceType>\n<resourceType resourceTypeGeneral=\"Project\">Cohort study</resourceType>"@en;
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
-<https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Presentation>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Presentation.jsonld>;
-        skos:definition    "A set of slides containing text, tables or figures, designed to communicate ideas or research results, for viewing by an audience at a conference, symposium, seminar, lecture, workshop or other event."@en;
-        skos:example       "<resourceType resourceTypeGeneral=\"Presentation\">Conference presentation slides</resourceType>";
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>;
-        skos:notation      "Presentation";
-        skos:prefLabel     "Presentation"@en;
-        skos:scopeNote     "For a video recording of a presentation, use \"Audiovisual\"."@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
-
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint>
         rdf:type           skos:Concept;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint.jsonld>;
@@ -171,17 +114,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:notation      "Preprint";
         skos:prefLabel     "Preprint"@en;
         skos:scopeNote     "<resourceType resourceTypeGeneral=\"Preprint\">Research Paper</resourceType>"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Poster>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Poster.jsonld>;
-        skos:definition    "A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event."@en;
-        skos:example       "<resourceType resourceTypeGeneral=\"Poster\">Conference poster</resourceType>";
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>;
-        skos:notation      "Poster";
-        skos:prefLabel     "Poster"@en;
-        skos:scopeNote     "Posters may be physical or digital."@en;
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject>
@@ -467,17 +399,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:notation      "References";
         skos:prefLabel     "References"@en;
         skos:scopeNote     "Recommended for discovery."@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/relationType/Other>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Other.jsonld>;
-        skos:definition    "indicates that A is related to B and the relationship does not fit into an existing category"@en;
-        skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Other\" relationTypeInformation=\"is output of\" resourceTypeGeneral=\"Project\">10.21384/p27z-6n52</relatedIdentifier>";
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/relationType>;
-        skos:notation      "Other";
-        skos:prefLabel     "Other"@en;
-        skos:scopeNote     "If selected, supply a value for relationTypeInformation (or relationTypeInformation for RelatedItem)."@en;
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes>
@@ -927,18 +848,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:prefLabel     "UPC"@en;
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
-<https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/SWHID>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/SWHID.jsonld>;
-        skos:altLabel      "SoftWare Hash Identifier"@en;
-        skos:definition    "SWHIDs (from \"SoftWare Hash IDentifiers\") are persistent, intrinsic identifiers for software source code artifacts such as source code files, source trees, commits, and other objects typically found in version control systems."@en;
-        skos:example       "<relatedIdentifier relatedIdentifierType=\"SWHID\" relationType=\"Cites\">swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2</relatedIdentifier>";
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType>;
-        skos:notation      "SWHID";
-        skos:prefLabel     "SWHID"@en;
-        skos:scopeNote     "A SWHID consists of two separate parts, a mandatory core identifier that can point to any software artifact (or \"object\") available in the Software Heritage archive, and an optional list of qualifiers that allows to specify the context where the object is meant to be seen and point to a subpart of the object itself."@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
-
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID>
         rdf:type           skos:Concept;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID.jsonld>;
@@ -948,17 +857,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType>;
         skos:notation      "RRID";
         skos:prefLabel     "RRID"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RAiD>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RAiD.jsonld>;
-        skos:altLabel      "Research Activity Identifier"@en;
-        skos:definition    "The Research Activity Identifier (RAiD) is a persistent identifier (PID) and global registry dedicated to research projects. RAiD is governed by ISO standard 23527:2022, with the Australian Research Data Commons (ARDC) as the Registration Authority and lead developer of the system. RAiD provides a system to store, update, share, and link project information across the research community."@en;
-        skos:example       "<relatedIdentifier relatedIdentifierType=\"RAiD\" relationType=\"IsPartOf\" resourceTypeGeneral=\"Project\">https://raid.org/10.26259/5c43ca8f</relatedIdentifier>";
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType>;
-        skos:notation      "RAiD";
-        skos:prefLabel     "RAiD"@en;
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL>
@@ -1122,50 +1020,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         dcterms:identifier  "relatedIdentifierType";
         dcterms:title       "DataCite 4.6 relatedIdentifierType"@en;
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/SWHID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RAiD> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LISSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISTC> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/bibcode> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/CSTR> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EAN13> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/Handle> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/IGSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISSN> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/numberType/Report>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Report.jsonld>;
-        skos:definition    "A number identifying a report within a report series."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
-        skos:notation      "Report";
-        skos:prefLabel     "Report"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/numberType/Other>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Other.jsonld>;
-        skos:definition    "Any number type not covered by the other values in the numberType controlled list."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
-        skos:notation      "Other";
-        skos:prefLabel     "Other"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter.jsonld>;
-        skos:definition    "A number identifying a chapter within a book or monograph."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
-        skos:notation      "Chapter";
-        skos:prefLabel     "Chapter"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/numberType/Article>
-        rdf:type           skos:Concept;
-        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Article.jsonld>;
-        skos:definition    "A number identifying an article within a journal issue or proceedings volume."@en;
-        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
-        skos:notation      "Article";
-        skos:prefLabel     "Article"@en;
-        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
-
-<https://schema.stage.datacite.org/linked-data/vocab/numberType>
-        rdf:type            skos:ConceptScheme;
-        rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/numberType/numberType.jsonld>;
-        dcterms:created     "2026-05-12"^^xsd:date;
-        dcterms:identifier  "numberType";
-        dcterms:title       "DataCite 4.6 numberType"@en;
-        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/numberType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/numberType/Report> , <https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter> , <https://schema.stage.datacite.org/linked-data/vocab/numberType/Article> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal>
         rdf:type           skos:Concept;
@@ -1724,12 +1578,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         rdfs:label    "resourceType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/resourceType.jsonld> .
 
-<https://schema.stage.datacite.org/linked-data/property/relationTypeInformation>
-        rdf:type      rdf:Property;
-        rdfs:comment  "Additional information about the selected relationType, if appropriate."@en;
-        rdfs:label    "relationTypeInformation"@en;
-        rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relationTypeInformation.jsonld> .
-
 <https://schema.stage.datacite.org/linked-data/property/relationType>
         rdf:type      rdf:Property;
         rdfs:comment  "Description of the relationship of the resource being registered (A) and the related resource (B)."@en;
@@ -2090,16 +1938,16 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         rdfs:label    "affiliation"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/affiliation.jsonld> .
 
-<https://schema.stage.datacite.org/linked-data/dist/datacite-4.7>
+<https://schema.stage.datacite.org/linked-data/dist/datacite-4.6>
         rdf:type            owl:Ontology;
-        rdfs:comment        "Integrated distribution of the DataCite linked-data classes, properties, vocabulary schemes, and vocabulary terms for schema version 4.7."@en;
-        rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/dist/datacite-4.7.rdf> , <https://schema.stage.datacite.org/linked-data/dist/datacite-4.7.ttl> , <https://schema.stage.datacite.org/linked-data/dist/datacite-4.7.jsonld>;
-        dcterms:created     "2026-03-03"^^xsd:date;
-        dcterms:identifier  "datacite-4.7";
+        rdfs:comment        "Integrated distribution of the DataCite linked-data classes, properties, vocabulary schemes, and vocabulary terms for schema version 4.6."@en;
+        rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/dist/datacite-4.6.rdf> , <https://schema.stage.datacite.org/linked-data/dist/datacite-4.6.ttl> , <https://schema.stage.datacite.org/linked-data/dist/datacite-4.6.jsonld>;
+        dcterms:created     "2026-05-12"^^xsd:date;
+        dcterms:identifier  "datacite-4.6";
         dcterms:license     <https://www.apache.org/licenses/LICENSE-2.0>;
-        dcterms:source      <https://schema.stage.datacite.org/linked-data/manifest/datacite-4.7.json>;
-        dcterms:title       "DataCite Linked Data 4.7 Distribution"@en;
-        owl:versionInfo     "4.7" .
+        dcterms:source      <https://schema.stage.datacite.org/linked-data/manifest/datacite-4.6.json>;
+        dcterms:title       "DataCite Linked Data 4.6 Distribution"@en;
+        owl:versionInfo     "4.6" .
 
 <https://schema.stage.datacite.org/linked-data/class/Version>
         rdf:type      rdfs:Class;
