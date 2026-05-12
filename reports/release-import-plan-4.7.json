@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-12T11:46:39.736Z",
+  "localLatestVersion": "4.6",
+  "officialLatestVersion": "4.7",
+  "targetVersion": "4.7",
+  "releaseDate": "2026-03-03",
+  "sources": [
+    "https://schema.datacite.org/versions.html",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-resourceType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-resourceType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-relatedIdentifierType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-relatedIdentifierType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/relatedIdentifierType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-relationType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-relationType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/relationType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-contributorType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-contributorType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/contributorType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-dateType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-dateType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/dateType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-descriptionType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-descriptionType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/descriptionType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-funderIdentifierType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-funderIdentifierType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/funderIdentifierType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-nameType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-nameType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/nameType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-numberType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-numberType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/numberType/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-titleType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-titleType-v4.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/titleType/",
+    "https://schema.datacite.org/meta/kernel-4.6/metadata.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/metadata.xsd",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/introduction/version-update/"
+  ],
+  "notes": [
+    "Detected against previous local version 4.6.",
+    "Official 4.x versions missing locally: 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.7"
+  ],
+  "changes": [
+    {
+      "confidence": "high",
+      "evidence": [
+        "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/",
+        "https://schema.datacite.org/meta/kernel-4.6/include/datacite-resourceType-v4.xsd",
+        "https://schema.datacite.org/meta/kernel-4.7/include/datacite-resourceType-v4.xsd"
+      ],
+      "id": "controlled-list-values-added:resourceTypeGeneral:4.7",
+      "inputs": {
+        "descriptorId": "resourceTypeGeneral",
+        "orderedTerms": [
+          "Audiovisual",
+          "Award",
+          "Book",
+          "BookChapter",
+          "Collection",
+          "ComputationalNotebook",
+          "ConferencePaper",
+          "ConferenceProceeding",
+          "DataPaper",
+          "Dataset",
+          "Dissertation",
+          "Event",
+          "Image",
+          "Instrument",
+          "InteractiveResource",
+          "Journal",
+          "JournalArticle",
+          "Model",
+          "OutputManagementPlan",
+          "PeerReview",
+          "PhysicalObject",
+          "Poster",
+          "Preprint",
+          "Presentation",
+          "Project",
+          "Report",
+          "Service",
+          "Software",
+          "Sound",
+          "Standard",
+          "StudyRegistration",
+          "Text",
+          "Workflow",
+          "Other"
+        ],
+        "releaseMatrixChanges": [
+          {
+            "kind": "controlled-term-added",
+            "target": "resourceTypeGeneral",
+            "values": [
+              "Poster",
+              "Presentation"
+            ]
+          }
+        ],
+        "terms": [
+          {
+            "name": "Poster",
+            "details": {
+              "altLabel": null,
+              "definition": "A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event.",
+              "example": [
+                "<resourceType resourceTypeGeneral=\"Poster\">Conference poster</resourceType>"
+              ],
+              "prefLabel": "Poster",
+              "scopeNote": "Posters may be physical or digital."
+            }
+          },
+          {
+            "name": "Presentation",
+            "details": {
+              "altLabel": null,
+              "definition": "A set of slides containing text, tables or figures, designed to communicate ideas or research results, for viewing by an audience at a conference, symposium, seminar, lecture, workshop or other event.",
+              "example": [
+                "<resourceType resourceTypeGeneral=\"Presentation\">Conference presentation slides</resourceType>"
+              ],
+              "prefLabel": "Presentation",
+              "scopeNote": "For a video recording of a presentation, use \"Audiovisual\"."
+            }
+          }
+        ]
+      },
+      "kind": "controlled-list-values-added",
+      "module": "controlled-list",
+      "notes": [],
+      "section": "resourceTypeGeneral",
+      "status": "proposed",
+      "summary": "Add resourceTypeGeneral terms: Poster, Presentation",
+      "targets": [
+        "vocab/resourceTypeGeneral/resourceTypeGeneral.jsonld",
+        "vocab/resourceTypeGeneral/Poster.jsonld",
+        "vocab/resourceTypeGeneral/Presentation.jsonld",
+        "manifest/release-matrix-4.6-4.7.json"
+      ]
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/relatedIdentifierType/",
+        "https://schema.datacite.org/meta/kernel-4.6/include/datacite-relatedIdentifierType-v4.xsd",
+        "https://schema.datacite.org/meta/kernel-4.7/include/datacite-relatedIdentifierType-v4.xsd"
+      ],
+      "id": "controlled-list-values-added:relatedIdentifierType:4.7",
+      "inputs": {
+        "descriptorId": "relatedIdentifierType",
+        "orderedTerms": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "CSTR",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "IGSN",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "RAiD",
+          "RRID",
+          "SWHID",
+          "UPC",
+          "URL",
+          "URN",
+          "w3id"
+        ],
+        "releaseMatrixChanges": [
+          {
+            "kind": "controlled-term-added",
+            "target": "relatedIdentifierType",
+            "values": [
+              "RAiD",
+              "SWHID"
+            ]
+          }
+        ],
+        "terms": [
+          {
+            "name": "RAiD",
+            "details": {
+              "altLabel": "Research Activity Identifier",
+              "definition": "The Research Activity Identifier (RAiD) is a persistent identifier (PID) and global registry dedicated to research projects. RAiD is governed by ISO standard 23527:2022, with the Australian Research Data Commons (ARDC) as the Registration Authority and lead developer of the system. RAiD provides a system to store, update, share, and link project information across the research community.",
+              "example": [
+                "<relatedIdentifier relatedIdentifierType=\"RAiD\" relationType=\"IsPartOf\" resourceTypeGeneral=\"Project\">https://raid.org/10.26259/5c43ca8f</relatedIdentifier>"
+              ],
+              "prefLabel": "RAiD",
+              "scopeNote": null
+            }
+          },
+          {
+            "name": "SWHID",
+            "details": {
+              "altLabel": "SoftWare Hash Identifier",
+              "definition": "SWHIDs (from \"SoftWare Hash IDentifiers\") are persistent, intrinsic identifiers for software source code artifacts such as source code files, source trees, commits, and other objects typically found in version control systems.",
+              "example": [
+                "<relatedIdentifier relatedIdentifierType=\"SWHID\" relationType=\"Cites\">swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2</relatedIdentifier>"
+              ],
+              "prefLabel": "SWHID",
+              "scopeNote": "A SWHID consists of two separate parts, a mandatory core identifier that can point to any software artifact (or \"object\") available in the Software Heritage archive, and an optional list of qualifiers that allows to specify the context where the object is meant to be seen and point to a subpart of the object itself."
+            }
+          }
+        ]
+      },
+      "kind": "controlled-list-values-added",
+      "module": "controlled-list",
+      "notes": [],
+      "section": "relatedIdentifierType",
+      "status": "proposed",
+      "summary": "Add relatedIdentifierType terms: RAiD, SWHID",
+      "targets": [
+        "vocab/relatedIdentifierType/relatedIdentifierType.jsonld",
+        "vocab/relatedIdentifierType/RAiD.jsonld",
+        "vocab/relatedIdentifierType/SWHID.jsonld",
+        "manifest/release-matrix-4.6-4.7.json"
+      ]
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/relationType/",
+        "https://schema.datacite.org/meta/kernel-4.6/include/datacite-relationType-v4.xsd",
+        "https://schema.datacite.org/meta/kernel-4.7/include/datacite-relationType-v4.xsd"
+      ],
+      "id": "controlled-list-values-added:relationType:4.7",
+      "inputs": {
+        "descriptorId": "relationType",
+        "orderedTerms": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsPublishedIn",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "HasMetadata",
+          "IsMetadataFor",
+          "Reviews",
+          "IsReviewedBy",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "Describes",
+          "IsDescribedBy",
+          "HasVersion",
+          "IsVersionOf",
+          "Requires",
+          "IsRequiredBy",
+          "Obsoletes",
+          "IsObsoletedBy",
+          "Collects",
+          "IsCollectedBy",
+          "HasTranslation",
+          "IsTranslationOf",
+          "Other"
+        ],
+        "releaseMatrixChanges": [
+          {
+            "kind": "controlled-term-added",
+            "target": "relationType",
+            "values": [
+              "Other"
+            ]
+          }
+        ],
+        "terms": [
+          {
+            "name": "Other",
+            "details": {
+              "altLabel": null,
+              "definition": "indicates that A is related to B and the relationship does not fit into an existing category",
+              "example": [
+                "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Other\" relationTypeInformation=\"is output of\" resourceTypeGeneral=\"Project\">10.21384/p27z-6n52</relatedIdentifier>"
+              ],
+              "prefLabel": "Other",
+              "scopeNote": "If selected, supply a value for relationTypeInformation (or relationTypeInformation for RelatedItem)."
+            }
+          }
+        ]
+      },
+      "kind": "controlled-list-values-added",
+      "module": "controlled-list",
+      "notes": [],
+      "section": "relationType",
+      "status": "proposed",
+      "summary": "Add relationType terms: Other",
+      "targets": [
+        "vocab/relationType/relationType.jsonld",
+        "vocab/relationType/Other.jsonld",
+        "manifest/release-matrix-4.6-4.7.json"
+      ]
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        "https://datacite-metadata-schema.readthedocs.io/en/4.7/introduction/version-update/",
+        "https://schema.datacite.org/meta/kernel-4.6/metadata.xsd",
+        "https://schema.datacite.org/meta/kernel-4.7/metadata.xsd",
+        "https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/relatedidentifier/",
+        "https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/relateditem/"
+      ],
+      "id": "simple-property-added:relationTypeInformation:4.7",
+      "inputs": {
+        "contextEntries": [
+          {
+            "afterKey": null,
+            "key": "relationTypeInformation"
+          }
+        ],
+        "propertyFile": {
+          "@context": {
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "schema": "https://schema.stage.datacite.org/linked-data/",
+            "datacite": "https://schema.stage.datacite.org/linked-data/"
+          },
+          "@id": "https://schema.stage.datacite.org/linked-data/property/relationTypeInformation",
+          "@type": "rdf:Property",
+          "rdfs:label": "relationTypeInformation",
+          "rdfs:comment": "Additional information about the selected relationType, if appropriate."
+        },
+        "releaseMatrixChanges": [
+          {
+            "kind": "sub-property-added",
+            "target": "relatedIdentifier",
+            "property": "relationTypeInformation",
+            "occurrences": "0-1"
+          },
+          {
+            "kind": "sub-property-added",
+            "target": "relatedItem",
+            "property": "relationTypeInformation",
+            "occurrences": "0-1"
+          }
+        ]
+      },
+      "kind": "simple-property-added",
+      "module": "simple-property",
+      "notes": [],
+      "section": "relationTypeInformation",
+      "status": "proposed",
+      "summary": "Add simple property relationTypeInformation",
+      "targets": [
+        "property/relationTypeInformation.jsonld",
+        "context/fullcontext.jsonld",
+        "manifest/release-matrix-4.6-4.7.json"
+      ]
+    }
+  ]
+}
