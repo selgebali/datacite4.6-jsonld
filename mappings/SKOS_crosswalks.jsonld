@@ -821,12 +821,10 @@
       "@type": "skos:Concept",
       "skos:prefLabel": "Award",
       "skos:definition": "An umbrella term for resources provided to individual(s) or organization(s) in support of research, academic output, or training, such as a specific instance of funding, grant, investment, sponsorship, scholarship, recognition, or non-monetary materials.",
-      "skos:exactMatch": [
-          { "@id": "schema:Award" },
-          { "@id": "wd:Q618779" }
-  ],      
-      "skos:broader": { "@id": "datacite:resourceTypeGeneral" },
+      "skos:exactMatch": { "@id": "wd:Q618779" },
+      "skos:closeMatch": { "@id": "schema:CreativeWork" },
       "skos:narrowMatch": { "@id": "schema:Grant" },
+      "skos:broader": { "@id": "datacite:resourceTypeGeneral" },
       "skos:inScheme": { "@id": "datacite:ResourceTypeGeneralScheme" }
     },
     {
@@ -1228,6 +1226,805 @@
       "skos:definition": "Any other resource type not covered by the specific types.",
       "skos:broader": { "@id": "datacite:resourceTypeGeneral" },
       "skos:inScheme": { "@id": "datacite:ResourceTypeGeneralScheme" }
-}
+    },
+
+    {
+      "@id": "datacite:alternateIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Alternate Identifier",
+      "skos:definition": "An identifier other than the primary identifier applied to the resource being registered.",
+      "skos:exactMatch": [
+        { "@id": "schema:identifier" },
+        { "@id": "dcterms:identifier" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:alternateIdentifierType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Alternate Identifier Type",
+      "skos:definition": "The type of the alternate identifier (e.g. URL, ISBN).",
+      "skos:exactMatch": { "@id": "schema:propertyID" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "datacite:relatedIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Related Identifier",
+      "skos:definition": "Identifiers of related resources.",
+      "skos:closeMatch": [
+        { "@id": "schema:citation" },
+        { "@id": "dcterms:relation" }
+      ],
+      "skos:relatedMatch": { "@id": "schema:isBasedOn" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:relatedIdentifierType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Related Identifier Type",
+      "skos:definition": "The scheme of the related identifier (e.g. DOI, URL).",
+      "skos:exactMatch": { "@id": "schema:propertyID" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:relatedMetadataScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Related Metadata Scheme",
+      "skos:definition": "The name of the metadata scheme used for the related identifier.",
+      "skos:exactMatch": { "@id": "schema:propertyID" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:schemeType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Scheme Type",
+      "skos:definition": "The encoding or format of the related identifier scheme.",
+      "skos:closeMatch": { "@id": "schema:encodingFormat" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "datacite:RelationTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite RelationType Scheme",
+      "skos:definition": "Controlled list of DataCite relationType values.",
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" },
+      "skos:hasTopConcept": [
+        { "@id": "datacite:RelationType_IsCitedBy" },
+        { "@id": "datacite:RelationType_Cites" },
+        { "@id": "datacite:RelationType_IsSupplementTo" },
+        { "@id": "datacite:RelationType_IsSupplementedBy" },
+        { "@id": "datacite:RelationType_IsContinuedBy" },
+        { "@id": "datacite:RelationType_Continues" },
+        { "@id": "datacite:RelationType_IsDescribedBy" },
+        { "@id": "datacite:RelationType_Describes" },
+        { "@id": "datacite:RelationType_HasMetadata" },
+        { "@id": "datacite:RelationType_IsMetadataFor" },
+        { "@id": "datacite:RelationType_IsNewVersionOf" },
+        { "@id": "datacite:RelationType_IsPreviousVersionOf" },
+        { "@id": "datacite:RelationType_IsPartOf" },
+        { "@id": "datacite:RelationType_HasPart" },
+        { "@id": "datacite:RelationType_IsPublishedIn" },
+        { "@id": "datacite:RelationType_IsReferencedBy" },
+        { "@id": "datacite:RelationType_References" },
+        { "@id": "datacite:RelationType_IsDocumentedBy" },
+        { "@id": "datacite:RelationType_Documents" },
+        { "@id": "datacite:RelationType_IsCompiledBy" },
+        { "@id": "datacite:RelationType_Compiles" },
+        { "@id": "datacite:RelationType_IsVariantFormOf" },
+        { "@id": "datacite:RelationType_IsOriginalFormOf" },
+        { "@id": "datacite:RelationType_IsIdenticalTo" },
+        { "@id": "datacite:RelationType_IsReviewedBy" },
+        { "@id": "datacite:RelationType_Reviews" },
+        { "@id": "datacite:RelationType_IsDerivedFrom" },
+        { "@id": "datacite:RelationType_IsSourceOf" },
+        { "@id": "datacite:RelationType_IsRequiredBy" },
+        { "@id": "datacite:RelationType_Requires" },
+        { "@id": "datacite:RelationType_Obsoletes" },
+        { "@id": "datacite:RelationType_IsObsoletedBy" },
+        { "@id": "datacite:RelationType_IsCollectedBy" },
+        { "@id": "datacite:RelationType_Collects" },
+        { "@id": "datacite:RelationType_IsBasedOn" },
+        { "@id": "datacite:RelationType_IsBasisFor" },
+        { "@id": "datacite:RelationType_IsVersionOf" },
+        { "@id": "datacite:RelationType_HasVersion" },
+        { "@id": "datacite:RelationType_IsTranslationOf" },
+        { "@id": "datacite:RelationType_HasTranslation" }
+      ]
+    },
+    { "@id": "datacite:RelationType_IsCitedBy", "@type": "skos:Concept", "skos:prefLabel": "IsCitedBy", "skos:definition": "The resource is cited by another.", "skos:relatedMatch": { "@id": "schema:citation" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Cites", "@type": "skos:Concept", "skos:prefLabel": "Cites", "skos:definition": "The resource cites another.", "skos:exactMatch": { "@id": "schema:citation" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsSupplementTo", "@type": "skos:Concept", "skos:prefLabel": "IsSupplementTo", "skos:definition": "The resource is a supplement to another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsSupplementedBy", "@type": "skos:Concept", "skos:prefLabel": "IsSupplementedBy", "skos:definition": "The resource is supplemented by another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsContinuedBy", "@type": "skos:Concept", "skos:prefLabel": "IsContinuedBy", "skos:definition": "The resource is continued by another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Continues", "@type": "skos:Concept", "skos:prefLabel": "Continues", "skos:definition": "The resource continues another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsDescribedBy", "@type": "skos:Concept", "skos:prefLabel": "IsDescribedBy", "skos:definition": "The resource is described by another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Describes", "@type": "skos:Concept", "skos:prefLabel": "Describes", "skos:definition": "The resource describes another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_HasMetadata", "@type": "skos:Concept", "skos:prefLabel": "HasMetadata", "skos:definition": "A metadata document exists for the resource.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsMetadataFor", "@type": "skos:Concept", "skos:prefLabel": "IsMetadataFor", "skos:definition": "The resource is metadata for another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsNewVersionOf", "@type": "skos:Concept", "skos:prefLabel": "IsNewVersionOf", "skos:definition": "The resource is a new version of another.", "skos:closeMatch": [ { "@id": "schema:isBasedOn" }, { "@id": "dcterms:isVersionOf" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsPreviousVersionOf", "@type": "skos:Concept", "skos:prefLabel": "IsPreviousVersionOf", "skos:definition": "The resource is a previous version of another.", "skos:relatedMatch": [ { "@id": "schema:isBasedOn" }, { "@id": "dcterms:isVersionOf" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsPartOf", "@type": "skos:Concept", "skos:prefLabel": "IsPartOf", "skos:definition": "The resource is part of another.", "skos:exactMatch": [ { "@id": "schema:isPartOf" }, { "@id": "dcterms:isPartOf" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_HasPart", "@type": "skos:Concept", "skos:prefLabel": "HasPart", "skos:definition": "The resource has a part.", "skos:exactMatch": [ { "@id": "schema:hasPart" }, { "@id": "dcterms:hasPart" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsPublishedIn", "@type": "skos:Concept", "skos:prefLabel": "IsPublishedIn", "skos:definition": "The resource is published in a journal or collection.", "skos:closeMatch": [ { "@id": "schema:isPartOf" }, { "@id": "dcterms:isPartOf" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsReferencedBy", "@type": "skos:Concept", "skos:prefLabel": "IsReferencedBy", "skos:definition": "The resource is referenced by another.", "skos:relatedMatch": [ { "@id": "schema:citation" }, { "@id": "dcterms:isReferencedBy" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_References", "@type": "skos:Concept", "skos:prefLabel": "References", "skos:definition": "The resource references another.", "skos:closeMatch": [ { "@id": "schema:citation" }, { "@id": "dcterms:references" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsDocumentedBy", "@type": "skos:Concept", "skos:prefLabel": "IsDocumentedBy", "skos:definition": "The resource is documented by another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Documents", "@type": "skos:Concept", "skos:prefLabel": "Documents", "skos:definition": "The resource documents another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsCompiledBy", "@type": "skos:Concept", "skos:prefLabel": "IsCompiledBy", "skos:definition": "The resource is compiled or built from another.", "skos:relatedMatch": { "@id": "schema:isBasedOn" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Compiles", "@type": "skos:Concept", "skos:prefLabel": "Compiles", "skos:definition": "The resource compiles or builds others.", "skos:relatedMatch": { "@id": "schema:hasPart" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsVariantFormOf", "@type": "skos:Concept", "skos:prefLabel": "IsVariantFormOf", "skos:definition": "The resource is a variant form of another.", "skos:relatedMatch": { "@id": "schema:isBasedOn" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsOriginalFormOf", "@type": "skos:Concept", "skos:prefLabel": "IsOriginalFormOf", "skos:definition": "The resource is the original form of a variant.", "skos:relatedMatch": { "@id": "schema:isBasedOn" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsIdenticalTo", "@type": "skos:Concept", "skos:prefLabel": "IsIdenticalTo", "skos:definition": "The resource is identical to another.", "skos:closeMatch": { "@id": "schema:sameAs" }, "skos:exactMatch": { "@id": "owl:sameAs" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsReviewedBy", "@type": "skos:Concept", "skos:prefLabel": "IsReviewedBy", "skos:definition": "The resource is reviewed by another.", "skos:relatedMatch": { "@id": "schema:review" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Reviews", "@type": "skos:Concept", "skos:prefLabel": "Reviews", "skos:definition": "The resource is a review of another.", "skos:exactMatch": { "@id": "schema:reviews" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsDerivedFrom", "@type": "skos:Concept", "skos:prefLabel": "IsDerivedFrom", "skos:definition": "The resource is derived from another.", "skos:exactMatch": [ { "@id": "schema:isBasedOn" }, { "@id": "dcterms:source" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsSourceOf", "@type": "skos:Concept", "skos:prefLabel": "IsSourceOf", "skos:definition": "The resource is the source from which another was derived.", "skos:relatedMatch": { "@id": "schema:isBasedOn" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsRequiredBy", "@type": "skos:Concept", "skos:prefLabel": "IsRequiredBy", "skos:definition": "The resource is required by another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Requires", "@type": "skos:Concept", "skos:prefLabel": "Requires", "skos:definition": "The resource requires another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Obsoletes", "@type": "skos:Concept", "skos:prefLabel": "Obsoletes", "skos:definition": "The resource supersedes another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsObsoletedBy", "@type": "skos:Concept", "skos:prefLabel": "IsObsoletedBy", "skos:definition": "The resource has been superseded by another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsCollectedBy", "@type": "skos:Concept", "skos:prefLabel": "IsCollectedBy", "skos:definition": "The resource is collected by another.", "skos:relatedMatch": { "@id": "schema:isRelatedTo" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_Collects", "@type": "skos:Concept", "skos:prefLabel": "Collects", "skos:definition": "The resource collects other resources.", "skos:relatedMatch": { "@id": "schema:hasPart" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsBasedOn", "@type": "skos:Concept", "skos:prefLabel": "IsBasedOn", "skos:definition": "The resource is based on another.", "skos:exactMatch": { "@id": "schema:isBasedOn" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsBasisFor", "@type": "skos:Concept", "skos:prefLabel": "IsBasisFor", "skos:definition": "The resource is the basis for another.", "skos:relatedMatch": { "@id": "schema:isBasedOn" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsVersionOf", "@type": "skos:Concept", "skos:prefLabel": "IsVersionOf", "skos:definition": "The resource is a version of a more general resource.", "skos:closeMatch": [ { "@id": "schema:isBasedOn" }, { "@id": "dcterms:isVersionOf" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_HasVersion", "@type": "skos:Concept", "skos:prefLabel": "HasVersion", "skos:definition": "The resource has a more specific version.", "skos:relatedMatch": [ { "@id": "schema:isBasedOn" }, { "@id": "dcterms:hasVersion" } ], "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_IsTranslationOf", "@type": "skos:Concept", "skos:prefLabel": "IsTranslationOf", "skos:definition": "The resource is a translation of another (new in DataCite 4.6).", "skos:exactMatch": { "@id": "schema:translationOfWork" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+    { "@id": "datacite:RelationType_HasTranslation", "@type": "skos:Concept", "skos:prefLabel": "HasTranslation", "skos:definition": "The resource has a translated version (new in DataCite 4.6).", "skos:exactMatch": { "@id": "schema:workTranslation" }, "skos:broader": { "@id": "datacite:relationType" }, "skos:inScheme": { "@id": "datacite:RelationTypeScheme" } },
+
+    {
+      "@id": "datacite:size",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Size",
+      "skos:definition": "Size information about the resource.",
+      "skos:exactMatch": { "@id": "schema:contentSize" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:format",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Format",
+      "skos:definition": "Technical format of the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:encodingFormat" },
+        { "@id": "dcterms:format" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:version",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Version",
+      "skos:definition": "The version number of the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:version" },
+        { "@id": "dcterms:hasVersion" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "datacite:rights",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Rights",
+      "skos:definition": "Any rights information for this resource.",
+      "skos:closeMatch": [
+        { "@id": "schema:license" },
+        { "@id": "dcterms:rights" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:rightsURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Rights URI",
+      "skos:definition": "The URI of the license or rights statement.",
+      "skos:exactMatch": { "@id": "schema:url" },
+      "skos:closeMatch": { "@id": "dcterms:license" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:rightsIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Rights Identifier",
+      "skos:definition": "A short, machine-readable identifier for the license (e.g. CC-BY-4.0).",
+      "skos:closeMatch": { "@id": "schema:identifier" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:rightsIdentifierScheme",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Rights Identifier Scheme",
+      "skos:definition": "The name of the scheme for the rights identifier (e.g. SPDX).",
+      "skos:exactMatch": { "@id": "schema:propertyID" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "datacite:DescriptionTypeScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "DataCite DescriptionType Scheme",
+      "skos:definition": "Controlled list of DataCite descriptionType values.",
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" },
+      "skos:hasTopConcept": [
+        { "@id": "datacite:DescriptionType_Abstract" },
+        { "@id": "datacite:DescriptionType_Methods" },
+        { "@id": "datacite:DescriptionType_SeriesInformation" },
+        { "@id": "datacite:DescriptionType_TableOfContents" },
+        { "@id": "datacite:DescriptionType_TechnicalInfo" },
+        { "@id": "datacite:DescriptionType_Other" }
+      ]
+    },
+    {
+      "@id": "datacite:description",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Description",
+      "skos:definition": "All additional information that does not fit in any of the other categories.",
+      "skos:exactMatch": [
+        { "@id": "schema:description" },
+        { "@id": "dcterms:description" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:descriptionType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Description Type",
+      "skos:definition": "The type of description (e.g. Abstract, Methods).",
+      "skos:exactMatch": { "@id": "schema:propertyID" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:DescriptionType_Abstract",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Abstract",
+      "skos:definition": "A brief summary of the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:abstract" },
+        { "@id": "dcterms:abstract" }
+      ],
+      "skos:broader": { "@id": "datacite:descriptionType" },
+      "skos:inScheme": { "@id": "datacite:DescriptionTypeScheme" }
+    },
+    {
+      "@id": "datacite:DescriptionType_Methods",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Methods",
+      "skos:definition": "The methodology employed for the study or research behind the resource.",
+      "skos:relatedMatch": { "@id": "schema:description" },
+      "skos:broader": { "@id": "datacite:descriptionType" },
+      "skos:inScheme": { "@id": "datacite:DescriptionTypeScheme" }
+    },
+    {
+      "@id": "datacite:DescriptionType_SeriesInformation",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "SeriesInformation",
+      "skos:definition": "Information about a repeating series.",
+      "skos:relatedMatch": { "@id": "schema:description" },
+      "skos:broader": { "@id": "datacite:descriptionType" },
+      "skos:inScheme": { "@id": "datacite:DescriptionTypeScheme" }
+    },
+    {
+      "@id": "datacite:DescriptionType_TableOfContents",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "TableOfContents",
+      "skos:definition": "A listing of the Table of Contents.",
+      "skos:relatedMatch": { "@id": "schema:description" },
+      "skos:broader": { "@id": "datacite:descriptionType" },
+      "skos:inScheme": { "@id": "datacite:DescriptionTypeScheme" }
+    },
+    {
+      "@id": "datacite:DescriptionType_TechnicalInfo",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "TechnicalInfo",
+      "skos:definition": "Detailed information that may be associated with design, implementation, or operation of the resource.",
+      "skos:relatedMatch": { "@id": "schema:description" },
+      "skos:broader": { "@id": "datacite:descriptionType" },
+      "skos:inScheme": { "@id": "datacite:DescriptionTypeScheme" }
+    },
+    {
+      "@id": "datacite:DescriptionType_Other",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Other",
+      "skos:definition": "Any other description type not covered by the standard list.",
+      "skos:relatedMatch": { "@id": "schema:description" },
+      "skos:broader": { "@id": "datacite:descriptionType" },
+      "skos:inScheme": { "@id": "datacite:DescriptionTypeScheme" }
+    },
+
+    {
+      "@id": "datacite:geoLocation",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GeoLocation",
+      "skos:definition": "Spatial region or named place where the data was gathered or about which the data is focused.",
+      "skos:exactMatch": [
+        { "@id": "schema:spatialCoverage" },
+        { "@id": "dcterms:spatial" }
+      ],
+      "skos:relatedMatch": { "@id": "dcat:spatialResolutionInMeters" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:geoLocationPlace",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GeoLocation Place",
+      "skos:definition": "A description of a geographic location.",
+      "skos:exactMatch": { "@id": "schema:Place" },
+      "skos:closeMatch": { "@id": "dcterms:Location" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:geoLocationPoint",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GeoLocation Point",
+      "skos:definition": "A point location in space.",
+      "skos:exactMatch": { "@id": "schema:GeoCoordinates" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:pointLatitude",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Point Latitude",
+      "skos:definition": "The latitude of a point location.",
+      "skos:exactMatch": { "@id": "schema:latitude" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:pointLongitude",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Point Longitude",
+      "skos:definition": "The longitude of a point location.",
+      "skos:exactMatch": { "@id": "schema:longitude" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:geoLocationBox",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GeoLocation Box",
+      "skos:definition": "The spatial limits of a box.",
+      "skos:exactMatch": { "@id": "schema:GeoShape" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:westBoundLongitude",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "West Bound Longitude",
+      "skos:definition": "Western longitudinal dimension of the box.",
+      "skos:relatedMatch": { "@id": "schema:box" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:eastBoundLongitude",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "East Bound Longitude",
+      "skos:definition": "Eastern longitudinal dimension of the box.",
+      "skos:relatedMatch": { "@id": "schema:box" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:southBoundLatitude",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "South Bound Latitude",
+      "skos:definition": "Southern latitudinal dimension of the box.",
+      "skos:relatedMatch": { "@id": "schema:box" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:northBoundLatitude",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "North Bound Latitude",
+      "skos:definition": "Northern latitudinal dimension of the box.",
+      "skos:relatedMatch": { "@id": "schema:box" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:geoLocationPolygon",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GeoLocation Polygon",
+      "skos:definition": "A drawn polygon area, defined by a set of points and lines connecting the points in a closed chain.",
+      "skos:closeMatch": { "@id": "schema:GeoShape" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "datacite:fundingReference",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Funding Reference",
+      "skos:definition": "Information about financial support for the resource.",
+      "skos:exactMatch": { "@id": "schema:funding" },
+      "skos:closeMatch": [
+        { "@id": "schema:funder" },
+        { "@id": "wd:Q618779" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:funderName",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Funder Name",
+      "skos:definition": "Name of the funding provider.",
+      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:funderIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Funder Identifier",
+      "skos:definition": "Uniquely identifies a funding entity, according to various types.",
+      "skos:exactMatch": [
+        { "@id": "schema:identifier" },
+        { "@id": "dcat:identifier" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:funderIdentifierType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Funder Identifier Type",
+      "skos:definition": "The type of the funder identifier (e.g. ROR, CrossrefFunderID).",
+      "skos:exactMatch": { "@id": "schema:propertyID" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:awardNumber",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Award Number",
+      "skos:definition": "The code assigned by the funder to a sponsored award.",
+      "skos:exactMatch": { "@id": "schema:identifier" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:awardURI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Award URI",
+      "skos:definition": "The URI leading to a page provided by the funder for more information about the award.",
+      "skos:exactMatch": { "@id": "schema:url" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:awardTitle",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Award Title",
+      "skos:definition": "The human readable title or name of the award.",
+      "skos:exactMatch": { "@id": "schema:name" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "datacite:relatedItem",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Related Item",
+      "skos:definition": "Information about a resource related to the one being registered.",
+      "skos:closeMatch": [
+        { "@id": "schema:citation" },
+        { "@id": "dcterms:relation" }
+      ],
+      "skos:relatedMatch": [
+        { "@id": "schema:isPartOf" },
+        { "@id": "schema:hasPart" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:relatedItemIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Related Item Identifier",
+      "skos:definition": "The identifier for the related item.",
+      "skos:exactMatch": [
+        { "@id": "schema:identifier" },
+        { "@id": "dcterms:identifier" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:relatedItemIdentifierType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Related Item Identifier Type",
+      "skos:definition": "The scheme of the related item identifier (e.g. DOI).",
+      "skos:exactMatch": { "@id": "schema:propertyID" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:volume",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Volume",
+      "skos:definition": "Volume of the related item.",
+      "skos:exactMatch": { "@id": "schema:volumeNumber" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:issue",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Issue",
+      "skos:definition": "Issue number or name of the related item.",
+      "skos:exactMatch": { "@id": "schema:issueNumber" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:number",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Number",
+      "skos:definition": "Number of the related item (e.g. report number).",
+      "skos:closeMatch": { "@id": "schema:issueNumber" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:firstPage",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "First Page",
+      "skos:definition": "First page of the related item.",
+      "skos:exactMatch": { "@id": "schema:pageStart" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:lastPage",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Last Page",
+      "skos:definition": "Last page of the related item.",
+      "skos:exactMatch": { "@id": "schema:pageEnd" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:edition",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Edition",
+      "skos:definition": "Edition or version of the related item.",
+      "skos:exactMatch": { "@id": "schema:bookEdition" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+
+    {
+      "@id": "datacite:class_Resource",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Resource (class)",
+      "skos:definition": "A resource that can be cited and identified — the top-level DataCite record.",
+      "skos:exactMatch": [
+        { "@id": "schema:CreativeWork" },
+        { "@id": "dcterms:BibliographicResource" }
+      ],
+      "skos:closeMatch": { "@id": "wd:Q386724" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Identifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Identifier (class)",
+      "skos:definition": "The Identifier is a unique string that identifies a resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:PropertyValue" },
+        { "@id": "wd:Q853614" }
+      ],
+      "skos:closeMatch": { "@id": "dcat:identifier" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Creator",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Creator (class)",
+      "skos:definition": "The main researchers or authors involved in producing the data. Can be a Person or an Organization; nameType determines the concrete RDF type.",
+      "skos:exactMatch": [
+        { "@id": "dcterms:Agent" },
+        { "@id": "wd:Q215627" }
+      ],
+      "skos:scopeNote": "Do not map at class level to schema:Person or schema:Organization; those bindings are made per-instance via nameType (see datacite:nameType_Personal and datacite:nameType_Organizational).",
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Title",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Title (class)",
+      "skos:definition": "A name or title by which a resource is known; structurally a labelled text value with an optional language tag and a titleType qualifier.",
+      "skos:closeMatch": [
+        { "@id": "schema:Text" },
+        { "@id": "dcterms:title" }
+      ],
+      "skos:relatedMatch": { "@id": "wd:Q783521" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Publisher",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Publisher (class)",
+      "skos:definition": "The entity that holds, archives, publishes, or produces the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:Organization" },
+        { "@id": "wd:Q2516866" }
+      ],
+      "skos:closeMatch": { "@id": "dcterms:Agent" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_PublicationYear",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "PublicationYear (class)",
+      "skos:definition": "The year when the data was or will be made publicly available.",
+      "skos:closeMatch": { "@id": "schema:Date" },
+      "skos:exactMatch": { "@id": "dcterms:issued" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Subject",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Subject (class)",
+      "skos:definition": "Subject, keyword, classification code, or key phrase describing the resource.",
+      "skos:closeMatch": [
+        { "@id": "schema:DefinedTerm" },
+        { "@id": "wd:Q18616576" }
+      ],
+      "skos:exactMatch": { "@id": "dcterms:subject" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Contributor",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Contributor (class)",
+      "skos:definition": "The institution or person responsible for contributing to the development of the resource.",
+      "skos:closeMatch": [
+        { "@id": "schema:Person" },
+        { "@id": "schema:Organization" }
+      ],
+      "skos:exactMatch": [
+        { "@id": "dcterms:Agent" },
+        { "@id": "wd:Q20204892" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Date",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Date (class)",
+      "skos:definition": "Different dates relevant to the work.",
+      "skos:closeMatch": { "@id": "schema:PropertyValue" },
+      "skos:exactMatch": { "@id": "dcterms:date" },
+      "skos:relatedMatch": { "@id": "schema:Date" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Language",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Language (class)",
+      "skos:definition": "The primary language of the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:Language" },
+        { "@id": "dcterms:LinguisticSystem" },
+        { "@id": "wd:Q34770" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_ResourceType",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "ResourceType (class)",
+      "skos:definition": "A description of the resource that drives the controlled type classification.",
+      "skos:relatedMatch": [
+        { "@id": "schema:CreativeWork" },
+        { "@id": "dcterms:type" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_AlternateIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "AlternateIdentifier (class)",
+      "skos:definition": "An identifier other than the primary identifier for the same instance of the resource.",
+      "skos:exactMatch": [
+        { "@id": "schema:PropertyValue" },
+        { "@id": "dcterms:identifier" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_RelatedIdentifier",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "RelatedIdentifier (class)",
+      "skos:definition": "Identifiers of related resources.",
+      "skos:closeMatch": [
+        { "@id": "schema:CreativeWork" },
+        { "@id": "schema:PropertyValue" }
+      ],
+      "skos:exactMatch": { "@id": "dcterms:relation" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Size",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Size (class)",
+      "skos:definition": "Size or duration of a resource.",
+      "skos:closeMatch": { "@id": "schema:QuantitativeValue" },
+      "skos:exactMatch": { "@id": "dcterms:extent" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Format",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Format (class)",
+      "skos:definition": "Technical format of the resource.",
+      "skos:relatedMatch": { "@id": "schema:MediaObject" },
+      "skos:exactMatch": [
+        { "@id": "dcterms:MediaTypeOrExtent" },
+        { "@id": "dcterms:format" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Version",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Version (class)",
+      "skos:definition": "The version number of the resource.",
+      "skos:relatedMatch": { "@id": "schema:CreativeWork" },
+      "skos:exactMatch": { "@id": "dcterms:hasVersion" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Rights",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Rights (class)",
+      "skos:definition": "Any rights information for this resource.",
+      "skos:relatedMatch": { "@id": "schema:CreativeWork" },
+      "skos:exactMatch": [
+        { "@id": "dcterms:RightsStatement" },
+        { "@id": "dcterms:rights" }
+      ],
+      "skos:closeMatch": { "@id": "schema:license" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_Description",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Description (class)",
+      "skos:definition": "Additional information about the resource; carries both a text value and a descriptionType qualifier.",
+      "skos:closeMatch": { "@id": "schema:PropertyValue" },
+      "skos:exactMatch": { "@id": "dcterms:description" },
+      "skos:relatedMatch": { "@id": "schema:description" },
+      "skos:scopeNote": "schema:description is a property on CreativeWork, not a class; the DataCite Description class is better modelled as a schema:PropertyValue carrying the text and a type label.",
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_GeoLocation",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "GeoLocation (class)",
+      "skos:definition": "Spatial region or named place where the data was gathered or about which the data is focused.",
+      "skos:closeMatch": { "@id": "schema:Place" },
+      "skos:exactMatch": [
+        { "@id": "dcterms:Location" },
+        { "@id": "wd:Q2221906" }
+      ],
+      "skos:relatedMatch": [
+        { "@id": "schema:GeoCoordinates" },
+        { "@id": "schema:GeoShape" },
+        { "@id": "dcat:Location" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_FundingReference",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "FundingReference (class)",
+      "skos:definition": "Information about financial support for the resource being registered.",
+      "skos:exactMatch": [
+        { "@id": "schema:Grant" },
+        { "@id": "wd:Q230788" }
+      ],
+      "skos:closeMatch": { "@id": "schema:MonetaryGrant" },
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    },
+    {
+      "@id": "datacite:class_RelatedItem",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "RelatedItem (class)",
+      "skos:definition": "Information about a resource related to the one being registered.",
+      "skos:exactMatch": [
+        { "@id": "schema:CreativeWork" },
+        { "@id": "dcterms:BibliographicResource" }
+      ],
+      "skos:relatedMatch": [
+        { "@id": "dcterms:relation" },
+        { "@id": "wd:Q386724" }
+      ],
+      "skos:inScheme": { "@id": "datacite:DataCite4.6ConceptScheme" }
+    }
   ]
 }

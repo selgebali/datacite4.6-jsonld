@@ -1,0 +1,18 @@
+{
+  "@context": "./context.jsonld",
+  "@graph": [
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType",
+      "type": "ConceptScheme",
+      "title": "DataCite 4.6 numberType",
+      "identifier": "numberType",
+      "created": "2026-05-12",
+      "hasTopConcept": [
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Article",
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter",
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Report",
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Other"
+      ]
+    }
+  ]
+}

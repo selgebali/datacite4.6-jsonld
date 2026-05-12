@@ -1,0 +1,10 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType/Other",
+  "type": "Concept",
+  "prefLabel": "Other",
+  "notation": "Other",
+  "definition": "Any number type not covered by the other values in the numberType controlled list.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/numberType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/numberType"
+}
