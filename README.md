@@ -13,14 +13,16 @@ It is the working source for a GitHub Pages vocabulary namespace and for tooling
 ├── rdf-vocabulary-staging/          # Vocabulary source files (edit these)
 │   ├── class/                       # 21 RDF class definitions (Resource, Creator, Title, …)
 │   ├── property/                    # 78 RDF property definitions (identifier, creatorName, …)
-│   ├── vocab/                       # 7 controlled vocabulary schemes
+│   ├── vocab/                       # 9 controlled vocabulary schemes
 │   │   ├── contributorType/         # <Term>.jsonld files + <scheme>.jsonld ConceptScheme
 │   │   ├── dateType/
 │   │   ├── descriptionType/
 │   │   ├── nameType/
+│   │   ├── numberType/
 │   │   ├── relatedIdentifierType/
 │   │   ├── relationType/
-│   │   └── resourceTypeGeneral/
+│   │   ├── resourceTypeGeneral/
+│   │   └── titleType/
 │   ├── context/
 │   │   └── fullcontext.jsonld       # JSON-LD context mapping DataCite keys to IRIs
 │   └── manifest/
@@ -43,8 +45,10 @@ It is the working source for a GitHub Pages vocabulary namespace and for tooling
 │   └── examples/                    # Example records and an XML ↔ JSON roundtrip experiment
 │
 ├── mappings/
-│   ├── SKOS_crosswalks.jsonld       # SKOS mappings to Schema.org, DCAT, DCTERMS, Wikidata
-│   └── jskos-mappings.json          # Same mappings in JSKOS format
+│   ├── SKOS_crosswalks.jsonld          # SKOS mappings to Schema.org, DCAT, DCTERMS, Wikidata
+│   ├── datacite-schemaorg.sssom.tsv    # SSSOM mappings: DataCite → Schema.org
+│   ├── datacite-dcterms.sssom.tsv      # SSSOM mappings: DataCite → DCTERMS / DCAT-AP
+│   └── jskos-mappings.json             # Same mappings in JSKOS format for Cocoda
 │
 ├── rdf-build-scripts/               # Vocabulary build + release pipeline
 │   ├── detect-datacite-release.js   # Detect changes in a new DataCite release
@@ -165,9 +169,14 @@ npx ajv-cli validate \
 
 See the [Schema Profiles](#schema-profiles) section below for which profile to choose.
 
-### 8. Explore SKOS crosswalks
+### 8. Explore crosswalk mappings
 
-`mappings/SKOS_crosswalks.jsonld` maps DataCite terms to Schema.org, DCAT, DCTERMS, and Wikidata using SKOS relation predicates (`skos:exactMatch`, `skos:closeMatch`, etc.). `mappings/jskos-mappings.json` provides the same mappings in JSKOS format for use with Cocoda and compatible mapping registries.
+The `mappings/` folder provides three complementary views of how DataCite terms align with external vocabularies:
+
+- **`SKOS_crosswalks.jsonld`** — SKOS-predicate mappings (`skos:exactMatch`, `skos:closeMatch`, etc.) to Schema.org, DCAT, DCTERMS, and Wikidata, embedded directly in the vocabulary JSON-LD.
+- **`datacite-schemaorg.sssom.tsv`** — machine-readable [SSSOM](https://mapping-commons.github.io/sssom/) mapping set from DataCite 4.6 properties and controlled vocabulary terms to Schema.org only. Suitable for automated alignment pipelines and SSSOM-aware tools.
+- **`datacite-dcterms.sssom.tsv`** — companion SSSOM mapping set covering DataCite terms with no adequate Schema.org equivalent, mapped instead to DCTERMS (Dublin Core Terms) and DCAT-AP.
+- **`jskos-mappings.json`** — the same mappings in [JSKOS](https://gbv.github.io/jskos/) format for use with [Cocoda](https://coli-conc.gbv.de/cocoda/) and compatible mapping registries.
 
 ---
 
@@ -390,6 +399,8 @@ Use the [Detect → Review → Apply pipeline](#upgrading-to-a-new-datacite-vers
 
 **JSKOS** — A JSON-based serialization of SKOS, used for interoperable mapping registries such as Cocoda.
 
+**SSSOM** — The Simple Standard for Sharing Ontology Mappings. A TSV-based format that records each alignment between two terms with a predicate, justification, and provenance. The `.sssom.tsv` files in `mappings/` can be loaded directly by tools such as [sssom-py](https://mapping-commons.github.io/sssom-py/) or imported into ontology alignment pipelines.
+
 **JSON Schema profile vs JSON-LD context** — The schema profiles (`validation-and-conversion/schemas/schema-profiles/`) check the *structure* of a JSON record (required fields, allowed values, data types). The JSON-LD context (`rdf-vocabulary-staging/context/fullcontext.jsonld`) gives those fields *semantic meaning* as linked data. Both can be applied to the same JSON document.
 
 **Staging vs production namespace** — Vocabulary files use the staging host `https://schema.stage.datacite.org/linked-data/`. The production namespace (`https://schema.datacite.org/linked-data/`) is generated separately via `generate-production-namespace.sh` for release.
@@ -405,3 +416,4 @@ Use the [Detect → Review → Apply pipeline](#upgrading-to-a-new-datacite-vers
 - JSON Schema specification — https://json-schema.org/
 - SKOS Primer — https://www.w3.org/TR/skos-primer/
 - JSKOS format — https://gbv.github.io/jskos/
+- SSSOM specification — https://mapping-commons.github.io/sssom/
