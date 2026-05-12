@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Presentation",
+  "type": "Concept",
+  "prefLabel": "Presentation",
+  "notation": "Presentation",
+  "definition": "A set of slides containing text, tables or figures, designed to communicate ideas or research results, for viewing by an audience at a conference, symposium, seminar, lecture, workshop or other event.",
+  "scopeNote": "For a video recording of a presentation, use \"Audiovisual\".",
+  "example": [
+    "<resourceType resourceTypeGeneral=\"Presentation\">Conference presentation slides</resourceType>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral"
+}

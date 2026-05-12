@@ -1,0 +1,80 @@
+{
+  "fromVersion": "4.6",
+  "toVersion": "4.7",
+  "releaseDate": "2026-03-03",
+  "changes": [
+    {
+      "kind": "controlled-term-added",
+      "target": "resourceTypeGeneral",
+      "values": [
+        "Poster",
+        "Presentation"
+      ]
+    },
+    {
+      "kind": "controlled-term-added",
+      "target": "relatedIdentifierType",
+      "values": [
+        "RAiD",
+        "SWHID"
+      ]
+    },
+    {
+      "kind": "controlled-term-added",
+      "target": "relationType",
+      "values": [
+        "Other"
+      ]
+    },
+    {
+      "kind": "sub-property-added",
+      "target": "relatedIdentifier",
+      "property": "relationTypeInformation",
+      "occurrences": "0-1"
+    },
+    {
+      "kind": "sub-property-added",
+      "target": "relatedItem",
+      "property": "relationTypeInformation",
+      "occurrences": "0-1"
+    }
+  ],
+  "sources": [
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/contributorType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/dateType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/descriptionType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/funderIdentifierType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/nameType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/numberType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/relatedIdentifierType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/relationType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/titleType/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/introduction/version-update/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/relatedidentifier/",
+    "https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/relateditem/",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-contributorType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-dateType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-descriptionType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-funderIdentifierType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-nameType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-numberType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-relatedIdentifierType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-relationType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-resourceType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/include/datacite-titleType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.6/metadata.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-contributorType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-dateType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-descriptionType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-funderIdentifierType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-nameType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-numberType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-relatedIdentifierType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-relationType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-resourceType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/include/datacite-titleType-v4.xsd",
+    "https://schema.datacite.org/meta/kernel-4.7/metadata.xsd",
+    "https://schema.datacite.org/versions.html"
+  ]
+}

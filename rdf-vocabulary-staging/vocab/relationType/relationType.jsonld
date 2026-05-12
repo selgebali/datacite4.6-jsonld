@@ -45,7 +45,8 @@
         "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy",
         "https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects",
         "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf",
-        "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation"
+        "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation",
+        "https://schema.stage.datacite.org/linked-data/vocab/relationType/Other"
       ]
     }
   ]

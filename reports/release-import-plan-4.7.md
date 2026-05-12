@@ -6,8 +6,7 @@
 - Target version: 4.7
 - Release date: 2026-03-03
 - Detection result: 4 change item(s) detected.
-- Status summary: proposed 4, apply 0, skip 0, manual 0
-- Official 4.x versions missing locally: 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.7
+- Status summary: proposed 0, apply 4, skip 0, manual 0
 
 ## Notes
 - Detected against previous local version 4.6.
@@ -18,7 +17,7 @@
 - Summary: Add resourceTypeGeneral terms: Poster, Presentation
 - Module: controlled-list
 - Kind: controlled-list-values-added
-- Status: proposed
+- Status: apply
 - Confidence: high
 - Section: resourceTypeGeneral
 - Targets: vocab/resourceTypeGeneral/resourceTypeGeneral.jsonld, vocab/resourceTypeGeneral/Poster.jsonld, vocab/resourceTypeGeneral/Presentation.jsonld, manifest/release-matrix-4.6-4.7.json
@@ -26,7 +25,7 @@
 - Summary: Add relatedIdentifierType terms: RAiD, SWHID
 - Module: controlled-list
 - Kind: controlled-list-values-added
-- Status: proposed
+- Status: apply
 - Confidence: high
 - Section: relatedIdentifierType
 - Targets: vocab/relatedIdentifierType/relatedIdentifierType.jsonld, vocab/relatedIdentifierType/RAiD.jsonld, vocab/relatedIdentifierType/SWHID.jsonld, manifest/release-matrix-4.6-4.7.json
@@ -34,7 +33,7 @@
 - Summary: Add relationType terms: Other
 - Module: controlled-list
 - Kind: controlled-list-values-added
-- Status: proposed
+- Status: apply
 - Confidence: high
 - Section: relationType
 - Targets: vocab/relationType/relationType.jsonld, vocab/relationType/Other.jsonld, manifest/release-matrix-4.6-4.7.json
@@ -42,7 +41,7 @@
 - Summary: Add simple property relationTypeInformation
 - Module: simple-property
 - Kind: simple-property-added
-- Status: proposed
+- Status: apply
 - Confidence: high
 - Section: relationTypeInformation
 - Targets: property/relationTypeInformation.jsonld, context/fullcontext.jsonld, manifest/release-matrix-4.6-4.7.json

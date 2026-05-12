@@ -1,0 +1,15 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/SWHID",
+  "type": "Concept",
+  "prefLabel": "SWHID",
+  "altLabel": "SoftWare Hash Identifier",
+  "notation": "SWHID",
+  "definition": "SWHIDs (from \"SoftWare Hash IDentifiers\") are persistent, intrinsic identifiers for software source code artifacts such as source code files, source trees, commits, and other objects typically found in version control systems.",
+  "scopeNote": "A SWHID consists of two separate parts, a mandatory core identifier that can point to any software artifact (or \"object\") available in the Software Heritage archive, and an optional list of qualifiers that allows to specify the context where the object is meant to be seen and point to a subpart of the object itself.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"SWHID\" relationType=\"Cites\">swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType"
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RAiD",
+  "type": "Concept",
+  "prefLabel": "RAiD",
+  "altLabel": "Research Activity Identifier",
+  "notation": "RAiD",
+  "definition": "The Research Activity Identifier (RAiD) is a persistent identifier (PID) and global registry dedicated to research projects. RAiD is governed by ISO standard 23527:2022, with the Australian Research Data Commons (ARDC) as the Registration Authority and lead developer of the system. RAiD provides a system to store, update, share, and link project information across the research community.",
+  "example": [
+    "<relatedIdentifier relatedIdentifierType=\"RAiD\" relationType=\"IsPartOf\" resourceTypeGeneral=\"Project\">https://raid.org/10.26259/5c43ca8f</relatedIdentifier>"
+  ],
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType"
+}
