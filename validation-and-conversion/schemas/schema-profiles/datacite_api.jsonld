@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "https://schema.stage.datacite.org/linked-data/schema-profiles/datacite_api.jsonld",
   "$anchor": "attributes",
   "$comment": "BUNDLED PROFILE: This single file contains (1) the root attributes schema for client-submitted DataCite 4.6 metadata, (2) centralised enumerations in $defs (with iriMap bridges), (3) a JSON-LD context under profile.@context for semantics, (4) a JSON:API response validator (responseProfile), (5) a JSON:API submission validator (submitProfile), and (6) an exportProfile with language-tag conversion rules for RDF/JSON-LD export. Controlled lists are fully embedded in this bundled profile; enum IRIs resolve to fragment identifiers within this document under '#enums/<list>/<term>' so no external enum_lists are required. ==== ROOT ATTRIBUTES SCHEMA (client-submitted payload, mirrors DataCite REST 'attributes') ====",

@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "https://schema.stage.datacite.org/linked-data/schema-profiles/datacite4.6-profile.json",
   "$comment": "BUNDLED PROFILE: This single file contains (1) the root attributes schema for client-submitted DataCite 4.6 metadata, (2) centralised enumerations in $defs (with iriMap bridges), (3) a JSON-LD context under profile.@context for semantics, (4) a JSON:API response validator (responseProfile), (5) a JSON:API submission validator (submitProfile), and (6) an exportProfile with language-tag conversion rules for RDF/JSON-LD export.",
   "title": "DataCite Metadata Schema v4.6 – REST API profile (bundled)",
@@ -402,7 +402,7 @@
         "type": "object",
         "properties": {
           "relatedItemType": { "$ref": "#/$defs/resourceTypeGeneral/enumSchema" },
-          "relationType": { "$ref": "#/$refs/relationTypeForRelatedItem" },
+          "relationType": { "$ref": "#/$defs/relationTypeForRelatedItem" },
           "relatedItemIdentifier": {
             "type": "object",
             "properties": {
@@ -794,7 +794,7 @@
         "DataPaper","Dataset","Dissertation","Event","Image",
         "InteractiveResource","Instrument","Journal","JournalArticle",
         "Model","OutputManagementPlan","PeerReview","PhysicalObject",
-        "Preprint","Project","Report","Service","Software","Sound",
+        "Poster","Preprint","Presentation","Project","Report","Service","Software","Sound",
         "Standard","StudyRegistration","Text","Workflow","Other"
       ],
       "iriMap": {
@@ -819,7 +819,9 @@
         "OutputManagementPlan": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/OutputManagementPlan",
         "PeerReview": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PeerReview",
         "PhysicalObject": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject",
+        "Poster": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Poster",
         "Preprint": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint",
+        "Presentation": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Presentation",
         "Project": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project",
         "Report": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Report",
         "Service": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Service",
@@ -837,7 +839,7 @@
         "DataPaper","Dataset","Dissertation","Event","Image",
         "InteractiveResource","Instrument","Journal","JournalArticle",
         "Model","OutputManagementPlan","PeerReview","PhysicalObject",
-        "Preprint","Project","Report","Service","Software","Sound",
+        "Poster","Preprint","Presentation","Project","Report","Service","Software","Sound",
         "Standard","StudyRegistration","Text","Workflow","Other"
       ] }
     },
@@ -932,7 +934,7 @@
       "enum": [
         "ARK","arXiv","bibcode","CSTR","DOI","EAN13","EISSN","Handle",
         "IGSN","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL",
-        "RRID","UPC","URL","URN","w3id"
+        "RAiD","RRID","SWHID","UPC","URL","URN","w3id"
       ],
       "iriMap": {
         "ARK": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK",
@@ -951,7 +953,9 @@
         "LSID": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID",
         "PMID": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID",
         "PURL": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL",
+        "RAiD": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RAiD",
         "RRID": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID",
+        "SWHID": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/SWHID",
         "UPC": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC",
         "URL": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL",
         "URN": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN",
@@ -960,7 +964,7 @@
       "enumSchema": { "type": "string", "enum": [
         "ARK","arXiv","bibcode","CSTR","DOI","EAN13","EISSN","Handle",
         "IGSN","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL",
-        "RRID","UPC","URL","URN","w3id"
+        "RAiD","RRID","SWHID","UPC","URL","URN","w3id"
       ] }
     },
     "relationType": {
@@ -971,7 +975,7 @@
         "IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo",
         "HasMetadata","IsMetadataFor","Reviews","IsReviewedBy","IsDerivedFrom","IsSourceOf",
         "Describes","IsDescribedBy","HasVersion","IsVersionOf","Requires","IsRequiredBy",
-        "Obsoletes","IsObsoletedBy","Collects","IsCollectedBy","HasTranslation","IsTranslationOf"
+        "Obsoletes","IsObsoletedBy","Collects","IsCollectedBy","HasTranslation","IsTranslationOf","Other"
       ],
       "iriMap": {
         "IsCitedBy": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy",
@@ -1011,7 +1015,8 @@
         "Collects": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects",
         "IsCollectedBy": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy",
         "HasTranslation": "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation",
-        "IsTranslationOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf"
+        "IsTranslationOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf",
+        "Other": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Other"
       },
       "enumSchema": { "type": "string", "enum": [
         "IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy",
@@ -1020,7 +1025,7 @@
         "IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo",
         "HasMetadata","IsMetadataFor","Reviews","IsReviewedBy","IsDerivedFrom","IsSourceOf",
         "Describes","IsDescribedBy","HasVersion","IsVersionOf","Requires","IsRequiredBy",
-        "Obsoletes","IsObsoletedBy","Collects","IsCollectedBy","HasTranslation","IsTranslationOf"
+        "Obsoletes","IsObsoletedBy","Collects","IsCollectedBy","HasTranslation","IsTranslationOf","Other"
       ] }
     },
     "funderIdentifierType": {
@@ -1043,9 +1048,7 @@
         "Other": "https://schema.stage.datacite.org/linked-data/vocab/titleType/Other"
       },
       "enumSchema": { "type": "string", "enum": ["AlternativeTitle","Subtitle","TranslatedTitle","Other"] }
-    }
-  },
-  "$refs": {
+    },
     "relationTypeForRelatedItem": { "$ref": "#/$defs/relationType/enumSchema" }
   },
   "profile": {

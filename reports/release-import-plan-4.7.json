@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-12T11:46:39.736Z",
-  "localLatestVersion": "4.6",
+  "generatedAt": "2026-05-12T16:19:17.269Z",
+  "localLatestVersion": "4.7",
   "officialLatestVersion": "4.7",
   "targetVersion": "4.7",
   "releaseDate": "2026-03-03",
@@ -43,7 +43,7 @@
   ],
   "notes": [
     "Detected against previous local version 4.6.",
-    "Official 4.x versions missing locally: 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.7"
+    "Official 4.x versions missing locally: 4.0, 4.1, 4.2, 4.3, 4.4, 4.5"
   ],
   "changes": [
     {
@@ -133,7 +133,7 @@
       "module": "controlled-list",
       "notes": [],
       "section": "resourceTypeGeneral",
-      "status": "apply",
+      "status": "proposed",
       "summary": "Add resourceTypeGeneral terms: Poster, Presentation",
       "targets": [
         "vocab/resourceTypeGeneral/resourceTypeGeneral.jsonld",
@@ -218,7 +218,7 @@
       "module": "controlled-list",
       "notes": [],
       "section": "relatedIdentifierType",
-      "status": "apply",
+      "status": "proposed",
       "summary": "Add relatedIdentifierType terms: RAiD, SWHID",
       "targets": [
         "vocab/relatedIdentifierType/relatedIdentifierType.jsonld",
@@ -306,7 +306,7 @@
       "module": "controlled-list",
       "notes": [],
       "section": "relationType",
-      "status": "apply",
+      "status": "proposed",
       "summary": "Add relationType terms: Other",
       "targets": [
         "vocab/relationType/relationType.jsonld",
@@ -327,8 +327,12 @@
       "inputs": {
         "contextEntries": [
           {
-            "afterKey": null,
-            "key": "relationTypeInformation"
+            "afterKey": "relationType",
+            "key": "relationTypeInformation",
+            "value": {
+              "@id": "property:relationTypeInformation",
+              "@type": "xsd:string"
+            }
           }
         ],
         "propertyFile": {
@@ -362,7 +366,7 @@
       "module": "simple-property",
       "notes": [],
       "section": "relationTypeInformation",
-      "status": "apply",
+      "status": "proposed",
       "summary": "Add simple property relationTypeInformation",
       "targets": [
         "property/relationTypeInformation.jsonld",
