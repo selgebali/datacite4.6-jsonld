@@ -133,7 +133,7 @@
       "module": "controlled-list",
       "notes": [],
       "section": "resourceTypeGeneral",
-      "status": "proposed",
+      "status": "apply",
       "summary": "Add resourceTypeGeneral terms: Poster, Presentation",
       "targets": [
         "vocab/resourceTypeGeneral/resourceTypeGeneral.jsonld",
@@ -218,7 +218,7 @@
       "module": "controlled-list",
       "notes": [],
       "section": "relatedIdentifierType",
-      "status": "proposed",
+      "status": "apply",
       "summary": "Add relatedIdentifierType terms: RAiD, SWHID",
       "targets": [
         "vocab/relatedIdentifierType/relatedIdentifierType.jsonld",
@@ -306,7 +306,7 @@
       "module": "controlled-list",
       "notes": [],
       "section": "relationType",
-      "status": "proposed",
+      "status": "apply",
       "summary": "Add relationType terms: Other",
       "targets": [
         "vocab/relationType/relationType.jsonld",
@@ -362,7 +362,7 @@
       "module": "simple-property",
       "notes": [],
       "section": "relationTypeInformation",
-      "status": "proposed",
+      "status": "apply",
       "summary": "Add simple property relationTypeInformation",
       "targets": [
         "property/relationTypeInformation.jsonld",
