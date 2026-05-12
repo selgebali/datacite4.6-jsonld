@@ -1,0 +1,18 @@
+{
+  "@context": "./context.jsonld",
+  "@graph": [
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType",
+      "type": "ConceptScheme",
+      "title": "DataCite 4.6 titleType",
+      "identifier": "titleType",
+      "created": "2026-05-12",
+      "hasTopConcept": [
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle",
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle",
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle",
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/Other"
+      ]
+    }
+  ]
+}

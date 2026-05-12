@@ -1,0 +1,270 @@
+# mapping_set_id: "https://github.com/selgebali/datacite4.6-jsonld/blob/main/mappings/datacite-schemaorg.sssom.tsv"
+# mapping_set_version: "0.1.0"
+# mapping_set_description: "SSSOM mappings from DataCite Metadata Schema 4.6 properties and controlled vocabulary terms to Schema.org. Schema.org targets only; DataCite-to-DCTERMS/DCAT-AP mappings are maintained in a separate artefact."
+# creator_id: "https://orcid.org/0000-0003-1378-5495"
+# license: "https://creativecommons.org/licenses/by/4.0/"
+# subject_source: "https://schema.stage.datacite.org/linked-data/"
+# object_source: "https://schema.org/"
+# mapping_date: "2026-05-12"
+# curie_map:
+#   datacite-class: "https://schema.stage.datacite.org/linked-data/class/"
+#   datacite-prop: "https://schema.stage.datacite.org/linked-data/property/"
+#   datacite-vocab: "https://schema.stage.datacite.org/linked-data/vocab/"
+#   schema: "https://schema.org/"
+#   skos: "http://www.w3.org/2004/02/skos/core#"
+#   semapv: "https://w3id.org/semapv/vocab/"
+#
+# Notes:
+#   - Subject IRIs for sub-elements use nested paths (e.g. property/creator/creatorName).
+#     These resolve via the redirect workflow to the canonical flat property files.
+#   - dateType values with no schema.org equivalent (Accepted, Submitted, Withdrawn, Other, Valid)
+#     are intentionally omitted; they are covered in the DataCite-DCTERMS mapping.
+#     Note: schema:validFrom is NOT in the domain of CreativeWork/Dataset and was therefore removed.
+#   - object_id values use https://schema.org/ (HTTPS) per current schema.org convention.
+subject_id	predicate_id	object_id	mapping_justification	subject_label	object_label	comment
+datacite-prop:identifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	identifier	identifier	DataCite's mandatory DOI maps directly to schema:identifier as a PropertyValue
+datacite-prop:identifierType	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	identifierType	propertyID	The scheme name (e.g. DOI) is the propertyID of a schema:PropertyValue
+datacite-prop:creator	skos:exactMatch	schema:creator	semapv:ManualMappingCuration	creator	creator	Primary research agents map to schema:creator
+datacite-prop:creator	skos:narrowMatch	schema:author	semapv:ManualMappingCuration	creator	author	schema:author is a subproperty of schema:creator; DataCite creators are broader
+datacite-prop:creator/creatorName	skos:exactMatch	schema:name	semapv:ManualMappingCuration	creatorName	name	Full display name of a creator
+datacite-vocab:nameType/Personal	skos:exactMatch	schema:Person	semapv:ManualMappingCuration	Personal	Person	nameType=Personal drives rdf:type schema:Person on the agent node
+datacite-vocab:nameType/Organizational	skos:exactMatch	schema:Organization	semapv:ManualMappingCuration	Organizational	Organization	nameType=Organizational drives rdf:type schema:Organization
+datacite-prop:creator/givenName	skos:exactMatch	schema:givenName	semapv:ManualMappingCuration	givenName	givenName	Direct lexical match; both refer to a person's given name
+datacite-prop:creator/familyName	skos:exactMatch	schema:familyName	semapv:ManualMappingCuration	familyName	familyName	Direct lexical match; both refer to a person's family name
+datacite-prop:creator/nameIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	nameIdentifier	identifier	Persistent identifier (e.g. ORCID) for the creator; modelled as a schema:PropertyValue
+datacite-prop:creator/nameIdentifier/nameIdentifierScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	nameIdentifierScheme	propertyID	Scheme name (e.g. ORCID) is the propertyID of the identifier PropertyValue
+datacite-prop:creator/nameIdentifier/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the identifier scheme (e.g. https://orcid.org)
+datacite-prop:creator/affiliation	skos:exactMatch	schema:affiliation	semapv:ManualMappingCuration	affiliation	affiliation	Organization with which the creator is affiliated
+datacite-prop:creator/affiliation/affiliationIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	affiliationIdentifier	identifier	Persistent identifier for the affiliation (e.g. ROR); modelled as a PropertyValue
+datacite-prop:creator/affiliation/affiliationIdentifierScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	affiliationIdentifierScheme	propertyID	Scheme name (e.g. ROR) is the propertyID of the affiliation identifier
+datacite-prop:creator/affiliation/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the affiliation identifier scheme
+datacite-prop:title	skos:exactMatch	schema:name	semapv:ManualMappingCuration	title	name	Primary title of the resource maps to schema:name
+datacite-prop:title/titleType	skos:relatedMatch	schema:additionalType	semapv:ManualMappingCuration	titleType	additionalType	titleType qualifies which kind of title it is; individual values drive serialisation choices (see vocab rows below)
+datacite-vocab:titleType/AlternativeTitle	skos:exactMatch	schema:alternateName	semapv:ManualMappingCuration	AlternativeTitle	alternateName	An alternative title is serialised as schema:alternateName
+datacite-vocab:titleType/Subtitle	skos:exactMatch	schema:alternateName	semapv:ManualMappingCuration	Subtitle	alternateName	A subtitle is a secondary title; schema:alternateName is the appropriate slot
+datacite-vocab:titleType/TranslatedTitle	skos:relatedMatch	schema:workTranslation	semapv:ManualMappingCuration	TranslatedTitle	workTranslation	A translated title is associated with the concept of a translated work; relatedMatch because workTranslation is a CreativeWork not a string literal
+datacite-vocab:titleType/Other	skos:closeMatch	schema:alternateName	semapv:ManualMappingCuration	Other	alternateName	Variant titles not covered by specific types; closeMatch because schema:alternateName is slightly narrower
+datacite-prop:publisher	skos:exactMatch	schema:publisher	semapv:ManualMappingCuration	publisher	publisher	Entity making the resource available
+datacite-prop:publisher/publisherIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	publisherIdentifier	identifier	Persistent identifier for the publisher; modelled as a PropertyValue
+datacite-prop:publisher/publisherIdentifierScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	publisherIdentifierScheme	propertyID	Scheme name (e.g. ROR) is the propertyID of the publisher identifier
+datacite-prop:publisher/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the publisher identifier scheme
+datacite-prop:publicationYear	skos:exactMatch	schema:datePublished	semapv:ManualMappingCuration	publicationYear	datePublished	Year the resource was or will be made publicly available
+datacite-prop:subject	skos:broadMatch	schema:about	semapv:ManualMappingCuration	subject	about	DataCite Subject covers both formal topic linkage and free-text tagging; broader than schema:about alone
+datacite-prop:subject	skos:relatedMatch	schema:keywords	semapv:ManualMappingCuration	subject	keywords	Free-text subject terms relate informally to schema:keywords; relatedMatch because DataCite Subject also carries URIs and codes
+datacite-prop:subject	skos:narrowMatch	schema:DefinedTerm	semapv:ManualMappingCuration	subject	DefinedTerm	When subject carries a valueURI and subjectScheme it can be serialised as a schema:DefinedTerm within a DefinedTermSet
+datacite-prop:subject/subjectScheme	skos:exactMatch	schema:name	semapv:ManualMappingCuration	subjectScheme	name	Name of the controlled vocabulary (e.g. LCSH); maps to the name of the DefinedTermSet
+datacite-prop:subject/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the controlled vocabulary
+datacite-prop:subject/valueURI	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	valueURI	identifier	URI identifying the subject term itself; modelled as the identifier of a DefinedTerm
+datacite-prop:subject/classificationCode	skos:exactMatch	schema:termCode	semapv:ManualMappingCuration	classificationCode	termCode	Classification code within the scheme; schema:termCode exists for exactly this purpose
+datacite-prop:contributor	skos:exactMatch	schema:contributor	semapv:ManualMappingCuration	contributor	contributor	Non-primary contributing agent
+datacite-prop:contributor/contributorType	skos:exactMatch	schema:roleName	semapv:ManualMappingCuration	contributorType	roleName	The contributor's role (e.g. ProjectManager) is expressed as roleName on a schema:Role wrapper
+datacite-prop:contributor/contributorName	skos:exactMatch	schema:name	semapv:ManualMappingCuration	contributorName	name	Full display name of the contributor
+datacite-prop:contributor/givenName	skos:exactMatch	schema:givenName	semapv:ManualMappingCuration	givenName	givenName	Given name of the contributor
+datacite-prop:contributor/familyName	skos:exactMatch	schema:familyName	semapv:ManualMappingCuration	familyName	familyName	Family name of the contributor
+datacite-prop:contributor/nameIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	nameIdentifier	identifier	Persistent identifier for the contributor; modelled as a PropertyValue
+datacite-prop:contributor/nameIdentifier/nameIdentifierScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	nameIdentifierScheme	propertyID	Scheme name (e.g. ORCID) is the propertyID of the identifier
+datacite-prop:contributor/nameIdentifier/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the name identifier scheme
+datacite-prop:contributor/affiliation	skos:exactMatch	schema:affiliation	semapv:ManualMappingCuration	affiliation	affiliation	Organizational affiliation of the contributor
+datacite-prop:contributor/affiliation/affiliationIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	affiliationIdentifier	identifier	Persistent identifier for the contributor's affiliation
+datacite-prop:contributor/affiliation/affiliationIdentifierScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	affiliationIdentifierScheme	propertyID	Scheme name (e.g. ROR) for the affiliation identifier
+datacite-prop:contributor/affiliation/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the affiliation identifier scheme
+datacite-prop:date	skos:broadMatch	schema:Date	semapv:ManualMappingCuration	date	Date	Generic date container; broader than any single schema.org date property
+datacite-prop:dateType	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	dateType	propertyID	dateType qualifies the date value via PropertyValue.propertyID
+datacite-vocab:dateType/Available	skos:closeMatch	schema:datePublished	semapv:ManualMappingCuration	Available	datePublished	Availability date approximates publication date; closeMatch because Available may precede formal journal publication
+datacite-vocab:dateType/Copyrighted	skos:exactMatch	schema:copyrightYear	semapv:ManualMappingCuration	Copyrighted	copyrightYear	Date copyright was asserted maps directly to schema:copyrightYear
+datacite-vocab:dateType/Collected	skos:closeMatch	schema:dateCreated	semapv:ManualMappingCuration	Collected	dateCreated	Data collection is a form of creation event; closeMatch because collection period != file creation date
+datacite-vocab:dateType/Coverage	skos:exactMatch	schema:temporalCoverage	semapv:ManualMappingCuration	Coverage	temporalCoverage	Temporal span the resource describes or covers
+datacite-vocab:dateType/Created	skos:exactMatch	schema:dateCreated	semapv:ManualMappingCuration	Created	dateCreated	Date the resource was created
+datacite-vocab:dateType/Issued	skos:closeMatch	schema:datePublished	semapv:ManualMappingCuration	Issued	datePublished	Issuance to a repository approximates publication; closeMatch because Issued can precede public availability
+datacite-vocab:dateType/Updated	skos:exactMatch	schema:dateModified	semapv:ManualMappingCuration	Updated	dateModified	Date of last modification
+datacite-prop:dateInformation	skos:exactMatch	schema:description	semapv:ManualMappingCuration	dateInformation	description	Free-text annotation about the date value (e.g. historical period)
+datacite-prop:language	skos:exactMatch	schema:inLanguage	semapv:ManualMappingCuration	language	inLanguage	Language of the resource content
+datacite-prop:resourceType	skos:closeMatch	schema:description	semapv:ManualMappingCuration	resourceType	description	Free-text resource type description; closeMatch because schema:description is broader
+datacite-prop:resourceTypeGeneral	skos:closeMatch	schema:additionalType	semapv:ManualMappingCuration	resourceTypeGeneral	additionalType	General type drives the JSON-LD @type; closeMatch because additionalType is typically a URI not an enum value
+datacite-vocab:resourceTypeGeneral/Audiovisual	skos:exactMatch	schema:MediaObject	semapv:ManualMappingCuration	Audiovisual	MediaObject	Series of visual representations possibly including sound
+datacite-vocab:resourceTypeGeneral/Award	skos:broadMatch	schema:Grant	semapv:ManualMappingCuration	Award	Grant	DataCite Award is broader than schema:Grant (covers non-monetary awards); Grant is a narrower schema.org class
+datacite-vocab:resourceTypeGeneral/Book	skos:exactMatch	schema:Book	semapv:ManualMappingCuration	Book	Book	Written work bound as a book
+datacite-vocab:resourceTypeGeneral/BookChapter	skos:exactMatch	schema:Chapter	semapv:ManualMappingCuration	BookChapter	Chapter	A chapter within a book
+datacite-vocab:resourceTypeGeneral/Collection	skos:exactMatch	schema:Collection	semapv:ManualMappingCuration	Collection	Collection	Aggregation of resources
+datacite-vocab:resourceTypeGeneral/ComputationalNotebook	skos:closeMatch	schema:SoftwareSourceCode	semapv:ManualMappingCuration	ComputationalNotebook	SoftwareSourceCode	Executable notebook (e.g. Jupyter); closeMatch because SoftwareSourceCode covers source but not the literate-programming execution model
+datacite-vocab:resourceTypeGeneral/ConferencePaper	skos:exactMatch	schema:ScholarlyArticle	semapv:ManualMappingCuration	ConferencePaper	ScholarlyArticle	Academic paper submitted to a conference
+datacite-vocab:resourceTypeGeneral/ConferenceProceeding	skos:exactMatch	schema:PublicationVolume	semapv:ManualMappingCuration	ConferenceProceeding	PublicationVolume	Volume of academic papers from a conference
+datacite-vocab:resourceTypeGeneral/DataPaper	skos:exactMatch	schema:ScholarlyArticle	semapv:ManualMappingCuration	DataPaper	ScholarlyArticle	Scholarly paper describing a dataset
+datacite-vocab:resourceTypeGeneral/Dataset	skos:exactMatch	schema:Dataset	semapv:ManualMappingCuration	Dataset	Dataset	Structured set of data
+datacite-vocab:resourceTypeGeneral/Dissertation	skos:exactMatch	schema:Thesis	semapv:ManualMappingCuration	Dissertation	Thesis	Academic dissertation or thesis
+datacite-vocab:resourceTypeGeneral/Event	skos:exactMatch	schema:Event	semapv:ManualMappingCuration	Event	Event	A non-persistent time-based occurrence
+datacite-vocab:resourceTypeGeneral/Image	skos:exactMatch	schema:ImageObject	semapv:ManualMappingCuration	Image	ImageObject	Visual representation other than text
+datacite-vocab:resourceTypeGeneral/InteractiveResource	skos:closeMatch	schema:SoftwareApplication	semapv:ManualMappingCuration	InteractiveResource	SoftwareApplication	Resource requiring user interaction; closeMatch because InteractiveResource covers training modules and portals beyond runnable software
+datacite-vocab:resourceTypeGeneral/Instrument	skos:closeMatch	schema:Product	semapv:ManualMappingCuration	Instrument	Product	Physical device used to collect or measure data; schema.org has no dedicated Instrument class so Product is used
+datacite-vocab:resourceTypeGeneral/Journal	skos:exactMatch	schema:Periodical	semapv:ManualMappingCuration	Journal	Periodical	Scholarly publication issued in regular installments
+datacite-vocab:resourceTypeGeneral/JournalArticle	skos:exactMatch	schema:ScholarlyArticle	semapv:ManualMappingCuration	JournalArticle	ScholarlyArticle	Peer-reviewed article in a journal
+datacite-vocab:resourceTypeGeneral/Model	skos:closeMatch	schema:3DModel	semapv:ManualMappingCuration	Model	3DModel	closeMatch: DataCite Model includes conceptual/mathematical models; schema:3DModel is too narrow; no better schema.org class exists
+datacite-vocab:resourceTypeGeneral/OutputManagementPlan	skos:closeMatch	schema:Report	semapv:ManualMappingCuration	OutputManagementPlan	Report	Formal document describing how research outputs are managed; schema:Report is the closest class
+datacite-vocab:resourceTypeGeneral/PeerReview	skos:exactMatch	schema:Review	semapv:ManualMappingCuration	PeerReview	Review	Evaluation of scholarly work by peers in the same field
+datacite-vocab:resourceTypeGeneral/PhysicalObject	skos:closeMatch	schema:Product	semapv:ManualMappingCuration	PhysicalObject	Product	Physical artifact or specimen; schema:Product is the closest tangible-item class without dcterms:PhysicalObject
+datacite-vocab:resourceTypeGeneral/Preprint	skos:closeMatch	schema:ScholarlyArticle	semapv:ManualMappingCuration	Preprint	ScholarlyArticle	Pre-review version of a scholarly article; closeMatch because preprints share structure but are not peer-reviewed
+datacite-vocab:resourceTypeGeneral/Project	skos:exactMatch	schema:Project	semapv:ManualMappingCuration	Project	Project	Planned collaborative endeavor
+datacite-vocab:resourceTypeGeneral/Report	skos:exactMatch	schema:Report	semapv:ManualMappingCuration	Report	Report	Formal document presenting information for a specific audience
+datacite-vocab:resourceTypeGeneral/Service	skos:exactMatch	schema:Service	semapv:ManualMappingCuration	Service	Service	Organized system supplying functions required by end users
+datacite-vocab:resourceTypeGeneral/Software	skos:exactMatch	schema:SoftwareApplication	semapv:ManualMappingCuration	Software	SoftwareApplication	Computer program in source or compiled form
+datacite-vocab:resourceTypeGeneral/Sound	skos:exactMatch	schema:AudioObject	semapv:ManualMappingCuration	Sound	AudioObject	Resource primarily intended to be heard
+datacite-vocab:resourceTypeGeneral/Standard	skos:relatedMatch	schema:DefinedTermSet	semapv:ManualMappingCuration	Standard	DefinedTermSet	A Standard establishes a reference model; DefinedTermSet is the vocabulary it defines; relatedMatch because a Standard is a document not a term set
+datacite-vocab:resourceTypeGeneral/StudyRegistration	skos:closeMatch	schema:MedicalStudy	semapv:ManualMappingCuration	StudyRegistration	MedicalStudy	Time-stamped research plan shared before study execution; MedicalStudy is the closest schema.org class though too narrow for non-medical fields
+datacite-vocab:resourceTypeGeneral/Text	skos:exactMatch	schema:DigitalDocument	semapv:ManualMappingCuration	Text	DigitalDocument	Generic textual resource not covered by a more specific type
+datacite-vocab:resourceTypeGeneral/Workflow	skos:closeMatch	schema:HowTo	semapv:ManualMappingCuration	Workflow	HowTo	Structured sequence of steps for reproducible execution; closeMatch because HowTo covers instructional content rather than executable pipelines
+datacite-vocab:resourceTypeGeneral/Other	skos:closeMatch	schema:CreativeWork	semapv:ManualMappingCuration	Other	CreativeWork	Fallback to the most general schema.org creative work class
+datacite-prop:alternateIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	alternateIdentifier	identifier	Additional persistent identifier for the same resource; modelled as an extra schema:PropertyValue alongside the DOI
+datacite-prop:alternateIdentifier/alternateIdentifierType	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	alternateIdentifierType	propertyID	Scheme or namespace of the alternate identifier (e.g. URL)
+datacite-prop:relatedIdentifier	skos:closeMatch	schema:citation	semapv:ManualMappingCuration	relatedIdentifier	citation	Related identifier for another resource; citation is the most common use; specific relation is qualified by relationType (see vocab rows below)
+datacite-prop:relatedIdentifier/relatedIdentifierType	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	relatedIdentifierType	propertyID	Scheme of the related identifier (e.g. DOI)
+datacite-prop:relatedIdentifier/relationType	skos:relatedMatch	schema:additionalType	semapv:ManualMappingCuration	relationType	additionalType	The nature of the relation; individual vocab values drive specific schema.org properties (see below)
+datacite-prop:relatedIdentifier/relatedMetadataScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	relatedMetadataScheme	propertyID	Metadata scheme of the related resource (optional)
+datacite-prop:relatedIdentifier/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	URL of the related identifier scheme
+datacite-prop:relatedIdentifier/schemeType	skos:closeMatch	schema:encodingFormat	semapv:ManualMappingCuration	schemeType	encodingFormat	Encoding format or protocol of the related identifier scheme
+datacite-vocab:relationType/IsCitedBy	skos:relatedMatch	schema:citation	semapv:ManualMappingCuration	IsCitedBy	citation	Inverse of Cites; schema:citation has no explicit inverse property
+datacite-vocab:relationType/Cites	skos:exactMatch	schema:citation	semapv:ManualMappingCuration	Cites	citation	This resource cites another; maps directly to schema:citation
+datacite-vocab:relationType/IsSupplementTo	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsSupplementTo	isRelatedTo	Supplement relationship; no dedicated schema.org property
+datacite-vocab:relationType/IsSupplementedBy	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsSupplementedBy	isRelatedTo	Inverse supplement relationship
+datacite-vocab:relationType/IsContinuedBy	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsContinuedBy	isRelatedTo	Continuation relationship; no dedicated schema.org property
+datacite-vocab:relationType/Continues	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	Continues	isRelatedTo	Continues a prior resource; no dedicated schema.org property
+datacite-vocab:relationType/IsDescribedBy	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsDescribedBy	isRelatedTo	A separate resource describes this one
+datacite-vocab:relationType/Describes	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	Describes	isRelatedTo	This resource describes another
+datacite-vocab:relationType/HasMetadata	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	HasMetadata	isRelatedTo	A metadata document exists for this resource
+datacite-vocab:relationType/IsMetadataFor	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsMetadataFor	isRelatedTo	This resource is metadata for another
+datacite-vocab:relationType/IsNewVersionOf	skos:closeMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsNewVersionOf	isBasedOn	New version derived from a prior version; isBasedOn is the closest schema.org term
+datacite-vocab:relationType/IsPreviousVersionOf	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsPreviousVersionOf	isBasedOn	Inverse of IsNewVersionOf
+datacite-vocab:relationType/IsPartOf	skos:exactMatch	schema:isPartOf	semapv:ManualMappingCuration	IsPartOf	isPartOf	This resource is part of another
+datacite-vocab:relationType/HasPart	skos:exactMatch	schema:hasPart	semapv:ManualMappingCuration	HasPart	hasPart	This resource has a part
+datacite-vocab:relationType/IsPublishedIn	skos:closeMatch	schema:isPartOf	semapv:ManualMappingCuration	IsPublishedIn	isPartOf	Published within a journal or collection; isPartOf is the closest schema.org term
+datacite-vocab:relationType/IsReferencedBy	skos:relatedMatch	schema:citation	semapv:ManualMappingCuration	IsReferencedBy	citation	Inverse of References; schema:citation has no explicit inverse
+datacite-vocab:relationType/References	skos:closeMatch	schema:citation	semapv:ManualMappingCuration	References	citation	This resource references another; citation is the closest but implies scholarly citation
+datacite-vocab:relationType/IsDocumentedBy	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsDocumentedBy	isRelatedTo	Documentation exists for this resource
+datacite-vocab:relationType/Documents	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	Documents	isRelatedTo	This resource documents another
+datacite-vocab:relationType/IsCompiledBy	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsCompiledBy	isBasedOn	Compiled/built from another resource
+datacite-vocab:relationType/Compiles	skos:relatedMatch	schema:hasPart	semapv:ManualMappingCuration	Compiles	hasPart	This resource compiles others
+datacite-vocab:relationType/IsVariantFormOf	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsVariantFormOf	isBasedOn	Variant form derived from an original
+datacite-vocab:relationType/IsOriginalFormOf	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsOriginalFormOf	isBasedOn	Original from which a variant was derived
+datacite-vocab:relationType/IsIdenticalTo	skos:closeMatch	schema:sameAs	semapv:ManualMappingCuration	IsIdenticalTo	sameAs	Same content as another resource; schema:sameAs is the closest schema.org property
+datacite-vocab:relationType/IsReviewedBy	skos:relatedMatch	schema:review	semapv:ManualMappingCuration	IsReviewedBy	review	A review of this resource exists
+datacite-vocab:relationType/Reviews	skos:exactMatch	schema:reviews	semapv:ManualMappingCuration	Reviews	reviews	This resource is a review of another
+datacite-vocab:relationType/IsDerivedFrom	skos:exactMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsDerivedFrom	isBasedOn	This resource is derived from another source
+datacite-vocab:relationType/IsSourceOf	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsSourceOf	isBasedOn	Inverse of IsDerivedFrom; schema:isBasedOn has no explicit inverse
+datacite-vocab:relationType/IsRequiredBy	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsRequiredBy	isRelatedTo	Another resource depends on this one
+datacite-vocab:relationType/Requires	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	Requires	isRelatedTo	This resource depends on another
+datacite-vocab:relationType/Obsoletes	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	Obsoletes	isRelatedTo	This resource supersedes another; no dedicated schema.org property
+datacite-vocab:relationType/IsObsoletedBy	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsObsoletedBy	isRelatedTo	This resource has been superseded
+datacite-vocab:relationType/IsCollectedBy	skos:relatedMatch	schema:isRelatedTo	semapv:ManualMappingCuration	IsCollectedBy	isRelatedTo	This resource is collected by another (e.g. a harvester)
+datacite-vocab:relationType/Collects	skos:relatedMatch	schema:hasPart	semapv:ManualMappingCuration	Collects	hasPart	This resource collects others
+datacite-vocab:relationType/IsBasedOn	skos:exactMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsBasedOn	isBasedOn	Direct derivation from a prior work
+datacite-vocab:relationType/IsBasisFor	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsBasisFor	isBasedOn	Inverse of IsBasedOn; schema:isBasedOn has no explicit inverse
+datacite-vocab:relationType/IsVersionOf	skos:closeMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsVersionOf	isBasedOn	Version relationship to a more general resource; isBasedOn is the closest schema.org term
+datacite-vocab:relationType/HasVersion	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	HasVersion	isBasedOn	Inverse of IsVersionOf
+datacite-vocab:relationType/IsTranslationOf	skos:exactMatch	schema:translationOfWork	semapv:ManualMappingCuration	IsTranslationOf	translationOfWork	This resource is a translation of another; new in DataCite 4.6
+datacite-vocab:relationType/HasTranslation	skos:exactMatch	schema:workTranslation	semapv:ManualMappingCuration	HasTranslation	workTranslation	This resource has a translated version; new in DataCite 4.6
+datacite-prop:size	skos:exactMatch	schema:contentSize	semapv:ManualMappingCuration	size	contentSize	File size or extent of the resource
+datacite-prop:format	skos:exactMatch	schema:encodingFormat	semapv:ManualMappingCuration	format	encodingFormat	Media or file format (e.g. application/pdf)
+datacite-prop:version	skos:exactMatch	schema:version	semapv:ManualMappingCuration	version	version	Version string or number of the resource
+datacite-prop:rights	skos:closeMatch	schema:license	semapv:ManualMappingCuration	rights	license	Rights statement or license; closeMatch because DataCite rights covers any rights statement while schema:license is specific to licensing
+datacite-prop:rights/rightsURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	rightsURI	url	Resolvable URL of the license or rights statement
+datacite-prop:rights/rightsIdentifier	skos:closeMatch	schema:identifier	semapv:ManualMappingCuration	rightsIdentifier	identifier	Machine-readable license code (e.g. CC-BY-4.0); modelled as the value of a PropertyValue
+datacite-prop:rights/rightsIdentifierScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	rightsIdentifierScheme	propertyID	Scheme of the rights identifier (e.g. SPDX)
+datacite-prop:rights/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the rights identifier scheme
+datacite-prop:description	skos:exactMatch	schema:description	semapv:ManualMappingCuration	description	description	Free-text description of the resource
+datacite-vocab:descriptionType/Abstract	skos:exactMatch	schema:abstract	semapv:ManualMappingCuration	Abstract	abstract	An abstract maps directly to the dedicated schema:abstract property on CreativeWork
+datacite-vocab:descriptionType/Methods	skos:relatedMatch	schema:description	semapv:ManualMappingCuration	Methods	description	Methodological description; no dedicated schema.org slot; use schema:description with a label
+datacite-vocab:descriptionType/SeriesInformation	skos:relatedMatch	schema:description	semapv:ManualMappingCuration	SeriesInformation	description	Series context information; no dedicated schema.org slot
+datacite-vocab:descriptionType/TableOfContents	skos:relatedMatch	schema:description	semapv:ManualMappingCuration	TableOfContents	description	Table of contents text; no dedicated schema.org slot
+datacite-vocab:descriptionType/TechnicalInfo	skos:relatedMatch	schema:description	semapv:ManualMappingCuration	TechnicalInfo	description	Technical details; no dedicated schema.org slot
+datacite-vocab:descriptionType/Other	skos:relatedMatch	schema:description	semapv:ManualMappingCuration	Other	description	Any other description type; fallback to schema:description
+datacite-prop:geoLocation	skos:exactMatch	schema:spatialCoverage	semapv:ManualMappingCuration	geoLocation	spatialCoverage	Spatial region where data was gathered or about which data is focused
+datacite-prop:geoLocation/geoLocationPlace	skos:exactMatch	schema:Place	semapv:ManualMappingCuration	geoLocationPlace	Place	Named place; serialised as a schema:Place with schema:name
+datacite-prop:geoLocation/geoLocationPoint	skos:exactMatch	schema:GeoCoordinates	semapv:ManualMappingCuration	geoLocationPoint	GeoCoordinates	A single lat/long point; serialised as a schema:GeoCoordinates object
+datacite-prop:geoLocation/geoLocationPoint/pointLatitude	skos:exactMatch	schema:latitude	semapv:ManualMappingCuration	pointLatitude	latitude	Latitude of the point
+datacite-prop:geoLocation/geoLocationPoint/pointLongitude	skos:exactMatch	schema:longitude	semapv:ManualMappingCuration	pointLongitude	longitude	Longitude of the point
+datacite-prop:geoLocation/geoLocationBox	skos:exactMatch	schema:GeoShape	semapv:ManualMappingCuration	geoLocationBox	GeoShape	Bounding box; serialised as a schema:GeoShape using the schema:box property (space-separated lat/long string)
+datacite-prop:geoLocation/geoLocationBox/westBoundLongitude	skos:relatedMatch	schema:box	semapv:ManualMappingCuration	westBoundLongitude	box	Western boundary; one component of the GeoShape.box string; relatedMatch because four bounds combine into one string
+datacite-prop:geoLocation/geoLocationBox/eastBoundLongitude	skos:relatedMatch	schema:box	semapv:ManualMappingCuration	eastBoundLongitude	box	Eastern boundary; one component of the GeoShape.box string
+datacite-prop:geoLocation/geoLocationBox/southBoundLatitude	skos:relatedMatch	schema:box	semapv:ManualMappingCuration	southBoundLatitude	box	Southern boundary; one component of the GeoShape.box string
+datacite-prop:geoLocation/geoLocationBox/northBoundLatitude	skos:relatedMatch	schema:box	semapv:ManualMappingCuration	northBoundLatitude	box	Northern boundary; one component of the GeoShape.box string
+datacite-prop:geoLocation/geoLocationPolygon	skos:closeMatch	schema:GeoShape	semapv:ManualMappingCuration	geoLocationPolygon	GeoShape	Polygon shape; serialised as a schema:GeoShape using the schema:polygon property; closeMatch because polygon encoding differs
+datacite-prop:fundingReference	skos:exactMatch	schema:funding	semapv:ManualMappingCuration	fundingReference	funding	Funding information; schema:funding links a CreativeWork to a schema:Grant
+datacite-prop:fundingReference/funderName	skos:exactMatch	schema:name	semapv:ManualMappingCuration	funderName	name	Name of the funding organization (value of funder Organization's schema:name)
+datacite-prop:fundingReference/funderIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	funderIdentifier	identifier	Persistent identifier for the funder (e.g. ROR); modelled as a PropertyValue
+datacite-prop:fundingReference/funderIdentifier/funderIdentifierType	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	funderIdentifierType	propertyID	Type of the funder identifier (e.g. ROR)
+datacite-prop:fundingReference/funderIdentifier/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the funder identifier scheme
+datacite-prop:fundingReference/awardNumber	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	awardNumber	identifier	Grant or award number; modelled as the identifier of the schema:Grant
+datacite-prop:fundingReference/awardNumber/awardURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	awardURI	url	Resolvable URL of the grant or award
+datacite-prop:fundingReference/awardTitle	skos:exactMatch	schema:name	semapv:ManualMappingCuration	awardTitle	name	Title of the grant or award (value of schema:Grant's schema:name)
+datacite-prop:relatedItem	skos:closeMatch	schema:citation	semapv:ManualMappingCuration	relatedItem	citation	Structured bibliographic metadata for a related item; citation is the most common use; relationType qualifies the specific relationship
+datacite-prop:relatedItem/relatedItemType	skos:closeMatch	schema:additionalType	semapv:ManualMappingCuration	relatedItemType	additionalType	Type of the related item (e.g. JournalArticle); same controlled list as resourceTypeGeneral
+datacite-prop:relatedItem/relationType	skos:relatedMatch	schema:additionalType	semapv:ManualMappingCuration	relationType	additionalType	Nature of the relation; see relationType vocab rows for specific schema.org property mappings
+datacite-prop:relatedItem/relatedItemIdentifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	relatedItemIdentifier	identifier	Identifier of the related item; modelled as a PropertyValue
+datacite-prop:relatedItem/relatedItemIdentifier/relatedItemIdentifierType	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	relatedItemIdentifierType	propertyID	Scheme of the related item identifier (e.g. DOI)
+datacite-prop:relatedItem/relatedMetadataScheme	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	relatedMetadataScheme	propertyID	Metadata scheme used for the related item
+datacite-prop:relatedItem/schemeURI	skos:exactMatch	schema:url	semapv:ManualMappingCuration	schemeURI	url	Resolvable URL of the related item metadata scheme
+datacite-prop:relatedItem/schemeType	skos:closeMatch	schema:encodingFormat	semapv:ManualMappingCuration	schemeType	encodingFormat	Encoding format or protocol of the related item scheme
+datacite-prop:relatedItem/creator	skos:exactMatch	schema:creator	semapv:ManualMappingCuration	creator	creator	Creator of the related item
+datacite-prop:relatedItem/creator/creatorName	skos:exactMatch	schema:name	semapv:ManualMappingCuration	creatorName	name	Name of the related item's creator
+datacite-prop:relatedItem/title	skos:exactMatch	schema:name	semapv:ManualMappingCuration	title	name	Title of the related item
+datacite-prop:relatedItem/title/titleType	skos:relatedMatch	schema:additionalType	semapv:ManualMappingCuration	titleType	additionalType	Type qualifier for the related item title; see titleType vocab rows
+datacite-prop:relatedItem/publicationYear	skos:exactMatch	schema:datePublished	semapv:ManualMappingCuration	publicationYear	datePublished	Publication year of the related item
+datacite-prop:relatedItem/volume	skos:exactMatch	schema:volumeNumber	semapv:ManualMappingCuration	volume	volumeNumber	Journal or series volume of the related item
+datacite-prop:relatedItem/issue	skos:exactMatch	schema:issueNumber	semapv:ManualMappingCuration	issue	issueNumber	Journal issue number of the related item
+datacite-prop:relatedItem/number	skos:closeMatch	schema:issueNumber	semapv:ManualMappingCuration	number	issueNumber	Report or article number within a series
+datacite-prop:relatedItem/number/numberType	skos:relatedMatch	schema:additionalType	semapv:ManualMappingCuration	numberType	additionalType	Type of the number (Article/Chapter/Report/Other)
+datacite-vocab:numberType/Article	skos:closeMatch	schema:issueNumber	semapv:ManualMappingCuration	Article	issueNumber	Article number within an issue
+datacite-vocab:numberType/Chapter	skos:closeMatch	schema:position	semapv:ManualMappingCuration	Chapter	position	Chapter position within a book
+datacite-vocab:numberType/Report	skos:closeMatch	schema:issueNumber	semapv:ManualMappingCuration	Report	issueNumber	Report number within a series
+datacite-vocab:numberType/Other	skos:relatedMatch	schema:position	semapv:ManualMappingCuration	Other	position	Fallback for other number types
+datacite-prop:relatedItem/firstPage	skos:exactMatch	schema:pageStart	semapv:ManualMappingCuration	firstPage	pageStart	First page of the related item
+datacite-prop:relatedItem/lastPage	skos:exactMatch	schema:pageEnd	semapv:ManualMappingCuration	lastPage	pageEnd	Last page of the related item
+datacite-prop:relatedItem/publisher	skos:exactMatch	schema:publisher	semapv:ManualMappingCuration	publisher	publisher	Publisher of the related item
+datacite-prop:relatedItem/edition	skos:exactMatch	schema:bookEdition	semapv:ManualMappingCuration	edition	bookEdition	Edition of the related book or chapter
+datacite-prop:relatedItem/contributor	skos:exactMatch	schema:contributor	semapv:ManualMappingCuration	contributor	contributor	Contributing agent for the related item
+datacite-prop:relatedItem/contributor/contributorType	skos:exactMatch	schema:roleName	semapv:ManualMappingCuration	contributorType	roleName	Role of the related item's contributor
+datacite-prop:relatedItem/contributor/contributorName	skos:exactMatch	schema:name	semapv:ManualMappingCuration	contributorName	name	Name of the related item's contributor
+datacite-class:Resource	skos:exactMatch	schema:CreativeWork	semapv:ManualMappingCuration	Resource	CreativeWork	The top-level DataCite resource; resourceTypeGeneral drives the specific schema.org subtype (e.g. schema:Dataset)
+datacite-class:Identifier	skos:exactMatch	schema:PropertyValue	semapv:ManualMappingCuration	Identifier	PropertyValue	A DataCite Identifier is serialised as a schema:PropertyValue with propertyID=DOI and value=<doi-string>
+datacite-class:Title	skos:closeMatch	schema:Text	semapv:ManualMappingCuration	Title	Text	The DataCite Title class is structurally a labelled text value + language tag; schema:Text (a schema.org DataType) is the closest class-level match
+datacite-class:Publisher	skos:exactMatch	schema:Organization	semapv:ManualMappingCuration	Publisher	Organization	DataCite Publisher is always an Organization in schema.org
+datacite-class:PublicationYear	skos:closeMatch	schema:Date	semapv:ManualMappingCuration	PublicationYear	Date	A year value; closeMatch because schema:Date represents a full ISO 8601 date while publicationYear is year-only
+datacite-class:Subject	skos:closeMatch	schema:DefinedTerm	semapv:ManualMappingCuration	Subject	DefinedTerm	When subject carries a valueURI and subjectScheme it is serialised as a schema:DefinedTerm within a schema:DefinedTermSet; free-text subjects have no class equivalent
+datacite-class:Contributor	skos:closeMatch	schema:Person	semapv:ManualMappingCuration	Contributor	Person	Contributor is a Person when nameType=Personal
+datacite-class:Contributor	skos:closeMatch	schema:Organization	semapv:ManualMappingCuration	Contributor	Organization	Contributor is an Organization when nameType=Organizational
+datacite-class:Date	skos:closeMatch	schema:PropertyValue	semapv:ManualMappingCuration	Date	PropertyValue	A Date+dateType block is modelled as a schema:PropertyValue (propertyID=dateType, value=ISO-8601 date string)
+datacite-class:Language	skos:exactMatch	schema:Language	semapv:ManualMappingCuration	Language	Language	schema:Language exists and directly corresponds to a language designation
+datacite-class:ResourceType	skos:relatedMatch	schema:CreativeWork	semapv:ManualMappingCuration	ResourceType	CreativeWork	ResourceType drives the @type selection on the CreativeWork; no ResourceType class in schema.org
+datacite-class:AlternateIdentifier	skos:exactMatch	schema:PropertyValue	semapv:ManualMappingCuration	AlternateIdentifier	PropertyValue	Same serialisation as Identifier; an additional PropertyValue alongside the primary DOI
+datacite-class:RelatedIdentifier	skos:closeMatch	schema:CreativeWork	semapv:ManualMappingCuration	RelatedIdentifier	CreativeWork	A RelatedIdentifier points to another CreativeWork; the identifier string becomes that resource's schema:identifier
+datacite-class:Size	skos:closeMatch	schema:QuantitativeValue	semapv:ManualMappingCuration	Size	QuantitativeValue	Size with optional unit (e.g. bytes, pages); schema:QuantitativeValue carries value+unitCode; closeMatch because DataCite Size is a free-text string
+datacite-class:Format	skos:relatedMatch	schema:MediaObject	semapv:ManualMappingCuration	Format	MediaObject	No Format class in schema.org; the format string becomes the schema:encodingFormat property on a MediaObject or CreativeWork
+datacite-class:Version	skos:relatedMatch	schema:CreativeWork	semapv:ManualMappingCuration	Version	CreativeWork	No Version class in schema.org; the version string becomes the schema:version property on the CreativeWork
+datacite-class:Rights	skos:relatedMatch	schema:CreativeWork	semapv:ManualMappingCuration	Rights	CreativeWork	No Rights class in schema.org; rights information becomes the schema:license property on the CreativeWork
+datacite-class:Description	skos:closeMatch	schema:PropertyValue	semapv:ManualMappingCuration	Description	PropertyValue	A Description+descriptionType block is modelled as a schema:PropertyValue (propertyID=descriptionType, value=text); descriptionType=Abstract maps directly to schema:abstract
+datacite-class:GeoLocation	skos:closeMatch	schema:Place	semapv:ManualMappingCuration	GeoLocation	Place	A spatial region or named place; schema:Place with schema:geo (GeoCoordinates or GeoShape) is the closest container class
+datacite-class:FundingReference	skos:exactMatch	schema:Grant	semapv:ManualMappingCuration	FundingReference	Grant	A FundingReference contains funder + award information exactly matching the schema:Grant structure
+datacite-class:RelatedItem	skos:exactMatch	schema:CreativeWork	semapv:ManualMappingCuration	RelatedItem	CreativeWork	A related item with full bibliographic metadata is a schema:CreativeWork; relatedItemType drives the specific subtype
+datacite-vocab:contributorType/ContactPerson	skos:closeMatch	schema:contactPoint	semapv:ManualMappingCuration	ContactPerson	contactPoint	Person fielding inquiries about the resource; schema:contactPoint (linking to ContactPoint) is the closest property
+datacite-vocab:contributorType/DataCollector	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	DataCollector	roleName	No dedicated schema.org property; expressed as roleName="DataCollector" on a Role wrapper
+datacite-vocab:contributorType/DataCurator	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	DataCurator	roleName	No dedicated schema.org property; expressed as roleName="DataCurator"
+datacite-vocab:contributorType/DataManager	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	DataManager	roleName	No dedicated schema.org property; expressed as roleName="DataManager"
+datacite-vocab:contributorType/Distributor	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	Distributor	roleName	No dedicated schema.org property; expressed as roleName="Distributor"
+datacite-vocab:contributorType/Editor	skos:exactMatch	schema:editor	semapv:ManualMappingCuration	Editor	editor	Editorial role maps directly to schema:editor on CreativeWork
+datacite-vocab:contributorType/HostingInstitution	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	HostingInstitution	roleName	No dedicated schema.org property; expressed as roleName="HostingInstitution"
+datacite-vocab:contributorType/Other	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	Other	roleName	Fallback contributor role; expressed as roleName="Other"
+datacite-vocab:contributorType/Producer	skos:exactMatch	schema:producer	semapv:ManualMappingCuration	Producer	producer	Producer role maps directly to schema:producer on CreativeWork
+datacite-vocab:contributorType/ProjectLeader	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	ProjectLeader	roleName	No dedicated schema.org property; expressed as roleName="ProjectLeader"
+datacite-vocab:contributorType/ProjectManager	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	ProjectManager	roleName	No dedicated schema.org property; expressed as roleName="ProjectManager"
+datacite-vocab:contributorType/ProjectMember	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	ProjectMember	roleName	No dedicated schema.org property; expressed as roleName="ProjectMember"
+datacite-vocab:contributorType/RegistrationAgency	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	RegistrationAgency	roleName	No dedicated schema.org property; expressed as roleName="RegistrationAgency"
+datacite-vocab:contributorType/RegistrationAuthority	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	RegistrationAuthority	roleName	No dedicated schema.org property; expressed as roleName="RegistrationAuthority"
+datacite-vocab:contributorType/RelatedPerson	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	RelatedPerson	roleName	No dedicated schema.org property; expressed as roleName="RelatedPerson"
+datacite-vocab:contributorType/ResearchGroup	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	ResearchGroup	roleName	No dedicated schema.org property; expressed as roleName="ResearchGroup"
+datacite-vocab:contributorType/Researcher	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	Researcher	roleName	No dedicated schema.org property; expressed as roleName="Researcher"
+datacite-vocab:contributorType/RightsHolder	skos:exactMatch	schema:copyrightHolder	semapv:ManualMappingCuration	RightsHolder	copyrightHolder	Rights holder maps directly to schema:copyrightHolder on CreativeWork
+datacite-vocab:contributorType/Sponsor	skos:exactMatch	schema:sponsor	semapv:ManualMappingCuration	Sponsor	sponsor	Sponsor maps directly to schema:sponsor on CreativeWork/Event
+datacite-vocab:contributorType/Supervisor	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	Supervisor	roleName	No dedicated schema.org property; expressed as roleName="Supervisor"
+datacite-vocab:contributorType/Translator	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	Translator	roleName	No dedicated schema.org property; expressed as roleName="Translator"; see also schema:translationOfWork for the work relationship
+datacite-vocab:contributorType/WorkPackageLeader	skos:relatedMatch	schema:roleName	semapv:ManualMappingCuration	WorkPackageLeader	roleName	No dedicated schema.org property; expressed as roleName="WorkPackageLeader"
+datacite-prop:geoLocation/geoLocationPolygon/polygonPoint	skos:exactMatch	schema:GeoCoordinates	semapv:ManualMappingCuration	polygonPoint	GeoCoordinates	Each vertex of the polygon is a lat/long pair; serialised as a schema:GeoCoordinates object
+datacite-prop:geoLocation/geoLocationPolygon/inPolygonPoint	skos:closeMatch	schema:GeoCoordinates	semapv:ManualMappingCuration	inPolygonPoint	GeoCoordinates	DataCite-specific interior/containment point for the polygon; closest schema.org type is GeoCoordinates; closeMatch because inPolygonPoint has no direct schema.org equivalent

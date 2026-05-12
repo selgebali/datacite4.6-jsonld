@@ -1,0 +1,10 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle",
+  "type": "Concept",
+  "prefLabel": "Subtitle",
+  "notation": "Subtitle",
+  "definition": "A secondary title that follows the main title and provides additional information about the resource.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/titleType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/titleType"
+}

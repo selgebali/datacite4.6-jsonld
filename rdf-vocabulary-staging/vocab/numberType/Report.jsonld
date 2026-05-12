@@ -1,0 +1,10 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType/Report",
+  "type": "Concept",
+  "prefLabel": "Report",
+  "notation": "Report",
+  "definition": "A number identifying a report within a report series.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/numberType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/numberType"
+}

@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle",
+  "type": "Concept",
+  "prefLabel": "AlternativeTitle",
+  "notation": "AlternativeTitle",
+  "definition": "A title by which the resource is also known, used as an alternative to the primary title.",
+  "scopeNote": "Use for formally recognized alternate titles. For translated titles use TranslatedTitle; for secondary titles use Subtitle.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/titleType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/titleType"
+}

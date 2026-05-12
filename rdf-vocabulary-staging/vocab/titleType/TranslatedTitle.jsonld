@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle",
+  "type": "Concept",
+  "prefLabel": "TranslatedTitle",
+  "notation": "TranslatedTitle",
+  "definition": "A title that is a translation of the primary title into another language.",
+  "scopeNote": "Use the xml:lang attribute to indicate the language of the translated title.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/titleType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/titleType"
+}
