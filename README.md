@@ -54,7 +54,7 @@ It is the working source for a GitHub Pages vocabulary namespace and for tooling
 │   ├── generate-production-namespace.sh  # Replace staging URLs with production URLs
 │   ├── generate-index-pages.js           # Build HTML index pages for the GitHub Pages site
 │   ├── manifest-sync.js                  # Sync the manifest file with vocabulary contents
-│   └── synCheck.py                       # Syntax check for vocabulary files
+│   └── synCheck.py                       # Sync check: verify schema-profile $defs match vocab term files
 │
 └── website/
     ├── index.html                   # Landing page (deployed to GitHub Pages)
@@ -380,7 +380,7 @@ Individual term files follow a predictable structure:
 
 ```json
 {
-  "@context": "https://schema.stage.datacite.org/context/fullcontext.jsonld",
+  "@context": "https://schema.stage.datacite.org/linked-data/context/fullcontext.jsonld",
   "@type": "Resource",
   "identifier": "10.1234/example",
   "creator": [{ "creatorName": "Smith, Jane" }]
@@ -439,6 +439,8 @@ The profiles in `validation-and-conversion/schemas/schema-profiles/` validate Da
 | `datacite4.6-profile.json` | Validates metadata submitted to the REST API (POST/PUT) |
 | `datacite4.6-schema.json` | Core attribute schema (can be referenced independently) |
 | `integrated.json` | Self-contained merged profile — embeds all enumerations and context, no external `$ref` dependencies |
+
+Once deployed, each profile is also fetchable at its `$id` URL — e.g. `https://schema.stage.datacite.org/linked-data/schema-profiles/integrated.json` — so validators can resolve `$ref`s remotely without a local copy.
 
 Use any JSON Schema validator (e.g., `ajv-cli`, Python `jsonschema`) to validate your payload:
 
