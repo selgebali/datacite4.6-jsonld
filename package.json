@@ -1,0 +1,18 @@
+{
+  "name": "datacite-jsonld",
+  "version": "0.0.0",
+  "private": true,
+  "description": "DataCite 4.6 metadata schema: JSON-LD vocabulary, JSON Schema profiles, and tooling.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "syncCheck": "python3 rdf-build-scripts/synCheck.py",
+    "validate-mappings": "node validation-and-conversion/scripts/validate.js mappings/jskos-mappings.json",
+    "validate-profiles": "for f in validation-and-conversion/schemas/schema-profiles/*.json validation-and-conversion/schemas/schema-profiles/*.jsonld; do echo \"=== $f ===\"; npx ajv-cli --strict=false --spec=draft2019 compile -s \"$f\" || exit 1; done"
+  },
+  "dependencies": {
+    "jskos-validate": "^1.2.3"
+  },
+  "devDependencies": {
+    "ajv-cli": "^5.0.0"
+  }
+}

@@ -4,7 +4,7 @@
 # creator_id: "https://orcid.org/0000-0003-1378-5495"
 # license: "https://creativecommons.org/licenses/by/4.0/"
 # mapping_date: "2026-05-12"
-# subject_source: "https://schema.stage.datacite.org/linked-data//"
+# subject_source: "https://schema.stage.datacite.org/linked-data/"
 # object_source: "http://purl.org/dc/terms/"
 # curie_map:
 #   datacite-class: "https://schema.stage.datacite.org/linked-data/class/"

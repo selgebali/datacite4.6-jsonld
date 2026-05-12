@@ -273,7 +273,8 @@ function collectContextEntries(repoRoot, keys) {
     return {
       afterKey,
       key,
-      value: context[key],
+      // Fallback for newly-added keys not yet in fullcontext.jsonld.
+      value: context[key] ?? { "@id": `property:${key}`, "@type": "xsd:string" },
     };
   });
 }
