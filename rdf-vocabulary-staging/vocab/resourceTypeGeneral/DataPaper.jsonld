@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/DataPaper",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/DataPaper",
   "type": "Concept",
   "prefLabel": "DataPaper",
   "notation": "DataPaper",
   "definition": "A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "A data paper describes data provenance and methodologies used in the gathering, processing, organizing, and representing the data",
   "example": [
     "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.17912/w2mw2d"

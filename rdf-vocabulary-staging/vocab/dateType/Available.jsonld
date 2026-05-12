@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Available",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Available",
   "type": "Concept",
   "prefLabel": "Available",
   "notation": "Available",
   "definition": "The date the resource is made publicly available. May be a range.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
   "scopeNote": "To indicate the end of an embargo period, use Available."
 }

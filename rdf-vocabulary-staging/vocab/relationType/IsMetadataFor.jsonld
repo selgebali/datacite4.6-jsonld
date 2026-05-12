@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsMetadataFor",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsMetadataFor",
   "type": "Concept",
   "prefLabel": "IsMetadataFor",
   "notation": "IsMetadataFor",
   "definition": "indicates additional metadata A for a resource B",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsMetadataFor\" relatedMetadataScheme=\"DDI-L\" schemeURI=\"http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd\">10.1234/567891</relatedIdentifier>"
   ]

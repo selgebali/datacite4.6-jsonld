@@ -1,6 +1,6 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/ISBN",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN",
   "type": "Concept",
   "prefLabel": "ISBN",
   "altLabel": "International Standard Book Number",
@@ -9,6 +9,6 @@
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"ISBN\" relationType=\"IsPartOf\">978-3-905673-82-1</relatedIdentifier>"
   ],
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType"
 }

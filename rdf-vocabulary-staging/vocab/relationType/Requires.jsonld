@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/Requires",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Requires",
   "type": "Concept",
   "prefLabel": "Requires",
   "notation": "Requires",
   "definition": "Indicates A requires B",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "May be used to indicate software dependencies.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Requires\">10.1234/867</relatedIdentifier>"

@@ -1,6 +1,6 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/EISSN",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN",
   "type": "Concept",
   "prefLabel": "EISSN",
   "altLabel": "Electronic International Standard Serial Number",
@@ -9,6 +9,6 @@
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"eISSN\" relationType=\"Cites\">1562-6865</relatedIdentifier>"
   ],
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType"
 }

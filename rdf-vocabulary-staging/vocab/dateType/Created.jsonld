@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Created",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Created",
   "type": "Concept",
   "prefLabel": "Created",
   "notation": "Created",
   "definition": "The date the resource itself was put together; this could refer to a timeframe in ancient history, a date range, or a single date for a final component, e.g., the finalised file with all the data.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
   "scopeNote": "Recommended for discovery."
 }

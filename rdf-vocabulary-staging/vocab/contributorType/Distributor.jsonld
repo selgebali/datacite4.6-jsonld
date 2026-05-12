@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/Distributor",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Distributor",
   "type": "Concept",
   "prefLabel": "Distributor",
   "notation": "Distributor",
   "definition": "Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form.",
   "scopeNote": "Works stored in more than one archive/repository may credit each as a distributor.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/contributorType"
 }

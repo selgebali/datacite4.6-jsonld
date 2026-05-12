@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsDocumentedBy",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDocumentedBy",
   "type": "Concept",
   "prefLabel": "IsDocumentedBy",
   "notation": "IsDocumentedBy",
   "definition": "indicates B is documentation about/explaining A",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "May be used for software documentation.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsDocumentedBy\">http://tobias-lib.uni-tuebingen.de/volltexte/2000/96/</relatedIdentifier>"

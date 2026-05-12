@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsPartOf",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPartOf",
   "type": "Concept",
   "prefLabel": "IsPartOf",
   "notation": "IsPartOf",
   "definition": "indicates A is a portion of B; may be used for elements of a series",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "Recommended for discovery. Primarily applied to container-contained relationships. May be used for individual software modules; code repository-to-version should use IsVersionOf/HasVersion.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsPartOf\">10.5281/zenodo.754312</relatedIdentifier>"

@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsSourceOf",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSourceOf",
   "type": "Concept",
   "prefLabel": "IsSourceOf",
   "notation": "IsSourceOf",
   "definition": "indicates A is a source upon which B is based",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "IsSourceOf is the original resource from which a derivative resource was created (e.g., original dataset without value manipulation).",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsSourceOf\">http://opencontext.org/projects/81204AF8-127C-4686-E9B0-1202C3A47959</relatedIdentifier>"

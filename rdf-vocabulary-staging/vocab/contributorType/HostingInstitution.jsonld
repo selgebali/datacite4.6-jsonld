@@ -1,6 +1,6 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/HostingInstitution",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/HostingInstitution",
   "type": "Concept",
   "prefLabel": "HostingInstitution",
   "notation": "HostingInstitution",
@@ -9,6 +9,6 @@
   "example": [
     "Université Grenoble Alpes (UGA)"
   ],
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/contributorType"
 }

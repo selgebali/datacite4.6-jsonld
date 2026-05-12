@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/ConferencePaper",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferencePaper",
   "type": "Concept",
   "prefLabel": "ConferencePaper",
   "notation": "ConferencePaper",
   "definition": "Article that is written with the goal of being accepted to a conference.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "<resourceType resourceTypeGeneral=\"ConferencePaper\">Experience Report</resourceType>",
   "closeMatch": [
     "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"

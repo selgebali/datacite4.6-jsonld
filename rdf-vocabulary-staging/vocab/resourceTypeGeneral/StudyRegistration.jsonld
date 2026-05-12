@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/StudyRegistration",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration",
   "type": "Concept",
   "prefLabel": "StudyRegistration",
   "notation": "StudyRegistration",
   "definition": "A detailed, time-stamped description of a research plan, often openly shared in a registry or published in a journal before the study is conducted to lend accountability and transparency in the hypothesis generating and testing process.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "Includes pre-registrations, registered reports, and clinical trials. Study registrations are sometimes peer-reviewed and may include the hypothesis, expected results, study design, and/or analysis plan.\n<resourceType resourceTypeGeneral=\"StudyRegistration\">Pre-registration</resourceType>",
   "closeMatch": [
     "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"

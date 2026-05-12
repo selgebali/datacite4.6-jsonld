@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Accepted",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted",
   "type": "Concept",
   "prefLabel": "Accepted",
   "notation": "Accepted",
   "definition": "The date that the publisher accepted the resource into their system.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
   "scopeNote": "To indicate the start of an embargo period, use Accepted or Submitted, as appropriate."
 }

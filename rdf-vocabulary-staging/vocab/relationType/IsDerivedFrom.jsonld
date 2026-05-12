@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsDerivedFrom",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDerivedFrom",
   "type": "Concept",
   "prefLabel": "IsDerivedFrom",
   "notation": "IsDerivedFrom",
   "definition": "indicates B is a source upon which A is based",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "Use for a resource that is a derivative of an original resource. Example context: dataset derived from a larger dataset and manipulated.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsDerivedFrom\">10.6078/M7DZ067C</relatedIdentifier>"

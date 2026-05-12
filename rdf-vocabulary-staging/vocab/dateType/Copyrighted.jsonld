@@ -1,10 +1,10 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Copyrighted",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted",
   "type": "Concept",
   "prefLabel": "Copyrighted",
   "notation": "Copyrighted",
   "definition": "The specific, documented date at which the resource receives a copyrighted status, if applicable.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/dateType"
 }

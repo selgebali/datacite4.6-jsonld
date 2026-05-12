@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Event",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Event",
   "type": "Concept",
   "prefLabel": "Event",
   "notation": "Event",
   "definition": "A non-persistent, time-based occurrence.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "Descriptive information and/or content that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event such as a webcast or convention",
   "example": [
     "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.7269/p3rn35sz"

@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Standard",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Standard",
   "type": "Concept",
   "prefLabel": "Standard",
   "notation": "Standard",
   "definition": "Something established by authority, custom, or general consent as a model, example, or point of reference.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "<resourceType resourceTypeGeneral=\"Standard\">Dublin Core</resourceType>",
   "closeMatch": [
     "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text"

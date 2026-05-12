@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType/TableOfContents",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TableOfContents",
   "type": "Concept",
   "prefLabel": "TableOfContents",
   "notation": "TableOfContents",
   "definition": "A listing of the Table of Contents.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/descriptionType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType",
   "scopeNote": "Use “<br>” to indicate a line break for improved rendering of multiple paragraphs, but otherwise no html markup.",
   "example": [
     "https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5678/LCRS/FOR816.CIT.1031"

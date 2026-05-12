@@ -7,6 +7,7 @@ on:
       - 'rdf-vocabulary-staging/**'
       - 'rdf-build-scripts/**'
       - 'website/**'
+      - 'validation-and-conversion/schemas/schema-profiles/**'
   workflow_dispatch:
 
 permissions:
@@ -42,6 +43,11 @@ jobs:
           # Copy hand-authored landing pages
           cp website/index.html _site/index.html
           cp website/docs-index.html _site/docs-index.html
+
+          # Copy JSON Schema profiles so they resolve under /schema-profiles/
+          mkdir -p _site/schema-profiles
+          cp validation-and-conversion/schemas/schema-profiles/*.json _site/schema-profiles/
+          cp validation-and-conversion/schemas/schema-profiles/*.jsonld _site/schema-profiles/
 
       - uses: actions/configure-pages@v4
 

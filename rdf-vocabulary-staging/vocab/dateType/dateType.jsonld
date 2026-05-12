@@ -2,24 +2,24 @@
   "@context": "./context.jsonld",
   "@graph": [
     {
-      "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
       "type": "ConceptScheme",
       "title": "DataCite 4.6 dateType",
       "identifier": "dateType",
       "created": "2026-02-20",
       "hasTopConcept": [
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Accepted",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Available",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Copyrighted",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Collected",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Coverage",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Created",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Issued",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Submitted",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Updated",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Valid",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Withdrawn",
-        "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Other"
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Available",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Collected",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Coverage",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Created",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Issued",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Submitted",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn",
+        "https://schema.stage.datacite.org/linked-data/vocab/dateType/Other"
       ]
     }
   ]

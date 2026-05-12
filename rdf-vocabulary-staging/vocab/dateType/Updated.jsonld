@@ -1,10 +1,10 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType/Updated",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated",
   "type": "Concept",
   "prefLabel": "Updated",
   "notation": "Updated",
   "definition": "The date of the last update to the resource, when the resource is being added to. May be a range.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/dateType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/dateType"
 }

@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType/IsVersionOf",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVersionOf",
   "type": "Concept",
   "prefLabel": "IsVersionOf",
   "notation": "IsVersionOf",
   "definition": "indicates A is a version of B",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relationType",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
   "scopeNote": "The registered resource is an instance of a target resource (A is an instance of B). May relate a specific software version to its code repository.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsVersionOf\">10.5281/ZENODO.832054</relatedIdentifier>"

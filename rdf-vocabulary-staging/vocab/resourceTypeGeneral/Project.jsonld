@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Project",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project",
   "type": "Concept",
   "prefLabel": "Project",
   "notation": "Project",
   "definition": "A planned endeavor or activity, frequently collaborative, intended to achieve a particular aim using allocated resources such as budget, time, and expertise.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "This represents the project (research projects and studies). For project deliverables/descriptions, use the resource type for the output.\n<resourceType resourceTypeGeneral=\"Project\">Field season</resourceType>\n<resourceType resourceTypeGeneral=\"Project\">Cohort study</resourceType>"
 }

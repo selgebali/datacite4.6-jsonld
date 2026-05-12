@@ -1,6 +1,6 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType/arXiv",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv",
   "type": "Concept",
   "prefLabel": "arXiv",
   "altLabel": "arXiv identifier",
@@ -9,6 +9,6 @@
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"arXiv\" relationType=\"IsCitedBy\">arXiv:0706.0001</relatedIdentifier>"
   ],
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/relatedIdentifierType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType"
 }

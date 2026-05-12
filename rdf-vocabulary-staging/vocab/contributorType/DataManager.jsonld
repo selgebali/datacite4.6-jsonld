@@ -1,6 +1,6 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType/DataManager",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataManager",
   "type": "Concept",
   "prefLabel": "DataManager",
   "notation": "DataManager",
@@ -9,6 +9,6 @@
   "example": [
     "https://doi.org/10.6073/pasta/41b3ed2e152e1e4c3846e646118208e7"
   ],
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/contributorType"
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/contributorType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/contributorType"
 }

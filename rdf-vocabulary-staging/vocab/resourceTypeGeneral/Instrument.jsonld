@@ -1,11 +1,11 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/Instrument",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Instrument",
   "type": "Concept",
   "prefLabel": "Instrument",
   "notation": "Instrument",
   "definition": "A device, tool or apparatus used to obtain, measure and/or analyze data.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "This is meant to be the instrument instance (the individual physical device), not the digital description or design of an instrument.\n<resourceType resourceTypeGeneral=\"Instrument\">Reflectometer</resourceType>"
 }

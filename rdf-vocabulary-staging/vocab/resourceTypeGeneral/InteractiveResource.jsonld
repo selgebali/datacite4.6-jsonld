@@ -1,12 +1,12 @@
 {
   "@context": "./context.jsonld",
-  "id": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral/InteractiveResource",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/InteractiveResource",
   "type": "Concept",
   "prefLabel": "InteractiveResource",
   "notation": "InteractiveResource",
   "definition": "A resource requiring interaction from the user to be understood, executed, or experienced.",
-  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
-  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/datacite-4.6/resourceTypeGeneral",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
   "scopeNote": "Training modules, files that require use of a viewer (e.g., Flash), or query/response portals",
   "example": [
     "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.7269/p3tb14tr"
