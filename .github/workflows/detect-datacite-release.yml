@@ -1,0 +1,94 @@
+name: Detect DataCite Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Optional target DataCite schema version. Leave blank to detect the next official 4.x release from schema.datacite.org/versions.html.'
+        required: false
+        type: string
+      release_date:
+        description: 'Optional official release date (YYYY-MM-DD). Leave blank to use the date published on schema.datacite.org/versions.html.'
+        required: false
+        type: string
+      commit_plan_files:
+        description: 'Commit the generated plan files back to the selected branch so they can be reviewed and edited on GitHub.'
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  detect-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Detect release plan
+        run: |
+          args=()
+
+          if [ -n "${{ inputs.version }}" ]; then
+            args+=(--version "${{ inputs.version }}")
+          fi
+
+          if [ -n "${{ inputs.release_date }}" ]; then
+            args+=(--release-date "${{ inputs.release_date }}")
+          fi
+
+          node rdf-build-scripts/detect-datacite-release.js "${args[@]}"
+
+      - name: Verify detection artifacts
+        run: |
+          if [ -z "${PLAN_PATH}" ] || [ ! -f "${PLAN_PATH}" ]; then
+            echo "::error::No release plan file found at ${PLAN_PATH:-<unset>}"
+            exit 1
+          fi
+          if [ -z "${REPORT_PATH}" ] || [ ! -f "${REPORT_PATH}" ]; then
+            echo "::error::No release plan report file found at ${REPORT_PATH:-<unset>}"
+            exit 1
+          fi
+          if [ -z "${RESOLVED_VERSION}" ]; then
+            echo "::error::RESOLVED_VERSION was not set by the detection script."
+            exit 1
+          fi
+
+      - name: Add detection report to workflow summary
+        run: |
+          cat "$REPORT_PATH" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit plan files
+        if: ${{ inputs.commit_plan_files }}
+        env:
+          VERSION: ${{ env.RESOLVED_VERSION }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$PLAN_PATH" "$REPORT_PATH"
+
+          if git diff --cached --quiet; then
+            echo "No plan changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: detect DataCite release plan ${VERSION}"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Upload detection artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: datacite-release-plan-${{ env.RESOLVED_VERSION }}
+          path: |
+            ${{ env.PLAN_PATH }}
+            ${{ env.REPORT_PATH }}

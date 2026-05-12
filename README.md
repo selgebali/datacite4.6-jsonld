@@ -20,6 +20,216 @@ This repository bridges these two worlds. It offers a JSON Schema to validate yo
 
 ---
 
+## Repository Layout
+
+```
+datacite4.6-jsonld/
+├── rdf-vocabulary-staging/        # Vocabulary source files (edit these)
+│   ├── class/                     # 21 RDF class definitions (.jsonld)
+│   ├── property/                  # 78+ RDF property definitions (.jsonld)
+│   ├── vocab/                     # Controlled vocabularies (schemes + term files)
+│   ├── context/                   # JSON-LD context files
+│   ├── manifest/                  # Versioned inventories (datacite-4.6.json, …)
+│   └── dist/                      # Generated distribution bundles (created by scripts)
+├── rdf-build-scripts/             # Automation scripts
+│   ├── detect-datacite-release.js
+│   ├── apply-datacite-release-plan.js
+│   ├── build-distribution.js
+│   ├── manifest-sync.js
+│   ├── release-snapshot.js
+│   ├── update-current-pointers.js
+│   ├── generate-index-pages.js
+│   ├── update-root-index.js
+│   └── lib/                       # Shared libraries (versioning, release-import modules)
+├── .github/workflows/             # CI/CD workflows
+│   ├── deploy-pages.yml           # Auto-deploy vocabulary browser to GitHub Pages
+│   ├── detect-datacite-release.yml
+│   ├── apply-datacite-release-plan.yml
+│   └── release-snapshot.yml
+├── reports/                       # Generated release plans and apply reports
+├── validation-and-conversion/     # JSON Schema profiles, XSD, conversion scripts
+├── mappings/                      # SKOS crosswalks and JSKOS mappings
+└── website/                       # Hand-authored landing pages
+```
+
+---
+
+## Upgrading to a New DataCite Version
+
+The release pipeline is a three-step process: **detect → review → apply**. All three steps have both a GitHub Actions workflow (for CI) and a local Node.js command (for development).
+
+### Prerequisites
+
+- Node.js 20+
+- [Apache Jena](https://jena.apache.org/download/) (`riot` on PATH) — only needed for `build-distribution` / `release-snapshot`, which generate `.ttl` and `.rdf` files.
+
+---
+
+### Step 1 — Detect
+
+**What it does:** Fetches the official DataCite schema release page, compares it to the local manifest versions, and writes a machine-readable JSON plan plus a Markdown report under `reports/`.
+
+**Via GitHub Actions:**
+
+1. Go to **Actions → Detect DataCite Release → Run workflow**
+2. Optionally fill in `version` (e.g. `4.7`) and `release_date` (e.g. `2026-03-03`). Leave both blank to auto-detect the next release.
+3. Enable **Commit plan files** (default: on) to push the plan to the branch automatically.
+
+**Locally:**
+
+```bash
+# Auto-detect next release
+node rdf-build-scripts/detect-datacite-release.js
+
+# Target a specific version
+node rdf-build-scripts/detect-datacite-release.js --version 4.7 --release-date 2026-03-03
+```
+
+**Output files:**
+
+| File | Description |
+|---|---|
+| `reports/release-import-plan-4.7.json` | Machine-readable change plan — edit this to approve/skip changes |
+| `reports/release-import-plan-4.7.md` | Human-readable summary of detected changes |
+
+---
+
+### Step 2 — Review and approve the plan
+
+Open `reports/release-import-plan-4.7.json`. Each detected change has a `"status"` field:
+
+| Status | Meaning |
+|---|---|
+| `"proposed"` | Automatically detected; ready to approve |
+| `"apply"` | **Change this from `"proposed"` to approve it for the next step** |
+| `"skip"` | Intentionally excluded from this run |
+| `"manual"` | Requires manual attention before it can be applied (e.g. renames, removals) |
+
+Change every `"proposed"` entry you want to apply to `"apply"`. Entries left as `"proposed"` or `"manual"` are skipped.
+
+**Typical 4.6 → 4.7 plan looks like:**
+
+```jsonc
+{
+  "targetVersion": "4.7",
+  "releaseDate": "2026-03-03",
+  "changes": [
+    {
+      "id": "controlled-list-values-added:resourceTypeGeneral:4.7",
+      "module": "controlled-list",
+      "kind": "controlled-list-values-added",
+      "status": "apply",       // ← set to "apply" to include
+      "summary": "Add resourceTypeGeneral terms: Poster, Presentation"
+    },
+    {
+      "id": "controlled-list-values-added:relatedIdentifierType:4.7",
+      "module": "controlled-list",
+      "status": "apply",
+      "summary": "Add relatedIdentifierType terms: RAiD, SWHID"
+    },
+    {
+      "id": "controlled-list-values-added:relationType:4.7",
+      "module": "controlled-list",
+      "status": "apply",
+      "summary": "Add relationType terms: Other"
+    },
+    {
+      "id": "simple-property-added:relationTypeInformation:4.7",
+      "module": "simple-property",
+      "status": "apply",
+      "summary": "Add simple property relationTypeInformation"
+    }
+  ]
+}
+```
+
+---
+
+### Step 3 — Apply
+
+**What it does:** Reads the approved plan, writes new vocab term files into `rdf-vocabulary-staging/`, updates scheme files and `context/fullcontext.jsonld`, then builds a full versioned snapshot (manifest + dist bundles + index pages).
+
+**Via GitHub Actions:**
+
+1. Go to **Actions → Apply DataCite Release Plan → Run workflow**
+2. Set `plan_path` to `reports/release-import-plan-4.7.json`
+3. Leave module toggles at their defaults unless you want to selectively run only some modules
+4. Enable **Commit generated files** (default: on) to push all outputs back to the branch
+
+**Locally:**
+
+```bash
+node rdf-build-scripts/apply-datacite-release-plan.js \
+  --plan reports/release-import-plan-4.7.json \
+  --set-current
+```
+
+**What gets written:**
+
+| Path | Description |
+|---|---|
+| `rdf-vocabulary-staging/vocab/<scheme>/<Term>.jsonld` | New term files |
+| `rdf-vocabulary-staging/vocab/<scheme>/<scheme>.jsonld` | Updated scheme with new `hasTopConcept` entries |
+| `rdf-vocabulary-staging/property/<name>.jsonld` | New property files (for simple-property changes) |
+| `rdf-vocabulary-staging/context/fullcontext.jsonld` | Updated context mappings |
+| `rdf-vocabulary-staging/manifest/datacite-4.7.json` | New versioned manifest |
+| `rdf-vocabulary-staging/manifest/release-matrix-4.6-4.7.json` | Change delta between versions |
+| `rdf-vocabulary-staging/manifest/datacite-current.json` | Updated current-version pointer |
+| `rdf-vocabulary-staging/dist/datacite-4.7.{jsonld,ttl,rdf}` | Bundled distribution in 3 RDF formats |
+| `rdf-vocabulary-staging/dist/datacite-current.jsonld` | Pointer to the current distribution |
+| `rdf-vocabulary-staging/dist/datacite.{jsonld,ttl,rdf}` | Moving "latest" aliases |
+| `rdf-vocabulary-staging/*/index.html` | Updated vocabulary browser index pages |
+| `reports/release-apply-4.7.md` | Summary of what was applied |
+
+---
+
+### Manual snapshot (without a plan)
+
+If you want to rebuild the manifest and distribution for an existing version — for example after manually editing vocab files — use the snapshot workflow directly:
+
+**Via GitHub Actions:**
+
+1. Go to **Actions → Build Versioned Snapshot → Run workflow**
+2. Set `version` (e.g. `4.6`) and optionally `release_date`
+
+**Locally:**
+
+```bash
+node rdf-build-scripts/release-snapshot.js --version 4.6
+```
+
+This runs: `manifest-sync --write --validate` → `build-distribution` → `update-current-pointers` → `generate-index-pages` → `update-root-index`.
+
+---
+
+### Individual script reference
+
+All scripts are run from the repository root. They auto-detect `rdf-vocabulary-staging/` as the vocabulary root.
+
+| Script | Usage | Description |
+|---|---|---|
+| `manifest-sync.js` | `--check \| --write \| --validate [--version x.y]` | Rebuilds or validates a manifest from files on disk |
+| `build-distribution.js` | `[--version x.y]` | Bundles vocab files into `dist/datacite-<v>.jsonld` and converts to `.ttl`/`.rdf` |
+| `update-current-pointers.js` | `[--version x.y]` | Writes `datacite-current.json` and `dist/datacite.jsonld` aliases |
+| `generate-index-pages.js` | _(no args)_ | Regenerates HTML browser index pages for class/, property/, vocab/, context/, dist/, manifest/ |
+| `update-root-index.js` | _(no args)_ | Patches `rdf-vocabulary-staging/index.html` AUTO blocks with current version info |
+| `detect-datacite-release.js` | `[--version x.y] [--release-date YYYY-MM-DD]` | Detects changes, writes plan to `reports/` |
+| `apply-datacite-release-plan.js` | `--plan <path> [--modules <csv>] [--set-current]` | Applies an approved plan to vocab source files |
+| `release-snapshot.js` | `--version x.y [--release-date YYYY-MM-DD] [--no-set-current]` | Full snapshot: manifest-sync + dist + pointers + index pages |
+
+**Module IDs** (for `--modules` CSV in apply):
+
+| ID | What it handles |
+|---|---|
+| `controlled-list` | Adds new terms to vocab schemes and creates term `.jsonld` files |
+| `simple-property` | Creates a new property `.jsonld` and adds its context entry |
+| `property-group` | Creates a group of related properties with shared context entries |
+| `complex-structure` | Creates new class + property files for a complex nested structure |
+| `rename` | Renames a controlled-list term |
+| `removal` | Removes deprecated terms or context entries |
+
+---
+
 ## What’s Inside This Repository
 
 Here’s what you’ll find and how it fits together:
@@ -260,20 +470,26 @@ Each enumeration is mapped to stable IRIs under `https://schema.datacite.org/voc
 
 ---
 
-## What’s New in DataCite 4.6 (Highlights)
+## Version History
 
-DataCite 4.6 introduces or updates several controlled values and types reflected in this profile:
+### DataCite 4.6 (current vocabulary baseline)
 
-- **`resourceTypeGeneral`**: adds **`Project`**, **`Award`**  
-- **`relatedIdentifierType`**: adds **`RRID`**, **`CSTR`**  
-- **`contributorType`**: adds **`Translator`**  
-- **`relationType`**: adds the pair **`IsTranslationOf` / `HasTranslation`**  
+Introduces or updates several controlled values:
+
+- **`resourceTypeGeneral`**: adds **`Project`**, **`Award`**
+- **`relatedIdentifierType`**: adds **`RRID`**, **`CSTR`**
+- **`contributorType`**: adds **`Translator`**
+- **`relationType`**: adds the pair **`IsTranslationOf` / `HasTranslation`**
 - **`dateType`**: adds **`Coverage`**
 
-These updates ensure alignment with the official 4.6 schema and may differ from older examples or tutorials.
+### DataCite 4.7 (next upgrade target)
 
----
+Use the [Detect → Review → Apply pipeline](#upgrading-to-a-new-datacite-version) to upgrade. Expected changes from 4.6:
 
+- **`resourceTypeGeneral`**: adds **`Poster`**, **`Presentation`**
+- **`relatedIdentifierType`**: adds **`RAiD`**, **`SWHID`**
+- **`relationType`**: adds **`Other`**
+- New property **`relationTypeInformation`** (sub-property of `relatedIdentifier` and `relatedItem`)
 
 ---
 
@@ -290,9 +506,17 @@ These updates ensure alignment with the official 4.6 schema and may differ from 
 
 ## Next Steps
 
-- Start by validating your **submission** JSON with the root schema (`docs/datacite4.6-profile.json`).  
-- Validate your **responses** with the `responseProfile` inside the same file.  
-- Explore the SKOS/JSKOS crosswalks to connect DataCite terms with Schema.org and DCAT, improving interoperability downstream.
+**To use the schema for validation:**
+- Validate submission JSON with the root schema in `validation-and-conversion/schemas/schema-profiles/datacite4.6-profile.json`
+- Validate API responses with the `responseProfile` inside the same file
+- Explore the SKOS/JSKOS crosswalks in `mappings/` to connect DataCite terms with Schema.org and DCAT
+
+**To upgrade the vocabulary to a newer version:**
+1. Run `node rdf-build-scripts/detect-datacite-release.js` (or the GitHub Actions workflow)
+2. Edit `reports/release-import-plan-<version>.json` — change `"proposed"` → `"apply"` for each desired change
+3. Run `node rdf-build-scripts/apply-datacite-release-plan.js --plan reports/release-import-plan-<version>.json --set-current`
+
+See the [Upgrading to a New DataCite Version](#upgrading-to-a-new-datacite-version) section for the full walkthrough.
 
 ---
 

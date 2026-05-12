@@ -1,0 +1,189 @@
+name: Apply DataCite Release Plan
+
+on:
+  workflow_dispatch:
+    inputs:
+      plan_path:
+        description: 'Path to the approved plan file, for example reports/release-import-plan-4.7.json'
+        required: true
+        type: string
+      set_current:
+        description: 'Update datacite-current pointers while generating outputs.'
+        required: false
+        default: true
+        type: boolean
+      commit_generated_files:
+        description: 'Commit generated source and output files back to the selected branch.'
+        required: false
+        default: true
+        type: boolean
+      apply_controlled_lists:
+        description: 'Enable the controlled-list module.'
+        required: false
+        default: true
+        type: boolean
+      apply_simple_properties:
+        description: 'Enable the simple-property module.'
+        required: false
+        default: true
+        type: boolean
+      apply_property_groups:
+        description: 'Enable the property-group module.'
+        required: false
+        default: true
+        type: boolean
+      apply_complex_structures:
+        description: 'Enable the complex-structure module.'
+        required: false
+        default: true
+        type: boolean
+      apply_renames:
+        description: 'Enable the rename module.'
+        required: false
+        default: false
+        type: boolean
+      apply_removals:
+        description: 'Enable the removal module.'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  apply-release-plan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Apache Jena (riot)
+        run: |
+          wget -q https://archive.apache.org/dist/jena/binaries/apache-jena-5.2.0-bin.tar.gz
+          tar -xzf apache-jena-5.2.0-bin.tar.gz
+          echo "$PWD/apache-jena-5.2.0/bin" >> $GITHUB_PATH
+
+      - name: Apply approved release plan
+        run: |
+          modules=()
+
+          if [ "${{ inputs.apply_controlled_lists }}" = "true" ]; then
+            modules+=(controlled-list)
+          fi
+          if [ "${{ inputs.apply_simple_properties }}" = "true" ]; then
+            modules+=(simple-property)
+          fi
+          if [ "${{ inputs.apply_property_groups }}" = "true" ]; then
+            modules+=(property-group)
+          fi
+          if [ "${{ inputs.apply_complex_structures }}" = "true" ]; then
+            modules+=(complex-structure)
+          fi
+          if [ "${{ inputs.apply_renames }}" = "true" ]; then
+            modules+=(rename)
+          fi
+          if [ "${{ inputs.apply_removals }}" = "true" ]; then
+            modules+=(removal)
+          fi
+
+          module_csv=$(IFS=, ; echo "${modules[*]}")
+
+          args=(--plan "${{ inputs.plan_path }}")
+          if [ -n "$module_csv" ]; then
+            args+=(--modules "$module_csv")
+          fi
+          if [ "${{ inputs.set_current }}" = "true" ]; then
+            args+=(--set-current)
+          fi
+
+          node rdf-build-scripts/apply-datacite-release-plan.js "${args[@]}"
+
+      - name: Resolve apply artifact paths
+        run: |
+          RESOLVED_VERSION=$(basename "${{ inputs.plan_path }}" .json | sed 's/^release-import-plan-//')
+          REPORT_PATH="reports/release-apply-${RESOLVED_VERSION}.md"
+          echo "RESOLVED_VERSION=$RESOLVED_VERSION" >> "$GITHUB_ENV"
+          echo "REPORT_PATH=$REPORT_PATH" >> "$GITHUB_ENV"
+
+      - name: Add apply report to workflow summary
+        run: |
+          cat "$REPORT_PATH" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit generated files
+        if: ${{ inputs.commit_generated_files }}
+        env:
+          VERSION: ${{ env.RESOLVED_VERSION }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            reports/release-import-plan-*.md \
+            reports/release-apply-*.md \
+            rdf-vocabulary-staging/manifest/release-matrix-*.json \
+            rdf-vocabulary-staging/manifest/datacite-*.json \
+            rdf-vocabulary-staging/dist/datacite-*.jsonld \
+            rdf-vocabulary-staging/dist/datacite-*.ttl \
+            rdf-vocabulary-staging/dist/datacite-*.rdf \
+            rdf-vocabulary-staging/dist/datacite.jsonld \
+            rdf-vocabulary-staging/dist/datacite.ttl \
+            rdf-vocabulary-staging/dist/datacite.rdf \
+            rdf-vocabulary-staging/context/fullcontext.jsonld \
+            rdf-vocabulary-staging/property/*.jsonld \
+            rdf-vocabulary-staging/class/*.jsonld \
+            rdf-vocabulary-staging/vocab/*/*.jsonld \
+            rdf-vocabulary-staging/class/index.html \
+            rdf-vocabulary-staging/context/index.html \
+            rdf-vocabulary-staging/dist/index.html \
+            rdf-vocabulary-staging/manifest/index.html \
+            rdf-vocabulary-staging/property/index.html \
+            rdf-vocabulary-staging/vocab/index.html
+
+          if [ "${{ inputs.set_current }}" = "true" ]; then
+            git add \
+              rdf-vocabulary-staging/manifest/datacite-current.json \
+              rdf-vocabulary-staging/dist/datacite-current.jsonld
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: apply DataCite release plan ${VERSION}"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Upload apply artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: datacite-release-apply-${{ env.RESOLVED_VERSION }}
+          path: |
+            ${{ inputs.plan_path }}
+            reports/release-import-plan-*.md
+            ${{ env.REPORT_PATH }}
+            rdf-vocabulary-staging/manifest/release-matrix-*.json
+            rdf-vocabulary-staging/manifest/datacite-*.json
+            rdf-vocabulary-staging/dist/datacite-*.jsonld
+            rdf-vocabulary-staging/dist/datacite-*.ttl
+            rdf-vocabulary-staging/dist/datacite-*.rdf
+            rdf-vocabulary-staging/dist/datacite.jsonld
+            rdf-vocabulary-staging/dist/datacite.ttl
+            rdf-vocabulary-staging/dist/datacite.rdf
+            rdf-vocabulary-staging/context/fullcontext.jsonld
+            rdf-vocabulary-staging/property/*.jsonld
+            rdf-vocabulary-staging/class/*.jsonld
+            rdf-vocabulary-staging/vocab/*/*.jsonld
+            rdf-vocabulary-staging/class/index.html
+            rdf-vocabulary-staging/context/index.html
+            rdf-vocabulary-staging/dist/index.html
+            rdf-vocabulary-staging/manifest/index.html
+            rdf-vocabulary-staging/property/index.html
+            rdf-vocabulary-staging/vocab/index.html
