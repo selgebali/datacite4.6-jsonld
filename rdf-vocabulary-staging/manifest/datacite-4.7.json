@@ -7,6 +7,8 @@
     "https://schema.stage.datacite.org/linked-data/vocab/contributorType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/dateType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/context.jsonld",
+    "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/context.jsonld",
+    "https://schema.stage.datacite.org/linked-data/vocab/identifierType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/nameType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/numberType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/context.jsonld",
@@ -172,6 +174,22 @@
         "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/SeriesInformation.jsonld",
         "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TableOfContents.jsonld",
         "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo.jsonld"
+      ]
+    },
+    {
+      "scheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/funderIdentifierType.jsonld",
+      "terms": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR.jsonld"
+      ]
+    },
+    {
+      "scheme": "https://schema.stage.datacite.org/linked-data/vocab/identifierType/identifierType.jsonld",
+      "terms": [
+        "https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI.jsonld"
       ]
     },
     {

@@ -1,0 +1,12 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI",
+  "type": "Concept",
+  "prefLabel": "DOI",
+  "altLabel": "Digital Object Identifier",
+  "notation": "DOI",
+  "definition": "A character string used to uniquely and persistently identify a citable resource, registered with a DOI Registration Agency such as DataCite. A DOI name consists of a prefix (assigned to the registrant) and a suffix (assigned by the registrant to the resource), separated by a slash.",
+  "scopeNote": "The DOI is the required identifier type for resources registered with DataCite; every DataCite record MUST carry exactly one DOI as its primary identifier.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/identifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/identifierType"
+}

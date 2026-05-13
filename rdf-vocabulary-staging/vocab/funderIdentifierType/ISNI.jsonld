@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI",
+  "type": "Concept",
+  "prefLabel": "ISNI",
+  "altLabel": "International Standard Name Identifier",
+  "notation": "ISNI",
+  "definition": "A 16-character identifier for the public identity of a person or organization, defined by ISO 27729 and assigned by the ISNI International Agency. When used as a funder identifier, the ISNI uniquely identifies the funding organization.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"
+}
