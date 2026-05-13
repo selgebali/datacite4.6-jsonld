@@ -6,7 +6,7 @@ PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 <https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle.jsonld>;
         skos:definition    "A title that is a translation of the primary title into another language."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
@@ -16,7 +16,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle.jsonld>;
         skos:definition    "A secondary title that follows the main title and provides additional information about the resource."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
@@ -25,7 +25,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/titleType/Other>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/Other.jsonld>;
         skos:definition    "Any title type not covered by the other values in the titleType controlled list."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
@@ -34,7 +34,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle.jsonld>;
         skos:definition    "A title by which the resource is also known, used as an alternative to the primary title."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/titleType>;
@@ -44,7 +44,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/titleType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/titleType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            skos:ConceptScheme , owl:NamedIndividual;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/titleType/titleType.jsonld>;
         dcterms:created     "2026-05-12"^^xsd:date;
         dcterms:identifier  "titleType";
@@ -52,7 +52,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/titleType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle> , <https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle> , <https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow.jsonld>;
         skos:definition    "A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>;
@@ -62,7 +62,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A resource consisting primarily of words for reading that is not covered by any other textual resource type in this list."@en;
@@ -73,7 +73,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A detailed, time-stamped description of a research plan, often openly shared in a registry or published in a journal before the study is conducted to lend accountability and transparency in the hypothesis generating and testing process."@en;
@@ -84,7 +84,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Standard>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Standard.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "Something established by authority, custom, or general consent as a model, example, or point of reference."@en;
@@ -95,7 +95,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Sound>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Sound.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Sound>;
         skos:definition    "A resource primarily intended to be heard."@en;
@@ -107,7 +107,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Software>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Software.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Software>;
         skos:definition    "A computer program other than a computational notebook, in either source code (text) or compiled form. Use this type for general software components supporting scholarly research. Use the ComputationalNotebook value for virtual notebooks."@en;
@@ -119,7 +119,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Service>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Service.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Service>;
         skos:definition    "An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users."@en;
@@ -131,7 +131,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Report>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Report.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A document that presents information in an organized format for a specific audience and purpose."@en;
@@ -142,7 +142,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project.jsonld>;
         skos:definition    "A planned endeavor or activity, frequently collaborative, intended to achieve a particular aim using allocated resources such as budget, time, and expertise."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>;
@@ -152,7 +152,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A version of a scholarly or scientific paper that precedes formal peer review and publication in a peer-reviewed scholarly or scientific journal."@en;
@@ -163,7 +163,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject.jsonld>;
         skos:definition    "A physical object or substance."@en;
         skos:example       "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.7299/X78052RB";
@@ -174,7 +174,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PeerReview>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PeerReview.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "Evaluation of scientific, academic, or professional work by others working in the same field."@en;
@@ -185,7 +185,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/OutputManagementPlan>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/OutputManagementPlan.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A formal document that outlines how research outputs are to be handled both during a research project and after the project is completed."@en;
@@ -196,7 +196,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other.jsonld>;
         skos:definition    "If selected, supply a value for ResourceType."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>;
@@ -205,7 +205,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Model>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Model.jsonld>;
         skos:definition    "An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes."@en;
         skos:example       "https://api.datacite.org/dois/application/vnd.datacite.datacite+xml/10.5285/4d866cd2-c907-4ce2-b070-084ca9779dc2";
@@ -216,7 +216,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/JournalArticle>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/JournalArticle.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A written composition on a topic of interest, which forms a separate part of a journal."@en;
@@ -227,7 +227,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Journal>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Journal.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A scholarly publication consisting of articles that is published regularly throughout the year."@en;
@@ -238,7 +238,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/InteractiveResource>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/InteractiveResource.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#InteractiveResource>;
         skos:definition    "A resource requiring interaction from the user to be understood, executed, or experienced."@en;
@@ -250,7 +250,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Instrument>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Instrument.jsonld>;
         skos:definition    "A device, tool or apparatus used to obtain, measure and/or analyze data."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>;
@@ -260,7 +260,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Image>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Image.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Image>;
         skos:definition    "A visual representation other than text."@en;
@@ -272,7 +272,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Event>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Event.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Event>;
         skos:definition    "A non-persistent, time-based occurrence."@en;
@@ -284,7 +284,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dissertation>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dissertation.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A written essay, treatise, or thesis, especially one written by a candidate for the degree of Doctor of Philosophy."@en;
@@ -295,7 +295,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dataset>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dataset.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Dataset>;
         skos:definition    "Data encoded in a defined structure."@en;
@@ -307,7 +307,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/DataPaper>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/DataPaper.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability."@en;
@@ -319,7 +319,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferenceProceeding>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferenceProceeding.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "Collection of academic papers published in the context of an academic conference."@en;
@@ -330,7 +330,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferencePaper>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferencePaper.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "Article that is written with the goal of being accepted to a conference."@en;
@@ -341,7 +341,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ComputationalNotebook>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ComputationalNotebook.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#InteractiveResource>;
         skos:definition    "A virtual notebook environment used for literate programming."@en;
@@ -352,7 +352,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Collection>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Collection.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Collection>;
         skos:definition    "An aggregation of resources, which may encompass collections of one resourceType as well as those of mixed types. A collection is described as a group; its parts may also be separately described."@en;
@@ -364,7 +364,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/BookChapter>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/BookChapter.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "One of the main divisions of a book."@en;
@@ -375,7 +375,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Book>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Book.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#Text>;
         skos:definition    "A medium for recording information in the form of writing or images, typically composed of many pages bound together and protected by a cover."@en;
@@ -386,7 +386,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Award>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Award.jsonld>;
         skos:definition    "An umbrella term for resources provided to individual(s) or organization(s) in support of research, academic output, or training, such as a specific instance of funding, grant, investment, sponsorship, scholarship, recognition, or non-monetary materials."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>;
@@ -396,7 +396,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual.jsonld>;
         skos:closeMatch    <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/#MovingImage>;
         skos:definition    "A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound."@en;
@@ -408,15 +408,15 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            owl:NamedIndividual , skos:ConceptScheme;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/resourceTypeGeneral.jsonld>;
         dcterms:created     "2026-02-20"^^xsd:date;
         dcterms:identifier  "resourceTypeGeneral";
         dcterms:title       "DataCite 4.6 resourceTypeGeneral"@en;
-        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Standard> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Sound> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Software> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Service> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Report> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PeerReview> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/OutputManagementPlan> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Model> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/JournalArticle> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Journal> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/InteractiveResource> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Instrument> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Image> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Event> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Award> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Book> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/BookChapter> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Collection> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ComputationalNotebook> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferencePaper> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferenceProceeding> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/DataPaper> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dataset> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dissertation> .
+        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Standard> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Sound> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Software> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Service> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Report> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PeerReview> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/OutputManagementPlan> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Model> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/JournalArticle> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Journal> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/InteractiveResource> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Instrument> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Image> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Event> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dissertation> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Award> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Book> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/BookChapter> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Collection> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ComputationalNotebook> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferencePaper> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferenceProceeding> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/DataPaper> , <https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dataset> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Reviews>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Reviews.jsonld>;
         skos:definition    "indicates that A is a review of B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Reviews\">10.12688/f1000research.4001.1</relatedIdentifier>";
@@ -426,7 +426,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Requires>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Requires.jsonld>;
         skos:definition    "Indicates A requires B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Requires\">10.1234/867</relatedIdentifier>";
@@ -437,7 +437,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/References>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/References.jsonld>;
         skos:definition    "indicates B is used as a source of information for A"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URN\" relationType=\"References\">urn:nbn:de:bsz:21-opus-963</relatedIdentifier>";
@@ -448,7 +448,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes.jsonld>;
         skos:definition    "Indicates A replaces B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Obsoletes\">10.5438/0007</relatedIdentifier>";
@@ -458,7 +458,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVersionOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVersionOf.jsonld>;
         skos:definition    "indicates A is a version of B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsVersionOf\">10.5281/ZENODO.832054</relatedIdentifier>";
@@ -469,7 +469,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVariantFormOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVariantFormOf.jsonld>;
         skos:definition    "indicates A is a variant or different form of B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsVariantFormOf\">10.1234/8675</relatedIdentifier>";
@@ -480,7 +480,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf.jsonld>;
         skos:definition    "indicates A is a translation of B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsTranslationOf\">10.21384/828a-cm38</relatedIdentifier>";
@@ -491,7 +491,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementedBy.jsonld>;
         skos:definition    "indicates that B is a supplement to A"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"PMID\" relationType=\"IsSupplementedBy\">16911322</relatedIdentifier>";
@@ -502,7 +502,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementTo>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementTo.jsonld>;
         skos:definition    "indicates that A is a supplement to B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URN\" relationType=\"IsSupplementTo\">urn:nbn:de:0168-ssoar-13172</relatedIdentifier>";
@@ -513,7 +513,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSourceOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSourceOf.jsonld>;
         skos:definition    "indicates A is a source upon which B is based"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsSourceOf\">http://opencontext.org/projects/81204AF8-127C-4686-E9B0-1202C3A47959</relatedIdentifier>";
@@ -524,7 +524,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReviewedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReviewedBy.jsonld>;
         skos:definition    "indicates that A is reviewed by B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsReviewedBy\">10.5256/F1000RESEARCH.4288.R4745</relatedIdentifier>";
@@ -534,7 +534,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsRequiredBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsRequiredBy.jsonld>;
         skos:definition    "Indicates A is required by B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsRequiredBy\">10.1234/8675</relatedIdentifier>";
@@ -545,7 +545,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReferencedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReferencedBy.jsonld>;
         skos:definition    "indicates A is used as a source of information by B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsReferencedBy\">http://www.testpubl.de</relatedIdentifier>";
@@ -556,7 +556,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPublishedIn>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPublishedIn.jsonld>;
         skos:definition    "indicates A is published inside B, but is independent of other things published inside of B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"ISSN\" relationType=\"IsPublishedIn\">2213-1337</relatedIdentifier>";
@@ -566,7 +566,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPreviousVersionOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPreviousVersionOf.jsonld>;
         skos:definition    "indicates A is a previous edition of B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsPreviousVersionOf\">10.5438/0007</relatedIdentifier>";
@@ -576,7 +576,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPartOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPartOf.jsonld>;
         skos:definition    "indicates A is a portion of B; may be used for elements of a series"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsPartOf\">10.5281/zenodo.754312</relatedIdentifier>";
@@ -587,7 +587,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsOriginalFormOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsOriginalFormOf.jsonld>;
         skos:definition    "indicates A is the original form of B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsOriginalFormOf\">10.1234/9035</relatedIdentifier>";
@@ -598,7 +598,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsObsoletedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsObsoletedBy.jsonld>;
         skos:definition    "Indicates A is replaced by B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsObsoletedBy\">10.5438/0005</relatedIdentifier>";
@@ -608,7 +608,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsNewVersionOf>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsNewVersionOf.jsonld>;
         skos:definition    "indicates A is a new edition of B, where the new edition has been modified or updated"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsNewVersionOf\">10.5438/0005</relatedIdentifier>";
@@ -618,7 +618,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsMetadataFor>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsMetadataFor.jsonld>;
         skos:definition    "indicates additional metadata A for a resource B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsMetadataFor\" relatedMetadataScheme=\"DDI-L\" schemeURI=\"http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd\">10.1234/567891</relatedIdentifier>";
@@ -628,7 +628,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsIdenticalTo>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsIdenticalTo.jsonld>;
         skos:definition    "indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsIdenticalTo\">http://oac.cdlib.org/findaid/ark:/13030/c8r78fzq</relatedIdentifier>";
@@ -639,7 +639,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDocumentedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDocumentedBy.jsonld>;
         skos:definition    "indicates B is documentation about/explaining A"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsDocumentedBy\">http://tobias-lib.uni-tuebingen.de/volltexte/2000/96/</relatedIdentifier>";
@@ -650,7 +650,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDescribedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDescribedBy.jsonld>;
         skos:definition    "indicates A is described by B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsDescribedBy\">10.1038/sdata.2016.123</relatedIdentifier>";
@@ -660,7 +660,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDerivedFrom>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDerivedFrom.jsonld>;
         skos:definition    "indicates B is a source upon which A is based"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsDerivedFrom\">10.6078/M7DZ067C</relatedIdentifier>";
@@ -671,7 +671,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsContinuedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsContinuedBy.jsonld>;
         skos:definition    "indicates A is continued by the work B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URN\" relationType=\"IsContinuedBy\">urn:nbn:de:bsz:21-opus-4967</relatedIdentifier>";
@@ -681,7 +681,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCompiledBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCompiledBy.jsonld>;
         skos:definition    "indicates B is used to compile or create A"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsCompiledBy\">http://d-nb.info/gnd/4513749-3</relatedIdentifier>";
@@ -692,7 +692,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy.jsonld>;
         skos:definition    "Indicates A is collected by B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsCollectedBy\">10.5072/instrument</relatedIdentifier>";
@@ -703,7 +703,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy.jsonld>;
         skos:definition    "indicates that B includes A in a citation"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"IsCitedBy\">10.4232/10.ASEAS-5.2-1</relatedIdentifier>";
@@ -714,7 +714,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasVersion>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasVersion.jsonld>;
         skos:definition    "indicates A has a version B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"HasVersion\">10.5281/ZENODO.832053</relatedIdentifier>";
@@ -725,7 +725,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation.jsonld>;
         skos:definition    "indicates A has a translation B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"HasTranslation\">10.21384/g01j-jm06</relatedIdentifier>";
@@ -736,7 +736,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasPart>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasPart.jsonld>;
         skos:definition    "indicates A includes the part B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"HasPart\">https://zenodo.org/record/16564/files/dune-stuff-LSSC_15.zip</relatedIdentifier>";
@@ -747,7 +747,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasMetadata>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasMetadata.jsonld>;
         skos:definition    "indicates resource A has additional metadata B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"HasMetadata\" relatedMetadataScheme=\"DDI-L\" schemeURI=\"http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd\">10.1234/567890</relatedIdentifier>";
@@ -757,7 +757,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Documents>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Documents.jsonld>;
         skos:definition    "indicates A is documentation about/explaining B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Documents\">10.1234/7836</relatedIdentifier>";
@@ -768,7 +768,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Describes>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Describes.jsonld>;
         skos:definition    "indicates A describes B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Describes\">10.6084/m9.figshare.c.3288407</relatedIdentifier>";
@@ -778,7 +778,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Continues>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Continues.jsonld>;
         skos:definition    "indicates A is a continuation of the work B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URN\" relationType=\"Continues\">urn:nbn:de:bsz:21-opus-4966</relatedIdentifier>";
@@ -788,7 +788,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Compiles>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Compiles.jsonld>;
         skos:definition    "indicates B is the result of a compile or creation event using A"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"URN\" relationType=\"Compiles\">urn:nbn:de:bsz:21-opus-963</relatedIdentifier>";
@@ -799,7 +799,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects.jsonld>;
         skos:definition    "Indicates A collects B"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Collects\">10.5072/data</relatedIdentifier>";
@@ -810,7 +810,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Cites>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relationType/Cites.jsonld>;
         skos:definition    "indicates that A includes B in a citation"@en;
         skos:example       "<relatedIdentifier relatedIdentifierType=\"ISBN\" relationType=\"Cites\">0761964312</relatedIdentifier>";
@@ -821,15 +821,15 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            owl:NamedIndividual , skos:ConceptScheme;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/relationType/relationType.jsonld>;
         dcterms:created     "2026-02-20"^^xsd:date;
         dcterms:identifier  "relationType";
         dcterms:title       "DataCite 4.6 relationType"@en;
-        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsObsoletedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Requires> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsRequiredBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSourceOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDerivedFrom> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Reviews> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReviewedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsIdenticalTo> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsOriginalFormOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVariantFormOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Compiles> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCompiledBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Documents> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDocumentedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/References> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReferencedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPublishedIn> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasPart> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPartOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPreviousVersionOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsNewVersionOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVersionOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Cites> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementTo> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsContinuedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Continues> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Describes> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDescribedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasMetadata> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsMetadataFor> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasVersion> .
+        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsObsoletedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Requires> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsRequiredBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSourceOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDerivedFrom> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Reviews> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReviewedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsIdenticalTo> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsOriginalFormOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVariantFormOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Compiles> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCompiledBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Documents> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDocumentedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/References> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReferencedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPublishedIn> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasPart> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPartOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPreviousVersionOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsNewVersionOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVersionOf> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasVersion> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Cites> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementTo> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsContinuedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Continues> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/Describes> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDescribedBy> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/HasMetadata> , <https://schema.stage.datacite.org/linked-data/vocab/relationType/IsMetadataFor> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id.jsonld>;
         skos:altLabel      "Permanent identifier for Web applications"@en;
         skos:definition    "Mostly used to publish vocabularies and ontologies. The letters ‘w3’ stand for “World Wide Web”."@en;
@@ -840,7 +840,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/bibcode>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/bibcode.jsonld>;
         skos:altLabel      "Astrophysics Data System bibliographic codes"@en;
         skos:definition    "A standardized 19-character identifier according to the syntax yyyyjjjjjvvvvmppppa. See http://info-uri.info/registry/OAIHandler?verb=GetRecord&metadataPrefix=reg&identifier=info:bibcode/. Note: bibcodes can be searched via https://ui.adsabs.harvard.edu/ or resolved using https://ui.adsabs.harvard.edu/abs/<bibcode>."@en;
@@ -851,7 +851,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv.jsonld>;
         skos:altLabel      "arXiv identifier"@en;
         skos:definition    "arXiv.org is a repository of preprints of scientific papers in the fields of mathematics, physics, astronomy, computer science, quantitative biology, statistics, and quantitative finance."@en;
@@ -862,7 +862,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN.jsonld>;
         skos:altLabel      "Uniform Resource Name"@en;
         skos:definition    "A unique and persistent identifier of an electronic document. The syntax is: urn:<NID>:<NSS>. The leading urn: sequence is case-insensitive, <NID> is the namespace identifier, <NSS> is the namespace-specific string."@en;
@@ -873,7 +873,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL.jsonld>;
         skos:altLabel      "Uniform Resource Locator"@en;
         skos:definition    "Also known as web address, a URL is a specific character string that constitutes a reference to a resource. The syntax is: scheme://domain:port/path?query_string#fragment_id."@en;
@@ -884,7 +884,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC.jsonld>;
         skos:altLabel      "Universal Product Code"@en;
         skos:definition    "A barcode symbology used for tracking trade items in stores. Its most common form, the UPC-A, consists of 12 numerical digits."@en;
@@ -895,7 +895,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID.jsonld>;
         skos:altLabel      "Research Resource IDentifier"@en;
         skos:definition    "A character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases. An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore."@en;
@@ -906,7 +906,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL.jsonld>;
         skos:altLabel      "Persistent Uniform Resource Locator"@en;
         skos:definition    "A PURL has three parts: (1) a protocol, (2) a resolver address, and (3) a name."@en;
@@ -917,7 +917,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID.jsonld>;
         skos:altLabel      "PubMed identifier"@en;
         skos:definition    "A unique number assigned to each PubMed record."@en;
@@ -928,7 +928,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID.jsonld>;
         skos:altLabel      "Life Science Identifiers"@en;
         skos:definition    "A unique identifier for data in the Life Science domain. Format: urn:lsid:authority:namespace:identifier:revision."@en;
@@ -939,7 +939,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LISSN>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LISSN.jsonld>;
         skos:altLabel      "Linking ISSN"@en;
         skos:definition    "The linking ISSN or ISSN-L enables collocation or linking among different media versions of a continuing resource."@en;
@@ -950,7 +950,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISTC>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISTC.jsonld>;
         skos:altLabel      "International Standard Text Code"@en;
         skos:definition    "A unique “number” assigned to a textual work. An ISTC consists of 16 numbers and/or letters."@en;
@@ -961,7 +961,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISSN>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISSN.jsonld>;
         skos:altLabel      "International Standard Serial Number"@en;
         skos:definition    "A unique 8-digit number used to identify a print or electronic periodical publication."@en;
@@ -972,7 +972,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN.jsonld>;
         skos:altLabel      "International Standard Book Number"@en;
         skos:definition    "A unique numeric book identifier. There are 2 formats: a 10-digit ISBN format and a 13-digit ISBN."@en;
@@ -983,7 +983,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/IGSN>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/IGSN.jsonld>;
         skos:altLabel      "International Generic Sample Number"@en;
         skos:definition    "A code that uniquely identifies samples from our natural environment and related features-of-interest."@en;
@@ -994,7 +994,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/Handle>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/Handle.jsonld>;
         skos:altLabel      "Handle"@en;
         skos:definition    "This refers specifically to an ID in the Handle system operated by the Corporation for National Research Initiatives (CNRI)."@en;
@@ -1005,7 +1005,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN.jsonld>;
         skos:altLabel      "Electronic International Standard Serial Number"@en;
         skos:definition    "ISSN used to identify periodicals in electronic form (eISSN or e-ISSN)."@en;
@@ -1016,7 +1016,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EAN13>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EAN13.jsonld>;
         skos:altLabel      "European Article Number (now renamed International Article Number, but retaining the original acronym)"@en;
         skos:definition    "A 13-digit barcoding standard that is a superset of the original 12-digit Universal Product Code (UPC) system."@en;
@@ -1027,7 +1027,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI.jsonld>;
         skos:altLabel      "Digital Object Identifier"@en;
         skos:definition    "A character string used to uniquely identify an object. A DOI name is divided into two parts, a prefix and a suffix, separated by a slash."@en;
@@ -1038,7 +1038,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/CSTR>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/CSTR.jsonld>;
         skos:altLabel      "Common Science and Technology Resources Identifier"@en;
         skos:definition    "CSTR is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources."@en;
@@ -1049,7 +1049,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK.jsonld>;
         skos:altLabel      "Archival Resource Key"@en;
         skos:definition    "A URI designed to support long-term access to information objects. In general, ARK syntax is of the form (brackets, []. indicate optional elements): [http://NMA/]ark:/NAAN/Name [Qualifier]."@en;
@@ -1060,15 +1060,15 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            owl:NamedIndividual , skos:ConceptScheme;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/relatedIdentifierType.jsonld>;
         dcterms:created     "2026-02-20"^^xsd:date;
         dcterms:identifier  "relatedIdentifierType";
         dcterms:title       "DataCite 4.6 relatedIdentifierType"@en;
-        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LISSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISTC> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/bibcode> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/CSTR> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EAN13> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/Handle> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/IGSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISSN> .
+        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LISSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISTC> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/bibcode> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/CSTR> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EAN13> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/Handle> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/IGSN> , <https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/numberType/Report>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Report.jsonld>;
         skos:definition    "A number identifying a report within a report series."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
@@ -1077,7 +1077,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/numberType/Other>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Other.jsonld>;
         skos:definition    "Any number type not covered by the other values in the numberType controlled list."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
@@ -1086,7 +1086,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter.jsonld>;
         skos:definition    "A number identifying a chapter within a book or monograph."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
@@ -1095,7 +1095,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/numberType/Article>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/numberType/Article.jsonld>;
         skos:definition    "A number identifying an article within a journal issue or proceedings volume."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/numberType>;
@@ -1104,7 +1104,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/numberType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/numberType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            skos:ConceptScheme , owl:NamedIndividual;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/numberType/numberType.jsonld>;
         dcterms:created     "2026-05-12"^^xsd:date;
         dcterms:identifier  "numberType";
@@ -1112,7 +1112,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/numberType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/numberType/Report> , <https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter> , <https://schema.stage.datacite.org/linked-data/vocab/numberType/Article> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal.jsonld>;
         skos:definition    "An individual person’s name."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/nameType>;
@@ -1121,7 +1121,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/nameType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational.jsonld>;
         skos:definition    "An organization or institution name."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/nameType>;
@@ -1130,7 +1130,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/nameType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/nameType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            skos:ConceptScheme , owl:NamedIndividual;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/nameType/nameType.jsonld>;
         dcterms:created     "2026-02-20"^^xsd:date;
         dcterms:identifier  "nameType";
@@ -1138,7 +1138,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> , <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI.jsonld>;
         skos:altLabel      "Digital Object Identifier"@en;
         skos:definition    "A character string used to uniquely and persistently identify a citable resource, registered with a DOI Registration Agency such as DataCite. A DOI name consists of a prefix (assigned to the registrant) and a suffix (assigned by the registrant to the resource), separated by a slash."@en;
@@ -1149,7 +1149,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/identifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/identifierType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            skos:ConceptScheme , owl:NamedIndividual;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/identifierType/identifierType.jsonld>;
         dcterms:created     "2026-05-12"^^xsd:date;
         dcterms:identifier  "identifierType";
@@ -1157,7 +1157,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR.jsonld>;
         skos:altLabel      "Research Organization Registry"@en;
         skos:definition    "A persistent identifier for a research organization from the Research Organization Registry (ROR), a community-led, open registry of unique identifiers for every organization that performs, funds, or otherwise contributes to research."@en;
@@ -1167,7 +1167,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other.jsonld>;
         skos:definition    "Any funder identifier type not covered by the other values in the funderIdentifierType controlled list."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>;
@@ -1177,7 +1177,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI.jsonld>;
         skos:altLabel      "International Standard Name Identifier"@en;
         skos:definition    "A 16-character identifier for the public identity of a person or organization, defined by ISO 27729 and assigned by the ISNI International Agency. When used as a funder identifier, the ISNI uniquely identifies the funding organization."@en;
@@ -1187,7 +1187,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID.jsonld>;
         skos:altLabel      "Global Research Identifier Database"@en;
         skos:definition    "A persistent identifier for a research organization issued by the Global Research Identifier Database (GRID), a free database of research-related institution identifiers maintained by Digital Science."@en;
@@ -1198,7 +1198,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID.jsonld>;
         skos:altLabel      "Crossref Funder Registry ID"@en;
         skos:definition    "A persistent identifier for a funding body assigned by the Crossref Funder Registry, a curated, openly licensed registry of funder names and identifiers used to disambiguate funding organizations in scholarly metadata."@en;
@@ -1208,7 +1208,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            skos:ConceptScheme , owl:NamedIndividual;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/funderIdentifierType.jsonld>;
         dcterms:created     "2026-05-12"^^xsd:date;
         dcterms:identifier  "funderIdentifierType";
@@ -1216,7 +1216,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo.jsonld>;
         skos:definition    "Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process, system, or instrument."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/descriptionType>;
@@ -1226,7 +1226,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TableOfContents>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TableOfContents.jsonld>;
         skos:definition    "A listing of the Table of Contents."@en;
         skos:example       "https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5678/LCRS/FOR816.CIT.1031";
@@ -1237,7 +1237,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/SeriesInformation>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/SeriesInformation.jsonld>;
         skos:definition    "Information about a repeating series, such as volume, issue, number."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/descriptionType>;
@@ -1247,7 +1247,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Other>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Other.jsonld>;
         skos:definition    "Other description information that does not fit into an existing category."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/descriptionType>;
@@ -1257,7 +1257,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Methods>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Methods.jsonld>;
         skos:definition    "The methodology employed for the study or research."@en;
         skos:example       "https://data.datacite.org/application/vnd.datacite.datacite+xml/10.6078/D1K01X";
@@ -1268,7 +1268,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Abstract>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Abstract.jsonld>;
         skos:definition    "A brief description of the resource and the context in which the resource was created."@en;
         skos:example       "https://data.datacite.org/application/vnd.datacite.datacite+xml/10.1594/PANGAEA.771774";
@@ -1279,7 +1279,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            skos:ConceptScheme , owl:NamedIndividual;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/descriptionType.jsonld>;
         dcterms:created     "2026-02-20"^^xsd:date;
         dcterms:identifier  "descriptionType";
@@ -1287,7 +1287,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo> , <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TableOfContents> , <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/SeriesInformation> , <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Methods> , <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Abstract> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn.jsonld>;
         skos:definition    "The date the resource is removed."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1297,7 +1297,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid.jsonld>;
         skos:definition    "The date or date range during which the dataset or resource is accurate."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1306,7 +1306,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated.jsonld>;
         skos:definition    "The date of the last update to the resource, when the resource is being added to. May be a range."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1315,7 +1315,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Submitted>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Submitted.jsonld>;
         skos:definition    "The date the creator submits the resource to the publisher. This could be different from Accepted if the publisher then applies a selection process."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1325,7 +1325,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Other>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Other.jsonld>;
         skos:definition    "Other date that does not fit into an existing category."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1334,7 +1334,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Issued>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Issued.jsonld>;
         skos:definition    "The date that the resource is published or distributed, e.g., to a data centre."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1343,7 +1343,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Created>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Created.jsonld>;
         skos:definition    "The date the resource itself was put together; this could refer to a timeframe in ancient history, a date range, or a single date for a final component, e.g., the finalised file with all the data."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1353,7 +1353,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Coverage>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Coverage.jsonld>;
         skos:definition    "The date or date range that the resource content applies to, describes, or covers."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1363,7 +1363,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted.jsonld>;
         skos:definition    "The specific, documented date at which the resource receives a copyrighted status, if applicable."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1372,7 +1372,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Collected>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Collected.jsonld>;
         skos:definition    "The date or date range in which the resource content was collected."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1382,7 +1382,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Available>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Available.jsonld>;
         skos:definition    "The date the resource is made publicly available. May be a range."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1392,7 +1392,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted.jsonld>;
         skos:definition    "The date that the publisher accepted the resource into their system."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/dateType>;
@@ -1402,15 +1402,15 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/dateType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/dateType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            owl:NamedIndividual , skos:ConceptScheme;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/dateType/dateType.jsonld>;
         dcterms:created     "2026-02-20"^^xsd:date;
         dcterms:identifier  "dateType";
         dcterms:title       "DataCite 4.6 dateType"@en;
-        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Available> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Collected> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Coverage> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Created> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Issued> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Submitted> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn> .
+        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/dateType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Available> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Collected> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Coverage> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Created> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Issued> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Submitted> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated> , <https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/WorkPackageLeader>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/WorkPackageLeader.jsonld>;
         skos:definition    "A Work Package is a recognized data product, not all of which is included in publication. The package may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring comprehensive contents, versioning, and availability of the Work Package during development of the resource."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1419,7 +1419,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Translator>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Translator.jsonld>;
         skos:definition    "A person, organization, or automated system responsible for converting the content of a resource from one language into another, preserving its meaning and intended message."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1429,7 +1429,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Supervisor>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Supervisor.jsonld>;
         skos:definition    "Designated administrator over one or more groups/teams working to produce a resource, or over one or more steps of a development process."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1438,7 +1438,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Sponsor>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Sponsor.jsonld>;
         skos:definition    "Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1448,7 +1448,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RightsHolder>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RightsHolder.jsonld>;
         skos:definition    "Person or institution owning or managing property rights, including intellectual property rights over the resource."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1457,7 +1457,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Researcher>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Researcher.jsonld>;
         skos:definition    "A person involved in analysing data or the results of an experiment or formal study."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1467,7 +1467,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ResearchGroup>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ResearchGroup.jsonld>;
         skos:definition    "Typically refers to a group of individuals with a lab, department, or division that has a specifically defined focus of activity."@en;
         skos:example       "doi:10.26302/SSHADE/EXPERIMEN T_OP_20201104_001" , "Space Research & Planetary Sciences Division of the University of Bern (WP Unibe)";
@@ -1478,7 +1478,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RelatedPerson>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RelatedPerson.jsonld>;
         skos:definition    "A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1488,7 +1488,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAuthority>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAuthority.jsonld>;
         skos:definition    "A standards-setting body from which Registration Agencies obtain official recognition and guidance."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1498,7 +1498,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAgency>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAgency.jsonld>;
         skos:definition    "Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1508,7 +1508,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectMember>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectMember.jsonld>;
         skos:definition    "Person on the membership list of a designated project/project team."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1518,7 +1518,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectManager>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectManager.jsonld>;
         skos:definition    "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1528,7 +1528,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectLeader>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectLeader.jsonld>;
         skos:definition    "Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1538,7 +1538,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Producer>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Producer.jsonld>;
         skos:definition    "Typically, a person or organisation responsible for the artistry and form of a media product."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1548,7 +1548,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Other>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Other.jsonld>;
         skos:definition    "Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution is not adequately described by any of the other values for contributorType."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1558,7 +1558,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/HostingInstitution>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/HostingInstitution.jsonld>;
         skos:definition    "Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support."@en;
         skos:example       "Université Grenoble Alpes (UGA)";
@@ -1569,7 +1569,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Editor>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Editor.jsonld>;
         skos:definition    "A person who oversees the details related to the publication format of the resource."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1579,7 +1579,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Distributor>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Distributor.jsonld>;
         skos:definition    "Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1589,7 +1589,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataManager>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataManager.jsonld>;
         skos:definition    "Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource."@en;
         skos:example       "https://doi.org/10.6073/pasta/41b3ed2e152e1e4c3846e646118208e7";
@@ -1600,7 +1600,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCurator>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCurator.jsonld>;
         skos:definition    "Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository."@en;
         skos:example       "https://doi.org/10.20375/0000-000D-1D1F-2";
@@ -1611,7 +1611,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCollector>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCollector.jsonld>;
         skos:definition    "Person/institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI)."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1621,7 +1621,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ContactPerson>
-        rdf:type           skos:Concept;
+        rdf:type           skos:Concept , owl:NamedIndividual;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ContactPerson.jsonld>;
         skos:definition    "Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource."@en;
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/contributorType>;
@@ -1631,477 +1631,477 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/contributorType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/contributorType>
-        rdf:type            skos:ConceptScheme;
+        rdf:type            owl:NamedIndividual , skos:ConceptScheme;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/contributorType/contributorType.jsonld>;
         dcterms:created     "2026-01-18"^^xsd:date;
         dcterms:identifier  "contributorType";
         dcterms:title       "DataCite 4.6 contributorType"@en;
-        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/WorkPackageLeader> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Translator> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Supervisor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Sponsor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RightsHolder> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ResearchGroup> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Researcher> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RelatedPerson> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAuthority> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAgency> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ContactPerson> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCollector> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCurator> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataManager> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Distributor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Editor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/HostingInstitution> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Producer> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectLeader> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectManager> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectMember> .
+        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/WorkPackageLeader> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Translator> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Supervisor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Sponsor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RightsHolder> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ResearchGroup> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Researcher> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RelatedPerson> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAuthority> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAgency> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectMember> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ContactPerson> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCollector> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCurator> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataManager> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Distributor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Editor> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/HostingInstitution> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/Producer> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectLeader> , <https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectManager> .
 
 <https://schema.stage.datacite.org/linked-data/property/westBoundLongitude>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Western longitudinal dimension of box."@en;
         rdfs:label    "westBoundLongitude"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/westBoundLongitude.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/volume>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Volume of the related item."@en;
         rdfs:label    "volume"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/volume.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/version>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The version number of the resource."@en;
         rdfs:label    "version"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/version.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/valueURI>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  " The URI of the subject term."@en;
         rdfs:label    "valueURI"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/valueURI.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/titleType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of Title (other than the Main Title)."@en;
         rdfs:label    "titleType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/titleType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/title>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument."@en;
         rdfs:label    "title"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/title.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/subjectScheme>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the subject scheme or classification code or authority if one is used."@en;
         rdfs:label    "subjectScheme"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/subjectScheme.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/subject>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Subject, keyword, classification code, or key phrase describing the resource."@en;
         rdfs:label    "subject"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/subject.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/southBoundLatitude>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Southern latitude of box ."@en;
         rdfs:label    "southBoundLatitude"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/southBoundLatitude.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/size>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource."@en;
         rdfs:label    "size"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/size.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/schemeURI>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The URI of an identifier scheme."@en;
         rdfs:label    "schemeURI"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/schemeURI.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/schemeType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of the relatedMetadataScheme, linked with the schemeURI."@en;
         rdfs:label    "schemeType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/schemeType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/rightsURI>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The URI of the license."@en;
         rdfs:label    "rightsURI"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/rightsURI.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/rightsIdentifierScheme>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the scheme."@en;
         rdfs:label    "rightsIdentifierScheme"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/rightsIdentifierScheme.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/rightsIdentifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "A short standardized identifier for the licence."@en;
         rdfs:label    "rightsIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/rightsIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/rights>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Any rights information for this resource."@en;
         rdfs:label    "rights"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/rights.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The general type of a resource."@en;
         rdfs:label    "resourceTypeGeneral"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/resourceType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "A description of the resource."@en;
         rdfs:label    "resourceType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/resourceType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relationType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Description of the relationship of the resource being registered (A) and the related resource (B)."@en;
         rdfs:label    "relationType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relationType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relatedMetadataScheme>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the scheme."@en;
         rdfs:label    "relatedMetadataScheme"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relatedMetadataScheme.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relatedItemType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The general type of the related item."@en;
         rdfs:label    "relatedItemType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relatedItemType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifierType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of the Identifier for the related item."@en;
         rdfs:label    "relatedItemIdentifierType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifierType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The identifier for the related item."@en;
         rdfs:label    "relatedItemIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relatedItem>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Information about a resource related to the one being registered."@en;
         rdfs:label    "relatedItem"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relatedItem.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of the RelatedIdentifier."@en;
         rdfs:label    "relatedIdentifierType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Identifiers of related resources. These must be globally unique identifiers."@en;
         rdfs:label    "relatedIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/relatedIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/publisherIdentifierScheme>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the publisher identifier scheme."@en;
         rdfs:label    "publisherIdentifierScheme"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/publisherIdentifierScheme.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/publisherIdentifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Uniquely identifies the publisher, according to various schemes."@en;
         rdfs:label    "publisherIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/publisherIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/publisher>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role."@en;
         rdfs:label    "publisher"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/publisher.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/publicationYear>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The year when the item was or will be made publicly available."@en;
         rdfs:label    "publicationYear"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/publicationYear.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/polygonPoint>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "A point location in a polygon."@en;
         rdfs:label    "polygonPoint"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/polygonPoint.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/pointLongitude>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Longitudinal dimension of point."@en;
         rdfs:label    "pointLongitude"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/pointLongitude.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/pointLatitude>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Latitudinal dimension of point."@en;
         rdfs:label    "pointLatitude"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/pointLatitude.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/numberType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Type of the related item’s number, e.g., report number or article number."@en;
         rdfs:label    "numberType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/numberType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/number>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Number of the resource within the related item, e.g., report number or article number."@en;
         rdfs:label    "number"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/number.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/northBoundLatitude>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Northern latitudinal dimension of box."@en;
         rdfs:label    "northBoundLatitude"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/northBoundLatitude.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/nameType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of name."@en;
         rdfs:label    "nameType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/nameType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the name identifier scheme."@en;
         rdfs:label    "nameIdentifierScheme"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/nameIdentifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Uniquely identifies an individual or legal entity, according to various schemes."@en;
         rdfs:label    "nameIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/nameIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/lastPage>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Last page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings."@en;
         rdfs:label    "lastPage"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/lastPage.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/language>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The primary language of the resource."@en;
         rdfs:label    "language"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/language.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/issue>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Issue number or name of the related item."@en;
         rdfs:label    "issue"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/issue.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/inPolygonPoint>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "A point location in a polygon."@en;
         rdfs:label    "inPolygonPoint"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/inPolygonPoint.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/identifierType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of Identifier."@en;
         rdfs:label    "identifierType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/identifierType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/identifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The Identifier is a unique string that identifies a resource."@en;
         rdfs:label    "identifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/identifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/givenName>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The personal or first name of the creator."@en;
         rdfs:label    "givenName"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/givenName.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/geoLocationPolygon>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "A drawn polygon area, defined by a set of points and lines connecting the points in a closed chain."@en;
         rdfs:label    "geoLocationPolygon"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/geoLocationPolygon.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/geoLocationPoint>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "A point location in space."@en;
         rdfs:label    "geoLocationPoint"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/geoLocationPoint.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/geoLocationPlace>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Description of a geographic location."@en;
         rdfs:label    "geoLocationPlace"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/geoLocationPlace.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/geoLocationBox>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The spatial limits of a box."@en;
         rdfs:label    "geoLocationBox"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/geoLocationBox.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/geoLocation>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Spatial region or named place where the data was gathered or about which the data is focused."@en;
         rdfs:label    "geoLocation"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/geoLocation.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/fundingReference>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Information about financial support (funding) for the resource being registered."@en;
         rdfs:label    "fundingReference"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/fundingReference.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/funderName>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Name of the funding provider."@en;
         rdfs:label    "funderName"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/funderName.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/funderIdentifierType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of the funderIdentifier."@en;
         rdfs:label    "funderIdentifierType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/funderIdentifierType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/funderIdentifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Uniquely identifies a funding entity, according to various types."@en;
         rdfs:label    "funderIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/funderIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/format>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Technical format of the resource."@en;
         rdfs:label    "format"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/format.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/firstPage>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "First page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings."@en;
         rdfs:label    "firstPage"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/firstPage.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/familyName>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The surname or last name of the creator."@en;
         rdfs:label    "familyName"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/familyName.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/edition>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Edition or version of the related item."@en;
         rdfs:label    "edition"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/edition.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/eastBoundLongitude>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Eastern longitudinal dimension of box."@en;
         rdfs:label    "eastBoundLongitude"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/eastBoundLongitude.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/descriptionType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of the Description."@en;
         rdfs:label    "descriptionType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/descriptionType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/description>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument."@en;
         rdfs:label    "description"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/description.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/dateType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of date."@en;
         rdfs:label    "dateType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/dateType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/dateInformation>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Specific information about the date, if appropriate."@en;
         rdfs:label    "dateInformation"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/dateInformation.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/date>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Different dates relevant to the work."@en;
         rdfs:label    "date"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/date.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/creatorName>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The full name of the creator."@en;
         rdfs:label    "creatorName"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/creatorName.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/creator>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property."@en;
         rdfs:label    "creator"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/creator.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/contributorType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of contributor of the resource."@en;
         rdfs:label    "contributorType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/contributorType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/contributorName>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The full name of the contributor."@en;
         rdfs:label    "contributorName"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/contributorName.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/contributor>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property."@en;
         rdfs:label    "contributor"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/contributor.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/classificationCode>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The classification code used for the subject term in the subject scheme."@en;
         rdfs:label    "classificationCode"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/classificationCode.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/awardURI>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The URI leading to a page provided by the funder for more information about the award (grant)."@en;
         rdfs:label    "awardURI"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/awardURI.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/awardTitle>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The human readable title or name of the award (grant)."@en;
         rdfs:label    "awardTitle"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/awardTitle.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/awardNumber>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The code assigned by the funder to a sponsored award (grant)."@en;
         rdfs:label    "awardNumber"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/awardNumber.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/alternateIdentifierType>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The type of the AlternateIdentifier."@en;
         rdfs:label    "alternateIdentifierType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/alternateIdentifierType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the affiliation identifier scheme"@en;
         rdfs:label    "affiliationIdentifierScheme"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "Uniquely identifies the organizational affiliation of the creator."@en;
         rdfs:label    "affiliationIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/affiliation>
-        rdf:type      rdf:Property;
+        rdf:type      owl:ObjectProperty;
         rdfs:comment  "The organizational or institutional affiliation of the creator."@en;
         rdfs:label    "affiliation"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/affiliation.jsonld> .
@@ -2118,127 +2118,167 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         owl:versionInfo     "4.6" .
 
 <https://schema.stage.datacite.org/linked-data/class/Version>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "The version number of the resource."@en;
         rdfs:label    "Version"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Version.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Title>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument."@en;
         rdfs:label    "Title"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Title.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Subject>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Subject, keyword, classification code, or key phrase describing the resource."@en;
         rdfs:label    "Subject"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Subject.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Size>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource."@en;
         rdfs:label    "Size"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Size.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Rights>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Any rights information for this resource."@en;
         rdfs:label    "Rights"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Rights.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/ResourceType>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "A description of the resource."@en;
         rdfs:label    "ResourceType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/ResourceType.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Resource>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Any object (data, software, instrument, document, sample, etc.) that can be cited via a DataCite-assigned persistent identifier (DOI). This is the root class of the DataCite Metadata Schema; every DataCite record describes exactly one Resource."@en;
         rdfs:label    "Resource"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Resource.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/RelatedItem>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Information about a resource related to the one being registered."@en;
         rdfs:label    "RelatedItem"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/RelatedItem.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/RelatedIdentifier>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Identifiers of related resources. These must be globally unique identifiers."@en;
         rdfs:label    "RelatedIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/RelatedIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Publisher>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role."@en;
         rdfs:label    "Publisher"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Publisher.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/PublicationYear>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "The year when the data was or will be made publicly available. In the case of resources such as software or dynamic data where there may be multiple releases in one year, include the Date property and sub-properties (dateType/dateInformation) to provide more information about the publication or release date details."@en;
         rdfs:label    "PublicationYear"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/PublicationYear.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Language>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "The primary language of the resource."@en;
         rdfs:label    "Language"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Language.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Identifier>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "The Identifier is a unique string that identifies a resource."@en;
         rdfs:label    "Identifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Identifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/GeoLocation>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Spatial region or named place where the data was gathered or about which the data is focused."@en;
         rdfs:label    "GeoLocation"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/GeoLocation.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/FundingReference>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Information about financial support (funding) for the resource being registered."@en;
         rdfs:label    "FundingReference"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/FundingReference.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Format>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Technical format of the resource."@en;
         rdfs:label    "Format"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Format.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Description>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  " All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument."@en;
         rdfs:label    "Description"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Description.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Date>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "Different dates relevant to the work."@en;
         rdfs:label    "Date"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Date.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Creator>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property."@en;
         rdfs:label    "Creator"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Creator.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/Contributor>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  " The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property. For software, if there is an alternate entity that “holds, archives, publishes, prints, distributes, releases, issues, or produces” the code, use the contributorType “HostingInstitution” for the code repository. For instruments, if there is an institution responsible for the management of the instrument (for example, the legal owner, the operator, or an institute providing access to the instrument), use the contributorType “HostingInstitution” for the owner of the instrument."@en;
         rdfs:label    "Contributor"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/Contributor.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/class/AlternateIdentifier>
-        rdf:type      rdfs:Class;
+        rdf:type      owl:Class;
         rdfs:comment  "An identifier other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string which is unique within its domain of issue. May be used for local identifiers, a serial number of an instrument or an inventory number. The AlternateIdentifier should be an additional identifier for the same instance of the resource (i.e., same location, same file)."@en;
         rdfs:label    "AlternateIdentifier"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/class/AlternateIdentifier.jsonld> .
+
+skos:topConceptOf  rdf:type  owl:AnnotationProperty .
+
+skos:scopeNote  rdf:type  owl:AnnotationProperty .
+
+skos:prefLabel  rdf:type  owl:AnnotationProperty .
+
+skos:notation  rdf:type  owl:AnnotationProperty .
+
+skos:inScheme  rdf:type  owl:AnnotationProperty .
+
+skos:hasTopConcept  rdf:type  owl:AnnotationProperty .
+
+skos:example  rdf:type  owl:AnnotationProperty .
+
+skos:definition  rdf:type  owl:AnnotationProperty .
+
+skos:closeMatch  rdf:type  owl:AnnotationProperty .
+
+skos:altLabel  rdf:type  owl:AnnotationProperty .
+
+owl:versionInfo  rdf:type  owl:AnnotationProperty .
+
+rdfs:seeAlso  rdf:type  owl:AnnotationProperty .
+
+rdfs:label  rdf:type  owl:AnnotationProperty .
+
+rdfs:comment  rdf:type  owl:AnnotationProperty .
+
+dcterms:title  rdf:type  owl:AnnotationProperty .
+
+dcterms:source  rdf:type  owl:AnnotationProperty .
+
+dcterms:modified  rdf:type  owl:AnnotationProperty .
+
+dcterms:license  rdf:type  owl:AnnotationProperty .
+
+dcterms:identifier  rdf:type  owl:AnnotationProperty .
+
+dcterms:created  rdf:type  owl:AnnotationProperty .
