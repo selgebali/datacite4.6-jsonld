@@ -1,8 +1,10 @@
-# DataCite 4.6 JSON-LD Vocabulary & Schema Profiles
+# DataCite Metadata Toolkit
 
-This repository provides machine-readable linked data resources for the **DataCite Metadata Schema v4.6**: RDF class and property definitions, controlled vocabulary terms as resolvable IRIs, JSON Schema validation profiles, an XML-to-JSON conversion script, and SKOS/JSKOS crosswalk mappings to external vocabularies.
+> **Note** — this repo is being renamed from `datacite4.6-jsonld` to **`datacite-metadata-toolkit`** to better reflect its scope (now covers DataCite 4.6 + 4.7, JSON Schema profiles, XML conversion, and crosswalk mappings — not just JSON-LD).
 
-It is the working source for a GitHub Pages vocabulary namespace and for tooling used by DataCite integrators, NFDI services, and linked data applications.
+This repository provides machine-readable linked-data resources and tooling for the **DataCite Metadata Schema** (currently versions 4.6 and 4.7): RDF class and property definitions, controlled vocabulary terms as resolvable IRIs, JSON Schema validation profiles, an XML-to-JSON conversion script, and SKOS / JSKOS / SSSOM crosswalk mappings to external vocabularies (Schema.org, DCTERMS, DCAT-AP, Wikidata).
+
+It is the **source of truth** for the DataCite linked-data namespace. The namespace itself is published from a separate flat-layout mirror, [`datacite/schema.datacite.org-linked-data`](https://github.com/datacite/schema.datacite.org-linked-data), which is kept in sync by an automated PR workflow ([`.github/workflows/sync-to-publication.yml`](.github/workflows/sync-to-publication.yml)). **Do not edit the publication repo directly** — all changes start here.
 
 ---
 
