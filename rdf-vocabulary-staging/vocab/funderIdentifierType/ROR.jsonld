@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR",
+  "type": "Concept",
+  "prefLabel": "ROR",
+  "altLabel": "Research Organization Registry",
+  "notation": "ROR",
+  "definition": "A persistent identifier for a research organization from the Research Organization Registry (ROR), a community-led, open registry of unique identifiers for every organization that performs, funds, or otherwise contributes to research.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"
+}

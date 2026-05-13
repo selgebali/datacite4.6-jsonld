@@ -1,0 +1,11 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID",
+  "type": "Concept",
+  "prefLabel": "Crossref Funder ID",
+  "altLabel": "Crossref Funder Registry ID",
+  "notation": "Crossref Funder ID",
+  "definition": "A persistent identifier for a funding body assigned by the Crossref Funder Registry, a curated, openly licensed registry of funder names and identifiers used to disambiguate funding organizations in scholarly metadata.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"
+}

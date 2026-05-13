@@ -1,0 +1,12 @@
+{
+  "@context": "./context.jsonld",
+  "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID",
+  "type": "Concept",
+  "prefLabel": "GRID",
+  "altLabel": "Global Research Identifier Database",
+  "notation": "GRID",
+  "definition": "A persistent identifier for a research organization issued by the Global Research Identifier Database (GRID), a free database of research-related institution identifiers maintained by Digital Science.",
+  "scopeNote": "GRID identifiers were succeeded by ROR identifiers in 2021; new records SHOULD prefer ROR where an equivalent ROR identifier exists.",
+  "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+  "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"
+}

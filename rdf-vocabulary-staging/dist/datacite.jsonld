@@ -230,9 +230,9 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Resource",
-      "type": "rdf:Class",
+      "type": "rdfs:Class",
       "label": "Resource",
-      "comment": "A resource that can be cited and identified...",
+      "comment": "Any object (data, software, instrument, document, sample, etc.) that can be cited via a DataCite-assigned persistent identifier (DOI). This is the root class of the DataCite Metadata Schema; every DataCite record describes exactly one Resource.",
       "seeAlso": [
         "https://schema.stage.datacite.org/linked-data/class/Resource.jsonld"
       ]
@@ -1610,6 +1610,116 @@
       "scopeNote": "For software description, this may include the contents of a “readme.txt” and necessary environmental information (hardware, operational software, applications/programs with version information, a human-readable synopsis of software purpose) that cannot be described using other properties. For other uses, this can include specific and detailed information as necessary and appropriate.",
       "seeAlso": [
         "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "type": "ConceptScheme",
+      "title": "DataCite 4.6 funderIdentifierType",
+      "identifier": "funderIdentifierType",
+      "created": "2026-05-12",
+      "hasTopConcept": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other"
+      ],
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/funderIdentifierType.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID",
+      "type": "Concept",
+      "prefLabel": "Crossref Funder ID",
+      "altLabel": "Crossref Funder Registry ID",
+      "notation": "Crossref Funder ID",
+      "definition": "A persistent identifier for a funding body assigned by the Crossref Funder Registry, a curated, openly licensed registry of funder names and identifiers used to disambiguate funding organizations in scholarly metadata.",
+      "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID",
+      "type": "Concept",
+      "prefLabel": "GRID",
+      "altLabel": "Global Research Identifier Database",
+      "notation": "GRID",
+      "definition": "A persistent identifier for a research organization issued by the Global Research Identifier Database (GRID), a free database of research-related institution identifiers maintained by Digital Science.",
+      "scopeNote": "GRID identifiers were succeeded by ROR identifiers in 2021; new records SHOULD prefer ROR where an equivalent ROR identifier exists.",
+      "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI",
+      "type": "Concept",
+      "prefLabel": "ISNI",
+      "altLabel": "International Standard Name Identifier",
+      "notation": "ISNI",
+      "definition": "A 16-character identifier for the public identity of a person or organization, defined by ISO 27729 and assigned by the ISNI International Agency. When used as a funder identifier, the ISNI uniquely identifies the funding organization.",
+      "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other",
+      "type": "Concept",
+      "prefLabel": "Other",
+      "notation": "Other",
+      "definition": "Any funder identifier type not covered by the other values in the funderIdentifierType controlled list.",
+      "scopeNote": "Use Other for funder identifier schemes that are not represented by a named value in this vocabulary. If a particular scheme is in common use, consider proposing it as a named value in a future DataCite release.",
+      "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR",
+      "type": "Concept",
+      "prefLabel": "ROR",
+      "altLabel": "Research Organization Registry",
+      "notation": "ROR",
+      "definition": "A persistent identifier for a research organization from the Research Organization Registry (ROR), a community-led, open registry of unique identifiers for every organization that performs, funds, or otherwise contributes to research.",
+      "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/identifierType",
+      "type": "ConceptScheme",
+      "title": "DataCite 4.6 identifierType",
+      "identifier": "identifierType",
+      "created": "2026-05-12",
+      "hasTopConcept": [
+        "https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI"
+      ],
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/identifierType/identifierType.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI",
+      "type": "Concept",
+      "prefLabel": "DOI",
+      "altLabel": "Digital Object Identifier",
+      "notation": "DOI",
+      "definition": "A character string used to uniquely and persistently identify a citable resource, registered with a DOI Registration Agency such as DataCite. A DOI name consists of a prefix (assigned to the registrant) and a suffix (assigned by the registrant to the resource), separated by a slash.",
+      "scopeNote": "The DOI is the required identifier type for resources registered with DataCite; every DataCite record MUST carry exactly one DOI as its primary identifier.",
+      "inScheme": "https://schema.stage.datacite.org/linked-data/vocab/identifierType",
+      "topConceptOf": "https://schema.stage.datacite.org/linked-data/vocab/identifierType",
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI.jsonld"
       ]
     },
     {

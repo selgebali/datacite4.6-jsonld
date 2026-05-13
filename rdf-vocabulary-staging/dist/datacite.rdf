@@ -1,6 +1,6 @@
 <rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -67,6 +67,11 @@
     <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/class/Creator.jsonld"/>
     <rdfs:label xml:lang="en">Creator</rdfs:label>
     <rdfs:comment xml:lang="en">The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://schema.stage.datacite.org/linked-data/class/Resource">
+    <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/class/Resource.jsonld"/>
+    <rdfs:label xml:lang="en">Resource</rdfs:label>
+    <rdfs:comment xml:lang="en">Any object (data, software, instrument, document, sample, etc.) that can be cited via a DataCite-assigned persistent identifier (DOI). This is the root class of the DataCite Metadata Schema; every DataCite record describes exactly one Resource.</rdfs:comment>
   </rdfs:Class>
   <rdfs:Class rdf:about="https://schema.stage.datacite.org/linked-data/class/Publisher">
     <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/class/Publisher.jsonld"/>
@@ -513,11 +518,69 @@
     <rdfs:label xml:lang="en">lastPage</rdfs:label>
     <rdfs:comment xml:lang="en">Last page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings.</rdfs:comment>
   </rdf:Property>
-  <rdf:Class rdf:about="https://schema.stage.datacite.org/linked-data/class/Resource">
-    <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/class/Resource.jsonld"/>
-    <rdfs:label xml:lang="en">Resource</rdfs:label>
-    <rdfs:comment xml:lang="en">A resource that can be cited and identified...</rdfs:comment>
-  </rdf:Class>
+  <skos:ConceptScheme rdf:about="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType">
+    <skos:hasTopConcept>
+      <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other">
+        <skos:topConceptOf rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:scopeNote xml:lang="en">Use Other for funder identifier schemes that are not represented by a named value in this vocabulary. If a particular scheme is in common use, consider proposing it as a named value in a future DataCite release.</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">Other</skos:prefLabel>
+        <skos:notation>Other</skos:notation>
+        <skos:inScheme rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:definition xml:lang="en">Any funder identifier type not covered by the other values in the funderIdentifierType controlled list.</skos:definition>
+        <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other.jsonld"/>
+      </skos:Concept>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept>
+      <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR">
+        <skos:topConceptOf rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:prefLabel xml:lang="en">ROR</skos:prefLabel>
+        <skos:notation>ROR</skos:notation>
+        <skos:inScheme rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:definition xml:lang="en">A persistent identifier for a research organization from the Research Organization Registry (ROR), a community-led, open registry of unique identifiers for every organization that performs, funds, or otherwise contributes to research.</skos:definition>
+        <skos:altLabel xml:lang="en">Research Organization Registry</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR.jsonld"/>
+      </skos:Concept>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept>
+      <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI">
+        <skos:topConceptOf rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:prefLabel xml:lang="en">ISNI</skos:prefLabel>
+        <skos:notation>ISNI</skos:notation>
+        <skos:inScheme rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:definition xml:lang="en">A 16-character identifier for the public identity of a person or organization, defined by ISO 27729 and assigned by the ISNI International Agency. When used as a funder identifier, the ISNI uniquely identifies the funding organization.</skos:definition>
+        <skos:altLabel xml:lang="en">International Standard Name Identifier</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI.jsonld"/>
+      </skos:Concept>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept>
+      <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID">
+        <skos:topConceptOf rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:scopeNote xml:lang="en">GRID identifiers were succeeded by ROR identifiers in 2021; new records SHOULD prefer ROR where an equivalent ROR identifier exists.</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">GRID</skos:prefLabel>
+        <skos:notation>GRID</skos:notation>
+        <skos:inScheme rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:definition xml:lang="en">A persistent identifier for a research organization issued by the Global Research Identifier Database (GRID), a free database of research-related institution identifiers maintained by Digital Science.</skos:definition>
+        <skos:altLabel xml:lang="en">Global Research Identifier Database</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID.jsonld"/>
+      </skos:Concept>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept>
+      <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID">
+        <skos:topConceptOf rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:prefLabel xml:lang="en">Crossref Funder ID</skos:prefLabel>
+        <skos:notation>Crossref Funder ID</skos:notation>
+        <skos:inScheme rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType"/>
+        <skos:definition xml:lang="en">A persistent identifier for a funding body assigned by the Crossref Funder Registry, a curated, openly licensed registry of funder names and identifiers used to disambiguate funding organizations in scholarly metadata.</skos:definition>
+        <skos:altLabel xml:lang="en">Crossref Funder Registry ID</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID.jsonld"/>
+      </skos:Concept>
+    </skos:hasTopConcept>
+    <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/funderIdentifierType.jsonld"/>
+    <dcterms:title xml:lang="en">DataCite 4.6 funderIdentifierType</dcterms:title>
+    <dcterms:identifier>funderIdentifierType</dcterms:identifier>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2026-05-12</dcterms:created>
+  </skos:ConceptScheme>
   <skos:ConceptScheme rdf:about="https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral">
     <skos:hasTopConcept>
       <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other">
@@ -2093,6 +2156,25 @@
         <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/relationType/HasVersion.jsonld"/>
       </skos:Concept>
     </skos:hasTopConcept>
+  </skos:ConceptScheme>
+  <skos:ConceptScheme rdf:about="https://schema.stage.datacite.org/linked-data/vocab/identifierType">
+    <skos:hasTopConcept>
+      <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI">
+        <skos:topConceptOf rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/identifierType"/>
+        <skos:scopeNote xml:lang="en">The DOI is the required identifier type for resources registered with DataCite; every DataCite record MUST carry exactly one DOI as its primary identifier.</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">DOI</skos:prefLabel>
+        <skos:notation>DOI</skos:notation>
+        <skos:inScheme rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/identifierType"/>
+        <skos:definition xml:lang="en">A character string used to uniquely and persistently identify a citable resource, registered with a DOI Registration Agency such as DataCite. A DOI name consists of a prefix (assigned to the registrant) and a suffix (assigned by the registrant to the resource), separated by a slash.</skos:definition>
+        <skos:altLabel xml:lang="en">Digital Object Identifier</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI.jsonld"/>
+      </skos:Concept>
+    </skos:hasTopConcept>
+    <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/identifierType/identifierType.jsonld"/>
+    <dcterms:title xml:lang="en">DataCite 4.6 identifierType</dcterms:title>
+    <dcterms:identifier>identifierType</dcterms:identifier>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2026-05-12</dcterms:created>
   </skos:ConceptScheme>
   <skos:ConceptScheme rdf:about="https://schema.stage.datacite.org/linked-data/vocab/numberType">
     <skos:hasTopConcept>

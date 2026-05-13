@@ -1193,6 +1193,84 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         dcterms:title       "DataCite 4.6 nameType"@en;
         skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal> , <https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational> .
 
+<https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI>
+        rdf:type           skos:Concept;
+        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI.jsonld>;
+        skos:altLabel      "Digital Object Identifier"@en;
+        skos:definition    "A character string used to uniquely and persistently identify a citable resource, registered with a DOI Registration Agency such as DataCite. A DOI name consists of a prefix (assigned to the registrant) and a suffix (assigned by the registrant to the resource), separated by a slash."@en;
+        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/identifierType>;
+        skos:notation      "DOI";
+        skos:prefLabel     "DOI"@en;
+        skos:scopeNote     "The DOI is the required identifier type for resources registered with DataCite; every DataCite record MUST carry exactly one DOI as its primary identifier."@en;
+        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/identifierType> .
+
+<https://schema.stage.datacite.org/linked-data/vocab/identifierType>
+        rdf:type            skos:ConceptScheme;
+        rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/identifierType/identifierType.jsonld>;
+        dcterms:created     "2026-05-12"^^xsd:date;
+        dcterms:identifier  "identifierType";
+        dcterms:title       "DataCite 4.6 identifierType"@en;
+        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI> .
+
+<https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR>
+        rdf:type           skos:Concept;
+        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR.jsonld>;
+        skos:altLabel      "Research Organization Registry"@en;
+        skos:definition    "A persistent identifier for a research organization from the Research Organization Registry (ROR), a community-led, open registry of unique identifiers for every organization that performs, funds, or otherwise contributes to research."@en;
+        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>;
+        skos:notation      "ROR";
+        skos:prefLabel     "ROR"@en;
+        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
+
+<https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other>
+        rdf:type           skos:Concept;
+        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other.jsonld>;
+        skos:definition    "Any funder identifier type not covered by the other values in the funderIdentifierType controlled list."@en;
+        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>;
+        skos:notation      "Other";
+        skos:prefLabel     "Other"@en;
+        skos:scopeNote     "Use Other for funder identifier schemes that are not represented by a named value in this vocabulary. If a particular scheme is in common use, consider proposing it as a named value in a future DataCite release."@en;
+        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
+
+<https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI>
+        rdf:type           skos:Concept;
+        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI.jsonld>;
+        skos:altLabel      "International Standard Name Identifier"@en;
+        skos:definition    "A 16-character identifier for the public identity of a person or organization, defined by ISO 27729 and assigned by the ISNI International Agency. When used as a funder identifier, the ISNI uniquely identifies the funding organization."@en;
+        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>;
+        skos:notation      "ISNI";
+        skos:prefLabel     "ISNI"@en;
+        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
+
+<https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID>
+        rdf:type           skos:Concept;
+        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID.jsonld>;
+        skos:altLabel      "Global Research Identifier Database"@en;
+        skos:definition    "A persistent identifier for a research organization issued by the Global Research Identifier Database (GRID), a free database of research-related institution identifiers maintained by Digital Science."@en;
+        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>;
+        skos:notation      "GRID";
+        skos:prefLabel     "GRID"@en;
+        skos:scopeNote     "GRID identifiers were succeeded by ROR identifiers in 2021; new records SHOULD prefer ROR where an equivalent ROR identifier exists."@en;
+        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
+
+<https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID>
+        rdf:type           skos:Concept;
+        rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID.jsonld>;
+        skos:altLabel      "Crossref Funder Registry ID"@en;
+        skos:definition    "A persistent identifier for a funding body assigned by the Crossref Funder Registry, a curated, openly licensed registry of funder names and identifiers used to disambiguate funding organizations in scholarly metadata."@en;
+        skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>;
+        skos:notation      "Crossref Funder ID";
+        skos:prefLabel     "Crossref Funder ID"@en;
+        skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType> .
+
+<https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType>
+        rdf:type            skos:ConceptScheme;
+        rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/funderIdentifierType.jsonld>;
+        dcterms:created     "2026-05-12"^^xsd:date;
+        dcterms:identifier  "funderIdentifierType";
+        dcterms:title       "DataCite 4.6 funderIdentifierType"@en;
+        skos:hasTopConcept  <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID> , <https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID> .
+
 <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo>
         rdf:type           skos:Concept;
         rdfs:seeAlso       <https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo.jsonld>;
