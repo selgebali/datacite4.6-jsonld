@@ -7,10 +7,14 @@
     "https://schema.stage.datacite.org/linked-data/vocab/contributorType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/dateType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/context.jsonld",
+    "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/context.jsonld",
+    "https://schema.stage.datacite.org/linked-data/vocab/identifierType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/nameType/context.jsonld",
+    "https://schema.stage.datacite.org/linked-data/vocab/numberType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/context.jsonld",
     "https://schema.stage.datacite.org/linked-data/vocab/relationType/context.jsonld",
-    "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/context.jsonld"
+    "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/context.jsonld",
+    "https://schema.stage.datacite.org/linked-data/vocab/titleType/context.jsonld"
   ],
   "classes": [
     "https://schema.stage.datacite.org/linked-data/class/AlternateIdentifier.jsonld",
@@ -172,10 +176,35 @@
       ]
     },
     {
+      "scheme": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/funderIdentifierType.jsonld",
+      "terms": [
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR.jsonld"
+      ]
+    },
+    {
+      "scheme": "https://schema.stage.datacite.org/linked-data/vocab/identifierType/identifierType.jsonld",
+      "terms": [
+        "https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI.jsonld"
+      ]
+    },
+    {
       "scheme": "https://schema.stage.datacite.org/linked-data/vocab/nameType/nameType.jsonld",
       "terms": [
         "https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational.jsonld",
         "https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal.jsonld"
+      ]
+    },
+    {
+      "scheme": "https://schema.stage.datacite.org/linked-data/vocab/numberType/numberType.jsonld",
+      "terms": [
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Article.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Other.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/numberType/Report.jsonld"
       ]
     },
     {
@@ -282,6 +311,15 @@
         "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration.jsonld",
         "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text.jsonld",
         "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow.jsonld"
+      ]
+    },
+    {
+      "scheme": "https://schema.stage.datacite.org/linked-data/vocab/titleType/titleType.jsonld",
+      "terms": [
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/Other.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle.jsonld",
+        "https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle.jsonld"
       ]
     }
   ]

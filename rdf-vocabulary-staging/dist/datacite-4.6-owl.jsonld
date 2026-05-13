@@ -87,6 +87,86 @@
   },
   "@graph": [
     {
+      "id": "rdfs:label",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "rdfs:comment",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "rdfs:seeAlso",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "owl:versionInfo",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:prefLabel",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:altLabel",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:definition",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:scopeNote",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:notation",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:inScheme",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:topConceptOf",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:hasTopConcept",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:example",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "skos:closeMatch",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "dcterms:created",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "dcterms:modified",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "dcterms:identifier",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "dcterms:title",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "dcterms:license",
+      "type": "owl:AnnotationProperty"
+    },
+    {
+      "id": "dcterms:source",
+      "type": "owl:AnnotationProperty"
+    },
+    {
       "id": "https://schema.stage.datacite.org/linked-data/dist/datacite-4.6",
       "type": "owl:Ontology",
       "title": "DataCite Linked Data 4.6 Distribution",
@@ -104,7 +184,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/AlternateIdentifier",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "AlternateIdentifier",
       "comment": "An identifier other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string which is unique within its domain of issue. May be used for local identifiers, a serial number of an instrument or an inventory number. The AlternateIdentifier should be an additional identifier for the same instance of the resource (i.e., same location, same file).",
       "seeAlso": [
@@ -113,7 +193,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Contributor",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Contributor",
       "comment": " The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property. For software, if there is an alternate entity that “holds, archives, publishes, prints, distributes, releases, issues, or produces” the code, use the contributorType “HostingInstitution” for the code repository. For instruments, if there is an institution responsible for the management of the instrument (for example, the legal owner, the operator, or an institute providing access to the instrument), use the contributorType “HostingInstitution” for the owner of the instrument.",
       "seeAlso": [
@@ -122,7 +202,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Creator",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Creator",
       "comment": "The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property.",
       "seeAlso": [
@@ -131,7 +211,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Date",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Date",
       "comment": "Different dates relevant to the work.",
       "seeAlso": [
@@ -140,7 +220,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Description",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Description",
       "comment": " All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
       "seeAlso": [
@@ -149,7 +229,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Format",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Format",
       "comment": "Technical format of the resource.",
       "seeAlso": [
@@ -158,7 +238,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/FundingReference",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "FundingReference",
       "comment": "Information about financial support (funding) for the resource being registered.",
       "seeAlso": [
@@ -167,7 +247,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/GeoLocation",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "GeoLocation",
       "comment": "Spatial region or named place where the data was gathered or about which the data is focused.",
       "seeAlso": [
@@ -176,7 +256,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Identifier",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Identifier",
       "comment": "The Identifier is a unique string that identifies a resource.",
       "seeAlso": [
@@ -185,7 +265,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Language",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Language",
       "comment": "The primary language of the resource.",
       "seeAlso": [
@@ -194,7 +274,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/PublicationYear",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "PublicationYear",
       "comment": "The year when the data was or will be made publicly available. In the case of resources such as software or dynamic data where there may be multiple releases in one year, include the Date property and sub-properties (dateType/dateInformation) to provide more information about the publication or release date details.",
       "seeAlso": [
@@ -203,7 +283,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Publisher",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Publisher",
       "comment": "The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role.",
       "seeAlso": [
@@ -212,7 +292,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/RelatedIdentifier",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "RelatedIdentifier",
       "comment": "Identifiers of related resources. These must be globally unique identifiers.",
       "seeAlso": [
@@ -221,7 +301,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/RelatedItem",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "RelatedItem",
       "comment": "Information about a resource related to the one being registered.",
       "seeAlso": [
@@ -230,7 +310,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Resource",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Resource",
       "comment": "Any object (data, software, instrument, document, sample, etc.) that can be cited via a DataCite-assigned persistent identifier (DOI). This is the root class of the DataCite Metadata Schema; every DataCite record describes exactly one Resource.",
       "seeAlso": [
@@ -239,7 +319,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/ResourceType",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "ResourceType",
       "comment": "A description of the resource.",
       "seeAlso": [
@@ -248,7 +328,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Rights",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Rights",
       "comment": "Any rights information for this resource.",
       "seeAlso": [
@@ -257,7 +337,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Size",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Size",
       "comment": "Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource.",
       "seeAlso": [
@@ -266,7 +346,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Subject",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Subject",
       "comment": "Subject, keyword, classification code, or key phrase describing the resource.",
       "seeAlso": [
@@ -275,7 +355,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Title",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Title",
       "comment": "A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument.",
       "seeAlso": [
@@ -284,7 +364,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/class/Version",
-      "type": "rdfs:Class",
+      "type": "owl:Class",
       "label": "Version",
       "comment": "The version number of the resource.",
       "seeAlso": [
@@ -293,7 +373,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/affiliation",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "affiliation",
       "comment": "The organizational or institutional affiliation of the creator.",
       "seeAlso": [
@@ -302,7 +382,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "affiliationIdentifier",
       "comment": "Uniquely identifies the organizational affiliation of the creator.",
       "seeAlso": [
@@ -311,7 +391,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "affiliationIdentifierScheme",
       "comment": "The name of the affiliation identifier scheme",
       "seeAlso": [
@@ -320,7 +400,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/alternateIdentifierType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "alternateIdentifierType",
       "comment": "The type of the AlternateIdentifier.",
       "seeAlso": [
@@ -329,7 +409,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/awardNumber",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "awardNumber",
       "comment": "The code assigned by the funder to a sponsored award (grant).",
       "seeAlso": [
@@ -338,7 +418,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/awardTitle",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "awardTitle",
       "comment": "The human readable title or name of the award (grant).",
       "seeAlso": [
@@ -347,7 +427,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/awardURI",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "awardURI",
       "comment": "The URI leading to a page provided by the funder for more information about the award (grant).",
       "seeAlso": [
@@ -356,7 +436,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/classificationCode",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "classificationCode",
       "comment": "The classification code used for the subject term in the subject scheme.",
       "seeAlso": [
@@ -365,7 +445,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/contributor",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "contributor",
       "comment": "The institution or person responsible for collecting, managing, distributing, or otherwise contributing to the development of the resource. To supply multiple contributors, repeat this property.",
       "seeAlso": [
@@ -374,7 +454,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/contributorName",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "contributorName",
       "comment": "The full name of the contributor.",
       "seeAlso": [
@@ -383,7 +463,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/contributorType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "contributorType",
       "comment": "The type of contributor of the resource.",
       "seeAlso": [
@@ -392,7 +472,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/creator",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "creator",
       "comment": "The main researchers involved in producing the data, or the authors of the publication, in priority order. For instruments this is the manufacturer or developer of the instrument. To supply multiple creators, repeat this property.",
       "seeAlso": [
@@ -401,7 +481,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/creatorName",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "creatorName",
       "comment": "The full name of the creator.",
       "seeAlso": [
@@ -410,7 +490,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/date",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "date",
       "comment": "Different dates relevant to the work.",
       "seeAlso": [
@@ -419,7 +499,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/dateInformation",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "dateInformation",
       "comment": "Specific information about the date, if appropriate.",
       "seeAlso": [
@@ -428,7 +508,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/dateType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "dateType",
       "comment": "The type of date.",
       "seeAlso": [
@@ -437,7 +517,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/description",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "description",
       "comment": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
       "seeAlso": [
@@ -446,7 +526,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/descriptionType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "descriptionType",
       "comment": "The type of the Description.",
       "seeAlso": [
@@ -455,7 +535,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/eastBoundLongitude",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "eastBoundLongitude",
       "comment": "Eastern longitudinal dimension of box.",
       "seeAlso": [
@@ -464,7 +544,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/edition",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "edition",
       "comment": "Edition or version of the related item.",
       "seeAlso": [
@@ -473,7 +553,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/familyName",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "familyName",
       "comment": "The surname or last name of the creator.",
       "seeAlso": [
@@ -482,7 +562,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/firstPage",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "firstPage",
       "comment": "First page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings.",
       "seeAlso": [
@@ -491,7 +571,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/format",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "format",
       "comment": "Technical format of the resource.",
       "seeAlso": [
@@ -500,7 +580,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/funderIdentifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "funderIdentifier",
       "comment": "Uniquely identifies a funding entity, according to various types.",
       "seeAlso": [
@@ -509,7 +589,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/funderIdentifierType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "funderIdentifierType",
       "comment": "The type of the funderIdentifier.",
       "seeAlso": [
@@ -518,7 +598,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/funderName",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "funderName",
       "comment": "Name of the funding provider.",
       "seeAlso": [
@@ -527,7 +607,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/fundingReference",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "fundingReference",
       "comment": "Information about financial support (funding) for the resource being registered.",
       "seeAlso": [
@@ -536,7 +616,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/geoLocation",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "geoLocation",
       "comment": "Spatial region or named place where the data was gathered or about which the data is focused.",
       "seeAlso": [
@@ -545,7 +625,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/geoLocationBox",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "geoLocationBox",
       "comment": "The spatial limits of a box.",
       "seeAlso": [
@@ -554,7 +634,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/geoLocationPlace",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "geoLocationPlace",
       "comment": "Description of a geographic location.",
       "seeAlso": [
@@ -563,7 +643,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/geoLocationPoint",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "geoLocationPoint",
       "comment": "A point location in space.",
       "seeAlso": [
@@ -572,7 +652,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/geoLocationPolygon",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "geoLocationPolygon",
       "comment": "A drawn polygon area, defined by a set of points and lines connecting the points in a closed chain.",
       "seeAlso": [
@@ -581,7 +661,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/givenName",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "givenName",
       "comment": "The personal or first name of the creator.",
       "seeAlso": [
@@ -590,7 +670,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/identifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "identifier",
       "comment": "The Identifier is a unique string that identifies a resource.",
       "seeAlso": [
@@ -599,7 +679,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/identifierType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "identifierType",
       "comment": "The type of Identifier.",
       "seeAlso": [
@@ -608,7 +688,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/inPolygonPoint",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "inPolygonPoint",
       "comment": "A point location in a polygon.",
       "seeAlso": [
@@ -617,7 +697,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/issue",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "issue",
       "comment": "Issue number or name of the related item.",
       "seeAlso": [
@@ -626,7 +706,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/language",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "language",
       "comment": "The primary language of the resource.",
       "seeAlso": [
@@ -635,7 +715,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/lastPage",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "lastPage",
       "comment": "Last page of the resource within the related item, e.g., of the chapter, article, or conference paper in proceedings.",
       "seeAlso": [
@@ -644,7 +724,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/nameIdentifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "nameIdentifier",
       "comment": "Uniquely identifies an individual or legal entity, according to various schemes.",
       "seeAlso": [
@@ -653,7 +733,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/nameIdentifierScheme",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "nameIdentifierScheme",
       "comment": "The name of the name identifier scheme.",
       "seeAlso": [
@@ -662,7 +742,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/nameType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "nameType",
       "comment": "The type of name.",
       "seeAlso": [
@@ -671,7 +751,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/northBoundLatitude",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "northBoundLatitude",
       "comment": "Northern latitudinal dimension of box.",
       "seeAlso": [
@@ -680,7 +760,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/number",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "number",
       "comment": "Number of the resource within the related item, e.g., report number or article number.",
       "seeAlso": [
@@ -689,7 +769,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/numberType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "numberType",
       "comment": "Type of the related item’s number, e.g., report number or article number.",
       "seeAlso": [
@@ -698,7 +778,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/pointLatitude",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "pointLatitude",
       "comment": "Latitudinal dimension of point.",
       "seeAlso": [
@@ -707,7 +787,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/pointLongitude",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "pointLongitude",
       "comment": "Longitudinal dimension of point.",
       "seeAlso": [
@@ -716,7 +796,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/polygonPoint",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "polygonPoint",
       "comment": "A point location in a polygon.",
       "seeAlso": [
@@ -725,7 +805,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/publicationYear",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "publicationYear",
       "comment": "The year when the item was or will be made publicly available.",
       "seeAlso": [
@@ -734,7 +814,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/publisher",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "publisher",
       "comment": "The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role.",
       "seeAlso": [
@@ -743,7 +823,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/publisherIdentifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "publisherIdentifier",
       "comment": "Uniquely identifies the publisher, according to various schemes.",
       "seeAlso": [
@@ -752,7 +832,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/publisherIdentifierScheme",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "publisherIdentifierScheme",
       "comment": "The name of the publisher identifier scheme.",
       "seeAlso": [
@@ -761,7 +841,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relatedIdentifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relatedIdentifier",
       "comment": "Identifiers of related resources. These must be globally unique identifiers.",
       "seeAlso": [
@@ -770,7 +850,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relatedIdentifierType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relatedIdentifierType",
       "comment": "The type of the RelatedIdentifier.",
       "seeAlso": [
@@ -779,7 +859,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relatedItem",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relatedItem",
       "comment": "Information about a resource related to the one being registered.",
       "seeAlso": [
@@ -788,7 +868,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relatedItemIdentifier",
       "comment": "The identifier for the related item.",
       "seeAlso": [
@@ -797,7 +877,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relatedItemIdentifierType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relatedItemIdentifierType",
       "comment": "The type of the Identifier for the related item.",
       "seeAlso": [
@@ -806,7 +886,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relatedItemType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relatedItemType",
       "comment": "The general type of the related item.",
       "seeAlso": [
@@ -815,7 +895,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relatedMetadataScheme",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relatedMetadataScheme",
       "comment": "The name of the scheme.",
       "seeAlso": [
@@ -824,7 +904,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/relationType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "relationType",
       "comment": "Description of the relationship of the resource being registered (A) and the related resource (B).",
       "seeAlso": [
@@ -833,7 +913,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/resourceType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "resourceType",
       "comment": "A description of the resource.",
       "seeAlso": [
@@ -842,7 +922,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/resourceTypeGeneral",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "resourceTypeGeneral",
       "comment": "The general type of a resource.",
       "seeAlso": [
@@ -851,7 +931,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/rights",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "rights",
       "comment": "Any rights information for this resource.",
       "seeAlso": [
@@ -860,7 +940,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/rightsIdentifier",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "rightsIdentifier",
       "comment": "A short standardized identifier for the licence.",
       "seeAlso": [
@@ -869,7 +949,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/rightsIdentifierScheme",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "rightsIdentifierScheme",
       "comment": "The name of the scheme.",
       "seeAlso": [
@@ -878,7 +958,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/rightsURI",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "rightsURI",
       "comment": "The URI of the license.",
       "seeAlso": [
@@ -887,7 +967,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/schemeType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "schemeType",
       "comment": "The type of the relatedMetadataScheme, linked with the schemeURI.",
       "seeAlso": [
@@ -896,7 +976,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/schemeURI",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "schemeURI",
       "comment": "The URI of an identifier scheme.",
       "seeAlso": [
@@ -905,7 +985,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/size",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "size",
       "comment": "Size (e.g., bytes, pages, inches, etc.) or duration (extent), e.g., hours, minutes, days, etc., of a resource.",
       "seeAlso": [
@@ -914,7 +994,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/southBoundLatitude",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "southBoundLatitude",
       "comment": "Southern latitude of box .",
       "seeAlso": [
@@ -923,7 +1003,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/subject",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "subject",
       "comment": "Subject, keyword, classification code, or key phrase describing the resource.",
       "seeAlso": [
@@ -932,7 +1012,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/subjectScheme",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "subjectScheme",
       "comment": "The name of the subject scheme or classification code or authority if one is used.",
       "seeAlso": [
@@ -941,7 +1021,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/title",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "title",
       "comment": "A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software or an instrument.",
       "seeAlso": [
@@ -950,7 +1030,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/titleType",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "titleType",
       "comment": "The type of Title (other than the Main Title).",
       "seeAlso": [
@@ -959,7 +1039,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/valueURI",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "valueURI",
       "comment": " The URI of the subject term.",
       "seeAlso": [
@@ -968,7 +1048,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/version",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "version",
       "comment": "The version number of the resource.",
       "seeAlso": [
@@ -977,7 +1057,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/volume",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "volume",
       "comment": "Volume of the related item.",
       "seeAlso": [
@@ -986,7 +1066,7 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/property/westBoundLongitude",
-      "type": "rdf:Property",
+      "type": "owl:ObjectProperty",
       "label": "westBoundLongitude",
       "comment": "Western longitudinal dimension of box.",
       "seeAlso": [
@@ -995,7 +1075,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 contributorType",
       "identifier": "contributorType",
       "created": "2026-01-18",
@@ -1029,7 +1112,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/ContactPerson",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ContactPerson",
       "notation": "ContactPerson",
       "definition": "Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource.",
@@ -1042,7 +1128,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCollector",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "DataCollector",
       "notation": "DataCollector",
       "definition": "Person/institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI).",
@@ -1055,7 +1144,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataCurator",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "DataCurator",
       "notation": "DataCurator",
       "definition": "Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository.",
@@ -1071,7 +1163,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/DataManager",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "DataManager",
       "notation": "DataManager",
       "definition": "Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource.",
@@ -1087,7 +1182,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Distributor",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Distributor",
       "notation": "Distributor",
       "definition": "Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form.",
@@ -1100,7 +1198,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Editor",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Editor",
       "notation": "Editor",
       "definition": "A person who oversees the details related to the publication format of the resource.",
@@ -1113,7 +1214,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/HostingInstitution",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "HostingInstitution",
       "notation": "HostingInstitution",
       "definition": "Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support.",
@@ -1129,7 +1233,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Other",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Other",
       "notation": "Other",
       "definition": "Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution is not adequately described by any of the other values for contributorType.",
@@ -1142,7 +1249,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Producer",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Producer",
       "notation": "Producer",
       "definition": "Typically, a person or organisation responsible for the artistry and form of a media product.",
@@ -1155,7 +1265,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectLeader",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ProjectLeader",
       "notation": "ProjectLeader",
       "definition": "Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource.",
@@ -1168,7 +1281,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectManager",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ProjectManager",
       "notation": "ProjectManager",
       "definition": "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams.",
@@ -1181,7 +1297,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/ProjectMember",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ProjectMember",
       "notation": "ProjectMember",
       "definition": "Person on the membership list of a designated project/project team.",
@@ -1194,7 +1313,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAgency",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "RegistrationAgency",
       "notation": "RegistrationAgency",
       "definition": "Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility.",
@@ -1207,7 +1329,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/RegistrationAuthority",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "RegistrationAuthority",
       "notation": "RegistrationAuthority",
       "definition": "A standards-setting body from which Registration Agencies obtain official recognition and guidance.",
@@ -1220,7 +1345,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/RelatedPerson",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "RelatedPerson",
       "notation": "RelatedPerson",
       "definition": "A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize.",
@@ -1233,7 +1361,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Researcher",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Researcher",
       "notation": "Researcher",
       "definition": "A person involved in analysing data or the results of an experiment or formal study.",
@@ -1246,7 +1377,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/ResearchGroup",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ResearchGroup",
       "notation": "ResearchGroup",
       "definition": "Typically refers to a group of individuals with a lab, department, or division that has a specifically defined focus of activity.",
@@ -1263,7 +1397,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/RightsHolder",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "RightsHolder",
       "notation": "RightsHolder",
       "definition": "Person or institution owning or managing property rights, including intellectual property rights over the resource.",
@@ -1275,7 +1412,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Sponsor",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Sponsor",
       "notation": "Sponsor",
       "definition": "Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc.",
@@ -1288,7 +1428,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Supervisor",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Supervisor",
       "notation": "Supervisor",
       "definition": "Designated administrator over one or more groups/teams working to produce a resource, or over one or more steps of a development process.",
@@ -1300,7 +1443,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/Translator",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Translator",
       "notation": "Translator",
       "definition": "A person, organization, or automated system responsible for converting the content of a resource from one language into another, preserving its meaning and intended message.",
@@ -1313,7 +1459,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/contributorType/WorkPackageLeader",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "WorkPackageLeader",
       "notation": "WorkPackageLeader",
       "definition": "A Work Package is a recognized data product, not all of which is included in publication. The package may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring comprehensive contents, versioning, and availability of the Work Package during development of the resource.",
@@ -1325,7 +1474,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 dateType",
       "identifier": "dateType",
       "created": "2026-02-20",
@@ -1349,7 +1501,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Accepted",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Accepted",
       "notation": "Accepted",
       "definition": "The date that the publisher accepted the resource into their system.",
@@ -1362,7 +1517,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Available",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Available",
       "notation": "Available",
       "definition": "The date the resource is made publicly available. May be a range.",
@@ -1375,7 +1533,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Collected",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Collected",
       "notation": "Collected",
       "definition": "The date or date range in which the resource content was collected.",
@@ -1388,7 +1549,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Copyrighted",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Copyrighted",
       "notation": "Copyrighted",
       "definition": "The specific, documented date at which the resource receives a copyrighted status, if applicable.",
@@ -1400,7 +1564,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Coverage",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Coverage",
       "notation": "Coverage",
       "definition": "The date or date range that the resource content applies to, describes, or covers.",
@@ -1413,7 +1580,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Created",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Created",
       "notation": "Created",
       "definition": "The date the resource itself was put together; this could refer to a timeframe in ancient history, a date range, or a single date for a final component, e.g., the finalised file with all the data.",
@@ -1426,7 +1596,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Issued",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Issued",
       "notation": "Issued",
       "definition": "The date that the resource is published or distributed, e.g., to a data centre.",
@@ -1438,7 +1611,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Other",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Other",
       "notation": "Other",
       "definition": "Other date that does not fit into an existing category.",
@@ -1450,7 +1626,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Submitted",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Submitted",
       "notation": "Submitted",
       "definition": "The date the creator submits the resource to the publisher. This could be different from Accepted if the publisher then applies a selection process.",
@@ -1463,7 +1642,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Updated",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Updated",
       "notation": "Updated",
       "definition": "The date of the last update to the resource, when the resource is being added to. May be a range.",
@@ -1475,7 +1657,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Valid",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Valid",
       "notation": "Valid",
       "definition": "The date or date range during which the dataset or resource is accurate.",
@@ -1487,7 +1672,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/dateType/Withdrawn",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Withdrawn",
       "notation": "Withdrawn",
       "definition": "The date the resource is removed.",
@@ -1500,7 +1688,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 descriptionType",
       "identifier": "descriptionType",
       "created": "2026-02-20",
@@ -1518,7 +1709,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Abstract",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Abstract",
       "notation": "Abstract",
       "definition": "A brief description of the resource and the context in which the resource was created.",
@@ -1534,7 +1728,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Methods",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Methods",
       "notation": "Methods",
       "definition": "The methodology employed for the study or research.",
@@ -1550,7 +1747,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/Other",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Other",
       "notation": "Other",
       "definition": "Other description information that does not fit into an existing category.",
@@ -1563,7 +1763,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/SeriesInformation",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "SeriesInformation",
       "notation": "SeriesInformation",
       "definition": "Information about a repeating series, such as volume, issue, number.",
@@ -1576,7 +1779,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TableOfContents",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "TableOfContents",
       "notation": "TableOfContents",
       "definition": "A listing of the Table of Contents.",
@@ -1592,7 +1798,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/descriptionType/TechnicalInfo",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "TechnicalInfo",
       "notation": "TechnicalInfo",
       "definition": "Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process, system, or instrument.",
@@ -1605,7 +1814,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 funderIdentifierType",
       "identifier": "funderIdentifierType",
       "created": "2026-05-12",
@@ -1622,7 +1834,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/CrossrefFunderID",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Crossref Funder ID",
       "altLabel": "Crossref Funder Registry ID",
       "notation": "Crossref Funder ID",
@@ -1635,7 +1850,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/GRID",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "GRID",
       "altLabel": "Global Research Identifier Database",
       "notation": "GRID",
@@ -1649,7 +1867,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ISNI",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ISNI",
       "altLabel": "International Standard Name Identifier",
       "notation": "ISNI",
@@ -1662,7 +1883,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/Other",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Other",
       "notation": "Other",
       "definition": "Any funder identifier type not covered by the other values in the funderIdentifierType controlled list.",
@@ -1675,7 +1899,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/funderIdentifierType/ROR",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ROR",
       "altLabel": "Research Organization Registry",
       "notation": "ROR",
@@ -1688,7 +1915,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/identifierType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 identifierType",
       "identifier": "identifierType",
       "created": "2026-05-12",
@@ -1701,7 +1931,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/identifierType/DOI",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "DOI",
       "altLabel": "Digital Object Identifier",
       "notation": "DOI",
@@ -1715,7 +1948,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/nameType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 nameType",
       "identifier": "nameType",
       "created": "2026-02-20",
@@ -1729,7 +1965,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/nameType/Organizational",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Organizational",
       "notation": "Organizational",
       "definition": "An organization or institution name.",
@@ -1741,7 +1980,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/nameType/Personal",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Personal",
       "notation": "Personal",
       "definition": "An individual person’s name.",
@@ -1753,7 +1995,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 numberType",
       "identifier": "numberType",
       "created": "2026-05-12",
@@ -1769,7 +2014,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType/Article",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Article",
       "notation": "Article",
       "definition": "A number identifying an article within a journal issue or proceedings volume.",
@@ -1781,7 +2029,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType/Chapter",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Chapter",
       "notation": "Chapter",
       "definition": "A number identifying a chapter within a book or monograph.",
@@ -1793,7 +2044,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType/Other",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Other",
       "notation": "Other",
       "definition": "Any number type not covered by the other values in the numberType controlled list.",
@@ -1805,7 +2059,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/numberType/Report",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Report",
       "notation": "Report",
       "definition": "A number identifying a report within a report series.",
@@ -1817,7 +2074,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 relatedIdentifierType",
       "identifier": "relatedIdentifierType",
       "created": "2026-02-20",
@@ -1850,7 +2110,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ARK",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ARK",
       "altLabel": "Archival Resource Key",
       "notation": "ARK",
@@ -1866,7 +2129,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/arXiv",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "arXiv",
       "altLabel": "arXiv identifier",
       "notation": "arXiv",
@@ -1882,7 +2148,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/bibcode",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "bibcode",
       "altLabel": "Astrophysics Data System bibliographic codes",
       "notation": "bibcode",
@@ -1898,7 +2167,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/CSTR",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "CSTR",
       "altLabel": "Common Science and Technology Resources Identifier",
       "notation": "CSTR",
@@ -1914,7 +2186,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/DOI",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "DOI",
       "altLabel": "Digital Object Identifier",
       "notation": "DOI",
@@ -1930,7 +2205,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EAN13",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "EAN13",
       "altLabel": "European Article Number (now renamed International Article Number, but retaining the original acronym)",
       "notation": "EAN13",
@@ -1946,7 +2224,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/EISSN",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "EISSN",
       "altLabel": "Electronic International Standard Serial Number",
       "notation": "EISSN",
@@ -1962,7 +2243,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/Handle",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Handle",
       "altLabel": "Handle",
       "notation": "Handle",
@@ -1978,7 +2262,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/IGSN",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IGSN",
       "altLabel": "International Generic Sample Number",
       "notation": "IGSN",
@@ -1994,7 +2281,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISBN",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ISBN",
       "altLabel": "International Standard Book Number",
       "notation": "ISBN",
@@ -2010,7 +2300,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISSN",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ISSN",
       "altLabel": "International Standard Serial Number",
       "notation": "ISSN",
@@ -2026,7 +2319,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/ISTC",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ISTC",
       "altLabel": "International Standard Text Code",
       "notation": "ISTC",
@@ -2042,7 +2338,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LISSN",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "LISSN",
       "altLabel": "Linking ISSN",
       "notation": "LISSN",
@@ -2058,7 +2357,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/LSID",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "LSID",
       "altLabel": "Life Science Identifiers",
       "notation": "LSID",
@@ -2074,7 +2376,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PMID",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "PMID",
       "altLabel": "PubMed identifier",
       "notation": "PMID",
@@ -2090,7 +2395,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/PURL",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "PURL",
       "altLabel": "Persistent Uniform Resource Locator",
       "notation": "PURL",
@@ -2106,7 +2414,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/RRID",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "RRID",
       "altLabel": "Research Resource IDentifier",
       "notation": "RRID",
@@ -2122,7 +2433,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/UPC",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "UPC",
       "altLabel": "Universal Product Code",
       "notation": "UPC",
@@ -2138,7 +2452,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URL",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "URL",
       "altLabel": "Uniform Resource Locator",
       "notation": "URL",
@@ -2154,7 +2471,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/URN",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "URN",
       "altLabel": "Uniform Resource Name",
       "notation": "URN",
@@ -2170,7 +2490,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relatedIdentifierType/w3id",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "w3id",
       "altLabel": "Permanent identifier for Web applications",
       "notation": "w3id",
@@ -2186,7 +2509,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 relationType",
       "identifier": "relationType",
       "created": "2026-02-20",
@@ -2236,7 +2562,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Cites",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Cites",
       "notation": "Cites",
       "definition": "indicates that A includes B in a citation",
@@ -2252,7 +2581,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Collects",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Collects",
       "notation": "Collects",
       "definition": "Indicates A collects B",
@@ -2268,7 +2600,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Compiles",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Compiles",
       "notation": "Compiles",
       "definition": "indicates B is the result of a compile or creation event using A",
@@ -2284,7 +2619,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Continues",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Continues",
       "notation": "Continues",
       "definition": "indicates A is a continuation of the work B",
@@ -2299,7 +2637,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Describes",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Describes",
       "notation": "Describes",
       "definition": "indicates A describes B",
@@ -2314,7 +2655,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Documents",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Documents",
       "notation": "Documents",
       "definition": "indicates A is documentation about/explaining B",
@@ -2330,7 +2674,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasMetadata",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "HasMetadata",
       "notation": "HasMetadata",
       "definition": "indicates resource A has additional metadata B",
@@ -2345,7 +2692,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasPart",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "HasPart",
       "notation": "HasPart",
       "definition": "indicates A includes the part B",
@@ -2361,7 +2711,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasTranslation",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "HasTranslation",
       "notation": "HasTranslation",
       "definition": "indicates A has a translation B",
@@ -2377,7 +2730,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/HasVersion",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "HasVersion",
       "notation": "HasVersion",
       "definition": "indicates A has a version B",
@@ -2393,7 +2749,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCitedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsCitedBy",
       "notation": "IsCitedBy",
       "definition": "indicates that B includes A in a citation",
@@ -2409,7 +2768,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCollectedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsCollectedBy",
       "notation": "IsCollectedBy",
       "definition": "Indicates A is collected by B",
@@ -2425,7 +2787,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsCompiledBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsCompiledBy",
       "notation": "IsCompiledBy",
       "definition": "indicates B is used to compile or create A",
@@ -2441,7 +2806,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsContinuedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsContinuedBy",
       "notation": "IsContinuedBy",
       "definition": "indicates A is continued by the work B",
@@ -2456,7 +2824,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDerivedFrom",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsDerivedFrom",
       "notation": "IsDerivedFrom",
       "definition": "indicates B is a source upon which A is based",
@@ -2472,7 +2843,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDescribedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsDescribedBy",
       "notation": "IsDescribedBy",
       "definition": "indicates A is described by B",
@@ -2487,7 +2861,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsDocumentedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsDocumentedBy",
       "notation": "IsDocumentedBy",
       "definition": "indicates B is documentation about/explaining A",
@@ -2503,7 +2880,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsIdenticalTo",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsIdenticalTo",
       "notation": "IsIdenticalTo",
       "definition": "indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource",
@@ -2519,7 +2899,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsMetadataFor",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsMetadataFor",
       "notation": "IsMetadataFor",
       "definition": "indicates additional metadata A for a resource B",
@@ -2534,7 +2917,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsNewVersionOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsNewVersionOf",
       "notation": "IsNewVersionOf",
       "definition": "indicates A is a new edition of B, where the new edition has been modified or updated",
@@ -2549,7 +2935,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsObsoletedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsObsoletedBy",
       "notation": "IsObsoletedBy",
       "definition": "Indicates A is replaced by B",
@@ -2564,7 +2953,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsOriginalFormOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsOriginalFormOf",
       "notation": "IsOriginalFormOf",
       "definition": "indicates A is the original form of B",
@@ -2580,7 +2972,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPartOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsPartOf",
       "notation": "IsPartOf",
       "definition": "indicates A is a portion of B; may be used for elements of a series",
@@ -2596,7 +2991,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPreviousVersionOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsPreviousVersionOf",
       "notation": "IsPreviousVersionOf",
       "definition": "indicates A is a previous edition of B",
@@ -2611,7 +3009,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsPublishedIn",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsPublishedIn",
       "notation": "IsPublishedIn",
       "definition": "indicates A is published inside B, but is independent of other things published inside of B",
@@ -2626,7 +3027,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReferencedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsReferencedBy",
       "notation": "IsReferencedBy",
       "definition": "indicates A is used as a source of information by B",
@@ -2642,7 +3046,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsRequiredBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsRequiredBy",
       "notation": "IsRequiredBy",
       "definition": "Indicates A is required by B",
@@ -2658,7 +3065,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsReviewedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsReviewedBy",
       "notation": "IsReviewedBy",
       "definition": "indicates that A is reviewed by B",
@@ -2673,7 +3083,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSourceOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsSourceOf",
       "notation": "IsSourceOf",
       "definition": "indicates A is a source upon which B is based",
@@ -2689,7 +3102,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementedBy",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsSupplementedBy",
       "notation": "IsSupplementedBy",
       "definition": "indicates that B is a supplement to A",
@@ -2705,7 +3121,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsSupplementTo",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsSupplementTo",
       "notation": "IsSupplementTo",
       "definition": "indicates that A is a supplement to B",
@@ -2721,7 +3140,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsTranslationOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsTranslationOf",
       "notation": "IsTranslationOf",
       "definition": "indicates A is a translation of B",
@@ -2737,7 +3159,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVariantFormOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsVariantFormOf",
       "notation": "IsVariantFormOf",
       "definition": "indicates A is a variant or different form of B",
@@ -2753,7 +3178,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/IsVersionOf",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "IsVersionOf",
       "notation": "IsVersionOf",
       "definition": "indicates A is a version of B",
@@ -2769,7 +3197,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Obsoletes",
       "notation": "Obsoletes",
       "definition": "Indicates A replaces B",
@@ -2784,7 +3215,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/References",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "References",
       "notation": "References",
       "definition": "indicates B is used as a source of information for A",
@@ -2800,7 +3234,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Requires",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Requires",
       "notation": "Requires",
       "definition": "Indicates A requires B",
@@ -2816,7 +3253,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/relationType/Reviews",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Reviews",
       "notation": "Reviews",
       "definition": "indicates that A is a review of B",
@@ -2831,7 +3271,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 resourceTypeGeneral",
       "identifier": "resourceTypeGeneral",
       "created": "2026-02-20",
@@ -2875,7 +3318,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Audiovisual",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Audiovisual",
       "notation": "Audiovisual",
       "definition": "A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound.",
@@ -2894,7 +3340,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Award",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Award",
       "notation": "Award",
       "definition": "An umbrella term for resources provided to individual(s) or organization(s) in support of research, academic output, or training, such as a specific instance of funding, grant, investment, sponsorship, scholarship, recognition, or non-monetary materials.",
@@ -2907,7 +3356,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Book",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Book",
       "notation": "Book",
       "definition": "A medium for recording information in the form of writing or images, typically composed of many pages bound together and protected by a cover.",
@@ -2923,7 +3375,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/BookChapter",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "BookChapter",
       "notation": "BookChapter",
       "definition": "One of the main divisions of a book.",
@@ -2942,7 +3397,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Collection",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Collection",
       "notation": "Collection",
       "definition": "An aggregation of resources, which may encompass collections of one resourceType as well as those of mixed types. A collection is described as a group; its parts may also be separately described.",
@@ -2961,7 +3419,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ComputationalNotebook",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ComputationalNotebook",
       "notation": "ComputationalNotebook",
       "definition": "A virtual notebook environment used for literate programming.",
@@ -2977,7 +3438,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferencePaper",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ConferencePaper",
       "notation": "ConferencePaper",
       "definition": "Article that is written with the goal of being accepted to a conference.",
@@ -2993,7 +3457,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/ConferenceProceeding",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "ConferenceProceeding",
       "notation": "ConferenceProceeding",
       "definition": "Collection of academic papers published in the context of an academic conference.",
@@ -3009,7 +3476,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/DataPaper",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "DataPaper",
       "notation": "DataPaper",
       "definition": "A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability.",
@@ -3028,7 +3498,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dataset",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Dataset",
       "notation": "Dataset",
       "definition": "Data encoded in a defined structure.",
@@ -3047,7 +3520,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Dissertation",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Dissertation",
       "notation": "Dissertation",
       "definition": "A written essay, treatise, or thesis, especially one written by a candidate for the degree of Doctor of Philosophy.",
@@ -3063,7 +3539,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Event",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Event",
       "notation": "Event",
       "definition": "A non-persistent, time-based occurrence.",
@@ -3082,7 +3561,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Image",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Image",
       "notation": "Image",
       "definition": "A visual representation other than text.",
@@ -3101,7 +3583,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Instrument",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Instrument",
       "notation": "Instrument",
       "definition": "A device, tool or apparatus used to obtain, measure and/or analyze data.",
@@ -3114,7 +3599,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/InteractiveResource",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "InteractiveResource",
       "notation": "InteractiveResource",
       "definition": "A resource requiring interaction from the user to be understood, executed, or experienced.",
@@ -3133,7 +3621,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Journal",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Journal",
       "notation": "Journal",
       "definition": "A scholarly publication consisting of articles that is published regularly throughout the year.",
@@ -3149,7 +3640,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/JournalArticle",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "JournalArticle",
       "notation": "JournalArticle",
       "definition": "A written composition on a topic of interest, which forms a separate part of a journal.",
@@ -3165,7 +3659,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Model",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Model",
       "notation": "Model",
       "definition": "An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes.",
@@ -3181,7 +3678,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Other",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Other",
       "notation": "Other",
       "definition": "If selected, supply a value for ResourceType.",
@@ -3193,7 +3693,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/OutputManagementPlan",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "OutputManagementPlan",
       "notation": "OutputManagementPlan",
       "definition": "A formal document that outlines how research outputs are to be handled both during a research project and after the project is completed.",
@@ -3209,7 +3712,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PeerReview",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "PeerReview",
       "notation": "PeerReview",
       "definition": "Evaluation of scientific, academic, or professional work by others working in the same field.",
@@ -3225,7 +3731,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/PhysicalObject",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "PhysicalObject",
       "notation": "PhysicalObject",
       "definition": "A physical object or substance.",
@@ -3241,7 +3750,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Preprint",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Preprint",
       "notation": "Preprint",
       "definition": "A version of a scholarly or scientific paper that precedes formal peer review and publication in a peer-reviewed scholarly or scientific journal.",
@@ -3257,7 +3769,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Project",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Project",
       "notation": "Project",
       "definition": "A planned endeavor or activity, frequently collaborative, intended to achieve a particular aim using allocated resources such as budget, time, and expertise.",
@@ -3270,7 +3785,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Report",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Report",
       "notation": "Report",
       "definition": "A document that presents information in an organized format for a specific audience and purpose.",
@@ -3286,7 +3804,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Service",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Service",
       "notation": "Service",
       "definition": "An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users.",
@@ -3305,7 +3826,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Software",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Software",
       "notation": "Software",
       "definition": "A computer program other than a computational notebook, in either source code (text) or compiled form. Use this type for general software components supporting scholarly research. Use the ComputationalNotebook value for virtual notebooks.",
@@ -3324,7 +3848,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Sound",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Sound",
       "notation": "Sound",
       "definition": "A resource primarily intended to be heard.",
@@ -3343,7 +3870,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Standard",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Standard",
       "notation": "Standard",
       "definition": "Something established by authority, custom, or general consent as a model, example, or point of reference.",
@@ -3359,7 +3889,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/StudyRegistration",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "StudyRegistration",
       "notation": "StudyRegistration",
       "definition": "A detailed, time-stamped description of a research plan, often openly shared in a registry or published in a journal before the study is conducted to lend accountability and transparency in the hypothesis generating and testing process.",
@@ -3375,7 +3908,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Text",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Text",
       "notation": "Text",
       "definition": "A resource consisting primarily of words for reading that is not covered by any other textual resource type in this list.",
@@ -3393,7 +3929,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/resourceTypeGeneral/Workflow",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Workflow",
       "notation": "Workflow",
       "definition": "A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner.",
@@ -3406,7 +3945,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType",
-      "type": "ConceptScheme",
+      "type": [
+        "owl:NamedIndividual",
+        "ConceptScheme"
+      ],
       "title": "DataCite 4.6 titleType",
       "identifier": "titleType",
       "created": "2026-05-12",
@@ -3422,7 +3964,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType/AlternativeTitle",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "AlternativeTitle",
       "notation": "AlternativeTitle",
       "definition": "A title by which the resource is also known, used as an alternative to the primary title.",
@@ -3435,7 +3980,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType/Other",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Other",
       "notation": "Other",
       "definition": "Any title type not covered by the other values in the titleType controlled list.",
@@ -3447,7 +3995,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType/Subtitle",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "Subtitle",
       "notation": "Subtitle",
       "definition": "A secondary title that follows the main title and provides additional information about the resource.",
@@ -3459,7 +4010,10 @@
     },
     {
       "id": "https://schema.stage.datacite.org/linked-data/vocab/titleType/TranslatedTitle",
-      "type": "Concept",
+      "type": [
+        "owl:NamedIndividual",
+        "Concept"
+      ],
       "prefLabel": "TranslatedTitle",
       "notation": "TranslatedTitle",
       "definition": "A title that is a translation of the primary title into another language.",
